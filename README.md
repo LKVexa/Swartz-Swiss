@@ -1,5 +1,7 @@
 # GFM Black Hole Postulation Console
 
+It is unsigned and you will have to run the .cmd as an administrator. 
+
 **JA21 console 2.0.0 · Windows x64 · local calculation workers**
 
 Open **Start GFM Console.cmd** or **GfmJa21.exe**. The native JA21 window now
