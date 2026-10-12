@@ -300,13 +300,13 @@
     },
     {
       "path": "host/GFMConsoleEntry.cs",
-      "bytes": 9523,
-      "sha256": "dce62fe1a7def9e8b454c1bb002d62ef4077f74707fbca17ddb212f66e4786dc"
+      "bytes": 10694,
+      "sha256": "01933359c5370986abd3492b2638ae4a502a8e7bbaceed4e979fdc15af31f1cd"
     },
     {
       "path": "GfmJa21.exe",
-      "bytes": 308224,
-      "sha256": "9b1c31ab59bc1a2abccfec184ec0a99c47d671711294e90dc95554d694b6f15c"
+      "bytes": 309248,
+      "sha256": "325b5a50fa4056dd44e2bef80fdafaa5999772372f501eb010c4ed5b2b672ded"
     },
     {
       "path": "console.json",

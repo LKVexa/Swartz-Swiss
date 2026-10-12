@@ -84,8 +84,21 @@ namespace VBJA21
 
         private static Assembly LoadCheckedAdapter(string name,string sdk)
         {
-            string expected=Path.GetFullPath(Path.Combine(sdk,name+".dll"));
-            Assembly assembly=Assembly.LoadFrom(expected);
+            string digest;
+            if(name=="Microsoft.Web.WebView2.Core")
+                digest="e6f54c8ce208e3797c427d01ad671b47cb25abc85604753d6ec2546d0ffef550";
+            else if(name=="Microsoft.Web.WebView2.Wpf")
+                digest="6942b85a3388ece45febde5584d2bfc035d84315f2dd5a4a47913f01a0193800";
+            else throw new Exception("Only the two pinned WebView2 managed adapters may be loaded.");
+            string expected=RuntimeSeal.Contained(_root,"runtime/webview2-sdk/1.0.4191.47/"+name+".dll");
+            if(!String.Equals(Path.GetFullPath(Path.Combine(sdk,name+".dll")),expected,StringComparison.OrdinalIgnoreCase))
+                throw new Exception("WebView2 adapter path does not match the pinned package.");
+            if(!String.Equals(RuntimeSeal.Sha256(File.ReadAllBytes(expected)),digest,StringComparison.Ordinal))
+                throw new Exception("Pinned WebView2 adapter SHA-256 verification failed: "+name);
+            // GitHub ZIP extraction can retain Internet-zone metadata on these local files.
+            // Trust only the exact verified SDK bytes, while retaining the load-from context
+            // and file location needed by WPF and the already-pinned native loader.
+            Assembly assembly=Assembly.UnsafeLoadFrom(expected);
             if(assembly.GetName().Name!=name || assembly.GetName().Version.ToString()!="1.0.4191.47" || !String.Equals(Path.GetFullPath(assembly.Location),expected,StringComparison.OrdinalIgnoreCase))
                 throw new Exception("Loaded WebView2 adapter identity or location does not match the pinned package.");
             return assembly;

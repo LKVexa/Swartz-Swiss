@@ -12,8 +12,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 271,
-      "sha256": "08eefee93809a9a5352ed3e18b406f554e0ad004b883acd34bd5670fd838f3fd"
+      "bytes": 533,
+      "sha256": "f3dd3fd5645c34d95026ffed4540b6a4ea68397446a96714fd8991eb4de89ea1"
     },
     {
       "path": "Audit VEC1 Electrons.cmd",
@@ -22,8 +22,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 21271,
-      "sha256": "50afa2ad697260a360b53d513cf8b9deb58428a13455ff3a373532140eccd359"
+      "bytes": 21655,
+      "sha256": "6382c2e35f3420886f088eb810840979a5bf602218ee685458ac3b6e48228854"
     },
     {
       "path": "CONSOLE_BUILD.json",
@@ -42,8 +42,8 @@
     },
     {
       "path": "GfmJa21.exe",
-      "bytes": 308224,
-      "sha256": "9b1c31ab59bc1a2abccfec184ec0a99c47d671711294e90dc95554d694b6f15c"
+      "bytes": 309248,
+      "sha256": "325b5a50fa4056dd44e2bef80fdafaa5999772372f501eb010c4ed5b2b672ded"
     },
     {
       "path": "Install Live Web Bridge.cmd",
@@ -77,8 +77,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 1558,
-      "sha256": "dffb35b4314f38e574ef7b34fc6609b60fbac54a1a9a03aaeea263af4e479c22"
+      "bytes": 1792,
+      "sha256": "ddd87d50b8fec578b356f1bbd60144e179653992589e065f8a5c9806637b3ca0"
     },
     {
       "path": "Rebuild JA21 Engine.cmd",
@@ -5487,8 +5487,8 @@
     },
     {
       "path": "engine/ja21/runtime.integrity.json",
-      "bytes": 88858,
-      "sha256": "a59d70192225be9ef4041edead880c8c653071372678ab94c4feab0a29436beb"
+      "bytes": 88859,
+      "sha256": "baaad67c3ddad6d4110d3ac4e2d8e67f768877fc7c66b8941566d6473ba73b04"
     },
     {
       "path": "engine/ja21/web_engine.ir.json",
@@ -6307,8 +6307,8 @@
     },
     {
       "path": "host/GFMConsoleEntry.cs",
-      "bytes": 9523,
-      "sha256": "dce62fe1a7def9e8b454c1bb002d62ef4077f74707fbca17ddb212f66e4786dc"
+      "bytes": 10694,
+      "sha256": "01933359c5370986abd3492b2638ae4a502a8e7bbaceed4e979fdc15af31f1cd"
     },
     {
       "path": "host/GFMConsoleLiveVerification.cs",
@@ -39857,8 +39857,8 @@
     },
     {
       "path": "validation/native-build.json",
-      "bytes": 1138,
-      "sha256": "159ce739d5bdb068272c8d56cb28b47c3077a936f0e22567b7edd18b4aeafa4d"
+      "bytes": 1363,
+      "sha256": "df4f0815e54204aec7cf4252c8ac12d87a984c06b93d6cfc19bd2c81fa6f928c"
     },
     {
       "path": "validation/native-console.json",
@@ -39909,6 +39909,21 @@
       "path": "validation/renderer-fix.txt",
       "bytes": 1192,
       "sha256": "985b42e5c3b534b376bb652f2006b4c1279a912a19c734851ff04ecbff3ea7eb"
+    },
+    {
+      "path": "integration/refresh-package.py",
+      "bytes": 5189,
+      "sha256": "d67537c16b6da3c62ee665f54d3faab8b0c29b81feebfeb3cc71f14ea340548e"
+    },
+    {
+      "path": "integration/test_downloaded_startup.py",
+      "bytes": 10098,
+      "sha256": "96c75948529a6394fc991a4bf1289df302ed4d6add6e973bac0bcf6e2a095782"
+    },
+    {
+      "path": "validation/downloaded-startup.json",
+      "bytes": 2305,
+      "sha256": "42607f0bd13f1e52fd1602554f65094cd94e5229355423152e059cd78c07db8a"
     }
   ]
 }

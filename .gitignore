@@ -7,6 +7,9 @@
 *.temp
 *.obj
 *.o
+# Preserve baseline object artifacts declared in the shipped integrity ledger.
+!/engine/df_medium/baseline/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/release/bin/brvm-core.o
+!/engine/df_medium/baseline/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/release/bin/brvm-core61.stripped.o
 *.pdb
 /.vs/
 /.idea/

@@ -1,3 +1,10 @@
+# GFM Console 2.0.0 — downloaded-package startup fix — 2026-10-12
+
+- Fixed the .NET Framework assembly-load error after extracting a GitHub ZIP.
+- The native launcher accepts only the two bundled WebView2 managed libraries
+  after checking their exact paths, pinned SHA-256 digests and assembly identities.
+- Added download-marked startup and tampered-library regression checks.
+
 # JA21 Blank Console 1.1.0 — 2026-10-11
 
 Copyright (C) 2026 RUSSELL PHILIP SMITHSON

@@ -11,11 +11,11 @@
     "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\WPF\\PresentationFramework.dll",
     "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\WPF\\PresentationCore.dll",
     "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\WPF\\WindowsBase.dll",
-    "D:\\Codex\\GFM-JA21\\runtime\\webview2-sdk\\1.0.4191.47\\Microsoft.Web.WebView2.Core.dll",
-    "D:\\Codex\\GFM-JA21\\runtime\\webview2-sdk\\1.0.4191.47\\Microsoft.Web.WebView2.Wpf.dll"
+    "D:\\Codex\\GFM-Blackhole-Console\\outputs\\GFM-Blackhole-Console-v2.0.0\\GFM-Blackhole-Console\\runtime\\webview2-sdk\\1.0.4191.47\\Microsoft.Web.WebView2.Core.dll",
+    "D:\\Codex\\GFM-Blackhole-Console\\outputs\\GFM-Blackhole-Console-v2.0.0\\GFM-Blackhole-Console\\runtime\\webview2-sdk\\1.0.4191.47\\Microsoft.Web.WebView2.Wpf.dll"
   ],
   "windowsPolicyChanged": false,
-  "output": "D:\\Codex\\GFM-JA21\\GfmJa21.exe",
-  "bytes": 307712,
-  "sha256": "cd14251eb2bb920bf9f5ffbad79bab231bdc4e519045997037a9cc04ad0f045e"
+  "output": "D:\\Codex\\GFM-Blackhole-Console\\outputs\\GFM-Blackhole-Console-v2.0.0\\GFM-Blackhole-Console\\GfmJa21.exe",
+  "bytes": 309248,
+  "sha256": "325b5a50fa4056dd44e2bef80fdafaa5999772372f501eb010c4ed5b2b672ded"
 }

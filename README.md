@@ -14,6 +14,10 @@ The local instruments need no localhost server. The native host uses standard
 WPF WebView2 with the pinned SDK; a WebView2 Evergreen Runtime is required.
 The package does not change Windows script or application policy.
 
+For a GitHub download, extract the entire ZIP into a short, writable folder,
+then open the launcher inside it. Keep all bundled files together. The launcher
+supports the Windows download marks on its verified WebView2 libraries.
+
 The supplied archives and original source bytes remain recoverable under
 `provenance/`. Short aliases preserve deep original reference paths. Current
 integration and refresh evidence is under `validation/combined-release.json`;

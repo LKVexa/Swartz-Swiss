@@ -1,0 +1,87 @@
+{
+  "schema": "GFM-JA21-downloaded-startup-release/1",
+  "date": "2026-10-12",
+  "consoleVersion": "2.0.0",
+  "status": "passed",
+  "test": "integration/test_downloaded_startup.py",
+  "baselineCommit": "7bf6c05b7afc5609ad9f3cd8b66e4721a825908f",
+  "baselineExeSHA256": "9b1c31ab59bc1a2abccfec184ec0a99c47d671711294e90dc95554d694b6f15c",
+  "fixedExeSHA256": "325b5a50fa4056dd44e2bef80fdafaa5999772372f501eb010c4ed5b2b672ded",
+  "checks": [
+    {
+      "name": "Internet mark remains: Microsoft.Web.WebView2.Core.dll",
+      "passed": true
+    },
+    {
+      "name": "Internet mark remains: Microsoft.Web.WebView2.Wpf.dll",
+      "passed": true
+    },
+    {
+      "name": "Baseline reproduces the downloaded-assembly error",
+      "passed": true
+    },
+    {
+      "name": "Fixed executable verifies with Internet-marked adapters",
+      "passed": true
+    },
+    {
+      "name": "Internet mark remains: Microsoft.Web.WebView2.Core.dll",
+      "passed": true
+    },
+    {
+      "name": "Internet mark remains: Microsoft.Web.WebView2.Wpf.dll",
+      "passed": true
+    },
+    {
+      "name": "Runtime seal rejects a modified downloaded adapter",
+      "passed": true
+    },
+    {
+      "name": "Hardcoded adapter pin rejects a modified adapter even with an updated seal",
+      "passed": true
+    },
+    {
+      "name": "Internet mark remains: Microsoft.Web.WebView2.Core.dll",
+      "passed": true
+    },
+    {
+      "name": "Internet mark remains: Microsoft.Web.WebView2.Wpf.dll",
+      "passed": true
+    },
+    {
+      "name": "Internet mark remains: Microsoft.Web.WebView2.Core.dll",
+      "passed": true
+    },
+    {
+      "name": "Internet mark remains: Microsoft.Web.WebView2.Wpf.dll",
+      "passed": true
+    }
+  ],
+  "runs": [
+    {
+      "name": "baseline-downloaded",
+      "exitCode": 1,
+      "status": "failed"
+    },
+    {
+      "name": "fixed-downloaded",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "name": "tampered-downloaded",
+      "exitCode": 1,
+      "status": "failed"
+    },
+    {
+      "name": "tampered-resealed-downloaded",
+      "exitCode": 1,
+      "status": "failed"
+    }
+  ],
+  "nativeStartupChecksPassed": 5,
+  "virtualOriginCasesPassed": 12,
+  "liveRendererExercised": false,
+  "windowsPolicyChanged": false,
+  "sourcePackageChangedByTests": false
+}
