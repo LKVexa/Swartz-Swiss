@@ -1,0 +1,27 @@
+ja source 0.3
+module suite44.capability_security_plane.evaluation_suite
+use Security
+policy no_network
+
+principal SecurityEvaluationWorker
+role CapabilitySecurityEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant security.evaluate:approved
+}
+resource SecurityEvaluationCandidate classification restricted
+policy SecurityEvaluationPolicy {
+    deny network.* by default
+    deny process.* by default
+    deny SecurityEvaluationCandidate when principal.role != CapabilitySecurityEnsemble
+    allow SecurityEvaluationCandidate when principal.role == CapabilitySecurityEnsemble
+    require human_approval for evaluation.certify
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "SecurityEvaluationPolicy.decision.mcrt"

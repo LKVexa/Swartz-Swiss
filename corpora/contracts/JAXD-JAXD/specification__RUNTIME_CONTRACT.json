@@ -1,0 +1,21 @@
+{
+  "runtime": "JAXD Experience Runtime",
+  "version": "0.1.0",
+  "status": "modeled-interface",
+  "required_services": [
+    "TokenResolver",
+    "ThemeResolver",
+    "ComponentRuntime",
+    "JourneyRuntime",
+    "AccessibilityRuntime",
+    "ProjectionRegistry",
+    "EvidenceEmitter"
+  ],
+  "determinism": "R3-Deterministic for canonical IR and projections; provider-bound rendering must report tolerance/version",
+  "sandbox": {
+    "network": "explicit-only",
+    "unknown_code_execution": false,
+    "secret_redaction": true
+  },
+  "claim_boundary": "No native renderer is included in this bundle."
+}

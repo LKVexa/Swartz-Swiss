@@ -1,0 +1,8 @@
+DF_Medium supplied baseline qualification
+Command: ./VERIFY --full
+Result: PASS
+Passed: 20
+Failed: 0
+Skipped: 0
+Observed runtime: 20.317s
+Key gates: source/inventory integrity, VM stock build/acceptance, signed/native execution, resource budget trap, deterministic replay, LCTLC add42=42, 30-check backend suite.

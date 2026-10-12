@@ -1,0 +1,12 @@
+{
+  "schema": "QUORUM-FIXTURE/2.0",
+  "class": "edge",
+  "module_id": 31,
+  "plane": "translation_interop",
+  "input_type": "source_artifact",
+  "payload": {},
+  "expected_contract": {
+    "admitted": true,
+    "boundary": "minimal"
+  }
+}

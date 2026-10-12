@@ -1,0 +1,123 @@
+{
+  "authority_sha256": "aed93f9def47e38ca201d53f7b539317922a79a29777463cc1652c362ac7553d",
+  "domain_output": {
+    "authorization_decision": {
+      "decision": "ALLOW_REFERENCE_LOCAL",
+      "network": "DENY",
+      "reason": "fixture admitted under sealed local profile",
+      "side_effects": "REFERENCE_ONLY"
+    },
+    "input_type": "request/policy_context",
+    "legacy_signals": [
+      "action",
+      "PACKAGE",
+      "VALIDATE",
+      "AUTHORIZE",
+      "COMPARE",
+      "EVALUATE"
+    ],
+    "module": "Capability Manifests and Permissions",
+    "output_type": "authorization_decision/evidence",
+    "payload_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+    "plane": "security_authorization",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "383a63abee913458e1416ce16f35443715050183ef87ddbf5e98dcb77ca5acc0",
+  "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+  "module": "Capability Manifests and Permissions",
+  "module_id": 55,
+  "plane": "security_authorization",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "4117edb709f8ff884cb26345623304749029d2e26dc6a7f46e67ec145c1f131d",
+  "stage_count": 8,
+  "stages": [
+    {
+      "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "node": "N01",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "c703c0379979b77d5595cc4099817b7d64e805adf1f7c9caaa9bca446474ef8e",
+      "stage": "REQUEST"
+    },
+    {
+      "input_sha256": "c703c0379979b77d5595cc4099817b7d64e805adf1f7c9caaa9bca446474ef8e",
+      "node": "N02",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "INSPECT",
+      "output_sha256": "e6ecb5dc6aa4ae16957f7bf24ee759c0a3f1de9ae74f1431656895d491eaf275",
+      "stage": "INSPECT"
+    },
+    {
+      "input_sha256": "e6ecb5dc6aa4ae16957f7bf24ee759c0a3f1de9ae74f1431656895d491eaf275",
+      "node": "N03",
+      "operator": "VALIDATE",
+      "output_sha256": "22896888d7ff4c687a446beb5cde3f317b1fc45ff8af9d8b1382ebb86912e238",
+      "stage": "POLICY_EVALUATE",
+      "valid": true
+    },
+    {
+      "authorized": true,
+      "capabilities": [
+        "evidence.write",
+        "policy.evaluate"
+      ],
+      "input_sha256": "22896888d7ff4c687a446beb5cde3f317b1fc45ff8af9d8b1382ebb86912e238",
+      "network": "DENY",
+      "node": "N04",
+      "operator": "AUTHORIZE",
+      "output_sha256": "e666351274427c66953cedbe06e5587b032fae255a80d244fc807e9432dbd1b2",
+      "stage": "CAPABILITY_CHECK"
+    },
+    {
+      "authorized": true,
+      "capabilities": [
+        "evidence.write",
+        "policy.evaluate"
+      ],
+      "input_sha256": "e666351274427c66953cedbe06e5587b032fae255a80d244fc807e9432dbd1b2",
+      "network": "DENY",
+      "node": "N05",
+      "operator": "AUTHORIZE",
+      "output_sha256": "5f557f181e64383f3083950b39ae1333fb3fd1bc39199855ad01c1202c961553",
+      "stage": "AUTHORIZE"
+    },
+    {
+      "execution_token": "afa2c07177ab0c978daf9c10",
+      "input_sha256": "5f557f181e64383f3083950b39ae1333fb3fd1bc39199855ad01c1202c961553",
+      "node": "N06",
+      "operator": "EXECUTE",
+      "output_sha256": "4666261b59c8ecdf1568ac261d2d170b11dc7e9c1d0df422b98b7bcdfe74910d",
+      "stage": "ENFORCE"
+    },
+    {
+      "input_sha256": "4666261b59c8ecdf1568ac261d2d170b11dc7e9c1d0df422b98b7bcdfe74910d",
+      "node": "N07",
+      "operator": "RECORD",
+      "output_sha256": "94a82cd5ad9a6d70223d7bcd7b5f034b5dd5ff605d1b8bdc34a0ad0d8e4522df",
+      "receipt_sha256": "3e2b0523e5d5acbb82377908b8c7e1ef03e9180ee6226d320b03eeaed48e5e9d",
+      "stage": "RECORD"
+    },
+    {
+      "input_sha256": "94a82cd5ad9a6d70223d7bcd7b5f034b5dd5ff605d1b8bdc34a0ad0d8e4522df",
+      "node": "N08",
+      "operator": "RECORD",
+      "output_sha256": "c26741450de2337decee30164dd033a80afbc10c133d8f67ff2b5412c7707246",
+      "receipt_sha256": "d9794a987e90bc39240279ce17a45eba08fa88bae41ae93b324f9d6ee356e38b",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

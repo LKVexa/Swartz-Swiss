@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.answer_modes.auto
+use Agent
+policy no_network
+
+agent AnswerModeAuto {
+    identity "answer_mode_auto"
+    role "sophia-charlotte-landon-professor-podium-answer-mode"
+    goal select_and_emit_best_bounded_answer_mode when confidence >= 0.92
+    memory session retention 1h
+    budget steps 40 tools 5
+    tool LANDONCollectAutoContext(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIASelectAnswerMode(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateAutoSelection(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorComposeAutoAnswer(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordAutoAnswer(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectAutoContext
+        authorize SOPHIASelectAnswerMode
+        authorize CHARLOTTEValidateAutoSelection
+        authorize ProfessorComposeAutoAnswer
+        authorize PodiumRecordAutoAnswer
+        continue when policy_allows
+        execute LANDONCollectAutoContext("selected_request_scope")
+        execute SOPHIASelectAnswerMode("request_context")
+        execute CHARLOTTEValidateAutoSelection("candidate_mode")
+        execute ProfessorComposeAutoAnswer("validated_mode_and_evidence")
+        execute PodiumRecordAutoAnswer("auto_answer_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "AnswerModeAuto.mcrt"

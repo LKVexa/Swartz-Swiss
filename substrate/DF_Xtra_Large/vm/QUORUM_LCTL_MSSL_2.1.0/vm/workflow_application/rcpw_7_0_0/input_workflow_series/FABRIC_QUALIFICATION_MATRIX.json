@@ -1,0 +1,22 @@
+{
+  "package": "QUORUM_RC_PW_PROMPT_WORKFLOW_SERIES",
+  "version": "6.0.0",
+  "worker_profiles": [
+    "WP1_SINGLE",
+    "WP2_DUAL",
+    "WP4_QUAD",
+    "WP8_EIGHT_OR_REFERENCE_MAX",
+    "WPX_REPARTITIONED",
+    "WPR_RECOVERY"
+  ],
+  "comparisons": [
+    "canonical_checkpoint_digest",
+    "causal_semantic_digest",
+    "identity_ownership_map",
+    "route_time_outcomes",
+    "event_outcomes",
+    "save_replay_equivalence",
+    "unresolved_obligation_set"
+  ],
+  "status": "NOT_STARTED"
+}

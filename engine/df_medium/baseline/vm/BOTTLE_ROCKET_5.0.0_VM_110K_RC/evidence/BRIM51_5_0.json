@@ -1,0 +1,19 @@
+{
+  "compiler_enforcement": "PASS",
+  "loader_enforcement": "PASS",
+  "measurement_note": "Freshly rerun during release re-seal after audit remediation; measurement tool inherited from 4.9 release engineering (performance tool corrected to report in-process throughput).",
+  "native_brim_bytes": 272,
+  "oversized_rejection": [
+    {
+      "command": "brctl inspect-image <BRIM51_OVERSIZE_51201>",
+      "exit_code": 1
+    },
+    {
+      "command": "bradmin run <BRIM51_OVERSIZE_51201>",
+      "exit_code": 1
+    }
+  ],
+  "profile_ceiling_bytes": 51200,
+  "record": "BOTTLE_ROCKET.BRIM51/5.0.0",
+  "result": "PASS"
+}

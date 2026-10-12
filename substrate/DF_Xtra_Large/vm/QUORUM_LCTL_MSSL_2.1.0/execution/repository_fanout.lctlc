@@ -1,0 +1,32 @@
+LCTLC/1.0
+@unit id=quorum.generic_project.repository version=2.0.0 profile=native
+@defaults qspace=H basis=computational regime=exact assume=finite_dimension error=exact conf=1.0
+@frame id=F0000 parent=ROOT module=quorum.generic_project.repository
+ID│LANE│OP│OUT│CTRL│IN│ARG│META
+D0001│alloc│Q│q│_│_│1│res="logical_qubits=1";p=lctl:1.2
+D0002│alloc│C│c│_│_│1│res="classical_bits=1";p=lctl:1.2
+P0001│plane│REG│_│_│_│plane=sense_context;modules=8;authority=mssl│asm=finite_dimension;p=quorum:deep2
+P0002│plane│REG│_│_│_│plane=intent_reasoning;modules=8;authority=mssl│asm=finite_dimension;p=quorum:deep2
+P0003│plane│REG│_│_│_│plane=data_evidence;modules=6;authority=mssl│asm=finite_dimension;p=quorum:deep2
+P0004│plane│REG│_│_│_│plane=orchestration;modules=6;authority=mssl│asm=finite_dimension;p=quorum:deep2
+P0005│plane│REG│_│_│_│plane=security_authorization;modules=7;authority=mssl│asm=finite_dimension;p=quorum:deep2
+P0006│plane│REG│_│_│_│plane=interfaces_services;modules=8;authority=mssl│asm=finite_dimension;p=quorum:deep2
+P0007│plane│REG│_│_│_│plane=media_visual;modules=9;authority=mssl│asm=finite_dimension;p=quorum:deep2
+P0008│plane│REG│_│_│_│plane=model_compute;modules=5;authority=mssl│asm=finite_dimension;p=quorum:deep2
+P0009│plane│REG│_│_│_│plane=translation_interop;modules=3;authority=mssl│asm=finite_dimension;p=quorum:deep2
+P0010│plane│REG│_│_│_│plane=release_delivery;modules=2;authority=mssl│asm=finite_dimension;p=quorum:deep2
+P0011│plane│REG│_│_│_│plane=operations_recovery;modules=3;authority=mssl│asm=finite_dimension;p=quorum:deep2
+P0012│plane│REG│_│_│_│plane=governance_control;modules=1;authority=mssl│asm=finite_dimension;p=quorum:deep2
+E0001│scenario│DEP│_│_│_│from=sense_context;to=intent_reasoning;kind=scenario_handoff│asm=finite_dimension;p=quorum:deep2
+E0002│scenario│DEP│_│_│_│from=intent_reasoning;to=orchestration;kind=scenario_handoff│asm=finite_dimension;p=quorum:deep2
+E0003│scenario│DEP│_│_│_│from=orchestration;to=security_authorization;kind=scenario_handoff│asm=finite_dimension;p=quorum:deep2
+E0004│scenario│DEP│_│_│_│from=security_authorization;to=interfaces_services;kind=scenario_handoff│asm=finite_dimension;p=quorum:deep2
+E0005│scenario│DEP│_│_│_│from=sense_context;to=data_evidence;kind=scenario_handoff│asm=finite_dimension;p=quorum:deep2
+E0006│scenario│DEP│_│_│_│from=data_evidence;to=governance_control;kind=scenario_handoff│asm=finite_dimension;p=quorum:deep2
+E0007│scenario│DEP│_│_│_│from=media_visual;to=release_delivery;kind=scenario_handoff│asm=finite_dimension;p=quorum:deep2
+E0008│scenario│DEP│_│_│_│from=model_compute;to=media_visual;kind=scenario_handoff│asm=finite_dimension;p=quorum:deep2
+E0009│scenario│DEP│_│_│_│from=translation_interop;to=release_delivery;kind=scenario_handoff│asm=finite_dimension;p=quorum:deep2
+E0010│scenario│DEP│_│_│_│from=operations_recovery;to=governance_control;kind=scenario_handoff│asm=finite_dimension;p=quorum:deep2
+V9001│evidence│REG│_│_│_│receipt=repository;replay=topology;network=deny│asm=finite_dimension;p=quorum:evidence2
+C9999│terminal│.│_│_│_│terminal=sealed_graph_end;justification=canonical_entry_sentinel│p=lctl:nop
+@end

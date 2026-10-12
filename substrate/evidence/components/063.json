@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "063",
+  "title": "DF_Medium Adapter",
+  "source_file": "063_DF_Medium_Adapter.md",
+  "source_sha256": "1f8859844cbfc8a3ea62d237cf69ef7f8af138392c0e38cce290c9cdb44fc14e",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "N_MEDIUM",
+  "integration_mechanism": "DF_Medium adapter",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 13,
+  "legacy_root": "legacy/source_repository/Chair",
+  "legacy_sha256": "4e100fcb17d7b2097ddc6d85fe07944922e20ea716d70cf228ea5b154c5980ab",
+  "files": [
+    {
+      "path": "13_chair_authorization.jasec",
+      "sha256": "dec2dedce35dac3e8f788e0b0b99824018a755587e08f643daf35a104865e48c",
+      "bytes": 700
+    },
+    {
+      "path": "13_chair_deterministic_safety.jasec",
+      "sha256": "099eeee09454b2aaaed3b5dc1be02c18edb44dd380f7be5f97560572e0bcc64d",
+      "bytes": 689
+    },
+    {
+      "path": "13_chair_no_autorun.jasec",
+      "sha256": "a28d62da5e785e9c7e31ef4f09ed41d8ac08e04b5028adc29fef27f05a1d422f",
+      "bytes": 640
+    },
+    {
+      "path": "13_chair_policy_gates.jasec",
+      "sha256": "26e65d3c9276085d775256be82f86ea44aebd345760b36d0375fd82861b44bea",
+      "bytes": 631
+    },
+    {
+      "path": "13_chair_validation.jasec",
+      "sha256": "7622035cefb05158bb856d58984d75f610cb69609a67c59ed31e4be926aaba9a",
+      "bytes": 659
+    },
+    {
+      "path": "README.md",
+      "sha256": "d9595a9379068fa01b9c343d0dea1132c009772837fc319533627cb95655233e",
+      "bytes": 1891
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

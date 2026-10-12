@@ -1,0 +1,26 @@
+RELEASE 0.2 VALIDATION RESULT
+2026-10-11
+
+node --test tests/*.test.cjs
+Tests: 99; passed: 99; failed: 0; skipped: 0.
+
+{
+  "engine": 23,
+  "app": 11,
+  "adapter": 8,
+  "artifact": 4,
+  "refinedField": 14,
+  "refinedScalar": 16,
+  "candidateDiagnostics": 5,
+  "equationRegistry": 5,
+  "equationIntegration": 13
+}
+
+Separate Python checks:
+PASS tests/verify-example.py
+PASS tests/verify-audited-example.py
+
+The test command completed successfully in this conversation. This file
+records the result summary; it is not a fabricated raw console transcript.
+Historical release 0.1 console evidence is retained as tests-v0.1.txt.
+Browser rendering and live iframe verification were not completed.

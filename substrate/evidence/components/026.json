@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "026",
+  "title": "Deterministic Clock/Tick Counter",
+  "source_file": "026_Deterministic_Clock_Tick_Counter.md",
+  "source_sha256": "d5715d32aafad7854069a243ed162880179961b83406de8fa186f1bf0e50a34b",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "VEC_CONTROL+ALL_NODES",
+  "integration_mechanism": "Computational nucleus",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

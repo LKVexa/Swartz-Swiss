@@ -1,0 +1,61 @@
+{
+  "schema": "QUORUM-EVIDENCE-REGISTRY/2.0",
+  "types": [
+    {
+      "id": "invocation",
+      "hash_required": true
+    },
+    {
+      "id": "input",
+      "hash_required": true
+    },
+    {
+      "id": "operator",
+      "hash_required": true
+    },
+    {
+      "id": "policy",
+      "hash_required": true
+    },
+    {
+      "id": "capability",
+      "hash_required": true
+    },
+    {
+      "id": "state",
+      "hash_required": true
+    },
+    {
+      "id": "output",
+      "hash_required": true
+    },
+    {
+      "id": "failure",
+      "hash_required": true
+    },
+    {
+      "id": "rollback",
+      "hash_required": true
+    },
+    {
+      "id": "replay",
+      "hash_required": true
+    },
+    {
+      "id": "qualification",
+      "hash_required": true
+    },
+    {
+      "id": "optimization",
+      "hash_required": true
+    },
+    {
+      "id": "security",
+      "hash_required": true
+    },
+    {
+      "id": "release",
+      "hash_required": true
+    }
+  ]
+}

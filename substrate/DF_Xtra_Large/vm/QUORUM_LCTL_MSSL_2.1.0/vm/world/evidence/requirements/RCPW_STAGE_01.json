@@ -1,0 +1,304 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 18,
+    "PARTIAL": 11,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-01-R01.json",
+      "evidence_sha256": "ebbe648571409df05f8da6b29a927e1f91a73fc634fadb28bba8c3850b564111",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "Canonical coordinates and units are explicit, versioned, precision-bounded, and independent of render/reference coordinates.",
+      "requirement_id": "RCPW-01-R01",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Every persistent entity has a globally stable identity and versioned schema.",
+      "requirement_id": "RCPW-01-R02",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "All authoritative mutations are transactional, attributable, ledger-linked, and replayable.",
+      "requirement_id": "RCPW-01-R03",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Snapshots plus causal ledger ranges reconstruct authoritative state deterministically.",
+      "requirement_id": "RCPW-01-R04",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Derived rendering, physics, cache, and reference-space systems cannot mutate canonical truth outside declared APIs.",
+      "requirement_id": "RCPW-01-R05",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Schema migration and rollback preserve identity and causal history across versions.",
+      "requirement_id": "RCPW-01-R06",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical mutations are totally ordered or transactionally conflict-resolved under concurrent subsystem activity.",
+      "requirement_id": "RCPW-01-R07",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical state exposes monotonic revision/epoch numbers for stale-read and stale-write detection.",
+      "requirement_id": "RCPW-01-R08",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World-state snapshots are quiescent or use a documented consistency algorithm that proves cross-component coherence.",
+      "requirement_id": "RCPW-01-R09",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical state recovery is tested across power-loss-equivalent interruption at every write boundary.",
+      "requirement_id": "RCPW-01-R10",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical world state includes a versioned spatial-semantic region graph linking regions, biomes, routes, waterways, settlements, interiors, landmarks, and jurisdictional domains.",
+      "requirement_id": "RCPW-01-R11",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Procedural or authored world generation uses deterministic seed/provenance records so regenerated content can be distinguished from hand-authored canonical content.",
+      "requirement_id": "RCPW-01-R12",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Every canonical content object records provenance, schema version, ownership authority, and whether it is authored, generated, migrated, imported, or reconstructed.",
+      "requirement_id": "RCPW-01-R13",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Partial-region availability, damaged content packs, and missing optional content fail without invalidating unrelated canonical regions.",
+      "requirement_id": "RCPW-01-R14",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical world authority is ingestible from a deterministic world-package manifest that enumerates regions, topology, authored content, generated content, schemas, seeds, dependencies, and hashes.",
+      "requirement_id": "RCPW-01-R15",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical state supports content-pack activation/deactivation transactions without orphaning identities, ownership, routes, or causal references.",
+      "requirement_id": "RCPW-01-R16",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical revisions distinguish world-content revision, runtime-state revision, schema revision, and simulation epoch.",
+      "requirement_id": "RCPW-01-R17",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical authority provides a content-addressed lookup path for immutable authored assets and a revisioned lookup path for mutable world state.",
+      "requirement_id": "RCPW-01-R18",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World-package validation detects missing dependencies, hash mismatch, duplicate identity, incompatible schema, invalid topology, and forbidden authority cycles before runtime boot.",
+      "requirement_id": "RCPW-01-R19",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical authority is partition-aware but partition-neutral: moving a region/entity between storage or execution partitions cannot change canonical identity, topology, time, ownership, or history.",
+      "requirement_id": "RCPW-01-R20",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Cross-partition canonical mutations use explicit transactions, revision checks, commit/abort semantics, and deterministic conflict resolution.",
+      "requirement_id": "RCPW-01-R21",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World-package activation is atomic at the dependency-set level so partially activated content cannot become canonical truth.",
+      "requirement_id": "RCPW-01-R22",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical state exposes provenance from source content through compiler artifact, runtime partition, mutation event, checkpoint, and replay digest.",
+      "requirement_id": "RCPW-01-R23",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "A canonical-state verifier can validate identity uniqueness, topology closure, revision consistency, ledger correspondence, and partition ownership without rendering the world.",
+      "requirement_id": "RCPW-01-R24",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical world authority supports append-only world expansion by adding new regions/content namespaces without reassigning existing canonical identities or coordinates.",
+      "requirement_id": "RCPW-01-R25",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical world history distinguishes world age, era, content generation epoch, and simulation epoch so later synthesis cannot silently rewrite earlier truth.",
+      "requirement_id": "RCPW-01-R26",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical region retirement/archive is reversible through provenance-backed rehydration and never deletes unresolved causal obligations.",
+      "requirement_id": "RCPW-01-R27",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical semantic state records ontology/type versions so evolving world concepts remain interpretable across long-lived saves and historical queries.",
+      "requirement_id": "RCPW-01-R28",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World expansion and archival operations produce semantic before/after digests proving unchanged pre-existing canonical regions outside the declared mutation set.",
+      "requirement_id": "RCPW-01-R29",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "stage": 1,
+  "title": "Canonical World Authority"
+}

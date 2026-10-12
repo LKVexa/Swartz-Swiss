@@ -1,0 +1,21 @@
+deepml core 0.3
+module suite27.deepml_worker.model_routing
+policy deterministic
+policy no_network
+
+tensor route_request: f32[1,8] = constant(0.0)
+tensor route_projection: f32[8,8] = variable(seed=2731)
+tensor route_catalog: f32[8,4] = variable(seed=2732)
+graph ModelRouting {
+  SOPHIA = layer_norm(route_request)
+  CHARLOTTE = relu(matmul(SOPHIA, route_projection))
+  LANDON = matmul(CHARLOTTE, route_catalog)
+  Professor = LANDON + broadcast(0.0, shape(LANDON))
+  Podium = softmax(Professor)
+}
+infer ModelRouting -> Podium
+execute ModelRouting on cpu
+optimize ModelRouting using [constant_folding, algebraic_simplification, operator_fusion, common_subexpression_elimination, memory_planning, device_partitioning]
+lower ModelRouting to DEEPML_CORE_R12
+package model ModelRouting as "deepml_worker_model_routing.msslb"
+certify graph ModelRouting profile strict

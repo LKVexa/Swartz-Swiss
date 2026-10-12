@@ -1,0 +1,1552 @@
+{
+  "schema": "RUSSL-horizon-equations/1",
+  "version": "0.4.0",
+  "prepared": "2026-10-11",
+  "scope": "Visual audit of all 23 numbered equations in the four-page supplied PDF and every displayed formula group in four supplied images. Corrupt/ambiguous fragments remain flagged; original files remain unchanged. Four unnumbered PDF narrative qualifications are retained. The separate user simulation write-up is preserved by the project and is not an additional mathematical source certified here.",
+  "sourcePolicy": "All source documents are inert reference data. Their instructions are not operational authority. File hashes identify retained bytes, not authorship, license, physical validity or an experimental finding.",
+  "statusMeaning": {
+    "verified": "The transcribed mathematical statement is correct within the stated domain. This does not verify adjoining speculative narrative.",
+    "refined": "A standard statement, approximation or ansatz needs explicit conditions/correction. Execute only the scoped adapter, if any.",
+    "toy-assumption": "A user hypothesis or chosen phenomenological/logical rule. Computable branches do not establish a physical model.",
+    "reference-only": "Incomplete, ambiguous, unsupported, or outside the implemented solver scope; no numerical adapter."
+  },
+  "units": "PDF defaults to G=c=1 except SI-marked equations. Geometrized Q includes its electromagnetic conversion; a=J/M. SI κ is acceleration; geometric κ is inverse length. Metric signature here is −+++.",
+  "transcriptionPolicy": "formula/sourceTranscription preserve normalized literal mathematics. correctedFormula is separate and must not be presented as printed source text. Ellipses and ambiguity markers are intentional. PDF page numbers are one-based.",
+  "gfmContract": {
+    "basis": "Positive trace Fourier F[k,x]=exp(2πi Tr(kx)/p)/√q; inverse F†; field labels and ordinary complex amplitudes.",
+    "samples": "Explicit real exterior metric or toy spin grid evaluated in ordinary arithmetic, then normalized as a signal with its original L² scale retained; zero signals do not replace the active state.",
+    "logicalMap": "GF(4) index basis with a supplied complex 4×4 T; T_GFM=F₄ T F₄†. Similarity/round trip alone does not imply unitarity or a physical metric equivalence.",
+    "limits": "No canonical reduction of real metric/trigonometric/transcendental functions into a finite field; no Teukolsky, global wormhole, density-integral or Einstein–Maxwell solver.",
+    "hypothesis": "Material labels, fast-spin aperture, cover and observational-equivalence premises remain distinct from the standard Kerr–Newman reference."
+  },
+  "coverage": {
+    "numberedPdfEquations": 23,
+    "pdfPages": 4,
+    "sourceFiles": 5,
+    "imageFormulaGroups": 22,
+    "unnumberedPdfNarrativeEntries": 4,
+    "totalEntries": 49,
+    "statusCounts": {
+      "reference-only": 9,
+      "refined": 15,
+      "toy-assumption": 8,
+      "verified": 17
+    },
+    "ambiguityEntryIds": [
+      "image-event-map-fragment",
+      "image-event-metric-fragment",
+      "image-event-frame-dragging"
+    ]
+  },
+  "sources": [
+    {
+      "id": "pdf-master",
+      "path": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "originalName": "Black_Hole_Master_Equations.pdf",
+      "bytes": 111534,
+      "sha256": "579b2f4e3833b0207e06359caa85447cdcc705a65b61aadeee7022b52394a6f4",
+      "pages": 4,
+      "provenance": "User-supplied retained file. Creator, date, license and scientific endorsement are not inferred."
+    },
+    {
+      "id": "image-etm",
+      "path": "reference/blackhole-specification/ETM.jpg",
+      "originalName": "ETM.jpg",
+      "bytes": 352662,
+      "sha256": "a74761c15e14904c821fd0875a09f819e3b692ae68fe3837dc3437d79a2b2c31",
+      "pages": null,
+      "provenance": "User-supplied retained file. Creator, date, license and scientific endorsement are not inferred."
+    },
+    {
+      "id": "image-event-horizon",
+      "path": "reference/blackhole-specification/eventHorizon.jpg",
+      "originalName": "eventHorizon.jpg",
+      "bytes": 469535,
+      "sha256": "7f2a9a28c525e6173eeeb48674fcd5c642c31986eaf94d6619dc00a474a555a5",
+      "pages": null,
+      "provenance": "User-supplied retained file. Creator, date, license and scientific endorsement are not inferred."
+    },
+    {
+      "id": "image-aperture",
+      "path": "reference/blackhole-specification/aggie aperture.png",
+      "originalName": "aggie aperture.png",
+      "bytes": 232797,
+      "sha256": "9ebea738a8abd85273c0e9a164bcdfaf5daca446a3423307dc0c5e775527efd3",
+      "pages": null,
+      "provenance": "User-supplied retained file. Creator, date, license and scientific endorsement are not inferred."
+    },
+    {
+      "id": "image-tensor-screenshot",
+      "path": "reference/blackhole-specification/Screenshot 2026-10-11 053124.png",
+      "originalName": "Screenshot 2026-10-11 053124.png",
+      "bytes": 38556,
+      "sha256": "acdde0837646766c2af5e4a9eba3b16b95e9c865785acee73c7a702da2a545b6",
+      "pages": null,
+      "provenance": "User-supplied retained file. Creator, date, license and scientific endorsement are not inferred."
+    }
+  ],
+  "entries": [
+    {
+      "id": "pdf-01",
+      "title": "Zeroth law",
+      "status": "refined",
+      "domain": "Stationary regular Killing horizon under the usual zeroth-law hypotheses; in particular the Kerr–Newman family.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 1,
+      "formula": "κ = constant.",
+      "sourceTranscription": "κ = constant.",
+      "correctedFormula": null,
+      "finding": "The displayed statement is standard in its conditional stationary setting. Stationarity alone is not an unrestricted assertion about every possible horizon or matter theory.",
+      "references": [
+        {
+          "title": "Bardeen, Carter and Hawking (1973), The four laws of black hole mechanics",
+          "url": "https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-31/issue-2/The-four-laws-of-black-hole-mechanics/cmp/1103858973.pdf",
+          "location": "Commun. Math. Phys. 31, 161–170; original paper link; direct web extraction unavailable"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-reference",
+          "command": "horizon.reference 1 0.5 0.2",
+          "scope": "Computes stationary Kerr–Newman scalars and algebraic consistency. Does not simulate a process or prove an area/third-law theorem."
+        }
+      ],
+      "sourceEquationNumber": 1,
+      "transcriptionKind": "complete-normalized-mathematical-transcription"
+    },
+    {
+      "id": "pdf-02",
+      "title": "First law of black-hole mechanics",
+      "status": "verified",
+      "domain": "Real four-dimensional asymptotically flat Kerr–Newman electrovac reference; G=c=1 with geometrized electromagnetic charge Q; M>0, a=J/M, M²≥a²+Q². Differential variations between nearby stationary solutions.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 1,
+      "formula": "δM = κ δA/(8π) + Ω_H δJ + Φ_H δQ.",
+      "sourceTranscription": "δM = κ δA/(8π) + Ω_H δJ + Φ_H δQ.",
+      "correctedFormula": null,
+      "finding": "Correct in the stated geometric units. The narrative restoration of 1/G alone assumes c=1; a fully SI law must use a consistent energy, surface-gravity and electromagnetic convention.",
+      "references": [
+        {
+          "title": "Bardeen, Carter and Hawking (1973), The four laws of black hole mechanics",
+          "url": "https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-31/issue-2/The-four-laws-of-black-hole-mechanics/cmp/1103858973.pdf",
+          "location": "Commun. Math. Phys. 31, 161–170; original paper link; direct web extraction unavailable"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-reference",
+          "command": "horizon.reference 1 0.5 0.2",
+          "scope": "Computes stationary Kerr–Newman scalars and algebraic consistency. Does not simulate a process or prove an area/third-law theorem."
+        }
+      ],
+      "sourceEquationNumber": 2,
+      "transcriptionKind": "complete-normalized-mathematical-transcription"
+    },
+    {
+      "id": "pdf-03",
+      "title": "Classical area inequality",
+      "status": "refined",
+      "domain": "Classical event horizon with null energy/null convergence condition and suitable global regularity/causal assumptions.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 1,
+      "formula": "δA ≥ 0.",
+      "sourceTranscription": "δA ≥ 0.",
+      "correctedFormula": null,
+      "finding": "Requires more than the source's WEC shorthand: NEC/null convergence and appropriate global assumptions. It does not apply unchanged to semiclassical evaporation.",
+      "references": [
+        {
+          "title": "Chruściel, Delay, Galloway and Howard, Regularity of Horizons and the Area Theorem",
+          "url": "https://homepage.univie.ac.at/piotr.chrusciel/papers/area/0001003.pdf",
+          "location": "Theorem 1.1, PDF p. 3"
+        },
+        {
+          "title": "Hawking (1975), Particle Creation by Black Holes",
+          "url": "https://astrofrelat.fcaglp.unlp.edu.ar/agujeros_negros/media/Papers/Hawking_1975-Particle_creation_by_black_holes.pdf",
+          "location": "Commun. Math. Phys. 43, 199–220; sections 1–3"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "sourceEquationNumber": 3,
+      "transcriptionKind": "complete-normalized-mathematical-transcription"
+    },
+    {
+      "id": "pdf-04",
+      "title": "Smarr relation",
+      "status": "verified",
+      "domain": "Real four-dimensional asymptotically flat Kerr–Newman electrovac reference; G=c=1 with geometrized electromagnetic charge Q; M>0, a=J/M, M²≥a²+Q². Stationary family and asymptotic normalization.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 1,
+      "formula": "M = 2 Ω_H J + κ A/(4π) + Φ_H Q.",
+      "sourceTranscription": "M = 2 Ω_H J + κ A/(4π) + Φ_H Q.",
+      "correctedFormula": null,
+      "finding": "Correct Kerr–Newman Smarr relation. It follows from the family and its scaling; it is not a universal algebraic integration of an arbitrary first-law differential.",
+      "references": [
+        {
+          "title": "Bardeen, Carter and Hawking (1973), The four laws of black hole mechanics",
+          "url": "https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-31/issue-2/The-four-laws-of-black-hole-mechanics/cmp/1103858973.pdf",
+          "location": "Commun. Math. Phys. 31, 161–170; original paper link; direct web extraction unavailable"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-reference",
+          "command": "horizon.reference 1 0.5 0.2",
+          "scope": "Computes stationary Kerr–Newman scalars and algebraic consistency. Does not simulate a process or prove an area/third-law theorem."
+        }
+      ],
+      "sourceEquationNumber": 4,
+      "transcriptionKind": "complete-normalized-mathematical-transcription",
+      "additionalSourceFormulas": [
+        "For Schwarzschild: J=Q=0, κ=1/(4M), A=16πM², M=κA/(4π)."
+      ]
+    },
+    {
+      "id": "pdf-05",
+      "title": "Hawking temperature and Bekenstein–Hawking entropy",
+      "status": "verified",
+      "domain": "Semiclassical stationary black-hole reference; G=c=1, ħ and k_B restored; κ is geometric surface gravity.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 1,
+      "formula": "T_H = ħ κ/(2π k_B); S_BH = k_B A/(4 ħ).",
+      "sourceTranscription": "T_H = ħ κ/(2π k_B); S_BH = k_B A/(4 ħ).",
+      "correctedFormula": "SI: T_H=ħκ_SI/(2π c k_B); S_BH=k_B c³ A/(4Għ).",
+      "finding": "Correct conventions. With SI acceleration κ_SI, the temperature is ħ κ_SI/(2π c k_B). Entropy is a leading semiclassical area law.",
+      "references": [
+        {
+          "title": "Hawking (1975), Particle Creation by Black Holes",
+          "url": "https://astrofrelat.fcaglp.unlp.edu.ar/agujeros_negros/media/Papers/Hawking_1975-Particle_creation_by_black_holes.pdf",
+          "location": "Commun. Math. Phys. 43, 199–220; sections 1–3"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-reference",
+          "command": "horizon.reference 1 0.5 0.2",
+          "scope": "Computes stationary Kerr–Newman scalars and algebraic consistency. Does not simulate a process or prove an area/third-law theorem."
+        },
+        {
+          "kind": "si-reference-and-ideal-approximation",
+          "command": "horizon.si 1.98847e30",
+          "scope": "Schwarzschild SI reference; separately labelled horizon-area blackbody power/lifetime approximation."
+        }
+      ],
+      "sourceEquationNumber": 5,
+      "transcriptionKind": "complete-normalized-mathematical-transcription"
+    },
+    {
+      "id": "pdf-06",
+      "title": "Thermodynamic first law",
+      "status": "verified",
+      "domain": "Real four-dimensional asymptotically flat Kerr–Newman electrovac reference; G=c=1 with geometrized electromagnetic charge Q; M>0, a=J/M, M²≥a²+Q². ħ=k_B=1 and nearby stationary variations.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 2,
+      "formula": "dM = T dS + Ω_H dJ + Φ_H dQ.",
+      "sourceTranscription": "dM = T dS + Ω_H dJ + Φ_H dQ.",
+      "correctedFormula": null,
+      "finding": "Correct with T=κ/(2π), S=A/4; distinguish equilibrium reference from a finite nonequilibrium trajectory.",
+      "references": [
+        {
+          "title": "Bardeen, Carter and Hawking (1973), The four laws of black hole mechanics",
+          "url": "https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-31/issue-2/The-four-laws-of-black-hole-mechanics/cmp/1103858973.pdf",
+          "location": "Commun. Math. Phys. 31, 161–170; original paper link; direct web extraction unavailable"
+        },
+        {
+          "title": "Hawking (1975), Particle Creation by Black Holes",
+          "url": "https://astrofrelat.fcaglp.unlp.edu.ar/agujeros_negros/media/Papers/Hawking_1975-Particle_creation_by_black_holes.pdf",
+          "location": "Commun. Math. Phys. 43, 199–220; sections 1–3"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-reference",
+          "command": "horizon.reference 1 0.5 0.2",
+          "scope": "Computes stationary Kerr–Newman scalars and algebraic consistency. Does not simulate a process or prove an area/third-law theorem."
+        }
+      ],
+      "sourceEquationNumber": 6,
+      "transcriptionKind": "complete-normalized-mathematical-transcription",
+      "additionalSourceFormulas": [
+        "T=κ/(2π); S=A/4."
+      ]
+    },
+    {
+      "id": "pdf-07",
+      "title": "Generalized second law",
+      "status": "refined",
+      "domain": "Appropriate semiclassical/statistical generalized entropy; exterior entropy and horizon entropy with consistent renormalization and state assumptions.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 2,
+      "formula": "δ(S_matter + S_BH) ≥ 0.",
+      "sourceTranscription": "δ(S_matter + S_BH) ≥ 0.",
+      "correctedFormula": "δ(S_outside + S_BH) ≥ 0 under the stated semiclassical/statistical conditions.",
+      "finding": "Interpret S_matter as entropy outside the hole (including fields/radiation). This is a qualified generalized-entropy law, not an arbitrary matter entropy plus an area at every scale.",
+      "references": [
+        {
+          "title": "Bekenstein (1974), Generalized second law of thermodynamics in black-hole physics",
+          "url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.9.3292",
+          "location": "Abstract and pp. 3292–3300"
+        },
+        {
+          "title": "Hawking (1975), Particle Creation by Black Holes",
+          "url": "https://astrofrelat.fcaglp.unlp.edu.ar/agujeros_negros/media/Papers/Hawking_1975-Particle_creation_by_black_holes.pdf",
+          "location": "Commun. Math. Phys. 43, 199–220; sections 1–3"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "sourceEquationNumber": 7,
+      "transcriptionKind": "complete-normalized-mathematical-transcription"
+    },
+    {
+      "id": "pdf-08",
+      "title": "Geometric Schwarzschild scalars",
+      "status": "verified",
+      "domain": "M>0; real Schwarzschild, a=Q=0, G=c=1.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 2,
+      "formula": "r_s=2M; A=16πM²; κ=1/(4M).",
+      "sourceTranscription": "r_s=2M; A=16πM²; κ=1/(4M).",
+      "correctedFormula": null,
+      "finding": "Correct. Here M and r_s have length units; κ has inverse-length units.",
+      "references": [
+        {
+          "title": "Hawking (1975), Particle Creation by Black Holes",
+          "url": "https://astrofrelat.fcaglp.unlp.edu.ar/agujeros_negros/media/Papers/Hawking_1975-Particle_creation_by_black_holes.pdf",
+          "location": "Commun. Math. Phys. 43, 199–220; sections 1–3"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-reference",
+          "command": "horizon.reference 1 0 0",
+          "scope": "Computes stationary Kerr–Newman scalars and algebraic consistency. Does not simulate a process or prove an area/third-law theorem."
+        }
+      ],
+      "sourceEquationNumber": 8,
+      "transcriptionKind": "complete-normalized-mathematical-transcription"
+    },
+    {
+      "id": "pdf-09",
+      "title": "SI Schwarzschild radius and acceleration surface gravity",
+      "status": "verified",
+      "domain": "M>0 is mass in kilograms; SI constants; uncharged nonrotating Schwarzschild.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 2,
+      "formula": "r_s=2GM/c²; κ=c⁴/(4GM).",
+      "sourceTranscription": "r_s=2GM/c²; κ=c⁴/(4GM).",
+      "correctedFormula": null,
+      "finding": "Correct SI acceleration surface gravity; it differs by c² from the corresponding geometric inverse length.",
+      "references": [
+        {
+          "title": "Hawking (1975), Particle Creation by Black Holes",
+          "url": "https://astrofrelat.fcaglp.unlp.edu.ar/agujeros_negros/media/Papers/Hawking_1975-Particle_creation_by_black_holes.pdf",
+          "location": "Commun. Math. Phys. 43, 199–220; sections 1–3"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "si-reference-and-ideal-approximation",
+          "command": "horizon.si 1.98847e30",
+          "scope": "Schwarzschild SI reference; separately labelled horizon-area blackbody power/lifetime approximation."
+        }
+      ],
+      "sourceEquationNumber": 9,
+      "transcriptionKind": "complete-normalized-mathematical-transcription"
+    },
+    {
+      "id": "pdf-10",
+      "title": "SI Schwarzschild Hawking temperature",
+      "status": "verified",
+      "domain": "M>0 in kilograms; leading semiclassical Schwarzschild reference.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 2,
+      "formula": "T_H=ħc³/(8πGMk_B).",
+      "sourceTranscription": "T_H=ħc³/(8πGMk_B).",
+      "correctedFormula": null,
+      "finding": "Correct. A solar-mass reference is about 60 nK; this does not imply such a hole evaporates in a warmer radiation bath.",
+      "references": [
+        {
+          "title": "Hawking (1975), Particle Creation by Black Holes",
+          "url": "https://astrofrelat.fcaglp.unlp.edu.ar/agujeros_negros/media/Papers/Hawking_1975-Particle_creation_by_black_holes.pdf",
+          "location": "Commun. Math. Phys. 43, 199–220; sections 1–3"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "si-reference-and-ideal-approximation",
+          "command": "horizon.si 1.98847e30",
+          "scope": "Schwarzschild SI reference; separately labelled horizon-area blackbody power/lifetime approximation."
+        }
+      ],
+      "sourceEquationNumber": 10,
+      "transcriptionKind": "complete-normalized-mathematical-transcription"
+    },
+    {
+      "id": "pdf-11",
+      "title": "SI Schwarzschild entropy and area",
+      "status": "verified",
+      "domain": "M>0 in kilograms; a=Q=0; leading area entropy.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 2,
+      "formula": "S_BH=k_B c³A/(4Għ)=4πk_B GM²/(ħc); A=16πG²M²/c⁴.",
+      "sourceTranscription": "S_BH=k_B c³A/(4Għ)=4πk_B GM²/(ħc); A=16πG²M²/c⁴.",
+      "correctedFormula": null,
+      "finding": "Both equalities are consistent with the SI Schwarzschild radius.",
+      "references": [
+        {
+          "title": "Hawking (1975), Particle Creation by Black Holes",
+          "url": "https://astrofrelat.fcaglp.unlp.edu.ar/agujeros_negros/media/Papers/Hawking_1975-Particle_creation_by_black_holes.pdf",
+          "location": "Commun. Math. Phys. 43, 199–220; sections 1–3"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "si-reference-and-ideal-approximation",
+          "command": "horizon.si 1.98847e30",
+          "scope": "Schwarzschild SI reference; separately labelled horizon-area blackbody power/lifetime approximation."
+        }
+      ],
+      "sourceEquationNumber": 11,
+      "transcriptionKind": "complete-normalized-mathematical-transcription"
+    },
+    {
+      "id": "pdf-12",
+      "title": "Ideal horizon-area blackbody power",
+      "status": "refined",
+      "domain": "Chosen Schwarzschild blackbody approximation: horizon emitting area, photon Stefan–Boltzmann law, no greybody factors, no absorption bath.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 2,
+      "formula": "P=ħc⁶/(15360πG²M²).",
+      "sourceTranscription": "P=ħc⁶/(15360πG²M²).",
+      "correctedFormula": null,
+      "finding": "Correct for the explicitly chosen approximation, from P=A_H σ_SB T_H⁴. Actual Hawking power includes spin/frequency transmission and species. This is not universal emission power.",
+      "references": [
+        {
+          "title": "Page (1976), Particle emission rates from a black hole: Massless particles from an uncharged, nonrotating hole",
+          "url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.13.198",
+          "location": "Abstract, photon power coefficient"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "si-reference-and-ideal-approximation",
+          "command": "horizon.si 1.98847e30",
+          "scope": "Schwarzschild SI reference; separately labelled horizon-area blackbody power/lifetime approximation."
+        }
+      ],
+      "sourceEquationNumber": 12,
+      "transcriptionKind": "complete-normalized-mathematical-transcription"
+    },
+    {
+      "id": "pdf-13",
+      "title": "Ideal integrated evaporation time",
+      "status": "refined",
+      "domain": "Same fixed-coefficient ideal model as Eq. (12); initial mass M, no accretion; formal integration to zero mass.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 2,
+      "formula": "t_evap=5120πG²M³/(ħc⁴).",
+      "sourceTranscription": "t_evap=5120πG²M³/(ħc⁴).",
+      "correctedFormula": null,
+      "finding": "Correct integration of c² dM/dt=−P within that ideal model. The near-Planck endpoint is outside its controlled semiclassical regime; actual species-dependent lifetime is not a universal multiple.",
+      "references": [
+        {
+          "title": "Page (1976), Particle emission rates from a black hole: Massless particles from an uncharged, nonrotating hole",
+          "url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.13.198",
+          "location": "Abstract, photon power coefficient"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "si-reference-and-ideal-approximation",
+          "command": "horizon.si 1.98847e30",
+          "scope": "Schwarzschild SI reference; separately labelled horizon-area blackbody power/lifetime approximation."
+        }
+      ],
+      "sourceEquationNumber": 13,
+      "transcriptionKind": "complete-normalized-mathematical-transcription",
+      "additionalSourceFormulas": [
+        "c² dM/dt=−P."
+      ]
+    },
+    {
+      "id": "pdf-14",
+      "title": "Irreducible mass",
+      "status": "refined",
+      "domain": "Real four-dimensional asymptotically flat Kerr–Newman electrovac reference; G=c=1 with geometrized electromagnetic charge Q; M>0, a=J/M, M²≥a²+Q². The printed mass relation requires Q=0 (Kerr); area definition is general.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 3,
+      "formula": "M²=M_irr²+J²/(4M_irr²); A=16πM_irr².",
+      "sourceTranscription": "M²=M_irr²+J²/(4M_irr²); A=16πM_irr².",
+      "correctedFormula": "M_irr=√(A/(16π)); M²=(M_irr+Q²/(4M_irr))²+J²/(4M_irr²).",
+      "finding": "Printed mass relation omits the charged term. Keep it as Kerr only; use the charged relation below for KN. Nondecrease needs the classical area-theorem assumptions.",
+      "references": [
+        {
+          "title": "Christodoulou and Ruffini (1971), Reversible Transformations of a Charged Black Hole",
+          "url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.4.3552",
+          "location": "Original charged mass formula; pp. 3552–3555"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-reference",
+          "command": "horizon.reference 1 0.5 0.2",
+          "scope": "Computes stationary Kerr–Newman scalars and algebraic consistency. Does not simulate a process or prove an area/third-law theorem."
+        }
+      ],
+      "sourceEquationNumber": 14,
+      "transcriptionKind": "complete-normalized-mathematical-transcription",
+      "additionalSourceFormulas": [
+        "For extremal Kerr Q=0: M_irr=M/√2; maximum reversible rotational extraction fraction 1−1/√2≈29%."
+      ]
+    },
+    {
+      "id": "pdf-15",
+      "title": "Kerr–Newman metric functions",
+      "status": "verified",
+      "domain": "Real four-dimensional asymptotically flat Kerr–Newman electrovac reference; G=c=1 with geometrized electromagnetic charge Q; M>0, a=J/M, M²≥a²+Q². Real Boyer–Lindquist coordinates.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 3,
+      "formula": "Δ=r²−2Mr+a²+Q²; Σ=r²+a² cos²θ.",
+      "sourceTranscription": "Δ=r²−2Mr+a²+Q²; Σ=r²+a² cos²θ.",
+      "correctedFormula": null,
+      "finding": "Correct. A and Σ are distinct objects. The charge Q is geometrized, not a raw SI charge in coulombs.",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-exterior-metric",
+          "command": "horizon.metric 1 0.5 0.2 3 1.2",
+          "scope": "Complete corrected Boyer–Lindquist metric, signature −+++, at a nonsingular exterior point; no global extension or wormhole solution."
+        }
+      ],
+      "sourceEquationNumber": 15,
+      "transcriptionKind": "complete-normalized-mathematical-transcription",
+      "additionalSourceFormulas": [
+        "a=J/M."
+      ]
+    },
+    {
+      "id": "pdf-16",
+      "title": "Complete Kerr–Newman line element",
+      "status": "verified",
+      "domain": "Real four-dimensional asymptotically flat Kerr–Newman electrovac reference; G=c=1 with geometrized electromagnetic charge Q; M>0, a=J/M, M²≥a²+Q². Signature −+++; Boyer–Lindquist chart with Σ≠0, Δ≠0 and sinθ≠0 for a nonsingular coordinate matrix.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 3,
+      "formula": "ds²=−(Δ/Σ)(dt−a sin²θ dφ)²+(Σ/Δ)dr²+Σdθ²+(sin²θ/Σ)[(r²+a²)dφ−a dt]².",
+      "sourceTranscription": "ds²=−(Δ/Σ)(dt−a sin²θ dφ)²+(Σ/Δ)dr²+Σdθ²+(sin²θ/Σ)[(r²+a²)dφ−a dt]².",
+      "correctedFormula": null,
+      "finding": "Correct complete metric. The exterior calculator further requires r>r_+ and 0<θ<π. BL divergence at Δ=0 is a chart singularity; this chart is not a global wormhole or horizon-crossing solver.",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-exterior-metric",
+          "command": "horizon.metric 1 0.5 0.2 3 1.2",
+          "scope": "Complete corrected Boyer–Lindquist metric, signature −+++, at a nonsingular exterior point; no global extension or wormhole solution."
+        }
+      ],
+      "sourceEquationNumber": 16,
+      "transcriptionKind": "complete-normalized-mathematical-transcription",
+      "expandedComponents": "g_tt=−[1−(2Mr−Q²)/Σ]; g_tφ=−a(2Mr−Q²)sin²θ/Σ; g_rr=Σ/Δ; g_θθ=Σ; g_φφ=sin²θ[(r²+a²)+a²(2Mr−Q²)sin²θ/Σ]. The line-element mixed coefficient is 2g_tφ."
+    },
+    {
+      "id": "pdf-17",
+      "title": "Kerr–Newman horizon radii",
+      "status": "verified",
+      "domain": "Real four-dimensional asymptotically flat Kerr–Newman electrovac reference; G=c=1 with geometrized electromagnetic charge Q; M>0, a=J/M, M²≥a²+Q².",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 3,
+      "formula": "r_±=M±√(M²−a²−Q²).",
+      "sourceTranscription": "r_±=M±√(M²−a²−Q²).",
+      "correctedFormula": null,
+      "finding": "Correct real roots of Δ. Equality gives coincident extremal roots; superextremal parameter values have no real roots in this family. That algebra does not prove cosmic censorship.",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-reference",
+          "command": "horizon.reference 1 0.5 0.2",
+          "scope": "Computes stationary Kerr–Newman scalars and algebraic consistency. Does not simulate a process or prove an area/third-law theorem."
+        }
+      ],
+      "sourceEquationNumber": 17,
+      "transcriptionKind": "complete-normalized-mathematical-transcription"
+    },
+    {
+      "id": "pdf-18",
+      "title": "Kerr area, explicitly Q=0",
+      "status": "verified",
+      "domain": "Real Kerr, M>0, Q=0, |a|≤M.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 3,
+      "formula": "A=4π(r_+²+a²)=8πMr_+.",
+      "sourceTranscription": "A=4π(r_+²+a²)=8πMr_+.",
+      "correctedFormula": "General KN: A=4π(r_+²+a²)=4π(2Mr_+−Q²).",
+      "finding": "Correct in the source's explicitly stated Kerr subsection. For KN the first form persists but the second loses Q².",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-reference",
+          "command": "horizon.reference 1 0.5 0",
+          "scope": "Computes stationary Kerr–Newman scalars and algebraic consistency. Does not simulate a process or prove an area/third-law theorem."
+        }
+      ],
+      "sourceEquationNumber": 18,
+      "transcriptionKind": "complete-normalized-mathematical-transcription"
+    },
+    {
+      "id": "pdf-19",
+      "title": "Kerr horizon angular velocity and surface gravity, Q=0",
+      "status": "verified",
+      "domain": "Real Kerr, M>0, Q=0, |a|≤M; κ≥0 for the outer horizon.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 3,
+      "formula": "Ω_H=a/(2Mr_+); κ=√(M²−a²)/(2Mr_+).",
+      "sourceTranscription": "Ω_H=a/(2Mr_+); κ=√(M²−a²)/(2Mr_+).",
+      "correctedFormula": "General KN: Ω_H=a/(r_+²+a²); κ=(r_+−r_-)/[2(r_+²+a²)]=√(M²−a²−Q²)/(r_+²+a²).",
+      "finding": "Correct for the printed Q=0 subsection. Use the general denominators and charged discriminant for KN.",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-reference",
+          "command": "horizon.reference 1 0.5 0",
+          "scope": "Computes stationary Kerr–Newman scalars and algebraic consistency. Does not simulate a process or prove an area/third-law theorem."
+        }
+      ],
+      "sourceEquationNumber": 19,
+      "transcriptionKind": "complete-normalized-mathematical-transcription"
+    },
+    {
+      "id": "pdf-20",
+      "title": "Kerr–Newman electric horizon potential",
+      "status": "verified",
+      "domain": "Real four-dimensional asymptotically flat Kerr–Newman electrovac reference; G=c=1 with geometrized electromagnetic charge Q; M>0, a=J/M, M²≥a²+Q². Stationary gauge potential chosen zero at infinity.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 3,
+      "formula": "Φ_H=Qr_+/(r_+²+a²).",
+      "sourceTranscription": "Φ_H=Qr_+/(r_+²+a²).",
+      "correctedFormula": null,
+      "finding": "Correct with the stated gauge/charge convention; Φ_H is not unchanged under an arbitrary constant shift of potential.",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-reference",
+          "command": "horizon.reference 1 0.5 0.2",
+          "scope": "Computes stationary Kerr–Newman scalars and algebraic consistency. Does not simulate a process or prove an area/third-law theorem."
+        }
+      ],
+      "sourceEquationNumber": 20,
+      "transcriptionKind": "complete-normalized-mathematical-transcription"
+    },
+    {
+      "id": "pdf-21",
+      "title": "Teukolsky master PDE",
+      "status": "refined",
+      "domain": "Linear massless spin-weighted perturbations on vacuum Kerr (Q=0); Kinnersley tetrad/conventional field and source normalizations; coordinate/domain and boundary data required.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 4,
+      "formula": "[(r²+a²)²/Δ−a²sin²θ] ∂_t²ψ+(4Mar/Δ)∂_t∂_φψ+[a²/Δ−1/sin²θ]∂_φ²ψ−Δ^(−s)∂_r(Δ^(s+1)∂_rψ)−(1/sinθ)∂_θ(sinθ∂_θψ)−2s[a(r−M)/Δ+i cosθ/sin²θ]∂_φψ−2s[M(r²−a²)/Δ−r−ia cosθ]∂_tψ+(s²cot²θ−s)ψ=4πΣT.",
+      "sourceTranscription": "[(r²+a²)²/Δ−a²sin²θ] ∂_t²ψ+(4Mar/Δ)∂_t∂_φψ+[a²/Δ−1/sin²θ]∂_φ²ψ−Δ^(−s)∂_r(Δ^(s+1)∂_rψ)−(1/sinθ)∂_θ(sinθ∂_θψ)−2s[a(r−M)/Δ+i cosθ/sin²θ]∂_φψ−2s[M(r²−a²)/Δ−r−ia cosθ]∂_tψ+(s²cot²θ−s)ψ=4πΣT.",
+      "correctedFormula": "Operator as transcribed, with Δ=r²−2Mr+a²; Σ=r²+a²cos²θ. For gravity: ψ_(−2)=ρ_NP^(−4) δΨ₄, ρ_NP=−1/(r−ia cosθ); ψ_(+2)=δΨ₀.",
+      "finding": "The displayed operator matches the standard convention. The narrative wrongly identifies the s=−2 master field with raw Ψ₄. Source T is spin/field dependent: not every spin source is simply an arbitrary stress tensor. No PDE solver is supplied.",
+      "references": [
+        {
+          "title": "Teukolsky (1973), Perturbations of a Rotating Black Hole. I. Fundamental Equations",
+          "url": "https://articles.adsabs.harvard.edu/pdf/1973ApJ...185..635T",
+          "location": "Eq. (4.7), Table 1; pp. 640–641"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "sourceEquationNumber": 21,
+      "transcriptionKind": "complete-normalized-mathematical-transcription",
+      "additionalSourceFormulas": [
+        "Δ=r²−2Mr+a² (no Q); Σ=r²+a²cos²θ.",
+        "s=0 scalar; s=±1/2 massless neutrino; s=±1 electromagnetic; s=±2 linearized gravity."
+      ],
+      "transcriptionComplete": true
+    },
+    {
+      "id": "pdf-22",
+      "title": "Separated mode ansatz",
+      "status": "refined",
+      "domain": "Linear vacuum-Kerr master equation; regular spin-weighted spheroidal angular modes; convention exp(−iωt+imφ).",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 4,
+      "formula": "ψ=e^(−iωt+imφ) R(r)S(θ).",
+      "sourceTranscription": "ψ=e^(−iωt+imφ) R(r)S(θ).",
+      "correctedFormula": null,
+      "finding": "The ansatz is correct. Quasinormal frequencies require angular regularity plus ingoing-horizon/outgoing-infinity conditions. At a=0 the raw gravitational equation is Bardeen–Press; RW/Zerilli require transformations and parity decomposition.",
+      "references": [
+        {
+          "title": "Teukolsky (1973), Perturbations of a Rotating Black Hole. I. Fundamental Equations",
+          "url": "https://articles.adsabs.harvard.edu/pdf/1973ApJ...185..635T",
+          "location": "Eq. (4.7), Table 1; pp. 640–641"
+        },
+        {
+          "title": "Glampedakis, Johnson and Kennefick, Darboux transformation in black hole perturbation theory",
+          "url": "https://arxiv.org/pdf/1702.06459",
+          "location": "Section III A Eq. (19), Section III D Eqs. (38)–(39)"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "sourceEquationNumber": 22,
+      "transcriptionKind": "complete-normalized-mathematical-transcription"
+    },
+    {
+      "id": "pdf-23",
+      "title": "Kerr bosonic superradiance window",
+      "status": "refined",
+      "domain": "Neutral bosonic scattering mode on Kerr, real positive frequency ω and azimuthal m with mΩ_H>0; ordinary horizon flux convention.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 4,
+      "formula": "0<ω<mΩ_H.",
+      "sourceTranscription": "0<ω<mΩ_H.",
+      "correctedFormula": null,
+      "finding": "Correct Kerr neutral-boson condition. It is not a universal criterion for fermions or every charged mode. Charged KN needs the appropriate q_field Φ_H term and a declared coupling/sign convention.",
+      "references": [
+        {
+          "title": "Hawking (1975), Particle Creation by Black Holes",
+          "url": "https://astrofrelat.fcaglp.unlp.edu.ar/agujeros_negros/media/Papers/Hawking_1975-Particle_creation_by_black_holes.pdf",
+          "location": "Commun. Math. Phys. 43, 199–220; sections 1–3"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "sourceEquationNumber": 23,
+      "transcriptionKind": "complete-normalized-mathematical-transcription"
+    },
+    {
+      "id": "narrative-third-law",
+      "title": "Conditional classical third law",
+      "status": "refined",
+      "domain": "Classical continuous accretion with bounded stress-energy and WEC near the apparent horizon; finite advanced time.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 1,
+      "formula": "No finite sequence of physical operations can reduce surface gravity to zero; extremal holes (κ=0) are a limit, not a state one can reach.",
+      "sourceTranscription": "No finite sequence of physical operations can reduce surface gravity to zero; extremal holes (κ=0) are a limit, not a state one can reach.",
+      "correctedFormula": "Under the stated classical hypotheses a nonextremal hole cannot reach κ=0 through a continuous process in finite advanced time.",
+      "finding": "The source prose is too universal. State Israel's conditional dynamical result; extremal stationary solutions exist and are not forbidden as mathematical solutions.",
+      "references": [
+        {
+          "title": "Israel (1986), Third Law of Black-Hole Dynamics: A Formulation and Proof",
+          "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.57.397",
+          "location": "Abstract; pp. 397–399"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "transcriptionKind": "normalized-narrative"
+    },
+    {
+      "id": "narrative-greybody-lifetime",
+      "title": "Greybody correction direction is not universal",
+      "status": "refined",
+      "domain": "Comparison relative to the specific horizon-area photon blackbody estimate, not relative to a mode with unit transmission.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 2,
+      "formula": "Real emission is filtered by frequency-dependent greybody factors, so the true lifetime is longer by a factor of a few and depends on which species are light compared with T_H.",
+      "sourceTranscription": "Real emission is filtered by frequency-dependent greybody factors, so the true lifetime is longer by a factor of a few and depends on which species are light compared with T_H.",
+      "correctedFormula": "Actual power and lifetime depend on frequency/spin transmission, emitting species, charge/spin evolution and environment; the stated approximation has no universal correction factor.",
+      "finding": "The universal direction and fixed factor do not follow. Page's photon coefficient is about 3.4×10⁻⁵, exceeding 1/(15360π)≈2.07×10⁻⁵ in the same power units; species and absorption cross sections matter. This comparison is direct arithmetic, not a new lifetime calculation.",
+      "references": [
+        {
+          "title": "Page (1976), Particle emission rates from a black hole: Massless particles from an uncharged, nonrotating hole",
+          "url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.13.198",
+          "location": "Abstract, photon power coefficient"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "transcriptionKind": "normalized-narrative"
+    },
+    {
+      "id": "narrative-no-hair",
+      "title": "Scope of uniqueness statement",
+      "status": "refined",
+      "domain": "Four-dimensional stationary asymptotically flat regular electrovac black holes subject to the applicable connected-horizon/uniqueness hypotheses.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 3,
+      "formula": "A stationary, asymptotically flat black hole of Einstein–Maxwell theory is fixed by M, J and Q alone.",
+      "sourceTranscription": "A stationary, asymptotically flat black hole of Einstein–Maxwell theory is fixed by M, J and Q alone.",
+      "correctedFormula": "M, J and Q characterize the Kerr–Newman reference within the applicable uniqueness assumptions.",
+      "finding": "Use this as the scope of the reference family, not a theorem for arbitrary matter theories, nonstationary accretion or a phenomenological gaseous/igneous throat.",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "transcriptionKind": "normalized-narrative"
+    },
+    {
+      "id": "narrative-cosmic-censorship",
+      "title": "Cosmic-censorship language",
+      "status": "reference-only",
+      "domain": "Dynamical gravitational collapse; cosmic censorship is a conjectural global statement.",
+      "sourceId": "pdf-master",
+      "sourcePath": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "page": 3,
+      "formula": "Below M²≥a²+Q² the singularity is naked; cosmic censorship says collapse does not produce it.",
+      "sourceTranscription": "Below M²≥a²+Q² the singularity is naked; cosmic censorship says collapse does not produce it.",
+      "correctedFormula": null,
+      "finding": "The absence of real KN roots is algebraically established. No finite parameter inspector proves the general cosmic-censorship claim.",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "transcriptionKind": "normalized-narrative"
+    },
+    {
+      "id": "image-etm-map",
+      "title": "ETM correspondence table",
+      "status": "reference-only",
+      "domain": "Underspecified logical table, not an established spacetime tensor map.",
+      "sourceId": "image-etm",
+      "sourcePath": "reference/blackhole-specification/ETM.jpg",
+      "page": null,
+      "formula": "T table rows: [1,1,1,1]; [1,1,K_ij,K_ij]; [K_ij,K_ij,1,K_ij]; [K_ij,K_ij,K_ij,1].",
+      "sourceTranscription": "T table rows: [1,1,1,1]; [1,1,K_ij,K_ij]; [K_ij,K_ij,1,K_ij]; [K_ij,K_ij,K_ij,1].",
+      "correctedFormula": null,
+      "finding": "Cells labelled 1 denote proposed equivalence and K_ij denotes a knowledge gap. Several off-diagonal entries are 1, so it is not the numeric identity matrix. No basis, K values, tensor transformation law, isometry or field-equation construction is given.",
+      "references": [],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "location": "central 4×4 table",
+      "transcriptionKind": "complete-visible-cell-transcription"
+    },
+    {
+      "id": "image-etm-schwarzschild",
+      "title": "ETM Schwarzschild row",
+      "status": "verified",
+      "domain": "Schwarzschild exterior, G=c=1, M>0, r>2M; signature −+++.",
+      "sourceId": "image-etm",
+      "sourcePath": "reference/blackhole-specification/ETM.jpg",
+      "page": null,
+      "formula": "ds²=−(1−2M/r)dt²+(1−2M/r)^(−1)dr²+r²dΩ².",
+      "sourceTranscription": "ds²=−(1−2M/r)dt²+(1−2M/r)^(−1)dr²+r²dΩ².",
+      "correctedFormula": null,
+      "finding": "Correct standalone exterior metric. Its adjoining ↔ Einstein–Rosen label does not establish a generic traversable Morris–Thorne geometry.",
+      "references": [
+        {
+          "title": "Hawking (1975), Particle Creation by Black Holes",
+          "url": "https://astrofrelat.fcaglp.unlp.edu.ar/agujeros_negros/media/Papers/Hawking_1975-Particle_creation_by_black_holes.pdf",
+          "location": "Commun. Math. Phys. 43, 199–220; sections 1–3"
+        },
+        {
+          "title": "Morris, Thorne and Yurtsever (1988), Wormholes, Time Machines, and the Weak Energy Condition",
+          "url": "https://authors.library.caltech.edu/records/m644f-tbz27",
+          "location": "Opening discussion, p. 1446; Schwarzschild bridge is not traversable"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-exterior-metric",
+          "command": "horizon.metric 1 0 0 3 1.2",
+          "scope": "Complete corrected Boyer–Lindquist metric, signature −+++, at a nonsingular exterior point; no global extension or wormhole solution."
+        }
+      ],
+      "location": "left row 1"
+    },
+    {
+      "id": "image-etm-rn",
+      "title": "ETM Reissner–Nordström row",
+      "status": "verified",
+      "domain": "RN electrovac exterior; G=c=1 and geometrized Q; a=0.",
+      "sourceId": "image-etm",
+      "sourcePath": "reference/blackhole-specification/ETM.jpg",
+      "page": null,
+      "formula": "ds²=−f(r)dt²+f(r)^(−1)dr²+r²dΩ²; f(r)=1−2M/r+Q²/r².",
+      "sourceTranscription": "ds²=−f(r)dt²+f(r)^(−1)dr²+r²dΩ²; f(r)=1−2M/r+Q²/r².",
+      "correctedFormula": null,
+      "finding": "Correct standalone RN metric. No charged Morris–Thorne solution or traversability follows from this equality of labels.",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        },
+        {
+          "title": "Morris, Thorne and Yurtsever (1988), Wormholes, Time Machines, and the Weak Energy Condition",
+          "url": "https://authors.library.caltech.edu/records/m644f-tbz27",
+          "location": "Opening discussion, p. 1446; Schwarzschild bridge is not traversable"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-exterior-metric",
+          "command": "horizon.metric 1 0 0.2 3 1.2",
+          "scope": "Complete corrected Boyer–Lindquist metric, signature −+++, at a nonsingular exterior point; no global extension or wormhole solution."
+        }
+      ],
+      "location": "left row 2"
+    },
+    {
+      "id": "image-etm-kerr-fragment",
+      "title": "ETM incomplete Kerr expression",
+      "status": "reference-only",
+      "domain": "Printed fragment, not a complete metric.",
+      "sourceId": "image-etm",
+      "sourcePath": "reference/blackhole-specification/ETM.jpg",
+      "page": null,
+      "formula": "ds²=−(1−2Mr/Σ)dt²−(4Mar sin²θ/Σ)dt dφ+Σdr²+Σdθ²+…",
+      "sourceTranscription": "ds²=−(1−2Mr/Σ)dt²−(4Mar sin²θ/Σ)dt dφ+Σdr²+Σdθ²+…",
+      "correctedFormula": "Use the complete PDF Eq. (16) with Q=0, including g_rr=Σ/Δ and the dφ² coefficient.",
+      "finding": "The literal radial coefficient is Σ, missing /Δ; the dφ² term is absent. Do not execute this fragment or silently replace the printed terms.",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "location": "left row 3",
+      "transcriptionKind": "literal-incomplete-fragment"
+    },
+    {
+      "id": "image-etm-kn-fragment",
+      "title": "ETM malformed Kerr–Newman expression",
+      "status": "reference-only",
+      "domain": "Printed fragment, not a well-formed KN line element.",
+      "sourceId": "image-etm",
+      "sourcePath": "reference/blackhole-specification/ETM.jpg",
+      "page": null,
+      "formula": "ds²=−(1−2Mr−Q²/Σ)dt²−(4Mar sin²θ/Σ)dt dφ+Σdr²+Σdθ²+…",
+      "sourceTranscription": "ds²=−(1−2Mr−Q²/Σ)dt²−(4Mar sin²θ/Σ)dt dφ+Σdr²+Σdθ²+…",
+      "correctedFormula": "Complete KN: PDF Eq. (16). In expanded form, g_tt=−[1−(2Mr−Q²)/Σ], mixed ds² coefficient=−2a(2Mr−Q²)sin²θ/Σ, g_rr=Σ/Δ.",
+      "finding": "As printed, g_tt lacks (2Mr−Q²)/Σ grouping; the mixed term omits its charge correction, g_rr lacks /Δ and dφ² is missing. The literal expression has inconsistent dimensions in its first parenthesis.",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "location": "left row 4",
+      "transcriptionKind": "literal-malformed-fragment"
+    },
+    {
+      "id": "image-etm-er-label",
+      "title": "ETM generic throat ansatz labelled Einstein–Rosen",
+      "status": "refined",
+      "domain": "Static spherical Morris–Thorne-type ansatz, with functions Φ(r), b(r) not specified.",
+      "sourceId": "image-etm",
+      "sourcePath": "reference/blackhole-specification/ETM.jpg",
+      "page": null,
+      "formula": "ds²=−e^(2Φ(r))dt²+dr²/[1−b(r)/r]+r²dΩ².",
+      "sourceTranscription": "ds²=−e^(2Φ(r))dt²+dr²/[1−b(r)/r]+r²dΩ².",
+      "correctedFormula": "Retain as a generic static spherical throat ansatz; remove the asserted universal ER/Schwarzschild equivalence.",
+      "finding": "This is a generic throat ansatz, not the specific maximally extended Schwarzschild ER bridge. A traversable throat requires finite redshift/no horizon, flare-out and an appropriate stress-energy model; Schwarzschild ER is nontraversable.",
+      "references": [
+        {
+          "title": "Morris, Thorne and Yurtsever (1988), Wormholes, Time Machines, and the Weak Energy Condition",
+          "url": "https://authors.library.caltech.edu/records/m644f-tbz27",
+          "location": "Opening discussion, p. 1446; Schwarzschild bridge is not traversable"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "location": "right row 1"
+    },
+    {
+      "id": "image-etm-charged-throat",
+      "title": "ETM charged throat ansatz",
+      "status": "reference-only",
+      "domain": "Functions and charge coupling are not supplied.",
+      "sourceId": "image-etm",
+      "sourcePath": "reference/blackhole-specification/ETM.jpg",
+      "page": null,
+      "formula": "ds²=−e^(2Φ(r))dt²+dr²/[1−b(r)/r]+r²dΩ². Φ(r), b(r) include Q charge.",
+      "sourceTranscription": "ds²=−e^(2Φ(r))dt²+dr²/[1−b(r)/r]+r²dΩ². Φ(r), b(r) include Q charge.",
+      "correctedFormula": null,
+      "finding": "No explicit charge-dependent functions, stress tensor, Maxwell field or constraints are given. The displayed ansatz alone cannot compute a charged wormhole.",
+      "references": [
+        {
+          "title": "Morris, Thorne and Yurtsever (1988), Wormholes, Time Machines, and the Weak Energy Condition",
+          "url": "https://authors.library.caltech.edu/records/m644f-tbz27",
+          "location": "Opening discussion, p. 1446; Schwarzschild bridge is not traversable"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "location": "right row 2"
+    },
+    {
+      "id": "image-etm-rotating-throat",
+      "title": "ETM rotating throat fragment",
+      "status": "reference-only",
+      "domain": "Underspecified stationary axisymmetric ansatz; functions N,b,K,ω and omitted terms.",
+      "sourceId": "image-etm",
+      "sourcePath": "reference/blackhole-specification/ETM.jpg",
+      "page": null,
+      "formula": "ds²=−N²dt²+dr²/[1−b(r)/r]+K²r²sin²θ(dφ−ωdt)²+…",
+      "sourceTranscription": "ds²=−N²dt²+dr²/[1−b(r)/r]+K²r²sin²θ(dφ−ωdt)²+…",
+      "correctedFormula": null,
+      "finding": "The expression is incomplete; it does not specify an Ellis–Bronnikov solution or prove equivalence to Kerr. Definitions, remaining metric terms and supporting matter are absent.",
+      "references": [],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "location": "right row 3",
+      "transcriptionKind": "literal-incomplete-fragment"
+    },
+    {
+      "id": "image-etm-charged-rotating-throat",
+      "title": "ETM general charged stationary throat fragment",
+      "status": "reference-only",
+      "domain": "Underspecified N,g_ij,K,ω; missing field equations and coordinate/basis conventions.",
+      "sourceId": "image-etm",
+      "sourcePath": "reference/blackhole-specification/ETM.jpg",
+      "page": null,
+      "formula": "ds²=−N²dt²+g_ij dx^i dx^j+K²r²sin²θ(dφ−ωdt)²+…; N,g_ij,K,ω include Q,J,accretion.",
+      "sourceTranscription": "ds²=−N²dt²+g_ij dx^i dx^j+K²r²sin²θ(dφ−ωdt)²+…; N,g_ij,K,ω include Q,J,accretion.",
+      "correctedFormula": null,
+      "finding": "No functions or constraints are supplied. If g_ij denotes the full spatial metric, the explicit angular contribution could double count it; the index range is undefined. Retain the ambiguity.",
+      "references": [],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "location": "right row 4",
+      "transcriptionKind": "literal-incomplete-fragment"
+    },
+    {
+      "id": "image-event-spin",
+      "title": "Event picture near-extremal shared spin",
+      "status": "toy-assumption",
+      "domain": "Proposed comparison of two horizon types; ordinary real spin ratio.",
+      "sourceId": "image-event-horizon",
+      "sourcePath": "reference/blackhole-specification/eventHorizon.jpg",
+      "page": null,
+      "formula": "a/M≈1.",
+      "sourceTranscription": "a/M≈1.",
+      "correctedFormula": null,
+      "finding": "Near-extremal uncharged Kerr is a valid reference regime. A gaseous vortex or ingested solids do not establish this ratio or imply a traversable aperture. For nonzero Q, KN's bound is (a/M)²+(Q/M)²≤1.",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "toy-assumption",
+          "command": "horizon.scenario {}",
+          "scope": "Evaluates declared phenomenological aperture/cover rules. No Einstein–Maxwell solution, physical horizon material or traversal prediction."
+        }
+      ],
+      "location": "shared core"
+    },
+    {
+      "id": "image-event-map-fragment",
+      "title": "Event picture unreadable tensor block",
+      "status": "reference-only",
+      "domain": "Incomplete or corrupt symbolic block; no defined linear operator.",
+      "sourceId": "image-event-horizon",
+      "sourcePath": "reference/blackhole-specification/eventHorizon.jpg",
+      "page": null,
+      "formula": "Label visually resembles T/(μν); three visible rows resemble [I₂,0,0,0_[ambiguous]]; [0,[ambiguous σ-like glyph],0,0]; [0,φ,0,[ambiguous G/S-like glyph]].",
+      "sourceTranscription": "Label visually resembles T/(μν); three visible rows resemble [I₂,0,0,0_[ambiguous]]; [0,[ambiguous σ-like glyph],0,0]; [0,φ,0,[ambiguous G/S-like glyph]].",
+      "correctedFormula": null,
+      "finding": "The matrix typography/dimensions and some symbols are ambiguous. It is not safely transcribable as a 4×4 matrix; no missing row or tensor values are invented. The original image is the authoritative retained artifact for these glyphs.",
+      "references": [],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "location": "central equivalence tensor map",
+      "transcriptionKind": "ambiguous-visible-fragment",
+      "ambiguity": true
+    },
+    {
+      "id": "image-event-spin-sector",
+      "title": "Event picture spin-sector label and bound",
+      "status": "refined",
+      "domain": "Kerr Q=0 reference bound; S(a) otherwise undefined.",
+      "sourceId": "image-event-horizon",
+      "sourcePath": "reference/blackhole-specification/eventHorizon.jpg",
+      "page": null,
+      "formula": "S(a): SPIN SECTOR | a/M≤1.",
+      "sourceTranscription": "S(a): SPIN SECTOR | a/M≤1.",
+      "correctedFormula": "Kerr: |a|≤M; KN: a²+Q²≤M². No function S(a) is inferred.",
+      "finding": "The one-sided bound as printed omits the lower bound if signed a is allowed. Use |a|/M≤1 for Kerr or (a/M)²+(Q/M)²≤1 for KN. S(a) has no supplied equation, so remains a label.",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "location": "beneath central map"
+    },
+    {
+      "id": "image-event-metric-fragment",
+      "title": "Event picture corrupt external metric",
+      "status": "reference-only",
+      "domain": "Printed Kerr-like fragments; r≫M caption; no well-formed complete line element.",
+      "sourceId": "image-event-horizon",
+      "sourcePath": "reference/blackhole-specification/eventHorizon.jpg",
+      "page": null,
+      "formula": "Readable fragments: ds²=−(1−2Mr/Σ)dt²−[4Mar sin²θ/(Σ dt dφ)]dt²−[ambiguous radial glyph]dr²+Σdθ²; next line −[4Mar sin²θ/(Σ dt dφ)]+(Σ/Δ)dr²+Σω_[ambiguous]²·[r²+a²+(2Ma²r/Σ)sin²θ]sin²θ dφ².",
+      "sourceTranscription": "Readable fragments: ds²=−(1−2Mr/Σ)dt²−[4Mar sin²θ/(Σ dt dφ)]dt²−[ambiguous radial glyph]dr²+Σdθ²; next line −[4Mar sin²θ/(Σ dt dφ)]+(Σ/Δ)dr²+Σω_[ambiguous]²·[r²+a²+(2Ma²r/Σ)sin²θ]sin²θ dφ².",
+      "correctedFormula": "Use complete vacuum-Kerr Eq. (16) with Q=0. Its dφ² coefficient is sin²θ[(r²+a²)+2Ma²r sin²θ/Σ]; mixed ds² coefficient is −4Mar sin²θ/Σ.",
+      "finding": "The image duplicates mixed/radial-looking terms and places differentials in a denominator; an extra ambiguous angular factor appears. This is not an executable metric. Clear Kerr factors are retained without reconstructing malformed glyphs.",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "reference-only",
+          "command": null,
+          "scope": "Preserved inert source and audit; no numerical adapter for this statement."
+        }
+      ],
+      "location": "bottom-left external-spacetime panel",
+      "transcriptionKind": "ambiguous-malformed-fragment",
+      "ambiguity": true
+    },
+    {
+      "id": "image-event-functions",
+      "title": "Event picture Kerr functions",
+      "status": "verified",
+      "domain": "Vacuum Kerr, Q=0, geometric units.",
+      "sourceId": "image-event-horizon",
+      "sourcePath": "reference/blackhole-specification/eventHorizon.jpg",
+      "page": null,
+      "formula": "Σ=r²+a²cos²θ; Δ=r²−2Mr+a².",
+      "sourceTranscription": "Σ=r²+a²cos²θ; Δ=r²−2Mr+a².",
+      "correctedFormula": null,
+      "finding": "These two definitions are legible and correct. They do not repair the corrupted metric line or establish material-dependent causal structure.",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-exterior-metric",
+          "command": "horizon.metric 1 0.5 0 3 1.2",
+          "scope": "Complete corrected Boyer–Lindquist metric, signature −+++, at a nonsingular exterior point; no global extension or wormhole solution."
+        }
+      ],
+      "location": "bottom-left definitions"
+    },
+    {
+      "id": "image-event-frame-dragging",
+      "title": "Event picture local frame angular velocity",
+      "status": "refined",
+      "domain": "Stationary axisymmetric exterior; conventional coordinates and g_φφ≠0.",
+      "sourceId": "image-event-horizon",
+      "sourcePath": "reference/blackhole-specification/eventHorizon.jpg",
+      "page": null,
+      "formula": "Ω_φ=−g_{?φ}/g_{φφ} (repeated on both sides; numerator subscript resembles t/i in the image).",
+      "sourceTranscription": "Ω_φ=−g_{?φ}/g_{φφ} (repeated on both sides; numerator subscript resembles t/i in the image).",
+      "correctedFormula": "Ω_ZAMO(r,θ)=−g_tφ/g_φφ; Ω_ZAMO approaches Ω_H at the outer horizon in the regular limiting sense.",
+      "finding": "The conventional zero-angular-momentum observer formula is −g_tφ/g_φφ. This is local frame angular velocity, generally distinct from constant Ω_H and from a material body's spin. The uncertain image subscript is retained explicitly.",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "standard-exterior-frame-reference",
+          "command": "horizon.metric 1 0.5 0.2 3 1.2",
+          "scope": "Uses the corrected g_tφ/g_φφ expression, not an inferred image glyph."
+        }
+      ],
+      "location": "both bottom frame-dragging callouts",
+      "transcriptionKind": "partly-ambiguous-transcription",
+      "ambiguity": true
+    },
+    {
+      "id": "image-aperture-spin-identity",
+      "title": "Aperture/cover spin identity",
+      "status": "toy-assumption",
+      "domain": "Chosen real near-extremal spin parameter, unrelated to epsilonMap.",
+      "sourceId": "image-aperture",
+      "sourcePath": "reference/blackhole-specification/aggie aperture.png",
+      "page": null,
+      "formula": "a_G/M=a_I/M=1−ε; 0≤ε≪1.",
+      "sourceTranscription": "a_G/M=a_I/M=1−ε; 0≤ε≪1.",
+      "correctedFormula": null,
+      "finding": "An imposed shared spin identity in the proposed scenario, not a consequence of observational indistinguishability or of ingestion history. Use epsilonSpin for this ε; charged KN also needs a compatible charge bound.",
+      "references": [
+        {
+          "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+          "url": "https://arxiv.org/pdf/1410.6626",
+          "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+        }
+      ],
+      "adapters": [
+        {
+          "kind": "toy-assumption",
+          "command": "horizon.scenario {}",
+          "scope": "Evaluates declared phenomenological aperture/cover rules. No Einstein–Maxwell solution, physical horizon material or traversal prediction."
+        }
+      ],
+      "location": "spin identity"
+    },
+    {
+      "id": "image-aperture-radius",
+      "title": "Phenomenological aperture radius",
+      "status": "toy-assumption",
+      "domain": "Real positive r₀ and threshold a_c; displayed branch a>a_c; same spin units for a and a_c.",
+      "sourceId": "image-aperture",
+      "sourcePath": "reference/blackhole-specification/aggie aperture.png",
+      "page": null,
+      "formula": "r_A=r₀√[1−(a_c/a)²], a>a_c.",
+      "sourceTranscription": "r_A=r₀√[1−(a_c/a)²], a>a_c.",
+      "correctedFormula": null,
+      "finding": "This is a declared geometric response function, not an Einstein-equation solution. A zero radius for a≤a_c is an added piecewise simulation convention and must be documented. The printed formula alone is undefined at a=0.",
+      "references": [],
+      "adapters": [
+        {
+          "kind": "toy-assumption",
+          "command": "horizon.scenario {}",
+          "scope": "Evaluates declared phenomenological aperture/cover rules. No Einstein–Maxwell solution, physical horizon material or traversal prediction."
+        }
+      ],
+      "location": "aperture law",
+      "simulationConvention": "For a_c>0, set r_A=0 at/below threshold; use the printed branch only for a>a_c."
+    },
+    {
+      "id": "image-aperture-cover",
+      "title": "Cover threshold and integrated loading",
+      "status": "toy-assumption",
+      "domain": "Declared scalar loading and sealing threshold; density meaning, measure and units require specification.",
+      "sourceId": "image-aperture",
+      "sourcePath": "reference/blackhole-specification/aggie aperture.png",
+      "page": null,
+      "formula": "C=Θ(σ_A−σ_seal); σ_A=∫_A ρ_aggie dA.",
+      "sourceTranscription": "C=Θ(σ_A−σ_seal); σ_A=∫_A ρ_aggie dA.",
+      "correctedFormula": null,
+      "finding": "The integral is not executable without a density field/measure. σ_A is an integrated quantity: if ρ is surface mass density it is mass, not surface density; if volume density it has mass/length units. The scalar scenario may accept loading as input without claiming to solve this integral. Θ(0) is not specified in the image.",
+      "references": [],
+      "adapters": [
+        {
+          "kind": "toy-assumption",
+          "command": "horizon.scenario {}",
+          "scope": "Evaluates declared phenomenological aperture/cover rules. No Einstein–Maxwell solution, physical horizon material or traversal prediction."
+        }
+      ],
+      "location": "cover law",
+      "simulationConvention": "The implementation defines Θ_seal(0)=1: equality seals. This is a selected convention, distinct from Θ_positive(0)=0 used for aperture/passage. Scalar loading is input, or a supplied finite surface-density patch sum is evaluated; no rho_aggie field is inferred."
+    },
+    {
+      "id": "image-aperture-passage",
+      "title": "Phenomenological passage indicator",
+      "status": "toy-assumption",
+      "domain": "Declared binary C and chosen Heaviside threshold convention; not a causal-geodesic result.",
+      "sourceId": "image-aperture",
+      "sourcePath": "reference/blackhole-specification/aggie aperture.png",
+      "page": null,
+      "formula": "𝒫=(1−C)Θ(r_A).",
+      "sourceTranscription": "𝒫=(1−C)Θ(r_A).",
+      "correctedFormula": null,
+      "finding": "A Boolean rule for the proposed scenario. It does not demonstrate physical traversability, stability or absence of an event horizon.",
+      "references": [],
+      "adapters": [
+        {
+          "kind": "toy-assumption",
+          "command": "horizon.scenario {}",
+          "scope": "Evaluates declared phenomenological aperture/cover rules. No Einstein–Maxwell solution, physical horizon material or traversal prediction."
+        }
+      ],
+      "location": "passage law"
+    },
+    {
+      "id": "image-aperture-master-law",
+      "title": "Compact phenomenological law",
+      "status": "toy-assumption",
+      "domain": "r₀>0, a_c>0, branch extension r_A=0 at/below threshold; Θ_positive(0)=0 for both positive-aperture tests.",
+      "sourceId": "image-aperture",
+      "sourcePath": "reference/blackhole-specification/aggie aperture.png",
+      "page": null,
+      "formula": "𝒫=Θ(a−a_c)(1−C).",
+      "sourceTranscription": "𝒫=Θ(a−a_c)(1−C).",
+      "correctedFormula": null,
+      "finding": "Equivalent to the radius-based indicator only after the stated piecewise extension and Θ_positive(0)=0 convention. The source uses the same Θ glyph for the cover test, but the simulation separately declares Θ_seal(0)=1 for equality sealing. It is not an independently established master law of general relativity.",
+      "references": [],
+      "adapters": [
+        {
+          "kind": "toy-assumption",
+          "command": "horizon.scenario {}",
+          "scope": "Evaluates declared phenomenological aperture/cover rules. No Einstein–Maxwell solution, physical horizon material or traversal prediction."
+        }
+      ],
+      "location": "compact master law"
+    },
+    {
+      "id": "image-aperture-branches",
+      "title": "Gaseous and igneous toy branches",
+      "status": "toy-assumption",
+      "domain": "Presupposed branch labels C=0 and C=1; reference signal encoding.",
+      "sourceId": "image-aperture",
+      "sourcePath": "reference/blackhole-specification/aggie aperture.png",
+      "page": null,
+      "formula": "Gaseous (C=0) ⇒ 𝒫=Θ(r_A) [OPEN]; igneous (C=1) ⇒ 𝒫=0 [SEALED].",
+      "sourceTranscription": "Gaseous (C=0) ⇒ 𝒫=Θ(r_A) [OPEN]; igneous (C=1) ⇒ 𝒫=0 [SEALED].",
+      "correctedFormula": null,
+      "finding": "Algebraically correct conditional branches of the proposed Boolean model. Matter phase does not establish C in GR. The gaseous branch is open only where r_A>0 under the chosen convention.",
+      "references": [],
+      "adapters": [
+        {
+          "kind": "toy-assumption",
+          "command": "horizon.scenario {}",
+          "scope": "Evaluates declared phenomenological aperture/cover rules. No Einstein–Maxwell solution, physical horizon material or traversal prediction."
+        }
+      ],
+      "location": "bottom branch statements"
+    },
+    {
+      "id": "image-tensor-map",
+      "title": "Screenshot logical correspondence map",
+      "status": "toy-assumption",
+      "domain": "Indices A,B=1…4; symbolic or supplied complex 4×4 logical operator; not a spacetime metric map.",
+      "sourceId": "image-tensor-screenshot",
+      "sourcePath": "reference/blackhole-specification/Screenshot 2026-10-11 053124.png",
+      "page": null,
+      "formula": "T^A_B=diag(1,1,1,1)+ε K^A_B=I₄+εK.",
+      "sourceTranscription": "T^A_B=diag(1,1,1,1)+ε K^A_B=I₄+εK.",
+      "correctedFormula": "Logical model only: T=I₄+epsilonMap*K, with supplied K and a declared state. Report norm/unitarity defects without silently normalizing the operator.",
+      "finding": "The screenshot explicitly frames a logical/treatment correspondence under the user's equivalence premise. K is undefined and cannot be inferred. epsilonMap is distinct from epsilonSpin. Generic T is not unitary; F₄ T F₄† is a basis change, not proof of physical equivalence. The cropped bottom sentence is not reconstructed.",
+      "references": [],
+      "adapters": [
+        {
+          "kind": "logical-correspondence",
+          "command": "horizon.map",
+          "scope": "Symbolic I₄+epsilonMap*K, or a supplied numerical complex 4×4 K/state; K is not inferred from images and unitarity is not assumed."
+        }
+      ],
+      "location": "complete displayed equation; lower text cropped"
+    }
+  ],
+  "references": [
+    {
+      "title": "Bardeen, Carter and Hawking (1973), The four laws of black hole mechanics",
+      "url": "https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-31/issue-2/The-four-laws-of-black-hole-mechanics/cmp/1103858973.pdf",
+      "location": "Commun. Math. Phys. 31, 161–170; original paper link; direct web extraction unavailable"
+    },
+    {
+      "title": "Adamo and Newman, The Kerr–Newman metric: A Review",
+      "url": "https://arxiv.org/pdf/1410.6626",
+      "location": "Sections 3.1, 3.3 and 4; opposite metric signature to supplied PDF"
+    },
+    {
+      "title": "Hawking (1975), Particle Creation by Black Holes",
+      "url": "https://astrofrelat.fcaglp.unlp.edu.ar/agujeros_negros/media/Papers/Hawking_1975-Particle_creation_by_black_holes.pdf",
+      "location": "Commun. Math. Phys. 43, 199–220; sections 1–3"
+    },
+    {
+      "title": "Bekenstein (1974), Generalized second law of thermodynamics in black-hole physics",
+      "url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.9.3292",
+      "location": "Abstract and pp. 3292–3300"
+    },
+    {
+      "title": "Chruściel, Delay, Galloway and Howard, Regularity of Horizons and the Area Theorem",
+      "url": "https://homepage.univie.ac.at/piotr.chrusciel/papers/area/0001003.pdf",
+      "location": "Theorem 1.1, PDF p. 3"
+    },
+    {
+      "title": "Israel (1986), Third Law of Black-Hole Dynamics: A Formulation and Proof",
+      "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.57.397",
+      "location": "Abstract; pp. 397–399"
+    },
+    {
+      "title": "Christodoulou and Ruffini (1971), Reversible Transformations of a Charged Black Hole",
+      "url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.4.3552",
+      "location": "Original charged mass formula; pp. 3552–3555"
+    },
+    {
+      "title": "Page (1976), Particle emission rates from a black hole: Massless particles from an uncharged, nonrotating hole",
+      "url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.13.198",
+      "location": "Abstract, photon power coefficient"
+    },
+    {
+      "title": "Teukolsky (1973), Perturbations of a Rotating Black Hole. I. Fundamental Equations",
+      "url": "https://articles.adsabs.harvard.edu/pdf/1973ApJ...185..635T",
+      "location": "Eq. (4.7), Table 1; pp. 640–641"
+    },
+    {
+      "title": "Glampedakis, Johnson and Kennefick, Darboux transformation in black hole perturbation theory",
+      "url": "https://arxiv.org/pdf/1702.06459",
+      "location": "Section III A Eq. (19), Section III D Eqs. (38)–(39)"
+    },
+    {
+      "title": "Morris, Thorne and Yurtsever (1988), Wormholes, Time Machines, and the Weak Energy Condition",
+      "url": "https://authors.library.caltech.edu/records/m644f-tbz27",
+      "location": "Opening discussion, p. 1446; Schwarzschild bridge is not traversable"
+    }
+  ],
+  "referenceAccessNote": "Primary literature/author research used for qualifications. The original BCH link did not yield directly extractable web text; its first-law/Smarr statements were independently checked algebraically within KN and against Hawking's primary paper. For irreducible mass this registry uses the charged mass relation together with M_irr²=A/(16π) and direct algebra, rather than relying on imperfect web extraction of a solved expression."
+}

@@ -1,0 +1,26 @@
+ja source 0.3
+module suite28.safety_gate.lint
+use Security
+policy no_network
+
+principal SafetyGateLintWorker
+role SafetyGateEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant lint.inspect:approved
+}
+resource LintCandidate classification restricted
+policy SafetyGateLintPolicy {
+    deny network.* by default
+    deny process.* by default
+    allow LintCandidate when principal.role == SafetyGateEnsemble
+    require human_approval for lint.override
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "SafetyGateLintPolicy.decision.mcrt"

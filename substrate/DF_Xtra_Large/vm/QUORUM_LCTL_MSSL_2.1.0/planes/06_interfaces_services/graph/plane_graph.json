@@ -1,0 +1,41 @@
+{
+  "schema": "QUORUM-PLANE-GRAPH/2.0",
+  "plane_id": 6,
+  "plane": "interfaces_services",
+  "modules": [
+    {
+      "module_id": 14,
+      "name": "Plug"
+    },
+    {
+      "module_id": 26,
+      "name": "Full Stack UI"
+    },
+    {
+      "module_id": 35,
+      "name": "App Designer"
+    },
+    {
+      "module_id": 38,
+      "name": "Preview Designer"
+    },
+    {
+      "module_id": 39,
+      "name": "Core Studio"
+    },
+    {
+      "module_id": 45,
+      "name": "Localization and Large File Plane"
+    },
+    {
+      "module_id": 61,
+      "name": "Popup Runner"
+    },
+    {
+      "module_id": 66,
+      "name": "Terminal"
+    }
+  ],
+  "integration": "independent module nodes with scenario-mediated orchestration",
+  "cycles": []
+}

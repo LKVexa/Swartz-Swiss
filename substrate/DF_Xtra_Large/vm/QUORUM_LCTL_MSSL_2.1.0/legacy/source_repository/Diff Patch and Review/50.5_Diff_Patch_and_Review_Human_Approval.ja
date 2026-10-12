@@ -1,0 +1,14 @@
+ja source 0.3
+module suite50.diff_patch_review.human_approval
+use Core
+policy no_network
+
+record HumanApprovalPlan { id: Count, action_hash: Text, patch_hash: Text, approver_identity: Text, approval_scope: Text, expiry_profile: Text, replay_protection: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_human_approval(item: HumanApprovalPlan) -> Result<HumanApprovalPlan, Text> effects { pure } {
+    let normalized: Text = item.approval_scope
+    return Ok(HumanApprovalPlan { id: item.id, action_hash: item.action_hash, patch_hash: item.patch_hash, approver_identity: item.approver_identity, approval_scope: normalized, expiry_profile: item.expiry_profile, replay_protection: item.replay_protection, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: HumanApprovalPlan = HumanApprovalPlan { id: 5005, action_hash: "required_sha256_action", patch_hash: "required_sha256_patch", approver_identity: "verified_human_approver", approval_scope: "exact_action_patch_repository_and_target", expiry_profile: "time_bounded_and_revocable", replay_protection: "nonce_and_hash_binding_required", sophia: "present_action_intent_and_impact", charlotte: "validate_approver_scope_freshness_and_separation", landon: "bind_approval_without_executing", professor: "explain_consent_and_limitations", podium: "publish_approval_receipt" }
+let result = prepare_human_approval(sample)
+assert result.is_ok == true
+emit json result

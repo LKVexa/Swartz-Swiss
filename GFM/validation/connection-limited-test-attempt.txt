@@ -1,0 +1,230 @@
+✖ audit provenance, all findings and corrected GR references reach the live API without changing physical state (127.9992ms)
+✖ research presets reset history and export causal plasma/material fields through the same backend (62.0877ms)
+✔ preserved audit source is exactly the reviewed attachment (1.7493ms)
+DRUDE_REFINEMENT {"nu":0,"errors":[0.002958385979610667,0.0007855803370957898,0.0001965697525905164]}
+DRUDE_REFINEMENT {"nu":2000000000,"errors":[0.002965314520691982,0.0007866899963794173,0.0001968463007858139]}
+✔ new material, plasma and waveform controls reject invalid physical inputs (3.9712ms)
+✔ zero density is the exact Maxwell vacuum limit and forbids unsupported initial plasma current (86.5909ms)
+✔ cavity plasma and cover fill are disjoint geometrically and use full-cell normalization (7.4704ms)
+✔ one live Drude step matches an independent midpoint current and collision-heat calculation (19.7502ms)
+✔ collisionless current returns energy without creating heat and conserves field plus drift (143.769ms)
+✔ cold-plasma dispersion and collision damping approach continuum modes under grid/time refinement (1247.3762ms)
+✔ prescribed harmonic Drude forcing has the negative-carrier complex response and second-order convergence (1.161ms)
+✔ cover enthalpy inverts sensible and latent heat and preserves tiny increments at both phase boundaries (11.9407ms)
+✔ a synthetic low-capacity material melts, changes conductivity, and retains fixed cover geometry (140.0037ms)
+✔ local thermal contact matches an independent backward-Euler transfer and cannot overshoot equilibrium (9.0518ms)
+✔ live partial-cell thermal contact conserves both stores without electromagnetic heating (7.3896ms)
+✔ contact resolves unequal tiny temperature increments above equal large base temperatures (8.2053ms)
+✔ live source/plasma/cover/sponge ledger counts thermal storage exactly once (1501.9264ms)
+✔ finite sampled-history demodulation returns peak envelope and correct relative negative-carrier phase (1.3711ms)
+✔ a weak reference masks phase even for a strong measured carrier (0.3655ms)
+✔ live phase history warms up, exposes its total-field reference and resets reproducibly with plasma (3239.038ms)
+✔ plasma frequency, collisions and cover conductivity bound the accuracy timestep (11.8719ms)
+✔ browser bundle preserves every audited equation source and complete reference data (8.4058ms)
+✔ worker initial fields exactly match Node for open, covered, hot cover and vacuum presets (719.907ms)
+✔ two-nanosecond worker preview is recomputed with exact field, phase, plasma and cover parity (9027.6969ms)
+✔ worker controls validate atomically, reset history, and export staggered fields (523.5284ms)
+✔ worker serves unchanged audit/neutral reference and isolated corrected GR calculators (68.6124ms)
+✔ worker schedules one computation at a time, supports pause/play, and cancels on close (307.7713ms)
+✔ browser transport resolves replies, rejects request failures and terminates pending work (70.3395ms)
+✔ Worker-free preview yields between real pulse advances and preserves exact phase/plasma/cover fields (11591.3816ms)
+✔ synchronous and asynchronous Worker creation rejection use the same private solver fallback (496.4586ms)
+✔ closing a Worker-free preview during chunked initialization rejects readiness and clears timers (5.4552ms)
+✔ combined layers preserve raw backend fields and disclose delayed phase analysis time (5316.2576ms)
+✔ both diagnostic planes sample exact physical cells without translations or invented angular modes (160.3986ms)
+✔ mixed material cells preserve plasma and cover masks; zero capacity and missing phase remain masked (53.5056ms)
+✔ cover color maps full computational-cell Ohmic power without applying the material fraction twice (103.5738ms)
+✔ material faces sample adjacent intersected cells, including distinct inner/outer and receiving/rear surfaces (249.5381ms)
+✔ signed thermal cooling is preserved in maxima and reported below the declared heating scale (13.9136ms)
+✔ phase amplitude, heating and molten state change colors without moving physical geometry (178.9987ms)
+✔ layer visibility removes its data geometry and opaque cover while retaining only contextual wire guides (40.6498ms)
+✔ cutaway opens roof, base and shell in the display and never changes backend material or fields (185.6845ms)
+✔ transparent phase and plasma cells share a depth-sorted mesh with a fixed opacity (54.8354ms)
+✔ empty wave history and zero deposited heat produce no invented phase or heating response (51.4098ms)
+▶ combined 3D app initializes and preserves all live layer/control flows without networking
+  ✔ initial two-nanosecond covered example submits wave, plasma and cover from one real frame (855.3228ms)
+  ✔ visibility toggles independently remove the corresponding GPU layer and preserve other samples (9503.5025ms)
+  ✔ wormhole shape and energy-flow controls preserve real diagnostics across power and cumulative heat views (9563.8324ms)
+  ✔ resize, standalone quantities and the neutral reference return to the combined legend safely (8228.8547ms)
+  ✔ Step and Run calculate new phase/plasma/cover samples through the local transport (5062.7274ms)
+  ✔ display scale and physical controls update actual layers without inventing warmup phase (2434.192ms)
+✔ combined 3D app initializes and preserves all live layer/control flows without networking (49807.6795ms)
+✔ default SI snapshot is finite, initially empty and explicitly axisymmetric (43.8591ms)
+✔ invalid physics and unresolved carrier parameters are rejected (15.1563ms)
+✔ geometric fill has an open axial cavity, shell and bottom; full cover seals the mouth (68.9822ms)
+✔ physical Faraday curl has the correct cylindrical axis limit and signs (22.3826ms)
+✔ vacuum midpoint preserves independently reconstructed SI energy over many steps (768.4405ms)
+✔ continuum PEC Bessel mode is approached under r-z grid refinement (1003.9841ms)
+✔ source-free Ohmic target deposits positive heat and closes its field-plus-heat ledger (365.7307ms)
+✔ artificial sponge loss remains distinct from physical Joule deposition (184.7709ms)
+✔ impressed pulse produces computed E and B, target heating and an accountable ledger (1786.6192ms)
+✔ prescribed impressed current is allowed to extract energy; work is signed (36.4136ms)
+✔ reset reproduces fields and ledger byte for byte (377.2312ms)
+✔ invalid staggered initialization leaves all fields unchanged (31.6418ms)
+✔ strong conductivity resolves relaxation rather than only claiming A-stability (19.6217ms)
+✔ Ellis throat has the independently known negative radial NEC and real flare-out (4.0552ms)
+✔ general redshift NEC equals independently calculated rho plus pressure and rejects the source sign/factors (0.3928ms)
+✔ strict flare-out excludes b_prime=1 and regular throat limiting assumptions are explicit (0.305ms)
+✔ Morris-Thorne energy densities scale as inverse length squared with dimensionally scaled Phi_prime (0.2722ms)
+✔ flat double-null metric gives zero Misner-Sharp mass and normalized expansion product (0.9409ms)
+✔ null-coordinate rescaling preserves the spherical invariant mass (0.5445ms)
+✔ a doubly marginal static throat satisfies R=2GM/c^2 without establishing an event horizon (0.7274ms)
+✔ future outer uses the negative cross derivative; the source positive sign is inner (0.9392ms)
+✔ two flat exterior shell charts have opposite curvature signs, negative density and positive pressure (1.4849ms)
+✔ static Schwarzschild shell pressure matches its analytic limit and radial conservation (0.6201ms)
+✔ shell acceleration uses proper seconds and c^2; pressure source error cannot pass (0.286ms)
+✔ asymmetric potential recovers independent moving-shell density with one radius in its denominator (0.5418ms)
+✔ squared potential can admit a spurious branch that the unsquared junction excludes (0.1891ms)
+✔ SI shell surface stresses scale as inverse radius with correspondingly scaled derivatives (0.1979ms)
+✔ Kerr spin is dimensionless and distinct from gravitational and horizon radii (0.7694ms)
+✔ reference calculators reject wrong types, singular charts, illegal branches and overflow (2.267ms)
+✔ all A01-A38 findings are preserved with complete source provenance and safe copying (4083.096ms)
+✔ GET reference example is finite JSON, separates independent geometries and contains no physical evolution coupling (1.2803ms)
+BESSEL_REFINEMENT [{"nr":16,"nz":32,"relativeL2":0.003415591488126046,"timeSeconds":4.6463161012226075e-11,"dtMaxSeconds":5.270497789333074e-12},{"nr":32,"nz":64,"relativeL2":0.0008566704929507945,"timeSeconds":4.6463161012226075e-11,"dtMaxSeconds":2.635248894666537e-12},{"nr":64,"nz":128,"relativeL2":0.00021434245009786492,"timeSeconds":4.6463161012226075e-11,"dtMaxSeconds":1.3176244473332686e-12}]
+OHMIC_REFINEMENT [{"nr":16,"nz":32,"relativeL2":0.003449903587434694,"timeSeconds":4.6463161012226075e-11,"dtMaxSeconds":5.270497789333074e-12},{"nr":32,"nz":64,"relativeL2":0.0008652582795626995,"timeSeconds":4.6463161012226075e-11,"dtMaxSeconds":2.635248894666537e-12},{"nr":64,"nz":128,"relativeL2":0.0002164900045915403,"timeSeconds":4.6463161012226075e-11,"dtMaxSeconds":1.3176244473332686e-12}]
+✔ independent continuum Bessel mode converges under space/time refinement (473.4282ms)
+✔ uniform Ohmic matter matches the independently derived damped continuum mode (404.685ms)
+✔ independently derived electric and magnetic dual volumes each integrate the cylinder (2.0159ms)
+✔ regular Ephi=a*r has the cylindrical factor-two axial magnetic curl (2.3269ms)
+✔ independent dual-annulus divergence of the discrete magnetic curl is zero (2.1175ms)
+✔ Joule heat and diagnostic temperature use local SI heat density and midpoint E (4.2272ms)
+✔ hollow shell, bottom, and partial cover have the independently calculated material volume (9.8627ms)
+✔ conductive relaxation is resolved rather than merely numerically stable (3.9226ms)
+✔ exported Poynting and current vectors have the right SI signs and constitutive factors (2.895ms)
+✔ zero source and zero initial fields remain exactly zero, with no invented energy (14.0603ms)
+GFM Cylindrical Pulse Laboratory v2.1.0
+
+Project: D:\Codex\GFM-Cylindrical-Pulse-Simulator
+Open this address: http://127.0.0.1:61507/
+
+01: calculated electromagnetic pulse, plasma and material layers
+02: original neutral complex phase reference
+03: audited spacetime references and equation dispositions
+
+The calculation is running. Leave this window open. Ctrl+C stops it.
+Verified 112 packaged files; longest path 87 characters.
+✔ Windows packaging handles spaces and rejects changed, escaping, and overlong members (11.1521ms)
+✖ launcher recovers from an occupied port and starts the new computed backend (235.2229ms)
+✔ independent lossless uniform-plasma cylindrical continuum mode converges for E, H and current (631.2523ms)
+ℹ INDEPENDENT_PLASMA_MODE [{"E":0.0053193409930243655,"J":0.00035030009633065196,"Hr":0.0007514124061685615,"Hz":0.003743689250757064},{"E":0.0013356148014443793,"J":0.00008729023552088818,"Hr":0.0001876715854911597,"Hz":0.0009383496088138351},{"E":0.0003460866379541022,"J":0.000025383798237987944,"Hr":0.00005048258833450742,"Hz":0.00023814650223525664}]
+✔ independent collisional Drude transient has second-order temporal convergence and exact midpoint work partition (0.6741ms)
+ℹ INDEPENDENT_DRUDE_TRANSIENT [0.00016373792244128715,0.00004094823561673344,0.00001023791822452047]
+✔ finite-window peak envelope recovers the declared carrier phase, group delay and node mask (1.5956ms)
+GFM Cylindrical Pulse Laboratory v2.1.0
+
+Live preview: D:\Codex\GFM-Cylindrical-Pulse-Simulator\Open GFM Preview.html
+
+The calculation runs inside the viewer. A separate server or console is not required.
+Initial example: covered plasma, two nanoseconds of calculated pulse history.
+Use Run, Step and the phase/plasma/aggie layer selector.
+Verified 112 files; longest path 87 characters.
+✔ inline preview fits the host policy and includes the live solver before viewer startup (116.1687ms)
+✔ standalone viewer opens without a server and keeps the phase, plasma and cover controls (14.4578ms)
+✔ default Windows launcher selects the verified self-contained preview (310.4978ms)
+✔ cylindrical E cross H has the radial and axial signs for positive and negative fields (8.0243ms)
+✔ partial plasma and cover heating use full-cell alpha and conductivity exactly once (1.5596ms)
+✔ collisionless plasma current work can be negative while physical heating stays zero (1.1239ms)
+✔ audited frame reproduces existing transport, heating, deposits and authoritative solver ledger (14.3865ms)
+✔ cumulative deposits preserve original midpoint integration rather than integrating snapshot power (28.0195ms)
+✔ signed live thermal contact remains a transfer between destinations, not an extra absorption (19.8519ms)
+✔ signed destination ledger counts stored heat once and does not add contact, deposition or mouth flow (0.521ms)
+✔ zero and negative source work remain signed finite joules without invented percentages (1.7535ms)
+✔ live impressed current can extract energy and diagnostics preserve the solver source sign (9.3594ms)
+✔ vacuum characteristics give exact pure forward, pure backward, and zero channels (0.422ms)
+✔ mixed vacuum channels obey forward minus backward equals signed axial Poynting flux (0.1983ms)
+✔ vacuum port excludes every material/plasma property and radial sponge annulus then integrates areas (0.4046ms)
+✔ source Gaussian port mask suppresses at eight axial widths and rejects the boundary row (0.2298ms)
+✔ axial and radial sponge masks require the whole sampled annulus to be undamped (0.6519ms)
+✔ zero-rate or zero-width sponge does not mask undamped cells and port stays before the cover (0.606ms)
+✔ unavailable port reports null powers when there is no suppressed vacuum row or eligible annulus (0.5477ms)
+✔ diagnostics are pure for frozen snapshots and returned fields never alias the input (0.9967ms)
+✔ typed snapshot arrays produce independent ordinary output arrays without mutation (1.5291ms)
+✔ diagnostics do not advance or alter a live Maxwell/Drude model (22.7458ms)
+✔ invalid snapshots, grid sizes, options and scalar inputs fail with explicit errors (2.5269ms)
+✔ bad arrays, nonfinite values, negative deposits, invalid fractions and unsupported plasma current are rejected (1.5478ms)
+✔ vacuum characteristics reject invalid scalars and nonpositive impedance (0.2381ms)
+✔ cylindrical display remains the identity and wormhole mapping creates positive flared mouths (1.8317ms)
+✔ mapped vector tangents agree with independent finite differences and preserve axis regularity (0.2342ms)
+✔ solver-valid zero-length material geometry uses a finite cylindrical fallback (20.711ms)
+✔ wormhole mapping changes positions but preserves all raw phase/plasma/cover values and ledger (209.8547ms)
+✔ energy arrows have correct signed physical flux, mapped tangent, time and fixed magnitude scale (6.9506ms)
+✔ zero fields create no energy-flow arrows and display opacity is not absorption (5.188ms)
+✔ plasma and cover choices distinguish instantaneous power from cumulative deposited energy (16.3758ms)
+✔ flow visibility affects rendering alone and arrow threshold is declared on the fixed scale (152.207ms)
+✔ slow calculations leave a full HTTP-control gap and preserve the physics interval (36.6226ms)
+✔ repeated play creates one timer and closing never resurrects background work (10.2575ms)
+✔ solver failure pauses automatically and removes pending scheduled work (12.8129ms)
+✖ local API produces computed fields, controls state, and retains valid state after rejected input (86.4243ms)
+✔ phase cylinder preserves complex samples and derives radius and hue from the same value (6.9397ms)
+✔ phase cylinder has a continuous periodic seam and coherent between-cell amplitudes (0.2103ms)
+✔ pulse profile samples actual fields and computes physical signed axial power (0.1674ms)
+✔ physical envelope hue and brightness use history fields on a fixed V/m scale and preserve masks (1.3109ms)
+✔ physical geometry is independent of electric amplitude and liquid fraction (0.1698ms)
+✔ plasma temperature requires positive particle heat capacity; cover fractions use the material mask (0.2221ms)
+✔ physical transport layer preserves reflected-flux signs and SI values (0.164ms)
+✔ plasma heating preserves calculated kelvin rise and the declared fixed scale (0.3491ms)
+✔ preview requests await local readiness and use worker JSON without fetching (0.3118ms)
+✔ embedded preview cannot silently fall back to loopback or current-origin requests (0.912ms)
+✔ normal HTTP mode preserves requests, server errors, and parsed JSON (0.3305ms)
+ℹ tests 142
+ℹ suites 0
+ℹ pass 138
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 99999.8272
+
+✖ failing tests:
+
+test at tests\audit-api.test.cjs:10:1
+✖ audit provenance, all findings and corrected GR references reach the live API without changing physical state (127.9992ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:49748
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1864:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 49748
+    }
+  }
+
+test at tests\audit-api.test.cjs:40:1
+✖ research presets reset history and export causal plasma/material fields through the same backend (62.0877ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:49750
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1864:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 49750
+    }
+  }
+
+test at tests\launcher.test.cjs:27:1
+✖ launcher recovers from an occupied port and starts the new computed backend (235.2229ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:61507
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1864:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 61507
+    }
+  }
+
+test at tests\server.test.cjs:6:1
+✖ local API produces computed fields, controls state, and retains valid state after rejected input (86.4243ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect EACCES 127.0.0.1:62725
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1864:16) {
+      errno: -4092,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 62725
+    }
+  }

@@ -1,0 +1,47 @@
+ja source 0.3
+module suite38.preview_designer.release
+use Interface
+policy no_network
+
+interface PreviewDesignerRelease {
+    state selected_release: Text? = null
+    state opening_release_preview: Flag = false
+    derived can_select_release = not opening_release_preview
+    derived can_open_release_preview = selected_release != null and not opening_release_preview
+    component SOPHIA_ReleasePreviewModel {
+        label "Interpret release preview"
+        enabled bind can_open_release_preview
+        accessibility role button name "Interpret selected release preview"
+        action interpret_release_preview requires admin.action:approved
+    }
+    component CHARLOTTE_ReleasePreviewGate {
+        label "Validate release review readiness"
+        enabled bind can_open_release_preview
+        accessibility role button name "Validate selected release review readiness"
+        action validate_release_preview requires admin.action:approved
+    }
+    component LANDON_ReleasePreviewOpen {
+        label "Open release preview"
+        enabled bind can_open_release_preview
+        accessibility role button name "Open selected immutable release preview"
+        action open_release_preview requires admin.action:approved
+    }
+    component Professor_ReleasePreviewGuide {
+        label "Explain release preview"
+        enabled bind can_select_release
+        accessibility role button name "Explain release contents findings and limitations"
+        action explain_release_preview requires admin.action:approved
+    }
+    component Podium_ReleasePreviewEvidence {
+        label "View release preview evidence"
+        enabled bind can_open_release_preview
+        accessibility role button name "View release preview validation evidence"
+        action show_release_preview_evidence requires admin.action:approved
+    }
+    component ReleaseReviewViewport {
+        embed portal.scene "preview_designer_release"
+        motion bind timeline.release_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface PreviewDesignerRelease

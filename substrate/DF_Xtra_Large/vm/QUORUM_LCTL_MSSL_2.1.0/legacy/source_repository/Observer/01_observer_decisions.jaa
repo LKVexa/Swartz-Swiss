@@ -1,0 +1,39 @@
+ja source 0.3
+module repository.observer.decisions
+use Agent
+policy no_network
+
+agent ObserverDecisions {
+    identity "observer.decisions.v1"
+    role "audited-decision-observer"
+    goal decisions_observed when confidence >= 0.92
+    memory session retention 24h
+    budget steps 64 tools 6
+    tool ReadDecisionRepository(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIA_AnalyzeDecisionBasis(input: Path) -> Report requires model.infer:approved
+    tool CHARLOTTE_VerifyDecisionPolicy(input: Path) -> Report requires policy.verify:approved
+    tool LANDON_RouteDecisionRecords(input: Path) -> Report requires ledger.append:approved
+    tool PROFESSOR_ExplainDecisionRationale(input: Path) -> Report requires model.infer:approved
+    tool PODIUM_PublishDecisionEvidence(input: Path) -> Report requires ledger.append:approved
+    plan Main {
+        observe workspace
+        authorize ReadDecisionRepository
+        authorize SOPHIA_AnalyzeDecisionBasis
+        authorize CHARLOTTE_VerifyDecisionPolicy
+        authorize LANDON_RouteDecisionRecords
+        authorize PROFESSOR_ExplainDecisionRationale
+        authorize PODIUM_PublishDecisionEvidence
+        continue when policy_allows
+        execute ReadDecisionRepository("repository/01_observer/decisions")
+        execute SOPHIA_AnalyzeDecisionBasis("repository/01_observer/decisions")
+        execute CHARLOTTE_VerifyDecisionPolicy("repository/01_observer/decisions")
+        execute LANDON_RouteDecisionRecords("repository/01_observer/decisions")
+        execute PROFESSOR_ExplainDecisionRationale("repository/01_observer/decisions")
+        require human_approval before PODIUM_PublishDecisionEvidence
+        execute PODIUM_PublishDecisionEvidence("repository/01_observer/decisions")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "observer_decisions.mcrt"

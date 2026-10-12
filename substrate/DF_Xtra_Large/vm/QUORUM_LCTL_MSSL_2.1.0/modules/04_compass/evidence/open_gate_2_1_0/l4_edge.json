@@ -1,0 +1,120 @@
+{
+  "authority_sha256": "5b93d653b7ec42f8058c4ae65614279e9d6a8e1626487da51e3010fec37b28c7",
+  "domain_output": {
+    "decision": {
+      "accepted": true,
+      "confidence": 0.269531,
+      "explanation": "Reference decision produced by Compass under deterministic offline profile.",
+      "route": "compass"
+    },
+    "input_type": "request/context",
+    "legacy_signals": [
+      "beta_reduction",
+      "rule_indexing",
+      "common_subexpression_elimination",
+      "tabling",
+      "proof_normalization",
+      "tail_call",
+      "OPTIMIZE",
+      "LOWER",
+      "PACKAGE",
+      "CERTIFY",
+      "VALIDATE",
+      "COMPARE"
+    ],
+    "module": "Compass",
+    "output_type": "decision/explanation",
+    "payload_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "plane": "intent_reasoning",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "6815e4a481b0dc0a1ab84bd2555d05a72990515d47d1890d7dbbb1aadbe571d2",
+  "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "module": "Compass",
+  "module_id": 4,
+  "plane": "intent_reasoning",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "fe1604204c9bc5fcbd401fee9a671ac5035de487f9ebc0e7cc9e31b42adef552",
+  "stage_count": 9,
+  "stages": [
+    {
+      "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "node": "N01",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "5e94e6f666d46896ad2c1961c26145697df7874c9b689a1428236ad30a211543",
+      "stage": "REQUEST"
+    },
+    {
+      "input_sha256": "5e94e6f666d46896ad2c1961c26145697df7874c9b689a1428236ad30a211543",
+      "node": "N02",
+      "operator": "RETRIEVE",
+      "output_sha256": "3e1469ae9953c5de19d49e0dd03d7699dbd6c95ddaa7135c12582c010d45fc90",
+      "retrieved_count": 0,
+      "stage": "CONTEXT"
+    },
+    {
+      "input_sha256": "3e1469ae9953c5de19d49e0dd03d7699dbd6c95ddaa7135c12582c010d45fc90",
+      "node": "N03",
+      "normalized_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "operator": "PARSE",
+      "output_sha256": "dd5fbbcd624dc4f8c60cee9626ff92b64097d9ffd34c34c923289a08c8051166",
+      "stage": "INTERPRET"
+    },
+    {
+      "decision": "REFERENCE_CONTINUE",
+      "input_sha256": "dd5fbbcd624dc4f8c60cee9626ff92b64097d9ffd34c34c923289a08c8051166",
+      "node": "N04",
+      "operator": "REASON",
+      "output_sha256": "ef97d4321a8797bf2185817d48e6e9c7c53fe297817e94423359f8eb68d54cf6",
+      "score": 0.504412,
+      "stage": "REASON"
+    },
+    {
+      "accepted": true,
+      "input_sha256": "ef97d4321a8797bf2185817d48e6e9c7c53fe297817e94423359f8eb68d54cf6",
+      "node": "N05",
+      "operator": "FILTER",
+      "output_sha256": "ffe7e4f1dcf12165008654ce5b4e607faca8ed0fb6d10c8a6b36a4b4438fdd58",
+      "stage": "FILTER"
+    },
+    {
+      "input_sha256": "ffe7e4f1dcf12165008654ce5b4e607faca8ed0fb6d10c8a6b36a4b4438fdd58",
+      "node": "N06",
+      "operator": "RANK",
+      "output_sha256": "11d14d4bfc8c550a200f5f940d4ef499a02d8aa78563c63e72362c5bb7d3bcd3",
+      "rank_score": 0.513725,
+      "stage": "RANK"
+    },
+    {
+      "input_sha256": "11d14d4bfc8c550a200f5f940d4ef499a02d8aa78563c63e72362c5bb7d3bcd3",
+      "node": "N07",
+      "operator": "VALIDATE",
+      "output_sha256": "b5367f2e76a9638eb1eacc9e65c74605dfd214e1bbf4da551d543231166462d7",
+      "stage": "VALIDATE",
+      "valid": true
+    },
+    {
+      "explanation": "Compass:EXPLAIN reference semantics completed.",
+      "input_sha256": "b5367f2e76a9638eb1eacc9e65c74605dfd214e1bbf4da551d543231166462d7",
+      "node": "N08",
+      "operator": "EXPLAIN",
+      "output_sha256": "4800a32daf923d25a53448aeeeeac62d5d5d45d7bd1ce83cd0412cd500e6938a",
+      "stage": "EXPLAIN"
+    },
+    {
+      "input_sha256": "4800a32daf923d25a53448aeeeeac62d5d5d45d7bd1ce83cd0412cd500e6938a",
+      "node": "N09",
+      "operator": "RECORD",
+      "output_sha256": "8bdfdc7f9ed730206afdf25b60b00b571a0e291cf3d2af25e7c0aa1b897f5dc3",
+      "receipt_sha256": "719daa9e37ba8afc5a066baed7f1a4adb0788ec93f57328d0a9cff410a830839",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "9e21d653d150219876c3c73f7b6a9335fcccfa2be94287c2f154a8ed6bf97570",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Training and Evaluation",
+  "module_id": 37,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

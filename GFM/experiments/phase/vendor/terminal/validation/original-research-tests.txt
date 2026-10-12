@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "assertions": 11190,
+  "engineVersion": "1.1.0-russl",
+  "suites": [
+    "exact field axioms",
+    "AES known vectors",
+    "irreducibility",
+    "polynomial Euclidean arithmetic",
+    "matrix inversion",
+    "projective measurement",
+    "orbit cycles",
+    "exact NTT",
+    "FFT phase recovery",
+    "erasure decoding",
+    "deterministic replay",
+    "browser UMD"
+  ]
+}
+PASS Bell state has only 00/11 Born mass and maximal local entropy
+PASS GHZ correlations extend across three qubits with little-endian indexing
+PASS Every gate preserves norm and inverse composition returns input
+PASS Bloch Y direction and reduced density off-diagonal convention
+PASS CZ entangles |++>, SWAP transfers an asymmetric basis state
+PASS Deterministic seed replay and different seeds
+PASS SpinDoctor compatible explicit program with source qubits and shots
+PASS Angle parser supports safe arithmetic with conventional unary exponent precedence
+PASS Resource and grammar limits reject unsupported or unsafe work
+PASS Ten-qubit bound completes with normalized state and retained work counters
+{"schema":"GFM/QUANTUM-TEST/1","passed":10,"failed":0}
+PASS Packed penteract bytes and SHA-256 reproduce an independent little-endian reference
+PASS Packed state is request-bound despite unrelated mutable viewer sites
+PASS Integrity has true, false and unavailable states independent of numerical reproduction
+PASS Penteract computation rejects larger fields, invalid modes and seeds without truncation
+PASS Bare GHZ controls survive an actual run, navigation, render and repeat run
+PASS Exact GF(9) CHSH U witness records and replays, with model scope retained
+PASS Self-orthogonal GF(9) state and unsupported settings reject at execution
+PASS All ten views render against actual corpus and institutional metadata
+{
+  "schema": "GFM/INTEGRATION-TEST/1",
+  "passed": 8,
+  "failed": 0,
+  "appSha256": "cfdd34b464d747396bd4c04655fc25c92470bce0c8283ae68efcbcdbb94f5e84",
+  "engineSha256": "383e5ab5bb8516985d2c1d25d1dc328c48ca019d1011a9b07455f56a82d47774",
+  "checks": [
+    {
+      "name": "Packed penteract bytes and SHA-256 reproduce an independent little-endian reference",
+      "passed": true
+    },
+    {
+      "name": "Packed state is request-bound despite unrelated mutable viewer sites",
+      "passed": true
+    },
+    {
+      "name": "Integrity has true, false and unavailable states independent of numerical reproduction",
+      "passed": true
+    },
+    {
+      "name": "Penteract computation rejects larger fields, invalid modes and seeds without truncation",
+      "passed": true
+    },
+    {
+      "name": "Bare GHZ controls survive an actual run, navigation, render and repeat run",
+      "passed": true
+    },
+    {
+      "name": "Exact GF(9) CHSH U witness records and replays, with model scope retained",
+      "passed": true
+    },
+    {
+      "name": "Self-orthogonal GF(9) state and unsupported settings reject at execution",
+      "passed": true
+    },
+    {
+      "name": "All ten views render against actual corpus and institutional metadata",
+      "passed": true
+    }
+  ],
+  "scope": "Isolated VM computation, ledger, action and markup regression checks. Browser visual interaction is a separate validation domain."
+}
+PASS Large finite degree inputs retain their requests and produce finite periodic results
+PASS Ordinary angles retain reference probabilities, correlations and periodicity
+PASS Coefficient vectors reject malformed explicit values while padding valid trailing omissions
+PASS Field construction rejects unknown kinds and retains existing inferred-field adapters
+PASS Exact rational normalization rejects degenerate extents and retains fixed-shape endpoints
+PASS Opaque-frame SHA-256 fallback hashes the complete original packed bytes
+{"schema":"GFM/BOUNDARY-TEST/1","passed":6,"failed":0}
+✔ Malformed saved records are isolated; invalid stored seed resets safely (94.871ms)
+✔ Imported missing optional metadata normalizes before research-note export (41.8815ms)
+✔ Invalid references, digest syntax and unsupported types reject atomically (36.5426ms)
+✔ Valid hash imports retain inert requests; tampered result rejects (40.2058ms)
+✔ CSV neutralizes spreadsheet formulas while JSON metadata remains exact (33.0449ms)
+✔ RUSSL view labels GF80 and records an exact bounded request through the host (36.4805ms)
+✔ Adapter ignores forged source and nonce then accepts the identified host (33.3024ms)
+✔ Opaque frame uses host SHA-256 for run envelope and packed bytes (44.3889ms)
+✔ Standalone terminal preserves unavailable integrity without waiting on an absent host (34.6725ms)
+✔ Adapter bounds payloads, propagates rejection and expires unanswered requests (38.7235ms)
+✔ Cross-version numerical reproduction surfaces the version difference (34.015ms)
+✔ Research source markup stays escaped and visible as evidence (46.4796ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 522.605

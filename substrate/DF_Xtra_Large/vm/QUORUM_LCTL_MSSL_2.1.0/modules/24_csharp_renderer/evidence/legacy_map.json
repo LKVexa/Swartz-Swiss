@@ -1,0 +1,29 @@
+{
+  "suite_id": 24,
+  "suite_name": "C# Renderer",
+  "plane": "media_visual",
+  "legacy_sha256": "2303b21c7ad2b17656c5115da2e068fd807aac07f076a10a548cf5be590875f3",
+  "legacy_root": "legacy/source_repository/C# Renderer",
+  "files": [
+    {
+      "path": "24.1_CSharp_Renderer_Native_CSharp_Layer.deepml",
+      "sha256": "77e5b8a05cae9ebe755aea4464414fc3a149c9aa36c75a1e6e06efa4f5ef2974",
+      "bytes": 1361
+    },
+    {
+      "path": "24.2_CSharp_Renderer_Scene_Rendering.deepml",
+      "sha256": "3c5821f384ea3d21c1f047fc58b91cab893c6fbc4eba4a5e185a8de25ccc4ae4",
+      "bytes": 1448
+    },
+    {
+      "path": "24.3_CSharp_Renderer_Frame_State_Rendering.deepml",
+      "sha256": "5e53d2d108f809e442678b74bac252b15c9168e1cb85e5079bd2d19bc0e51498",
+      "bytes": 1454
+    },
+    {
+      "path": "README.md",
+      "sha256": "a92c74ef4f284b639a7e0f08449c9eb86402c5fd6644ee6afc5fcde7b2a68a4e",
+      "bytes": 10904
+    }
+  ]
+}

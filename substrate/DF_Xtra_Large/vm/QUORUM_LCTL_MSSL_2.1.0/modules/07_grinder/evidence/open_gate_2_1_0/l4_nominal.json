@@ -1,0 +1,134 @@
+{
+  "authority_sha256": "d22abcddbff484072a0001048c9d6e243fe9eb7b01af459e78772d7e873f8884",
+  "domain_output": {
+    "decision": {
+      "accepted": true,
+      "confidence": 0.679688,
+      "explanation": "Reference decision produced by Grinder under deterministic offline profile.",
+      "route": "grinder"
+    },
+    "input_type": "request/context",
+    "legacy_signals": [
+      "SophiaBaseline",
+      "CharlottePropose",
+      "LandonImprove",
+      "ProfessorCompare",
+      "PodiumPromote",
+      "SophiaObjective",
+      "CharlotteSearch",
+      "LandonOptimize",
+      "ProfessorAudit",
+      "PodiumSelect",
+      "SophiaPreserve",
+      "CharlotteFactor",
+      "LandonReduce",
+      "ProfessorEquivalence",
+      "PodiumAdmit",
+      "SophiaEvaluate",
+      "CharlotteCompare",
+      "LandonReplay",
+      "ProfessorHashAudit",
+      "PodiumRepeatGate",
+      "SophiaStress",
+      "LandonBound",
+      "ProfessorRiskAudit",
+      "PodiumStressGate"
+    ],
+    "module": "Grinder",
+    "output_type": "decision/explanation",
+    "payload_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+    "plane": "intent_reasoning",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "2692cfc559f976f7d9bacf4f897dc89a521c087f93a43bf73c47ed386eb43432",
+  "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+  "module": "Grinder",
+  "module_id": 7,
+  "plane": "intent_reasoning",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "7273c8fd7c290cbae656157010dce3f787d67c1e6f49f0f9d4c0f39c463ed76c",
+  "stage_count": 9,
+  "stages": [
+    {
+      "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "node": "N01",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "c703c0379979b77d5595cc4099817b7d64e805adf1f7c9caaa9bca446474ef8e",
+      "stage": "REQUEST"
+    },
+    {
+      "input_sha256": "c703c0379979b77d5595cc4099817b7d64e805adf1f7c9caaa9bca446474ef8e",
+      "node": "N02",
+      "operator": "RETRIEVE",
+      "output_sha256": "fd9b2385ea085ee61fac579f1ef27f1ee133a670b4031c2a3233cf5f6c9ea192",
+      "retrieved_count": 1,
+      "stage": "CONTEXT"
+    },
+    {
+      "input_sha256": "fd9b2385ea085ee61fac579f1ef27f1ee133a670b4031c2a3233cf5f6c9ea192",
+      "node": "N03",
+      "normalized_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "operator": "PARSE",
+      "output_sha256": "5654bf9132453c39f51b4b25ef3ce603149a110c1327c1d92a6d80ee8a1ba2bb",
+      "stage": "INTERPRET"
+    },
+    {
+      "decision": "REFERENCE_CONTINUE",
+      "input_sha256": "5654bf9132453c39f51b4b25ef3ce603149a110c1327c1d92a6d80ee8a1ba2bb",
+      "node": "N04",
+      "operator": "REASON",
+      "output_sha256": "e66afe81193e62530e331144f2771bbb13ab843205723b2593661980fa624675",
+      "score": 0.420098,
+      "stage": "REASON"
+    },
+    {
+      "accepted": true,
+      "input_sha256": "e66afe81193e62530e331144f2771bbb13ab843205723b2593661980fa624675",
+      "node": "N05",
+      "operator": "FILTER",
+      "output_sha256": "7559d5c863850856e82ffe011ab9a6f97819ee6223c4d1417be88a2f20fa0708",
+      "stage": "FILTER"
+    },
+    {
+      "input_sha256": "7559d5c863850856e82ffe011ab9a6f97819ee6223c4d1417be88a2f20fa0708",
+      "node": "N06",
+      "operator": "RANK",
+      "output_sha256": "57fa6998c4283a558469657de9ec596bcaf46b7272bd0d8c004947409d307c28",
+      "rank_score": 0.664706,
+      "stage": "RANK"
+    },
+    {
+      "input_sha256": "57fa6998c4283a558469657de9ec596bcaf46b7272bd0d8c004947409d307c28",
+      "node": "N07",
+      "operator": "VALIDATE",
+      "output_sha256": "8de8393b64c4bbe426fb9614b40f3e5dd332b262239372fc43c0e218707e0a63",
+      "stage": "VALIDATE",
+      "valid": true
+    },
+    {
+      "explanation": "Grinder:EXPLAIN reference semantics completed.",
+      "input_sha256": "8de8393b64c4bbe426fb9614b40f3e5dd332b262239372fc43c0e218707e0a63",
+      "node": "N08",
+      "operator": "EXPLAIN",
+      "output_sha256": "198d47c713d2b61c37c866a06f7b9b3656db48c5adbbdec6bca1bafd1eaafcfe",
+      "stage": "EXPLAIN"
+    },
+    {
+      "input_sha256": "198d47c713d2b61c37c866a06f7b9b3656db48c5adbbdec6bca1bafd1eaafcfe",
+      "node": "N09",
+      "operator": "RECORD",
+      "output_sha256": "f5401958666f0424c2718fbcdf79999fd11fd7982f7007390bb7576e5c377c9f",
+      "receipt_sha256": "694521d1e8b458a51caaea9bca3b419590b6765c9ee1dc83c14e2734ab06c15a",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

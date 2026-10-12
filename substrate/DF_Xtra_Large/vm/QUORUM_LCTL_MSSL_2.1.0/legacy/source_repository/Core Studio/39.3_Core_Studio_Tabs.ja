@@ -1,0 +1,14 @@
+ja source 0.3
+module suite39.core_studio.tabs
+use Core
+policy no_network
+
+record TabsPlan { id: Count, scope: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_tabs_plan(item: TabsPlan) -> Result<TabsPlan, Text> effects { pure } {
+    let normalized: Text = item.scope
+    return Ok(TabsPlan { id: item.id, scope: normalized, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: TabsPlan = TabsPlan { id: 3903, scope: "workspace_tabs", sophia: "interpret_tab_context", charlotte: "validate_tab_identity", landon: "stage_tab_state_plan", professor: "explain_tab_recovery", podium: "publish_tab_receipt" }
+let result = prepare_tabs_plan(sample)
+assert result.is_ok == true
+emit json result

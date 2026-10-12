@@ -1,0 +1,28 @@
+deepml specialized 0.3
+module grinder.optimization
+policy deterministic
+policy no_network
+
+domain grinder_optimization {
+  unit Score = base("dimensionless")
+  schema OptimizationEvidence { value: f64<Score> timestamp: Time provenance: Hash }
+  tensor candidates: f64<Score>[128,16]
+  operator SophiaObjective(x) -> Tensor pure deterministic
+  operator CharlotteSearch(x) -> Tensor pure deterministic
+  operator LandonOptimize(x) -> Tensor pure deterministic
+  operator ProfessorAudit(x) -> Tensor pure deterministic
+  operator PodiumSelect(x) -> Tensor pure deterministic
+  calibration OptimizationCalibration { method: bounded_least_squares tolerance: 1e-6 }
+  constraint ScoreBounds { min: 0 max: 1 }
+  graph GrinderOptimizationGraph {
+    sophia = SophiaObjective(candidates)
+    charlotte = CharlotteSearch(sophia)
+    landon = LandonOptimize(charlotte)
+    professor = ProfessorAudit(landon)
+    podium = PodiumSelect(professor)
+  }
+  validate podium with [SophiaObjective, CharlotteSearch, LandonOptimize, ProfessorAudit, PodiumSelect, OptimizationCalibration, ScoreBounds]
+  optimize GrinderOptimizationGraph using [unit_propagation, dimensional_simplification, op_specialization, sparse_planning, calibration_folding, target_lowering]
+  lower GrinderOptimizationGraph to DEEPML_SPECIALIZED_R12
+  package hybrid GrinderOptimizationGraph as "grinder_optimization.msslb"
+}

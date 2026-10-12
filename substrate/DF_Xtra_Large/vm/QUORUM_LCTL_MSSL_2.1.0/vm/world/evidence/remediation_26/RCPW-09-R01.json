@@ -1,0 +1,27 @@
+{
+  "evidence_sha256": "d63dac3897ee2862e5c69de1ec6856872b46176b0f3777800101d603d5cbda27",
+  "exit_code": 0,
+  "observed_results": {
+    "inputs": {
+      "authored": 40,
+      "causal": 60,
+      "mission": 80,
+      "recency": 10,
+      "relationship": 20,
+      "threat": 5
+    },
+    "score": 46,
+    "score_after_far_move": 46,
+    "score_after_opposite_move": 46
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "requirement_id": "RCPW-09-R01",
+  "result_sha256": "1f777c0429f5ba2af286da8491adb5bbc488bfaefdffaa7ed25014c3cb58d8fb",
+  "schema": "RCPW-26-GATE-EVIDENCE/1",
+  "status": "OPERATIONAL",
+  "test_command": "python vm/world/qualification/remediate_26.py",
+  "tool_versions": {
+    "python": "3.11.15",
+    "world_runtime": "7.0.0-applied-remediated-26"
+  }
+}

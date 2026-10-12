@@ -1,0 +1,303 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 11,
+    "PARTIAL": 18,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Forward materialization lead time is predicted from motion and route/camera intent.",
+      "requirement_id": "RCPW-15-R01",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rear folding preserves persistent state and entities crossing boundaries.",
+      "requirement_id": "RCPW-15-R02",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Roads, rivers, trains, projectiles, weather fronts, pursuits, and mission actors remain continuous across dynamic shells.",
+      "requirement_id": "RCPW-15-R03",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Teleportation has a deterministic destination-staging protocol.",
+      "requirement_id": "RCPW-15-R04",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Missed prewarm deadlines degrade presentation safely.",
+      "requirement_id": "RCPW-15-R05",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "High-speed traversal remains within declared frame, memory, and I/O budgets.",
+      "requirement_id": "RCPW-15-R06",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Traversal prediction has bounded speculation windows and backpressure.",
+      "requirement_id": "RCPW-15-R07",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Unfolding priority accounts for line-of-travel uncertainty and camera look-ahead separately.",
+      "requirement_id": "RCPW-15-R08",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Teleport destination staging validates canonical time, occupancy, collision, and active mission constraints.",
+      "requirement_id": "RCPW-15-R09",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Continuous moving phenomena crossing the player preserve phase/state through fold transitions.",
+      "requirement_id": "RCPW-15-R10",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "High-speed traversal predicts movement and camera look-ahead separately to reduce over-prefetch and preserve directional uncertainty.",
+      "requirement_id": "RCPW-15-R11",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Transport networks, tunnels, bridges, portals, and interiors receive route-aware prewarm rather than distance-only prewarm.",
+      "requirement_id": "RCPW-15-R12",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-lived projectiles, trains, herds, storms, fires, and other moving phenomena preserve phase and causality through fold/unfold.",
+      "requirement_id": "RCPW-15-R13",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Emergency degradation exposes a measurable recovery path back to target fidelity after overload ends.",
+      "requirement_id": "RCPW-15-R14",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "High-speed traversal integrates route-aware prediction from canonical navigation graphs, not only velocity extrapolation.",
+      "requirement_id": "RCPW-15-R15",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Moving transport may become a temporary reference/authority well so passengers, cargo, nearby hazards, and upcoming route segments receive coherent fidelity.",
+      "requirement_id": "RCPW-15-R16",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Traversal prewarm treats portals, tunnels, bridges, stations, dense settlements, and scripted/event barriers as high-cost milestones.",
+      "requirement_id": "RCPW-15-R17",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Backpressure can reduce speculative look-ahead without delaying canonical transport or world time.",
+      "requirement_id": "RCPW-15-R18",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification covers mounts, fast ground transport, rail-like transport, vertical transport, portal travel, teleportation, and rapid reference switching.",
+      "requirement_id": "RCPW-15-R19",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "High-speed traversal prewarm is coordinated across partitions/storage tiers so forward world expansion does not produce a thundering-herd resource failure.",
+      "requirement_id": "RCPW-15-R20",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Route milestones carry predicted arrival windows and priority classes for deterministic cross-worker prewarm.",
+      "requirement_id": "RCPW-15-R21",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Transport/reference wells can migrate execution ownership ahead of the player while preserving canonical route phase and passenger state.",
+      "requirement_id": "RCPW-15-R22",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Speculative prewarm is cancellable and resource-bounded; canonical simulation never waits on cosmetic asset fetch.",
+      "requirement_id": "RCPW-15-R23",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Traversal qualification includes cross-partition rail/road/portal travel, worker migration, packet/message delay simulation, and sudden direction reversal.",
+      "requirement_id": "RCPW-15-R24",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "High-speed traversal into newly generated or long-archived regions triggers semantic validation/rehydration ahead of ordinary visual prewarm.",
+      "requirement_id": "RCPW-15-R25",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Traversal prediction accounts for frontier generation barriers and may slow/redirect presentation rather than invent unvalidated canonical world content.",
+      "requirement_id": "RCPW-15-R26",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-distance transport remains governed by canonical route history, including routes built, destroyed, abandoned, or restored across eras.",
+      "requirement_id": "RCPW-15-R27",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Moving phenomena encountering an expansion or archive boundary use explicit defer/rehydrate/escalate policy.",
+      "requirement_id": "RCPW-15-R28",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification covers fast travel across old/new world boundaries, archived-route rehydration, infrastructure history, and reference switching during generation/rehydration.",
+      "requirement_id": "RCPW-15-R29",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "stage": 15,
+  "title": "High-Speed Traversal Fold / Unfold"
+}

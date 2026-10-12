@@ -1,0 +1,34 @@
+ja source 0.3
+module suite58.indexing_storage_resources_logs_recovery.storage_manager
+use Operations
+policy explicit_network
+
+workspace StorageManager {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 8 memory 16GB
+    network disabled
+    secret storage_manager_key reference "vault://suite58/storage-manager"
+
+    service SOPHIA_storage_manager_context replicas 1
+    health_check SOPHIA_storage_manager_context every 10s
+    service CHARLOTTE_storage_manager_gate replicas 1
+    health_check CHARLOTTE_storage_manager_gate every 10s
+    service LANDON_storage_manager replicas 1
+    health_check LANDON_storage_manager every 10s
+    service Professor_storage_manager_report replicas 1
+    health_check Professor_storage_manager_report every 10s
+    service Podium_storage_manager_receipt replicas 1
+    health_check Podium_storage_manager_receipt every 10s
+    service storage_manager_worker replicas 1
+    health_check storage_manager_worker every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "indexing_storage_resources_storage_manager.msslb"

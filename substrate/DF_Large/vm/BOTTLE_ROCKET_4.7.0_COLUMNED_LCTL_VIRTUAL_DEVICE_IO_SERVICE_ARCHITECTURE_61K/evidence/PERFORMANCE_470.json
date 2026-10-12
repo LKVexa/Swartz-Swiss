@@ -1,0 +1,12 @@
+{
+  "median": {
+    "arithmetic_ops_per_second": 48070072.105,
+    "branch_ops_per_second": 46690560.318,
+    "instructions_per_second": 94749455.237,
+    "load_store_ops_per_second": 56196371.891
+  },
+  "record": "BR.PerformanceMedian",
+  "release": "4.7.0",
+  "samples": 5,
+  "tool": "tools/br_bench.c compiled with -DBR_DEVELOPMENT=1 (raw code loading is disabled in production builds)"
+}

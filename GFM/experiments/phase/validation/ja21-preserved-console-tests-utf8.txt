@@ -1,0 +1,208 @@
+test_corpus_lock (tests.test_engine.EngineTests.test_corpus_lock) ... ok
+test_dfmedium_source_binding (tests.test_engine.EngineTests.test_dfmedium_source_binding) ... ok
+test_ja21_source_ir_identity (tests.test_engine.EngineTests.test_ja21_source_ir_identity) ... ok
+test_luxury_omni_shell (tests.test_engine.EngineTests.test_luxury_omni_shell) ... ok
+test_media_resources (tests.test_engine.EngineTests.test_media_resources) ... ok
+test_native_dll_binding (tests.test_engine.EngineTests.test_native_dll_binding) ... ok
+test_native_exports (tests.test_engine.EngineTests.test_native_exports) ... ok
+test_no_external_engine_payload_names (tests.test_engine.EngineTests.test_no_external_engine_payload_names) ... ok
+test_no_out_ref_auto_properties (tests.test_engine.EngineTests.test_no_out_ref_auto_properties) ... ok
+test_no_unqualified_io_path (tests.test_engine.EngineTests.test_no_unqualified_io_path) ... ok
+test_old_host_renderer_removed (tests.test_engine.EngineTests.test_old_host_renderer_removed) ... ok
+test_presenter_only_markers (tests.test_engine.EngineTests.test_presenter_only_markers) ... ok
+test_profile (tests.test_engine.EngineTests.test_profile) ... ok
+test_search_is_scriptless (tests.test_engine.EngineTests.test_search_is_scriptless) ... ok
+test_vm_device_path (tests.test_engine.EngineTests.test_vm_device_path) ... ok
+test_web_profile_media_policy (tests.test_engine.EngineTests.test_web_profile_media_policy) ... ok
+test_wpf_dependency_closure (tests.test_engine.EngineTests.test_wpf_dependency_closure) ... ok
+test_boundary (tests.test_dfmedium_engine.T.test_boundary) ... ok
+test_engine (tests.test_dfmedium_engine.T.test_engine) ... ok
+test_native (tests.test_dfmedium_engine.T.test_native) ... ok
+test_source_binding (tests.test_dfmedium_engine.T.test_source_binding) ... ok
+test_startup_home_precedes_optional_drawer (tests.test_dfmedium_engine.T.test_startup_home_precedes_optional_drawer) ... ok
+test_string_abi_blank_surface_repair (tests.test_dfmedium_engine.T.test_string_abi_blank_surface_repair) ... ok
+test_vm (tests.test_dfmedium_engine.T.test_vm) ... ok
+test_host_wiring (tests.test_link_targets.HostRepair.test_host_wiring) ... ok
+test_model (tests.test_link_targets.HostRepair.test_model) ... ok
+test_shipped_source_reproduces_defect (tests.test_link_targets.NativePatch.test_shipped_source_reproduces_defect) ... skipped 'needs gcc on POSIX'
+test_staged_patch_fixes_defect (tests.test_link_targets.NativePatch.test_staged_patch_fixes_defect) ... skipped 'needs gcc on POSIX'
+test_config_forbids_the_presenter_recording_a_fabric_verdict (tests.test_vec1_integration.ClaimDiscipline.test_config_forbids_the_presenter_recording_a_fabric_verdict) ... ok
+test_engine_profile_states_full_four_node_binding (tests.test_vec1_integration.ClaimDiscipline.test_engine_profile_states_full_four_node_binding) ... ok
+test_live_web_is_explicit_without_reintroducing_electron_or_node (tests.test_vec1_integration.ClaimDiscipline.test_live_web_is_explicit_without_reintroducing_electron_or_node) ... ok
+test_presenter_never_writes_an_execution_verdict (tests.test_vec1_integration.ClaimDiscipline.test_presenter_never_writes_an_execution_verdict) ... ok
+test_joined_unit_has_no_using_after_namespace (tests.test_vec1_integration.CompilationUnit.test_joined_unit_has_no_using_after_namespace) ... ok
+test_joined_unit_keeps_both_namespaces_and_entry_points (tests.test_vec1_integration.CompilationUnit.test_joined_unit_keeps_both_namespaces_and_entry_points) ... ok
+test_launchers_hoist_using_directives (tests.test_vec1_integration.CompilationUnit.test_launchers_hoist_using_directives) ... ok
+test_naive_concatenation_would_still_fail (tests.test_vec1_integration.CompilationUnit.test_naive_concatenation_would_still_fail)
+Keeps this test honest: if the sources ever stop reproducing the defect, the ... ok
+test_no_using_statement_is_hoisted (tests.test_vec1_integration.CompilationUnit.test_no_using_statement_is_hoisted) ... ok
+test_substrate_usings_are_covered_by_the_host (tests.test_vec1_integration.CompilationUnit.test_substrate_usings_are_covered_by_the_host)
+Every using the substrate needs is already declared by the host file, so the hoist ... ok
+test_canonical_vectors_are_self_consistent (tests.test_vec1_integration.ConfigSeal.test_canonical_vectors_are_self_consistent) ... ok
+test_seal_matches_the_live_substrate_config (tests.test_vec1_integration.ConfigSeal.test_seal_matches_the_live_substrate_config) ... ok
+test_components_named_in_the_brief_are_present (tests.test_vec1_integration.DesignSystem.test_components_named_in_the_brief_are_present) ... ok
+test_context_drawer_qualifies_browser_brush_helper (tests.test_vec1_integration.DesignSystem.test_context_drawer_qualifies_browser_brush_helper)
+ContextDrawerWindow is not a BrowserWindow subclass. Unqualified Brush(...) ... ok
+test_easing_uses_real_api_names (tests.test_vec1_integration.DesignSystem.test_easing_uses_real_api_names)
+Two defects that only a compiler or this test would catch: the EasingMode enum has ... ok
+test_motion_is_pixel_snapped_and_causal (tests.test_vec1_integration.DesignSystem.test_motion_is_pixel_snapped_and_causal) ... ok
+test_no_member_shadows_a_framework_type_it_uses (tests.test_vec1_integration.DesignSystem.test_no_member_shadows_a_framework_type_it_uses)
+A member named Action would shadow System.Action for the whole class. ... ok
+test_runtime_seal_version_is_bound_to_presenter (tests.test_vec1_integration.DesignSystem.test_runtime_seal_version_is_bound_to_presenter) ... ok
+test_tokens_and_motion_exist (tests.test_vec1_integration.DesignSystem.test_tokens_and_motion_exist) ... ok
+test_address_boundary_is_enforced (tests.test_vec1_integration.Hardening.test_address_boundary_is_enforced) ... ok
+test_address_text_is_sanitised (tests.test_vec1_integration.Hardening.test_address_text_is_sanitised) ... ok
+test_engine_monitor_is_private (tests.test_vec1_integration.Hardening.test_engine_monitor_is_private) ... ok
+test_helper_pipes_are_drained_concurrently (tests.test_vec1_integration.Hardening.test_helper_pipes_are_drained_concurrently) ... ok
+test_one_version_constant (tests.test_vec1_integration.Hardening.test_one_version_constant) ... ok
+test_seal_paths_are_containment_checked (tests.test_vec1_integration.Hardening.test_seal_paths_are_containment_checked) ... ok
+test_subresource_fetching_is_bounded (tests.test_vec1_integration.Hardening.test_subresource_fetching_is_bounded) ... ok
+test_tls_set_is_assigned_not_widened (tests.test_vec1_integration.Hardening.test_tls_set_is_assigned_not_widened) ... ok
+test_video_is_not_preloaded (tests.test_vec1_integration.Hardening.test_video_is_not_preloaded) ... ok
+test_bridge_contract_and_fallback_are_present (tests.test_vec1_integration.LiveWebIntegration.test_bridge_contract_and_fallback_are_present) ... ok
+test_bridge_has_modern_web_and_trust_boundaries (tests.test_vec1_integration.LiveWebIntegration.test_bridge_has_modern_web_and_trust_boundaries) ... ok
+test_omni_shell_routes_live_and_native_modes (tests.test_vec1_integration.LiveWebIntegration.test_omni_shell_routes_live_and_native_modes) ... ok
+test_vec_presentation_evidence_names_engine_but_never_claims_fabric (tests.test_vec1_integration.LiveWebIntegration.test_vec_presentation_evidence_names_engine_but_never_claims_fabric) ... ok
+test_all_four_nodes_are_accounted_for (tests.test_vec1_integration.NodeBinding.test_all_four_nodes_are_accounted_for) ... ok
+test_binding_reuses_the_package_trees_rather_than_duplicating_them (tests.test_vec1_integration.NodeBinding.test_binding_reuses_the_package_trees_rather_than_duplicating_them) ... ok
+test_unvendored_nodes_are_declared_honestly (tests.test_vec1_integration.NodeBinding.test_unvendored_nodes_are_declared_honestly) ... ok
+test_vendored_containers_exist_where_they_are_declared (tests.test_vec1_integration.NodeBinding.test_vendored_containers_exist_where_they_are_declared) ... ok
+test_control_plane_files_are_installed (tests.test_vec1_integration.SubstratePresent.test_control_plane_files_are_installed) ... ok
+test_presenter_source_is_installed_and_referenced (tests.test_vec1_integration.SubstratePresent.test_presenter_source_is_installed_and_referenced) ... ok
+test_substrate_control_plane_suite_passes (tests.test_vec1_integration.SubstrateSuite.test_substrate_control_plane_suite_passes) ... ok
+test_case_collision_is_rejected (tests.test_windows_packaging.WindowsPackagingTests.test_case_collision_is_rejected) ... ok
+test_current_tree_is_windows_compatible (tests.test_windows_packaging.WindowsPackagingTests.test_current_tree_is_windows_compatible) ... ok
+test_reserved_device_name_is_rejected (tests.test_windows_packaging.WindowsPackagingTests.test_reserved_device_name_is_rejected) ... ok
+test_trailing_dot_is_rejected (tests.test_windows_packaging.WindowsPackagingTests.test_trailing_dot_is_rejected) ... ok
+test_explicit_bridge_setup_checks_loadability (tests.test_webview2_loader.WebView2LoaderRegressionTests.test_explicit_bridge_setup_checks_loadability) ... ok
+test_loader_binds_core_before_wpf (tests.test_webview2_loader.WebView2LoaderRegressionTests.test_loader_binds_core_before_wpf) ... ok
+test_loader_validates_pinned_assembly_version (tests.test_webview2_loader.WebView2LoaderRegressionTests.test_loader_validates_pinned_assembly_version) ... ok
+test_runtime_discovery_is_not_managed_binding_gate (tests.test_webview2_loader.WebView2LoaderRegressionTests.test_runtime_discovery_is_not_managed_binding_gate) ... ok
+test_startup_loads_managed_adapter_before_add_type (tests.test_webview2_loader.WebView2LoaderRegressionTests.test_startup_loads_managed_adapter_before_add_type) ... ok
+test_application_docs_present (tests.test_optical_instrument_9.OpticalInstrument900.test_application_docs_present) ... ok
+test_automation_names_are_runtime_code (tests.test_optical_instrument_9.OpticalInstrument900.test_automation_names_are_runtime_code) ... ok
+test_closeout_is_not_falsely_claimed (tests.test_optical_instrument_9.OpticalInstrument900.test_closeout_is_not_falsely_claimed) ... ok
+test_command_palette (tests.test_optical_instrument_9.OpticalInstrument900.test_command_palette) ... ok
+test_compact_trust_layer (tests.test_optical_instrument_9.OpticalInstrument900.test_compact_trust_layer) ... ok
+test_content_is_full_bleed_and_chrome_is_overlay (tests.test_optical_instrument_9.OpticalInstrument900.test_content_is_full_bleed_and_chrome_is_overlay) ... ok
+test_context_drawer_is_in_window_overlay (tests.test_optical_instrument_9.OpticalInstrument900.test_context_drawer_is_in_window_overlay) ... ok
+test_context_drawer_keeps_qualified_brush_calls (tests.test_optical_instrument_9.OpticalInstrument900.test_context_drawer_keeps_qualified_brush_calls) ... ok
+test_declarative_experience_matches_runtime (tests.test_optical_instrument_9.OpticalInstrument900.test_declarative_experience_matches_runtime) ... ok
+test_declarative_interface_matches_runtime (tests.test_optical_instrument_9.OpticalInstrument900.test_declarative_interface_matches_runtime) ... ok
+test_design_system_version_and_semantic_tokens (tests.test_optical_instrument_9.OpticalInstrument900.test_design_system_version_and_semantic_tokens) ... ok
+test_device_pixel_hairline (tests.test_optical_instrument_9.OpticalInstrument900.test_device_pixel_hairline) ... ok
+test_keyboard_tab_navigation (tests.test_optical_instrument_9.OpticalInstrument900.test_keyboard_tab_navigation) ... ok
+test_light_dark_high_contrast_contract (tests.test_optical_instrument_9.OpticalInstrument900.test_light_dark_high_contrast_contract) ... ok
+test_live_web_uses_composition_control (tests.test_optical_instrument_9.OpticalInstrument900.test_live_web_uses_composition_control) ... ok
+test_master_series_summary (tests.test_optical_instrument_9.OpticalInstrument900.test_master_series_summary) ... ok
+test_master_series_traceability_is_one_to_one (tests.test_optical_instrument_9.OpticalInstrument900.test_master_series_traceability_is_one_to_one) ... ok
+test_motion_has_no_idle_timer (tests.test_optical_instrument_9.OpticalInstrument900.test_motion_has_no_idle_timer) ... ok
+test_no_blanket_runtime_claim_in_traceability (tests.test_optical_instrument_9.OpticalInstrument900.test_no_blanket_runtime_claim_in_traceability) ... ok
+test_one_accent_family (tests.test_optical_instrument_9.OpticalInstrument900.test_one_accent_family) ... ok
+test_optical_plane_z_contract (tests.test_optical_instrument_9.OpticalInstrument900.test_optical_plane_z_contract) ... ok
+test_per_monitor_immersive_bounds (tests.test_optical_instrument_9.OpticalInstrument900.test_per_monitor_immersive_bounds) ... ok
+test_profile_does_not_reintroduce_electron_or_node (tests.test_optical_instrument_9.OpticalInstrument900.test_profile_does_not_reintroduce_electron_or_node) ... ok
+test_reduced_motion (tests.test_optical_instrument_9.OpticalInstrument900.test_reduced_motion) ... ok
+test_release_version (tests.test_optical_instrument_9.OpticalInstrument900.test_release_version) ... ok
+test_renderer_is_automatic_without_visible_selector (tests.test_optical_instrument_9.OpticalInstrument900.test_renderer_is_automatic_without_visible_selector) ... ok
+test_root_escape_closes_transients_first (tests.test_optical_instrument_9.OpticalInstrument900.test_root_escape_closes_transients_first) ... ok
+test_status_copy_is_neutral (tests.test_optical_instrument_9.OpticalInstrument900.test_status_copy_is_neutral) ... ok
+test_visual_chrome_is_restrained (tests.test_optical_instrument_9.OpticalInstrument900.test_visual_chrome_is_restrained) ... ok
+test_download_command_no_longer_opens_user_downloads (tests.test_portable_desktop_91.PortableDesktop91Tests.test_download_command_no_longer_opens_user_downloads) ... ok
+test_fabric_receipts_cannot_claim_verdict (tests.test_portable_desktop_91.PortableDesktop91Tests.test_fabric_receipts_cannot_claim_verdict) ... ok
+test_joined_compile_unit_has_no_unqualified_io_path (tests.test_portable_desktop_91.PortableDesktop91Tests.test_joined_compile_unit_has_no_unqualified_io_path) ... ok
+test_no_active_appdata_fallback_in_host (tests.test_portable_desktop_91.PortableDesktop91Tests.test_no_active_appdata_fallback_in_host) ... ok
+test_node_placement_matches_technical_suite_tiers (tests.test_portable_desktop_91.PortableDesktop91Tests.test_node_placement_matches_technical_suite_tiers) ... ok
+test_package_seal_excludes_workspace (tests.test_portable_desktop_91.PortableDesktop91Tests.test_package_seal_excludes_workspace) ... ok
+test_portable_docs (tests.test_portable_desktop_91.PortableDesktop91Tests.test_portable_docs) ... ok
+test_portable_env_redirects_before_runtime (tests.test_portable_desktop_91.PortableDesktop91Tests.test_portable_env_redirects_before_runtime) ... ok
+test_portable_operator_tools (tests.test_portable_desktop_91.PortableDesktop91Tests.test_portable_operator_tools) ... ok
+test_portable_profile_contract (tests.test_portable_desktop_91.PortableDesktop91Tests.test_portable_profile_contract) ... ok
+test_runtime_policy_has_fixed_webview2_slot (tests.test_portable_desktop_91.PortableDesktop91Tests.test_runtime_policy_has_fixed_webview2_slot) ... ok
+test_vec1_uses_portable_state (tests.test_portable_desktop_91.PortableDesktop91Tests.test_vec1_uses_portable_state) ... ok
+test_version (tests.test_portable_desktop_91.PortableDesktop91Tests.test_version) ... ok
+test_webview2_uses_portable_user_data_and_downloads (tests.test_portable_desktop_91.PortableDesktop91Tests.test_webview2_uses_portable_user_data_and_downloads) ... ok
+test_windows_compile_gate_includes_portable_source (tests.test_portable_desktop_91.PortableDesktop91Tests.test_windows_compile_gate_includes_portable_source) ... ok
+test_launcher_banner_is_version_driven (tests.test_compile_hygiene_912.CompileHygiene912Tests.test_launcher_banner_is_version_driven) ... ok
+test_no_declaration_only_private_underscore_fields (tests.test_compile_hygiene_912.CompileHygiene912Tests.test_no_declaration_only_private_underscore_fields) ... ok
+test_omni_user_editing_has_read_side_guard (tests.test_compile_hygiene_912.CompileHygiene912Tests.test_omni_user_editing_has_read_side_guard) ... ok
+test_release_version (tests.test_compile_hygiene_912.CompileHygiene912Tests.test_release_version) ... ok
+test_renderer_selector_state_is_removed (tests.test_compile_hygiene_912.CompileHygiene912Tests.test_renderer_selector_state_is_removed) ... ok
+test_command_carrier_is_not_one_large_toolbar (tests.test_floating_omni_920.FloatingOmni920Tests.test_command_carrier_is_not_one_large_toolbar) ... ok
+test_floating_url_pill_contract (tests.test_floating_omni_920.FloatingOmni920Tests.test_floating_url_pill_contract) ... ok
+test_profile_declares_new_xd (tests.test_floating_omni_920.FloatingOmni920Tests.test_profile_declares_new_xd) ... ok
+test_release (tests.test_floating_omni_920.FloatingOmni920Tests.test_release) ... ok
+test_single_line_address_surface (tests.test_floating_omni_920.FloatingOmni920Tests.test_single_line_address_surface) ... ok
+test_drag_grip_and_zero_reflow_motion (tests.test_movable_omni_930.MovableOmni930Tests.test_drag_grip_and_zero_reflow_motion) ... ok
+test_immersive_withdraws_movable_bar (tests.test_movable_omni_930.MovableOmni930Tests.test_immersive_withdraws_movable_bar) ... ok
+test_omni_is_independent_floating_plane (tests.test_movable_omni_930.MovableOmni930Tests.test_omni_is_independent_floating_plane) ... ok
+test_portable_position_persistence (tests.test_movable_omni_930.MovableOmni930Tests.test_portable_position_persistence) ... ok
+test_profile_flags (tests.test_movable_omni_930.MovableOmni930Tests.test_profile_flags) ... ok
+test_recenter_and_normalized_contract (tests.test_movable_omni_930.MovableOmni930Tests.test_recenter_and_normalized_contract) ... ok
+test_release_and_design_system (tests.test_movable_omni_930.MovableOmni930Tests.test_release_and_design_system) ... ok
+test_portable_path_variable_remains_distinct (tests.test_verifier_path_content_921.VerifierPathContent921Tests.test_portable_path_variable_remains_distinct) ... ok
+test_portable_source_content_is_not_reused_as_path (tests.test_verifier_path_content_921.VerifierPathContent921Tests.test_portable_source_content_is_not_reused_as_path) ... ok
+test_release (tests.test_verifier_path_content_921.VerifierPathContent921Tests.test_release) ... ok
+test_double_click_collapse_contract (tests.test_omni_interaction_971.OmniInteraction971Tests.test_double_click_collapse_contract) ... ok
+test_full_client_drag_domain (tests.test_omni_interaction_971.OmniInteraction971Tests.test_full_client_drag_domain) ... ok
+test_highlighted_selection (tests.test_omni_interaction_971.OmniInteraction971Tests.test_highlighted_selection) ... ok
+test_live_navigation_cannot_overwrite_edit (tests.test_omni_interaction_971.OmniInteraction971Tests.test_live_navigation_cannot_overwrite_edit) ... ok
+test_release (tests.test_omni_interaction_971.OmniInteraction971Tests.test_release) ... ok
+test_command_palette_arity (tests.test_landing_compile_981.LandingCompile981Tests.test_command_palette_arity) ... ok
+test_private_tab_event (tests.test_landing_compile_981.LandingCompile981Tests.test_private_tab_event) ... ok
+test_release (tests.test_landing_compile_981.LandingCompile981Tests.test_release) ... ok
+test_home_is_native_geometry_not_raster (tests.test_landing_native_983.LandingNative983Tests.test_home_is_native_geometry_not_raster) ... ok
+test_profile (tests.test_landing_native_983.LandingNative983Tests.test_profile) ... ok
+test_release (tests.test_landing_native_983.LandingNative983Tests.test_release) ... ok
+test_windows_spectrum_is_hardcoded (tests.test_landing_native_983.LandingNative983Tests.test_windows_spectrum_is_hardcoded) ... ok
+test_clear_button (tests.test_omni_draft_984.OmniDraft984Tests.test_clear_button) ... ok
+test_empty_draft_is_protected (tests.test_omni_draft_984.OmniDraft984Tests.test_empty_draft_is_protected) ... ok
+test_enter_empty_does_not_resync (tests.test_omni_draft_984.OmniDraft984Tests.test_enter_empty_does_not_resync) ... ok
+test_navigation_commit_only_syncs_through_guard (tests.test_omni_draft_984.OmniDraft984Tests.test_navigation_commit_only_syncs_through_guard) ... ok
+test_release (tests.test_omni_draft_984.OmniDraft984Tests.test_release) ... ok
+test_tab_scoped_dirty_draft_state (tests.test_omni_draft_984.OmniDraft984Tests.test_tab_scoped_dirty_draft_state) ... ok
+test_drag_uses_global_pointer_frame_polling (tests.test_interaction_reliability_961.InteractionReliability961.test_drag_uses_global_pointer_frame_polling) ... ok
+test_live_site_does_not_overwrite_active_address_edit (tests.test_interaction_reliability_961.InteractionReliability961.test_live_site_does_not_overwrite_active_address_edit) ... ok
+test_release (tests.test_interaction_reliability_961.InteractionReliability961.test_release) ... ok
+test_video_cursor_guard_only_overrides_cursor_none (tests.test_interaction_reliability_961.InteractionReliability961.test_video_cursor_guard_only_overrides_cursor_none) ... ok
+test_drag_uses_full_owner_window_coordinate_space (tests.test_interaction_reliability_962.InteractionReliability962.test_drag_uses_full_owner_window_coordinate_space) ... ok
+test_omni_edit_session_blocks_page_url_repopulation (tests.test_interaction_reliability_962.InteractionReliability962.test_omni_edit_session_blocks_page_url_repopulation) ... ok
+test_release (tests.test_interaction_reliability_962.InteractionReliability962.test_release) ... ok
+test_click_reclaims_webview_keyboard_focus_synchronously_and_retries (tests.test_omni_focus_986.OmniFocus986Tests.test_click_reclaims_webview_keyboard_focus_synchronously_and_retries) ... ok
+test_first_text_key_and_delete_survive_focus_race (tests.test_omni_focus_986.OmniFocus986Tests.test_first_text_key_and_delete_survive_focus_race) ... ok
+test_focus_scope_and_profile_contract (tests.test_omni_focus_986.OmniFocus986Tests.test_focus_scope_and_profile_contract) ... ok
+test_page_click_releases_typing_ownership_without_discarding_dirty_draft (tests.test_omni_focus_986.OmniFocus986Tests.test_page_click_releases_typing_ownership_without_discarding_dirty_draft) ... ok
+test_release (tests.test_omni_focus_986.OmniFocus986Tests.test_release) ... ok
+test_boot_script_persists_stage_markers_and_failure (tests.test_boot_hardening_987.BootHardening987Tests.test_boot_script_persists_stage_markers_and_failure) ... ok
+test_keyboard_focus_result_is_not_cross_type_compared (tests.test_boot_hardening_987.BootHardening987Tests.test_keyboard_focus_result_is_not_cross_type_compared) ... ok
+test_launcher_surfaces_boot_log_on_failure (tests.test_boot_hardening_987.BootHardening987Tests.test_launcher_surfaces_boot_log_on_failure) ... ok
+test_profile_declares_boot_diagnostics (tests.test_boot_hardening_987.BootHardening987Tests.test_profile_declares_boot_diagnostics) ... ok
+test_release (tests.test_boot_hardening_987.BootHardening987Tests.test_release) ... ok
+
+----------------------------------------------------------------------
+Ran 175 tests in 14.758s
+
+OK (skipped=2)
+..............s...............
+----------------------------------------------------------------------
+Ran 30 tests in 7.577s
+
+OK (skipped=1)
+Package integrity PASS: 7695 sealed files
+DF_Medium boundary PASS: old C#/WPF document parser absent
+JA21 source/IR PASS: browser + renderer + web_engine
+DF_Medium native provenance PASS: 7c57c6ce49f7ff4c492cc53c3177778d04adfa96f3a96525c57c3c9f4ef2cda4
+Native JA21 profile binding PASS: d53a401457966113af9ce93e64b13d4a6f552e6a40a2e735fddc7956a8456614
+Electron/Node bundled-engine absence PASS; WebView2 live-web bridge is explicit
+8.1.0 hardening markers PASS
+8.1.1 presenter compile regression gate PASS
+9.8.7 live-web composition + CLR managed-loader markers PASS
+9.8.7 Windows path/case-collision preflight PASS
+VEC1 electron substrate PASS: presenter cannot record a fabric verdict
+9.0.0 Optical Instrument master-series traceability PASS: 12,500 IDs preserved
+9.8.7 portable desktop/AppData-redirection + DF-tier placement contract PASS
+9.8.7 movable floating omni bar + normalized portable placement state PASS
+9.8.7 boot-stage diagnostics + Add-Type warning-risk gate PASS
+VEC node binding PASS: all four DF node containers vendored
+
+Running the VEC1 substrate control-plane suite...

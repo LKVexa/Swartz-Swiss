@@ -1,0 +1,8 @@
+LCTLC/1.1
+@unit id=br.core version=4.7.0 profile=brvm-native target=local-reference backend=brir network=deny replay=deterministic image_version=9 requested_caps=CONTROL max_steps=8 termination=bounded
+@defaults mode=WRAP width=WIDE
+@frame id=F0000 parent=ROOT module=br.core
+ID│LANE│OP│OUT│CTRL│IN│ARG│META
+C001│core│NOP│_│C0│_│_│_
+C002│core│HALT│_│C0│_│_│_
+@end

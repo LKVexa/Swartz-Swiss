@@ -1,0 +1,11 @@
+{
+  "ceiling_bytes": 61000,
+  "compiler_command": "cc -DBR_PRODUCTION -Isrc -std=c11 -Os -Wall -Wextra -Werror -fno-common -fstack-protector-strong -ffreestanding -c src/brvm.c -o .build/brvm-core61.o",
+  "counted_boundary": "stripped relocatable freestanding production execution core compiled solely from src/brvm.c; excludes trust/compiler/HAL/CLI, which remain covered by the separate 110000-byte production runtime-and-authority source boundary",
+  "measurement_note": "Freshly rerun during release re-seal after audit remediation; measurement tool inherited from 4.9 release engineering (performance tool corrected to report in-process throughput).",
+  "raw_object_bytes": 49976,
+  "record": "BOTTLE_ROCKET.Core61/5.0.0",
+  "result": "PASS",
+  "sha256": "998744e798ef9562b74ed2fec8514a75bbce2f0b0977dfd6ff3dfe799a3bf354",
+  "stripped_core_bytes": 48264
+}

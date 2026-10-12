@@ -1,0 +1,31 @@
+ja source 0.3
+module suite46.air_gap_certification_installer_plane.licensing
+use Operations
+policy explicit_network
+
+workspace Licensing {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 4 memory 8GB
+    network disabled
+    secret license_key reference "vault://suite46/licensing"
+    service SOPHIA_license_context replicas 1
+    health_check SOPHIA_license_context every 10s
+    service CHARLOTTE_license_gate replicas 1
+    health_check CHARLOTTE_license_gate every 10s
+    service LANDON_license_evaluator replicas 1
+    health_check LANDON_license_evaluator every 10s
+    service Professor_license_report replicas 1
+    health_check Professor_license_report every 10s
+    service Podium_license_receipt replicas 1
+    health_check Podium_license_receipt every 10s
+    service licensing_worker replicas 1
+    health_check licensing_worker every 5s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == true
+emit package "licensing.msslb"

@@ -1,0 +1,44 @@
+profile ja.service_protocol
+source_level 0.3
+
+subsuite Terminal.T_10 ShellAdapterCommandInvocation {
+    identity { suite = "66"; id = "T-10"; deterministic = true; autorun = false }
+
+    integrate { Suite_14_Plug; Suite_59_Shell; Suite_60_Worker }
+
+    accept {
+        command_argv[]
+        TerminalPathPolicy
+        TerminalEnvironmentManifest
+        TerminalCapabilityManifest
+        PodiumTerminalAuthorization
+        hermit_cell_ref
+    }
+
+    emit TypedShellInvocation
+
+    procedure build_typed_invocation(argv, cwd, env, cell) {
+        require argv == TerminalCapabilityManifest.approved_argv
+        require cwd == TerminalPathPolicy.working_directory
+        require cell.attestation == PASS
+
+        invocation = TypedShellInvocation {
+            executable_ref = TerminalCapabilityManifest.executable_ref
+            argv = argv
+            cwd_ref = cwd
+            environment_ref = env.hash
+            stdin_policy
+            stdout_policy
+            stderr_policy
+            signal_policy
+            deadline
+            authorization_ref
+        }
+        invocation.hash = sha256(canonical_bytes(invocation))
+        return invocation
+    }
+
+    deny { display_text_execution; implicit_shell_wrapper; argv_reparse; environment_widening }
+    evidence { typed_invocation; adapter_version; shell_route; invocation_hash }
+    tests { argv_integrity; cwd_integrity; shell_wrapper_denial; adapter_roundtrip }
+}

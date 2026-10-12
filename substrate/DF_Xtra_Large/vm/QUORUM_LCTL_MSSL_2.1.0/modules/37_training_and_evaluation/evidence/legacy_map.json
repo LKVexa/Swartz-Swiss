@@ -1,0 +1,34 @@
+{
+  "suite_id": 37,
+  "suite_name": "Training and Evaluation",
+  "plane": "model_compute",
+  "legacy_sha256": "719ccc1808b958d6af35e6d42590364e3a9b76d676030dda5432fd3e2dbb3134",
+  "legacy_root": "legacy/source_repository/Training and Evaluation",
+  "files": [
+    {
+      "path": "37.1_Training_Suite_Visual_Training_Examples.jate",
+      "sha256": "221623d9c9ba5a1a0a599d4b5665b46ae429876be656d252d0e53048ab651c0c",
+      "bytes": 1069
+    },
+    {
+      "path": "37.2_Training_Suite_Evaluation_Fixtures.jate",
+      "sha256": "f38a4743c18935a971a76c4a425ea8e5c6af273304f152d39a3c6dbd4eedc315",
+      "bytes": 1026
+    },
+    {
+      "path": "37.3_Training_Suite_Feedback_Records.jate",
+      "sha256": "38c6200c317453ac26f3dfe639b0af0fcda733b91838b55efda5fb202f46c373",
+      "bytes": 1037
+    },
+    {
+      "path": "37.4_Training_Suite_Learning_Promotion.jate",
+      "sha256": "e3331e4e9d3d6d79208c2f0bf76d945ce196d6d2a9d15c0f112506d9f2f41628",
+      "bytes": 1039
+    },
+    {
+      "path": "README.md",
+      "sha256": "cc03349a11c79a56bed46541e1fdabce1acbef29fb4638d6f8c13def311ef088",
+      "bytes": 16793
+    }
+  ]
+}

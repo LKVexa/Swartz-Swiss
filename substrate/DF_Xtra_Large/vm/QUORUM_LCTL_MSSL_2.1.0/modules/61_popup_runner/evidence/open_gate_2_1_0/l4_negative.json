@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "09b5b6ec0141a00bf6f8611b618863407b58c56c5f8fa1e3af72b16e1b40c2dc",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Popup Runner",
+  "module_id": 61,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

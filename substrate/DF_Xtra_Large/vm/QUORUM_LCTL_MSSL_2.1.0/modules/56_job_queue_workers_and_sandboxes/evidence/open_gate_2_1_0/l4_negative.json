@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "0c136986146216c836f03c9350221f1d8964f91bff7d42d0079a0cf963ea4cad",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Job Queue Workers and Sandboxes",
+  "module_id": 56,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

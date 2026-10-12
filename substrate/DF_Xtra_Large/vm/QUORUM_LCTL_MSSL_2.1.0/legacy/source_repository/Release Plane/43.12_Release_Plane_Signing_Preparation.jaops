@@ -1,0 +1,31 @@
+ja source 0.3
+module suite43.release_plane.signing_preparation
+use Operations
+policy explicit_network
+
+workspace ReleasePlaneSigningPreparation {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 4 memory 8GB
+    network disabled
+    secret signing_key reference "vault://release-plane/signing"
+    service SOPHIA_signing_request replicas 1
+    health_check SOPHIA_signing_request every 10s
+    service CHARLOTTE_signing_preparation_gate replicas 1
+    health_check CHARLOTTE_signing_preparation_gate every 10s
+    service LANDON_signing_digest_stage replicas 1
+    health_check LANDON_signing_digest_stage every 10s
+    service Professor_signing_preparation_report replicas 1
+    health_check Professor_signing_preparation_report every 10s
+    service Podium_signing_preparation_receipt replicas 1
+    health_check Podium_signing_preparation_receipt every 10s
+    service signing_request_preparer replicas 1
+    health_check signing_request_preparer every 5s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == true
+emit package "release_plane_signing_preparation.msslb"

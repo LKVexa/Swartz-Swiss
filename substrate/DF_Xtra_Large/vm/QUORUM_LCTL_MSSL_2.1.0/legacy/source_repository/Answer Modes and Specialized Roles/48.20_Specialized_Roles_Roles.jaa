@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.specialized_roles.roles
+use Agent
+policy no_network
+
+agent RoleRegistry {
+    identity "role_registry"
+    role "sophia-charlotte-landon-professor-podium-role-registry"
+    goal resolve_least_privilege_specialized_role when confidence >= 0.97
+    memory session retention 1h
+    budget steps 45 tools 5
+    tool LANDONLoadRoleRegistry(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAResolveRequestedRole(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateRoleSelection(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainRoleSelection(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordRoleSelection(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONLoadRoleRegistry
+        authorize SOPHIAResolveRequestedRole
+        authorize CHARLOTTEValidateRoleSelection
+        authorize ProfessorExplainRoleSelection
+        authorize PodiumRecordRoleSelection
+        continue when policy_allows
+        execute LANDONLoadRoleRegistry("approved_role_registry")
+        execute SOPHIAResolveRequestedRole("request_and_role_contracts")
+        execute CHARLOTTEValidateRoleSelection("candidate_role_selection")
+        execute ProfessorExplainRoleSelection("validated_role_selection")
+        execute PodiumRecordRoleSelection("role_selection_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "RoleRegistry.mcrt"

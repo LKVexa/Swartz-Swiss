@@ -1,0 +1,29 @@
+ja certifier 0.3
+module pencil_sharpener.compactness
+policy no_execute_unknown_code
+policy no_network
+
+grammar PencilSharpenerCompactness {
+  production expression = term, { additive_tail } ;
+  production additive_tail = additive_operator, term ;
+  production term = factor, { multiplicative_tail } ;
+  production multiplicative_tail = multiplicative_operator, factor ;
+  production factor = IDENT | "(", expression, ")" ;
+  production additive_operator = "+" | "-" ;
+  production multiplicative_operator = "*" | "/" ;
+  predicate language_is_preserved(expression) ;
+  predicate tables_are_deterministic(expression) ;
+  type_judgment expression : WellFormed ;
+  policy_validator SophiaEquivalenceValidator requires [no_network, no_execute_unknown_code] ;
+  compiler_validator CharlotteFactorValidator verifies [AST, R12, MCRT] ;
+  compiler_validator LandonCompressionValidator verifies [AST, R12, MCRT] ;
+  evidence ProfessorCompactnessEvidence { source_hash: required compiler_hash: required runtime_hash: required }
+  certification profile PodiumCompactness { require all validators }
+  certificate PencilSharpenerCompactnessBundle sign_with local_test_key ;
+}
+
+normalize grammar PencilSharpenerCompactness using [eliminate_left_recursion, factor_prefixes, compute_first_follow, build_automaton, compress_tables]
+analyze ambiguity PencilSharpenerCompactness
+certify grammar PencilSharpenerCompactness profile PodiumCompactness
+lower certificate PencilSharpenerCompactness to JA_CERTIFIER_R12
+package certificate PencilSharpenerCompactnessBundle as "pencil_sharpener_compactness.msslb"

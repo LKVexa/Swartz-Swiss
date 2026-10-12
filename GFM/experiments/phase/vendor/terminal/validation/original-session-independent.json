@@ -1,0 +1,90 @@
+{
+  "schema": "RUSSL-RESEARCH-INDEPENDENT-SESSION/1",
+  "status": "PASS",
+  "input": "examples/research-step7-session.json",
+  "inputSHA256": "c460d33c7a9c5c8d99caaa1ee3180a86a50081caba451f6874ade2d51b601f2b",
+  "recordCount": 4,
+  "records": [
+    {
+      "id": "GFM-MV3IZF5X-1",
+      "type": "gf9-chsh",
+      "sha256": "d48a3ef8c532b862a15ee4df595717886fdddc2c6d21684fd63ace6fba31cd8c",
+      "canonicalUTF8Bytes": 755,
+      "status": "PASS"
+    },
+    {
+      "id": "GFM-MV3IZI8P-2",
+      "type": "circuit",
+      "sha256": "f643c961ecdc033e82da134a82d763643c43759f8761730af536848bbac4a31a",
+      "canonicalUTF8Bytes": 2309,
+      "status": "PASS"
+    },
+    {
+      "id": "GFM-MV3IZJFM-3",
+      "type": "penteract",
+      "sha256": "8f3e191a4ac8f65fda69f8c164a9057fa196aa8c29ba55aabef411bd993bf61d",
+      "canonicalUTF8Bytes": 482,
+      "status": "PASS"
+    },
+    {
+      "id": "GFM-MV3IZLAU-4",
+      "type": "russl-slice",
+      "sha256": "ab55a2109d28820e5270869254ec0273f1e3b8d619a43de198d91ea7e468a9b4",
+      "canonicalUTF8Bytes": 111831,
+      "status": "PASS"
+    }
+  ],
+  "gf9": {
+    "status": "PASS",
+    "arithmetic": "Independent characteristic-3 polynomial reduction",
+    "rawTerms": [
+      2,
+      2,
+      2,
+      1
+    ],
+    "terms": [
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    "signedCHSH": -4,
+    "norm": 1,
+    "dual": [
+      1,
+      0,
+      1,
+      8
+    ]
+  },
+  "circuit": {
+    "status": "PASS",
+    "model": "Independent Bell support and bigint FNV-1a/xorshift32 sampling reference",
+    "shots": 2048,
+    "counts": {
+      "11": 1035,
+      "00": 1013
+    }
+  },
+  "syntheticPenteract": {
+    "status": "PASS",
+    "packedSHA256": "0023b4a9422bad0434aac4931bd3e3ad5850777d9b9b648f884a95308166fe7d",
+    "sites": 16384,
+    "byteLength": 131072
+  },
+  "russl": {
+    "status": "PASS",
+    "selectedIndex": 371,
+    "coordinates": [
+      "19",
+      "11",
+      "2",
+      "3",
+      "6553"
+    ],
+    "pixelPayloadSHA256": "60f2d3b284982a2b3bf68b19b61601be54e3e4ff3bf457ba66cd5e7d00d6db26",
+    "originalHashesClaimedVerified": false
+  },
+  "scope": "Independent Node builtins and explicit reference arithmetic; no terminal/workbench JavaScript imports. SHA-256 verifies envelope consistency, not authorship or physical theory."
+}

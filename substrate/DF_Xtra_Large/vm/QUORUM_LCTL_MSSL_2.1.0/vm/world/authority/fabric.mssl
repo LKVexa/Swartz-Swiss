@@ -1,0 +1,19 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.world.fabric:7.0.0-applied-remediated-26",
+λ≡"quorum.rcpw.world.fabric",
+ℛ≡{
+  "0001":"module(\"quorum.rcpw.world.fabric\")",
+  "0002":"learn(\"partitions\",literal(\"region execution ownership is separate from canonical world location\"))",
+  "0003":"learn(\"migration\",literal(\"partition migration preserves entity state\"))",
+  "0004":"learn(\"transactions\",literal(\"idempotent transfer semantics prevent duplicate canonical inventory effects\"))",
+  "0005":"learn(\"determinism\",literal(\"single-host deterministic reference only; true multi-worker conformance remains partial\"))",
+  "0006":"learn(\"recovery\",literal(\"save/load and ledger verification provide local recovery substrate\"))"
+},
+π≡[],δ≡6,τ≡0,
+μ≡{"learn.partitions":"region execution ownership is separate from canonical world location","learn.migration":"partition migration preserves entity state","learn.transactions":"idempotent transfer semantics prevent duplicate canonical inventory effects","learn.determinism":"single-host deterministic reference only; true multi-worker conformance remains partial","learn.recovery":"save/load and ledger verification provide local recovery substrate"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"partitions":"region execution ownership is separate from canonical world location","migration":"partition migration preserves entity state","transactions":"idempotent transfer semantics prevent duplicate canonical inventory effects","determinism":"single-host deterministic reference only; true multi-worker conformance remains partial","recovery":"save/load and ledger verification provide local recovery substrate"}},
+ν≡{}
+,κ≡"sha256:fd9af07ca85554da50229b7bc6d344156e693a08465d1ab5cdc87ef5ba9915f8"
+}⇒⊤

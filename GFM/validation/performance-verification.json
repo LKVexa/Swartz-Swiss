@@ -1,0 +1,35 @@
+{
+  "schema": "GFM-performance-verification/1",
+  "integration": "adaptive-transport/1",
+  "tests": 24,
+  "pass": 24,
+  "fail": 0,
+  "command": "node --test GFM/tests/performance-pacing.test.cjs GFM/tests/combined-ui.test.cjs GFM/tests/browser-backend.test.cjs",
+  "testFiles": [
+    "performance-pacing.test.cjs",
+    "combined-ui.test.cjs",
+    "browser-backend.test.cjs"
+  ],
+  "guarantees": [
+    "Exact audited snapshot parity after20 scheduled40ps advances",
+    "One outstanding streamed frame and one latest UI queue",
+    "No interval backlog; portable path yields4\u20138ms between solves",
+    "Control/reset replies suppress delayed stale run frames",
+    "60 camera redraws reuse all GPU buffers without new data uploads",
+    "Geometry updates reuse existing typed arrays and GPU allocation",
+    "Existing live UI/control, Worker fallback, initialization and numerical parity checks remain passing"
+  ],
+  "physicsChanged": false,
+  "physicsIntervalSeconds": 4e-11,
+  "wallClockPacing": "Dedicated worker maximum serial throughput, native requestAnimationFrame display cadence; no fixed60Hz cap",
+  "sourceSHA256": {
+    "browser/worker-controller.cjs": "530d46577213df2ec364c5c001019b9c9b6d6b917fe157a158c4216396ee4e72",
+    "browser/transport.cjs": "39b7454c34c6a462345e8dfc34ec447db4d0ab9130a4289d7e6f1bbf9fef9ac3",
+    "public/app.js": "4ac42b9d2528a4e3b7639c4f659530c5630df5088a375410b6c0c535e15e573b",
+    "backend/cylinder-em.cjs": "93d1463b46a2bb6eaeb6c347f97c2a43101d811d0d6aa5d95d3a3b587f6a5b0a",
+    "backend/material-physics.cjs": "8eb018cd1e47ec39e445ecd4de83f375925fd7a41df287fb6d5f69dbf0ad80bf",
+    "backend/phase-history.cjs": "3ab831e499089ba147401da3ca9feffe25f2af1f2c6f6561663d6b1953ab9b42"
+  },
+  "nativePixelOrFPSVerification": false,
+  "limit": "This test report verifies controls, exact calculated field submissions, coalescing and measured pacing. Real WebGL rasterization and display FPS require a native browser/WebView measurement."
+}

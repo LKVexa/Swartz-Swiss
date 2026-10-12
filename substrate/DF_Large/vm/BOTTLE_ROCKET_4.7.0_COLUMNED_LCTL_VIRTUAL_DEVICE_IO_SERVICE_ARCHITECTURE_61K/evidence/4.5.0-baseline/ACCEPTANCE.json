@@ -1,0 +1,24 @@
+{
+  "BR-410": "18/18",
+  "BR-440": "23/23",
+  "BR-450": "31/31",
+  "canonical_traps": "14/14",
+  "deterministic_builds": "PASS",
+  "external_not_claimed": [
+    "physical power-cut qualification on target SIM/UICC/eSIM media",
+    "issuer/hardware certification",
+    "native Windows OS execution certification",
+    "third-party security certification"
+  ],
+  "hardware_anchor": "PASS",
+  "ledger_hash_mismatches": 0,
+  "opcode_negative": "41/41",
+  "opcode_positive": "41/41",
+  "record": "BR.Acceptance",
+  "release": "4.5.0",
+  "requirements": "76/76",
+  "sanitizers": "PASS",
+  "semantic": "19/19",
+  "status": "OPERATIONAL",
+  "work_packages": "11/11"
+}

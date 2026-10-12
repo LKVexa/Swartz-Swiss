@@ -1,0 +1,34 @@
+{
+  "claim_boundary": "All 582 RC-PW atomic requirements are operational at the deterministic hosted-reference profile if final_counts show 582 OPERATIONAL. This remains distinct from QP3 production-hardware scale and QP4 external-party certification; those higher profile certifications are not inferred by this hosted-reference application.",
+  "final_counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 582,
+    "PARTIAL": 0,
+    "REGRESSED": 0
+  },
+  "golden_worlds": {
+    "executed": 80,
+    "fail": 0,
+    "pass": 80
+  },
+  "partial_requirements_targeted": 315,
+  "profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "promoted_operational": 315,
+  "regression_pass": true,
+  "remaining_partial": 0,
+  "runtime_version": "7.0.0-operational-reference-315",
+  "schema": "QUORUM-RCPW7-315-REMEDIATION-SUMMARY/1",
+  "starting_counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 267,
+    "PARTIAL": 315,
+    "REGRESSED": 0
+  },
+  "test_family_pass": true,
+  "world_full_guest": {
+    "compile": 0,
+    "run": 0,
+    "sign": 0
+  },
+  "world_service_abi": 3
+}

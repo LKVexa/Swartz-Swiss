@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "007",
+  "title": "Generation ID",
+  "source_file": "007_Generation_ID.md",
+  "source_sha256": "3f959190b26af4b0881df0fa700ea187b090b69671312cb4bd5c203d841b5970",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "VEC_CONTROL+ALL_NODES",
+  "integration_mechanism": "Identity/genome plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

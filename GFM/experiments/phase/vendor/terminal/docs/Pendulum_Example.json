@@ -1,0 +1,336 @@
+{
+  "schema": "RUSSL-GFM-pendulum-example/1",
+  "equation": "theta_ddot=-(g/length)*sin(theta)",
+  "parameters": {
+    "g": 9.81,
+    "length": 1,
+    "maxAngle": 0.2
+  },
+  "fieldDefinition": {
+    "id": "gf9",
+    "p": 3,
+    "n": 2,
+    "q": 9,
+    "polynomial": [
+      1,
+      0,
+      1
+    ],
+    "label": "GF(9)"
+  },
+  "units": {
+    "theta": "radians",
+    "value": "radians/second^2"
+  },
+  "input": {
+    "schema": "RUSSL-GFM-dataset/1",
+    "field": "gf9",
+    "domain": "complex-signal",
+    "representation": "samples",
+    "values": [
+      {
+        "re": 1.9489461350995507,
+        "im": 0
+      },
+      {
+        "re": 1.4659880795660087,
+        "im": 0
+      },
+      {
+        "re": 0.9793658173053843,
+        "im": 0
+      },
+      {
+        "re": 0.49029565054535446,
+        "im": 0
+      },
+      {
+        "re": 0,
+        "im": 0
+      },
+      {
+        "re": -0.49029565054535446,
+        "im": 0
+      },
+      {
+        "re": -0.9793658173053843,
+        "im": 0
+      },
+      {
+        "re": -1.4659880795660087,
+        "im": 0
+      },
+      {
+        "re": -1.9489461350995507,
+        "im": 0
+      }
+    ],
+    "codec": {
+      "kind": "ordered-angle-grid",
+      "profile": "pendulum",
+      "parameters": {
+        "g": 9.81,
+        "length": 1,
+        "maxAngle": 0.2
+      },
+      "order": "polynomial integer label order",
+      "nodes": [
+        -0.2,
+        -0.15000000000000002,
+        -0.1,
+        -0.05,
+        0,
+        0.05,
+        0.1,
+        0.15000000000000002,
+        0.2
+      ],
+      "units": {
+        "theta": "radians",
+        "value": "radians/second^2"
+      },
+      "reference": {
+        "omega": 3.132091952673165,
+        "smallAnglePeriod": 2.006066680710647,
+        "equation": "theta_ddot=-(g/length)sin(theta)"
+      },
+      "scope": "Ordinary sampled restoring acceleration; no sine over a finite field and no continuous trajectory solved."
+    },
+    "operations": []
+  },
+  "forward": {
+    "dataset": {
+      "schema": "RUSSL-GFM-dataset/1",
+      "field": "gf9",
+      "domain": "complex-signal",
+      "representation": "trace-coefficients",
+      "values": [
+        {
+          "re": 2.220446049250313e-16,
+          "im": 0
+        },
+        {
+          "re": 0.7299379841697604,
+          "im": -0.4214298916521439
+        },
+        {
+          "re": 0.7299379841697604,
+          "im": 0.4214298916521439
+        },
+        {
+          "re": 2.1971500159854718,
+          "im": 1.2685251531792026
+        },
+        {
+          "re": 0,
+          "im": 0.0021208317150269718
+        },
+        {
+          "re": -0.0036687975059063183,
+          "im": 0.0021181812276372947
+        },
+        {
+          "re": 2.1971500159854718,
+          "im": -1.2685251531792026
+        },
+        {
+          "re": -0.0036687975059063183,
+          "im": -0.0021181812276372947
+        },
+        {
+          "re": 0,
+          "im": -0.0021208317150269718
+        }
+      ],
+      "codec": {
+        "kind": "ordered-angle-grid",
+        "profile": "pendulum",
+        "parameters": {
+          "g": 9.81,
+          "length": 1,
+          "maxAngle": 0.2
+        },
+        "order": "polynomial integer label order",
+        "nodes": [
+          -0.2,
+          -0.15000000000000002,
+          -0.1,
+          -0.05,
+          0,
+          0.05,
+          0.1,
+          0.15000000000000002,
+          0.2
+        ],
+        "units": {
+          "theta": "radians",
+          "value": "radians/second^2"
+        },
+        "reference": {
+          "omega": 3.132091952673165,
+          "smallAnglePeriod": 2.006066680710647,
+          "equation": "theta_ddot=-(g/length)sin(theta)"
+        },
+        "scope": "Ordinary sampled restoring acceleration; no sine over a finite field and no continuous trajectory solved."
+      },
+      "operations": [
+        "trace.forward"
+      ]
+    },
+    "checks": {
+      "normPreservation": {
+        "residual": 3.5238124430758813e-16,
+        "absoluteResidual": 1.3322676295501878e-15,
+        "passed": true
+      },
+      "energyPreservation": {
+        "residual": 6.661338147750939e-16,
+        "inputEnergy": 14.2941186319981,
+        "outputEnergy": 14.294118631998089,
+        "energyUnderflow": false,
+        "passed": true
+      },
+      "inverseRecovery": {
+        "residual": 2.3503911980532415e-16,
+        "absoluteResidual": 8.886256463788155e-16,
+        "passed": true
+      }
+    },
+    "passed": true,
+    "summary": "Raw trace-character transform; original scale and zero data retained.",
+    "inputNorm": 3.780756357132538,
+    "outputNorm": 3.7807563571325367,
+    "computationScale": 1,
+    "kernel": {
+      "kind": "complex-trace-character",
+      "formula": "exp(+2pi i Tr(kx)/p)/sqrt(q)",
+      "normalization": "kernel 1/sqrt(q); no dataset normalization",
+      "p": 3,
+      "q": 9
+    },
+    "ordering": {
+      "input": "polynomial integer labels 0..q-1",
+      "output": "polynomial integer labels 0..q-1"
+    },
+    "scope": "A complex signal basis transform. Squared magnitude is signal energy, without Born probability semantics."
+  },
+  "inverse": {
+    "dataset": {
+      "schema": "RUSSL-GFM-dataset/1",
+      "field": "gf9",
+      "domain": "complex-signal",
+      "representation": "samples",
+      "values": [
+        {
+          "re": 1.9489461350995505,
+          "im": 1.0842021724855044e-19
+        },
+        {
+          "re": 1.4659880795660087,
+          "im": -2.8297676701871666e-17
+        },
+        {
+          "re": 0.9793658173053844,
+          "im": -2.721347452938616e-17
+        },
+        {
+          "re": 0.4902956505453546,
+          "im": 2.721347452938616e-17
+        },
+        {
+          "re": -1.4224732503009818e-16,
+          "im": 8.391724815037804e-17
+        },
+        {
+          "re": -0.4902956505453545,
+          "im": 0
+        },
+        {
+          "re": -0.9793658173053837,
+          "im": -2.721347452938616e-17
+        },
+        {
+          "re": -1.4659880795660083,
+          "im": 0
+        },
+        {
+          "re": -1.9489461350995498,
+          "im": -2.8189256484623115e-17
+        }
+      ],
+      "codec": {
+        "kind": "ordered-angle-grid",
+        "profile": "pendulum",
+        "parameters": {
+          "g": 9.81,
+          "length": 1,
+          "maxAngle": 0.2
+        },
+        "order": "polynomial integer label order",
+        "nodes": [
+          -0.2,
+          -0.15000000000000002,
+          -0.1,
+          -0.05,
+          0,
+          0.05,
+          0.1,
+          0.15000000000000002,
+          0.2
+        ],
+        "units": {
+          "theta": "radians",
+          "value": "radians/second^2"
+        },
+        "reference": {
+          "omega": 3.132091952673165,
+          "smallAnglePeriod": 2.006066680710647,
+          "equation": "theta_ddot=-(g/length)sin(theta)"
+        },
+        "scope": "Ordinary sampled restoring acceleration; no sine over a finite field and no continuous trajectory solved."
+      },
+      "operations": [
+        "trace.forward",
+        "trace.inverse"
+      ]
+    },
+    "checks": {
+      "normPreservation": {
+        "residual": 0,
+        "absoluteResidual": 0,
+        "passed": true
+      },
+      "energyPreservation": {
+        "residual": 0,
+        "inputEnergy": 14.294118631998089,
+        "outputEnergy": 14.294118631998089,
+        "energyUnderflow": false,
+        "passed": true
+      },
+      "inverseRecovery": {
+        "residual": 1.6611411160856612e-16,
+        "absoluteResidual": 6.280369834735101e-16,
+        "passed": true
+      }
+    },
+    "passed": true,
+    "summary": "Raw inverse trace-character transform; original scale and zero data retained.",
+    "inputNorm": 3.7807563571325367,
+    "outputNorm": 3.7807563571325367,
+    "computationScale": 1,
+    "kernel": {
+      "kind": "complex-trace-character",
+      "formula": "exp(-2pi i Tr(kx)/p)/sqrt(q)",
+      "normalization": "kernel 1/sqrt(q); no dataset normalization",
+      "p": 3,
+      "q": 9
+    },
+    "ordering": {
+      "input": "polynomial integer labels 0..q-1",
+      "output": "polynomial integer labels 0..q-1"
+    },
+    "scope": "A complex signal basis transform. Squared magnitude is signal energy, without Born probability semantics."
+  },
+  "maximumAbsoluteRecoveryError": 8.886256463788155e-16,
+  "scope": "Calculated saved example. The equation gives acceleration versus angle; it is not a pendulum time trajectory. GF9 indexes the raw ordinary samples; the trace transform does not normalize their data."
+}

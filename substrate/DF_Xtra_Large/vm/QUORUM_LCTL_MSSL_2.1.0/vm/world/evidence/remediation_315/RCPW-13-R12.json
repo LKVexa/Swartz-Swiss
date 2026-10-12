@@ -1,0 +1,57 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "5d9dfd80ef8ee47a31f770a050bc128d350b0612708a8b8e8941376800ee2f59",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (MATERIALIZATION_READINESS, RESOURCE_STRESS, TRAVERSAL_PORTAL, AUTONOMOUS_HISTORY) plus Stage 13 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "AUTONOMOUS_HISTORY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "MATERIALIZATION_READINESS": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "RESOURCE_STRESS": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "TRAVERSAL_PORTAL": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-17",
+    "GW-36",
+    "GW-42",
+    "GW-63",
+    "GW-79"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T2_HIGH_FIDELITY",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Shell adaptation considers world-content complexity, expected interaction density, portal/interior proximity, and materialization backlog in addition to distance and speed.",
+  "requirement_id": "RCPW-13-R12",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 13,
+  "stage_title": "Reference-Centric World Shells",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "MATERIALIZATION_READINESS",
+    "RESOURCE_STRESS",
+    "TRAVERSAL_PORTAL",
+    "AUTONOMOUS_HISTORY"
+  ],
+  "workflow_file": "13_REFERENCE_CENTRIC_WORLD_SHELLS/189_RCPW_13_R12_SHELL_ADAPTATION_CONSIDERS_WORLD_CONTENT_COMPLEXITY_EXPECTED_INTERACTION_DENSITY_PORT.md",
+  "workflow_tier": "T2_HIGH_FIDELITY"
+}

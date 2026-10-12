@@ -1,0 +1,36 @@
+ja source 0.3
+module suite15.orchestrator.suite_fan_out
+use Agent
+policy no_network
+
+agent OrchestratorSuiteFanOut {
+    identity "orchestrator_suite_fan_out"
+    role "sophia-charlotte-landon-professor-podium-orchestrator"
+    goal dispatch_approved_suites when confidence >= 0.90
+    memory session retention 1h
+    budget steps 40 tools 5
+    tool SOPHIAPlanFanOut(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEGateFanOut(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONDispatchSuites(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainFanOut(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordFanOut(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIAPlanFanOut
+        authorize CHARLOTTEGateFanOut
+        authorize LANDONDispatchSuites
+        authorize ProfessorExplainFanOut
+        authorize PodiumRecordFanOut
+        continue when policy_allows
+        execute SOPHIAPlanFanOut("suite_registry")
+        execute CHARLOTTEGateFanOut("fan_out_manifest")
+        execute LANDONDispatchSuites("approved_fan_out_manifest")
+        execute ProfessorExplainFanOut("dispatch_results")
+        execute PodiumRecordFanOut("fan_out_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "OrchestratorSuiteFanOut.mcrt"
+

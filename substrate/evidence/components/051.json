@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "051",
+  "title": "Canonical State Hash",
+  "source_file": "051_Canonical_State_Hash.md",
+  "source_sha256": "7bc9fcaacf0d0ff9135b33c6e639fa29d6893c3755aa93b2516092f25cf87fa4",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "VEC_CONTROL+DF0",
+  "integration_mechanism": "Integrity/evidence plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

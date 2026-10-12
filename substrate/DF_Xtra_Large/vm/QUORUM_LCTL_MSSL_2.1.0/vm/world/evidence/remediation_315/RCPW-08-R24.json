@@ -1,0 +1,79 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "5974f0e3d343d4782d92e63d120afd9f304a9ef1671ff713f1fd7c8be148823f",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (VERSION_MIGRATION, TRANSACTION_CONCURRENCY, CAUSAL_REPLAY, ECONOMY_CONSERVATION, SAVE_RECOVERY, MULTI_WORKER_CONFORMANCE, TRAVERSAL_PORTAL, SCALE_SOAK) plus Stage 08 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "CAUSAL_REPLAY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "ECONOMY_CONSERVATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "MULTI_WORKER_CONFORMANCE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "SAVE_RECOVERY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "SCALE_SOAK": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "TRANSACTION_CONCURRENCY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "TRAVERSAL_PORTAL": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "VERSION_MIGRATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-03",
+    "GW-14",
+    "GW-27",
+    "GW-29",
+    "GW-48",
+    "GW-64",
+    "GW-65"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T3_FABRIC",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Economy scale qualification includes concurrent settlements, partition migration, route disruption, worker loss, recovery, and ledger reconciliation.",
+  "requirement_id": "RCPW-08-R24",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 8,
+  "stage_title": "Civilization / Economy Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "VERSION_MIGRATION",
+    "TRANSACTION_CONCURRENCY",
+    "CAUSAL_REPLAY",
+    "ECONOMY_CONSERVATION",
+    "SAVE_RECOVERY",
+    "MULTI_WORKER_CONFORMANCE",
+    "TRAVERSAL_PORTAL",
+    "SCALE_SOAK"
+  ],
+  "workflow_file": "08_CIVILIZATION_ECONOMY_AUTHORITY/109_RCPW_08_R24_ECONOMY_SCALE_QUALIFICATION_INCLUDES_CONCURRENT_SETTLEMENTS_PARTITION_MIGRATION_ROUTE.md",
+  "workflow_tier": "T3_FABRIC"
+}

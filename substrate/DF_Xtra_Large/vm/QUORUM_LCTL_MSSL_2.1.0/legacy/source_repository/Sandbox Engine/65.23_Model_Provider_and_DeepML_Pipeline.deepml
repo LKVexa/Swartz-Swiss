@@ -1,0 +1,21 @@
+deepml core 0.3
+module suite65.sandbox_engine.model_provider_deepml_pipeline
+policy deterministic
+policy no_network
+
+tensor inference_request: f32[1,8] = constant(0.0)
+tensor provider_weight_a: f32[8,8] = variable(seed=6523)
+tensor provider_weight_b: f32[8,8] = variable(seed=6524)
+graph SandboxModelProviderDeepML {
+  SOPHIA = layer_norm(inference_request)
+  CHARLOTTE = relu(matmul(SOPHIA, provider_weight_a))
+  LANDON = relu(matmul(CHARLOTTE, provider_weight_b))
+  Professor = LANDON + SOPHIA
+  Podium = softmax(Professor)
+}
+infer SandboxModelProviderDeepML -> Podium
+execute SandboxModelProviderDeepML on cpu
+optimize SandboxModelProviderDeepML using [constant_folding, algebraic_simplification, operator_fusion, common_subexpression_elimination, memory_planning, device_partitioning]
+lower SandboxModelProviderDeepML to DEEPML_CORE_R12
+package model SandboxModelProviderDeepML as "sandbox_engine_model_provider_deepml.msslb"
+certify graph SandboxModelProviderDeepML profile strict

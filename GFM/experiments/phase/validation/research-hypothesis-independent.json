@@ -1,0 +1,201 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "selfTest": "passed",
+      "basisRoundTrips": 9,
+      "domain": "GF3[alpha]/(alpha^2+1), raw complex signal transform"
+    },
+    {
+      "file": "examples/default-frame.json",
+      "passed": true,
+      "snapshots": 1,
+      "maxCoefficientError": 1.4946834900704541e-16,
+      "maxRecoveredError": 5.551115123125783e-17,
+      "checks": [
+        {
+          "label": "snapshot",
+          "spin": 0.99,
+          "coverLoad": 2.0,
+          "apertureRadius": 0.5890716489625588,
+          "rawNorm": 0.7239348262468529,
+          "maxRawError": 0.0,
+          "maxCoefficientError": 1.4946834900704541e-16,
+          "maxInverseError": 1.340123006720315e-16,
+          "maxRecoveredError": 5.551115123125783e-17
+        }
+      ]
+    },
+    {
+      "file": "examples/two-branch-example.json",
+      "passed": true,
+      "snapshots": 122,
+      "maxCoefficientError": 1.4946834900704541e-16,
+      "maxRecoveredError": 5.551115123125783e-17,
+      "checks": [
+        {
+          "label": "recording.state",
+          "spin": 0.99,
+          "coverLoad": 2.0,
+          "apertureRadius": 0.5890716489625588,
+          "rawNorm": 0.7239348262468529,
+          "maxRawError": 0.0,
+          "maxCoefficientError": 1.4946834900704541e-16,
+          "maxInverseError": 1.340123006720315e-16,
+          "maxRecoveredError": 5.551115123125783e-17
+        },
+        {
+          "label": "recording.frames[0]",
+          "spin": 0.99,
+          "coverLoad": 2.0,
+          "apertureRadius": 0.5890716489625588,
+          "rawNorm": 0.7239348262468529,
+          "maxRawError": 0.0,
+          "maxCoefficientError": 1.4946834900704541e-16,
+          "maxInverseError": 1.340123006720315e-16,
+          "maxRecoveredError": 5.551115123125783e-17
+        },
+        {
+          "label": "recording.frames[1]",
+          "spin": 0.99,
+          "coverLoad": 2.0,
+          "apertureRadius": 0.5890716489625588,
+          "rawNorm": 0.7239348262468529,
+          "maxRawError": 0.0,
+          "maxCoefficientError": 1.4946834900704541e-16,
+          "maxInverseError": 1.340123006720315e-16,
+          "maxRecoveredError": 5.551115123125783e-17
+        },
+        {
+          "label": "recording.frames[118]",
+          "spin": 0.7,
+          "coverLoad": 0.0,
+          "apertureRadius": 0.0,
+          "rawNorm": 0.7239348262468529,
+          "maxRawError": 0.0,
+          "maxCoefficientError": 1.4946834900704541e-16,
+          "maxInverseError": 1.340123006720315e-16,
+          "maxRecoveredError": 5.551115123125783e-17
+        },
+        {
+          "label": "recording.frames[119]",
+          "spin": 0.7,
+          "coverLoad": 0.0,
+          "apertureRadius": 0.0,
+          "rawNorm": 0.7239348262468529,
+          "maxRawError": 0.0,
+          "maxCoefficientError": 1.4946834900704541e-16,
+          "maxInverseError": 1.340123006720315e-16,
+          "maxRecoveredError": 5.551115123125783e-17
+        },
+        {
+          "label": "recording.frames[120]",
+          "spin": 0.99,
+          "coverLoad": 2.0,
+          "apertureRadius": 0.5890716489625588,
+          "rawNorm": 0.7239348262468529,
+          "maxRawError": 0.0,
+          "maxCoefficientError": 1.4946834900704541e-16,
+          "maxInverseError": 1.340123006720315e-16,
+          "maxRecoveredError": 5.551115123125783e-17
+        }
+      ]
+    },
+    {
+      "file": "validation/parameter-cases.json",
+      "passed": true,
+      "snapshots": 112,
+      "maxCoefficientError": 4.002966042486721e-16,
+      "maxRecoveredError": 2.2215299868541707e-16,
+      "checks": [
+        {
+          "label": "snapshot[0]",
+          "spin": 0.0,
+          "coverLoad": 0.0,
+          "apertureRadius": 0.0,
+          "rawNorm": 2.8284271247461903,
+          "maxRawError": 0.0,
+          "maxCoefficientError": 4.002966042486721e-16,
+          "maxInverseError": 2.2887833992611187e-16,
+          "maxRecoveredError": 4.163336342344337e-17
+        },
+        {
+          "label": "snapshot[1]",
+          "spin": 0.0,
+          "coverLoad": 0.9999999999999999,
+          "apertureRadius": 0.0,
+          "rawNorm": 2.8284271247461903,
+          "maxRawError": 0.0,
+          "maxCoefficientError": 4.002966042486721e-16,
+          "maxInverseError": 2.2887833992611187e-16,
+          "maxRecoveredError": 4.163336342344337e-17
+        },
+        {
+          "label": "snapshot[2]",
+          "spin": 0.0,
+          "coverLoad": 1.0,
+          "apertureRadius": 0.0,
+          "rawNorm": 2.8284271247461903,
+          "maxRawError": 0.0,
+          "maxCoefficientError": 4.002966042486721e-16,
+          "maxInverseError": 2.2887833992611187e-16,
+          "maxRecoveredError": 4.163336342344337e-17
+        },
+        {
+          "label": "snapshot[109]",
+          "spin": 1.0,
+          "coverLoad": 0.9999999999999999,
+          "apertureRadius": 0.1410673597966589,
+          "rawNorm": 0.1410673597966589,
+          "maxRawError": 0.0,
+          "maxCoefficientError": 2.42861286636753e-17,
+          "maxInverseError": 3.122502256758253e-17,
+          "maxRecoveredError": 2.7755575615628914e-17
+        },
+        {
+          "label": "snapshot[110]",
+          "spin": 1.0,
+          "coverLoad": 1.0,
+          "apertureRadius": 0.1410673597966589,
+          "rawNorm": 0.1410673597966589,
+          "maxRawError": 0.0,
+          "maxCoefficientError": 2.42861286636753e-17,
+          "maxInverseError": 3.122502256758253e-17,
+          "maxRecoveredError": 2.7755575615628914e-17
+        },
+        {
+          "label": "snapshot[111]",
+          "spin": 1.0,
+          "coverLoad": 2.0,
+          "apertureRadius": 0.1410673597966589,
+          "rawNorm": 0.1410673597966589,
+          "maxRawError": 0.0,
+          "maxCoefficientError": 2.42861286636753e-17,
+          "maxInverseError": 3.122502256758253e-17,
+          "maxRecoveredError": 2.7755575615628914e-17
+        }
+      ]
+    },
+    {
+      "file": "validation/current-hypothesis-frame.json",
+      "passed": true,
+      "snapshots": 1,
+      "maxCoefficientError": 1.4946834900704541e-16,
+      "maxRecoveredError": 5.551115123125783e-17,
+      "checks": [
+        {
+          "label": "snapshot",
+          "spin": 0.99,
+          "coverLoad": 2.0,
+          "apertureRadius": 0.5890716489625588,
+          "rawNorm": 0.7239348262468529,
+          "maxRawError": 0.0,
+          "maxCoefficientError": 1.4946834900704541e-16,
+          "maxInverseError": 1.340123006720315e-16,
+          "maxRecoveredError": 5.551115123125783e-17
+        }
+      ]
+    }
+  ],
+  "scope": "Independent aperture/cover, stationary exterior, GF9 raw trace and inverse reconstruction. Time/motion remain illustrative."
+}

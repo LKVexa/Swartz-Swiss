@@ -1,0 +1,6 @@
+#define _GNU_SOURCE
+#include "brvm.h"
+#include <stdio.h>
+#include <sys/resource.h>
+static long rss(void){FILE*f=fopen("/proc/self/status","r");char s[160];long v=-1;if(!f)return-1;while(fgets(s,sizeof(s),f))if(sscanf(s,"VmRSS: %ld kB",&v)==1)break;fclose(f);return v;}
+int main(void){br_vm v;struct rlimit st;long a=rss(),b;size_t idle;if(br_vm_init(&v))return 2;idle=br_vm_allocated_bytes(&v);b=rss();if(getrlimit(RLIMIT_STACK,&st))st.rlim_cur=0;printf("{\"record\":\"BOTTLE_ROCKET.RuntimeMemoryMeasurement\",\"release\":\"4.6.0\",\"word_bits\":%u,\"max_word_bytes\":%u,\"register_descriptors_inline_bytes\":%zu,\"stack_descriptors_inline_bytes\":%zu,\"idle_heap_requested_bytes\":%zu,\"legacy_architectural_preallocation_bytes\":%zu,\"avoided_preallocation_bytes\":%zu,\"vm_inline_bytes\":%zu,\"heap_ceiling_bytes\":%u,\"stack_logical_ceiling_bytes\":%u,\"scratch_ceiling_bytes\":%u,\"device_buffer_ceiling_bytes\":%u,\"image_ceiling_bytes\":%u,\"rss_before_init_kib\":%ld,\"rss_idle_kib\":%ld,\"native_stack_limit_bytes\":%llu}\n",BR_WORD_BITS,BR_WORD_BYTES,sizeof(v.regs),sizeof(v.stack),idle,(size_t)(BR_REGS+BR_STACK_WORDS+2u)*BR_WORD_BYTES,(size_t)(BR_REGS+BR_STACK_WORDS+2u)*BR_WORD_BYTES-idle,sizeof(v),BR_VM_HEAP_BYTES,BR_STACK_BYTES,BR_SCRATCH_BYTES,BR_DEVICE_BUFFER_BYTES,BR_UPDATE_BYTES,a,b,(unsigned long long)st.rlim_cur);br_vm_free(&v);return 0;}

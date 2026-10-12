@@ -1,0 +1,33 @@
+ja source 0.3
+module suite14.plug.interfaces
+use Service
+policy explicit_network
+
+service PlugInterfaces {
+    message InterfaceRequest {
+        request_id: Text,
+        caller: Text,
+        contract: Text,
+        payload: Text
+    }
+    message InterfaceResponse {
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint negotiate(request: InterfaceRequest) -> Stream<InterfaceResponse>
+        auth capability interface.negotiate
+        deadline 8s
+        retry max 1
+        idempotency request.request_id
+    protocol InterfaceSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json PlugInterfaces.compatibility_report
+

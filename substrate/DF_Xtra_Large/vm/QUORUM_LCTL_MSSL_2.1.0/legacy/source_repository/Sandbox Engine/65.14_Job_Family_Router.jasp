@@ -1,0 +1,40 @@
+ja source 0.3
+module suite65.sandbox_engine.job_family_router
+use Service
+policy explicit_network
+
+service SandboxJobFamilyRouter {
+    message JobRouteRequest {
+        run_id: Text,
+        idempotency_key: Text,
+        job_family: Text,
+        entry_suite: Text,
+        registry_hash: Text,
+        capability_manifest_hash: Text
+    }
+    message JobRouteResponse {
+        route_status: Text,
+        ordered_job_graph: Text,
+        route_hash: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_route_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint route(request: JobRouteRequest) -> Stream<JobRouteResponse>
+        auth capability sandbox.job.route
+        deadline 10s
+        retry max 0
+        idempotency request.idempotency_key
+    protocol SandboxJobRouteSession {
+        state Open
+        state Resolved
+        state Closed
+        transition resolve: Open -> Resolved
+        transition finish: Resolved -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json SandboxJobFamilyRouter.compatibility_report

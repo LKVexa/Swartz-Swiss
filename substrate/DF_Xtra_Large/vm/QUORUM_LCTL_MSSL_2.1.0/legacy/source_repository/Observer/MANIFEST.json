@@ -1,0 +1,101 @@
+{
+  "language": "JA Agent Language",
+  "profile_id": "ja.agent",
+  "source_version": "0.3",
+  "extension": ".jaa",
+  "repository": "01. Observer",
+  "analytical_layers": [
+    "SOPHIA",
+    "CHARLOTTE",
+    "LANDON",
+    "Professor",
+    "Podium"
+  ],
+  "validation": "corpus-pattern structural validation; not JA kernel execution",
+  "scripts": [
+    {
+      "file": "01_Observer/01_observer_prompts.jaa",
+      "bytes": 1762,
+      "sha256": "7c5167319f49b4edf06b491af18311e21229ec86bbaa9eda92424bb0c8ffac07",
+      "tools": [
+        "CHARLOTTE_ValidatePrompts",
+        "LANDON_RoutePromptRecords",
+        "PODIUM_PublishPromptEvidence",
+        "PROFESSOR_ExplainPromptFindings",
+        "ReadPromptRepository",
+        "SOPHIA_AnalyzePrompts"
+      ],
+      "structural_validation": "pass"
+    },
+    {
+      "file": "01_Observer/02_observer_uploads.jaa",
+      "bytes": 1789,
+      "sha256": "88359822d756f15b4b0b2bf86a5f9fc6bd8994830fa850b00009811cf92e7b13",
+      "tools": [
+        "CHARLOTTE_VerifyUploadIntegrity",
+        "InspectUploadRepository",
+        "LANDON_RouteUploadRecords",
+        "PODIUM_PublishUploadEvidence",
+        "PROFESSOR_ExplainUploadFindings",
+        "SOPHIA_ProfileUploads"
+      ],
+      "structural_validation": "pass"
+    },
+    {
+      "file": "01_Observer/03_observer_runtime_events.jaa",
+      "bytes": 1914,
+      "sha256": "5faa8daf903eed24ad609dfb131b813e9de370f2e69813f7b57af1956205ea96",
+      "tools": [
+        "CHARLOTTE_ValidateEventSequence",
+        "LANDON_RouteRuntimeRecords",
+        "PODIUM_PublishRuntimeEvidence",
+        "PROFESSOR_ExplainRuntimeFindings",
+        "ReadRuntimeEventRepository",
+        "SOPHIA_CorrelateRuntimeEvents"
+      ],
+      "structural_validation": "pass"
+    },
+    {
+      "file": "01_Observer/04_observer_decisions.jaa",
+      "bytes": 1915,
+      "sha256": "186a7be5ad5f821576ec4cb07ab61c1cd2873e285139cc1347f175dbe7a8c651",
+      "tools": [
+        "CHARLOTTE_VerifyDecisionPolicy",
+        "LANDON_RouteDecisionRecords",
+        "PODIUM_PublishDecisionEvidence",
+        "PROFESSOR_ExplainDecisionRationale",
+        "ReadDecisionRepository",
+        "SOPHIA_AnalyzeDecisionBasis"
+      ],
+      "structural_validation": "pass"
+    },
+    {
+      "file": "01_Observer/05_observer_errors.jaa",
+      "bytes": 1813,
+      "sha256": "f8fa9aa8662ce30d518830b0179189bbbc5595a6ee44158198b686c6cb3380bf",
+      "tools": [
+        "CHARLOTTE_VerifyErrorSafety",
+        "LANDON_RouteRecoveryRecords",
+        "PODIUM_PublishErrorEvidence",
+        "PROFESSOR_ExplainErrorCauses",
+        "ReadErrorRepository",
+        "SOPHIA_ClassifyErrors"
+      ],
+      "structural_validation": "pass"
+    },
+    {
+      "file": "01_Observer/06_observer_evidence.jaa",
+      "bytes": 1899,
+      "sha256": "62814f31b6b89099d62411b0f0bbe12a8fa6235ec869fe2e377ea2a31f9e8b99",
+      "tools": [
+        "CHARLOTTE_VerifyEvidenceProvenance",
+        "LANDON_RouteEvidenceRecords",
+        "PODIUM_PublishEvidenceLedger",
+        "PROFESSOR_ExplainEvidenceStrength",
+        "ReadEvidenceRepository",
+        "SOPHIA_LinkEvidenceClaims"
+      ],
+      "structural_validation": "pass"
+    }
+  ]
+}

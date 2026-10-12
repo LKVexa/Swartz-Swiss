@@ -1,0 +1,230 @@
+{
+    "schema":  "JA21/headless-console-verification/1",
+    "status":  "passed",
+    "root":  "D:\\Codex\\2026-10-11\\ple\\outputs\\JA21-Blank-Console",
+    "test_workspace":  "D:\\Codex\\2026-10-11\\ple\\work\\console-test-state-8d55e7ad68274a92912d4739c0f4aa66",
+    "native_ui_shown":  false,
+    "program_run_called":  false,
+    "live_browser_created":  false,
+    "network_requests_made":  false,
+    "sdk_runtime_detected":  true,
+    "preview":  "D:\\Codex\\2026-10-11\\ple\\work\\console-preview.png",
+    "checks":  [
+                   {
+                       "name":  "Windows WPF console compilation",
+                       "passed":  true,
+                       "detail":  "Same source closure and managed loader as the launcher; no presenter Run/Show call."
+                   },
+                   {
+                       "name":  "Runtime integrity",
+                       "passed":  true,
+                       "detail":  "RuntimeSeal.Verify succeeded on the derived package."
+                   },
+                   {
+                       "name":  "Hidden compact normal window",
+                       "passed":  true,
+                       "detail":  {
+                                      "visible":  false,
+                                      "width":  760,
+                                      "height":  640,
+                                      "min_width":  420,
+                                      "min_height":  360,
+                                      "state":  "Normal"
+                                  }
+                   },
+                   {
+                       "name":  "Initial blank has no live engine",
+                       "passed":  true,
+                       "detail":  "about:blank"
+                   },
+                   {
+                       "name":  "Backing tab has no visible pill",
+                       "passed":  true,
+                       "detail":  "Both tab-pill fields are null."
+                   },
+                   {
+                       "name":  "Repeated blank creation keeps one backing surface",
+                       "passed":  true,
+                       "detail":  1
+                   },
+                   {
+                       "name":  "No constructed chrome or popup surfaces",
+                       "passed":  true,
+                       "detail":  [
+
+                                  ]
+                   },
+                   {
+                       "name":  "Blank navigation clears the content surface",
+                       "passed":  true,
+                       "detail":  {
+                                      "remaining_children":  0,
+                                      "live_surface_null":  true
+                                  }
+                   },
+                   {
+                       "name":  "Blank WPF tree contains only layout containers",
+                       "passed":  true,
+                       "detail":  [
+                                      "System.Windows.Controls.Grid",
+                                      "System.Windows.Controls.Border",
+                                      "System.Windows.Controls.Grid",
+                                      "System.Windows.Controls.Grid",
+                                      "System.Windows.Controls.Grid"
+                                  ]
+                   },
+                   {
+                       "name":  "Offscreen blank preview saved without showing window",
+                       "passed":  true,
+                       "detail":  "D:\\Codex\\2026-10-11\\ple\\work\\console-preview.png"
+                   },
+                   {
+                       "name":  "Narrow loopback policy",
+                       "passed":  true,
+                       "detail":  "16 policy cases; no network requests made."
+                   },
+                   {
+                       "name":  "Test mutable state is isolated",
+                       "passed":  true,
+                       "detail":  "D:\\Codex\\2026-10-11\\ple\\work\\console-test-state-8d55e7ad68274a92912d4739c0f4aa66"
+                   }
+               ],
+    "policy_cases":  [
+                         {
+                             "label":  "Configured simulator origin",
+                             "url":  "http://127.0.0.1:8788/",
+                             "expected_allowed":  true,
+                             "allowed":  true,
+                             "passed":  true,
+                             "reason":  null
+                         },
+                         {
+                             "label":  "Configured origin with resource path",
+                             "url":  "http://127.0.0.1:8791/path?x=1#view",
+                             "expected_allowed":  true,
+                             "allowed":  true,
+                             "passed":  true,
+                             "reason":  null
+                         },
+                         {
+                             "label":  "Unconfigured/private/credential destination",
+                             "url":  "http://127.0.0.1:8789/",
+                             "expected_allowed":  false,
+                             "allowed":  false,
+                             "passed":  true,
+                             "reason":  "Addresses on this machine or this private network are outside the JA21 network boundary."
+                         },
+                         {
+                             "label":  "Unconfigured/private/credential destination",
+                             "url":  "http://127.0.0.1:80/",
+                             "expected_allowed":  false,
+                             "allowed":  false,
+                             "passed":  true,
+                             "reason":  "Addresses on this machine or this private network are outside the JA21 network boundary."
+                         },
+                         {
+                             "label":  "Unconfigured/private/credential destination",
+                             "url":  "https://127.0.0.1:8788/",
+                             "expected_allowed":  false,
+                             "allowed":  false,
+                             "passed":  true,
+                             "reason":  "Addresses on this machine or this private network are outside the JA21 network boundary."
+                         },
+                         {
+                             "label":  "Unconfigured/private/credential destination",
+                             "url":  "http://localhost:8788/",
+                             "expected_allowed":  false,
+                             "allowed":  false,
+                             "passed":  true,
+                             "reason":  "Addresses on this machine are outside the JA21 network boundary."
+                         },
+                         {
+                             "label":  "Unconfigured/private/credential destination",
+                             "url":  "http://127.0.0.2:8788/",
+                             "expected_allowed":  false,
+                             "allowed":  false,
+                             "passed":  true,
+                             "reason":  "Addresses on this machine or this private network are outside the JA21 network boundary."
+                         },
+                         {
+                             "label":  "Unconfigured/private/credential destination",
+                             "url":  "http://[::1]:8788/",
+                             "expected_allowed":  false,
+                             "allowed":  false,
+                             "passed":  true,
+                             "reason":  "Addresses on this machine or this private network are outside the JA21 network boundary."
+                         },
+                         {
+                             "label":  "Unconfigured/private/credential destination",
+                             "url":  "http://192.168.1.1:8788/",
+                             "expected_allowed":  false,
+                             "allowed":  false,
+                             "passed":  true,
+                             "reason":  "Addresses on this machine or this private network are outside the JA21 network boundary."
+                         },
+                         {
+                             "label":  "Unconfigured/private/credential destination",
+                             "url":  "http://10.0.0.1:8788/",
+                             "expected_allowed":  false,
+                             "allowed":  false,
+                             "passed":  true,
+                             "reason":  "Addresses on this machine or this private network are outside the JA21 network boundary."
+                         },
+                         {
+                             "label":  "Unconfigured/private/credential destination",
+                             "url":  "http://169.254.169.254/",
+                             "expected_allowed":  false,
+                             "allowed":  false,
+                             "passed":  true,
+                             "reason":  "Addresses on this machine or this private network are outside the JA21 network boundary."
+                         },
+                         {
+                             "label":  "Unconfigured/private/credential destination",
+                             "url":  "http://user:pass@127.0.0.1:8788/",
+                             "expected_allowed":  false,
+                             "allowed":  false,
+                             "passed":  true,
+                             "reason":  "Addresses that carry credentials are not opened."
+                         },
+                         {
+                             "label":  "Invalid origin configuration: http://127.0.0.1:8788/app",
+                             "url":  "http://127.0.0.1:8788/",
+                             "expected_allowed":  false,
+                             "allowed":  false,
+                             "passed":  true,
+                             "reason":  "Addresses on this machine or this private network are outside the JA21 network boundary."
+                         },
+                         {
+                             "label":  "Invalid origin configuration: http://127.0.0.1:8788/?x=1",
+                             "url":  "http://127.0.0.1:8788/",
+                             "expected_allowed":  false,
+                             "allowed":  false,
+                             "passed":  true,
+                             "reason":  "Addresses on this machine or this private network are outside the JA21 network boundary."
+                         },
+                         {
+                             "label":  "Invalid origin configuration: http://127.0.0.1:8788/#fragment",
+                             "url":  "http://127.0.0.1:8788/",
+                             "expected_allowed":  false,
+                             "allowed":  false,
+                             "passed":  true,
+                             "reason":  "Addresses on this machine or this private network are outside the JA21 network boundary."
+                         },
+                         {
+                             "label":  "Invalid origin configuration: http://user:pass@127.0.0.1:8788/",
+                             "url":  "http://127.0.0.1:8788/",
+                             "expected_allowed":  false,
+                             "allowed":  false,
+                             "passed":  true,
+                             "reason":  "Addresses on this machine or this private network are outside the JA21 network boundary."
+                         }
+                     ],
+    "content_tree_types":  [
+                               "System.Windows.Controls.Grid",
+                               "System.Windows.Controls.Border",
+                               "System.Windows.Controls.Grid",
+                               "System.Windows.Controls.Grid",
+                               "System.Windows.Controls.Grid"
+                           ],
+    "failure":  null
+}

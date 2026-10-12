@@ -1,0 +1,42 @@
+{
+  "schema": "GFM-combined-display-review/1",
+  "version": "2.1.0",
+  "sourceEngineSHA256": "93d1463b46a2bb6eaeb6c347f97c2a43101d811d0d6aa5d95d3a3b587f6a5b0a",
+  "viewerSHA256": "e3e64a0588a737a1798098f037a2d3e406d3a26c5ff7271999e32d0d03605aa3",
+  "contract": "docs/combined-layer-display.txt",
+  "contractSHA256": "7132866c601e5cfebee2e8c373d1be1cb9a9addba7a836a0bed73fb841ee5839",
+  "finalSuite": {
+    "tests": 139,
+    "passed": 139,
+    "failed": 0,
+    "skipped": 0,
+    "deferredNetworkTests": [
+      "audit provenance, all findings and corrected GR references reach the live API without changing physical state",
+      "research presets reset history and export causal plasma/material fields through the same backend",
+      "launcher recovers from an occupied port and starts the new computed backend",
+      "local API produces computed fields, controls state, and retains valid state after rejected input"
+    ]
+  },
+  "independentScientificReview": "pass; physical face/cell sampling, mixed masks, signed cooling, fixed geometry and phase timing reviewed",
+  "example": {
+    "source": "examples/audited-covered-frame.json",
+    "sourceSHA256": "85dbe2457caca18860adf2165ceb01a9fddbde744952d6ba98e47438cd061e16",
+    "timeSeconds": 2.0000000000000055e-9,
+    "phaseAnalysisTimeSeconds": 1.833333333333333e-9,
+    "phaseGroupDelaySeconds": 1.6666666666666666e-10,
+    "visibleSamples": {
+      "phase": 6144,
+      "plasma": 1848,
+      "cover": 9752
+    },
+    "mixedPlasmaMaterialCells": 84,
+    "maxPlasmaTemperatureRiseK": 0.0012416863212338853,
+    "maxCoverOhmicPowerDensityWPerM3": 17.599502516614354,
+    "maxCoverTemperatureRiseK": 2.899451348954536e-14,
+    "maxLiquidFraction": 0
+  },
+  "displayOnly": true,
+  "solverEquationsChanged": false,
+  "nativeRasterizationVerified": false,
+  "observationalValidation": false
+}

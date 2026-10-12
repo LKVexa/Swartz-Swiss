@@ -1,0 +1,52 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "fa924efd450a4037e6cd63e08e7b55ffa5e7574891baacc8893a58f74f3d7ca1",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (CAUSAL_REPLAY, NARRATIVE_KNOWLEDGE, AUTONOMOUS_HISTORY) plus Stage 01 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "AUTONOMOUS_HISTORY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "CAUSAL_REPLAY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "NARRATIVE_KNOWLEDGE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-19",
+    "GW-21",
+    "GW-53",
+    "GW-61",
+    "GW-62"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Canonical world history distinguishes world age, era, content generation epoch, and simulation epoch so later synthesis cannot silently rewrite earlier truth.",
+  "requirement_id": "RCPW-01-R26",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 1,
+  "stage_title": "Canonical World Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "CAUSAL_REPLAY",
+    "NARRATIVE_KNOWLEDGE",
+    "AUTONOMOUS_HISTORY"
+  ],
+  "workflow_file": "01_CANONICAL_WORLD_AUTHORITY/011_RCPW_01_R26_CANONICAL_WORLD_HISTORY_DISTINGUISHES_WORLD_AGE_ERA_CONTENT_GENERATION_EPOCH_AND_SIMU.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

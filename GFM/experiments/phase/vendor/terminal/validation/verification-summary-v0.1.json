@@ -1,0 +1,30 @@
+{
+  "release": "RUSSL Virtual Research Terminal foundation 0.1.0",
+  "prepared": "2026-10-11",
+  "localOnly": true,
+  "newProjectTests": {
+    "passed": 46,
+    "failed": 0,
+    "scope": "23 engine, 11 application, 8 adapter, 4 artifact/source checks"
+  },
+  "originalGF80Tests": {
+    "passed": 79,
+    "failed": 0
+  },
+  "originalResearchSuite": "PASS; original supplied numerical, circuit, boundary and ledger checks retained in original-research-tests.txt",
+  "independentExample": "PASS; separate GF9 closed-form amplitude reference and canonical envelope digests",
+  "originalResearchSession": "PASS; all four supplied records independently checked by original verification script",
+  "browserVerification": {
+    "completed": false,
+    "httpPreview": "Loopback preview connection timed out",
+    "filePreview": "Browser URL policy rejected file: protocol; no workaround attempted",
+    "limits": [
+      "Rendered desktop/mobile layout",
+      "Native browser save/download transport",
+      "Live browser GF80 capture followed by replay"
+    ]
+  },
+  "GF80AdapterVerification": "Original kernels, actual retained-build compatibility and simulated identified-window message flow verified; live browser flow remains unverified",
+  "sourceIntegrity": "Supplied ZIP, candidate text/PDF and SpinDoctor terminal copied unchanged and verified against source-register.json",
+  "originalFilesChanged": false
+}

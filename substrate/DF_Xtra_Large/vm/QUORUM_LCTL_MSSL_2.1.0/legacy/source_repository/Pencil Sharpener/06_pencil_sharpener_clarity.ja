@@ -1,0 +1,26 @@
+ja certifier 0.3
+module pencil_sharpener.clarity
+policy no_execute_unknown_code
+policy no_network
+
+grammar PencilSharpenerClarity {
+  import ja.portal.scene as Scene ;
+  import mcrt.portal.timeline as Timeline ;
+  production certificate_target = grammarDecl | certificateDecl ;
+  predicate names_are_unambiguous(certificate_target) ;
+  predicate diagnostics_have_source_spans(certificate_target) ;
+  predicate provenance_is_line_column(certificate_target) ;
+  type_judgment certificate_target : WellFormed ;
+  type_judgment certificate_target : WellTyped ;
+  policy_validator SophiaMeaningValidator requires [no_network, no_execute_unknown_code] ;
+  compiler_validator CharlotteClarityValidator verifies [AST, R12, MCRT] ;
+  compiler_validator LandonTraceValidator verifies [AST, R12, MCRT] ;
+  evidence ProfessorClarityEvidence { source_hash: required compiler_hash: required runtime_hash: required }
+  certification profile PodiumClarity { require all validators }
+  certificate PencilSharpenerClarityBundle sign_with local_test_key ;
+}
+
+analyze ambiguity PencilSharpenerClarity
+certify grammar PencilSharpenerClarity profile PodiumClarity
+lower certificate PencilSharpenerClarity to JA_CERTIFIER_R12
+package certificate PencilSharpenerClarityBundle as "pencil_sharpener_clarity.msslb"

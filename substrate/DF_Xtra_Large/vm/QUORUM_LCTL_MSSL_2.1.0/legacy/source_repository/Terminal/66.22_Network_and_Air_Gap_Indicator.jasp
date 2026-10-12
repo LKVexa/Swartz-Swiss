@@ -1,0 +1,39 @@
+profile ja.security_policy
+source_level 0.3
+
+subsuite Terminal.T_22 NetworkAirGapIndicator {
+    identity { suite = "66"; id = "T-22"; deterministic = true; autorun = false }
+
+    integrate {
+        Suite_46_Air_Gap_Certification_and_Installer_Plane
+        Suite_63_Sandbox_and_Offline_Runtime
+        Suite_65_SE_09_Network_and_Air_Gap_Policy
+    }
+
+    accept { network_policy; endpoint_allowlist[]; authorization_ref; session_deadline }
+    emit { EnforcedTerminalNetworkPolicy; NetworkIndicatorViewModel }
+
+    procedure resolve_and_enforce(network_policy) {
+        if network_policy == deny {
+            enforce_zero_network
+            indicator = OFFLINE_AIR_GAPPED
+        }
+        if network_policy == allowlisted {
+            require endpoint_allowlist.each_has(protocol + purpose + deadline)
+            enforce_exact_allowlist
+            indicator = LIMITED_ALLOWLIST
+        }
+        if network_policy == explicit_session {
+            require separate_human_approval
+            enforce_expiring_session
+            indicator = EXPLICIT_NETWORK_SESSION
+        }
+        display_indicator_persistently
+        return policy + indicator
+    }
+
+    deny { ambient_network; wildcard_endpoint; silent_policy_change; expired_session_connect }
+    evidence { policy; endpoint_records; connection_attempts; expiry; indicator_state_hash }
+    tests { offline; allowlist; explicit_session; expiry; denied_endpoint; visible_state }
+}
+

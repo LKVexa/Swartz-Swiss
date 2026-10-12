@@ -1,0 +1,42 @@
+(* Provisional grammar inferred from the supplied corpus. It is a suite contract, not a claim of an existing production parser. *)
+program         = version_decl, module_decl, use_decl, policy_decl, kernel_decl, verify_decl, assert_decl, emit_decl ;
+version_decl    = "ja", "source", version, newline ;
+version         = digit, { digit | "." } ;
+module_decl     = "module", qualified_name, newline ;
+use_decl        = "use", identifier, newline ;
+policy_decl     = "policy", policy_name, newline ;
+policy_name     = "no_network" | identifier ;
+kernel_decl     = "kernel", identifier, "(", parameter, ")", "->", type, newline,
+                  target_decl, precision_decl, determinism_decl, memory_decl, block ;
+parameter       = identifier, ":", type ;
+type            = "Tensor", "<", scalar_type, ">", shape | scalar_type ;
+scalar_type     = "f16" | "f32" | "f64" | "i8" | "i16" | "i32" | "i64" | identifier ;
+shape           = "[", dimension, { ",", dimension }, "]" ;
+dimension       = integer | identifier ;
+target_decl     = "target", ("cpu" | "gpu" | "npu" | identifier), newline ;
+precision_decl  = "precision", ("strict" | "balanced" | "fast" | identifier), newline ;
+determinism_decl= "determinism", ("reproducible" | "best_effort" | identifier), newline ;
+memory_decl     = "memory", ("global" | "shared" | "local" | identifier), newline ;
+block           = "{", newline, { statement }, "}", newline ;
+statement       = parallel_for | vectorize_stmt | assignment | barrier_stmt | atomic_stmt ;
+parallel_for    = "parallel", "for", identifier, "in", expression, "..", expression,
+                  [ "tile", integer ], block ;
+vectorize_stmt  = "vectorize", integer, newline ;
+assignment      = lvalue, "=", expression, newline ;
+verify_decl     = "verify", identifier, "with", identifier, newline ;
+assert_decl     = "assert", expression, comparison, expression, newline ;
+emit_decl       = "emit", "kernel", string, [ newline ] ;
+comparison      = "==" | "!=" | "<" | ">" | "<=" | ">=" ;
+expression      = primary, { operator, primary } ;
+primary         = identifier | number | indexed | "(", expression, ")" ;
+indexed         = identifier, "[", expression, { ",", expression }, "]" ;
+lvalue          = identifier | indexed | qualified_name ;
+operator        = "+" | "-" | "*" | "/" | "%" ;
+qualified_name  = identifier, { ".", identifier } ;
+identifier      = letter, { letter | digit | "_" } ;
+integer         = digit, { digit } ;
+number          = integer, [ ".", { digit } ] ;
+string          = '"', { ? any character except quote ? }, '"' ;
+letter          = "A"…"Z" | "a"…"z" ;
+digit           = "0"…"9" ;
+newline         = ? line ending ? ;

@@ -1,0 +1,45 @@
+{
+  "profile": "ja.training",
+  "operators": [
+    {
+      "name": "checkpoint",
+      "corpus_count": 1000
+    },
+    {
+      "name": "compare",
+      "corpus_count": 1000
+    },
+    {
+      "name": "evaluate",
+      "corpus_count": 1000
+    },
+    {
+      "name": "experiment_declare",
+      "corpus_count": 1000
+    },
+    {
+      "name": "prepare",
+      "corpus_count": 1000
+    },
+    {
+      "name": "promote",
+      "corpus_count": 1000
+    },
+    {
+      "name": "reject",
+      "corpus_count": 1000
+    },
+    {
+      "name": "rollback",
+      "corpus_count": 1000
+    },
+    {
+      "name": "sweep",
+      "corpus_count": 1000
+    },
+    {
+      "name": "train",
+      "corpus_count": 1000
+    }
+  ]
+}

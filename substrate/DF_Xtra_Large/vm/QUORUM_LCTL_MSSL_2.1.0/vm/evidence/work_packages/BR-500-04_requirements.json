@@ -1,0 +1,79 @@
+{
+  "gate_decision": "OPERATIONAL",
+  "requirements": [
+    {
+      "baseline": "generic LCTL/MSSL 2.1.0 candidate",
+      "blocker": "",
+      "command": "python qualification/qualify.py",
+      "evidence_path": "evidence/qualification_summary.json",
+      "exit_code": 0,
+      "notes": "Requirement status derived from fresh local QVM evidence and explicit claim boundary; no manual override.",
+      "requirement_id": "BR-500-04-R01",
+      "result": "OPERATIONAL",
+      "sha256": "5fca725a48bcb0bb4c4adc2b7698d2097af39be9c06a53710dd12538773eda00",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "generic LCTL/MSSL 2.1.0 candidate",
+      "blocker": "",
+      "command": "python qualification/qualify.py",
+      "evidence_path": "evidence/qualification_summary.json",
+      "exit_code": 0,
+      "notes": "Requirement status derived from fresh local QVM evidence and explicit claim boundary; no manual override.",
+      "requirement_id": "BR-500-04-R02",
+      "result": "OPERATIONAL",
+      "sha256": "5fca725a48bcb0bb4c4adc2b7698d2097af39be9c06a53710dd12538773eda00",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "generic LCTL/MSSL 2.1.0 candidate",
+      "blocker": "",
+      "command": "python qualification/qualify.py",
+      "evidence_path": "evidence/qualification_summary.json",
+      "exit_code": 0,
+      "notes": "Requirement status derived from fresh local QVM evidence and explicit claim boundary; no manual override.",
+      "requirement_id": "BR-500-04-R03",
+      "result": "OPERATIONAL",
+      "sha256": "5fca725a48bcb0bb4c4adc2b7698d2097af39be9c06a53710dd12538773eda00",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "generic LCTL/MSSL 2.1.0 candidate",
+      "blocker": "",
+      "command": "python qualification/qualify.py",
+      "evidence_path": "evidence/qualification_summary.json",
+      "exit_code": 0,
+      "notes": "Requirement status derived from fresh local QVM evidence and explicit claim boundary; no manual override.",
+      "requirement_id": "BR-500-04-R04",
+      "result": "OPERATIONAL",
+      "sha256": "5fca725a48bcb0bb4c4adc2b7698d2097af39be9c06a53710dd12538773eda00",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "generic LCTL/MSSL 2.1.0 candidate",
+      "blocker": "",
+      "command": "python qualification/qualify.py",
+      "evidence_path": "evidence/qualification_summary.json",
+      "exit_code": 0,
+      "notes": "Requirement status derived from fresh local QVM evidence and explicit claim boundary; no manual override.",
+      "requirement_id": "BR-500-04-R05",
+      "result": "OPERATIONAL",
+      "sha256": "5fca725a48bcb0bb4c4adc2b7698d2097af39be9c06a53710dd12538773eda00",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "generic LCTL/MSSL 2.1.0 candidate",
+      "blocker": "",
+      "command": "python qualification/qualify.py",
+      "evidence_path": "evidence/qualification_summary.json",
+      "exit_code": 0,
+      "notes": "Requirement status derived from fresh local QVM evidence and explicit claim boundary; no manual override.",
+      "requirement_id": "BR-500-04-R06",
+      "result": "OPERATIONAL",
+      "sha256": "5fca725a48bcb0bb4c4adc2b7698d2097af39be9c06a53710dd12538773eda00",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "title": "QUORUM BR-500-04 \u2014 Production VM core",
+  "work_package": "BR-500-04"
+}

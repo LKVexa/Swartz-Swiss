@@ -1,0 +1,37 @@
+profile ja.certifier_grammar
+source_level 0.3
+
+subsuite Terminal.T_11 InputEditorParser {
+    identity { suite = "66"; id = "T-11"; deterministic = true; autorun = false }
+
+    grammar TerminalCommand EBNF {
+        command      = invocation, { operator, invocation } ;
+        invocation   = word, { spacing, argument } ;
+        operator     = pipe | redirect | conditional | sequence ;
+        substitution = variable | command_substitution | arithmetic ;
+    }
+
+    accept { command_display; editor_events[]; parser_policy_ref }
+    emit { ParsedTerminalCommand; CommandReviewModel }
+
+    procedure parse_without_execution(command_display) {
+        tokens = lex_as_inert_text(command_display)
+        ast = parse(tokens, TerminalCommand)
+        classify_every_operator_and_substitution(ast)
+        require no_parse_time_expansion
+        require no_completion_time_expansion
+        return ast
+    }
+
+    procedure edit(event) {
+        update_inert_buffer(event)
+        preserve_unicode_boundaries
+        preserve_selection_and_undo
+        never_dispatch_on_parse
+    }
+
+    deny { parse_time_execution; implicit_substitution; invisible_control_character; malformed_ast }
+    evidence { inert_input_hash; token_stream; parsed_ast; parser_findings; grammar_version }
+    tests { quoting; escaping; pipeline; redirect; substitution_inertness; unicode; malformed_input }
+}
+

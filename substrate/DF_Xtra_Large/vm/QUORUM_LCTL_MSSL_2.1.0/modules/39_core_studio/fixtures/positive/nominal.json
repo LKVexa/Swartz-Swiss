@@ -1,0 +1,15 @@
+{
+  "schema": "QUORUM-FIXTURE/2.0",
+  "class": "positive",
+  "module_id": 39,
+  "plane": "interfaces_services",
+  "input_type": "interface_event/state",
+  "payload": {
+    "example": "nominal"
+  },
+  "expected_contract": {
+    "admitted": true,
+    "stage_count": 8,
+    "final_state": "COMPLETED"
+  }
+}

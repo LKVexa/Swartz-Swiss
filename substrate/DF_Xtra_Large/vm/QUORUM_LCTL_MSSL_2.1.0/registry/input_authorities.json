@@ -1,0 +1,25 @@
+{
+  "schema": "QUORUM-SOURCE-AUTHORITY/1.0",
+  "inputs": [
+    {
+      "name": "columned_lctl_corpus",
+      "sha256": "b60b268a05b817bd7a9865f77f36b26b3952ef9bc28023eb3a8216b908bb634e",
+      "source_filename": "COLUMNED_LCTL_CORPUS_1.0.0.zip"
+    },
+    {
+      "name": "lctl_language",
+      "sha256": "f4bb3c50e16f40cb243fc25c134d997b93efb09ee24dfff2b2e6c0a912fe25c5",
+      "source_filename": "LCTL_1.6.1_RC1_COLUMNED_HYPERFEDERATED_EXECUTION_LANGUAGE.zip"
+    },
+    {
+      "name": "mssl_writers_corpus",
+      "sha256": "4019023232fc43c659ddebf3ab69b92e25e91731ec7400e6d43033b435b3920b",
+      "source_filename": "MSSL_WRITERS_CORPUS_1.0.0.zip"
+    },
+    {
+      "name": "generic_project",
+      "sha256": "1be9c37fef58a81c430ac7e139eb859fe0a702eb5ab1359d857b2ca5fe39832c",
+      "source_filename": "project.zip"
+    }
+  ]
+}

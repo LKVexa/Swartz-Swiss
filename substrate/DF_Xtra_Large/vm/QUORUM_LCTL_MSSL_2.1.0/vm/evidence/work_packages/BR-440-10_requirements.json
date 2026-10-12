@@ -1,0 +1,91 @@
+{
+  "gate_decision": "PARTIAL",
+  "requirements": [
+    {
+      "baseline": "generic LCTL/MSSL 2.1.0 candidate",
+      "blocker": "The workflow was applied and the hosted implementation covers part of this work package, but the complete package-specific production proof is not present.",
+      "command": "python qualification/qualify.py",
+      "evidence_path": "evidence/qualification_summary.json",
+      "exit_code": null,
+      "notes": "Requirement status derived from fresh local QVM evidence and explicit claim boundary; no manual override.",
+      "requirement_id": "BR-440-10-R01",
+      "result": "PARTIAL",
+      "sha256": "5fca725a48bcb0bb4c4adc2b7698d2097af39be9c06a53710dd12538773eda00",
+      "status": "PARTIAL"
+    },
+    {
+      "baseline": "generic LCTL/MSSL 2.1.0 candidate",
+      "blocker": "The workflow was applied and the hosted implementation covers part of this work package, but the complete package-specific production proof is not present.",
+      "command": "python qualification/qualify.py",
+      "evidence_path": "evidence/qualification_summary.json",
+      "exit_code": null,
+      "notes": "Requirement status derived from fresh local QVM evidence and explicit claim boundary; no manual override.",
+      "requirement_id": "BR-440-10-R02",
+      "result": "PARTIAL",
+      "sha256": "5fca725a48bcb0bb4c4adc2b7698d2097af39be9c06a53710dd12538773eda00",
+      "status": "PARTIAL"
+    },
+    {
+      "baseline": "generic LCTL/MSSL 2.1.0 candidate",
+      "blocker": "The workflow was applied and the hosted implementation covers part of this work package, but the complete package-specific production proof is not present.",
+      "command": "python qualification/qualify.py",
+      "evidence_path": "evidence/qualification_summary.json",
+      "exit_code": null,
+      "notes": "Requirement status derived from fresh local QVM evidence and explicit claim boundary; no manual override.",
+      "requirement_id": "BR-440-10-R03",
+      "result": "PARTIAL",
+      "sha256": "5fca725a48bcb0bb4c4adc2b7698d2097af39be9c06a53710dd12538773eda00",
+      "status": "PARTIAL"
+    },
+    {
+      "baseline": "generic LCTL/MSSL 2.1.0 candidate",
+      "blocker": "The workflow was applied and the hosted implementation covers part of this work package, but the complete package-specific production proof is not present.",
+      "command": "python qualification/qualify.py",
+      "evidence_path": "evidence/qualification_summary.json",
+      "exit_code": null,
+      "notes": "Requirement status derived from fresh local QVM evidence and explicit claim boundary; no manual override.",
+      "requirement_id": "BR-440-10-R04",
+      "result": "PARTIAL",
+      "sha256": "5fca725a48bcb0bb4c4adc2b7698d2097af39be9c06a53710dd12538773eda00",
+      "status": "PARTIAL"
+    },
+    {
+      "baseline": "generic LCTL/MSSL 2.1.0 candidate",
+      "blocker": "The workflow was applied and the hosted implementation covers part of this work package, but the complete package-specific production proof is not present.",
+      "command": "python qualification/qualify.py",
+      "evidence_path": "evidence/qualification_summary.json",
+      "exit_code": null,
+      "notes": "Requirement status derived from fresh local QVM evidence and explicit claim boundary; no manual override.",
+      "requirement_id": "BR-440-10-R05",
+      "result": "PARTIAL",
+      "sha256": "5fca725a48bcb0bb4c4adc2b7698d2097af39be9c06a53710dd12538773eda00",
+      "status": "PARTIAL"
+    },
+    {
+      "baseline": "generic LCTL/MSSL 2.1.0 candidate",
+      "blocker": "The workflow was applied and the hosted implementation covers part of this work package, but the complete package-specific production proof is not present.",
+      "command": "python qualification/qualify.py",
+      "evidence_path": "evidence/qualification_summary.json",
+      "exit_code": null,
+      "notes": "Requirement status derived from fresh local QVM evidence and explicit claim boundary; no manual override.",
+      "requirement_id": "BR-440-10-R06",
+      "result": "PARTIAL",
+      "sha256": "5fca725a48bcb0bb4c4adc2b7698d2097af39be9c06a53710dd12538773eda00",
+      "status": "PARTIAL"
+    },
+    {
+      "baseline": "generic LCTL/MSSL 2.1.0 candidate",
+      "blocker": "The workflow was applied and the hosted implementation covers part of this work package, but the complete package-specific production proof is not present.",
+      "command": "python qualification/qualify.py",
+      "evidence_path": "evidence/qualification_summary.json",
+      "exit_code": null,
+      "notes": "Requirement status derived from fresh local QVM evidence and explicit claim boundary; no manual override.",
+      "requirement_id": "BR-440-10-R07",
+      "result": "PARTIAL",
+      "sha256": "5fca725a48bcb0bb4c4adc2b7698d2097af39be9c06a53710dd12538773eda00",
+      "status": "PARTIAL"
+    }
+  ],
+  "title": "QUORUM BR-440-10 \u2014 Security logging",
+  "work_package": "BR-440-10"
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "baseline": "BOTTLE ROCKET 4.9.0 RC local gates PASS; strict BR-490-11 gate BLOCKED",
+    "blocker": null,
+    "command": "make trust-conformance br480-image-attacks br480-security",
+    "evidence_path": "evidence/br500/BR-500-09_tests.log",
+    "exit_code": 0,
+    "notes": "Fresh 5.0.0 qualification-candidate evidence; runtime formats remain frozen.",
+    "requirement_id": "BR-500-09-R01",
+    "requirement_text": "Use immutable trust root",
+    "result": "PASS",
+    "sha256": "574da395cb676d05dbfb5d1463e7be4251e33ebb1c0e35bc8555d6b231ff73fd",
+    "status": "OPERATIONAL"
+  },
+  {
+    "baseline": "BOTTLE ROCKET 4.9.0 RC local gates PASS; strict BR-490-11 gate BLOCKED",
+    "blocker": null,
+    "command": "make trust-conformance br480-image-attacks br480-security",
+    "evidence_path": "evidence/br500/BR-500-09_tests.log",
+    "exit_code": 0,
+    "notes": "Fresh 5.0.0 qualification-candidate evidence; runtime formats remain frozen.",
+    "requirement_id": "BR-500-09-R02",
+    "requirement_text": "Support key rotation",
+    "result": "PASS",
+    "sha256": "574da395cb676d05dbfb5d1463e7be4251e33ebb1c0e35bc8555d6b231ff73fd",
+    "status": "OPERATIONAL"
+  },
+  {
+    "baseline": "BOTTLE ROCKET 4.9.0 RC local gates PASS; strict BR-490-11 gate BLOCKED",
+    "blocker": null,
+    "command": "make trust-conformance br480-image-attacks br480-security",
+    "evidence_path": "evidence/br500/BR-500-09_tests.log",
+    "exit_code": 0,
+    "notes": "Fresh 5.0.0 qualification-candidate evidence; runtime formats remain frozen.",
+    "requirement_id": "BR-500-09-R03",
+    "requirement_text": "Support revocation",
+    "result": "PASS",
+    "sha256": "574da395cb676d05dbfb5d1463e7be4251e33ebb1c0e35bc8555d6b231ff73fd",
+    "status": "OPERATIONAL"
+  },
+  {
+    "baseline": "BOTTLE ROCKET 4.9.0 RC local gates PASS; strict BR-490-11 gate BLOCKED",
+    "blocker": null,
+    "command": "make trust-conformance br480-image-attacks br480-security",
+    "evidence_path": "evidence/br500/BR-500-09_tests.log",
+    "exit_code": 0,
+    "notes": "Fresh 5.0.0 qualification-candidate evidence; runtime formats remain frozen.",
+    "requirement_id": "BR-500-09-R04",
+    "requirement_text": "Use secure boot",
+    "result": "PASS",
+    "sha256": "574da395cb676d05dbfb5d1463e7be4251e33ebb1c0e35bc8555d6b231ff73fd",
+    "status": "OPERATIONAL"
+  },
+  {
+    "baseline": "BOTTLE ROCKET 4.9.0 RC local gates PASS; strict BR-490-11 gate BLOCKED",
+    "blocker": null,
+    "command": "make trust-conformance br480-image-attacks br480-security",
+    "evidence_path": "evidence/br500/BR-500-09_tests.log",
+    "exit_code": 0,
+    "notes": "Fresh 5.0.0 qualification-candidate evidence; runtime formats remain frozen.",
+    "requirement_id": "BR-500-09-R05",
+    "requirement_text": "Use signed updates",
+    "result": "PASS",
+    "sha256": "574da395cb676d05dbfb5d1463e7be4251e33ebb1c0e35bc8555d6b231ff73fd",
+    "status": "OPERATIONAL"
+  },
+  {
+    "baseline": "BOTTLE ROCKET 4.9.0 RC local gates PASS; strict BR-490-11 gate BLOCKED",
+    "blocker": null,
+    "command": "make trust-conformance br480-image-attacks br480-security",
+    "evidence_path": "evidence/br500/BR-500-09_tests.log",
+    "exit_code": 0,
+    "notes": "Fresh 5.0.0 qualification-candidate evidence; runtime formats remain frozen.",
+    "requirement_id": "BR-500-09-R06",
+    "requirement_text": "Prevent rollback",
+    "result": "PASS",
+    "sha256": "574da395cb676d05dbfb5d1463e7be4251e33ebb1c0e35bc8555d6b231ff73fd",
+    "status": "OPERATIONAL"
+  },
+  {
+    "baseline": "BOTTLE ROCKET 4.9.0 RC local gates PASS; strict BR-490-11 gate BLOCKED",
+    "blocker": null,
+    "command": "make trust-conformance br480-image-attacks br480-security",
+    "evidence_path": "evidence/br500/BR-500-09_tests.log",
+    "exit_code": 0,
+    "notes": "Fresh 5.0.0 qualification-candidate evidence; runtime formats remain frozen.",
+    "requirement_id": "BR-500-09-R07",
+    "requirement_text": "Enforce isolation",
+    "result": "PASS",
+    "sha256": "574da395cb676d05dbfb5d1463e7be4251e33ebb1c0e35bc8555d6b231ff73fd",
+    "status": "OPERATIONAL"
+  }
+]

@@ -1,0 +1,29 @@
+deepml specialized 0.3
+module grinder.candidate_improvement
+policy deterministic
+policy no_network
+
+domain grinder_candidate_improvement {
+  unit Score = base("dimensionless")
+  schema ImprovementEvidence { value: f64<Score> timestamp: Time provenance: Hash }
+  tensor candidates: f64<Score>[128,16]
+  operator SophiaBaseline(x) -> Tensor pure deterministic
+  operator CharlottePropose(x) -> Tensor pure deterministic
+  operator LandonImprove(x) -> Tensor pure deterministic
+  operator ProfessorCompare(baseline, improved) -> Tensor pure deterministic
+  operator PodiumPromote(x) -> Tensor pure deterministic
+  calibration ImprovementCalibration { method: bounded_least_squares tolerance: 1e-6 }
+  constraint ScoreBounds { min: 0 max: 1 }
+  constraint ImprovementBounds { min: 0 max: 1 }
+  graph GrinderCandidateImprovementGraph {
+    baseline = SophiaBaseline(candidates)
+    proposal = CharlottePropose(candidates)
+    improved = LandonImprove(proposal)
+    professor = ProfessorCompare(baseline, improved)
+    podium = PodiumPromote(professor)
+  }
+  validate podium with [SophiaBaseline, CharlottePropose, LandonImprove, ProfessorCompare, PodiumPromote, ImprovementCalibration, ScoreBounds, ImprovementBounds]
+  optimize GrinderCandidateImprovementGraph using [unit_propagation, dimensional_simplification, op_specialization, sparse_planning, calibration_folding, target_lowering]
+  lower GrinderCandidateImprovementGraph to DEEPML_SPECIALIZED_R12
+  package hybrid GrinderCandidateImprovementGraph as "grinder_candidate_improvement.msslb"
+}

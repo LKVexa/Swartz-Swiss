@@ -1,0 +1,39 @@
+deepml motion 0.3
+module suite23.temporal_animator.deterministic_frame_states
+policy deterministic
+policy no_network
+
+skeleton DeterministicFrameRig {
+  joint Root parent none bind transform(vec3(0,0,0), quat.identity)
+  joint Actor parent Root bind transform(vec3(0,0,0), quat.identity)
+}
+clip DeterministicFrameClip duration 2s interpolation cubic {
+  channel Actor.position key 0s vec3(0,0,0) key 0.5s vec3(0.5,0,0) key 1s vec3(1,0.5,0) key 1.5s vec3(1.5,0.5,0) key 2s vec3(2,0,0)
+  channel Actor.rotation key 0s quat.identity key 0.5s quat.axis_angle(y, 10deg) key 1s quat.axis_angle(y, 20deg) key 1.5s quat.axis_angle(y, 30deg) key 2s quat.axis_angle(y, 40deg)
+}
+state_machine DeterministicFrameState {
+  FrameState0000 -> FrameState0001 when frame_index >= 1
+  FrameState0001 -> FrameState0002 when frame_index >= 2
+  FrameState0002 -> FrameState0003 when frame_index >= 3
+  FrameState0003 -> FrameState0004 when frame_index >= 4
+}
+sample DeterministicFrameClip at 0s as FrameState0000;
+sample DeterministicFrameClip at 0.5s as FrameState0001;
+sample DeterministicFrameClip at 1s as FrameState0002;
+sample DeterministicFrameClip at 1.5s as FrameState0003;
+sample DeterministicFrameClip at 2s as FrameState0004;
+synchronize DeterministicFrameClip with scene.Actor and timeline.DeterministicFrameSequence
+motion_graph DeterministicFrameEvidence {
+  pose SOPHIA = constant_pose(DeterministicFrameRig)
+  pose CHARLOTTE = constant_pose(DeterministicFrameRig)
+  pose LANDON = constant_pose(DeterministicFrameRig)
+  pose Professor = constant_pose(DeterministicFrameRig)
+  pose Podium = constant_pose(DeterministicFrameRig)
+  curve FrameOrdinal = keys([0:0, 0.25:1, 0.5:2, 0.75:3, 1:4])
+  channel NonDeterministicChannel enabled false
+  blend Ensemble weights [0.2,0.2,0.2,0.2,0.2]
+}
+optimize DeterministicFrameEvidence using [pose_constant_folding, curve_compression(0.001), dead_channel_removal, blend_normalization, retarget_cache, ik_scheduling, state_minimization]
+lower DeterministicFrameEvidence to DEEPML_MOTION_R12
+package motion DeterministicFrameRig as "temporal_animator_deterministic_frame_states.msslb"
+certify motion DeterministicFrameRig profile strict

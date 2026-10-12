@@ -1,0 +1,34 @@
+deepml specialized 0.3
+module suite19.mesh_geometry.camera_coordinates
+policy deterministic
+policy no_network
+
+domain graphics {
+  unit Meter = base("length")
+  unit Pixel = base("pixel")
+  schema CameraCoordinateEvidence { asset: Hash sophia: Hash charlotte: Hash landon: Hash professor: Hash podium: Hash timestamp: Time provenance: Hash }
+  tensor camera_intrinsics: f64<Pixel>[3,3]
+  tensor world_to_camera: f64<Dimensionless>[4,4]
+  tensor world_points: f64<Meter>[4096,3]
+  tensor camera_points: f64<Meter>[4096,3]
+  tensor image_points: f64<Pixel>[4096,2]
+  operator sophia_align_coordinates(x) -> Tensor pure deterministic
+  operator charlotte_validate_camera(x) -> Tensor pure deterministic
+  operator landon_transform_coordinates(x) -> Tensor pure deterministic
+  operator professor_explain_camera(x) -> Tensor pure deterministic
+  operator podium_certify_camera(x) -> Tensor pure deterministic
+  calibration CameraCalibration { method: bounded_least_squares tolerance: 1e-6 }
+  constraint CameraBounds { min: -1000000 max: 1000000 }
+  validate world_points with [sophia_align_coordinates, charlotte_validate_camera, landon_transform_coordinates, professor_explain_camera, podium_certify_camera, CameraCalibration, CameraBounds]
+  validate camera_intrinsics with [charlotte_validate_camera, CameraCalibration]
+  validate world_to_camera with [charlotte_validate_camera, CameraBounds]
+  graph CameraCoordinateGraph {
+    aligned = sophia_align_coordinates(world_points)
+    validated = charlotte_validate_camera(aligned)
+    transformed = landon_transform_coordinates(validated)
+    explained = professor_explain_camera(transformed)
+    receipt = podium_certify_camera(explained)
+  }
+  optimize CameraCoordinateGraph using [unit_propagation, dimensional_simplification, op_specialization, sparse_planning, calibration_folding, target_lowering]
+  lower CameraCoordinateGraph to DEEPML_SPECIALIZED_R12
+}

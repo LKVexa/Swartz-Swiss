@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "64ed70efcd76559e1d457b4b21f2056dc9d025f47b4fc0cdb28632a81ef9bf15",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "deepML Worker",
+  "module_id": 27,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

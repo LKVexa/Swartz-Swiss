@@ -1,0 +1,23 @@
+{
+  "allocator_overhead_bytes": 12256,
+  "fragment_requested_bytes": 51200,
+  "fragment_usable_bytes": 51208,
+  "heap_requested_bytes": 35964928,
+  "heap_usable_bytes": 35977184,
+  "native_stack_limit_bytes": 8388608,
+  "record": "BOTTLE_ROCKET.RuntimeMemoryMeasurement",
+  "register_count": 16,
+  "register_requested_bytes": 2097152,
+  "register_usable_bytes": 2101232,
+  "rss_before_init_kib": 1432,
+  "rss_idle_kib": 1772,
+  "scratch_requested_bytes": 262144,
+  "scratch_usable_bytes": 266232,
+  "scratch_words": 2,
+  "stack_requested_bytes": 33554432,
+  "stack_usable_bytes": 33558512,
+  "stack_words": 256,
+  "vm_inline_bytes": 8792,
+  "word_bits": 1048576,
+  "word_bytes": 131072
+}

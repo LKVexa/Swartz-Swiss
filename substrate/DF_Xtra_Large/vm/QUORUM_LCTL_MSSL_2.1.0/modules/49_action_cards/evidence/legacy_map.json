@@ -1,0 +1,84 @@
+{
+  "suite_id": 49,
+  "suite_name": "Action Cards",
+  "plane": "data_evidence",
+  "legacy_sha256": "e59a8d043c4114acc33f7cdf79eee03832a764f364936eb1aff98038553e54c7",
+  "legacy_root": "legacy/source_repository/Action Cards",
+  "files": [
+    {
+      "path": "49.10_Action_Cards_Expected_Effects.jaui",
+      "sha256": "8d50d61ceb5cea17207d7b1d50e70767aab1d35ef75efae20e4a642b6ca2e9c2",
+      "bytes": 2091
+    },
+    {
+      "path": "49.11_Action_Cards_Impact.jaui",
+      "sha256": "f9db51ca61fd9c8ff126f463786c6e4d8091523061b893578fb1510e2e6d7d13",
+      "bytes": 2046
+    },
+    {
+      "path": "49.12_Action_Cards_Rollback.jaui",
+      "sha256": "32ef3168a879daf37b9697657d6c50304d55e7f2d7289355b1227477671e9579",
+      "bytes": 2102
+    },
+    {
+      "path": "49.13_Action_Cards_Unified_Diff.jaui",
+      "sha256": "03f374672f37015030db9475e6de382f1ca44fdd1ea251852ebf3dfa946c2029",
+      "bytes": 2023
+    },
+    {
+      "path": "49.14_Action_Cards_Review_History.jaui",
+      "sha256": "1c981904804cfa3cda778e81b695062432a146a6308c9ef2f29f3f09779b9696",
+      "bytes": 2075
+    },
+    {
+      "path": "49.1_Action_Cards_Risk_Summary.jaui",
+      "sha256": "057e106aeaee7f7cd29666c895aca373d33a99ef410e76cc9001bdcd0eba627a",
+      "bytes": 1931
+    },
+    {
+      "path": "49.2_Action_Cards_Evidence_Summary.jaui",
+      "sha256": "5e87f98954f0a5137386896018594104966741c474a7623cf8f1a90c557be3ce",
+      "bytes": 2075
+    },
+    {
+      "path": "49.3_Action_Cards_Parameter_Summary.jaui",
+      "sha256": "4090d647acd570dd2e2bd583ec587d02b9cff1ed6ce3271e054c40726294883d",
+      "bytes": 2126
+    },
+    {
+      "path": "49.4_Action_Cards_Impact_Summary.jaui",
+      "sha256": "a813ce7757007380a9214fa399264e79bfe64f45d8eb77d1db03fc8737b6e94b",
+      "bytes": 2017
+    },
+    {
+      "path": "49.5_Action_Cards_Rollback_Summary.jaui",
+      "sha256": "a22b0a472f6440dabf0f194f675672af34f207e87c2295a1b05e6267df1ce1de",
+      "bytes": 2093
+    },
+    {
+      "path": "49.6_Action_Cards_Hash_Summary.jaui",
+      "sha256": "30993ef749b6da013eddee1af137b92d036436c6c58f51ee59e61e39084d3961",
+      "bytes": 1976
+    },
+    {
+      "path": "49.7_Action_Cards_Capability_Contract.jaui",
+      "sha256": "4456f002276a5ca715cf097f6bc9af233471b38a0d1ae2affd4eee085a754390",
+      "bytes": 2173
+    },
+    {
+      "path": "49.8_Action_Cards_Parameters.jaui",
+      "sha256": "846dc3a62f1f050f1ff5f0f4f464015b1d1486e16cce64b797f64c7286703097",
+      "bytes": 2155
+    },
+    {
+      "path": "49.9_Action_Cards_Preconditions.jaui",
+      "sha256": "18e350e1539dcf9fdebce116adea9418b7d7e32d19c46ac5b00f2ff610fb0373",
+      "bytes": 2194
+    },
+    {
+      "path": "README.md",
+      "sha256": "21a95ab88bd06d9ae5f293b93f17643a46ad2f5974f5eb017ffd49d040ca7467",
+      "bytes": 20023
+    }
+  ]
+}

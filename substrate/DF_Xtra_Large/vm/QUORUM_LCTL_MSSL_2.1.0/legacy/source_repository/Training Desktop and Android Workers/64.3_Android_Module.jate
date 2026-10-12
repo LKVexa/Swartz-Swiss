@@ -1,0 +1,30 @@
+ja source 0.3
+module suite64.training_desktop_android_workers.android_module
+use Training
+policy no_network
+
+experiment TrainingDesktopAndroidAndroidModule {
+    model ref "models/sophia_charlotte_landon_professor_podium/android_module"
+    dataset ref "datasets/training_desktop_android/admitted_android_fixtures" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 24 accumulate 2
+    precision mixed
+    seed 6403
+    checkpoint every 10 steps
+    evaluate {
+        metric android_platform_matrix_coverage
+        metric android_lifecycle_input_consistency
+        metric android_permission_offline_safety
+        metric android_provenance_completeness
+        metric loss
+        require android_platform_matrix_coverage >= 0.97
+        require android_lifecycle_input_consistency >= 0.99
+        require android_permission_offline_safety >= 1.00
+        require android_provenance_completeness >= 1.00
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "TrainingDesktopAndroidAndroidModule.lineage.mcrt"

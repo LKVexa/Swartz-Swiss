@@ -1,0 +1,50 @@
+{
+  "child_id": "vec1-9284842789f5f6683a4863d7",
+  "clone_equivalence": {
+    "a": "vec1-29ca3e7d85dbd92896c59504",
+    "b": "vec1-9284842789f5f6683a4863d7",
+    "basis": "shared_sealed_snapshot",
+    "equivalent": true,
+    "schema": "VEC/CLONE_EQUIVALENCE/1",
+    "snapshot_hash": "2bcb135b5ca42de75bf11d907a1030482742ff07e69aa0416d5715769cb5ac81"
+  },
+  "dashboard": "ui/index.html",
+  "electron_id": "vec1-29ca3e7d85dbd92896c59504",
+  "receipt": {
+    "created_utc": "2026-09-17T03:37:34.499619Z",
+    "electron_id": "vec1-29ca3e7d85dbd92896c59504",
+    "event_log_hash": "1e7ef8b62c095360ebd5e452fc0aab7fe33bea66f03766f4f8c668ff9d6b265a",
+    "fabric_result_sha256": "1d43ff752b930703d6509f6b62ad4c8f65cf4fb6683ed1097c9cf5e8a3e8f2ac",
+    "fabric_verdict": "CROSS_NODE_DIFFERENTIAL_AGREEMENT",
+    "nodes_bound": [
+      "N_SMALL",
+      "N_MEDIUM",
+      "N_LARGE",
+      "N_XLARGE"
+    ],
+    "profile": {
+      "deterministic": true,
+      "may_reorder": false,
+      "profile": "single_process_deterministic",
+      "replay_trace_required": true,
+      "uses_processes": false,
+      "uses_threads": false
+    },
+    "program": "/mnt/data/VEC1_ES_0.1.0/programs/fabric_probe.pal",
+    "program_sha256": "331a8b09c2e7d7c09b4b90f7e37dcf526230a2ad4afa0d617343b113bcc8d901",
+    "replay": {
+      "actual_hash": "9c21c81508f9e88568504253cbd546e9",
+      "events": 1,
+      "expected_hash": "9c21c81508f9e88568504253cbd546e9",
+      "mismatches": [],
+      "ok": true,
+      "severity": "PASS",
+      "token": "DETERMINISTIC_REPLAY_PASS"
+    },
+    "schema": "VEC/EXECUTION_RECEIPT/1",
+    "tick": 1
+  },
+  "schema": "VEC1/DEMO/1",
+  "snapshot_hash": "ec5963d84d2c33e980b91ffda67dab6a943b714d16dfe87afd689bb1268797e3",
+  "verdict": "PASS"
+}

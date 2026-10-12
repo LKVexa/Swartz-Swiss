@@ -1,0 +1,51 @@
+profile ja.agent
+source_level 0.3
+
+subsuite Terminal.T_26 LandonRunRunAllReviewControl {
+    identity { suite = "66"; id = "T-26"; deterministic = true; autorun = false }
+
+    principal LANDON {
+        may = display + govern + pause + cancel + review + integrate
+        must_not = suppress_evidence + widen_scope_silently + bypass_approval
+    }
+
+    integrate { Suite_39_Core_Studio; Suite_62_LANDON_Integration_and_Run_All }
+
+    accept {
+        ProfessorTerminalActionCard
+        PodiumTerminalAuthorization
+        terminal_diagnostics
+        artifact_handoffs
+        SOPHIA_evaluation
+        CHARLOTTE_review
+        compatibility_report
+    }
+
+    emit LANDONTerminalReviewDecision
+
+    procedure run(contract) {
+        require one_authorized_terminal_contract
+        display_scope_capabilities_network_resources
+        dispatch_via_Podium_only
+    }
+
+    procedure run_all(selected_terminal_contracts[]) {
+        require nonempty_and_explicit_selection
+        require Podium_authorization_exactly_covers_every_contract
+        graph = build_declared_dependency_graph
+        execute_topological_waves_with_bounded_parallelism
+        stop_dependents_on_required_failure
+    }
+
+    procedure present_and_govern(card, diagnostics, handoffs, sophia, charlotte, report) {
+        show_all_required_evidence
+        allow APPROVE or REJECT or REQUEST_REVISION
+        record_reason_and_selected_handoff_hashes
+        return sealed_decision
+    }
+
+    deny { hidden_failure; implicit_run_all; approval_without_evidence; unreviewed_integration }
+    evidence { control_events; displayed_evidence_manifest; review_decision; integration_record }
+    tests { run; run_all_order; pause; cancel; reject; request_revision; approved_handoff_subset }
+}
+

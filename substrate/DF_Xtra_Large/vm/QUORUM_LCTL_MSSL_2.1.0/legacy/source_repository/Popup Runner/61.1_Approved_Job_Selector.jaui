@@ -1,0 +1,47 @@
+ja source 0.3
+module suite61.popup_runner.approved_job_selector
+use Interface
+policy no_network
+
+interface PopupRunnerApprovedJobSelector {
+    state selected_job: Text? = null
+    state loading_catalog: Flag = false
+    derived can_select_job = not loading_catalog
+    derived has_selected_job = selected_job != null
+    component SOPHIA_JobCatalogModel {
+        label "Interpret approved job catalog"
+        enabled bind can_select_job
+        accessibility role button name "Interpret approved popup runner job catalog"
+        action interpret_job_catalog requires popup.job.select:approved
+    }
+    component CHARLOTTE_JobCatalogGate {
+        label "Validate job approval and availability"
+        enabled bind can_select_job
+        accessibility role button name "Validate approved job catalog entries"
+        action validate_job_catalog requires popup.job.select:approved
+    }
+    component LANDON_JobSelection {
+        label "Select approved job"
+        enabled bind can_select_job
+        accessibility role button name "Select one approved job"
+        action select_approved_job requires popup.job.select:approved
+    }
+    component Professor_JobCatalogGuide {
+        label "Explain selected job"
+        enabled bind has_selected_job
+        accessibility role button name "Explain selected approved job"
+        action explain_selected_job requires popup.job.select:approved
+    }
+    component Podium_JobCatalogEvidence {
+        label "View job approval evidence"
+        enabled bind has_selected_job
+        accessibility role button name "View selected job approval evidence"
+        action show_job_catalog_evidence requires popup.job.select:approved
+    }
+    component ApprovedJobSelectorViewport {
+        embed portal.scene "popup_runner_approved_job_selector"
+        motion bind timeline.job_selection_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface PopupRunnerApprovedJobSelector

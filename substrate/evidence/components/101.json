@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "101",
+  "title": "Electron Inspector",
+  "source_file": "101_Electron_Inspector.md",
+  "source_sha256": "3d9cdcdd403f16bc663ea113073b07d93c58c7f061560b032cf8b8032d0313f4",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "VEC_CONTROL+UI",
+  "integration_mechanism": "Observability plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

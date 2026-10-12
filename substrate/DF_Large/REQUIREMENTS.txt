@@ -1,0 +1,7 @@
+# DF_Large -- declared toolchain (checked first by ./VERIFY; gate N0)
+cc                 C11 compiler (gcc 13 / clang 18 measured)
+make               GNU make
+openssl-dev        OpenSSL 3 libcrypto headers + library (-lcrypto) for the host CLI and trust code
+python3            Python 3 stdlib (the LCTLC/1.2 compiler tools/lctl430.py, tools/brim_verify.py, the adapter)
+sh                 POSIX shell
+sha256sum          for the VM's own integrity check

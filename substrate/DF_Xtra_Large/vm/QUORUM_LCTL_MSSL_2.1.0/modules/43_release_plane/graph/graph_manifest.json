@@ -1,0 +1,151 @@
+{
+  "schema": "QUORUM-MODULE-GRAPH/2.0",
+  "graph_id": "G43",
+  "module_id": 43,
+  "module": "Release Plane",
+  "plane": "release_delivery",
+  "version": "2.0.0",
+  "entry": "N01",
+  "exit": "N08",
+  "nodes": [
+    {
+      "id": "N01",
+      "stage": "INPUT",
+      "operator": "OBSERVE",
+      "input": "qualified_artifacts",
+      "output": "state.input",
+      "precondition": "admitted",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N02",
+      "stage": "VERIFY",
+      "operator": "VALIDATE",
+      "input": "N01.output",
+      "output": "state.verify",
+      "precondition": "N01.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N03",
+      "stage": "BUILD",
+      "operator": "EXECUTE",
+      "input": "N02.output",
+      "output": "state.build",
+      "precondition": "N02.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N04",
+      "stage": "PACKAGE",
+      "operator": "MATERIALIZE",
+      "input": "N03.output",
+      "output": "state.package",
+      "precondition": "N03.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N05",
+      "stage": "HASH",
+      "operator": "RECORD",
+      "input": "N04.output",
+      "output": "state.hash",
+      "precondition": "N04.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N06",
+      "stage": "CERTIFY",
+      "operator": "CERTIFY",
+      "input": "N05.output",
+      "output": "state.certify",
+      "precondition": "N05.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N07",
+      "stage": "RELEASE",
+      "operator": "MATERIALIZE",
+      "input": "N06.output",
+      "output": "state.release",
+      "precondition": "N06.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N08",
+      "stage": "EVIDENCE",
+      "operator": "RECORD",
+      "input": "N07.output",
+      "output": "release_package/release_receipt",
+      "precondition": "N07.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E01",
+      "from": "N01",
+      "to": "N02",
+      "kind": "control+data"
+    },
+    {
+      "id": "E02",
+      "from": "N02",
+      "to": "N03",
+      "kind": "control+data"
+    },
+    {
+      "id": "E03",
+      "from": "N03",
+      "to": "N04",
+      "kind": "control+data"
+    },
+    {
+      "id": "E04",
+      "from": "N04",
+      "to": "N05",
+      "kind": "control+data"
+    },
+    {
+      "id": "E05",
+      "from": "N05",
+      "to": "N06",
+      "kind": "control+data"
+    },
+    {
+      "id": "E06",
+      "from": "N06",
+      "to": "N07",
+      "kind": "control+data"
+    },
+    {
+      "id": "E07",
+      "from": "N07",
+      "to": "N08",
+      "kind": "control+data"
+    }
+  ],
+  "legacy_signals": [
+    "CACHE",
+    "PACKAGE",
+    "VALIDATE",
+    "INSTALL"
+  ],
+  "deterministic_order": true
+}

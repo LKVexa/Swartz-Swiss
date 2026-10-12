@@ -1,0 +1,14 @@
+ja source 0.3
+module suite39.core_studio.sessions
+use Core
+policy no_network
+
+record SessionsPlan { id: Count, scope: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_sessions_plan(item: SessionsPlan) -> Result<SessionsPlan, Text> effects { pure } {
+    let normalized: Text = item.scope
+    return Ok(SessionsPlan { id: item.id, scope: normalized, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: SessionsPlan = SessionsPlan { id: 3904, scope: "recoverable_sessions", sophia: "interpret_session_context", charlotte: "validate_session_boundaries", landon: "stage_session_checkpoint", professor: "explain_session_recovery", podium: "publish_session_receipt" }
+let result = prepare_sessions_plan(sample)
+assert result.is_ok == true
+emit json result

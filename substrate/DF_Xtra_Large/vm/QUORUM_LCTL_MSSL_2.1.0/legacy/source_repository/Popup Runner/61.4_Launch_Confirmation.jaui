@@ -1,0 +1,48 @@
+ja source 0.3
+module suite61.popup_runner.launch_confirmation
+use Interface
+policy no_network
+
+interface PopupRunnerLaunchConfirmation {
+    state selected_job: Text? = null
+    state policy_valid: Flag = false
+    state launching: Flag = false
+    derived can_review_launch = selected_job != null and not launching
+    derived can_launch = selected_job != null and policy_valid and not launching
+    component SOPHIA_LaunchSummary {
+        label "Interpret final job launch summary"
+        enabled bind can_review_launch
+        accessibility role button name "Interpret final popup runner launch summary"
+        action interpret_launch_summary requires popup.job.launch:approved
+    }
+    component CHARLOTTE_LaunchGate {
+        label "Revalidate job, parameters, policy, and approval"
+        enabled bind can_review_launch
+        accessibility role button name "Revalidate selected job before launch"
+        action validate_job_launch requires popup.job.launch:approved
+    }
+    component LANDON_Launch {
+        label "Launch approved job"
+        enabled bind can_launch
+        accessibility role button name "Launch selected approved job"
+        action launch_approved_job requires popup.job.launch:approved
+    }
+    component Professor_LaunchGuide {
+        label "Explain expected effects and cancellation"
+        enabled bind can_review_launch
+        accessibility role button name "Explain launch effects and cancellation behavior"
+        action explain_job_launch requires popup.job.launch:approved
+    }
+    component Podium_LaunchEvidence {
+        label "View launch commitment receipt"
+        enabled bind can_launch
+        accessibility role button name "View selected job launch evidence"
+        action show_launch_evidence requires popup.job.launch:approved
+    }
+    component LaunchConfirmationViewport {
+        embed portal.scene "popup_runner_launch_confirmation"
+        motion bind timeline.launch_commitment
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface PopupRunnerLaunchConfirmation

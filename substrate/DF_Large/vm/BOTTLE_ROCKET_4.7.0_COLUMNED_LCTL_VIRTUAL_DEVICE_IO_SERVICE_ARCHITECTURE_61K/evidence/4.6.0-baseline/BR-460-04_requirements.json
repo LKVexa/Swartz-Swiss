@@ -1,0 +1,69 @@
+{
+  "package": "BR-460-04",
+  "record": "BR.PackageRequirements",
+  "requirements": [
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 (stack allocation/quota vectors)",
+      "evidence_path": "evidence/BR-460-04_tests.log",
+      "exit_code": 0,
+      "notes": "Stack descriptors allocate backing only for live values and enforce depth/logical-byte ceilings.",
+      "requirement_id": "BR-460-04-R01",
+      "result": "PASS",
+      "sha256": "2f145d6dc199a2440344ccd63e99750e4a1f24c25aa193320cb5ffb52bc2575b",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 (stack allocation/quota vectors)",
+      "evidence_path": "evidence/BR-460-04_tests.log",
+      "exit_code": 0,
+      "notes": "Stack descriptors allocate backing only for live values and enforce depth/logical-byte ceilings.",
+      "requirement_id": "BR-460-04-R02",
+      "result": "PASS",
+      "sha256": "2f145d6dc199a2440344ccd63e99750e4a1f24c25aa193320cb5ffb52bc2575b",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 (stack allocation/quota vectors)",
+      "evidence_path": "evidence/BR-460-04_tests.log",
+      "exit_code": 0,
+      "notes": "Stack descriptors allocate backing only for live values and enforce depth/logical-byte ceilings.",
+      "requirement_id": "BR-460-04-R03",
+      "result": "PASS",
+      "sha256": "2f145d6dc199a2440344ccd63e99750e4a1f24c25aa193320cb5ffb52bc2575b",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 (stack allocation/quota vectors)",
+      "evidence_path": "evidence/BR-460-04_tests.log",
+      "exit_code": 0,
+      "notes": "Stack descriptors allocate backing only for live values and enforce depth/logical-byte ceilings.",
+      "requirement_id": "BR-460-04-R04",
+      "result": "PASS",
+      "sha256": "2f145d6dc199a2440344ccd63e99750e4a1f24c25aa193320cb5ffb52bc2575b",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 (stack allocation/quota vectors)",
+      "evidence_path": "evidence/BR-460-04_tests.log",
+      "exit_code": 0,
+      "notes": "Stack descriptors allocate backing only for live values and enforce depth/logical-byte ceilings.",
+      "requirement_id": "BR-460-04-R05",
+      "result": "PASS",
+      "sha256": "2f145d6dc199a2440344ccd63e99750e4a1f24c25aa193320cb5ffb52bc2575b",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "status": "OPERATIONAL",
+  "title": "Stack redesign",
+  "workflow": "docs/WORKFLOW_APPLIED_4.6.0/04_BR-460-04_stack_redesign_PROMPT_AND_WORKFLOW.md"
+}

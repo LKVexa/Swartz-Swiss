@@ -1,0 +1,47 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "da79adc8a64a68c2fff4b17ba12da544818c6615775d7d4c7bf78b218c2c83e5",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (ECOLOGY_CONSERVATION, RESOURCE_STRESS) plus Stage 10 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "ECOLOGY_CONSERVATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "RESOURCE_STRESS": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-05",
+    "GW-22",
+    "GW-32",
+    "GW-44",
+    "GW-79"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Cancellation and eviction release derived resources in dependency-safe order while preserving canonical state and unresolved obligations.",
+  "requirement_id": "RCPW-10-R18",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 10,
+  "stage_title": "Materialization Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "ECOLOGY_CONSERVATION",
+    "RESOURCE_STRESS"
+  ],
+  "workflow_file": "10_MATERIALIZATION_AUTHORITY/145_RCPW_10_R18_CANCELLATION_AND_EVICTION_RELEASE_DERIVED_RESOURCES_IN_DEPENDENCY_SAFE_ORDER_WHILE_PR.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

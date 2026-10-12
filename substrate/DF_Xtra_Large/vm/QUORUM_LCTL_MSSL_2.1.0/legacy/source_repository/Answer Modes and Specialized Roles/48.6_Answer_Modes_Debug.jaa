@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.answer_modes.debug
+use Agent
+policy no_network
+
+agent AnswerModeDebug {
+    identity "answer_mode_debug"
+    role "sophia-charlotte-landon-professor-podium-answer-mode"
+    goal emit_reproducible_root_cause_debug_answer when confidence >= 0.95
+    memory session retention 1h
+    budget steps 60 tools 5
+    tool LANDONCollectDebugEvidence(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAFormDebugHypotheses(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateDebugCause(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorComposeDebugAnswer(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordDebugAnswer(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectDebugEvidence
+        authorize SOPHIAFormDebugHypotheses
+        authorize CHARLOTTEValidateDebugCause
+        authorize ProfessorComposeDebugAnswer
+        authorize PodiumRecordDebugAnswer
+        continue when policy_allows
+        execute LANDONCollectDebugEvidence("selected_failure_scope")
+        execute SOPHIAFormDebugHypotheses("canonical_failure_evidence")
+        execute CHARLOTTEValidateDebugCause("ranked_debug_hypotheses")
+        execute ProfessorComposeDebugAnswer("validated_root_cause")
+        execute PodiumRecordDebugAnswer("debug_answer_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "AnswerModeDebug.mcrt"

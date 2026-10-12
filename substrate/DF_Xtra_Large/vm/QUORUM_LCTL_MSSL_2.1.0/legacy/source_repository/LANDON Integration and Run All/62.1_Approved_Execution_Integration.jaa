@@ -1,0 +1,35 @@
+ja source 0.3
+module suite62.landon_integration.approved_execution_integration
+use Agent
+policy no_network
+
+agent LANDONApprovedExecutionIntegration {
+    identity "landon_approved_execution_integration"
+    role "sophia-charlotte-landon-professor-podium-orchestrator"
+    goal bind_approved_execution_services when confidence >= 0.95
+    memory session retention 1h
+    budget steps 45 tools 5
+    tool SOPHIAInterpretExecutionContract(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEGateExecutionIntegration(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONBindExecutionServices(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainExecutionIntegration(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordExecutionIntegration(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIAInterpretExecutionContract
+        authorize CHARLOTTEGateExecutionIntegration
+        authorize LANDONBindExecutionServices
+        authorize ProfessorExplainExecutionIntegration
+        authorize PodiumRecordExecutionIntegration
+        continue when policy_allows
+        execute SOPHIAInterpretExecutionContract("approved_execution_contracts")
+        execute CHARLOTTEGateExecutionIntegration("execution_binding_manifest")
+        execute LANDONBindExecutionServices("validated_execution_bindings")
+        execute ProfessorExplainExecutionIntegration("integration_result")
+        execute PodiumRecordExecutionIntegration("integration_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "LANDONApprovedExecutionIntegration.mcrt"

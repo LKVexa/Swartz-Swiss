@@ -1,0 +1,84 @@
+{
+  "suite_id": 39,
+  "suite_name": "Core Studio",
+  "plane": "interfaces_services",
+  "legacy_sha256": "5dd9bb32c81c83e2370d6fa00cd8121edb82dd8b18ad3db57be5708af1868861",
+  "legacy_root": "legacy/source_repository/Core Studio",
+  "files": [
+    {
+      "path": "39.10_Core_Studio_Integrated_Terminal.ja",
+      "sha256": "415e141a033435a38fc8399f4a923210074bae141d15e850a5fd1da58b7faa67",
+      "bytes": 989
+    },
+    {
+      "path": "39.11_Core_Studio_Visual_App_Designer.ja",
+      "sha256": "49cbfc6e4e0f391035e5dcf62d57d5a4d150e4f0d14aca95b45643a08627b676",
+      "bytes": 969
+    },
+    {
+      "path": "39.12_Core_Studio_Model.ja",
+      "sha256": "9fcdd8d17a47aa1c25f0533e9385b418e1f0c8ceb7db10779c7e274b3424a432",
+      "bytes": 851
+    },
+    {
+      "path": "39.13_Core_Studio_Resource_Dashboard.ja",
+      "sha256": "1045b6d0cb811934dc34b666b9e190311a8755a39c6a8c2ee4bc8f1fc9e3a42f",
+      "bytes": 972
+    },
+    {
+      "path": "39.14_Core_Studio_Local_Server.ja",
+      "sha256": "829f6a76ee1bcfb1eea0c3f24132aebc18f7e9692b2a36f3274eb9f93e47e67a",
+      "bytes": 932
+    },
+    {
+      "path": "39.1_Core_Studio_Files.ja",
+      "sha256": "4659de2b8262e130bb9d38b50f5852ae8330e3c432b4268c6575003bf7eeb47d",
+      "bytes": 837
+    },
+    {
+      "path": "39.2_Core_Studio_Editors.ja",
+      "sha256": "307b620edb63ad56ee91dbcb95be8dec694d25463093e64a97cd02c447c9aa91",
+      "bytes": 849
+    },
+    {
+      "path": "39.3_Core_Studio_Tabs.ja",
+      "sha256": "f0fc8a85bf445ed7c5cb761f4803599150e9e2fd5d6ba92c2853dbfed490d798",
+      "bytes": 818
+    },
+    {
+      "path": "39.4_Core_Studio_Sessions.ja",
+      "sha256": "0464778eeb82c66d386c4f149f0e7933dfae5a678a581545ad131a2f3e7aafd1",
+      "bytes": 882
+    },
+    {
+      "path": "39.5_Core_Studio_Builds.ja",
+      "sha256": "4637e715113fa5ffc8f6759c5f6493be2350f911cbc9139e634994933b454433",
+      "bytes": 846
+    },
+    {
+      "path": "39.6_Core_Studio_Tests.ja",
+      "sha256": "714aab380f38b0ce7f5c719c21ef9618b8a385993d97cdd9e855965d59b4212b",
+      "bytes": 848
+    },
+    {
+      "path": "39.7_Core_Studio_Controlled_Integration.ja",
+      "sha256": "33c85be142e16961e9677dc690bf1c6ba6d72ff1c8a3541ed0ab2111b2a437e5",
+      "bytes": 1027
+    },
+    {
+      "path": "39.8_Core_Studio_Repository_UI.ja",
+      "sha256": "e7fbfbc5737d737176a6adaa0b1a73974236381c476201d9e89040ff50b63f8f",
+      "bytes": 931
+    },
+    {
+      "path": "39.9_Core_Studio_Code_Editor.ja",
+      "sha256": "ca54ee6f2805ce8fff841db5c6dceb6926f68355ceab810d6ab77fbfeecc70f1",
+      "bytes": 888
+    },
+    {
+      "path": "README.md",
+      "sha256": "8a5d697945485c2217926dd19319e53a7298980cb5f0d1361be7d40aaea0beb9",
+      "bytes": 24734
+    }
+  ]
+}

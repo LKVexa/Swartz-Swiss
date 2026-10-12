@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "110",
+  "title": "Clone Laboratory UI",
+  "source_file": "110_Clone_Laboratory_UI.md",
+  "source_sha256": "6b4ff11e748b48e13495086c60c33201be7406843a93346760a9f4afd84b8614",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "VEC_CONTROL+UI",
+  "integration_mechanism": "Observability plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

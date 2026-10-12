@@ -1,0 +1,29 @@
+ja portal.scene 0.3
+module suite21.scene_reconstruction.source_imagery
+policy no_execute_unknown_code
+policy no_network
+
+scene SceneReconstructionSourceImagery {
+  resource SourceImageTexture: Texture = "images/source_imagery.texture"
+  resource SourceImagePlane: Mesh = "meshes/source_image_plane.mesh"
+  material SourceImageMaterial { shader: "portal/unlit" texture: SourceImageTexture roughness: 1.0 }
+  entity SourceImageryRoot {
+    component Transform3D {
+      position: vec3(0m, 0m, 0m)
+      rotation: quat.identity
+      scale: vec3(1, 1, 1)
+    }
+    component MeshRenderer { mesh: SourceImagePlane material: SourceImageMaterial }
+    component Tag { value: "source.imagery.canonical" }
+  }
+  entity SOPHIA_SourceInterpretation parent SourceImageryRoot { component Tag { value: "sophia.source.interpretation" } }
+  entity CHARLOTTE_SourceValidation parent SourceImageryRoot { component Tag { value: "charlotte.source.validation" } }
+  entity LANDON_SourceStaging parent SourceImageryRoot { component Tag { value: "landon.source.staging" } }
+  entity Professor_SourceExplanation parent SourceImageryRoot { component Tag { value: "professor.source.explanation" } }
+  entity Podium_SourceReceipt parent SourceImageryRoot { component Tag { value: "podium.source.receipt" } }
+}
+serialize SceneReconstructionSourceImagery using canonical_scene_v1
+snapshot SceneReconstructionSourceImagery as "scene_reconstruction_source_imagery.snapshot"
+optimize scene SceneReconstructionSourceImagery using [stable_ids, topological_order, resource_deduplication, constant_transform]
+lower SceneReconstructionSourceImagery to PORTAL_SCENE_R12
+trace SceneReconstructionSourceImagery to "scene_reconstruction_source_imagery.mcrt"

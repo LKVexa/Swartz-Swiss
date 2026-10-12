@@ -1,0 +1,47 @@
+ja source 0.3
+module suite35.app_designer.composition
+use Interface
+policy no_network
+
+interface AppDesignerComposition {
+    state selected_component: Text? = null
+    state composing: Flag = false
+    derived can_select_component = not composing
+    derived can_compose = selected_component != null and not composing
+    component SOPHIA_CompositionModel {
+        label "Interpret component composition"
+        enabled bind can_compose
+        accessibility role button name "Interpret selected component composition"
+        action interpret_composition requires admin.action:approved
+    }
+    component CHARLOTTE_CompositionGate {
+        label "Validate component composition"
+        enabled bind can_compose
+        accessibility role button name "Validate selected component composition"
+        action validate_composition requires admin.action:approved
+    }
+    component LANDON_CompositionApply {
+        label "Apply validated composition"
+        enabled bind can_compose
+        accessibility role button name "Apply validated component composition"
+        action apply_composition requires admin.action:approved
+    }
+    component Professor_CompositionGuide {
+        label "Explain component composition"
+        enabled bind can_select_component
+        accessibility role button name "Explain component composition"
+        action explain_composition requires admin.action:approved
+    }
+    component Podium_CompositionEvidence {
+        label "View composition evidence"
+        enabled bind can_compose
+        accessibility role button name "View component composition evidence"
+        action show_composition_evidence requires admin.action:approved
+    }
+    component CompositionViewport {
+        embed portal.scene "app_designer_composition"
+        motion bind timeline.composition_preview
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface AppDesignerComposition

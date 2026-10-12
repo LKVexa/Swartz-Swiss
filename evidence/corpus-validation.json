@@ -1,0 +1,157 @@
+[
+  {
+    "suite": "JA21_DMK_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "  \"catalog_rows\": 1000,",
+      "  \"max_relative_path\": 80",
+      "}"
+    ]
+  },
+  {
+    "suite": "JA21_DMLC_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "PASS: 10,000 records; 1,000 scripts; source hashes, policies, braces, coverage, catalogs, and manifest verified."
+    ]
+  },
+  {
+    "suite": "JA21_DMLL_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "PASS",
+      "records=10000 scripts=1000 topics=46 tiers=6"
+    ]
+  },
+  {
+    "suite": "JA21_DMLM_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "PASS: 10,000 records; 1,000 scripts; hashes, policies, braces, coverage, catalogs, certification holdouts, and manifest verified."
+    ]
+  },
+  {
+    "suite": "JA21_DMLS_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "PASS: 10,000 records; 1,000 scripts; hashes, policies, braces, all 42 topics, all tiers, publication roles, textbook, catalogs, and manifest verified."
+    ]
+  },
+  {
+    "suite": "JA21_DMLV_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "  \"catalog_rows\": 1000,",
+      "  \"errors\": []",
+      "}"
+    ]
+  },
+  {
+    "suite": "JA21_JAA_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "  \"catalog_rows\": 1000,",
+      "  \"max_relative_path\": 80",
+      "}"
+    ]
+  },
+  {
+    "suite": "JA21_JACORE_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "PASS",
+      "records=10000 scripts=1000 chapters=22 features=31 max_relative_path=72"
+    ]
+  },
+  {
+    "suite": "JA21_JAD_Suite_1.0.0",
+    "code": 0,
+    "tail": []
+  },
+  {
+    "suite": "JA21_JAOPS_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "  \"errors\": [],",
+      "  \"status\": \"pass\"",
+      "}"
+    ]
+  },
+  {
+    "suite": "JA21_JASEC_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "  \"errors\": [],",
+      "  \"status\": \"pass\"",
+      "}"
+    ]
+  },
+  {
+    "suite": "JA21_JASP_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "PASS"
+    ]
+  },
+  {
+    "suite": "JA21_JATE_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "PASS 10000 records 1000 scripts"
+    ]
+  },
+  {
+    "suite": "JA21_JATP_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "  \"textbook_chapters\": 22,",
+      "  \"max_relative_path\": 88",
+      "}"
+    ]
+  },
+  {
+    "suite": "JA21_JAUI_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "  \"errors\": [],",
+      "  \"status\": \"pass\"",
+      "}"
+    ]
+  },
+  {
+    "suite": "JA21_JAXD_Suite_1.0.0_COMPACT",
+    "code": 0,
+    "tail": [
+      "  \"scripts\": 1000,",
+      "  \"catalog\": 1000",
+      "}"
+    ]
+  },
+  {
+    "suite": "JA21_JCG_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "  \"topics\": 47,",
+      "  \"max_relative_path\": 93",
+      "}"
+    ]
+  },
+  {
+    "suite": "JA21_JPSL_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "  \"errors\": [],",
+      "  \"status\": \"pass\"",
+      "}"
+    ]
+  },
+  {
+    "suite": "JA21_MPTL_Suite_1.0.0",
+    "code": 0,
+    "tail": [
+      "  \"topics\": 45,",
+      "  \"max_relative_path\": 83",
+      "}"
+    ]
+  }
+]

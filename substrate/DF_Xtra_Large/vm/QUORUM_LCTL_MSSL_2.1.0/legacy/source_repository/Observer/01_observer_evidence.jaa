@@ -1,0 +1,39 @@
+ja source 0.3
+module repository.observer.evidence
+use Agent
+policy no_network
+
+agent ObserverEvidence {
+    identity "observer.evidence.v1"
+    role "audited-evidence-observer"
+    goal evidence_observed when confidence >= 0.95
+    memory session retention 24h
+    budget steps 80 tools 6
+    tool ReadEvidenceRepository(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIA_LinkEvidenceClaims(input: Path) -> Report requires model.infer:approved
+    tool CHARLOTTE_VerifyEvidenceProvenance(input: Path) -> Report requires policy.verify:approved
+    tool LANDON_RouteEvidenceRecords(input: Path) -> Report requires ledger.append:approved
+    tool PROFESSOR_ExplainEvidenceStrength(input: Path) -> Report requires model.infer:approved
+    tool PODIUM_PublishEvidenceLedger(input: Path) -> Report requires ledger.append:approved
+    plan Main {
+        observe workspace
+        authorize ReadEvidenceRepository
+        authorize SOPHIA_LinkEvidenceClaims
+        authorize CHARLOTTE_VerifyEvidenceProvenance
+        authorize LANDON_RouteEvidenceRecords
+        authorize PROFESSOR_ExplainEvidenceStrength
+        authorize PODIUM_PublishEvidenceLedger
+        continue when policy_allows
+        execute ReadEvidenceRepository("repository/01_observer/evidence")
+        execute SOPHIA_LinkEvidenceClaims("repository/01_observer/evidence")
+        execute CHARLOTTE_VerifyEvidenceProvenance("repository/01_observer/evidence")
+        execute LANDON_RouteEvidenceRecords("repository/01_observer/evidence")
+        execute PROFESSOR_ExplainEvidenceStrength("repository/01_observer/evidence")
+        require human_approval before PODIUM_PublishEvidenceLedger
+        execute PODIUM_PublishEvidenceLedger("repository/01_observer/evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "observer_evidence.mcrt"

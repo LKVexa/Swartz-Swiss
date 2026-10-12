@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "081",
+  "title": "Recovery Coordinator",
+  "source_file": "081_Recovery_Coordinator.md",
+  "source_sha256": "37eed710d329e2a39188e8c3b5bd6f95f981a0f73d82f344985144d67df03dad",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "DF0",
+  "integration_mechanism": "DF_Fabric",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "064",
+  "title": "Medium LCTLC Backend",
+  "source_file": "064_Medium_LCTLC_Backend.md",
+  "source_sha256": "18a48f6f2d19127af2acaf772a928fd1558cbc08e373347acc271721dddb7ad9",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "N_MEDIUM",
+  "integration_mechanism": "LCTLC/1.1 lowering",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "022",
+  "title": "State Transition Engine",
+  "source_file": "022_State_Transition_Engine.md",
+  "source_sha256": "0acd05d1b21acafc88c36ba68e72a3cba87fc063e2a6eba78e4a425f9eb1faf1",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "VEC_CONTROL+ALL_NODES",
+  "integration_mechanism": "Computational nucleus",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

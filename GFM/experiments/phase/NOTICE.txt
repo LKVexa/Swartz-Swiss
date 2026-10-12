@@ -1,0 +1,21 @@
+GFM Aperture/Aggie Simulator 1.0.0
+Prepared 2026-10-11 for RUSSELL PHILIP SMITHSON.
+
+This derivative local simulation and its integration source are provided under
+GPL-3.0-only. LICENSE.txt contains the retained license text. The RUSSL GFM
+Research Terminal 0.5.1 is preserved byte-for-byte under vendor/terminal/,
+including its original notices, audits, research-source attribution and rights
+statements. Nine computation modules copied unchanged to backend/gfm/ power
+the local service. SOURCE_PROVENANCE.json identifies every copied file.
+
+The aperture, aggie cover, formation and passage rules are declared simulation
+assumptions. The 3D shapes, motion and demonstration parameter changes are
+illustrative. No new solution of general relativity, traversable wormhole,
+material-dependent horizon, timelessness, electromagnetic zap mechanism or
+astrophysical classification result is established by this software.
+
+The ordinary Kerr-Newman reference calculations retain their geometrized-unit
+domain. GFM processing retains raw complex signal scale and zero values over a
+nine-point spin sweep, distinct from a spatial field or trajectory. Original
+third-party research materials and supplied images retain their own rights;
+the GPL notice does not relicense them.

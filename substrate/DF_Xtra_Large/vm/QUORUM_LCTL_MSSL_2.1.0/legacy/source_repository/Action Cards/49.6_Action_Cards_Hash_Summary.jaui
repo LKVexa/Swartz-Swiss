@@ -1,0 +1,47 @@
+ja source 0.3
+module suite49.action_cards.hash_summary
+use Interface
+policy no_network
+
+interface ActionCardHashSummary {
+    state selected_action: Text? = null
+    state validating_hashes: Flag = false
+    derived can_select_action = not validating_hashes
+    derived can_validate_hashes = selected_action != null and not validating_hashes
+    component SOPHIA_HashModel {
+        label "Interpret action artifact hash relationships"
+        enabled bind can_validate_hashes
+        accessibility role button name "Interpret hashes for selected action"
+        action interpret_hash_summary requires admin.action:approved
+    }
+    component CHARLOTTE_HashGate {
+        label "Validate hash algorithms, values, and identities"
+        enabled bind can_validate_hashes
+        accessibility role button name "Validate hashes for selected action"
+        action validate_hash_summary requires admin.action:approved
+    }
+    component LANDON_HashBind {
+        label "Bind canonical hash summary"
+        enabled bind can_validate_hashes
+        accessibility role button name "Bind hash summary to selected action card"
+        action bind_hash_summary requires admin.action:approved
+    }
+    component Professor_HashGuide {
+        label "Explain source, plan, diff, and artifact hashes"
+        enabled bind can_select_action
+        accessibility role button name "Explain selected action hashes"
+        action explain_hash_summary requires admin.action:approved
+    }
+    component Podium_HashEvidence {
+        label "View hash verification evidence"
+        enabled bind can_validate_hashes
+        accessibility role button name "View selected action hash evidence"
+        action show_hash_evidence requires admin.action:approved
+    }
+    component HashSummaryViewport {
+        embed portal.scene "action_card_hash_summary"
+        motion bind timeline.hash_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface ActionCardHashSummary

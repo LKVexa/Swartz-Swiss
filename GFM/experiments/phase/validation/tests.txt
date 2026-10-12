@@ -1,0 +1,88 @@
+TAP version 13
+# Subtest: real HTTP parameter/control/export endpoints use the GFM backend and preserve invalid state
+ok 1 - real HTTP parameter/control/export endpoints use the GFM backend and preserve invalid state
+  ---
+  duration_ms: 161.1397
+  type: 'test'
+  ...
+# Subtest: SSE publishes initial and changed frames through a real local connection
+ok 2 - SSE publishes initial and changed frames through a real local connection
+  ---
+  duration_ms: 10.2463
+  type: 'test'
+  ...
+# Subtest: host, origin, request-size, path and method restrictions are enforced
+ok 3 - host, origin, request-size, path and method restrictions are enforced
+  ---
+  duration_ms: 139.6996
+  type: 'test'
+  ...
+# Subtest: all backend engines and the preserved terminal retain the registered source bytes
+ok 4 - all backend engines and the preserved terminal retain the registered source bytes
+  ---
+  duration_ms: 69.9081
+  type: 'test'
+  ...
+# Subtest: shared exterior and distinct cover branches produce the declared default passage bits
+ok 5 - shared exterior and distinct cover branches produce the declared default passage bits
+  ---
+  duration_ms: 6.0528
+  type: 'test'
+  ...
+# Subtest: critical spin equality closes, cover equality seals, and raw zero GFM values remain valid
+ok 6 - critical spin equality closes, cover equality seals, and raw zero GFM values remain valid
+  ---
+  duration_ms: 5.5471
+  type: 'test'
+  ...
+# Subtest: invalid parameters preserve the complete state and do not emit updates
+ok 7 - invalid parameters preserve the complete state and do not emit updates
+  ---
+  duration_ms: 3.044
+  type: 'test'
+  ...
+# Subtest: play, pause, step and bounded export record real backend values without outside mutation
+ok 8 - play, pause, step and bounded export record real backend values without outside mutation
+  ---
+  duration_ms: 4.6681
+  type: 'test'
+  ...
+# Subtest: repeatable demo exposes sealed, open and low-spin-closed states and pauses at completion
+ok 9 - repeatable demo exposes sealed, open and low-spin-closed states and pauses at completion
+  ---
+  duration_ms: 20.0086
+  type: 'test'
+  ...
+# Subtest: play resumes the illustration clock after the scripted experiment has completed
+ok 10 - play resumes the illustration clock after the scripted experiment has completed
+  ---
+  duration_ms: 20.0854
+  type: 'test'
+  ...
+# Subtest: isolated DOM client receives real HTTP/SSE calculations, controls spin/cover, and displays raw GFM rows
+ok 11 - isolated DOM client receives real HTTP/SSE calculations, controls spin/cover, and displays raw GFM rows
+  ---
+  duration_ms: 420.5826
+  type: 'test'
+  ...
+# Subtest: isolated DOM playback, step, reset, demo and accessible data tabs route to the backend
+ok 12 - isolated DOM playback, step, reset, demo and accessible data tabs route to the backend
+  ---
+  duration_ms: 204.4337
+  type: 'test'
+  ...
+# Subtest: schematic WebGL geometry stays finite at zero, threshold, open and covered cases (GPU rendering unverified)
+ok 13 - schematic WebGL geometry stays finite at zero, threshold, open and covered cases (GPU rendering unverified)
+  ---
+  duration_ms: 69.4201
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 827.0316

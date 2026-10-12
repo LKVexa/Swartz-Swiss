@@ -1,0 +1,112 @@
+{
+  "authority_sha256": "70d22de8b8392b7ea4dcaaf2e8dd04998ae6b26c29cd6ab2ce10d3aae5e9da5c",
+  "domain_output": {
+    "input_type": "interface_event/state",
+    "legacy_signals": [
+      "PACKAGE",
+      "VALIDATE"
+    ],
+    "module": "App Designer",
+    "output_type": "service_response/state_transition",
+    "payload_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "plane": "interfaces_services",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+    "service_response": {
+      "response_id": "208809b1a78d91ed50b5",
+      "state_transition": "RECEIVED->VALIDATED->RESPONDED",
+      "status": "ACKNOWLEDGED"
+    }
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "79991ae9ed8bbd941afaecd7f986ecfb79119bd4788dcfee0c7ef0df302717f1",
+  "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "module": "App Designer",
+  "module_id": 35,
+  "plane": "interfaces_services",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "f3af2bf5370198c081e7ca24606c82727e2370f93b94a6b36aaff92883b689e4",
+  "stage_count": 8,
+  "stages": [
+    {
+      "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "node": "N01",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "9e52ce4fa6a0ce1a4f075b87d3dd50c288a1b77be946f40f136db705bda23a58",
+      "stage": "EVENT"
+    },
+    {
+      "input_sha256": "9e52ce4fa6a0ce1a4f075b87d3dd50c288a1b77be946f40f136db705bda23a58",
+      "node": "N02",
+      "normalized_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "operator": "PARSE",
+      "output_sha256": "79e1d70e550dd504295f4da99351090e16810c3aadd16103bd2261ca4f282b3a",
+      "stage": "PARSE"
+    },
+    {
+      "input_sha256": "79e1d70e550dd504295f4da99351090e16810c3aadd16103bd2261ca4f282b3a",
+      "node": "N03",
+      "operator": "VALIDATE",
+      "output_sha256": "31f06f3716dc6785420b0552396c6047383f141c3eddaf955486fa5a19254260",
+      "stage": "VALIDATE",
+      "valid": true
+    },
+    {
+      "input_sha256": "31f06f3716dc6785420b0552396c6047383f141c3eddaf955486fa5a19254260",
+      "node": "N04",
+      "operator": "ROUTE",
+      "output_sha256": "f6d951e56a8075c18b639e385c2bdec04107543d5bbef931561a2c6e3a9ab128",
+      "route": "interfaces_services",
+      "stage": "ROUTE"
+    },
+    {
+      "features": [
+        246,
+        1,
+        209,
+        77,
+        94,
+        18,
+        69,
+        109
+      ],
+      "input_sha256": "f6d951e56a8075c18b639e385c2bdec04107543d5bbef931561a2c6e3a9ab128",
+      "node": "N05",
+      "operator": "TRANSFORM",
+      "output_sha256": "92bd9e2074b13aa7c91da1f4c92becff463e08c586679feafdb55e838712016c",
+      "stage": "STATE_TRANSITION"
+    },
+    {
+      "artifact_descriptor": {
+        "sha256": "1fa463fd1adb1a2ec9ffc11ff6b6e6b1caa25ede1e0bcb84697d984050647c07",
+        "type": "state.materialize"
+      },
+      "input_sha256": "92bd9e2074b13aa7c91da1f4c92becff463e08c586679feafdb55e838712016c",
+      "node": "N06",
+      "operator": "MATERIALIZE",
+      "output_sha256": "fb39e91e5bf3480dd5df2cee6aa3b797f580e8ff1577636981a640162c38980b",
+      "stage": "MATERIALIZE"
+    },
+    {
+      "input_sha256": "fb39e91e5bf3480dd5df2cee6aa3b797f580e8ff1577636981a640162c38980b",
+      "node": "N07",
+      "operator": "RECORD",
+      "output_sha256": "550eb6360a6e61403019fa6ef6acece85e0c17c6f33218359d979eed70dff248",
+      "receipt_sha256": "db7f87265aafcbe8e5f7f8ad5aea82c03cf1d29fff8ef5073c0ed9794b072d2b",
+      "stage": "RECORD"
+    },
+    {
+      "input_sha256": "550eb6360a6e61403019fa6ef6acece85e0c17c6f33218359d979eed70dff248",
+      "node": "N08",
+      "operator": "RECORD",
+      "output_sha256": "2f69e16afcb08918509db8323fe2e3b2789fda8c8253dc62040c197417db26b4",
+      "receipt_sha256": "2eb076db56728cca1c42c0ff1bd1a6f16e457e855165952e8f9c009d92186eb6",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

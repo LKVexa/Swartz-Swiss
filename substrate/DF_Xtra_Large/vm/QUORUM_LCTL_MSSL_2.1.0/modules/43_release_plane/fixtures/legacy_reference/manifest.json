@@ -1,0 +1,80 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 43,
+  "legacy_root": "legacy/source_repository/Release Plane",
+  "legacy_sha256": "1e73efe42dfe7dd6bdf1141adc82e15f441bc9e89e685b9a8591dfb00449dfc2",
+  "files": [
+    {
+      "path": "43.10_Release_Plane_MSIX_Packaging.jaops",
+      "sha256": "de63e88480c0939be93fb546733e7595f04f9c722785ba21d193528c6f7c26f7",
+      "bytes": 1056
+    },
+    {
+      "path": "43.11_Release_Plane_Installer_Packaging.jaops",
+      "sha256": "7652db5acf5df41469f02d5cbecf2d818ee39edc683441544220d356db3f6d56",
+      "bytes": 1131
+    },
+    {
+      "path": "43.12_Release_Plane_Signing_Preparation.jaops",
+      "sha256": "8c2ffd276791f5d5a76848c192248d98449e97eadfad01d8650a7f800d9c81a7",
+      "bytes": 1192
+    },
+    {
+      "path": "43.13_Release_Plane_Rollback.jaops",
+      "sha256": "4f80c422d48eda8c8b61d7fd85c1424407aa784a35fef359d55d8b067bb9c9f9",
+      "bytes": 1098
+    },
+    {
+      "path": "43.1_Release_Plane_Build_Gates.jaops",
+      "sha256": "b6c262db03fa1c3ea50c153b3a53f5c525f1d6a979fe4fc1938580b53dd34248",
+      "bytes": 1127
+    },
+    {
+      "path": "43.2_Release_Plane_Patch_Admission.jaops",
+      "sha256": "749d5621cfa71aa7554061cec6ca066c47dbdc91b32944d918e97f0455ac9226",
+      "bytes": 1138
+    },
+    {
+      "path": "43.3_Release_Plane_Packaging.jaops",
+      "sha256": "a59f361011cfc5aa5776fb0cb203ea532735b788785da133eb4f1862221fe675",
+      "bytes": 1078
+    },
+    {
+      "path": "43.4_Release_Plane_Signing_Readiness.jaops",
+      "sha256": "6d724795ed237f0d2104a4dfdc894684b898abf3241a4d3b3b6de15c3636b367",
+      "bytes": 1184
+    },
+    {
+      "path": "43.5_Release_Plane_Rollback_Planning.jaops",
+      "sha256": "1204c1aa4c8c23ae07f6c341b727e337f524c381c9da3fd7c3cc3d48b61643a4",
+      "bytes": 1160
+    },
+    {
+      "path": "43.6_Release_Plane_Release_Evidence.jaops",
+      "sha256": "c01e1ef3257c9881af0ea43e178ecff655b67c6e7b7c1feeca85d90279792758",
+      "bytes": 1111
+    },
+    {
+      "path": "43.7_Release_Plane_Build_Jobs.jaops",
+      "sha256": "fe7810ec2cd24d5a77245559e04262fef8ab8d7aad481ada6e9beace334099b0",
+      "bytes": 1106
+    },
+    {
+      "path": "43.8_Release_Plane_Patch_Application.jaops",
+      "sha256": "e31195881d36d58c69e044b331b0627bf304d33dd4e9e55139b65b47100f8277",
+      "bytes": 1192
+    },
+    {
+      "path": "43.9_Release_Plane_Test_Gates.jaops",
+      "sha256": "337ca88167d9c7b467da58d68d7133ff2238a2fec175649acef36bcecd2955a8",
+      "bytes": 1122
+    },
+    {
+      "path": "README.md",
+      "sha256": "11b15b9ff0b0c9602ecaf0760dd6d41ffcfc951073e2d6d7a1dc3beeebcec765",
+      "bytes": 30766
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

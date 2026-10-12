@@ -1,0 +1,8 @@
+RELEASE 0.5 RAW GFM VALIDATION SUMMARY
+
+266 project tests passed; 0 failed; 0 skipped.
+3112 independent mechanics assertions passed; maximum scaled error 3.79448e-13.
+Actual evidence: tests-v0.5.txt and mechanics-independent-verification.json.
+Raw data, retained scale, zero signals, exact field transforms and scoped equation adapters were checked.
+Historical examples, reports, source bytes and the v0.4 archive remain unchanged.
+Live browser rendering, native downloads and live iframe communication remain unverified.

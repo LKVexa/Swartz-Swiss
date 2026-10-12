@@ -1,0 +1,74 @@
+ja source 0.3
+module suite51.repository_retrieval_memory.repository_retrieval.source
+use DeepMLKernel
+policy no_network
+
+# Smithson 8S Coupled Mechanics v1.0 — data-source coupling header.
+# Local dimension is 5+3=8 where the S^3 fiber is noncollapsed; not the standard
+# sphere S^8 without a separate topological proof. Author: Russell Philip Smithson.
+coupling EightS_v1_0 {
+    framework      "Smithson 8S Coupled Mechanics v1.0"
+    base           "penteract field B^5 = [-1,1]^5"
+    object         "S^3 fiber F_i = { y in R^4 : ||y||_2 = r_i }"
+    fifth_axis     "elucidation coordinate t8"
+    support_layers { SOPHIA; CHARLOTTE; LANDON }
+    admission      eta_ind >= epsilon_ind and Delta_8S > epsilon_gain
+    execution      sparse_pairwise escalate_triadic_on { unresolved; contradiction; high_risk; certification_critical }
+    relation_order { UNRESOLVED; CONTRADICTION; HIGHER_ORDER; PROJECTION_ONLY; LATENT_5D_COUPLED; FIBER_STATE_RESONANT; SEMANTIC_ONLY; REINFORCING; NONE }
+    tolerances     { tol5 = 1e-7L; tol8 = 1e-7L; tol3 = 1e-5L; tolJ = declared }
+}
+
+# Record schema mirrors RepositoryRetrievalRecord and adds the 8S coupling relation layer.
+schema RepositoryRetrievalRecordCoupled {
+    id: Count primary
+    retrieval_id: Text
+    repository_id: Text
+    worktree_id: Text
+    root_path: Text
+    query_kind: Text
+    canonical_query: Text
+    scope_profile: Text
+    result_count: Count
+    source_snapshot_hash: Text
+    result_set_hash: Text
+    freshness_status: Text
+    sophia_judgment: Text
+    charlotte_validation: Text
+    landon_status: Text
+    professor_explanation: Text?
+    podium_receipt: Text
+    retrieved_at: Timestamp
+
+    # --- 8S coupling layer (latent geometry first, projected second) ---
+    relation_class: Text
+    eta_ind: F32
+    g5_latent_gap: F32
+    delta8_separation: F32
+    g3_projected_gap: F32
+    gJ_semantic_gap: F32
+    interaction_order: Count
+    r12_replay_id: Text
+}
+
+# Deterministic source emitter. N = number of source rows, bound at load.
+# Latent penteract centers c_n = ell*n, ||n||_1 <= M; per-site S^3 fiber radius
+# r_i = r_max * B5(c_i)^alpha * s_i^(1/3); coupling weight
+# W_ij = A_ij * exp( -(dc^T G5 dc)/(2 sigma_c^2) - d_J^2/(2 sigma_J^2) ).
+kernel RepositoryRetrievalRecordSource(seed: Tensor<f32>[1,5]) -> Dataset<RepositoryRetrievalRecordCoupled>
+target cpu
+precision strict
+determinism reproducible
+memory global
+{
+    parallel for i in 0..N tile 16 {
+        vectorize 16
+        # p_i = sigma(h_i); s_i = p_i*kappa_i*(1-chi_i)*(1-zeta_i)*v(omega_i)
+        # classify relation via g5, delta8, g3, gJ against declared tolerances
+        emit_row output[i]
+    }
+}
+verify bounds with checked
+assert kernel.race_free == true
+assert coupling.eta_ind >= coupling.epsilon_ind
+lineage repository_retrieval_records from EightS_v1_0
+emit dataset "repository_retrieval_records.dmk"

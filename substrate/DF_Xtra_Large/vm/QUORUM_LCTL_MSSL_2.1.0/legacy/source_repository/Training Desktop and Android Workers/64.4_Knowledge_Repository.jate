@@ -1,0 +1,30 @@
+ja source 0.3
+module suite64.training_desktop_android_workers.knowledge_repository
+use Training
+policy no_network
+
+experiment TrainingDesktopAndroidKnowledgeRepository {
+    model ref "models/sophia_charlotte_landon_professor_podium/knowledge_repository"
+    dataset ref "datasets/training_desktop_android/governed_knowledge_records" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 16 accumulate 4
+    precision mixed
+    seed 6404
+    checkpoint every 8 steps
+    evaluate {
+        metric knowledge_record_schema_validity
+        metric knowledge_lineage_completeness
+        metric knowledge_split_confidentiality
+        metric knowledge_retention_policy_compliance
+        metric loss
+        require knowledge_record_schema_validity >= 0.99
+        require knowledge_lineage_completeness >= 1.00
+        require knowledge_split_confidentiality >= 1.00
+        require knowledge_retention_policy_compliance >= 1.00
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "TrainingDesktopAndroidKnowledgeRepository.lineage.mcrt"

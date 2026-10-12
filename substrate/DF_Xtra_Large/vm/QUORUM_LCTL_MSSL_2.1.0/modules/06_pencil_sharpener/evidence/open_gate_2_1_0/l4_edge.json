@@ -1,0 +1,112 @@
+{
+  "authority_sha256": "fa20328ceb8bea58ac14b99c7eb042debd65f996d3b52a41d2a55588f6ffc0fb",
+  "domain_output": {
+    "decision": {
+      "accepted": true,
+      "confidence": 0.269531,
+      "explanation": "Reference decision produced by Pencil Sharpener under deterministic offline profile.",
+      "route": "pencil_sharpener"
+    },
+    "input_type": "request/context",
+    "legacy_signals": [
+      "LOWER",
+      "PACKAGE",
+      "CERTIFY",
+      "COMPILE"
+    ],
+    "module": "Pencil Sharpener",
+    "output_type": "decision/explanation",
+    "payload_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "plane": "intent_reasoning",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "2ac10dedf880bedeedf795eca107bddd544936d362ae41e7fcb439b2ab4f263f",
+  "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "module": "Pencil Sharpener",
+  "module_id": 6,
+  "plane": "intent_reasoning",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "9163ef66be37620e9533c314a9b84a203ff917119637c25867f7282bb3d97cad",
+  "stage_count": 9,
+  "stages": [
+    {
+      "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "node": "N01",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "5e94e6f666d46896ad2c1961c26145697df7874c9b689a1428236ad30a211543",
+      "stage": "REQUEST"
+    },
+    {
+      "input_sha256": "5e94e6f666d46896ad2c1961c26145697df7874c9b689a1428236ad30a211543",
+      "node": "N02",
+      "operator": "RETRIEVE",
+      "output_sha256": "3e1469ae9953c5de19d49e0dd03d7699dbd6c95ddaa7135c12582c010d45fc90",
+      "retrieved_count": 0,
+      "stage": "CONTEXT"
+    },
+    {
+      "input_sha256": "3e1469ae9953c5de19d49e0dd03d7699dbd6c95ddaa7135c12582c010d45fc90",
+      "node": "N03",
+      "normalized_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "operator": "PARSE",
+      "output_sha256": "dd5fbbcd624dc4f8c60cee9626ff92b64097d9ffd34c34c923289a08c8051166",
+      "stage": "INTERPRET"
+    },
+    {
+      "decision": "REFERENCE_CONTINUE",
+      "input_sha256": "dd5fbbcd624dc4f8c60cee9626ff92b64097d9ffd34c34c923289a08c8051166",
+      "node": "N04",
+      "operator": "REASON",
+      "output_sha256": "ef97d4321a8797bf2185817d48e6e9c7c53fe297817e94423359f8eb68d54cf6",
+      "score": 0.504412,
+      "stage": "REASON"
+    },
+    {
+      "accepted": true,
+      "input_sha256": "ef97d4321a8797bf2185817d48e6e9c7c53fe297817e94423359f8eb68d54cf6",
+      "node": "N05",
+      "operator": "FILTER",
+      "output_sha256": "ffe7e4f1dcf12165008654ce5b4e607faca8ed0fb6d10c8a6b36a4b4438fdd58",
+      "stage": "FILTER"
+    },
+    {
+      "input_sha256": "ffe7e4f1dcf12165008654ce5b4e607faca8ed0fb6d10c8a6b36a4b4438fdd58",
+      "node": "N06",
+      "operator": "RANK",
+      "output_sha256": "11d14d4bfc8c550a200f5f940d4ef499a02d8aa78563c63e72362c5bb7d3bcd3",
+      "rank_score": 0.513725,
+      "stage": "RANK"
+    },
+    {
+      "input_sha256": "11d14d4bfc8c550a200f5f940d4ef499a02d8aa78563c63e72362c5bb7d3bcd3",
+      "node": "N07",
+      "operator": "VALIDATE",
+      "output_sha256": "b5367f2e76a9638eb1eacc9e65c74605dfd214e1bbf4da551d543231166462d7",
+      "stage": "VALIDATE",
+      "valid": true
+    },
+    {
+      "explanation": "Pencil Sharpener:EXPLAIN reference semantics completed.",
+      "input_sha256": "b5367f2e76a9638eb1eacc9e65c74605dfd214e1bbf4da551d543231166462d7",
+      "node": "N08",
+      "operator": "EXPLAIN",
+      "output_sha256": "bd5955e2ece578c8c40b3da12e4c95385cd8e0f1c32b89a7a74acab295480031",
+      "stage": "EXPLAIN"
+    },
+    {
+      "input_sha256": "bd5955e2ece578c8c40b3da12e4c95385cd8e0f1c32b89a7a74acab295480031",
+      "node": "N09",
+      "operator": "RECORD",
+      "output_sha256": "9121ab617dc8154db93f087d4866648e96e50b1ed8cdbbdea8d462047b696397",
+      "receipt_sha256": "5a61f8a823c6467f67f0620cd65d9f5a59ecc473f80cc5926f0945587b02cbff",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

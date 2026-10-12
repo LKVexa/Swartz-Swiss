@@ -1,0 +1,44 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "75b7506f9aa040ca1fae103d362cb1075ac98ea4c40ad0466740b1d85165a7e4",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (CAUSAL_REPLAY) plus Stage 19 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "CAUSAL_REPLAY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-08",
+    "GW-39",
+    "GW-54",
+    "GW-70",
+    "GW-73",
+    "GW-74",
+    "GW-76"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Historical compaction maintains a proof boundary identifying which details are exact, aggregated, reconstructed, or permanently unavailable.",
+  "requirement_id": "RCPW-19-R26",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 19,
+  "stage_title": "World-State Ledger",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "CAUSAL_REPLAY"
+  ],
+  "workflow_file": "19_WORLD_STATE_LEDGER/298_RCPW_19_R26_HISTORICAL_COMPACTION_MAINTAINS_A_PROOF_BOUNDARY_IDENTIFYING_WHICH_DETAILS_ARE_EXACT_.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

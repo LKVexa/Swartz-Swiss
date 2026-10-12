@@ -1,0 +1,80 @@
+{
+  "schema": "QUORUM-MODULE-PACKAGE/2.0",
+  "module_id": 35,
+  "version": "2.0.1",
+  "maturity": "L3_STRUCTURALLY_VERIFIED",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "c430430c917ed70cdaf19224f984e71dc028980714ece1673005bfbeaf9026f1"
+    },
+    {
+      "path": "authority/invariants.mssl",
+      "sha256": "0836abbadf590821ed45ca954aa53e0808e787c1e6a58c98a576917d62afacb5"
+    },
+    {
+      "path": "authority/io_contract.mssl",
+      "sha256": "58b839bff77755d16bf4a6944643c71c31984cc52e1b8b6ac61cc6c07e8d09d8"
+    },
+    {
+      "path": "authority/module.mssl",
+      "sha256": "fb2c094338fd814262271271bd69d0ad83db6234d56d92349be458532355e1a9"
+    },
+    {
+      "path": "authority/operator_contract.mssl",
+      "sha256": "374ff415737ea9f40a84246a2dd5bd50de33704218eab87317096104d5b261bf"
+    },
+    {
+      "path": "authority/policy_contract.mssl",
+      "sha256": "50b65a4ca59948916428f81ad3e04d42438b925b37ec7cffb14df6736a0242ae"
+    },
+    {
+      "path": "authority/state_contract.mssl",
+      "sha256": "b772e44450f4a65be6772df9fdab0e5caa9fd5d8fb2d6dd4c674ad951664349b"
+    },
+    {
+      "path": "graph/dependency_map.json",
+      "sha256": "4fb05087f412566445c5e128534b68d79eaf00434547402bd03e5188e5cabca4"
+    },
+    {
+      "path": "graph/graph_manifest.json",
+      "sha256": "79991ae9ed8bbd941afaecd7f986ecfb79119bd4788dcfee0c7ef0df302717f1"
+    },
+    {
+      "path": "graph/lowering_map.json",
+      "sha256": "b42276ea4058e9d2495b2e932ad914846731032fb6e45444e6f160f869e93f4f"
+    },
+    {
+      "path": "graph/policy_map.json",
+      "sha256": "9692f395947afee753021fd604454452e5e1d4db6d2283176fa7fa347ecf601f"
+    },
+    {
+      "path": "graph/state_map.json",
+      "sha256": "5550e787c7ab94ec1f207b3e02f5bd3f0154a9b3c2cd4be6e2d5992824805357"
+    },
+    {
+      "path": "execution/module.lctlc",
+      "sha256": "69ee42e5d924ee7f799631e7ac554e32ab300e3744cc29c314f7dcf51ee5a3ea"
+    },
+    {
+      "path": "execution/module.lctl",
+      "sha256": "b9dd5bf5c7b43f61d88f3d941e62e218d75a22c1cccd99e660ef3b3ea3e9d2d1"
+    },
+    {
+      "path": "execution/optimized.lctlc",
+      "sha256": "696e60a0056dd21184d9c7fc38155d103e2a17d465605dff2174a568f7abd064"
+    },
+    {
+      "path": "execution/optimized.lctl",
+      "sha256": "4f06067dd0d1501de6b08a8a1ebed911fcad9bcee5f6f967096d7eeaadc58b68"
+    },
+    {
+      "path": "evidence/qualification_ledger.json",
+      "sha256": "7b260346784dc13e7066052976945cf556a19b6855af27dc7ba8f5b66f8c335b"
+    }
+  ],
+  "release_class": "NATIVE_RUNTIME_QUALIFICATION_CANDIDATE",
+  "strongest_certification": "L3_STRUCTURALLY_VERIFIED",
+  "native_reference_runtime_evidence": true,
+  "official_L4_L9_certification": false
+}

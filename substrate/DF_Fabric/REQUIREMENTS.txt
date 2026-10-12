@@ -1,0 +1,7 @@
+# DF_Fabric -- declared toolchain (checked by ./VERIFY)
+python3            Python 3.10+ (the fabric runtime, pacore, the adapters)
+# plus, for every node you want bound: that node container's REQUIREMENTS.txt
+# (DF_Small/DF_Medium/DF_Large need a C11 compiler + make + OpenSSL; DF_Xtra_Large needs Java for
+#  column-verified compiles). Absent or unbuilt nodes are reported SKIPPED, not failed; ./RUN proceeds
+#  with the nodes that bind unless --strict.
+# No network: the fabric is executed on this host with local processes.

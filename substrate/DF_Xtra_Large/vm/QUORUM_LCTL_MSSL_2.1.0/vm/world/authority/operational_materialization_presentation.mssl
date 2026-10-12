@@ -1,0 +1,18 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.world.operational_materialization_presentation:7.0.0-operational-reference-315",
+λ≡"quorum.rcpw.world.operational_materialization_presentation",
+ℛ≡{
+  "0001":"module(\"quorum.rcpw.world.operational_materialization_presentation\")",
+  "0002":"learn(\"materialization\",literal(\"semantic, collision, navigation, AI, visual and interaction readiness are explicit dependency states\"))",
+  "0003":"learn(\"presentation\",literal(\"render/audio state is derived and cannot mutate canonical truth\"))",
+  "0004":"learn(\"assets\",literal(\"presentation package activation and rollback are versioned independently from canonical state\"))",
+  "0005":"learn(\"traversal\",literal(\"route-aware prewarm, portals, moving frames and teleport staging preserve canonical time and topology\"))"
+},
+π≡[],δ≡5,τ≡0,
+μ≡{"learn.materialization":"semantic, collision, navigation, AI, visual and interaction readiness are explicit dependency states","learn.presentation":"render/audio state is derived and cannot mutate canonical truth","learn.assets":"presentation package activation and rollback are versioned independently from canonical state","learn.traversal":"route-aware prewarm, portals, moving frames and teleport staging preserve canonical time and topology"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"materialization":"semantic, collision, navigation, AI, visual and interaction readiness are explicit dependency states","presentation":"render/audio state is derived and cannot mutate canonical truth","assets":"presentation package activation and rollback are versioned independently from canonical state","traversal":"route-aware prewarm, portals, moving frames and teleport staging preserve canonical time and topology"}},
+ν≡{}
+,κ≡"sha256:bed384d9d2ae581e1ae3a7bb93c493c1346979302c9a9f27b6ae8fc8410bdca4"
+}⇒⊤

@@ -1,0 +1,12 @@
+{
+  "baseline_release": "BOTTLE_ROCKET 4.0.1 Truth Measured",
+  "baseline_zip_sha256": "be7f1a1f1797ce7d46d3313fb626a18efc10b2c5ada465c0f5dcd53bf1a39a1a",
+  "compiler": "cc (Debian 14.2.0-19) 14.2.0",
+  "linker": "GNU ld (GNU Binutils for Debian) 2.44",
+  "machine": "x86_64",
+  "make": "GNU Make 4.4.1",
+  "openssl": "OpenSSL 3.5.5 27 Jan 2026 (Library: OpenSSL 3.5.5 27 Jan 2026)",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "python": "3.13.5",
+  "timestamp_utc": "2026-08-11T03:29:05+00:00"
+}

@@ -1,0 +1,64 @@
+{
+  "acceptance_sha256": "32fc29d86a904d83392944756c796763dd18925aedb5dc913ab139765f00d44f",
+  "artifacts": {
+    "brim": {
+      "bytes": 272,
+      "ceiling": 51200,
+      "path": "deploy/BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE.brimg",
+      "sha256": "7cfd6d6c08c7114078477488814adb5365bc14731e2d6b65c15c66df67750bc9"
+    },
+    "brir": {
+      "bytes": 547,
+      "path": "deploy/BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE.brir",
+      "sha256": "fe12e09b6b120b06fc4e5576b3a5951650288870e050e2bdfbd7e58f4365bdbc"
+    },
+    "core": {
+      "bytes": 48264,
+      "ceiling": 61000,
+      "path": "release/bin/brvm-core61.stripped.o",
+      "sha256": "998744e798ef9562b74ed2fec8514a75bbce2f0b0977dfd6ff3dfe799a3bf354"
+    },
+    "independent_verifier": {
+      "bytes": 21232,
+      "path": "release/bin/brverify",
+      "sha256": "93146cd2f8e72e9888f0786bdfa562c63b1c0a410c414fb61b815e74c7318182"
+    },
+    "production_cli_compiler": {
+      "bytes": 121800,
+      "path": "release/bin/brctl",
+      "sha256": "415eccf3d3450034fe82433772d58524a2a67eb168cbce9a0e72fd7a0179e8d6"
+    },
+    "secure_bundle": {
+      "bytes": 688,
+      "path": "deploy/BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE.brsb",
+      "sha256": "4779581a53f38ab38c8f4c650bf19f360383f1ece50d75410ccf6ea3976f72a6"
+    }
+  },
+  "production_source_boundary": {
+    "bytes": 107675,
+    "ceiling": 110000
+  },
+  "record": "BOTTLE_ROCKET.ImmutableReleaseManifest/5.0.0-qualification-candidate",
+  "release": "5.0.0-qualification-candidate",
+  "runtime_contract": "LCTLC/1.1 -> BRIR/1.1 -> BRIM/1+BRPV/1 -> BRTM/1; ISA 4.1; ABI 1.0; Device ABI 1.0; BRCR/1; BRGD/1; core ABI 0x00040700",
+  "signature_role": "qualification/release-engineering manifest signature; not a production HSM/root credential",
+  "strict_gate": "BLOCKED",
+  "trees": {
+    "host": {
+      "files": 11,
+      "sha256": "3445e914d28a342ed54d7fdc5226d5e967790b2ef224bcf2e65a9c69c8f3d907"
+    },
+    "spec": {
+      "files": 10,
+      "sha256": "8a5e9dc216d6c4befc114ae45a2b55d4ef1de1e76848e148dc7dabf5e537c875"
+    },
+    "src": {
+      "files": 7,
+      "sha256": "a89c9e94d079d9d643b3323f64e1e45a3a0a928e0c258647d10993bdf7828530"
+    },
+    "tests": {
+      "files": 29,
+      "sha256": "3c59c083206f3781a5ee1e247184205ee88051bf8838782464f35ad337114aea"
+    }
+  }
+}

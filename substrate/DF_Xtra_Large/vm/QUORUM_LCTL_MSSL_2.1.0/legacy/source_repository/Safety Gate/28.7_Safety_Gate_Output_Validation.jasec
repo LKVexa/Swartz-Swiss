@@ -1,0 +1,26 @@
+ja source 0.3
+module suite28.safety_gate.output_validation
+use Security
+policy no_network
+
+principal SafetyGateOutputWorker
+role SafetyGateEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant output.inspect:approved
+}
+resource OutputCandidate classification restricted
+policy SafetyGateOutputPolicy {
+    deny network.* by default
+    deny process.* by default
+    allow OutputCandidate when principal.role == SafetyGateEnsemble
+    require human_approval for output.publish
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "SafetyGateOutputPolicy.decision.mcrt"

@@ -1,0 +1,21 @@
+ja source 0.3
+module chair.no_autorun
+use Security
+policy no_network
+
+principal SOPHIA_CHARLOTTE_LANDON_Professor_Podium_NoAutorunWorker
+role ChairNoAutorunWorker {
+    grant process.inspect:approved
+    grant policy.evaluate:approved
+}
+resource AutorunEffect classification restricted
+policy ChairNoAutorunPolicy {
+    deny network.* by default
+    deny AutorunEffect when principal.role == ChairNoAutorunWorker
+    require human_approval for process.start
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == true
+emit mcrt "ChairNoAutorunPolicy.decision.mcrt"

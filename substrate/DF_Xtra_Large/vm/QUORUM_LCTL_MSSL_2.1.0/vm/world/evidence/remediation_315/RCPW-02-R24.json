@@ -1,0 +1,68 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "370d8504736580d85aae500cd3fa193b3e809c9b2d9a87dec45f47d25b510217",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (VERSION_MIGRATION, REFERENCE_PRECISION, PRESENTATION_REGRESSION, SAVE_RECOVERY, MULTI_WORKER_CONFORMANCE, TRAVERSAL_PORTAL) plus Stage 02 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "MULTI_WORKER_CONFORMANCE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "PRESENTATION_REGRESSION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "REFERENCE_PRECISION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "SAVE_RECOVERY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "TRAVERSAL_PORTAL": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "VERSION_MIGRATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-01",
+    "GW-06",
+    "GW-11",
+    "GW-22",
+    "GW-42",
+    "GW-63"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T3_FABRIC",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Reference qualification includes adversarial handoff during partition migration, checkpointing, high-speed travel, and nested moving-frame transitions.",
+  "requirement_id": "RCPW-02-R24",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 2,
+  "stage_title": "Reference Frame Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "VERSION_MIGRATION",
+    "REFERENCE_PRECISION",
+    "PRESENTATION_REGRESSION",
+    "SAVE_RECOVERY",
+    "MULTI_WORKER_CONFORMANCE",
+    "TRAVERSAL_PORTAL"
+  ],
+  "workflow_file": "02_REFERENCE_FRAME_AUTHORITY/029_RCPW_02_R24_REFERENCE_QUALIFICATION_INCLUDES_ADVERSARIAL_HANDOFF_DURING_PARTITION_MIGRATION_CHECK.md",
+  "workflow_tier": "T3_FABRIC"
+}

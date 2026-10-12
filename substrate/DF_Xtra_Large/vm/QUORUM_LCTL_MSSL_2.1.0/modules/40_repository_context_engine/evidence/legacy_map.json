@@ -1,0 +1,74 @@
+{
+  "suite_id": 40,
+  "suite_name": "Repository Context Engine",
+  "plane": "sense_context",
+  "legacy_sha256": "75c3c7bef1e46f5aa23217c8582488ffbdfb871a77a61b765cd3dd3be1637ad6",
+  "legacy_root": "legacy/source_repository/Repository Context Engine",
+  "files": [
+    {
+      "path": "40.1_Repository_Context_Engine_Context.jad",
+      "sha256": "a99361f0899c486533d6aae074bd632ad54bf2199746df2ab037ff9cc81a540c",
+      "bytes": 2527
+    },
+    {
+      "path": "40.2_Repository_Context_Engine_Symbols.jad",
+      "sha256": "d712005e5609778c009160716725e1633344618b9c950afb9fefb272cbc9eb39",
+      "bytes": 2586
+    },
+    {
+      "path": "40.3_Repository_Context_Engine_Dependencies.jad",
+      "sha256": "301bb95e0e862b68beeb38d11cfcf5a9790dc8b2f7e243af3ae669af7c521ec6",
+      "bytes": 2656
+    },
+    {
+      "path": "40.4_Repository_Context_Engine_Freshness.jad",
+      "sha256": "984f38fb6efaeaf78fdbf1e777e906fddf01f9115b2a618fa95dfe6cfe0050f6",
+      "bytes": 2676
+    },
+    {
+      "path": "40.5_Repository_Context_Engine_Worktrees.jad",
+      "sha256": "36eee68f35b6f449bb75afb88f8011a3b21c8439bcbe447863e527c68a0b931e",
+      "bytes": 2607
+    },
+    {
+      "path": "40.6_Repository_Context_Engine_Provenance.jad",
+      "sha256": "4a77379ae562ebfa3f568b04ee57ec40f234e381e7e7cc469c12210068db0a67",
+      "bytes": 2650
+    },
+    {
+      "path": "README.md",
+      "sha256": "8dbce34b233eced4ecbb423e49c81917e100fc14737e1f6be8551c7b50f72854",
+      "bytes": 22188
+    },
+    {
+      "path": "repository_context_records.dmk",
+      "sha256": "2e2f2a184cf7991b80cc524b41a4b286fccd9a7a435e3c38eefe955e9ccbf2bf",
+      "bytes": 2781
+    },
+    {
+      "path": "repository_dependency_records.dmk",
+      "sha256": "098f7741c94db78473bb0a3cdce4d982c5b23f3cf6291ddd4990051077ac3665",
+      "bytes": 2858
+    },
+    {
+      "path": "repository_freshness_records.dmk",
+      "sha256": "06e641e3a7f1f0e8e1ac3ebb45ec148c46b7ce22a5b2abadd2bc95af486f024f",
+      "bytes": 2869
+    },
+    {
+      "path": "repository_provenance_records.dmk",
+      "sha256": "f5250b3b0c172dd31a7f5c2de3f3b4f7c03066120b8f2a28e6ab2093cadfb333",
+      "bytes": 2863
+    },
+    {
+      "path": "repository_symbol_records.dmk",
+      "sha256": "e791925fb378525de2980e0b32a2c6b70ab2663d0ed9d7bc222d33befd1cd00f",
+      "bytes": 2816
+    },
+    {
+      "path": "repository_worktree_records.dmk",
+      "sha256": "3ec3517e01fa8209db28d683c02d14fedcadc9787068267ce212ef01e2aa7282",
+      "bytes": 2827
+    }
+  ]
+}

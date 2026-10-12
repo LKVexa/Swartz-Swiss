@@ -1,0 +1,39 @@
+{
+  "source": "D:\\Codex\\GFM-Cylindrical-Pulse-Simulator\\examples\\sequence.json",
+  "sourceSha256": "fb5d0112e5349c41a00a2ed5fe26bd752d407af52aa9224468b048080700bea8",
+  "engineSha256": "da72a233a0c860e5621f4976d681c1a742497056fda73edda17d1a3ee7b2601f",
+  "frames": 51,
+  "representativeFrameIndex": 46,
+  "representativeTimeSeconds": 1.839999999999985e-09,
+  "selectionRule": "maximum electric energy in the empty cavity among exported frames",
+  "electricReferenceVPerM": 338.82272021190573,
+  "colorNormalization": "linear fixed \u00b1F0*tau/epsilon0 for all frames",
+  "surfaceCellValues": "Ephi cell values replicated in azimuth; no invented pulse trajectories",
+  "geometry": "hollow shell plus physical bottom and optional annular cover;90degree visualization cutaway",
+  "displayTransform": "X=r*cos(phi),Y=r*sin(phi),height=L-z, with original physical z labels; axial vectors transformed consistently",
+  "energyBasis": "exported staggered-field engine ledger, not the cell-centred visualization averages",
+  "thermalBasis": "exported material temperature rise in kelvin; no exaggerated thermal emission",
+  "claim": "scientific rendering of computed axisymmetric Maxwell\u2013Ohmic data; no arbitrary-3D, experimental, astronomical or material-specific validation",
+  "artifacts": [
+    {
+      "path": "GFM-Computed-Cylinder.png",
+      "bytes": 626931,
+      "sha256": "d5f8c1de5ab2abae9af9b57fd8ac19191e64414b6065008e9d230c27b1ae9fcc"
+    },
+    {
+      "path": "GFM-Computed-Cylinder-preview.png",
+      "bytes": 264603,
+      "sha256": "83144c356d586d9386451df72a89cb0c8d7cc6aa050044f2183248bca65b7a94"
+    },
+    {
+      "path": "GFM-Computed-Cylinder.gif",
+      "bytes": 3446647,
+      "sha256": "b02161c0ea6f78188934dae4ec71dc713a9ea958a110719e27922bebb11c0f6f"
+    },
+    {
+      "path": "GFM-Computed-Cylinder.pdf",
+      "bytes": 206469,
+      "sha256": "6b9bbd856a8b191c17b6fb475b70522b8e3323a53d1378a59305a61b13485aa6"
+    }
+  ]
+}

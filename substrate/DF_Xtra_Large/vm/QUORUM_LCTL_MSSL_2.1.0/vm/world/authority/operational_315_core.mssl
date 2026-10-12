@@ -1,0 +1,18 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.world.operational_315_core:7.0.0-operational-reference-315",
+λ≡"quorum.rcpw.world.operational_315_core",
+ℛ≡{
+  "0001":"module(\"quorum.rcpw.world.operational_315_core\")",
+  "0002":"learn(\"canonical\",literal(\"identity, topology, time, ownership, causality and revisioned state remain authoritative\"))",
+  "0003":"learn(\"transactions\",literal(\"canonical mutation validates revisions and commits or rolls back atomically\"))",
+  "0004":"learn(\"snapshots\",literal(\"coherent snapshots and canonical verifier provide replayable proof boundaries\"))",
+  "0005":"learn(\"qualification\",literal(\"582 atomic requirements require direct evidence receipts at the claimed profile\"))"
+},
+π≡[],δ≡5,τ≡0,
+μ≡{"learn.canonical":"identity, topology, time, ownership, causality and revisioned state remain authoritative","learn.transactions":"canonical mutation validates revisions and commits or rolls back atomically","learn.snapshots":"coherent snapshots and canonical verifier provide replayable proof boundaries","learn.qualification":"582 atomic requirements require direct evidence receipts at the claimed profile"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"canonical":"identity, topology, time, ownership, causality and revisioned state remain authoritative","transactions":"canonical mutation validates revisions and commits or rolls back atomically","snapshots":"coherent snapshots and canonical verifier provide replayable proof boundaries","qualification":"582 atomic requirements require direct evidence receipts at the claimed profile"}},
+ν≡{}
+,κ≡"sha256:835045b0eb9254ed7bc2073f66be57a90ae98bd2ebe5940a3163997a0a665c13"
+}⇒⊤

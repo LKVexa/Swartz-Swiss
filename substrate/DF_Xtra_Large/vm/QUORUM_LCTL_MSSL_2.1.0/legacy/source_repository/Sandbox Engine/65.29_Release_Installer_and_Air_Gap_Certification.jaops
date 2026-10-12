@@ -1,0 +1,33 @@
+ja source 0.3
+module suite65.sandbox_engine.release_installer_air_gap_certification
+use Operations
+policy explicit_network
+
+workspace SandboxReleaseInstallerAirGapCertification {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 8 memory 16GB
+    network disabled
+
+    service SOPHIA_release_context replicas 1
+    health_check SOPHIA_release_context every 10s
+    service CHARLOTTE_release_gate replicas 1
+    health_check CHARLOTTE_release_gate every 10s
+    service LANDON_release_controller replicas 1
+    health_check LANDON_release_controller every 5s
+    service Professor_release_report replicas 1
+    health_check Professor_release_report every 10s
+    service Podium_release_receipt replicas 1
+    health_check Podium_release_receipt every 10s
+    service air_gap_package_certifier replicas 1
+    health_check air_gap_package_certifier every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "sandbox_engine_release_installer_air_gap_certification.msslb"

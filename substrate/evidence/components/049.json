@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "049",
+  "title": "Restore Engine",
+  "source_file": "049_Restore_Engine.md",
+  "source_sha256": "35c543ce263ad7c2a9b095f5491fc56efc85d76dfd43f942fb2d116244116963",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "VEC_CONTROL+DF0",
+  "integration_mechanism": "Clone control plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

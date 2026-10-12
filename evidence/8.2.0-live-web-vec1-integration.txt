@@ -1,0 +1,8 @@
+8.2.0 integration evidence
+- VEC1 candidate DF_Large and DF_Xtra_Large vendored into substrate/.
+- NODES.json binds N_SMALL/N_MEDIUM/N_LARGE/N_XLARGE.
+- LiveWebContracts + WebView2 bridge + native stub added.
+- Start script provisions pinned SDK adapter 1.0.4191.47 and falls back Native.
+- HTTP/HTTPS navigation prefers Live mode; file/local surfaces stay Native.
+- F11 full-bleed hides command/tab/load/status/floating chrome and removes content card geometry.
+- VEC1 PRESENTATION payload now states presentation_engine; fabric_verdict remains null.

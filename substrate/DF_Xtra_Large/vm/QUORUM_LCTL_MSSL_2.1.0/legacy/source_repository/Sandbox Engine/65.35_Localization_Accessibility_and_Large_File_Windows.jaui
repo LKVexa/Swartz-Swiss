@@ -1,0 +1,43 @@
+ja source 0.3
+module suite65.sandbox_engine.localization_accessibility_large_file_windows
+use Interface
+policy no_network
+
+interface SandboxLocalizationAccessibilityLargeFiles {
+    state locale: Text = "en-US"
+    state window_start: Count = 0
+    state window_length: Count = 200
+    state total_records: Count = 0
+    derived has_next_window = window_start + window_length < total_records
+    component SOPHIA_LocalizedContext {
+        label "Interpret localized content"
+        accessibility role button name "Interpret localized sandbox content"
+        action interpret_localized_content requires sandbox.presentation.read:approved
+    }
+    component CHARLOTTE_AccessibilityInspection {
+        label "Inspect accessibility"
+        accessibility role button name "Inspect sandbox accessibility"
+        action inspect_accessibility requires sandbox.presentation.review:approved
+    }
+    component LANDON_LargeFileWindow {
+        label "Navigate bounded file window"
+        accessibility role button name "Navigate bounded large file window"
+        action navigate_large_file_window requires sandbox.presentation.read:approved
+    }
+    component Professor_LocalizedGuide {
+        label "Explain current window"
+        accessibility role button name "Explain current localized file window"
+        action explain_current_window requires sandbox.presentation.read:approved
+    }
+    component Podium_PresentationEvidence {
+        label "View presentation evidence"
+        accessibility role button name "View localization and accessibility evidence"
+        action show_presentation_evidence requires sandbox.presentation.read:approved
+    }
+    component LargeFilePreviewViewport {
+        embed portal.scene "sandbox_large_file_preview"
+        motion bind timeline.large_file_navigation
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface SandboxLocalizationAccessibilityLargeFiles

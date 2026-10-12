@@ -1,0 +1,47 @@
+ja source 0.3
+module suite49.action_cards.evidence_summary
+use Interface
+policy no_network
+
+interface ActionCardEvidenceSummary {
+    state selected_action: Text? = null
+    state validating_evidence: Flag = false
+    derived can_select_action = not validating_evidence
+    derived can_validate_evidence = selected_action != null and not validating_evidence
+    component SOPHIA_EvidenceModel {
+        label "Interpret evidence required by proposed action"
+        enabled bind can_validate_evidence
+        accessibility role button name "Interpret evidence for selected action"
+        action interpret_action_evidence requires admin.action:approved
+    }
+    component CHARLOTTE_EvidenceGate {
+        label "Validate evidence identity, freshness, and completeness"
+        enabled bind can_validate_evidence
+        accessibility role button name "Validate evidence for selected action"
+        action validate_action_evidence requires admin.action:approved
+    }
+    component LANDON_EvidenceBind {
+        label "Bind canonical evidence summary"
+        enabled bind can_validate_evidence
+        accessibility role button name "Bind validated evidence summary to action card"
+        action bind_evidence_summary requires admin.action:approved
+    }
+    component Professor_EvidenceGuide {
+        label "Explain evidence, gaps, and limitations"
+        enabled bind can_select_action
+        accessibility role button name "Explain selected action evidence"
+        action explain_action_evidence requires admin.action:approved
+    }
+    component Podium_EvidenceReceipt {
+        label "View provenance and evidence receipt"
+        enabled bind can_validate_evidence
+        accessibility role button name "View selected action evidence receipt"
+        action show_evidence_receipt requires admin.action:approved
+    }
+    component EvidenceSummaryViewport {
+        embed portal.scene "action_card_evidence_summary"
+        motion bind timeline.evidence_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface ActionCardEvidenceSummary

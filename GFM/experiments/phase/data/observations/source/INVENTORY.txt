@@ -1,0 +1,10 @@
+README.md
+INVENTORY.txt
+LICENSE.txt
+
+dat/
+dat/M87_EHT_2011_amp.dat
+dat/M87_EHT_2012_amp.dat
+dat/M87_EHT_2013_amp.dat
+
+EHTC_MonitoringM87_Sep2020.tgz

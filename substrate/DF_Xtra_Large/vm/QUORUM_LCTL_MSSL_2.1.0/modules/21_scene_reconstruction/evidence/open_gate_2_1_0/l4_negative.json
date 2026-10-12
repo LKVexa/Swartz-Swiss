@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "9a8bc77007f026e67dc0d6b6b01d1ecd45fc247a9994367e310a5ce7ff1c89de",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Scene Reconstruction",
+  "module_id": 21,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

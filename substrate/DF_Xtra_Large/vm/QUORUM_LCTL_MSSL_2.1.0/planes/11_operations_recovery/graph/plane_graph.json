@@ -1,0 +1,21 @@
+{
+  "schema": "QUORUM-PLANE-GRAPH/2.0",
+  "plane_id": 11,
+  "plane": "operations_recovery",
+  "modules": [
+    {
+      "module_id": 53,
+      "name": "Operations Plane"
+    },
+    {
+      "module_id": 58,
+      "name": "Indexing Storage Resources Logs and Recovery"
+    },
+    {
+      "module_id": 59,
+      "name": "Shell"
+    }
+  ],
+  "integration": "independent module nodes with scenario-mediated orchestration",
+  "cycles": []
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "GFM-combined-phase-offline-regression/1",
+  "prepared": "2026-10-12T10:55:22.068Z",
+  "exitCode": 0,
+  "passed": true,
+  "counts": {
+    "tests": 54,
+    "pass": 54,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "files": [
+    "GFM/experiments/phase/tests/phase-mhd.cjs",
+    "GFM/experiments/phase/tests/phase-view.test.cjs",
+    "GFM/experiments/phase/tests/phase-worker-parity.cjs",
+    "GFM/experiments/phase/tests/relativity.cjs",
+    "GFM/experiments/phase/tests/backend-simulation.cjs",
+    "GFM/experiments/phase/tests/backend-provenance.cjs",
+    "GFM/experiments/phase/tests/observations.cjs",
+    "GFM/experiments/phase/tests/combined-relativity-worker.cjs"
+  ],
+  "runtime": "v24.19.0",
+  "excludedFiles": [
+    "backend-http.cjs",
+    "backend-backpressure.cjs",
+    "phase-session-http.cjs",
+    "physics-service.cjs",
+    "frontend.test.cjs"
+  ],
+  "scope": "Non-network scientific regression: unchanged cores, browser/Node numerical parity, source provenance, observation failure retention. HTTP/SSE suites are excluded because cross-process loopback is denied; native console is verified independently."
+}

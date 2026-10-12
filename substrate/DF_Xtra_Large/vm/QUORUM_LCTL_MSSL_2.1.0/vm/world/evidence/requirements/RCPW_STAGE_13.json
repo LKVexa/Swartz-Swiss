@@ -1,0 +1,303 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 18,
+    "PARTIAL": 11,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "S0–S8 shells have explicit semantics, overlap bands, update rates, and resource budgets.",
+      "requirement_id": "RCPW-13-R01",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell transitions are smooth and use hysteresis.",
+      "requirement_id": "RCPW-13-R02",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell radii adapt to movement, visibility, terrain, platform budget, and mission demand without changing canonical truth.",
+      "requirement_id": "RCPW-13-R03",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative/causal authority wells can override geometric shell priority within bounded policy.",
+      "requirement_id": "RCPW-13-R04",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell occupancy and transition telemetry are inspectable.",
+      "requirement_id": "RCPW-13-R05",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "No shell boundary acts as an entity existence/destruction boundary.",
+      "requirement_id": "RCPW-13-R06",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell movement has maximum expansion/contraction rates unless an explicit emergency/teleport protocol is active.",
+      "requirement_id": "RCPW-13-R07",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell boundaries are decoupled from world-region boundaries to prevent synchronization artifacts.",
+      "requirement_id": "RCPW-13-R08",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Per-shell update cadence, precision, and resource budgets are machine-readable and runtime-observable.",
+      "requirement_id": "RCPW-13-R09",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Adaptive shell control is stable under oscillating camera direction and repeated speed changes.",
+      "requirement_id": "RCPW-13-R10",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World shells may be anisotropic and terrain/visibility aware, but every adaptive shape remains bounded and deterministic for replay.",
+      "requirement_id": "RCPW-13-R11",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell adaptation considers world-content complexity, expected interaction density, portal/interior proximity, and materialization backlog in addition to distance and speed.",
+      "requirement_id": "RCPW-13-R12",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Nested interior/portal spaces have explicit shell ownership and do not accidentally inherit exterior fold distortion.",
+      "requirement_id": "RCPW-13-R13",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Runtime shell telemetry exposes occupancy, transition rate, backlog, budget pressure, and starvation counters per shell.",
+      "requirement_id": "RCPW-13-R14",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-centric shells are emitted from or validated against world-compiler metadata for content density, portal complexity, route complexity, and expected materialization cost.",
+      "requirement_id": "RCPW-13-R15",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell policies reserve dedicated capacity for portals/interiors, moving transport, combat/event barriers, and recovery operations.",
+      "requirement_id": "RCPW-13-R16",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell adaptation exposes a bounded control law with anti-windup or equivalent stabilization against sustained overload.",
+      "requirement_id": "RCPW-13-R17",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell debug output can reconstruct why any entity changed shell, LOD, or materialization state at a given canonical tick.",
+      "requirement_id": "RCPW-13-R18",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell qualification includes dense city, sparse wilderness, underground/interior, transport corridor, and rapid oscillation profiles.",
+      "requirement_id": "RCPW-13-R19",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World-shell scheduling can distribute shell/region workloads across workers while preserving one canonical shell/LOD decision trace.",
+      "requirement_id": "RCPW-13-R20",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Adaptive shell controllers consume globally coherent budget/backlog telemetry rather than inconsistent worker-local estimates for promotion decisions.",
+      "requirement_id": "RCPW-13-R21",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell workload migration is transparent to canonical entity identity and reference-space continuity.",
+      "requirement_id": "RCPW-13-R22",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell saturation triggers deterministic admission/backpressure policies across workers.",
+      "requirement_id": "RCPW-13-R23",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes asymmetric worker capacity, worker loss, hot addition/removal of workers, and reference travel across migrated shell workloads.",
+      "requirement_id": "RCPW-13-R24",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-centric shells incorporate temporal relevance and historical rehydration cost when prioritizing archived or long-unvisited regions.",
+      "requirement_id": "RCPW-13-R25",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Expansion-front regions have explicit shell/materialization admission rules so newly canonical geography cannot overload local simulation on first approach.",
+      "requirement_id": "RCPW-13-R26",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell controllers reserve capacity for semantic rehydration before visual asset hydration when returning to historically evolved regions.",
+      "requirement_id": "RCPW-13-R27",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-horizon world processes may remain outside geometric shells but retain scheduled canonical updates according to world-evolution policy.",
+      "requirement_id": "RCPW-13-R28",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes travel from old core regions into newly expanded frontier, return to archived regions, high historical backlog, and multiple reference wells.",
+      "requirement_id": "RCPW-13-R29",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "stage": 13,
+  "title": "Reference-Centric World Shells"
+}

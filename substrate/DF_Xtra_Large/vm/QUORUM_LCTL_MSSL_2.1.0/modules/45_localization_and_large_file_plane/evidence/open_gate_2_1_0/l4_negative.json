@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "474de1b326b6a5913e68a9e803463249e6c7480e41e71ff71ec57dd159a6000c",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Localization and Large File Plane",
+  "module_id": 45,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

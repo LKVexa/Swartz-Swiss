@@ -1,0 +1,64 @@
+ja source 0.3
+module suite51.repository_retrieval_memory.governed_memory_retrieval
+use Data
+policy no_network
+
+schema GovernedMemoryRetrievalRecord {
+    id: Count primary
+    memory_retrieval_id: Text
+    memory_id: Text
+    memory_tier: Text
+    subject_scope: Text
+    purpose_scope: Text
+    provenance_id: Text
+    source_evidence_hash: Text
+    repository_snapshot_reference: Text?
+    retention_profile: Text
+    consent_status: Text
+    conflict_status: Text
+    memory_status: Text
+    sophia_judgment: Text
+    charlotte_validation: Text
+    landon_status: Text
+    professor_explanation: Text?
+    podium_receipt: Text
+    retrieved_at: Timestamp
+
+    # --- 8S coupling layer ---
+    relation_class: Text
+    eta_ind: F32
+    g5_latent_gap: F32
+    delta8_separation: F32
+    g3_projected_gap: F32
+    gJ_semantic_gap: F32
+    interaction_order: Count
+    r12_replay_id: Text
+}
+# Smithson 8S Coupled Mechanics v1.0 — data-source coupling header.
+# Local dimension is 5+3=8 where the S^3 fiber is noncollapsed; not the standard
+# sphere S^8 without a separate topological proof. Author: Russell Philip Smithson.
+coupling EightS_v1_0 {
+    framework      "Smithson 8S Coupled Mechanics v1.0"
+    base           "penteract field B^5 = [-1,1]^5"
+    object         "S^3 fiber F_i = { y in R^4 : ||y||_2 = r_i }"
+    fifth_axis     "elucidation coordinate t8"
+    support_layers { SOPHIA; CHARLOTTE; LANDON }
+    admission      eta_ind >= epsilon_ind and Delta_8S > epsilon_gain
+    execution      sparse_pairwise escalate_triadic_on { unresolved; contradiction; high_risk; certification_critical }
+    relation_order { UNRESOLVED; CONTRADICTION; HIGHER_ORDER; PROJECTION_ONLY; LATENT_5D_COUPLED; FIBER_STATE_RESONANT; SEMANTIC_ONLY; REINFORCING; NONE }
+    tolerances     { tol5 = 1e-7L; tol8 = 1e-7L; tol3 = 1e-5L; tolJ = declared }
+}
+
+dataset governed_memory_retrieval_records
+    from dmk("governed_memory_retrieval_records.dmk")
+    validate GovernedMemoryRetrievalRecord
+    partition by memory_tier shards 4
+query admitted_governed_memory_retrieval {
+    from governed_memory_retrieval_records
+    where podium_receipt != null
+    select id, memory_retrieval_id, memory_id, memory_tier, subject_scope, purpose_scope, provenance_id, source_evidence_hash, repository_snapshot_reference, retention_profile, consent_status, conflict_status, memory_status, sophia_judgment, charlotte_validation, landon_status, professor_explanation, podium_receipt, relation_class, eta_ind, g5_latent_gap, delta8_separation, g3_projected_gap, gJ_semantic_gap, interaction_order, r12_replay_id
+}
+lineage admitted_governed_memory_retrieval from governed_memory_retrieval_records
+assert coupling.relation_order.preserved == true
+assert schema.valid == true
+emit json admitted_governed_memory_retrieval

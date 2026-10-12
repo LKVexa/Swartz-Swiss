@@ -1,0 +1,78 @@
+Candidate integration assessment
+Reviewed 2026-10-11
+
+Source: user-supplied galois_field_transform_mechanics.pdf, 15 pages,
+294,785 bytes. SHA-256:
+2046247bc504171de09614e6d238ac648b94aac34733c6b7feb4de57ab00f39e
+Cover title: The Galois Field Mechanic Transform: Discrete Phase Spaces,
+Quantum Kinematics, and Finite Field Cosmologies.
+Cover attribution: Theoretical & Quantum Information Mathematics Working Group.
+PDF metadata does not name an author. The source was inspected without changes.
+
+Core equations restored by the PDF
+---------------------------------
+The earlier two TXT exports lost displayed formulas, inline symbols, and table
+values. The PDF supplies legible equations and is the preferred candidate
+reference for the bounded Fourier lab:
+
+- Page 2, equations (1)-(5): field quotient, polynomial basis, Frobenius map.
+- Page 3, equation (6): Tr(a) = sum from k=0 to n-1 of a^(p^k), in GF(p).
+  Equations (9)-(11) give trace linearity and nondegeneracy.
+- Page 4, equation (12): chi_u(a) = exp(2*pi*i*Tr(u*a)/p).
+  Equation (15): sum over a in GF(q) of chi(u*a) = q if u=0, else 0.
+- Page 5, equations (19)-(26): a complex Hilbert space C^q whose basis is
+  labeled by GF(q); F[b,a] = chi(a*b)/sqrt(q), with a positive phase sign.
+  The adjoint has the conjugate kernel. Unitarity follows from orthogonality.
+- Page 6, equations (27)-(33): each transformed basis state has probability
+  1/q at every output label; F^2 reflects a to -a; F^4=I. In characteristic
+  two, -a=a, so F^2=I.
+
+Use finite fields for labels and arithmetic in the kernel, and complex numbers
+for amplitudes. These are different number systems with explicit roles.
+The source does not specify a new five-word GF(2^80) recurrence, candidate ID,
+implementation, benchmark, experimental protocol, or measured physical result.
+RUSSL word dynamics and this Fourier demonstration remain distinct calculations.
+Enumerate only small fields for Fourier matrices; GF(2^80) is not a request to
+allocate 2^80 amplitudes or a 2^160-entry matrix.
+
+Cross-check reference for the implemented core
+---------------------------------------------
+A. Vourdas, Galois fields in quantum mechanics:
+https://arxiv.org/pdf/quant-ph/0605054
+Use its field trace / character / Fourier definitions as a primary reference,
+with the implementation's ordering, sign, normalization and field polynomial
+declared explicitly. The user-supplied treatise is candidate material; it is not
+an independent certification of its assertions or of this terminal.
+
+Issues outside the accepted core
+-------------------------------
+- Page 7, equations (39)-(42), has a Fourier-duality sign error relative to
+  its own definitions (20), (34), and (35). For the stated positive kernel,
+  F X_a F^dagger = Z_a and F Z_b F^dagger = X_-b. The proof computes
+  chi(a*x), then incorrectly identifies it with Z_-a.
+- Page 8, equation (46), is not an algebraic identity as written. Displacement
+  phase conventions in (43)-(50), and downstream Wigner constructions relying
+  on them, need a separate review before implementation.
+- Pages 10-12 restrict several MUB/Wigner constructions to odd characteristic.
+  These formulas and Hudson positivity claims cannot be transferred to a
+  characteristic-two lab without checking representation and dimension rules.
+- Page 14 identifies the complex additive-character transform with a different
+  finite-field polynomial-evaluation transform of length q-1. Preserve that
+  distinction. Hardware throughput and broad p-adic propagator assertions are
+  unverified reference claims, not capabilities or measurements of this app.
+- Page 15's cosmology proposes incompatible approximate sizes (10^120 and
+  10^122) for p and an unspecified-units relation G~1/p. No testable numerical
+  gravity/cosmology model is supplied. Keep these as candidate hypotheses.
+- The 15-page PDF contains named attributions but no bibliography. Its broad
+  claim that finite quantum systems require finite-field fundamental physics
+  is not established by the complex-amplitude Fourier construction.
+
+Foundation acceptance boundary
+------------------------------
+The initial browser lab may use the recovered trace/character/Fourier core
+only, validated through field arithmetic, character orthogonality, unitarity,
+norm preservation, uniform transformed-basis probabilities, and inverse
+recovery. Returns should include input, field definition, label ordering,
+phase convention, complex arithmetic tolerance, backend, elapsed time,
+completion state and actual work counts. Candidate reading does not execute
+its prose as commands or promote its physical interpretations to findings.

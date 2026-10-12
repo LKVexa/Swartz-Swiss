@@ -1,0 +1,18 @@
+{
+  "schema": "GFM-EHT-holdout-protocol/1",
+  "prepared": "2026-10-11",
+  "status": "Fixed before the first project model fit; source headers and example rows had already been inspected, so this is not a blinded preregistration",
+  "trainingYears": [2011, 2012],
+  "holdoutYears": [2013],
+  "rowSelection": {"minimumBaselineWavelengths": 200000000, "purpose": "Exclude intra-site total-flux rows from a compact-component model; apply the same criterion to both splits", "excludedRowsRetained": true},
+  "models": [
+    {"id":"thin-ring","formula":"A(u,v)=F*abs(J0(pi*d*hypot(u,v)))", "diameterGridMicroarcseconds":{"minimum":0,"maximum":120,"step":0.1},"freeParameters":["angular emission-ring diameter","one constant compact flux shared across training years"]},
+    {"id":"gaussian","formula":"A(u,v)=F*exp(-(pi*w*hypot(u,v))^2/(4*ln(2)))", "fwhmGridMicroarcseconds":{"minimum":0,"maximum":120,"step":0.1},"freeParameters":["angular Gaussian FWHM","one constant compact flux shared across training years"]}
+  ],
+  "fit": "Minimize diagonal weighted squared amplitude residuals over the declared grid; at each shape value fit nonnegative flux analytically using only training rows",
+  "fluxBoundsJy": [0, 10],
+  "diagnosticCriteria": {"normalizedResidualRmsMaximum":2,"fractionWithin3SigmaMinimum":0.95},
+  "uncertainty": "Publisher RMS errors, diagonal approximation. Shared gain/calibration correlations, intrinsic variability and low-SNR non-Gaussian amplitude errors are not modeled. Criteria are project diagnostic thresholds, not a formal significance test.",
+  "holdoutPolicy": "No refitting diameter, width, flux, error floor, selection or thresholds using 2013. Emit every selected holdout prediction and residual, including failures.",
+  "scientificScope": "Visibility-model comparison for a simple stationary circular brightness surrogate. No GR radiative transfer, MHD, complex order-parameter, material-state, magnetic-field or observational black-hole-class validation. Emission-ring diameter is not identified with geometric shadow diameter."
+}

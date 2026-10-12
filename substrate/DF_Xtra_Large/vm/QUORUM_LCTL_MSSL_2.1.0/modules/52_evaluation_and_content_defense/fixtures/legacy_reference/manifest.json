@@ -1,0 +1,50 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 52,
+  "legacy_root": "legacy/source_repository/Evaluation and Content Defense",
+  "legacy_sha256": "e8099cf07fc236981a6ccbfd8a224b724acb0c6885caf71e01b40d5deeca96a3",
+  "files": [
+    {
+      "path": "52.1_Evaluation_and_Content_Defense_Answer_Quality_Evaluation.jasec",
+      "sha256": "a742c3474c8a6de3423345378a6c3c87f6017d4971a58aa0eb5f08976f031d1e",
+      "bytes": 918
+    },
+    {
+      "path": "52.2_Evaluation_and_Content_Defense_Prompt_Injection_Evaluation.jasec",
+      "sha256": "e5f9344eacc94336ed6de5bf56fd77913c40ec65a6f7edd0afdf72e19e80b24f",
+      "bytes": 935
+    },
+    {
+      "path": "52.3_Evaluation_and_Content_Defense_Malicious_Repository_Content_Evaluation.jasec",
+      "sha256": "2ecf45eb41f8ddddc38f03747e0d873a6b4a0e6401521a2401bdbe4dc055dd69",
+      "bytes": 976
+    },
+    {
+      "path": "52.4_Evaluation_and_Content_Defense_Fabricated_Evidence_Detection.jasec",
+      "sha256": "7c0823899266f8d8c9d7981847d8c6c58a9eaa898e4021d609c05164a2f00d52",
+      "bytes": 889
+    },
+    {
+      "path": "52.5_Evaluation_and_Content_Defense_Permanent_Evaluation.jasec",
+      "sha256": "e56486d176cd8d2a6d5b528a00ad2b51c9db39242261ff60e7fb15735afa0b17",
+      "bytes": 913
+    },
+    {
+      "path": "52.6_Evaluation_and_Content_Defense_Prompt_Injection_Defense.jasec",
+      "sha256": "79de9037833af2431943250f4309b9d1f8fd0ae40d54ad91397b854f29de3f1c",
+      "bytes": 916
+    },
+    {
+      "path": "52.7_Evaluation_and_Content_Defense_Repository_Content_Defense.jasec",
+      "sha256": "1b349ddacc43f60c86ce383ec903437720450c83c19bbf4646d4a96056349a22",
+      "bytes": 944
+    },
+    {
+      "path": "README.md",
+      "sha256": "93d78375c5c76e3d068f90e3ffd8151114dcafb0a1d27dbe53e91921662312e5",
+      "bytes": 17871
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

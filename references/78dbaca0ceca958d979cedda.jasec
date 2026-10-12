@@ -1,0 +1,27 @@
+ja source 0.3
+module suite44.capability_security_plane.capability_plane
+use Security
+policy no_network
+
+principal CapabilityPlaneWorker
+role CapabilitySecurityEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant capability.coordinate:approved
+}
+resource CapabilityPlaneOperation classification restricted
+policy CapabilityPlanePolicy {
+    deny network.* by default
+    deny process.* by default
+    deny CapabilityPlaneOperation when principal.role != CapabilitySecurityEnsemble
+    allow CapabilityPlaneOperation when principal.role == CapabilitySecurityEnsemble
+    require human_approval for capability.activate
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "CapabilityPlanePolicy.decision.mcrt"

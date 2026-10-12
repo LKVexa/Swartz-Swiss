@@ -1,0 +1,47 @@
+ja source 0.3
+module suite35.app_designer.interaction_design
+use Interface
+policy no_network
+
+interface AppDesignerInteractionDesign {
+    state selected_flow: Text? = null
+    state simulating_flow: Flag = false
+    derived can_select_flow = not simulating_flow
+    derived can_simulate_flow = selected_flow != null and not simulating_flow
+    component SOPHIA_InteractionModel {
+        label "Interpret interaction flow"
+        enabled bind can_simulate_flow
+        accessibility role button name "Interpret selected interaction flow"
+        action interpret_interaction requires admin.action:approved
+    }
+    component CHARLOTTE_InteractionGate {
+        label "Validate interaction flow"
+        enabled bind can_simulate_flow
+        accessibility role button name "Validate selected interaction flow"
+        action validate_interaction requires admin.action:approved
+    }
+    component LANDON_InteractionSimulation {
+        label "Simulate validated interaction"
+        enabled bind can_simulate_flow
+        accessibility role button name "Simulate validated interaction flow"
+        action simulate_interaction requires admin.action:approved
+    }
+    component Professor_InteractionGuide {
+        label "Explain interaction behavior"
+        enabled bind can_select_flow
+        accessibility role button name "Explain interaction and state behavior"
+        action explain_interaction requires admin.action:approved
+    }
+    component Podium_InteractionEvidence {
+        label "View interaction evidence"
+        enabled bind can_simulate_flow
+        accessibility role button name "View interaction validation evidence"
+        action show_interaction_evidence requires admin.action:approved
+    }
+    component InteractionViewport {
+        embed portal.scene "app_designer_interaction"
+        motion bind timeline.interaction_preview
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface AppDesignerInteractionDesign

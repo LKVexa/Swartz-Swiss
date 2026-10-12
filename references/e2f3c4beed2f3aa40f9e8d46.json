@@ -1,0 +1,73 @@
+{
+  "decision": "OPERATIONAL",
+  "dependency": "BR-410-08",
+  "package": "BR-410-09",
+  "requirements": [
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/ACCEPTANCE.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "brvm-core builds independently",
+      "requirement_id": "BR-410-09-R01",
+      "result": "PASS",
+      "sha256": "fc385dae45e12e66d575a401cf78422f74b78e3593d9064c878fb6f1b449784e",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/ACCEPTANCE.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "No host filesystem dependency in core",
+      "requirement_id": "BR-410-09-R02",
+      "result": "PASS",
+      "sha256": "fc385dae45e12e66d575a401cf78422f74b78e3593d9064c878fb6f1b449784e",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/ACCEPTANCE.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Same BRIM executes identically under at least two adapters",
+      "requirement_id": "BR-410-09-R03",
+      "result": "PASS",
+      "sha256": "fc385dae45e12e66d575a401cf78422f74b78e3593d9064c878fb6f1b449784e",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/ACCEPTANCE.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Demonstrate VM instance isolation",
+      "requirement_id": "BR-410-09-R04",
+      "result": "PASS",
+      "sha256": "fc385dae45e12e66d575a401cf78422f74b78e3593d9064c878fb6f1b449784e",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/ACCEPTANCE.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Fully mediate host-service calls",
+      "requirement_id": "BR-410-09-R05",
+      "result": "PASS",
+      "sha256": "fc385dae45e12e66d575a401cf78422f74b78e3593d9064c878fb6f1b449784e",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "title": "Acceptance gate"
+}

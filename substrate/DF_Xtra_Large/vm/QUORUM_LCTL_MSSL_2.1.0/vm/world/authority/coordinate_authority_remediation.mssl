@@ -1,0 +1,21 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.remediation.coordinate_authority:7.0.0-remediated-26",
+λ≡"quorum.rcpw.remediation.coordinate_authority",
+ℛ≡{
+  "0001":"learn(\"module\",literal(\"quorum.rcpw.remediation.coordinate_authority\"))",
+  "0002":"learn(\"world_version\",literal(\"7.0.0-applied-remediated-26\"))",
+  "0003":"learn(\"coordinate_schema\",literal(\"RCPW-CANONICAL-XYZ-I64/1\"))",
+  "0004":"learn(\"unit\",literal(\"canonical_meter\"))",
+  "0005":"learn(\"resolution\",literal(\"1\"))",
+  "0006":"learn(\"gravity\",literal(\"[0,0,-1]\"))",
+  "0007":"learn(\"separation_rule\",literal(\"canonical coordinates are authoritative; reference and folded coordinates are derived only\"))",
+  "0008":"learn(\"range_rule\",literal(\"signed 64-bit declared domain; runtime validation fails closed outside domain\"))"
+},
+π≡[],δ≡8,τ≡0,
+μ≡{"learn.module":"quorum.rcpw.remediation.coordinate_authority","learn.world_version":"7.0.0-applied-remediated-26","learn.coordinate_schema":"RCPW-CANONICAL-XYZ-I64/1","learn.unit":"canonical_meter","learn.resolution":"1","learn.gravity":"[0,0,-1]","learn.separation_rule":"canonical coordinates are authoritative; reference and folded coordinates are derived only","learn.range_rule":"signed 64-bit declared domain; runtime validation fails closed outside domain"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"learn.module":"quorum.rcpw.remediation.coordinate_authority","learn.world_version":"7.0.0-applied-remediated-26","learn.coordinate_schema":"RCPW-CANONICAL-XYZ-I64/1","learn.unit":"canonical_meter","learn.resolution":"1","learn.gravity":"[0,0,-1]","learn.separation_rule":"canonical coordinates are authoritative; reference and folded coordinates are derived only","learn.range_rule":"signed 64-bit declared domain; runtime validation fails closed outside domain"}},
+ν≡{}
+,κ≡"sha256:34a9feb6cb118c34392c0a59772b8f2cecd4cc49ae74219d9b1986b6b76ecc60"
+}⇒⊤

@@ -1,0 +1,41 @@
+{
+  "schema": "VEC1/CONFIG/1",
+  "version": "0.1.1-candidate",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "evidence_schema": "VEC1-EVIDENCE/1.0",
+  "host_integration": "JA21 Portable Optical Instrument Desktop 9.8.7",
+  "node_binding": "NODES.json",
+  "fabric_id": "DF0",
+  "strict_four_node_execution": true,
+  "default_program": "programs/fabric_probe.pal",
+  "default_profile": "single_process_deterministic",
+  "placement": "static",
+  "accepted_fabric_verdict": "CROSS_NODE_DIFFERENTIAL_AGREEMENT",
+  "network_policy": "deny",
+  "plugin_allowlist": [],
+  "host_call_allowlist": [
+    "DF_Fabric adapter CLI",
+    "native node build tools declared by DF packages"
+  ],
+  "presenter": {
+    "enabled": true,
+    "owner": "JA21 Optical Instrument presenter (host/JA21VirtualBrowser.cs)",
+    "session_electron": true,
+    "tab_electron": true,
+    "records_fabric_verdict": false,
+    "max_presenter_electrons": 96,
+    "max_ledger_events_per_electron": 4096,
+    "retire_on_tab_close": true,
+    "retire_session_on_exit": true,
+    "note": "The presenter writes sealed VEC state and hash-chained ledgers only. It never records a fabric verdict, never claims cross-node differential agreement, and never mutates a vecctl-owned electron."
+  },
+  "resource_quotas": {
+    "max_electrons": 128,
+    "max_mailbox": 256,
+    "max_outbound": 256,
+    "max_execution_receipts": 10000,
+    "max_program_bytes": 2097152
+  },
+  "portable_state_root": "workspace/state/vec1 (via JA21_VEC1_STATE_ROOT)",
+  "browser_placement": "config/ja21_portable_placement.json"
+}

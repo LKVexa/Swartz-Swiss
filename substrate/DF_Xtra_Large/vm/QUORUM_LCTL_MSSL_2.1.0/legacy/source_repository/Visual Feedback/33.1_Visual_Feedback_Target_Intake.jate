@@ -1,0 +1,28 @@
+ja source 0.3
+module suite33.visual_feedback.target_intake
+use Training
+policy no_network
+
+experiment VisualFeedbackTargetIntake {
+    model ref "models/sophia_charlotte_landon_professor_podium/target_intake"
+    dataset ref "datasets/visual_feedback/targets" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 16 accumulate 1
+    precision mixed
+    seed 3301
+    checkpoint every 10 steps
+    evaluate {
+        metric target_schema_accuracy
+        metric provenance_coverage
+        metric target_hash_match
+        metric loss
+        require target_schema_accuracy >= 0.99
+        require provenance_coverage >= 1.00
+        require target_hash_match >= 1.00
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "VisualFeedbackTargetIntake.lineage.mcrt"

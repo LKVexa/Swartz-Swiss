@@ -1,0 +1,29 @@
+{
+  "schema": "QUORUM-PLANE-GRAPH/2.0",
+  "plane_id": 8,
+  "plane": "model_compute",
+  "modules": [
+    {
+      "module_id": 20,
+      "name": "Equation Operator Bank"
+    },
+    {
+      "module_id": 27,
+      "name": "deepML Worker"
+    },
+    {
+      "module_id": 37,
+      "name": "Training and Evaluation"
+    },
+    {
+      "module_id": 54,
+      "name": "Local Model Provider and Health"
+    },
+    {
+      "module_id": 64,
+      "name": "Training Desktop and Android Workers"
+    }
+  ],
+  "integration": "independent module nodes with scenario-mediated orchestration",
+  "cycles": []
+}

@@ -1,0 +1,26 @@
+ja source 0.3
+module illuminator.assumptions
+use Interface
+policy no_network
+
+interface IlluminatorAssumptions {
+    state sophia_assumptions: Text? = null
+    state charlotte_dependencies: Text? = null
+    state landon_runtime_limits: Text? = null
+    state professor_evidence_limits: Text? = null
+    state podium_disclosure: Text? = null
+    state running: Flag = false
+    derived can_render = sophia_assumptions != null and charlotte_dependencies != null and landon_runtime_limits != null and professor_evidence_limits != null and podium_disclosure != null and not running
+    component AssumptionsButton {
+        label "Expose assumptions and limitations"
+        enabled bind can_render
+        accessibility role button name "Render Illuminator assumptions"
+        action render_assumptions requires admin.action:approved
+    }
+    component AssumptionsViewport {
+        embed portal.scene "illuminator_assumptions_report"
+        motion bind timeline.main
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface IlluminatorAssumptions

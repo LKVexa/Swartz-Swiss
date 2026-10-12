@@ -1,0 +1,82 @@
+{
+  "DIRECT_EXECUTABLE_PROOF": [
+    "Construct the smallest deterministic fixture that exercises the exact requirement and captures observable before/after canonical state.",
+    "Add one positive, one boundary, one negative, and one replay case tied directly to the requirement ID."
+  ],
+  "VERSION_MIGRATION": [
+    "Create previous/current/incompatible version fixtures and explicit migration functions with pre/post semantic digests.",
+    "Test upgrade, rejection of unsupported future/incompatible state, rollback, interrupted migration, and replay after migration."
+  ],
+  "TRANSACTION_CONCURRENCY": [
+    "Declare read/write sets, expected revisions, ownership/token semantics, and commit/abort behavior.",
+    "Randomize ordering/retries/stale inputs and prove one deterministic canonical result with no duplicate mutation."
+  ],
+  "REFERENCE_PRECISION": [
+    "Generate deterministic transform vectors at near, shell, horizon, extreme positive/negative, and vertical coordinates.",
+    "Measure round-trip error and continuity under rebases/reference handoffs; publish numeric tolerances and maximum observed error."
+  ],
+  "FOLD_PROPERTY": [
+    "Use property-based vectors for near-field identity, monotonicity, boundedness, continuity, unique inverse targeting, and canonical-topology preservation.",
+    "Inject invalid/singular/out-of-range cases and prove explicit safe failure or fallback."
+  ],
+  "LOD_TRANSITION": [
+    "Define the exact conservation vector and transition payload for source/target representations.",
+    "Cycle promotion/demotion repeatedly, change update cadence, inject cancellation/failure, and compare canonical digests for drift."
+  ],
+  "IDENTITY_PERSISTENCE": [
+    "Track stable IDs, ownership, references, lifecycle/tombstone state, and historical lineage through fold/save/migration cycles.",
+    "Inject stale copies, duplicate ownership attempts, retirement/destruction, and reconstruction; verify no fork/resurrection."
+  ],
+  "CAUSAL_REPLAY": [
+    "Emit deterministic event IDs, causal parents, pre/post references, seeds/model versions, and semantic digests.",
+    "Replay/reconstruct from checkpoint + history, then corrupt/reorder/omit events and verify first-divergence detection."
+  ],
+  "ECOLOGY_CONSERVATION": [
+    "Create a small high-fidelity reference ecology and a remote/cohort abstraction using identical seeds.",
+    "Compare population/resource conservation, migration topology, deterministic stochastic outcomes, and rehydration error."
+  ],
+  "ECONOMY_CONSERVATION": [
+    "Use conservation-auditable money/inventory/population/logistics fixtures across at least two settlements.",
+    "Inject route loss, shortages, migration, worker/replay boundaries, and verify no duplicate inventory/population or impossible travel-time shortcuts."
+  ],
+  "NARRATIVE_KNOWLEDGE": [
+    "Separate canonical facts, narrative priority/reservations, and observer-local knowledge/belief state.",
+    "Test competing events, stale/false information, bounded priority, off-screen deferral, and replay of the same eligibility/arbitration decision."
+  ],
+  "MATERIALIZATION_READINESS": [
+    "Model dependency/readiness states explicitly and gate interaction until all authoritative dependencies required by the requirement are ready.",
+    "Inject slow/missing dependency, cancellation, worker failure, and retry; verify no duplicate embodiment or fabricated canonical state."
+  ],
+  "PRESENTATION_REGRESSION": [
+    "Build deterministic reference frames/descriptors for the exact visual/audio property and bind them to world/fold/reference versions.",
+    "Measure seam/popping/jitter/artifact and frame-budget metrics over fixed traversal traces; preserve canonical digests across quality degradation."
+  ],
+  "SAVE_RECOVERY": [
+    "Checkpoint at deterministic canonical barriers and record dirty partitions/ledger cut/version metadata.",
+    "Inject interruption/corruption/stale fragments, recover repeatedly, and compare canonical checkpoint digests plus recovery-time objective."
+  ],
+  "RESOURCE_STRESS": [
+    "Declare explicit budgets, pressure metrics, degradation order, hysteresis/backpressure, and starvation bounds.",
+    "Increase load past budget, capture p50/p95/p99/high-water/backlog recovery, and prove authoritative state survives overload."
+  ],
+  "MULTI_WORKER_CONFORMANCE": [
+    "Run the same seeded scenario under 1, 2, and 4 spawned workers or the highest practical hosted profile using deterministic commit semantics.",
+    "Randomize worker completion/order, repartition or restart one worker, and compare canonical/ledger/save digests."
+  ],
+  "TRAVERSAL_PORTAL": [
+    "Create deterministic route/portal/teleport traces with canonical time, occupancy/collision, route phase, and prewarm milestones.",
+    "Test rapid direction reversal, missed prewarm, moving phenomena, portal/interior boundaries, and recovery to target fidelity."
+  ],
+  "MATHEMATICAL_VALIDATION": [
+    "Declare units/domains/ownership/precision for every involved variable or operator and reject invalid mixed-domain operations.",
+    "Run golden vectors, boundary/NaN/Inf/overflow cases, sensitivity tests, and compare adapter-disabled canonical truth."
+  ],
+  "AUTONOMOUS_HISTORY": [
+    "Create an exact historical cut plus long-horizon/archive/rehydration path with provenance classes.",
+    "Compare fine-step vs abstract evolution, old-save continuation, compaction/rehydration, and pre-existing history digests after expansion."
+  ],
+  "SCALE_SOAK": [
+    "Define the precise duration/load/capacity profile and success thresholds before execution.",
+    "Run a sustained stress/soak with checkpoints and fault injection; measure drift, leaks, storage growth, queue stability, and recovery."
+  ]
+}

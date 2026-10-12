@@ -1,0 +1,30 @@
+ja source 0.3
+module suite36.visual_correction.defect_classification_and_localization
+use Training
+policy no_network
+
+experiment VisualCorrectionDefectClassificationAndLocalization {
+    model ref "models/sophia_charlotte_landon_professor_podium/defect_classification_and_localization"
+    dataset ref "datasets/visual_correction/localized_defects" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 24 accumulate 2
+    precision mixed
+    seed 3602
+    checkpoint every 12 steps
+    evaluate {
+        metric classification_accuracy
+        metric localization_precision
+        metric severity_consistency
+        metric evidence_coverage
+        metric loss
+        require classification_accuracy >= 0.95
+        require localization_precision >= 0.90
+        require severity_consistency >= 0.99
+        require evidence_coverage >= 0.99
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "VisualCorrectionDefectClassificationAndLocalization.lineage.mcrt"

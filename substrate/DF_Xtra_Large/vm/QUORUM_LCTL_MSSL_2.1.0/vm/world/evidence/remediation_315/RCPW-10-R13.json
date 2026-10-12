@@ -1,0 +1,52 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "d773b29d766894c56e23aadebe0e11f2942a3388fdf5e8158271a062184143c0",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (IDENTITY_PERSISTENCE, MATERIALIZATION_READINESS, AUTONOMOUS_HISTORY) plus Stage 10 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "AUTONOMOUS_HISTORY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "IDENTITY_PERSISTENCE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "MATERIALIZATION_READINESS": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-05",
+    "GW-22",
+    "GW-32",
+    "GW-44",
+    "GW-79"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T2_HIGH_FIDELITY",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Navigation and collision readiness are mandatory before an entity becomes interactable.",
+  "requirement_id": "RCPW-10-R13",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 10,
+  "stage_title": "Materialization Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "IDENTITY_PERSISTENCE",
+    "MATERIALIZATION_READINESS",
+    "AUTONOMOUS_HISTORY"
+  ],
+  "workflow_file": "10_MATERIALIZATION_AUTHORITY/141_RCPW_10_R13_NAVIGATION_AND_COLLISION_READINESS_ARE_MANDATORY_BEFORE_AN_ENTITY_BECOMES_INTERACTABL.md",
+  "workflow_tier": "T2_HIGH_FIDELITY"
+}

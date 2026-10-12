@@ -1,0 +1,34 @@
+{
+  "suite_id": 55,
+  "suite_name": "Capability Manifests and Permissions",
+  "plane": "security_authorization",
+  "legacy_sha256": "9d027c57986068ddf16ec4463f199020a02530c5cfd79f01977e44db3ae2f00d",
+  "legacy_root": "legacy/source_repository/Capability Manifests and Permissions",
+  "files": [
+    {
+      "path": "55.1_Capabilities.jasec",
+      "sha256": "78b467e46d6f3921cd8a7c69eda476761ea15f6e46d99da99f52e56810e8220f",
+      "bytes": 915
+    },
+    {
+      "path": "55.2_Command_Permissions.jasec",
+      "sha256": "447b13085bcd9ead3b7b576336f31cac8472e28ad663b4da71b82b36cf48a9dc",
+      "bytes": 933
+    },
+    {
+      "path": "55.3_Action_Scope.jasec",
+      "sha256": "ce5976ac29a3b74a1077d5f3b312a8628e7a432f550a295cba37f46d17c20568",
+      "bytes": 879
+    },
+    {
+      "path": "55.4_Policy_Bound_Execution_Rights.jasec",
+      "sha256": "968b9e4e7249ad833f670dbc7008e402c9722aa811bbe70678b772255ee00748",
+      "bytes": 944
+    },
+    {
+      "path": "README.md",
+      "sha256": "90884605b63d9ded0f7e42c626e3e92c3a9c3bbf00496fd4874b2484f353df47",
+      "bytes": 15558
+    }
+  ]
+}

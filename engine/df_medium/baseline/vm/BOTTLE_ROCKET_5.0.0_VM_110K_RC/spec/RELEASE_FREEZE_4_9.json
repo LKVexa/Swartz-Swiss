@@ -1,0 +1,61 @@
+{
+  "change_policy": "Any semantic or wire/file-format change after this freeze requires explicit versioning, migration/rejection tests, and a new qualification decision.",
+  "frozen": {
+    "abi": {
+      "major": 1,
+      "minor": 0,
+      "required_traps": 14,
+      "services": 20
+    },
+    "brim": "BRIM/1",
+    "brir": "BRIR/1.1",
+    "core_abi": "0x00040700",
+    "device_abi": "1.0",
+    "guest_persistence": "BRGD/1",
+    "host_abi": {
+      "core_abi": "0x00040700",
+      "name": "br_hal",
+      "operations": [
+        "storage_read",
+        "storage_write",
+        "storage_erase",
+        "storage_flush",
+        "storage_sync",
+        "storage_replace",
+        "storage_status",
+        "state_auth",
+        "monotonic_read",
+        "monotonic_commit",
+        "verify_signature",
+        "random_bytes",
+        "clock_read",
+        "monotonic_time",
+        "console_read",
+        "console_write",
+        "console_flush",
+        "device_call",
+        "panic",
+        "yield",
+        "lock",
+        "unlock",
+        "hash256",
+        "trust_anchor"
+      ]
+    },
+    "isa": {
+      "feature_flags": 63,
+      "major": 4,
+      "minor": 1,
+      "opcodes": 32
+    },
+    "language": "LCTLC/1.1",
+    "network_default": "absent/offline",
+    "provenance": "BRPV/1",
+    "raw_code_load_in_production": false,
+    "secure_manifest": "BRTM/1",
+    "transactional_persistence": "BRCR/1"
+  },
+  "record": "BOTTLE_ROCKET.ReleaseFreeze/4.9.0",
+  "release": "4.9.0",
+  "runtime_contract": "4.7.0-compatible"
+}

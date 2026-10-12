@@ -1,0 +1,334 @@
+TAP version 13
+# Subtest: all backend engines and the preserved terminal retain the registered source bytes
+ok 1 - all backend engines and the preserved terminal retain the registered source bytes
+  ---
+  duration_ms: 177.2994
+  type: 'test'
+  ...
+# Subtest: shared exterior and distinct cover branches produce the declared default passage bits
+ok 2 - shared exterior and distinct cover branches produce the declared default passage bits
+  ---
+  duration_ms: 11.0896
+  type: 'test'
+  ...
+# Subtest: critical spin equality closes, cover equality seals, and raw zero GFM values remain valid
+ok 3 - critical spin equality closes, cover equality seals, and raw zero GFM values remain valid
+  ---
+  duration_ms: 7.602
+  type: 'test'
+  ...
+# Subtest: invalid parameters preserve the complete state and do not emit updates
+ok 4 - invalid parameters preserve the complete state and do not emit updates
+  ---
+  duration_ms: 4.458
+  type: 'test'
+  ...
+# Subtest: play, pause, step and bounded export record real backend values without outside mutation
+ok 5 - play, pause, step and bounded export record real backend values without outside mutation
+  ---
+  duration_ms: 5.9355
+  type: 'test'
+  ...
+# Subtest: repeatable demo exposes sealed, open and low-spin-closed states and pauses at completion
+ok 6 - repeatable demo exposes sealed, open and low-spin-closed states and pauses at completion
+  ---
+  duration_ms: 55.979
+  type: 'test'
+  ...
+# Subtest: play resumes the illustration clock after the scripted experiment has completed
+ok 7 - play resumes the illustration clock after the scripted experiment has completed
+  ---
+  duration_ms: 42.8614
+  type: 'test'
+  ...
+# Subtest: offline Kerr bundle contains unchanged inherited solver bytes and true loaded source hashes
+ok 8 - offline Kerr bundle contains unchanged inherited solver bytes and true loaded source hashes
+  ---
+  duration_ms: 5.267
+  type: 'test'
+  ...
+# Subtest: browser module reproduces complete nonextremal, Schwarzschild, and extremal bundles exactly
+ok 9 - browser module reproduces complete nonextremal, Schwarzschild, and extremal bundles exactly
+  ---
+  duration_ms: 333.995
+  type: 'test'
+  ...
+# Subtest: actual browser worker loads local assets only and returns the full deterministic solver result
+ok 10 - actual browser worker loads local assets only and returns the full deterministic solver result
+  ---
+  duration_ms: 79.6874
+  type: 'test'
+  ...
+# Subtest: worker input failures are explicit, correlated, and do not prevent a subsequent valid calculation
+ok 11 - worker input failures are explicit, correlated, and do not prevent a subsequent valid calculation
+  ---
+  duration_ms: 27.6586
+  type: 'test'
+  ...
+# Subtest: an actual asynchronous worker executes the same browser-packaged core without a backend service
+ok 12 - an actual asynchronous worker executes the same browser-packaged core without a backend service
+  ---
+  duration_ms: 117.7939
+  type: 'test'
+  ...
+# Subtest: browser source retains independent Schwarzschild bending refinement and exterior guard behavior
+ok 13 - browser source retains independent Schwarzschild bending refinement and exterior guard behavior
+  ---
+  duration_ms: 95.8678
+  type: 'test'
+  ...
+# Subtest: browser source preserves unresolved critical and truncated trajectories rather than manufacturing capture
+ok 14 - browser source preserves unresolved critical and truncated trajectories rather than manufacturing capture
+  ---
+  duration_ms: 24.4516
+  type: 'test'
+  ...
+# Subtest: visibility kernels preserve zero-spacing flux and the independent first J0 zero
+ok 15 - visibility kernels preserve zero-spacing flux and the independent first J0 zero
+  ---
+  duration_ms: 1.7769
+  type: 'test'
+  ...
+# Subtest: visibility API rejects unknown models and nonfinite/unbounded physical inputs
+ok 16 - visibility API rejects unknown models and nonfinite/unbounded physical inputs
+  ---
+  duration_ms: 0.7646
+  type: 'test'
+  ...
+# Subtest: actual EHT source fit retains the fixed year holdout and reports its failure
+ok 17 - actual EHT source fit retains the fixed year holdout and reports its failure
+  ---
+  duration_ms: 189.8121
+  type: 'test'
+  ...
+# Subtest: periodic CT conserves independently reconstructed mass, energy, tracer and momentum with positive finite states
+ok 18 - periodic CT conserves independently reconstructed mass, energy, tracer and momentum with positive finite states
+  ---
+  duration_ms: 322.7187
+  type: 'test'
+  ...
+# Subtest: passive scalar advection and diffusion approach their continuum Fourier solutions by spatial refinement
+ok 19 - passive scalar advection and diffusion approach their continuum Fourier solutions by spatial refinement
+  ---
+  duration_ms: 1609.7172
+  type: 'test'
+  ...
+# Subtest: small-amplitude resistive magnetic decay has the damping sign and converges toward exp(-eta t)
+ok 20 - small-amplitude resistive magnetic decay has the damping sign and converges toward exp(-eta t)
+  ---
+  duration_ms: 547.4488
+  type: 'test'
+  ...
+# Subtest: uniform neutral complex reaction matches exact amplitude and clockwise nonlinear rotation at RK2 temporal order
+ok 21 - uniform neutral complex reaction matches exact amplitude and clockwise nonlinear rotation at RK2 temporal order
+  ---
+  duration_ms: 86.8646
+  type: 'test'
+  ...
+# Subtest: iron enthalpy preserves latent-heat plateaus, phase fractions and independent heating/conduction balances
+ok 22 - iron enthalpy preserves latent-heat plateaus, phase fractions and independent heating/conduction balances
+  ---
+  duration_ms: 85.7756
+  type: 'test'
+  ...
+# Subtest: complex plaquette winding reproduces four analytic zeros, signs, net charge and unresolved pi edges
+ok 23 - complex plaquette winding reproduces four analytic zeros, signs, net charge and unresolved pi edges
+  ---
+  duration_ms: 2.5633
+  type: 'test'
+  ...
+# Subtest: invalid plain-data parameter patches and invalid time intervals preserve the previous frame without invoking getters
+ok 24 - invalid plain-data parameter patches and invalid time intervals preserve the previous frame without invoking getters
+  ---
+  duration_ms: 24.6018
+  type: 'test'
+  ...
+# Subtest: trusted callback failure in reset or setParameters restores the complete previous initialized experiment
+ok 25 - trusted callback failure in reset or setParameters restores the complete previous initialized experiment
+  ---
+  duration_ms: 6.4283
+  type: 'test'
+  ...
+# Subtest: numerical positivity failure rolls back all physical fields and elapsed/accepted-step ledger, while exposing error diagnostics
+ok 26 - numerical positivity failure rolls back all physical fields and elapsed/accepted-step ledger, while exposing error diagnostics
+  ---
+  duration_ms: 10.4927
+  type: 'test'
+  ...
+# Subtest: deterministic replay/reset and parameter reset reproduce identical frames; returned frames cannot mutate the model
+ok 27 - deterministic replay/reset and parameter reset reproduce identical frames; returned frames cannot mutate the model
+  ---
+  duration_ms: 14.5348
+  type: 'test'
+  ...
+# Subtest: hydrogen/iron Saha diagnostics are finite, bounded and temperature-monotone at fixed reference density
+ok 28 - hydrogen/iron Saha diagnostics are finite, bounded and temperature-monotone at fixed reference density
+  ---
+  duration_ms: 0.4251
+  type: 'test'
+  ...
+# Subtest: browser and backend phase engines are byte-identical
+ok 29 - browser and backend phase engines are byte-identical
+  ---
+  duration_ms: 1.2863
+  type: 'test'
+  ...
+# Subtest: production snapshots at all supported resolutions validate before and after actual evolution
+ok 30 - production snapshots at all supported resolutions validate before and after actual evolution
+  ---
+  duration_ms: 208.9966
+  type: 'test'
+  ...
+# Subtest: phase hue uses arg psi, brightness uses raw amplitude, and image row order has physical y upward
+ok 31 - phase hue uses arg psi, brightness uses raw amplitude, and image row order has physical y upward
+  ---
+  duration_ms: 5.5963
+  type: 'test'
+  ...
+# Subtest: zero fields stay undefined and dark; every view produces bounded RGBA from actual cell values
+ok 32 - zero fields stay undefined and dark; every view produces bounded RGBA from actual cell values
+  ---
+  duration_ms: 17.2549
+  type: 'test'
+  ...
+# Subtest: iron colors are the declared four fractions, independent from the plasma thermal display
+ok 33 - iron colors are the declared four fractions, independent from the plasma thermal display
+  ---
+  duration_ms: 4.065
+  type: 'test'
+  ...
+# Subtest: invalid numeric, phase, unit, geometry, marker and metadata inputs preserve last accepted state
+ok 34 - invalid numeric, phase, unit, geometry, marker and metadata inputs preserve last accepted state
+  ---
+  duration_ms: 51.1091
+  type: 'test'
+  ...
+# Subtest: late sequences and retired runs cannot replace current cells; a fresh reset keeps chosen mode
+ok 35 - late sequences and retired runs cannot replace current cells; a fresh reset keeps chosen mode
+  ---
+  duration_ms: 21.4743
+  type: 'test'
+  ...
+# Subtest: magnetic views plot actual magnetic winding; material view suppresses all plasma overlays and uses iron metres
+ok 36 - magnetic views plot actual magnetic winding; material view suppresses all plasma overlays and uses iron metres
+  ---
+  duration_ms: 5.8632
+  type: 'test'
+  ...
+# Subtest: probes use actual cell centers, periodic endpoints and arrow-key wrapping; copies cannot change the frame
+ok 37 - probes use actual cell centers, periodic endpoints and arrow-key wrapping; copies cannot change the frame
+  ---
+  duration_ms: 14.0211
+  type: 'test'
+  ...
+# Subtest: view-only controls preserve frame values and scientific scope; destroy removes handlers and rejects further frames
+ok 38 - view-only controls preserve frame values and scientific scope; destroy removes handlers and rejects further frames
+  ---
+  duration_ms: 5.0857
+  type: 'test'
+  ...
+# Subtest: browser and Node dependencies are byte identical, with real browser importScripts and no Node globals
+ok 39 - browser and Node dependencies are byte identical, with real browser importScripts and no Node globals
+  ---
+  duration_ms: 92.0278
+  type: 'test'
+  ...
+# Subtest: queued browser-Worker init, pause, parameters, steps and export match every production Node-session number
+ok 40 - queued browser-Worker init, pause, parameters, steps and export match every production Node-session number
+  ---
+  duration_ms: 525.429
+  type: 'test'
+  ...
+# Subtest: actual Node Worker responds with the same computed frame and loaded-source hashes as the browser path
+ok 41 - actual Node Worker responds with the same computed frame and loaded-source hashes as the browser path
+  ---
+  duration_ms: 402.8642
+  type: 'test'
+  ...
+# Subtest: pause gates the actual Worker interval, play evolves one registered tick, and reset changes run identity
+ok 42 - pause gates the actual Worker interval, play evolves one registered tick, and reset changes run identity
+  ---
+  duration_ms: 246.7947
+  type: 'test'
+  ...
+# Subtest: invalid parameters and commands report errors while preserving numerical state, run and sequence
+ok 43 - invalid parameters and commands report errors while preserving numerical state, run and sequence
+  ---
+  duration_ms: 246.662
+  type: 'test'
+  ...
+# Subtest: zero magnetic data are preserved through browser-Worker parameters and a real numerical step
+ok 44 - zero magnetic data are preserved through browser-Worker parameters and a real numerical step
+  ---
+  duration_ms: 127.7456
+  type: 'test'
+  ...
+# Subtest: trusted zero complex initial condition and raw GF9 transform preserve zero in both numerical runtimes
+ok 45 - trusted zero complex initial condition and raw GF9 transform preserve zero in both numerical runtimes
+  ---
+  duration_ms: 68.4609
+  type: 'test'
+  ...
+# Subtest: analytic Kerr limits reproduce Schwarzschild horizon, photon sphere and critical impact
+ok 46 - analytic Kerr limits reproduce Schwarzschild horizon, photon sphere and critical impact
+  ---
+  duration_ms: 3.4236
+  type: 'test'
+  ...
+# Subtest: Schwarzschild rays on opposite sides of critical impact capture or escape and stay planar
+ok 47 - Schwarzschild rays on opposite sides of critical impact capture or escape and stay planar
+  ---
+  duration_ms: 29.3783
+  type: 'test'
+  ...
+# Subtest: tail-corrected weak Schwarzschild bending approaches 4M/b and refines with tighter tolerances
+ok 48 - tail-corrected weak Schwarzschild bending approaches 4M/b and refines with tighter tolerances
+  ---
+  duration_ms: 19
+  type: 'test'
+  ...
+# Subtest: non-equatorial Kerr trajectories satisfy Carter and metric null constraints with finite output
+ok 49 - non-equatorial Kerr trajectories satisfy Carter and metric null constraints with finite output
+  ---
+  duration_ms: 12.2997
+  type: 'test'
+  ...
+# Subtest: equatorial Kerr photon-orbit benchmarks separate prograde and retrograde capture thresholds
+ok 50 - equatorial Kerr photon-orbit benchmarks separate prograde and retrograde capture thresholds
+  ---
+  duration_ms: 22.7031
+  type: 'test'
+  ...
+# Subtest: exact and numerically near-critical radial separatrices stay unresolved while off-band rays retain capture/escape
+ok 51 - exact and numerically near-critical radial separatrices stay unresolved while off-band rays retain capture/escape
+  ---
+  duration_ms: 123.9869
+  type: 'test'
+  ...
+# Subtest: mass scaling preserves dimensionless bending and the extremal exterior remains guarded
+ok 52 - mass scaling preserves dimensionless bending and the extremal exterior remains guarded
+  ---
+  duration_ms: 27.0165
+  type: 'test'
+  ...
+# Subtest: an outward-only segment does not report a fictitious complete scattering deflection
+ok 53 - an outward-only segment does not report a fictitious complete scattering deflection
+  ---
+  duration_ms: 0.7952
+  type: 'test'
+  ...
+# Subtest: bounded bundle reports resolved and unresolved outcomes and guards unsupported initial data
+ok 54 - bounded bundle reports resolved and unresolved outcomes and guards unsupported initial data
+  ---
+  duration_ms: 16.108
+  type: 'test'
+  ...
+1..54
+# tests 54
+# suites 0
+# pass 54
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2921.6573

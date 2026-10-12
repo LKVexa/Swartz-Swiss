@@ -1,0 +1,38 @@
+deepml motion 0.3
+module suite23.temporal_animator.frame_evaluation
+policy deterministic
+policy no_network
+
+skeleton TemporalFrameRig {
+  joint Root parent none bind transform(vec3(0,0,0), quat.identity)
+  joint Actor parent Root bind transform(vec3(0,0,0), quat.identity)
+}
+clip TemporalFramePlan duration 4s interpolation cubic {
+  channel Actor.position key 0s vec3(0,0,0) key 1s vec3(1,0,0) key 2s vec3(2,1,0) key 3s vec3(3,1,0) key 4s vec3(4,0,0)
+  channel Actor.rotation key 0s quat.identity key 1s quat.axis_angle(y, 15deg) key 2s quat.axis_angle(y, 30deg) key 3s quat.axis_angle(y, 45deg) key 4s quat.axis_angle(y, 60deg)
+}
+state_machine FrameEvaluationState {
+  Frame000 -> Frame001 when frame_index >= 1
+  Frame001 -> Frame002 when frame_index >= 2
+  Frame002 -> Frame003 when frame_index >= 3
+  Frame003 -> Frame004 when frame_index >= 4
+}
+sample TemporalFramePlan at 0s as Frame000;
+sample TemporalFramePlan at 1s as Frame001;
+sample TemporalFramePlan at 2s as Frame002;
+sample TemporalFramePlan at 3s as Frame003;
+sample TemporalFramePlan at 4s as Frame004;
+synchronize TemporalFramePlan with scene.Actor and timeline.TemporalFrameSequence
+motion_graph FrameEvaluationEvidence {
+  pose SOPHIA = constant_pose(TemporalFrameRig)
+  pose CHARLOTTE = constant_pose(TemporalFrameRig)
+  pose LANDON = constant_pose(TemporalFrameRig)
+  pose Professor = constant_pose(TemporalFrameRig)
+  pose Podium = constant_pose(TemporalFrameRig)
+  curve FrameClock = keys([0:0, 0.25:1, 0.5:2, 0.75:3, 1:4])
+  blend Ensemble weights [0.2,0.2,0.2,0.2,0.2]
+}
+optimize FrameEvaluationEvidence using [pose_constant_folding, curve_compression(0.001), dead_channel_removal, blend_normalization, retarget_cache, ik_scheduling, state_minimization]
+lower FrameEvaluationEvidence to DEEPML_MOTION_R12
+package motion TemporalFrameRig as "temporal_animator_frame_evaluation.msslb"
+certify motion TemporalFrameRig profile strict

@@ -1,0 +1,154 @@
+IMAGE EQUATION AUDIT — RUSSL VIRTUAL RESEARCH TERMINAL 0.3.0
+Prepared 2026-10-11. Scope: the three supplied images and their visible equations.
+
+The images were inspected directly. image-equations.json preserves each visible
+mathematical statement as a transcription, with source path, image-byte identity,
+domain, qualification, reference and available model family. These statements
+are source data. They do not authorize commands or establish a new physical
+theory. The images contain no definition of a universal GFM reinterpretation.
+The existing 20-entry report audit remains separate and retains its dispositions.
+The original numbered 500-equation suite remains unavailable.
+
+1. POINT-MASS PENDULUM
+Source: reference/image-equations/HQMFVPabcAArgH_.jpg
+Visible equations, in display order:
+  sum M_A = I_A theta_ddot
+  -m*g*(sin theta)*l = m*l^2*theta_ddot
+  I_A = m*l^2
+  sin theta approximately theta
+  m*l^2*theta_ddot + m*g*l*theta = 0
+  theta_ddot + (g/l)*theta = 0                         (I)
+  theta_ddot + omega_n^2*theta = 0                     (II)
+  omega_n = sqrt(g/l) rad/sec
+  f_n = omega_n/(2*pi) = sqrt(g/l)/(2*pi) Hz
+  T = 1/f_n = 2*pi*sqrt(l/g) sec
+
+Disposition: retained with explicit model restrictions. The torque relation
+assumes a point mass, fixed pivot, constant positive g and l, massless rigid
+link and no damping or forcing. The nonlinear equation is
+theta_ddot+(g/l)*sin(theta)=0. The later displayed equalities describe the
+linear approximation, with theta measured in radians and small amplitude.
+The period shown is the linear-model period, not an exact finite-amplitude
+pendulum period. A rigid extended body requires its actual moment of inertia.
+MIT's torque derivation and nonlinear-dynamics notes provide primary checks:
+https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/mit8_01scs22_chapter24.pdf
+  Section 24.1.1, equations 24.1.2–24.1.6; Appendix 24A.
+https://ocw.mit.edu/courses/12-006j-nonlinear-dynamics-chaos-fall-2022/mit12_006jf22_lec4-5.pdf
+  Section 1.1, pages 1–2.
+
+model.pendulum evaluates ordinary reference frequencies and samples the real
+restoring acceleration -(g/l)*sin(theta) on a declared finite angle grid. It
+normalizes that signal for the amplitude interface and retains the source scale
+and grid metadata. Its trace-character Fourier transform is an invertible
+representation of that finite vector. This acceleration-versus-angle profile
+is not a time trajectory or a predicted quantum wavefunction. Sampling does
+not turn a nonlinear pendulum into a linear one or establish convergence.
+
+The exact finite-field oscillator is an independently specified discrete
+analogue. In an odd field, let a be the chosen restoring coefficient, h a chosen
+step label, and (x,v) field coordinates. Velocity Verlet is the algebraic map
+  v_half = v - (h*a/2)*x
+  x_next = x + h*v_half
+  v_next = v_half - (h*a/2)*x_next.
+Every operation and inverse is field arithmetic; 2 must be invertible. Reversing
+h reverses this map, and its 2x2 determinant is one. This is not a reduction of
+sin(theta), a positive-energy theorem, or a dimensional prediction for a real
+pendulum. Finite-field coordinates have no intrinsic order or elapsed seconds.
+
+2. THREE-DIMENSIONAL AXIS ROTATIONS
+Source: reference/image-equations/HKIRhAvaYAEyfhj.jpg
+Visible attribution: TheMathFlow. Displayed equations:
+  R_x(theta) = [[1,0,0],[0,cos(theta),-sin(theta)],
+                [0,sin(theta),cos(theta)]]
+  R_y(theta) = [[cos(theta),0,sin(theta)],[0,1,0],
+                [-sin(theta),0,cos(theta)]]
+  R_z(theta) = [[cos(theta),-sin(theta),0],
+                [sin(theta),cos(theta),0],[0,0,1]]
+  theta = 232.75 degrees.
+
+Disposition: retained as active, right-handed rotations of column vectors.
+Angles supplied in degrees must be converted to radians for ordinary sine and
+cosine. Each matrix satisfies R^T R=I, det(R)=1, and R(theta)^-1=R(-theta).
+Choosing passive frame rotations instead transposes these matrices. The image
+does not specify a product order; independent axis rotations do not imply a
+particular Euler composition. NASA/JPL documents this sign distinction:
+https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/C/req/rotation.html
+  Notation and axis matrices: its [w]_i rotates coordinates by +w and vectors
+  by -w, hence the image's active matrices are [w]_i^T=[-w]_i.
+
+A 3x3 real rotation can act on a three-component ordinary vector or on complex
+amplitudes. Using the registered GF3 Fourier basis, A_GFM=F*A*F^dagger is a
+complex 3x3 matrix; it preserves the same spectrum and unitarity and acts on
+F*v. This is a basis change. Its entries are not GF3 labels, and a real vector's
+components need not sum to a normalized probability state.
+
+A separate exact field rotation replaces the real angle by a field parameter u:
+  c = (1-u^2)/(1+u^2), s = 2*u/(1+u^2), c^2+s^2 = 1.
+Insert c and s in the same axis-matrix pattern. In odd characteristic and when
+1+u^2 is nonzero, direct algebra gives R^T R=I and det(R)=1. R(-u) is its inverse.
+The separately supported projective parameter infinity supplies c=-1, s=0.
+Finite parameters where the denominator vanishes must reject. This construction
+does not identify u or infinity with the displayed angle of 232.75 degrees.
+It preserves a field quadratic form, not an ordered positive Euclidean norm.
+
+3. ZETA–GAMMA MELLIN IDENTITY
+Source: reference/image-equations/HJPJPQbaYAADLiP.jpg
+Displayed equation and convergence condition:
+  zeta(s)*Gamma(s) = integral_0^infinity t^(s-1)/(exp(t)-1) dt,
+  Re(s) > 1.
+Visible caption: zeta-Gamma Relation. Portraits supply no mathematical evidence.
+
+Disposition: retained over ordinary complex s in the stated half-plane.
+For t>0, t^(s-1) uses the real logarithm. Near zero the integrand behaves as
+t^(s-2), requiring Re(s)>1; the large-t tail decays exponentially. Analytic
+continuation of zeta or Gamma does not make this unchanged improper integral
+converge outside that region. Primary identity:
+https://dlmf.nist.gov/25.5.E1
+  NIST DLMF equation 25.5.1, multiplied by Gamma(s).
+
+model.zeta limits its numerical ordinary-domain reference to real integer
+s=2..8. Any finite cutoff and quadrature are approximations to the integral;
+residuals and explicit sampling bounds describe what was actually computed.
+The Mellin kernel's sampled values are normalized into a signal, with source
+scale and sampling metadata retained. Its finite trace-Fourier spectrum is a
+chosen complex data profile, not a predicted quantum wavefunction. It is not
+a finite-field zeta or Gamma function and does not inherit the continuum
+improper-integral identity.
+
+4. COMMON GFM REAPPLICATION CONTRACT
+The established field arithmetic is on GF(q) labels; amplitudes remain complex.
+The Fourier convention is F[k,x]=exp(2*pi*i*Tr(k*x)/p)/sqrt(q), positive sign.
+Vector profiles use y=F*v and return F^dagger*y plus a round-trip residual.
+Operator profiles use A_GFM=F*A*F^dagger with dimension equal to q and return
+F^dagger*A_GFM*F plus a residual. These are finite complex linear-algebra laws.
+The field-label Fourier definition is grounded in A. Vourdas:
+https://arxiv.org/abs/quant-ph/0605054
+
+There is no identity-preserving ring homomorphism R -> F_p: it would send p*1
+to zero, but 1=p*(1/p) to one, a contradiction. Therefore arbitrary real sine,
+cosine, exponential values, irrational constants, continuum integrals and
+real derivatives cannot be reduced modulo p without a separate construction.
+Integer or rational algebraic models can be transported only with their
+denominator and characteristic restrictions. Rational coefficients with a
+denominator divisible by p must reject; field operations supply no order.
+
+The applicability manifest accounts for all 20 prior report entries. Entries
+without an adapter remain visible as reference material. Rejected expressions,
+unspecified modular partial waves, characteristic-two half-phase formulas and
+the claimed full-suite audit cannot be made executable by a basis change.
+Source images, transcriptions, ordinary reference models, sampled profiles,
+complex basis changes and exact field analogues retain distinct domains.
+
+5. PROVENANCE AND VERIFICATION
+Original image bytes are retained in reference/image-equations/. SHA-256 and
+byte counts appear in image-equations.json and source-register.json. The sole
+visible creator label in these images is TheMathFlow on the rotation image;
+no further creator, publication date, license or surrounding post text is
+inferred. Byte hashes establish identity of retained files, not authorship.
+Existing source notices and candidate-report caveats continue to apply.
+
+The local automated verification checks the implemented algebra and numerical
+contracts. Live browser rendering, downloads and iframe communication remain
+outside that verification unless separately recorded in validation/. No
+native quantum hardware, new physics, continuum convergence or universal
+finite-field reformulation is established by a successful round trip.

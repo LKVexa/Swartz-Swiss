@@ -1,0 +1,26 @@
+ja certifier 0.3
+module pencil_sharpener.correctness
+policy no_execute_unknown_code
+policy no_network
+
+grammar PencilSharpenerCorrectness {
+  import ja.portal.scene as Scene ;
+  import mcrt.portal.timeline as Timeline ;
+  production certificate_target = grammarDecl | certificateDecl ;
+  predicate all_symbols_resolved(certificate_target) ;
+  predicate all_productions_reachable(certificate_target) ;
+  predicate precedence_is_conflict_free(certificate_target) ;
+  type_judgment certificate_target : WellFormed ;
+  type_judgment certificate_target : WellTyped ;
+  policy_validator SophiaCorrectnessValidator requires [no_network, no_execute_unknown_code] ;
+  compiler_validator CharlotteAmbiguityValidator verifies [AST, R12, MCRT] ;
+  compiler_validator LandonLoweringValidator verifies [AST, R12, MCRT] ;
+  evidence ProfessorCorrectnessEvidence { source_hash: required compiler_hash: required runtime_hash: required }
+  certification profile PodiumCorrectness { require all validators }
+  certificate PencilSharpenerCorrectnessBundle sign_with local_test_key ;
+}
+
+analyze ambiguity PencilSharpenerCorrectness
+certify grammar PencilSharpenerCorrectness profile PodiumCorrectness
+lower certificate PencilSharpenerCorrectness to JA_CERTIFIER_R12
+package certificate PencilSharpenerCorrectnessBundle as "pencil_sharpener_correctness.msslb"

@@ -1,0 +1,119 @@
+{
+  "schema": "GFM-combined-console-release/1",
+  "consoleVersion": "2.0.0",
+  "status": "passed",
+  "nativeChecks": "native-console.json",
+  "nativeLiveChecks": "native-live.json",
+  "pulseOfflineChecks": {
+    "date": "2026-10-12",
+    "version": "2.1.0",
+    "exitCode": 0,
+    "tests": 148,
+    "passed": 148,
+    "failed": 0,
+    "skipped": 0,
+    "verificationMode": "offline; four local connection checks excluded; file provenance and Windows path checks executed separately",
+    "deferredNetworkTests": [
+      "audit provenance, all findings and corrected GR references reach the live API without changing physical state",
+      "research presets reset history and export causal plasma/material fields through the same backend",
+      "launcher recovers from an occupied port and starts the new computed backend",
+      "local API produces computed fields, controls state, and retains valid state after rejected input"
+    ],
+    "testRuns": [
+      {
+        "scope": "Math, browser worker and viewer",
+        "tests": 146,
+        "passed": 144,
+        "failed": 2
+      },
+      {
+        "scope": "File provenance and Windows path fixtures",
+        "tests": 2,
+        "passed": 2,
+        "failed": 0
+      }
+    ],
+    "engineSHA256": "93d1463b46a2bb6eaeb6c347f97c2a43101d811d0d6aa5d95d3a3b587f6a5b0a",
+    "phaseReferenceSHA256": "f85b8330766b12b67eb3872059b12a6620806d09399f43a5e4e33a44e50df0f9",
+    "scope": "Reduced Maxwell/Drude/material equations, analytic convergence, audited GR references, exact browser-worker/Node numerical parity, combined physical layer mapping and live UI/WebGL submission flows, preview transport, serial scheduling, HTTP controls, launcher and Windows integrity checks.",
+    "browserVisualVerification": "Actual native WebView2 combined-console verification passed; all six entries, live controls, phase/plasma/cover layers, Kerr and exports exercised.",
+    "observationValidation": false,
+    "fullAzimuthallyGeneral3D": false,
+    "completion": "146 checks passed in the full offline run; two package-integrity assertions affected by concurrent integration edits passed after source stabilization and resealing.",
+    "initialRun": "../../validation/pulse-first-regression.json",
+    "resolvedIntegrityAssertions": "../../validation/pulse-integrity-rerun.txt"
+  },
+  "phaseOfflineReports": [
+    "combined-phase-regression.json",
+    "../experiments/phase/validation/offline-pipeline-tests.json"
+  ],
+  "phaseOfflineChecks": {
+    "schema": "GFM-phase-offline-pipeline-verification/1",
+    "date": "2026-10-12T11:20:04.600Z",
+    "exitCode": 0,
+    "tests": 59,
+    "passed": 59,
+    "failed": 0,
+    "skipped": 0,
+    "files": [
+      "tests/phase-mhd.cjs",
+      "tests/phase-view.test.cjs",
+      "tests/phase-worker-parity.cjs",
+      "tests/relativity.cjs",
+      "tests/observations.cjs",
+      "tests/backend-simulation.cjs",
+      "tests/backend-provenance.cjs",
+      "tests/offline-console.cjs",
+      "tests/combined-relativity-worker.cjs"
+    ],
+    "scope": "Original numerical cores, observation holdout, actual Kerr source, browser worker numeric parity, bounded publication/latest cache, stale ACK and pause safety, explicit toy clock, Node phase-service ACK compatibility. No HTTP/native/GPU test claim."
+  },
+  "offlineChecksPassed": 207,
+  "independentObservationVerification": "combined-observation-independent.json",
+  "observationComparisonPassed": false,
+  "nativeNumericalParity": {
+    "pulseFields": 37,
+    "pulseSamples": 113664,
+    "phaseArrays": 32,
+    "phaseSamples": 32768,
+    "totalComparedValues": 146432,
+    "relativeTolerance": 1e-10
+  },
+  "refresh": [
+    {
+      "instrument": "pulse",
+      "medianDrawsPerSecond": 11.911207363291824,
+      "maximumDrawsPerSecond": 14.134275618374557,
+      "sampleIntervalMs": 250,
+      "durationSeconds": 5
+    },
+    {
+      "instrument": "phase",
+      "medianDrawsPerSecond": 47.0208624043387,
+      "maximumDrawsPerSecond": 52.87541544967298,
+      "sampleIntervalMs": 250,
+      "durationSeconds": 5
+    }
+  ],
+  "refreshScope": "Actual native drawing of calculated numerical frames during 5-second runs on this host; rates depend on hardware and load, and do not promise monitor FPS.",
+  "throughputBenchmark": "performance-benchmark.json",
+  "downloads": [
+    {
+      "name": "GFM-phase-pulse-experiment (3).json",
+      "schema": "GFM-cylindrical-export/2",
+      "bytes": 3292646,
+      "sha256": "87b99fa174ba1346f8a00f9346b3877cb1e746e726947a6aca8ff7da7165c482",
+      "method": "Actual native Export button download"
+    },
+    {
+      "name": "GFM-phase-fields (1).json",
+      "schema": "GFM-phase-export/1",
+      "bytes": 861709,
+      "sha256": "84824a31df71672d5760f2cf8d45baceba0097be51346bff33d7551968e3e27c",
+      "method": "Actual native Export button download"
+    }
+  ],
+  "sourceCombination": "repository-combination.json",
+  "numericalCoreChanges": false,
+  "scope": "Complete combined postulation and research console; independent local Maxwell/Drude/material, periodic MHD/neutral complex phase, iron enthalpy, stationary Kerr and hypothetical aperture domains. No implicit coupling or NASA qualification."
+}

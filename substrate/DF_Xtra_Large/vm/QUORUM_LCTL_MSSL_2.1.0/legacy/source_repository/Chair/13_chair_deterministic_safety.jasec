@@ -1,0 +1,21 @@
+ja source 0.3
+module chair.deterministic_safety
+use Security
+policy no_network
+
+principal SOPHIA_CHARLOTTE_LANDON_Professor_Podium_SafetyWorker
+role ChairSafetyWorker {
+    grant safety.evaluate:approved
+    grant replay.verify:approved
+}
+resource DeterministicSafetyDecision classification restricted
+policy ChairDeterministicSafetyPolicy {
+    deny network.* by default
+    allow DeterministicSafetyDecision when principal.role == ChairSafetyWorker
+    require human_approval for safety.execute
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == true
+emit mcrt "ChairDeterministicSafetyPolicy.decision.mcrt"

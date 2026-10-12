@@ -1,0 +1,5 @@
+JA21 9.8.4 landing command compile repair
+- bad: ToggleCommandPalette()
+- good: ToggleCommandPalette(null)
+- bad event: new_private
+- good event: private_tab

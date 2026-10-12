@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "037",
+  "title": "Event Router",
+  "source_file": "037_Event_Router.md",
+  "source_sha256": "e71ea773f7435314ec00b11cdc7de92e21940a75cf750c3381fbd43f499a3666",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "DF0+N_LARGE",
+  "integration_mechanism": "Fabric interaction plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

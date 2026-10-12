@@ -1,0 +1,18 @@
+{
+  "idle_vm_bytes": 22304,
+  "maximum_configured_vm_bytes": 4216608,
+  "peak_rss_max_kib": 6084,
+  "quota_conformance": "PASS via make wide-conformance",
+  "record": "BOTTLE_ROCKET.RuntimeMemory/4.9.0",
+  "result": "PASS",
+  "rss_samples_kib": [
+    6084,
+    6084,
+    6084,
+    6084,
+    6084
+  ],
+  "typical_secure_run_peak_rss_median_kib": 6084,
+  "wide_quota_ceiling_bytes": 4194304,
+  "worst_case_maximum_width_accounted_bytes": 3434272
+}

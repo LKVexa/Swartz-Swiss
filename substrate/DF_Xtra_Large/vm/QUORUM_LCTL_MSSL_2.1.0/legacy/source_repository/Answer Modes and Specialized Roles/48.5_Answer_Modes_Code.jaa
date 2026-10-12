@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.answer_modes.code
+use Agent
+policy no_network
+
+agent AnswerModeCode {
+    identity "answer_mode_code"
+    role "sophia-charlotte-landon-professor-podium-answer-mode"
+    goal stage_validated_bounded_code_answer when confidence >= 0.96
+    memory session retention 1h
+    budget steps 65 tools 5
+    tool SOPHIADesignCodeAnswer(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONStageCodeAnswer(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateCodeAnswer(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainCodeAnswer(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordCodeAnswer(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIADesignCodeAnswer
+        authorize LANDONStageCodeAnswer
+        authorize CHARLOTTEValidateCodeAnswer
+        authorize ProfessorExplainCodeAnswer
+        authorize PodiumRecordCodeAnswer
+        continue when policy_allows
+        execute SOPHIADesignCodeAnswer("selected_code_scope")
+        execute LANDONStageCodeAnswer("approved_code_design")
+        execute CHARLOTTEValidateCodeAnswer("staged_code_answer")
+        execute ProfessorExplainCodeAnswer("validated_code_answer")
+        execute PodiumRecordCodeAnswer("code_answer_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "AnswerModeCode.mcrt"

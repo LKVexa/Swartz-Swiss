@@ -1,0 +1,151 @@
+# QUORUM workflow application report
+
+Applied numbered/overlay work packages: **138**
+Parsed atomic requirements: **957**
+Statuses: **OPERATIONAL 531 · PARTIAL 410 · BLOCKED 16**
+
+The attached workflow series was adapted to the generic repository rather than assuming BOTTLE ROCKET anchor paths already existed. Functional VM requirements are implemented under `vm/`. Local claims are evidence-backed; upstream-native/self-hosting, production-key, cross-platform, duration, and independent-witness gates remain PARTIAL/BLOCKED unless actually demonstrated.
+
+## Work-package decisions
+- **OPERATIONAL** `BR-401-01` — QUORUM BR-401-01 — Repository-size accounting — {'OPERATIONAL': 10}
+- **OPERATIONAL** `BR-401-02` — QUORUM BR-401-02 — Runtime-memory accounting — {'OPERATIONAL': 16}
+- **OPERATIONAL** `BR-401-03` — QUORUM BR-401-03 — Wide-word accounting — {'OPERATIONAL': 7}
+- **OPERATIONAL** `BR-401-04` — QUORUM BR-401-04 — Performance baseline — {'OPERATIONAL': 10}
+- **OPERATIONAL** `BR-401-05` — QUORUM BR-401-05 — Build reproducibility — {'OPERATIONAL': 10}
+- **OPERATIONAL** `BR-401-06` — QUORUM BR-401-06 — Evidence-generation framework — {'OPERATIONAL': 12}
+- **OPERATIONAL** `BR-401-07` — QUORUM BR-401-07 — Canonical LCTL verification — {'OPERATIONAL': 11}
+- **OPERATIONAL** `BR-401-08` — QUORUM BR-401-08 — Operational ledger — {'OPERATIONAL': 11}
+- **OPERATIONAL** `BR-401-09` — QUORUM BR-401-09 — Acceptance gate — {'OPERATIONAL': 7}
+- **OPERATIONAL** `BR-410-01` — QUORUM BR-410-01 — Create brvm-core — {'OPERATIONAL': 10}
+- **PARTIAL** `BR-410-02` — QUORUM BR-410-02 — Remove host assumptions from the core — {'PARTIAL': 7}
+- **PARTIAL** `BR-410-03` — QUORUM BR-410-03 — Define Host Abstraction Layer — {'PARTIAL': 16}
+- **PARTIAL** `BR-410-04` — QUORUM BR-410-04 — Core lifecycle — {'PARTIAL': 15}
+- **OPERATIONAL** `BR-410-05` — QUORUM BR-410-05 — Execution context — {'OPERATIONAL': 8}
+- **OPERATIONAL** `BR-410-06` — QUORUM BR-410-06 — Error model — {'OPERATIONAL': 10}
+- **BLOCKED** `BR-410-07` — QUORUM BR-410-07 — Host adapters — {'PARTIAL': 4, 'BLOCKED': 2}
+- **OPERATIONAL** `BR-410-08` — QUORUM BR-410-08 — Sandbox boundary — {'OPERATIONAL': 8}
+- **PARTIAL** `BR-410-09` — QUORUM BR-410-09 — Acceptance gate — {'PARTIAL': 5}
+- **OPERATIONAL** `BR-420-01` — QUORUM BR-420-01 — Language specification — {'OPERATIONAL': 9}
+- **PARTIAL** `BR-420-02` — QUORUM BR-420-02 — Native opcode semantics — {'PARTIAL': 10}
+- **PARTIAL** `BR-420-03` — QUORUM BR-420-03 — Type system — {'PARTIAL': 10}
+- **OPERATIONAL** `BR-420-04` — QUORUM BR-420-04 — Static verifier — {'OPERATIONAL': 11}
+- **OPERATIONAL** `BR-420-05` — QUORUM BR-420-05 — Control-flow verification — {'OPERATIONAL': 7}
+- **OPERATIONAL** `BR-420-06` — QUORUM BR-420-06 — Capability verification — {'OPERATIONAL': 6}
+- **OPERATIONAL** `BR-420-07` — QUORUM BR-420-07 — BRIR intermediate representation — {'OPERATIONAL': 8}
+- **OPERATIONAL** `BR-420-08` — QUORUM BR-420-08 — Compilation pipeline — {'OPERATIONAL': 11}
+- **OPERATIONAL** `BR-420-09` — QUORUM BR-420-09 — Source-to-binary provenance — {'OPERATIONAL': 7}
+- **OPERATIONAL** `BR-420-10` — QUORUM BR-420-10 — Specification synchronization — {'OPERATIONAL': 8}
+- **PARTIAL** `BR-420-11` — QUORUM BR-420-11 — Round-trip tools — {'PARTIAL': 5}
+- **PARTIAL** `BR-420-12` — QUORUM BR-420-12 — Acceptance gate — {'PARTIAL': 5}
+- **OPERATIONAL** `BR-430-01` — QUORUM BR-430-01 — ISA versioning — {'OPERATIONAL': 6}
+- **OPERATIONAL** `BR-430-02` — QUORUM BR-430-02 — Arithmetic instructions — {'OPERATIONAL': 11}
+- **OPERATIONAL** `BR-430-03` — QUORUM BR-430-03 — Logical instructions — {'OPERATIONAL': 7}
+- **PARTIAL** `BR-430-04` — QUORUM BR-430-04 — Shift/rotation semantics — {'PARTIAL': 7}
+- **OPERATIONAL** `BR-430-05` — QUORUM BR-430-05 — Register movement — {'OPERATIONAL': 5}
+- **OPERATIONAL** `BR-430-06` — QUORUM BR-430-06 — Memory operations — {'OPERATIONAL': 9}
+- **OPERATIONAL** `BR-430-07` — QUORUM BR-430-07 — Control flow — {'OPERATIONAL': 8}
+- **OPERATIONAL** `BR-430-08` — QUORUM BR-430-08 — Stack operations — {'OPERATIONAL': 7}
+- **OPERATIONAL** `BR-430-09` — QUORUM BR-430-09 — System instructions — {'OPERATIONAL': 7}
+- **PARTIAL** `BR-430-10` — QUORUM BR-430-10 — Arithmetic modes — {'PARTIAL': 7}
+- **OPERATIONAL** `BR-430-11` — QUORUM BR-430-11 — Trap table — {'OPERATIONAL': 14}
+- **OPERATIONAL** `BR-430-12` — QUORUM BR-430-12 — ABI — {'OPERATIONAL': 9}
+- **OPERATIONAL** `BR-430-13` — QUORUM BR-430-13 — Service ABI — {'OPERATIONAL': 8}
+- **OPERATIONAL** `BR-430-14` — QUORUM BR-430-14 — ISA conformance corpus — {'OPERATIONAL': 7}
+- **PARTIAL** `BR-430-15` — QUORUM BR-430-15 — Acceptance gate — {'PARTIAL': 5}
+- **PARTIAL** `BR-440-01` — QUORUM BR-440-01 — Trust root — {'PARTIAL': 5}
+- **PARTIAL** `BR-440-02` — QUORUM BR-440-02 — Image signing — {'PARTIAL': 11}
+- **OPERATIONAL** `BR-440-03` — QUORUM BR-440-03 — Verification path — {'OPERATIONAL': 11}
+- **PARTIAL** `BR-440-04` — QUORUM BR-440-04 — Production-loader policy — {'PARTIAL': 6}
+- **PARTIAL** `BR-440-05` — QUORUM BR-440-05 — Key hierarchy — {'PARTIAL': 6}
+- **PARTIAL** `BR-440-06` — QUORUM BR-440-06 — Key rotation — {'PARTIAL': 5}
+- **OPERATIONAL** `BR-440-07` — QUORUM BR-440-07 — Revocation — {'OPERATIONAL': 5}
+- **OPERATIONAL** `BR-440-08` — QUORUM BR-440-08 — Rollback protection — {'OPERATIONAL': 6}
+- **PARTIAL** `BR-440-09` — QUORUM BR-440-09 — Secure startup — {'PARTIAL': 9}
+- **PARTIAL** `BR-440-10` — QUORUM BR-440-10 — Security logging — {'PARTIAL': 7}
+- **PARTIAL** `BR-440-11` — QUORUM BR-440-11 — Acceptance gate — {'PARTIAL': 5}
+- **PARTIAL** `BR-450-01` — QUORUM BR-450-01 — Storage abstraction — {'PARTIAL': 7}
+- **OPERATIONAL** `BR-450-02` — QUORUM BR-450-02 — Dual-slot image store — {'OPERATIONAL': 8}
+- **OPERATIONAL** `BR-450-03` — QUORUM BR-450-03 — Control record — {'OPERATIONAL': 9}
+- **OPERATIONAL** `BR-450-04` — QUORUM BR-450-04 — State authentication — {'OPERATIONAL': 4}
+- **OPERATIONAL** `BR-450-05` — QUORUM BR-450-05 — Atomic update sequence — {'OPERATIONAL': 11}
+- **PARTIAL** `BR-450-06` — QUORUM BR-450-06 — Power-loss injection — {'PARTIAL': 10}
+- **OPERATIONAL** `BR-450-07` — QUORUM BR-450-07 — Recovery — {'OPERATIONAL': 6}
+- **PARTIAL** `BR-450-08` — QUORUM BR-450-08 — Concurrency — {'PARTIAL': 5}
+- **PARTIAL** `BR-450-09` — QUORUM BR-450-09 — Filesystem hardening — {'PARTIAL': 6}
+- **OPERATIONAL** `BR-450-10` — QUORUM BR-450-10 — Persistent VM data — {'OPERATIONAL': 6}
+- **PARTIAL** `BR-450-11` — QUORUM BR-450-11 — Acceptance gate — {'PARTIAL': 4}
+- **OPERATIONAL** `BR-460-01` — QUORUM BR-460-01 — Word representation — {'OPERATIONAL': 6}
+- **OPERATIONAL** `BR-460-02` — QUORUM BR-460-02 — Lazy allocation — {'OPERATIONAL': 4}
+- **BLOCKED** `BR-460-03` — QUORUM BR-460-03 — Register bank — {'OPERATIONAL': 4, 'BLOCKED': 1}
+- **OPERATIONAL** `BR-460-04` — QUORUM BR-460-04 — Stack redesign — {'OPERATIONAL': 5}
+- **PARTIAL** `BR-460-05` — QUORUM BR-460-05 — Constant pool — {'PARTIAL': 4}
+- **PARTIAL** `BR-460-06` — QUORUM BR-460-06 — Scratch allocator — {'PARTIAL': 5}
+- **OPERATIONAL** `BR-460-07` — QUORUM BR-460-07 — Arithmetic algorithms — {'OPERATIONAL': 6}
+- **OPERATIONAL** `BR-460-08` — QUORUM BR-460-08 — Memory quotas — {'OPERATIONAL': 6}
+- **OPERATIONAL** `BR-460-09` — QUORUM BR-460-09 — Resource traps — {'OPERATIONAL': 4}
+- **PARTIAL** `BR-460-10` — QUORUM BR-460-10 — Performance optimization — {'PARTIAL': 6}
+- **OPERATIONAL** `BR-460-11` — QUORUM BR-460-11 — Determinism — {'OPERATIONAL': 4}
+- **PARTIAL** `BR-460-12` — QUORUM BR-460-12 — Acceptance gate — {'PARTIAL': 4}
+- **OPERATIONAL** `BR-470-01` — QUORUM BR-470-01 — Device ABI — {'OPERATIONAL': 8}
+- **OPERATIONAL** `BR-470-02` — QUORUM BR-470-02 — Console device — {'OPERATIONAL': 5}
+- **PARTIAL** `BR-470-03` — QUORUM BR-470-03 — Persistent block device — {'PARTIAL': 5}
+- **PARTIAL** `BR-470-04` — QUORUM BR-470-04 — Monotonic device — {'PARTIAL': 3}
+- **PARTIAL** `BR-470-05` — QUORUM BR-470-05 — Entropy device — {'PARTIAL': 4}
+- **OPERATIONAL** `BR-470-06` — QUORUM BR-470-06 — Clock device — {'OPERATIONAL': 4}
+- **PARTIAL** `BR-470-07` — QUORUM BR-470-07 — Mailbox device — {'PARTIAL': 5}
+- **OPERATIONAL** `BR-470-08` — QUORUM BR-470-08 — APDU service — {'OPERATIONAL': 6}
+- **PARTIAL** `BR-470-09` — QUORUM BR-470-09 — Diagnostic device — {'PARTIAL': 6}
+- **OPERATIONAL** `BR-470-10` — QUORUM BR-470-10 — Network policy — {'OPERATIONAL': 6}
+- **PARTIAL** `BR-470-11` — QUORUM BR-470-11 — Device discovery — {'PARTIAL': 5}
+- **OPERATIONAL** `BR-470-12` — QUORUM BR-470-12 — Device quotas — {'OPERATIONAL': 5}
+- **PARTIAL** `BR-470-13` — QUORUM BR-470-13 — Acceptance gate — {'PARTIAL': 4}
+- **PARTIAL** `BR-480-01` — QUORUM BR-480-01 — Independent BRIM parser — {'PARTIAL': 4}
+- **PARTIAL** `BR-480-02` — QUORUM BR-480-02 — Independent verifier — {'PARTIAL': 8}
+- **PARTIAL** `BR-480-03` — QUORUM BR-480-03 — Differential arithmetic — {'PARTIAL': 7}
+- **OPERATIONAL** `BR-480-04` — QUORUM BR-480-04 — Opcode testing — {'OPERATIONAL': 6}
+- **PARTIAL** `BR-480-05` — QUORUM BR-480-05 — Property tests — {'PARTIAL': 6}
+- **OPERATIONAL** `BR-480-06` — QUORUM BR-480-06 — Fuzzing — {'OPERATIONAL': 9}
+- **PARTIAL** `BR-480-07` — QUORUM BR-480-07 — Memory safety — {'PARTIAL': 6}
+- **OPERATIONAL** `BR-480-08` — QUORUM BR-480-08 — Control-flow attacks — {'OPERATIONAL': 6}
+- **OPERATIONAL** `BR-480-09` — QUORUM BR-480-09 — Capability attacks — {'OPERATIONAL': 5}
+- **OPERATIONAL** `BR-480-10` — QUORUM BR-480-10 — Image attacks — {'OPERATIONAL': 9}
+- **OPERATIONAL** `BR-480-11` — QUORUM BR-480-11 — Rollback attacks — {'OPERATIONAL': 6}
+- **OPERATIONAL** `BR-480-12` — QUORUM BR-480-12 — Persistence attacks — {'OPERATIONAL': 7}
+- **BLOCKED** `BR-480-13` — QUORUM BR-480-13 — Cross-platform testing — {'PARTIAL': 6, 'BLOCKED': 1}
+- **PARTIAL** `BR-480-14` — QUORUM BR-480-14 — Reproducibility — {'PARTIAL': 5}
+- **BLOCKED** `BR-480-15` — QUORUM BR-480-15 — Long-duration soak — {'PARTIAL': 7, 'BLOCKED': 1}
+- **PARTIAL** `BR-480-16` — QUORUM BR-480-16 — Security review — {'PARTIAL': 8}
+- **BLOCKED** `BR-480-17` — QUORUM BR-480-17 — Acceptance gate — {'PARTIAL': 4, 'BLOCKED': 2}
+- **PARTIAL** `BR-490-01` — QUORUM BR-490-01 — Feature freeze — {'PARTIAL': 6}
+- **PARTIAL** `BR-490-02` — QUORUM BR-490-02 — Release profiles — {'PARTIAL': 6}
+- **PARTIAL** `BR-490-03` — QUORUM BR-490-03 — Production hardening — {'PARTIAL': 7}
+- **PARTIAL** `BR-490-04` — QUORUM BR-490-04 — Core-61 qualification — {'PARTIAL': 5}
+- **PARTIAL** `BR-490-05` — QUORUM BR-490-05 — BRIM-51 qualification — {'PARTIAL': 4}
+- **PARTIAL** `BR-490-06` — QUORUM BR-490-06 — Runtime-memory qualification — {'PARTIAL': 6}
+- **PARTIAL** `BR-490-07` — QUORUM BR-490-07 — Performance qualification — {'PARTIAL': 8}
+- **OPERATIONAL** `BR-490-08` — QUORUM BR-490-08 — Release manifests — {'OPERATIONAL': 8}
+- **OPERATIONAL** `BR-490-09` — QUORUM BR-490-09 — Documentation — {'OPERATIONAL': 12}
+- **PARTIAL** `BR-490-10` — QUORUM BR-490-10 — Independent replay package — {'PARTIAL': 7}
+- **BLOCKED** `BR-490-11` — QUORUM BR-490-11 — Final RC acceptance — {'PARTIAL': 7, 'BLOCKED': 2}
+- **PARTIAL** `BR-500-01` — QUORUM BR-500-01 — Native source authority — {'PARTIAL': 3}
+- **PARTIAL** `BR-500-02` — QUORUM BR-500-02 — Native compiler — {'PARTIAL': 4}
+- **PARTIAL** `BR-500-03` — QUORUM BR-500-03 — Native verifier — {'PARTIAL': 5}
+- **OPERATIONAL** `BR-500-04` — QUORUM BR-500-04 — Production VM core — {'OPERATIONAL': 6}
+- **PARTIAL** `BR-500-05` — QUORUM BR-500-05 — Production loader — {'PARTIAL': 4}
+- **OPERATIONAL** `BR-500-06` — QUORUM BR-500-06 — Production persistence — {'OPERATIONAL': 5}
+- **PARTIAL** `BR-500-07` — QUORUM BR-500-07 — Production devices — {'PARTIAL': 4}
+- **OPERATIONAL** `BR-500-08` — QUORUM BR-500-08 — Production memory architecture — {'OPERATIONAL': 5}
+- **PARTIAL** `BR-500-09` — QUORUM BR-500-09 — Security — {'PARTIAL': 7}
+- **BLOCKED** `BR-500-10` — QUORUM BR-500-10 — Operational evidence — {'PARTIAL': 4, 'BLOCKED': 1}
+- **BLOCKED** `BR-500-11` — QUORUM BR-500-11 — Reproducibility — {'PARTIAL': 3, 'BLOCKED': 1}
+- **BLOCKED** `BR-500-12` — QUORUM BR-500-12 — Reliability — {'PARTIAL': 4, 'BLOCKED': 1}
+- **PARTIAL** `BR-500-13` — QUORUM BR-500-13 — Performance — {'PARTIAL': 5}
+- **PARTIAL** `BR-500-14` — QUORUM BR-500-14 — Release engineering — {'PARTIAL': 10}
+- **BLOCKED** `BR-500-15` — QUORUM BR-500-15 — 5.0.0 final operational gate — {'OPERATIONAL': 13, 'PARTIAL': 7, 'BLOCKED': 4}
+- **PARTIAL** `QUORUM_BASIC_MSSL_SHS2_TO_FULLY_OPERATIONAL_VM_OS_HARD_OPEN_GATE_PACKAGE_3.1.0__01_MASTER_PROMPT_AND_WORKFLOW` — QUORUM BASIC_MSSL SHS2 → Fully Operational Native VM/OS — {}
+- **PARTIAL** `QUORUM_BASIC_MSSL_SHS2_TO_FULLY_OPERATIONAL_VM_OS_PROMPT_WORKFLOW_PACKAGE_3.0.0__01_MASTER_PROMPT_AND_WORKFLOW` — QUORUM BASIC_MSSL SHS2 → Fully Operational Native VM/OS — {}
+- **PARTIAL** `QUORUM_TRACK_A_R2_ARCHITECTURAL_REMEDIATION_PROMPT_WORKFLOW_PACKAGE_3.0.0__00_MASTER_REMEDIATION_PROMPT_AND_WORKFLOW` — QUORUM Track A r2 → Exact Self-Hosting — {}
+
+## Final 5.0.0 gate interpretation
+
+`BR-500-15` is intentionally **PARTIAL**, not falsely promoted to production-operational. The hosted VM core, compiler/lowering path, signed loader, deterministic execution, persistence, virtual services, conformance tests, and local evidence are operational. Native upstream LCTL semantic authority, self-hosting, production cryptographic/key-custody assurance, cross-platform runs, 72-hour soak, independent rebuild, and independent replay remain outside the evidence actually produced in this run.

@@ -1,0 +1,304 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 8,
+    "PARTIAL": 21,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-09-R01.json",
+      "evidence_sha256": "d63dac3897ee2862e5c69de1ec6856872b46176b0f3777800101d603d5cbda27",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "Narrative gravity is independent from raw distance and has explicit inputs.",
+      "requirement_id": "RCPW-09-R01",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative significance changes priority, update frequency, and representation only within bounded resource policy.",
+      "requirement_id": "RCPW-09-R02",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Active missions, companions, rivals, threats, and major remote events can create authority wells.",
+      "requirement_id": "RCPW-09-R03",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative gravity decays or transitions according to explicit lifecycle rules.",
+      "requirement_id": "RCPW-09-R04",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative gravity cannot mutate canonical story truth by itself.",
+      "requirement_id": "RCPW-09-R05",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Priority manipulation and starvation attacks are bounded and testable.",
+      "requirement_id": "RCPW-09-R06",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative gravity is signed/typed so urgency, relevance, threat, and authored importance are distinguishable.",
+      "requirement_id": "RCPW-09-R07",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Priority escalation has hard caps and reserve budgets for non-narrative systemic simulation.",
+      "requirement_id": "RCPW-09-R08",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Gravity changes emit traceable reasons to support replay and debugging.",
+      "requirement_id": "RCPW-09-R09",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "No narrative-gravity rule may fabricate outcomes for events that require canonical simulation evidence.",
+      "requirement_id": "RCPW-09-R10",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative gravity integrates with an event-orchestration authority that distinguishes authored beats, systemic events, optional encounters, and emergent consequences.",
+      "requirement_id": "RCPW-09-R11",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Off-screen event resolution declares whether the outcome was fully simulated, abstractly resolved, deferred, or blocked awaiting higher fidelity.",
+      "requirement_id": "RCPW-09-R12",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative priority cannot violate canonical travel time, ownership, death, destruction, or other established causal facts without an explicit authored override event.",
+      "requirement_id": "RCPW-09-R13",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Competing narrative wells use deterministic arbitration and expose why one event received higher simulation authority.",
+      "requirement_id": "RCPW-09-R14",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative gravity consumes explicit story/event metadata but does not own canonical facts such as death, travel, inventory, location, or destruction.",
+      "requirement_id": "RCPW-09-R15",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative authority supports event reservation so two authored/systemic events cannot simultaneously claim an exclusive actor/resource without arbitration.",
+      "requirement_id": "RCPW-09-R16",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Story/event conditions are evaluated against canonical state and ledger history rather than render presence.",
+      "requirement_id": "RCPW-09-R17",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Deferred narrative events carry expiration, escalation, and fallback semantics so off-screen blocking cannot deadlock the world.",
+      "requirement_id": "RCPW-09-R18",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative qualification includes competing events, player avoidance, rapid traversal, save/reload, reference handoff, and long off-screen intervals.",
+      "requirement_id": "RCPW-09-R19",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative reservations and authority wells are globally arbitrated even when actors/events are simulated on different workers.",
+      "requirement_id": "RCPW-09-R20",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Exclusive actor/resource reservations use deterministic conflict resolution and survive partition migration/recovery.",
+      "requirement_id": "RCPW-09-R21",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative state read from a lagging partition is revision-checked before committing canonical story consequences.",
+      "requirement_id": "RCPW-09-R22",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Authored live-content updates cannot rewrite completed canonical history unless delivered as explicit versioned migration/retcon events.",
+      "requirement_id": "RCPW-09-R23",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative qualification includes hot content patch, worker restart, competing reservations, long off-screen deferral, and rollback.",
+      "requirement_id": "RCPW-09-R24",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative gravity distinguishes world-history significance from immediate player-story relevance so historically important remote changes may remain durable without consuming high local fidelity indefinitely.",
+      "requirement_id": "RCPW-09-R25",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Emergent event synthesis must consume canonical conditions and knowledge-locality rules rather than inventing facts required only to satisfy a desired story beat.",
+      "requirement_id": "RCPW-09-R26",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "NPC dialogue/event eligibility may depend on what the NPC or institution plausibly knows, not merely on global ledger truth.",
+      "requirement_id": "RCPW-09-R27",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Historical events may seed future narrative opportunities through explicit causal hooks that survive save migration and world archival.",
+      "requirement_id": "RCPW-09-R28",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes multi-era narrative consequences, rumor/information delay, role succession, emergent event generation, and archival history reactivation.",
+      "requirement_id": "RCPW-09-R29",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "stage": 9,
+  "title": "Narrative Gravity Authority"
+}

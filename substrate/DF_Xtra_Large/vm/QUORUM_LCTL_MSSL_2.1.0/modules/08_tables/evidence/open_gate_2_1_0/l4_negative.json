@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "43bea16d1b185f47a9fb2de991dc44b81502d81c0bbdb36e37f056aa5bbb0a9d",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Tables",
+  "module_id": 8,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

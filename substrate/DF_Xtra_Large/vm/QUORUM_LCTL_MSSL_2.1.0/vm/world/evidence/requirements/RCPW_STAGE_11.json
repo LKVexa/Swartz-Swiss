@@ -1,0 +1,304 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 3,
+    "PARTIAL": 26,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Render visibility is never used as persistent existence authority.",
+      "requirement_id": "RCPW-11-R01",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Folded rendering is coherent with canonical direction, landmarks, routes, and horizon semantics.",
+      "requirement_id": "RCPW-11-R02",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Temporal transitions are stable and free of visible popping/jitter within declared thresholds.",
+      "requirement_id": "RCPW-11-R03",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rendering overload sheds visual quality before simulation authority.",
+      "requirement_id": "RCPW-11-R04",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-distance silhouettes, lighting, atmospheric effects, shadows/reflections, and audio landmarks have declared fidelity policies.",
+      "requirement_id": "RCPW-11-R05",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-11-R06.json",
+      "evidence_sha256": "503ff879bdadd78b28341a51a905776115dfc8027965fb82bb4a1887511ea9e4",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "Visual regression and frame-budget evidence are generated from repeatable traversal traces.",
+      "requirement_id": "RCPW-11-R06",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rendering exposes a fold-artifact detector for scale discontinuity, horizon inversion, repeated landmarks, and topology leaks.",
+      "requirement_id": "RCPW-11-R07",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Temporal history buffers are invalidated/rebased correctly when origin or fold parameters change.",
+      "requirement_id": "RCPW-11-R08",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Render culling cannot suppress simulation events or event ledger emission.",
+      "requirement_id": "RCPW-11-R09",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Quality degradation is ordered and measurable, with simulation truth protected above visual fidelity.",
+      "requirement_id": "RCPW-11-R10",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Visibility uses fold-aware hierarchical occlusion while acoustics uses canonical propagation rules or an explicitly qualified approximation.",
+      "requirement_id": "RCPW-11-R11",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Weather, fog, smoke, cloud cover, night lighting, and atmospheric perspective may mask streaming but cannot become correctness dependencies.",
+      "requirement_id": "RCPW-11-R12",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Temporal rendering history is invalidated or transformed correctly when fold parameters, reference origins, portals, or shell representations change.",
+      "requirement_id": "RCPW-11-R13",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-distance landmarks have canonical identity and visibility policy so folding cannot create duplicate or contradictory silhouettes.",
+      "requirement_id": "RCPW-11-R14",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Visibility/rendering consumes a world-compiler-produced hierarchy of regions, visibility cells, portals, landmarks, and fold-safe representation tiers.",
+      "requirement_id": "RCPW-11-R15",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rendering and audio use separate fidelity/budget policies while sharing canonical identity and event timing.",
+      "requirement_id": "RCPW-11-R16",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Temporal effects have explicit reset/reprojection rules for portal transitions, fold-parameter changes, origin rebases, teleports, and moving-frame handoffs.",
+      "requirement_id": "RCPW-11-R17",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Visual landmark substitution at extreme fold distance records canonical identity so materialization cannot swap one landmark for another.",
+      "requirement_id": "RCPW-11-R18",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes automated image/telemetry comparison for seam popping, landmark duplication, horizon inversion, temporal ghosting, and frame-time spikes.",
+      "requirement_id": "RCPW-11-R19",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rendering consumes immutable per-frame world-view snapshots or equivalent coherent views so parallel canonical updates cannot tear a visible frame.",
+      "requirement_id": "RCPW-11-R20",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Render workers may be decoupled from simulation workers, but presentation lag is measured and cannot be mistaken for canonical state.",
+      "requirement_id": "RCPW-11-R21",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold/LOD/reference metadata carried into rendering is version stamped so mixed-frame state is detected.",
+      "requirement_id": "RCPW-11-R22",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Asset/visual hot reload supports transactional frame-boundary activation and rollback without changing canonical identity.",
+      "requirement_id": "RCPW-11-R23",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rendering qualification includes worker restart, asset version rollback, fold-policy change, origin rebase, portal crossing, and presentation backlog.",
+      "requirement_id": "RCPW-11-R24",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Visibility/rendering represents world age and historical change through canonical condition/state rather than static content assumptions.",
+      "requirement_id": "RCPW-11-R25",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Folded horizon rendering can summarize newly expanded world extent without exposing undefined or not-yet-canonical geography as interactable fact.",
+      "requirement_id": "RCPW-11-R26",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-distance landmark replacement reflects canonical construction/destruction/abandonment history and never resurrects obsolete landmarks from stale caches.",
+      "requirement_id": "RCPW-11-R27",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Historical presentation layers such as weathering, vegetation succession, infrastructure decay, and settlement growth remain derived from authoritative state/provenance.",
+      "requirement_id": "RCPW-11-R28",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification compares pre/post-era visual state, expansion-horizon continuity, archive rehydration, and stale-cache rejection.",
+      "requirement_id": "RCPW-11-R29",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    }
+  ],
+  "stage": 11,
+  "title": "Visibility / Rendering Authority"
+}

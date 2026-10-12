@@ -1,0 +1,141 @@
+{
+  "authority_sha256": "3c01851d77a5939c596f148a80e6868aa7299bd332e70edefe827aa48d8e6b48",
+  "domain_output": {
+    "execution_plan": {
+      "aggregate_receipt": "5f930f8a33b8ca2f857473d1e3cb49939d77e952c3d91c8deb6b902edb5b51ff",
+      "dependency_count": 8,
+      "ordered_stages": [
+        "INTENT",
+        "PLAN",
+        "DEPENDENCY_RESOLVE",
+        "CAPABILITY_CHECK",
+        "SCHEDULE",
+        "EXECUTE",
+        "MONITOR",
+        "AGGREGATE",
+        "EVIDENCE"
+      ]
+    },
+    "input_type": "intent/dependency_set",
+    "legacy_signals": [
+      "bank",
+      "action",
+      "RENDER",
+      "PACKAGE",
+      "AUTHORIZE"
+    ],
+    "module": "Worker",
+    "output_type": "execution_plan/aggregate_receipt",
+    "payload_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "plane": "orchestration",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "ab36180379af771f42d0bb784b5e7df24fe21ad876813755813c9925091935dd",
+  "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "module": "Worker",
+  "module_id": 60,
+  "plane": "orchestration",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "011007255c22296536bd2a928dcfd6ae7d0a9e778ee269355bc1a81ec32851ad",
+  "stage_count": 9,
+  "stages": [
+    {
+      "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "node": "N01",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "INSPECT",
+      "output_sha256": "bbab69e5469528a5ff2e8c88d9932fa3d7f4caba31368f9ae5940e6b983c2014",
+      "stage": "INTENT"
+    },
+    {
+      "decision": "REFERENCE_CONTINUE",
+      "input_sha256": "bbab69e5469528a5ff2e8c88d9932fa3d7f4caba31368f9ae5940e6b983c2014",
+      "node": "N02",
+      "operator": "REASON",
+      "output_sha256": "34d4a225a93f2c3994b0b71525d3adc0029d96948eeffdd231d465eb8d132e4f",
+      "score": 0.470588,
+      "stage": "PLAN"
+    },
+    {
+      "input_sha256": "34d4a225a93f2c3994b0b71525d3adc0029d96948eeffdd231d465eb8d132e4f",
+      "node": "N03",
+      "operator": "RETRIEVE",
+      "output_sha256": "8ed89050a895de8798c11149d04ca22ff61cbe271f083581697d424cec0b235a",
+      "retrieved_count": 0,
+      "stage": "DEPENDENCY_RESOLVE"
+    },
+    {
+      "authorized": true,
+      "capabilities": [
+        "evidence.write",
+        "module.invoke",
+        "process.execute"
+      ],
+      "input_sha256": "8ed89050a895de8798c11149d04ca22ff61cbe271f083581697d424cec0b235a",
+      "network": "DENY",
+      "node": "N04",
+      "operator": "AUTHORIZE",
+      "output_sha256": "28192146a553725d18aee492faa6d58aebfa46bde582c65577fa7046c67489e3",
+      "stage": "CAPABILITY_CHECK"
+    },
+    {
+      "input_sha256": "28192146a553725d18aee492faa6d58aebfa46bde582c65577fa7046c67489e3",
+      "node": "N05",
+      "operator": "ROUTE",
+      "output_sha256": "f09df85b460bf9b56abbe4cce2ebf92a5342f1038bd91e7c1132f2be2b427bfa",
+      "route": "orchestration",
+      "stage": "SCHEDULE"
+    },
+    {
+      "execution_token": "fe333f13e27357c93c6c246b",
+      "input_sha256": "f09df85b460bf9b56abbe4cce2ebf92a5342f1038bd91e7c1132f2be2b427bfa",
+      "node": "N06",
+      "operator": "EXECUTE",
+      "output_sha256": "646d66bdf44d2ce0eb1d9872d52cae72ec64f4fcda5a15a8dde98c3cf0624e36",
+      "stage": "EXECUTE"
+    },
+    {
+      "input_sha256": "646d66bdf44d2ce0eb1d9872d52cae72ec64f4fcda5a15a8dde98c3cf0624e36",
+      "node": "N07",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "INSPECT",
+      "output_sha256": "9d52ff8200044b972cb7b04e5b23b0dc981d8e926afb213f8620f003e8c4aef1",
+      "stage": "MONITOR"
+    },
+    {
+      "features": [
+        235,
+        39,
+        182,
+        137,
+        0,
+        140,
+        64,
+        221
+      ],
+      "input_sha256": "9d52ff8200044b972cb7b04e5b23b0dc981d8e926afb213f8620f003e8c4aef1",
+      "node": "N08",
+      "operator": "TRANSFORM",
+      "output_sha256": "d8733bf02c0d5abd74f446fe8f57d2e949d06bcb6129c3dc66a4a4f283d8d5ac",
+      "stage": "AGGREGATE"
+    },
+    {
+      "input_sha256": "d8733bf02c0d5abd74f446fe8f57d2e949d06bcb6129c3dc66a4a4f283d8d5ac",
+      "node": "N09",
+      "operator": "RECORD",
+      "output_sha256": "1016f310ba6461f412fdbcd2a7a8285fb33de38c121ec54dbdcd04a87f4bf4e6",
+      "receipt_sha256": "26442aa4aa25c98a174d14592fcad0e61c2b628538aa847b1115a98bd340a1d8",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

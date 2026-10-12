@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "072",
+  "title": "Fabric Scheduler",
+  "source_file": "072_Fabric_Scheduler.md",
+  "source_sha256": "e4ccad8d853e8c1be0c592d85aeeefef6cb0aeefdbd2711b97e4d723e0850506",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "DF0",
+  "integration_mechanism": "DF_Fabric",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

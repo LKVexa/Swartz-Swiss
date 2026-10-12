@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "031",
+  "title": "Mailbox",
+  "source_file": "031_Mailbox.md",
+  "source_sha256": "f494a81655d404d24e6b3a6d276049ad35ed7ef1c148b7811668033e32555a39",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "DF0+N_LARGE",
+  "integration_mechanism": "Fabric interaction plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

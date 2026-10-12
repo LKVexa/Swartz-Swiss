@@ -1,0 +1,24 @@
+{
+  "schema": "GFM-project-hub/1",
+  "date": "2026-10-12",
+  "simulatorVersion": "2.1.0",
+  "canonicalRoot": "D:\\Codex\\GFM-JA21\\GFM",
+  "entry": "Open GFM.cmd",
+  "projectHome": "GFM Project.html",
+  "standaloneSimulator": "Open GFM Preview.html",
+  "references": [
+    "Open GFM Preview.html",
+    "docs/pulse-wormhole-display.txt",
+    "docs/scientific-specification.txt",
+    "docs/GFM-Review-Editable.txt",
+    "docs/audit-application.txt",
+    "docs/GFM-Audit.pdf",
+    "validation/pulse-wormhole-release.json",
+    "project-references/JA21-earlier-integration.txt",
+    "project-references/phase-texture.txt",
+    "project-references/research-observatory.txt",
+    "project-references/coupling-study.json"
+  ],
+  "projectHomeSHA256": "75a8751bc70929b4b986804f7453e480a73ab2afad05472fcfa7046ae339333c",
+  "originalConsoleAndModelsModified": false
+}

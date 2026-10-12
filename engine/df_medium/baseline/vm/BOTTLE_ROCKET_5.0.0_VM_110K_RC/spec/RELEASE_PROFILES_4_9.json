@@ -1,0 +1,66 @@
+{
+  "invariants": {
+    "implicit_networking": false,
+    "production_private_keys": false,
+    "unsigned_production_execution": false
+  },
+  "profiles": {
+    "constrained": {
+      "artifact": "brvm-core61.o + brctl",
+      "brim_ceiling_bytes": 51200,
+      "core_ceiling_bytes": 61000,
+      "diagnostics": "bounded",
+      "network": "absent-by-default",
+      "production_macro": true,
+      "purpose": "small-core deployment profile",
+      "raw_brim_execution": false
+    },
+    "development": {
+      "artifact": "bradmin",
+      "diagnostics": "full-test",
+      "network": "explicit-only",
+      "production_macro": false,
+      "purpose": "developer/admin qualification only",
+      "raw_brim_execution": true,
+      "signing_admin": true
+    },
+    "diagnostic": {
+      "artifact": "production brctl with capability-gated diagnostics",
+      "diagnostics": "capability-gated",
+      "network": "absent-by-default",
+      "production_macro": true,
+      "purpose": "authorized inspection without trust bypass",
+      "raw_brim_execution": false,
+      "signing_admin": false
+    },
+    "production": {
+      "artifact": "brctl",
+      "diagnostics": "bounded",
+      "network": "absent-by-default",
+      "production_macro": true,
+      "purpose": "secure verified execution only",
+      "raw_brim_execution": false,
+      "signing_admin": false
+    },
+    "recovery": {
+      "artifact": "production secure recovery path",
+      "network": "absent-by-default",
+      "production_macro": true,
+      "purpose": "authenticated rollback/recovery",
+      "raw_brim_execution": false,
+      "recovery_control": "signed BRCT/1 required",
+      "signing_admin": false
+    },
+    "testing": {
+      "artifact": "bradmin + conformance tools",
+      "diagnostics": "full-test",
+      "network": "explicit-only",
+      "production_macro": false,
+      "purpose": "deterministic conformance/adversarial testing",
+      "raw_brim_execution": true,
+      "signing_admin": "test-only"
+    }
+  },
+  "record": "BOTTLE_ROCKET.ReleaseProfiles/4.9.0",
+  "version": 1
+}

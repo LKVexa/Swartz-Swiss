@@ -1,0 +1,54 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "0a6107ad567050d76a3dea86db32b85312fbd240ea60eabf65ae0b2323a7fc3b",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (ECONOMY_CONSERVATION, SAVE_RECOVERY, SCALE_SOAK) plus Stage 08 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "ECONOMY_CONSERVATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "SAVE_RECOVERY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "SCALE_SOAK": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-03",
+    "GW-14",
+    "GW-27",
+    "GW-29",
+    "GW-48",
+    "GW-64",
+    "GW-65"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T2_HIGH_FIDELITY_ECONOMY",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Settlement economies include explicit production chains, storage, transport dependency, labor allocation, demand substitution, and recovery after shocks.",
+  "requirement_id": "RCPW-08-R11",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 8,
+  "stage_title": "Civilization / Economy Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "ECONOMY_CONSERVATION",
+    "SAVE_RECOVERY",
+    "SCALE_SOAK"
+  ],
+  "workflow_file": "08_CIVILIZATION_ECONOMY_AUTHORITY/104_RCPW_08_R11_SETTLEMENT_ECONOMIES_INCLUDE_EXPLICIT_PRODUCTION_CHAINS_STORAGE_TRANSPORT_DEPENDENCY_.md",
+  "workflow_tier": "T4_PRODUCTION_EXTERNAL"
+}

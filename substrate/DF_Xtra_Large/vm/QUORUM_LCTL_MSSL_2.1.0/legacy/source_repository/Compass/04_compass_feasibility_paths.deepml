@@ -1,0 +1,64 @@
+deepml logic 0.3
+module repository.compass.feasibility_paths
+policy pure_by_default
+policy no_network
+
+type FeasibilityState = Unknown | Feasible | Constrained | Infeasible
+
+constraint path_budget(cost:Int, risk:Int) {
+  cost >= 0
+  risk >= 0
+  cost + risk <= 100
+}
+
+knowledge_base CompassFeasibility {
+  fact suite_assignment("SOPHIA", "semantic_judgment")
+  fact suite_assignment("CHARLOTTE", "structural_validation")
+  fact suite_assignment("LANDON", "repository_integration")
+  fact suite_assignment("PROFESSOR", "reviewable_explanation")
+  fact suite_assignment("PODIUM", "job_and_evidence_queue")
+  fact edge("origin", "policy_gate")
+  fact edge("policy_gate", "evidence_gate")
+  fact edge("evidence_gate", "integration_gate")
+  fact edge("integration_gate", "destination")
+  fact edge_available("origin", "policy_gate")
+  fact edge_available("policy_gate", "evidence_gate")
+  fact edge_available("evidence_gate", "integration_gate")
+  fact edge_available("integration_gate", "destination")
+  fact edge_policy_allowed("origin", "policy_gate")
+  fact edge_policy_allowed("policy_gate", "evidence_gate")
+  fact edge_policy_allowed("evidence_gate", "integration_gate")
+  fact edge_policy_allowed("integration_gate", "destination")
+  fact edge_evidence_ready("origin", "policy_gate")
+  fact edge_evidence_ready("policy_gate", "evidence_gate")
+  fact edge_evidence_ready("evidence_gate", "integration_gate")
+  fact edge_evidence_ready("integration_gate", "destination")
+
+  rule feasible_edge(A, B) :-
+    edge(A, B),
+    edge_available(A, B),
+    edge_policy_allowed(A, B),
+    edge_evidence_ready(A, B)
+
+  rule feasible_path(A, B) :-
+    feasible_edge(A, B)
+
+  rule feasible_path(A, C) :-
+    feasible_edge(A, B),
+    feasible_path(B, C)
+
+  rule certified_path(A, B) :-
+    feasible_path(A, B),
+    sophia_approved_path(A, B),
+    charlotte_validated_path(A, B),
+    landon_integrated_path(A, B),
+    professor_explained_path(A, B),
+    podium_evidence_complete_path(A, B)
+}
+
+infer feasible_path("origin", Goal) strategy best_first memoize true
+integrate graph CompassFeasibilityGraph from facts and rules
+plan CompassFeasibilityPlan goal destination_reachable actions [inspect, constrain, traverse, validate, certify]
+certify logic CompassFeasibility using proof_carrying
+optimize module using [tail_call, rule_indexing, common_subexpression_elimination, tabling, proof_normalization]
+lower module to DEEPML_LOGIC_R12

@@ -1,0 +1,36 @@
+ja source 0.3
+module suite15.orchestrator.load_order
+use Agent
+policy no_network
+
+agent OrchestratorLoadOrder {
+    identity "orchestrator_load_order"
+    role "sophia-charlotte-landon-professor-podium-orchestrator"
+    goal load_suites_in_canonical_order when confidence >= 0.95
+    memory session retention 1h
+    budget steps 45 tools 5
+    tool SOPHIAModelDependencies(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateOrder(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONLoadSuites(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainOrder(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordLoadOrder(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIAModelDependencies
+        authorize CHARLOTTEValidateOrder
+        authorize LANDONLoadSuites
+        authorize ProfessorExplainOrder
+        authorize PodiumRecordLoadOrder
+        continue when policy_allows
+        execute SOPHIAModelDependencies("suite_dependencies")
+        execute CHARLOTTEValidateOrder("candidate_load_order")
+        execute LANDONLoadSuites("approved_load_order")
+        execute ProfessorExplainOrder("load_results")
+        execute PodiumRecordLoadOrder("load_order_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "OrchestratorLoadOrder.mcrt"
+

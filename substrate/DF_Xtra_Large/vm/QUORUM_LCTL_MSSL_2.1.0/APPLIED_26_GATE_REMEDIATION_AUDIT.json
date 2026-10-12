@@ -1,0 +1,48 @@
+{
+  "applied_workflow": "QUORUM_RCPW_7_26_BLOCKED_GATES_REMEDIATION_PROMPT_WORKFLOW_1.0.0.zip",
+  "claim_boundary": "The 26 prior atomic blockers are directly evidenced for the hosted-reference profile. This does not assert production renderer/physics/AI fidelity, all 80 Golden Worlds at production fidelity, native upstream LCTL world primitives, production distributed/multi-host fabric, target-hardware/cross-platform production qualification, production-duration soak, or external-party QP4 certification.",
+  "demonstrated_profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "full_rcpw_7_gate": "PARTIAL",
+  "generated_utc": "2026-08-11T06:32:44.610891+00:00",
+  "higher_profile_boundary": {
+    "QP2": "PARTIAL",
+    "QP3": "BLOCKED",
+    "QP4": "BLOCKED",
+    "note": "Local hosted evidence remediates the 26 requirement-level blockers. It does not constitute production-scale or external-party certification."
+  },
+  "previous_blocked_atomic_requirements": 26,
+  "regression": {
+    "base_repo_regression": {
+      "exit_code": 0,
+      "log": "world/evidence/remediation_26/base_repo_regression.log",
+      "seconds": 5.515198
+    },
+    "base_vm_tests": {
+      "exit_code": 0,
+      "log": "world/evidence/remediation_26/base_vm_tests.log",
+      "seconds": 8.509933
+    },
+    "remediation_tests": {
+      "exit_code": 0,
+      "log": "world/evidence/remediation_26/remediation_tests.log",
+      "seconds": 5.419885
+    },
+    "world_tests": {
+      "exit_code": 0,
+      "log": "world/evidence/remediation_26/world_tests.log",
+      "seconds": 7.091877
+    }
+  },
+  "remaining_atomic_blocked": 0,
+  "remediated_operational": 26,
+  "remediation_regressed": 0,
+  "schema": "QUORUM-RCPW7-26-GATE-APPLICATION-AUDIT/1",
+  "source_candidate": "QUORUM_GENERIC_PROJECT_LCTL_MSSL_VIRTUAL_MACHINE_5.0.0_CANDIDATE_RCPW_7.0.0_APPLIED.zip",
+  "workflow_counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 267,
+    "PARTIAL": 315,
+    "REGRESSED": 0
+  },
+  "world_qualification_status": "OPERATIONAL"
+}

@@ -1,0 +1,45 @@
+ja source 0.3
+module suite54.local_model_provider.model_lifecycle_and_health
+use Service
+policy explicit_network
+
+service ModelLifecycleAndHealth {
+    message ModelReconciliationRequest {
+        request_id: Text,
+        provider_id: Text,
+        model_id: Text,
+        expected_lifecycle_state: Text,
+        desired_lifecycle_state: Text,
+        readiness_snapshot_hash: Text,
+        health_snapshot_hash: Text,
+        resource_lease_id: Text,
+        recovery_policy_hash: Text,
+        approval_receipt: Text
+    }
+    message ModelReconciliationResponse {
+        reconciliation_status: Text,
+        prior_lifecycle_state: Text,
+        resulting_lifecycle_state: Text,
+        scheduling_eligibility: Text,
+        recovery_action: Text,
+        reconciliation_evidence_hash: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_provider_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint reconcile(request: ModelReconciliationRequest) -> Stream<ModelReconciliationResponse>
+        auth capability local_model.provider.reconcile
+        deadline 45s
+        retry max 0
+        idempotency request.request_id
+    protocol ModelReconciliationSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json ModelLifecycleAndHealth.compatibility_report

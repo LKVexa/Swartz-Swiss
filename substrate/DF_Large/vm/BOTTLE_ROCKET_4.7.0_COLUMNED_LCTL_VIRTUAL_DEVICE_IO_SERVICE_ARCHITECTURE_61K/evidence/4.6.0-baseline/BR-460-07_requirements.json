@@ -1,0 +1,81 @@
+{
+  "package": "BR-460-07",
+  "record": "BR.PackageRequirements",
+  "requirements": [
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 + .build/t430 arithmetic vectors",
+      "evidence_path": "evidence/BR-460-07_tests.log",
+      "exit_code": 0,
+      "notes": "Arithmetic uses active-limb algorithms plus size-sensitive small paths and canonical normalization.",
+      "requirement_id": "BR-460-07-R01",
+      "result": "PASS",
+      "sha256": "088c330247194329bd0eb2ca79eefa05aaa5d54ef084ff126ce7c93e069cc982",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 + .build/t430 arithmetic vectors",
+      "evidence_path": "evidence/BR-460-07_tests.log",
+      "exit_code": 0,
+      "notes": "Arithmetic uses active-limb algorithms plus size-sensitive small paths and canonical normalization.",
+      "requirement_id": "BR-460-07-R02",
+      "result": "PASS",
+      "sha256": "088c330247194329bd0eb2ca79eefa05aaa5d54ef084ff126ce7c93e069cc982",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 + .build/t430 arithmetic vectors",
+      "evidence_path": "evidence/BR-460-07_tests.log",
+      "exit_code": 0,
+      "notes": "Arithmetic uses active-limb algorithms plus size-sensitive small paths and canonical normalization.",
+      "requirement_id": "BR-460-07-R03",
+      "result": "PASS",
+      "sha256": "088c330247194329bd0eb2ca79eefa05aaa5d54ef084ff126ce7c93e069cc982",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 + .build/t430 arithmetic vectors",
+      "evidence_path": "evidence/BR-460-07_tests.log",
+      "exit_code": 0,
+      "notes": "Arithmetic uses active-limb algorithms plus size-sensitive small paths and canonical normalization.",
+      "requirement_id": "BR-460-07-R04",
+      "result": "PASS",
+      "sha256": "088c330247194329bd0eb2ca79eefa05aaa5d54ef084ff126ce7c93e069cc982",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 + .build/t430 arithmetic vectors",
+      "evidence_path": "evidence/BR-460-07_tests.log",
+      "exit_code": 0,
+      "notes": "Arithmetic uses active-limb algorithms plus size-sensitive small paths and canonical normalization.",
+      "requirement_id": "BR-460-07-R05",
+      "result": "PASS",
+      "sha256": "088c330247194329bd0eb2ca79eefa05aaa5d54ef084ff126ce7c93e069cc982",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 + .build/t430 arithmetic vectors",
+      "evidence_path": "evidence/BR-460-07_tests.log",
+      "exit_code": 0,
+      "notes": "Arithmetic uses active-limb algorithms plus size-sensitive small paths and canonical normalization.",
+      "requirement_id": "BR-460-07-R06",
+      "result": "PASS",
+      "sha256": "088c330247194329bd0eb2ca79eefa05aaa5d54ef084ff126ce7c93e069cc982",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "status": "OPERATIONAL",
+  "title": "Arithmetic algorithms",
+  "workflow": "docs/WORKFLOW_APPLIED_4.6.0/07_BR-460-07_arithmetic_algorithms_PROMPT_AND_WORKFLOW.md"
+}

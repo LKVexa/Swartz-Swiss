@@ -1,0 +1,31 @@
+{
+  "baseline_release": "4.0.1 truth-measured evidence retained in evidence/4.0.1-baseline",
+  "material_regression_explanation": "Instruction/branch microbenchmarks include the new explicit lifecycle, capability and execution-budget checks on every step. This is an intentional isolation/mediation cost for 4.1.0; arithmetic and load/store kernels remain substantially closer. Performance optimization is not used to waive any correctness gate and is carried as a measured non-blocking optimization item.",
+  "performance": {
+    "arithmetic_ops_per_second": {
+      "baseline": 80827.653,
+      "current": 79125.056,
+      "percent": -2.11
+    },
+    "branch_ops_per_second": {
+      "baseline": 125881849.067,
+      "current": 65408724.042,
+      "percent": -48.04
+    },
+    "instructions_per_second": {
+      "baseline": 245436416.628,
+      "current": 137295966.663,
+      "percent": -44.06
+    },
+    "load_store_ops_per_second": {
+      "baseline": 837239.486,
+      "current": 804847.511,
+      "percent": -3.87
+    }
+  },
+  "size": {
+    "baseline_production_source_bytes": 60824,
+    "comparison_note": "Not like-for-like: 4.1.0 production boundary intentionally counts src + all adapters + spec + Makefile and excludes host CLI/tooling.",
+    "current_production_source_bytes": 60820
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "assembler_peak_rss_kib": 6492,
+  "crypto_verify_peak_rss_kib": 39348,
+  "execution_peak_rss_kib": 39732,
+  "native_stack_static": {
+    "functions": 41,
+    "max_static_frame_bytes": 163728,
+    "sum_static_frames_bytes": 244528,
+    "top": [
+      {
+        "bytes": 163728,
+        "function": "serve",
+        "qualifier": "static"
+      },
+      {
+        "bytes": 18672,
+        "function": "assemble",
+        "qualifier": "dynamic,bounded"
+      },
+      {
+        "bytes": 13216,
+        "function": "update",
+        "qualifier": "static"
+      },
+      {
+        "bytes": 10432,
+        "function": "br_selftest",
+        "qualifier": "dynamic,bounded"
+      },
+      {
+        "bytes": 9024,
+        "function": "verifyrun",
+        "qualifier": "static"
+      },
+      {
+        "bytes": 8992,
+        "function": "statecmd",
+        "qualifier": "static"
+      },
+      {
+        "bytes": 8944,
+        "function": "runplain",
+        "qualifier": "static"
+      },
+      {
+        "bytes": 5040,
+        "function": "br_apdu",
+        "qualifier": "static"
+      },
+      {
+        "bytes": 2416,
+        "function": "br_vm_recover",
+        "qualifier": "static"
+      },
+      {
+        "bytes": 1632,
+        "function": "br_vm_save",
+        "qualifier": "static"
+      },
+      {
+        "bytes": 560,
+        "function": "sync_parent",
+        "qualifier": "static"
+      },
+      {
+        "bytes": 384,
+        "function": "brarg.constprop",
+        "qualifier": "static"
+      }
+    ]
+  },
+  "persistence_recovery_peak_rss_kib": 41524,
+  "subsystems": {
+    "crypto_application_visible_key_signature_bytes": 128,
+    "crypto_process_peak_rss_kib": 39348,
+    "current_brim_image_buffer_bytes": 176,
+    "fragment_update_buffer_requested_bytes": 51200,
+    "maximum_brim_image_buffer_bytes": 51200,
+    "parser_compiler_current_output_allocation_bytes": 176,
+    "parser_compiler_process_peak_rss_kib": 6492,
+    "persistence_process_peak_rss_kib": 41524,
+    "register_bank_requested_bytes": 2097152,
+    "scratch_requested_bytes": 262144,
+    "wide_stack_requested_bytes": 33554432
+  },
+  "vm": {
+    "allocator_overhead_bytes": 12256,
+    "fragment_requested_bytes": 51200,
+    "fragment_usable_bytes": 51208,
+    "heap_requested_bytes": 35964928,
+    "heap_usable_bytes": 35977184,
+    "native_stack_limit_bytes": 8388608,
+    "record": "BOTTLE_ROCKET.RuntimeMemoryMeasurement",
+    "register_count": 16,
+    "register_requested_bytes": 2097152,
+    "register_usable_bytes": 2101232,
+    "rss_before_init_kib": 3420,
+    "rss_idle_kib": 3796,
+    "scratch_requested_bytes": 262144,
+    "scratch_usable_bytes": 266232,
+    "scratch_words": 2,
+    "stack_requested_bytes": 33554432,
+    "stack_usable_bytes": 33558512,
+    "stack_words": 256,
+    "vm_inline_bytes": 8888,
+    "word_bits": 1048576,
+    "word_bytes": 131072
+  }
+}

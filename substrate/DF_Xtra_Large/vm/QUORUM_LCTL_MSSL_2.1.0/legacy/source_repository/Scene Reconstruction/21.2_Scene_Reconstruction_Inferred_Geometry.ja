@@ -1,0 +1,28 @@
+ja portal.scene 0.3
+module suite21.scene_reconstruction.inferred_geometry
+policy no_execute_unknown_code
+policy no_network
+
+scene SceneReconstructionInferredGeometry {
+  resource InferredSceneMesh: Mesh = "geometry/inferred_scene.mesh"
+  material InferredGeometryMaterial { shader: "portal/pbr" metallic: 0.0 roughness: 0.5 }
+  entity GeometryRoot {
+    component Transform3D {
+      position: vec3(0m, 0m, 0m)
+      rotation: quat.identity
+      scale: vec3(1, 1, 1)
+    }
+    component MeshRenderer { mesh: InferredSceneMesh material: InferredGeometryMaterial }
+    component Tag { value: "geometry.inferred.canonical" }
+  }
+  entity SOPHIA_GeometryHypothesis parent GeometryRoot { component Tag { value: "sophia.geometry.hypothesis" } }
+  entity CHARLOTTE_GeometryValidation parent GeometryRoot { component Tag { value: "charlotte.geometry.validation" } }
+  entity LANDON_GeometryBinding parent GeometryRoot { component Tag { value: "landon.geometry.binding" } }
+  entity Professor_GeometryExplanation parent GeometryRoot { component Tag { value: "professor.geometry.explanation" } }
+  entity Podium_GeometryReceipt parent GeometryRoot { component Tag { value: "podium.geometry.receipt" } }
+}
+serialize SceneReconstructionInferredGeometry using canonical_scene_v1
+snapshot SceneReconstructionInferredGeometry as "scene_reconstruction_inferred_geometry.snapshot"
+optimize scene SceneReconstructionInferredGeometry using [stable_ids, topological_order, resource_deduplication, constant_transform]
+lower SceneReconstructionInferredGeometry to PORTAL_SCENE_R12
+trace SceneReconstructionInferredGeometry to "scene_reconstruction_inferred_geometry.mcrt"

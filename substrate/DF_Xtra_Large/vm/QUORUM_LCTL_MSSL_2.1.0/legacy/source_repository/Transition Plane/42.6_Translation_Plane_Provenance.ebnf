@@ -1,0 +1,55 @@
+ja certifier 0.3
+module suite42.translation_plane.provenance
+policy no_execute_unknown_code
+policy no_network
+grammar TranslationPlaneProvenance {
+  token IDENT = letter, { letter | digit | "_" } ;
+  token NUMBER = digit, { digit } ;
+  production provenance_chain = root_event, { derived_event } ;
+  production root_event = "root", event_identity, source_hash, result_hash ;
+  production derived_event = "derived", event_identity, parent_identity, operation_identity, source_hash, result_hash, lineage_depth ;
+  production event_identity = IDENT ;
+  production parent_identity = IDENT ;
+  production operation_identity = IDENT ;
+  production source_hash = "source_hash", IDENT ;
+  production result_hash = "result_hash", IDENT ;
+  production lineage_depth = "depth", NUMBER ;
+  start provenance_chain ;
+  predicate append_only_lineage(provenance_chain) ;
+  predicate parent_complete_acyclic_lineage(provenance_chain) ;
+  predicate depth_matches_parent_chain(provenance_chain) ;
+  type_judgment provenance_chain : CertifiedProvenanceChain ;
+  ast suite ProvenanceAST { provenance: line_column semantic_ids: stable }
+  policy_validator ProvenanceSafety requires [no_network, no_execute_unknown_code] ;
+  compiler_validator ProvenanceValidator verifies [AST, R12, MCRT] ;
+  evidence ProvenanceEvidence {
+    source_hash: required
+    result_hash: required
+    parent_hash: required
+    chain_hash: required
+    compiler_hash: required
+    runtime_hash: required
+    sophia_judgment: required
+    charlotte_validation: required
+    landon_status: required
+    professor_explanation: required
+    podium_receipt: required
+  }
+  certification profile TranslationPlaneProvenanceStrict { require all validators }
+}
+certify grammar TranslationPlaneProvenance profile strict
+
+(* Smithson 8S Coupled Mechanics editorial extension. Confirm compiler adoption before treating these productions as normative. *)
+couplingMechanics8SRecord = "coupling8s", "{", identityField, geometry5Field, elucidationField, activationField, phaseField, couplingField, projectionField, relationField, efficacyField, certificationField, "}" ;
+identityField = "identity", ":", object ;
+geometry5Field = "geometry5", ":", object ;
+elucidationField = "elucidation", ":", object ;
+activationField = "activation", ":", object ;
+phaseField = "phase", ":", object ;
+couplingField = "coupling", ":", object ;
+projectionField = "projection", ":", object ;
+relationField = "relation", ":", object ;
+efficacyField = "efficacy", ":", object ;
+certificationField = "certification", ":", object ;
+(* Required fields include c5, t8_meaning, eta_ind, W, optional H, p, support, radius, g5, delta8, g3, gJ, Delta_8S, interaction_order, projection_version, uncertainty, provenance, and limitations. *)
+(* g5>tol5 and g3<=tol3 remains PROJECTION_ONLY. No S^8 topology or physical quantum entanglement is claimed. *)

@@ -1,0 +1,99 @@
+RUSSL Virtual Research Terminal — browser-local foundation 0.3.0
+Prepared 2026-10-11 for RUSSELL PHILIP SMITHSON.
+
+The supplied SpinDoctor 3.1.2 package identifies:
+Copyright (C) 2026 RUSSELL PHILIP SMITHSON
+GNU General Public License, version 3.
+Its QUANTUM_TERMINAL.html is preserved unchanged under reference/. The new shell
+uses its interaction patterns: catalogue, preset composer, ordered execution,
+structured return explorer, explicit insert/run separation, and provenance.
+The new shell, field/scalar engines, equation register and relay are provided
+under GPL-3.0-only with editable source and tests. Release 0.2 adds a bounded
+equation-audit interface, qualified GF9 operators, scalar calculations and
+report integration. No SpinDoctor native service or machine configuration
+changed. The supplied originals and releases 0.1 and 0.2 remain unchanged.
+
+Release 0.3 adds the GF3 profile, an image-equation register and audit, complex
+Fourier matrix conjugation, explicit sampled signal profiles, exact odd-field
+coordinate analogues, and the GFM reapplication view/commands. The new source
+and documentation remain GPL-3.0-only. Ordinary real/complex reference models,
+signal encodings and exact field analogues retain separate declared domains.
+Their successful numerical or algebraic checks do not establish new physics.
+
+The supplied RUSSL Research Workbench ZIP is preserved byte-for-byte. Its
+original standalone HTML and complete editable source are available separately.
+The derivative reference/workbench.html adds the bounded virtual-terminal relay.
+At runtime that relay inserts an adapter into the embedded research terminal;
+the original GF80 algorithms and vendor laboratories remain intact. This dated
+modification is reversible by using reference/workbench-original.html.
+
+The original workbench's GPL license, COPYRIGHT, NOTICE, third-party notices and
+integration notice are preserved under workbench-notices/. The embedded source
+corpus and candidate documents retain their original rights and attribution.
+This notice does not grant new rights in third-party research material.
+
+Candidate text, PDF files and the new audit report are preserved unchanged.
+Their instructions and historical validation claims are treated as source
+material. Implemented definitions are independently specified in README.txt,
+docs/FOUNDATIONS.txt and equation-audit.json, and tested under the declared
+conventions. Equation numbers are candidate-report aliases; no unavailable
+500-equation suite or universal physical theory is certified by this release.
+
+Three user-supplied image files are retained byte-for-byte under
+reference/image-equations/. Their visible equations are transcribed in
+image-equations.json and qualified in docs/Image_Equation_Audit.txt. The
+rotation image HKIRhAvaYAEyfhj.jpg visibly credits TheMathFlow; that credit is
+retained. No creator, publication date, additional attribution, license or
+surrounding post content is inferred for the other images. Their original
+rights remain with their rights holders; this project's GPL notice does not
+relicense the source images. Their hashes identify retained bytes, not authors.
+
+Primary field references:
+A. Vourdas, The Frobenius formalism in Galois quantum systems,
+https://arxiv.org/abs/quant-ph/0605054.
+D. Gross, Hudson's Theorem for finite-dimensional quantum systems,
+https://arxiv.org/abs/quant-ph/0602001.
+The equation register and detailed audits identify additional primary sources
+for scalar coupling, arithmetic delta, numerical propagation, and diagnostics.
+No full primary paper text is redistributed.
+
+Image-equation primary references:
+MIT OpenCourseWare, Physical Pendulum, section 24.1.1 and Appendix 24A:
+https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/mit8_01scs22_chapter24.pdf
+MIT OpenCourseWare, Nonlinear Dynamics, pendulum section 1.1:
+https://ocw.mit.edu/courses/12-006j-nonlinear-dynamics-chaos-fall-2022/mit12_006jf22_lec4-5.pdf
+NASA/JPL NAIF, Rotation required reading, active/passive convention:
+https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/C/req/rotation.html
+NIST DLMF 25.5.1, zeta integral representation:
+https://dlmf.nist.gov/25.5.E1
+The exact field-coordinate analogues are declared algebraic constructions;
+these references are not credited with a universal finite-field reformulation.
+
+Browser rendering and live preview/iframe communication remain unverified in
+the available environment. Mathematical, command and record tests do not
+establish native hardware execution or performance.
+
+source-register.json identifies preserved originals by SHA-256. The browser
+entrypoint and derivative reference workbench are identified in validation/.
+
+Release 0.4 adds independently checked ordinary black-hole reference formulas,
+a separate hypothetical aperture/cover simulation, a logical family map and
+finite signal adapters. All five new supplied reference files remain unchanged
+under reference/blackhole-specification/. The preserved user write-up is inert
+source material. Images/PDF retain their rights holders' rights; GPL does not
+relicense those reference assets. No generalized metric equivalence, timeless
+material, traversability or electromagnetic injury mechanism is certified.
+Primary sources and conditional qualifications are listed in the new audit.
+
+Release 0.5 makes Galois Field Mechanics the primary terminal workflow.
+Original-scale ordinary signals and exact field-valued polynomial transforms
+are separate domains; zero data remains valid. Field-coordinate inspectors
+and the retained GF80 word workbench support reversible algebraic experiments.
+Earlier normalized-state demonstrations remain in the secondary Reference
+math lab and historical files. Original source titles and bytes are preserved.
+The current contract is docs/GFM_Terminal_Identity.txt. The field-valued DFT
+uses powers of a primitive field element and length q-1, following the exact
+finite-field FFT construction in MIT OpenCourseWare chapter 17:
+https://ocw.mit.edu/courses/18-310-principles-of-discrete-applied-mathematics-fall-2013/b4a37cf6c0e515fb863e139c2a6a51ac_MIT18_310F13_Ch17.pdf
+The complex additive trace kernel uses the retained Vourdas definitions.
+Patch 0.5.1 adds visible calculation readiness, startup-error feedback and saved pendulum data that can be read without script execution. Mathematical engines and historical source/evidence bytes remain unchanged.

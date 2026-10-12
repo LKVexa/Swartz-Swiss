@@ -1,0 +1,1262 @@
+{
+  "sha256": "21f18484ae453fee9d8da6df2a472a3d2604e996b974d6cf50b42223e256b1ea",
+  "data": {
+    "schema": "RUSSL-virtual-session/1",
+    "version": "0.2.0",
+    "kind": "session",
+    "exportedAt": "2026-10-11T12:00:00.000Z",
+    "snapshot": {
+      "model": {
+        "schema": "RUSSL-finite-field-model/1",
+        "field": {
+          "id": "gf9",
+          "p": 3,
+          "n": 2,
+          "q": 9,
+          "polynomial": [
+            1,
+            0,
+            1
+          ],
+          "label": "GF(9)"
+        },
+        "labelEncoding": "integer = sum(c_i * p^i), polynomial coefficients low first",
+        "amplitudes": "complex floating point",
+        "fourierSign": "+2pi i",
+        "normalization": "1/sqrt(q)",
+        "character": "exp(2pi i Tr(x)/p)",
+        "tolerance": 1e-10,
+        "backend": "local browser JavaScript",
+        "physicalScope": "finite-dimensional complex-amplitude simulation"
+      },
+      "state": [
+        {
+          "re": 0,
+          "im": 0
+        },
+        {
+          "re": 0,
+          "im": 0
+        },
+        {
+          "re": 0,
+          "im": 0
+        },
+        {
+          "re": -0.35355339059327373,
+          "im": -0.6123724356957945
+        },
+        {
+          "re": 0,
+          "im": 0
+        },
+        {
+          "re": 0.7071067811865475,
+          "im": 0
+        },
+        {
+          "re": 0,
+          "im": 0
+        },
+        {
+          "re": 0,
+          "im": 0
+        },
+        {
+          "re": 0,
+          "im": 0
+        }
+      ],
+      "description": "Reflection (3, 4)",
+      "operations": 3,
+      "normSquared": 1
+    },
+    "records": [
+      {
+        "id": "rec-1-e9f5813e",
+        "sha256": "e9f5813e44b21ffc7173143fda6b3c59c23bc1c6d1a3ca2d18895916a8990e58",
+        "data": {
+          "schema": "RUSSL-research-record/1",
+          "kind": "gf-state",
+          "label": "Audited GF9 displacement / reflection / negative Wigner",
+          "capturedAt": "2026-10-11T12:00:00.000Z",
+          "payload": {
+            "snapshot": {
+              "model": {
+                "schema": "RUSSL-finite-field-model/1",
+                "field": {
+                  "id": "gf9",
+                  "p": 3,
+                  "n": 2,
+                  "q": 9,
+                  "polynomial": [
+                    1,
+                    0,
+                    1
+                  ],
+                  "label": "GF(9)"
+                },
+                "labelEncoding": "integer = sum(c_i * p^i), polynomial coefficients low first",
+                "amplitudes": "complex floating point",
+                "fourierSign": "+2pi i",
+                "normalization": "1/sqrt(q)",
+                "character": "exp(2pi i Tr(x)/p)",
+                "tolerance": 1e-10,
+                "backend": "local browser JavaScript",
+                "physicalScope": "finite-dimensional complex-amplitude simulation"
+              },
+              "state": [
+                {
+                  "re": 0,
+                  "im": 0
+                },
+                {
+                  "re": 0,
+                  "im": 0
+                },
+                {
+                  "re": 0,
+                  "im": 0
+                },
+                {
+                  "re": -0.35355339059327373,
+                  "im": -0.6123724356957945
+                },
+                {
+                  "re": 0,
+                  "im": 0
+                },
+                {
+                  "re": 0.7071067811865475,
+                  "im": 0
+                },
+                {
+                  "re": 0,
+                  "im": 0
+                },
+                {
+                  "re": 0,
+                  "im": 0
+                },
+                {
+                  "re": 0,
+                  "im": 0
+                }
+              ],
+              "description": "Reflection (3, 4)",
+              "operations": 3,
+              "normSquared": 1
+            },
+            "commandProvenance": [
+              "gf.field gf9",
+              "gf.state [{\"re\":0.7071067811865475,\"im\":0},{\"re\":0.7071067811865475,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0}]",
+              "gf.quadratic 4",
+              "gf.displace 3 4",
+              "gf.reflect 3 4",
+              "gf.verify",
+              "gf.wigner",
+              "math.cg 0.5 0.5 0.5 -0.5 0 0",
+              "math.delta 3 2",
+              "math.delta.check 3 1 1",
+              "math.cayley {\"H\":[[0,1],[1,0]],\"state\":[1,0],\"dt\":0.1,\"hbar\":1}"
+            ],
+            "verification": {
+              "field": "gf9",
+              "dimension": 9,
+              "stateNorm": 1,
+              "tolerance": 1e-10,
+              "residuals": {
+                "normalization": 0,
+                "fourierInverse": 1.2412670766236366e-16,
+                "frobeniusCycle": 0,
+                "characterOrthogonality": 2.4671622769447922e-17,
+                "weyl": 0
+              },
+              "checks": {
+                "normalization": {
+                  "residual": 0,
+                  "passed": true
+                },
+                "fourierInverse": {
+                  "residual": 1.2412670766236366e-16,
+                  "passed": true
+                },
+                "frobeniusCycle": {
+                  "residual": 0,
+                  "passed": true
+                },
+                "characterOrthogonality": {
+                  "residual": 2.4671622769447922e-17,
+                  "passed": true
+                },
+                "weyl": {
+                  "residual": 0,
+                  "passed": true
+                }
+              },
+              "passed": true
+            },
+            "equationAudit": {
+              "version": "0.2.0",
+              "sourceSha256": "068f68965b6157c88e9e881a48a6bfacfc040455cb957af17f613785ad0237f8",
+              "entries": [
+                {
+                  "id": "eq-37",
+                  "status": "refined",
+                  "domain": "Odd characteristic; registered executable profile GF9"
+                },
+                {
+                  "id": "eq-67",
+                  "status": "refined",
+                  "domain": "Odd characteristic field labels; normalized complex amplitudes"
+                },
+                {
+                  "id": "eq-88",
+                  "status": "refined",
+                  "domain": "Odd characteristic field labels; complex amplitudes"
+                },
+                {
+                  "id": "wigner",
+                  "status": "verified",
+                  "domain": "Normalized pure complex state; odd characteristic (GF9 profile)"
+                },
+                {
+                  "id": "mana",
+                  "status": "refined",
+                  "domain": "The implemented normalized odd-characteristic Wigner representation"
+                }
+              ],
+              "scope": "Audit of supplied report only; original 500-equation suite unavailable. Status applies within each declared domain."
+            }
+          }
+        }
+      }
+    ],
+    "commandProvenance": [
+      "gf.field gf9",
+      "gf.state [{\"re\":0.7071067811865475,\"im\":0},{\"re\":0.7071067811865475,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0}]",
+      "gf.quadratic 4",
+      "gf.displace 3 4",
+      "gf.reflect 3 4",
+      "gf.verify",
+      "gf.wigner",
+      "math.cg 0.5 0.5 0.5 -0.5 0 0",
+      "math.delta 3 2",
+      "math.delta.check 3 1 1",
+      "math.cayley {\"H\":[[0,1],[1,0]],\"state\":[1,0],\"dt\":0.1,\"hbar\":1}",
+      "ledger.record Audited GF9 displacement / reflection / negative Wigner"
+    ],
+    "returns": [
+      {
+        "id": "ret-example-001",
+        "command": "gf.field gf9",
+        "ok": true,
+        "summary": "Selected GF(9); state restarted at |0⟩.",
+        "profile": "GF(9)",
+        "elapsedMs": 0,
+        "details": {
+          "schema": "RUSSL-finite-field-model/1",
+          "field": {
+            "id": "gf9",
+            "p": 3,
+            "n": 2,
+            "q": 9,
+            "polynomial": [
+              1,
+              0,
+              1
+            ],
+            "label": "GF(9)"
+          },
+          "labelEncoding": "integer = sum(c_i * p^i), polynomial coefficients low first",
+          "amplitudes": "complex floating point",
+          "fourierSign": "+2pi i",
+          "normalization": "1/sqrt(q)",
+          "character": "exp(2pi i Tr(x)/p)",
+          "tolerance": 1e-10,
+          "backend": "local browser JavaScript",
+          "physicalScope": "finite-dimensional complex-amplitude simulation"
+        }
+      },
+      {
+        "id": "ret-example-002",
+        "command": "gf.state [{\"re\":0.7071067811865475,\"im\":0},{\"re\":0.7071067811865475,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0},{\"re\":0,\"im\":0}]",
+        "ok": true,
+        "summary": "Loaded a validated normalized complex vector.",
+        "profile": "GF(9)",
+        "elapsedMs": 0,
+        "details": {
+          "model": {
+            "schema": "RUSSL-finite-field-model/1",
+            "field": {
+              "id": "gf9",
+              "p": 3,
+              "n": 2,
+              "q": 9,
+              "polynomial": [
+                1,
+                0,
+                1
+              ],
+              "label": "GF(9)"
+            },
+            "labelEncoding": "integer = sum(c_i * p^i), polynomial coefficients low first",
+            "amplitudes": "complex floating point",
+            "fourierSign": "+2pi i",
+            "normalization": "1/sqrt(q)",
+            "character": "exp(2pi i Tr(x)/p)",
+            "tolerance": 1e-10,
+            "backend": "local browser JavaScript",
+            "physicalScope": "finite-dimensional complex-amplitude simulation"
+          },
+          "state": [
+            {
+              "re": 0.7071067811865475,
+              "im": 0
+            },
+            {
+              "re": 0.7071067811865475,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            }
+          ],
+          "description": "Explicit complex state",
+          "operations": 1,
+          "normSquared": 1
+        }
+      },
+      {
+        "id": "ret-example-003",
+        "command": "gf.quadratic 4",
+        "ok": true,
+        "summary": "η(1 + α) = -1.",
+        "profile": "GF(9)",
+        "elapsedMs": 0,
+        "details": {
+          "element": 4,
+          "value": -1,
+          "model": {
+            "schema": "RUSSL-finite-field-model/1",
+            "field": {
+              "id": "gf9",
+              "p": 3,
+              "n": 2,
+              "q": 9,
+              "polynomial": [
+                1,
+                0,
+                1
+              ],
+              "label": "GF(9)"
+            },
+            "labelEncoding": "integer = sum(c_i * p^i), polynomial coefficients low first",
+            "amplitudes": "complex floating point",
+            "fourierSign": "+2pi i",
+            "normalization": "1/sqrt(q)",
+            "character": "exp(2pi i Tr(x)/p)",
+            "tolerance": 1e-10,
+            "backend": "local browser JavaScript",
+            "physicalScope": "finite-dimensional complex-amplitude simulation"
+          },
+          "equationAudit": {
+            "version": "0.2.0",
+            "sourceSha256": "068f68965b6157c88e9e881a48a6bfacfc040455cb957af17f613785ad0237f8",
+            "entries": [
+              {
+                "id": "eq-37",
+                "status": "refined",
+                "domain": "Odd characteristic; registered executable profile GF9"
+              }
+            ],
+            "scope": "Audit of supplied report only; original 500-equation suite unavailable. Status applies within each declared domain."
+          }
+        }
+      },
+      {
+        "id": "ret-example-004",
+        "command": "gf.displace 3 4",
+        "ok": true,
+        "summary": "Applied D(3,4) in GF(9).",
+        "profile": "GF(9)",
+        "elapsedMs": 0,
+        "details": {
+          "model": {
+            "schema": "RUSSL-finite-field-model/1",
+            "field": {
+              "id": "gf9",
+              "p": 3,
+              "n": 2,
+              "q": 9,
+              "polynomial": [
+                1,
+                0,
+                1
+              ],
+              "label": "GF(9)"
+            },
+            "labelEncoding": "integer = sum(c_i * p^i), polynomial coefficients low first",
+            "amplitudes": "complex floating point",
+            "fourierSign": "+2pi i",
+            "normalization": "1/sqrt(q)",
+            "character": "exp(2pi i Tr(x)/p)",
+            "tolerance": 1e-10,
+            "backend": "local browser JavaScript",
+            "physicalScope": "finite-dimensional complex-amplitude simulation"
+          },
+          "state": [
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": -0.35355339059327373,
+              "im": -0.6123724356957945
+            },
+            {
+              "re": -0.35355339059327373,
+              "im": 0.6123724356957945
+            },
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            }
+          ],
+          "description": "Displacement (3, 4)",
+          "operations": 2,
+          "normSquared": 1,
+          "operator": "D(xi,zeta) = chi(-xi*zeta/2) Z(zeta) X(xi)",
+          "equationAudit": {
+            "version": "0.2.0",
+            "sourceSha256": "068f68965b6157c88e9e881a48a6bfacfc040455cb957af17f613785ad0237f8",
+            "entries": [
+              {
+                "id": "eq-67",
+                "status": "refined",
+                "domain": "Odd characteristic field labels; normalized complex amplitudes"
+              }
+            ],
+            "scope": "Audit of supplied report only; original 500-equation suite unavailable. Status applies within each declared domain."
+          }
+        }
+      },
+      {
+        "id": "ret-example-005",
+        "command": "gf.reflect 3 4",
+        "ok": true,
+        "summary": "Applied R(3,4) in GF(9).",
+        "profile": "GF(9)",
+        "elapsedMs": 0,
+        "details": {
+          "model": {
+            "schema": "RUSSL-finite-field-model/1",
+            "field": {
+              "id": "gf9",
+              "p": 3,
+              "n": 2,
+              "q": 9,
+              "polynomial": [
+                1,
+                0,
+                1
+              ],
+              "label": "GF(9)"
+            },
+            "labelEncoding": "integer = sum(c_i * p^i), polynomial coefficients low first",
+            "amplitudes": "complex floating point",
+            "fourierSign": "+2pi i",
+            "normalization": "1/sqrt(q)",
+            "character": "exp(2pi i Tr(x)/p)",
+            "tolerance": 1e-10,
+            "backend": "local browser JavaScript",
+            "physicalScope": "finite-dimensional complex-amplitude simulation"
+          },
+          "state": [
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": -0.35355339059327373,
+              "im": -0.6123724356957945
+            },
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": 0.7071067811865475,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": 0
+            }
+          ],
+          "description": "Reflection (3, 4)",
+          "operations": 3,
+          "normSquared": 1,
+          "operator": "R(q0,p0) psi[x] = chi(p0*(x-y)) psi[y], y = 2*q0-x",
+          "equationAudit": {
+            "version": "0.2.0",
+            "sourceSha256": "068f68965b6157c88e9e881a48a6bfacfc040455cb957af17f613785ad0237f8",
+            "entries": [
+              {
+                "id": "eq-88",
+                "status": "refined",
+                "domain": "Odd characteristic field labels; complex amplitudes"
+              }
+            ],
+            "scope": "Audit of supplied report only; original 500-equation suite unavailable. Status applies within each declared domain."
+          }
+        }
+      },
+      {
+        "id": "ret-example-006",
+        "command": "gf.verify",
+        "ok": true,
+        "summary": "All five mathematical audits passed.",
+        "profile": "GF(9)",
+        "elapsedMs": 0,
+        "details": {
+          "audit": {
+            "field": "gf9",
+            "dimension": 9,
+            "stateNorm": 1,
+            "tolerance": 1e-10,
+            "residuals": {
+              "normalization": 0,
+              "fourierInverse": 1.2412670766236366e-16,
+              "frobeniusCycle": 0,
+              "characterOrthogonality": 2.4671622769447922e-17,
+              "weyl": 0
+            },
+            "checks": {
+              "normalization": {
+                "residual": 0,
+                "passed": true
+              },
+              "fourierInverse": {
+                "residual": 1.2412670766236366e-16,
+                "passed": true
+              },
+              "frobeniusCycle": {
+                "residual": 0,
+                "passed": true
+              },
+              "characterOrthogonality": {
+                "residual": 2.4671622769447922e-17,
+                "passed": true
+              },
+              "weyl": {
+                "residual": 0,
+                "passed": true
+              }
+            },
+            "passed": true
+          },
+          "model": {
+            "schema": "RUSSL-finite-field-model/1",
+            "field": {
+              "id": "gf9",
+              "p": 3,
+              "n": 2,
+              "q": 9,
+              "polynomial": [
+                1,
+                0,
+                1
+              ],
+              "label": "GF(9)"
+            },
+            "labelEncoding": "integer = sum(c_i * p^i), polynomial coefficients low first",
+            "amplitudes": "complex floating point",
+            "fourierSign": "+2pi i",
+            "normalization": "1/sqrt(q)",
+            "character": "exp(2pi i Tr(x)/p)",
+            "tolerance": 1e-10,
+            "backend": "local browser JavaScript",
+            "physicalScope": "finite-dimensional complex-amplitude simulation"
+          }
+        }
+      },
+      {
+        "id": "ret-example-007",
+        "command": "gf.wigner",
+        "ok": true,
+        "summary": "Wigner checks passed; 6 negative cells; mana₂ = log₂(5/3) within floating-point tolerance.",
+        "profile": "GF(9)",
+        "elapsedMs": 0,
+        "details": {
+          "wigner": {
+            "field": "gf9",
+            "dimension": 9,
+            "axes": {
+              "q0": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "p0": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            "axisOrder": "grid[q0][p0], polynomial-encoded position and momentum labels",
+            "grid": [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0.055555555555555546,
+                0.055555555555555546,
+                0.055555555555555546,
+                0.055555555555555546,
+                0.055555555555555546,
+                0.055555555555555546,
+                0.055555555555555546,
+                0.055555555555555546,
+                0.055555555555555546
+              ],
+              [
+                -0.055555555555555546,
+                0.11111111111111109,
+                -0.055555555555555546,
+                -0.055555555555555546,
+                0.11111111111111109,
+                -0.055555555555555546,
+                -0.055555555555555546,
+                0.11111111111111109,
+                -0.055555555555555546
+              ],
+              [
+                0.055555555555555546,
+                0.055555555555555546,
+                0.055555555555555546,
+                0.055555555555555546,
+                0.055555555555555546,
+                0.055555555555555546,
+                0.055555555555555546,
+                0.055555555555555546,
+                0.055555555555555546
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "normalization": 1,
+            "marginals": {
+              "position": [
+                0,
+                0,
+                0,
+                0.49999999999999983,
+                0,
+                0.49999999999999983,
+                0,
+                0,
+                0
+              ],
+              "momentum": [
+                0.055555555555555546,
+                0.22222222222222218,
+                0.055555555555555546,
+                0.055555555555555546,
+                0.22222222222222218,
+                0.055555555555555546,
+                0.055555555555555546,
+                0.22222222222222218,
+                0.055555555555555546
+              ],
+              "expectedPosition": [
+                0,
+                0,
+                0,
+                0.4999999999999999,
+                0,
+                0.4999999999999999,
+                0,
+                0,
+                0
+              ],
+              "expectedMomentum": [
+                0.05555555555555554,
+                0.22222222222222215,
+                0.05555555555555554,
+                0.05555555555555554,
+                0.22222222222222215,
+                0.05555555555555554,
+                0.05555555555555554,
+                0.22222222222222215,
+                0.05555555555555554
+              ]
+            },
+            "momentumConvention": "probabilities of the negative-sign Fourier state",
+            "purity": 0.9999999999999998,
+            "l1Norm": 1.6666666666666667,
+            "mana": 0.7369655941662062,
+            "manaLogBase": 2,
+            "negativity": 0.33333333333333337,
+            "negativeCellCount": 6,
+            "minValue": -0.055555555555555546,
+            "maxValue": 0.11111111111111109,
+            "maxImaginaryResidual": 0,
+            "tolerance": 1e-10,
+            "residuals": {
+              "normalization": 0,
+              "reality": 0,
+              "positionMarginal": 5.551115123125783e-17,
+              "momentumMarginal": 2.7755575615628914e-17,
+              "purity": 2.220446049250313e-16
+            },
+            "checks": {
+              "normalization": {
+                "residual": 0,
+                "passed": true
+              },
+              "reality": {
+                "residual": 0,
+                "passed": true
+              },
+              "positionMarginal": {
+                "residual": 5.551115123125783e-17,
+                "passed": true
+              },
+              "momentumMarginal": {
+                "residual": 2.7755575615628914e-17,
+                "passed": true
+              },
+              "purity": {
+                "residual": 2.220446049250313e-16,
+                "passed": true
+              }
+            },
+            "passed": true,
+            "scope": "normalized pure-state finite-field Wigner function; no mixed-state or hardware claim"
+          },
+          "audit": {
+            "passed": true,
+            "checks": {
+              "normalization": {
+                "residual": 0,
+                "passed": true
+              },
+              "reality": {
+                "residual": 0,
+                "passed": true
+              },
+              "positionMarginal": {
+                "residual": 5.551115123125783e-17,
+                "passed": true
+              },
+              "momentumMarginal": {
+                "residual": 2.7755575615628914e-17,
+                "passed": true
+              },
+              "purity": {
+                "residual": 2.220446049250313e-16,
+                "passed": true
+              }
+            }
+          },
+          "snapshot": {
+            "model": {
+              "schema": "RUSSL-finite-field-model/1",
+              "field": {
+                "id": "gf9",
+                "p": 3,
+                "n": 2,
+                "q": 9,
+                "polynomial": [
+                  1,
+                  0,
+                  1
+                ],
+                "label": "GF(9)"
+              },
+              "labelEncoding": "integer = sum(c_i * p^i), polynomial coefficients low first",
+              "amplitudes": "complex floating point",
+              "fourierSign": "+2pi i",
+              "normalization": "1/sqrt(q)",
+              "character": "exp(2pi i Tr(x)/p)",
+              "tolerance": 1e-10,
+              "backend": "local browser JavaScript",
+              "physicalScope": "finite-dimensional complex-amplitude simulation"
+            },
+            "state": [
+              {
+                "re": 0,
+                "im": 0
+              },
+              {
+                "re": 0,
+                "im": 0
+              },
+              {
+                "re": 0,
+                "im": 0
+              },
+              {
+                "re": -0.35355339059327373,
+                "im": -0.6123724356957945
+              },
+              {
+                "re": 0,
+                "im": 0
+              },
+              {
+                "re": 0.7071067811865475,
+                "im": 0
+              },
+              {
+                "re": 0,
+                "im": 0
+              },
+              {
+                "re": 0,
+                "im": 0
+              },
+              {
+                "re": 0,
+                "im": 0
+              }
+            ],
+            "description": "Reflection (3, 4)",
+            "operations": 3,
+            "normSquared": 1
+          },
+          "equationAudit": {
+            "version": "0.2.0",
+            "sourceSha256": "068f68965b6157c88e9e881a48a6bfacfc040455cb957af17f613785ad0237f8",
+            "entries": [
+              {
+                "id": "wigner",
+                "status": "verified",
+                "domain": "Normalized pure complex state; odd characteristic (GF9 profile)"
+              },
+              {
+                "id": "mana",
+                "status": "refined",
+                "domain": "The implemented normalized odd-characteristic Wigner representation"
+              }
+            ],
+            "scope": "Audit of supplied report only; original 500-equation suite unavailable. Status applies within each declared domain."
+          }
+        }
+      },
+      {
+        "id": "ret-example-008",
+        "command": "math.cg 0.5 0.5 0.5 -0.5 0 0",
+        "ok": true,
+        "summary": "Clebsch–Gordan singlet coefficient = +1/√2.",
+        "profile": "SU(2) / ordinary scalar coefficients",
+        "elapsedMs": 0,
+        "details": {
+          "domain": "SU(2) angular-momentum coupling / real coefficients in a complex-amplitude model",
+          "phaseConvention": "Condon-Shortley",
+          "j1": 0.5,
+          "m1": 0.5,
+          "j2": 0.5,
+          "m2": -0.5,
+          "J": 0,
+          "M": 0,
+          "coefficient": 0.7071067811865476,
+          "sign": 1,
+          "squared": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "allowed": true,
+          "reason": null,
+          "kMin": 0,
+          "kMax": 0,
+          "terms": 1,
+          "statePreserved": true,
+          "equationAudit": {
+            "version": "0.2.0",
+            "sourceSha256": "068f68965b6157c88e9e881a48a6bfacfc040455cb957af17f613785ad0237f8",
+            "entries": [
+              {
+                "id": "eq-181",
+                "status": "refined",
+                "domain": "Ordinary SU(2); real Clebsch–Gordan coefficients in a complex-amplitude model"
+              }
+            ],
+            "scope": "Audit of supplied report only; original 500-equation suite unavailable. Status applies within each declared domain."
+          }
+        }
+      },
+      {
+        "id": "ret-example-009",
+        "command": "math.delta 3 2",
+        "ok": true,
+        "summary": "δ₃(2) = 1 mod 3; Fermat quotient = 1.",
+        "profile": "Arithmetic residues / Z/p²Z → Z/pZ",
+        "elapsedMs": 0,
+        "details": {
+          "domain": "Arithmetic map Z/p^2 Z -> Z/p Z",
+          "p": 3,
+          "input": "2",
+          "residueModP2": 2,
+          "residueModP": 2,
+          "delta": 1,
+          "unit": true,
+          "fermatQuotient": 1,
+          "exact": true,
+          "statePreserved": true,
+          "equationAudit": {
+            "version": "0.2.0",
+            "sourceSha256": "068f68965b6157c88e9e881a48a6bfacfc040455cb957af17f613785ad0237f8",
+            "entries": [
+              {
+                "id": "eq-318",
+                "status": "verified",
+                "domain": "Integer lifts modulo p² to residues modulo p; prime p"
+              }
+            ],
+            "scope": "Audit of supplied report only; original 500-equation suite unavailable. Status applies within each declared domain."
+          }
+        }
+      },
+      {
+        "id": "ret-example-010",
+        "command": "math.delta.check 3 1 1",
+        "ok": true,
+        "summary": "Product rule passed; additive defect = 1 mod 3.",
+        "profile": "Arithmetic residues / Z/p²Z → Z/pZ",
+        "elapsedMs": 0,
+        "details": {
+          "p": 3,
+          "x": {
+            "domain": "Arithmetic map Z/p^2 Z -> Z/p Z",
+            "p": 3,
+            "input": "1",
+            "residueModP2": 1,
+            "residueModP": 1,
+            "delta": 0,
+            "unit": true,
+            "fermatQuotient": 0,
+            "exact": true
+          },
+          "y": {
+            "domain": "Arithmetic map Z/p^2 Z -> Z/p Z",
+            "p": 3,
+            "input": "1",
+            "residueModP2": 1,
+            "residueModP": 1,
+            "delta": 0,
+            "unit": true,
+            "fermatQuotient": 0,
+            "exact": true
+          },
+          "productRule": {
+            "lhs": 0,
+            "rhs": 0,
+            "passed": true
+          },
+          "addition": {
+            "deltaOfSum": 1,
+            "sumOfDeltas": 0,
+            "defect": 1,
+            "additiveAtTheseInputs": false
+          },
+          "domain": "Arithmetic map Z/p^2 Z -> Z/p Z",
+          "statePreserved": true,
+          "equationAudit": {
+            "version": "0.2.0",
+            "sourceSha256": "068f68965b6157c88e9e881a48a6bfacfc040455cb957af17f613785ad0237f8",
+            "entries": [
+              {
+                "id": "eq-318",
+                "status": "verified",
+                "domain": "Integer lifts modulo p² to residues modulo p; prime p"
+              },
+              {
+                "id": "eq-319",
+                "status": "verified",
+                "domain": "Arithmetic delta reduced modulo a prime"
+              }
+            ],
+            "scope": "Audit of supplied report only; original 500-equation suite unavailable. Status applies within each declared domain."
+          }
+        }
+      },
+      {
+        "id": "ret-example-011",
+        "command": "math.cayley {\"H\":[[0,1],[1,0]],\"state\":[1,0],\"dt\":0.1,\"hbar\":1}",
+        "ok": true,
+        "summary": "Forward Cayley step passed numerical checks; inspect-only scalar state.",
+        "profile": "Complex Hermitian Hamiltonian / Cayley",
+        "elapsedMs": 0,
+        "details": {
+          "domain": "Ordinary complex-amplitude Hermitian Hamiltonian evolution",
+          "convention": "i hbar dpsi/dt = H psi; U = (I + i dt H/(2 hbar))^-1 (I - i dt H/(2 hbar))",
+          "dimension": 2,
+          "dt": 0.1,
+          "hbar": 1,
+          "state": [
+            {
+              "re": 0.9950124688279302,
+              "im": 0
+            },
+            {
+              "re": 0,
+              "im": -0.09975062344139651
+            }
+          ],
+          "normBefore": 1,
+          "normAfter": 1,
+          "normError": 0,
+          "relativeNormError": 0,
+          "residual": 0,
+          "relativeResidual": 0,
+          "tolerance": 1e-10,
+          "toleranceMet": true,
+          "renormalized": false,
+          "input": {
+            "H": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "state": [
+              1,
+              0
+            ],
+            "dt": 0.1,
+            "hbar": 1
+          },
+          "statePreserved": true,
+          "equationAudit": {
+            "version": "0.2.0",
+            "sourceSha256": "068f68965b6157c88e9e881a48a6bfacfc040455cb957af17f613785ad0237f8",
+            "entries": [
+              {
+                "id": "eq-417",
+                "status": "refined",
+                "domain": "Finite complex Hermitian H, real dt, hbar>0"
+              }
+            ],
+            "scope": "Audit of supplied report only; original 500-equation suite unavailable. Status applies within each declared domain."
+          }
+        }
+      },
+      {
+        "id": "ret-example-012",
+        "command": "ledger.record Audited GF9 displacement / reflection / negative Wigner",
+        "ok": true,
+        "summary": "Recorded rec-1-e9f5813e.",
+        "profile": "GF(9)",
+        "elapsedMs": 0,
+        "details": {
+          "id": "rec-1-e9f5813e",
+          "sha256": "e9f5813e44b21ffc7173143fda6b3c59c23bc1c6d1a3ca2d18895916a8990e58",
+          "kind": "gf-state",
+          "label": "Audited GF9 displacement / reflection / negative Wigner"
+        }
+      }
+    ],
+    "equationAudit": {
+      "version": "0.2.0",
+      "sourceSha256": "068f68965b6157c88e9e881a48a6bfacfc040455cb957af17f613785ad0237f8",
+      "entries": [
+        {
+          "id": "eq-37",
+          "status": "refined",
+          "domain": "Odd characteristic; registered executable profile GF9"
+        },
+        {
+          "id": "eq-67",
+          "status": "refined",
+          "domain": "Odd characteristic field labels; normalized complex amplitudes"
+        },
+        {
+          "id": "eq-88",
+          "status": "refined",
+          "domain": "Odd characteristic field labels; complex amplitudes"
+        },
+        {
+          "id": "wigner",
+          "status": "verified",
+          "domain": "Normalized pure complex state; odd characteristic (GF9 profile)"
+        },
+        {
+          "id": "mana",
+          "status": "refined",
+          "domain": "The implemented normalized odd-characteristic Wigner representation"
+        },
+        {
+          "id": "eq-181",
+          "status": "refined",
+          "domain": "Ordinary SU(2); real Clebsch–Gordan coefficients in a complex-amplitude model"
+        },
+        {
+          "id": "eq-318",
+          "status": "verified",
+          "domain": "Integer lifts modulo p² to residues modulo p; prime p"
+        },
+        {
+          "id": "eq-319",
+          "status": "verified",
+          "domain": "Arithmetic delta reduced modulo a prime"
+        },
+        {
+          "id": "eq-417",
+          "status": "refined",
+          "domain": "Finite complex Hermitian H, real dt, hbar>0"
+        }
+      ],
+      "scope": "Audit of supplied report only; original 500-equation suite unavailable. Status applies within each declared domain."
+    },
+    "example": {
+      "builder": "audited-examples-build.cjs",
+      "executionScope": "Deterministic production-module calculation; command provenance is inert on import.",
+      "timingScope": "elapsedMs is fixed at zero for reproducibility, not measured browser performance.",
+      "initialState": "(|0> + |1>)/sqrt(2)",
+      "finalState": "omega^2*|3>/sqrt(2) + |5>/sqrt(2), omega=exp(2*pi*i/3)",
+      "wignerWitness": "Rows q0=3 and 5: 1/18. Row q0=4: cos(2*pi*(1+Tr(p0))/3)/9. Other rows: 0.",
+      "cayleyWitness": "H=sigma_x, dt=0.1, hbar=1, initial (1,0): final (399/401, -40i/401).",
+      "scope": "Audited displayed definitions only; no complete 500-equation validation or hardware claim."
+    }
+  }
+}

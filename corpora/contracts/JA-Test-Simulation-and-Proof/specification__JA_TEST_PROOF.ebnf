@@ -1,0 +1,25 @@
+# JA Test, Simulation, and Proof Language — Provisional EBNF
+
+```ebnf
+program       = source_header, module_decl, use_decl, policy_decl, { declaration }, { assertion }, emit_decl ;
+source_header = "ja", "source", version ;
+module_decl   = "module", qualified_name ;
+use_decl      = "use", "Proof" ;
+policy_decl   = "policy", ("no_network" | "explicit_network") ;
+declaration   = fixture_decl | generator_decl | matcher_decl | test_decl | property_decl | simulation_decl | theorem_decl | benchmark_decl | coverage_decl ;
+fixture_decl  = "fixture", identifier, "{", { field }, "}" ;
+generator_decl= "generator", identifier, ["seed", integer], "{", expression, "}" ;
+matcher_decl  = "matcher", identifier, "(", type, ")", "{", expression, "}" ;
+test_decl     = ("unit" | "parameterized" | "integration" | "behavior" | "scenario"), "test", identifier, block ;
+property_decl = "property", identifier, "for_all", identifier, ":", type, ["where", expression], block ;
+simulation_decl = "simulation", identifier, "{", { simulation_step }, "}" ;
+simulation_step = "virtual_time", duration | "inject", qualified_name, "at", duration | "expect", expression, ["within", duration] ;
+theorem_decl  = ("theorem" | "lemma"), identifier, ["requires", expression], "{", { proof_step }, "}" ;
+proof_step    = "assume", expression | "derive", expression | "apply", qualified_name | "qed" ;
+assertion     = ("assert" | "invariant" | "model_assert"), expression ;
+benchmark_decl= "benchmark", identifier, "limit", resource_limits ;
+coverage_decl = "coverage", ("source" | "ast" | "runtime" | "r12"), qualified_name ;
+emit_decl     = "emit", "mcrt", string ;
+```
+
+This grammar is a publication profile derived from the corpus and is not represented as a production parser grammar.

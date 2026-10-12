@@ -1,0 +1,64 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "cdd73e323a9a5b49c3aadd0d3324ef42aa176c827ed95288093267e05a7536c2",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (VERSION_MIGRATION, FOLD_PROPERTY, ECONOMY_CONSERVATION, TRAVERSAL_PORTAL, AUTONOMOUS_HISTORY) plus Stage 08 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "AUTONOMOUS_HISTORY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "ECONOMY_CONSERVATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "FOLD_PROPERTY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "TRAVERSAL_PORTAL": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "VERSION_MIGRATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-03",
+    "GW-14",
+    "GW-27",
+    "GW-29",
+    "GW-48",
+    "GW-64",
+    "GW-65"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T2_HIGH_FIDELITY",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Qualification includes multi-generation town growth/decline, migration waves, infrastructure change, route-network evolution, and economic continuity after archival/rehydration.",
+  "requirement_id": "RCPW-08-R29",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 8,
+  "stage_title": "Civilization / Economy Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "VERSION_MIGRATION",
+    "FOLD_PROPERTY",
+    "ECONOMY_CONSERVATION",
+    "TRAVERSAL_PORTAL",
+    "AUTONOMOUS_HISTORY"
+  ],
+  "workflow_file": "08_CIVILIZATION_ECONOMY_AUTHORITY/111_RCPW_08_R29_QUALIFICATION_INCLUDES_MULTI_GENERATION_TOWN_GROWTH_DECLINE_MIGRATION_WAVES_INFRASTRU.md",
+  "workflow_tier": "T2_HIGH_FIDELITY"
+}

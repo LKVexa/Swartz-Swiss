@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "093",
+  "title": "Orbital Manager",
+  "source_file": "093_Orbital_Manager.md",
+  "source_sha256": "c18018d52151ecb2696152ad2bbd1627b4f6e7646977456c018c8ed1aef4546f",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "N_XLARGE+DF0",
+  "integration_mechanism": "QAM integration plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

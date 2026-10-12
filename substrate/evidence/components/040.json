@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "040",
+  "title": "Interaction Policy",
+  "source_file": "040_Interaction_Policy.md",
+  "source_sha256": "46596672d95ead6ddf121e02c4bc6a06a643ca975fd58ab40935b03b714ba13b",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "DF0+N_LARGE",
+  "integration_mechanism": "Fabric interaction plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

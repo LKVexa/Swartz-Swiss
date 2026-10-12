@@ -1,0 +1,6 @@
+{
+  "schema": "QUORUM-DIFFERENTIAL-LEDGER/2.0",
+  "status": "BLOCKED_EXECUTABLE_DIFFERENTIAL",
+  "reason": "No bundled executable runtimes for preserved DeepML/JA/DMK families. Structural signals are preserved but not substituted for behavioral equivalence.",
+  "module_count": 66
+}

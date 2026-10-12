@@ -1,0 +1,21 @@
+{
+  "boot": {
+    "exec_rows": 6,
+    "rows": 6,
+    "sha256": "8d4b642915ad32935c2faaed8dc184ae3ea1bc2dec64b33adef4590f096ade5d",
+    "source": "src/BOOT.lctlc",
+    "status": "PASS"
+  },
+  "core": {
+    "exec_rows": 0,
+    "rows": 14,
+    "sha256": "af269d3cd9e6dd66596308de2efb772865c924fcae290fc1857aeb1af5f729fb",
+    "source": "src/CORE.lctlc",
+    "status": "PASS"
+  },
+  "external_lctl_1_6_1_rc1_jar": "NOT_SUPPLIED_SUPPLEMENTARY",
+  "hidden_br_metadata_rejected": true,
+  "legacy_LCTLC_1_0_rejected": true,
+  "native_semantic_columns": true,
+  "record": "BR.LCTLVerification"
+}

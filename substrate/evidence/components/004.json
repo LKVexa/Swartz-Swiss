@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "004",
+  "title": "Canonical PA-LCTL Program",
+  "source_file": "004_Canonical_PA_LCTL_Program.md",
+  "source_sha256": "17e0d957b3f549c9c840b3d99882bbcc078c47749968aca212b2111fe0cd96a3",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "VEC_CONTROL+ALL_NODES",
+  "integration_mechanism": "Identity/genome plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 4,
+  "legacy_root": "legacy/source_repository/Compass",
+  "legacy_sha256": "95c162b450561e3f4f647fd0c35cb20e9b04d2ea014a9469fb84fb7957e5f14b",
+  "files": [
+    {
+      "path": "04_compass_direction.deepml",
+      "sha256": "a7eabbe6283619bd0a9cdefa2d35d26a5a1e4e7a55240fd7725d1a9cc8967993",
+      "bytes": 2048
+    },
+    {
+      "path": "04_compass_feasibility_paths.deepml",
+      "sha256": "0d392d2da4263f4b1590035cf84a212f09ac97e596dde4a416e64972d84084e3",
+      "bytes": 2421
+    },
+    {
+      "path": "04_compass_policies.deepml",
+      "sha256": "054ee28958e694bf65c16b7495ed547763e8514bd6f699a4d6cb0ed47003d675",
+      "bytes": 2487
+    },
+    {
+      "path": "04_compass_priorities.deepml",
+      "sha256": "95e20f08b917bf28e285739a3cc176717b676dfdc03c9126cf83f028e60e0c7f",
+      "bytes": 2164
+    },
+    {
+      "path": "04_compass_routing_objectives.deepml",
+      "sha256": "30e06c51fb5f6eb145b3cf924f949a96d4633cdf258eebaac15769b20afb304d",
+      "bytes": 2317
+    },
+    {
+      "path": "MANIFEST.json",
+      "sha256": "a1c6a9921902e18b35295f12f0ba9a8cb16ee1a3ead20efd39d3267348175c99",
+      "bytes": 4329
+    },
+    {
+      "path": "README.md",
+      "sha256": "e1c78e35f57e1c4bf2a5b4953e2c569a90f20aa22b9e123790d955b319d0ac60",
+      "bytes": 2814
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "sha256": "4fb87813e702e78d9aa8e824243284b04d8e358fe551e22e543ea77f0a321862",
+      "bytes": 787
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

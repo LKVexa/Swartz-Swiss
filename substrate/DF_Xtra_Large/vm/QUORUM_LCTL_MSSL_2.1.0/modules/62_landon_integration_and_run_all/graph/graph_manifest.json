@@ -1,0 +1,166 @@
+{
+  "schema": "QUORUM-MODULE-GRAPH/2.0",
+  "graph_id": "G62",
+  "module_id": 62,
+  "module": "LANDON Integration and Run All",
+  "plane": "orchestration",
+  "version": "2.0.0",
+  "entry": "N01",
+  "exit": "N09",
+  "nodes": [
+    {
+      "id": "N01",
+      "stage": "INTENT",
+      "operator": "INSPECT",
+      "input": "intent/dependency_set",
+      "output": "state.intent",
+      "precondition": "admitted",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N02",
+      "stage": "PLAN",
+      "operator": "REASON",
+      "input": "N01.output",
+      "output": "state.plan",
+      "precondition": "N01.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N03",
+      "stage": "DEPENDENCY_RESOLVE",
+      "operator": "RETRIEVE",
+      "input": "N02.output",
+      "output": "state.dependency_resolve",
+      "precondition": "N02.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N04",
+      "stage": "CAPABILITY_CHECK",
+      "operator": "AUTHORIZE",
+      "input": "N03.output",
+      "output": "state.capability_check",
+      "precondition": "N03.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N05",
+      "stage": "SCHEDULE",
+      "operator": "ROUTE",
+      "input": "N04.output",
+      "output": "state.schedule",
+      "precondition": "N04.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N06",
+      "stage": "EXECUTE",
+      "operator": "EXECUTE",
+      "input": "N05.output",
+      "output": "state.execute",
+      "precondition": "N05.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N07",
+      "stage": "MONITOR",
+      "operator": "INSPECT",
+      "input": "N06.output",
+      "output": "state.monitor",
+      "precondition": "N06.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N08",
+      "stage": "AGGREGATE",
+      "operator": "TRANSFORM",
+      "input": "N07.output",
+      "output": "state.aggregate",
+      "precondition": "N07.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N09",
+      "stage": "EVIDENCE",
+      "operator": "RECORD",
+      "input": "N08.output",
+      "output": "execution_plan/aggregate_receipt",
+      "precondition": "N08.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E01",
+      "from": "N01",
+      "to": "N02",
+      "kind": "control+data"
+    },
+    {
+      "id": "E02",
+      "from": "N02",
+      "to": "N03",
+      "kind": "control+data"
+    },
+    {
+      "id": "E03",
+      "from": "N03",
+      "to": "N04",
+      "kind": "control+data"
+    },
+    {
+      "id": "E04",
+      "from": "N04",
+      "to": "N05",
+      "kind": "control+data"
+    },
+    {
+      "id": "E05",
+      "from": "N05",
+      "to": "N06",
+      "kind": "control+data"
+    },
+    {
+      "id": "E06",
+      "from": "N06",
+      "to": "N07",
+      "kind": "control+data"
+    },
+    {
+      "id": "E07",
+      "from": "N07",
+      "to": "N08",
+      "kind": "control+data"
+    },
+    {
+      "id": "E08",
+      "from": "N08",
+      "to": "N09",
+      "kind": "control+data"
+    }
+  ],
+  "legacy_signals": [
+    "action",
+    "AUTHORIZE"
+  ],
+  "deterministic_order": true
+}

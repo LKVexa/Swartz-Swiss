@@ -1,0 +1,51 @@
+{
+  "schema": "GFM-repository-combination/1",
+  "consoleVersion": "2.0.0",
+  "phaseOriginalArchiveSHA256": "bfe1f3cd4bc1ce76e1569e7fc068d9c61fb8b3540d95e54140d17e58f8f659f9",
+  "importedFiles": 269,
+  "originalFilesUnchanged": 262,
+  "intentionalModifiedFiles": [
+    "backend/phase-service.cjs",
+    "public/app.js",
+    "public/index.html",
+    "public/phase-app.js",
+    "public/phase-worker.js",
+    "public/renderer.js",
+    "tests/phase-worker-parity.cjs"
+  ],
+  "newFiles": [
+    "600",
+    "700",
+    "README-Offline-Console.txt",
+    "browser/benchmark-phase.cjs",
+    "browser/build-console-core.cjs",
+    "browser/build-relativity.cjs",
+    "browser/relativity-build.json",
+    "browser/run-offline-checks.cjs",
+    "public/adaptive-scheduler.js",
+    "public/console-core.js",
+    "public/console-worker.js",
+    "public/local-backend.js",
+    "public/relativity-core.js",
+    "public/relativity-provenance.js",
+    "public/relativity-worker.js",
+    "tests/combined-relativity-worker.cjs",
+    "tests/offline-console.cjs",
+    "validation/adaptive-worker-benchmark.json",
+    "validation/console-core-build.json",
+    "validation/offline-pipeline-tests.json",
+    "validation/offline-pipeline-tests.txt",
+    "validation/pipeline-worker-benchmark.json",
+    "validation/serial-worker-benchmark.json"
+  ],
+  "numericCoreUnchanged": [
+    "backend/phase-mhd.js",
+    "backend/phase-session.js",
+    "backend/simulation.cjs",
+    "backend/relativity.cjs",
+    "backend/observations.cjs"
+  ],
+  "originalArchivePreserved": "provenance/JA21-phase-v3.zip",
+  "numericCoupling": "Independent model domains; unified console and data access, no implicit physical coupling",
+  "originalTerminalFilesUnchanged": true
+}

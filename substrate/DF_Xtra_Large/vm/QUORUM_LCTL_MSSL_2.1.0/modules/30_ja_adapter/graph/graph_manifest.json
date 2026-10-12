@@ -1,0 +1,148 @@
+{
+  "schema": "QUORUM-MODULE-GRAPH/2.0",
+  "graph_id": "G30",
+  "module_id": 30,
+  "module": "JA Adapter",
+  "plane": "translation_interop",
+  "version": "2.0.0",
+  "entry": "N01",
+  "exit": "N08",
+  "nodes": [
+    {
+      "id": "N01",
+      "stage": "SOURCE",
+      "operator": "OBSERVE",
+      "input": "source_artifact",
+      "output": "state.source",
+      "precondition": "admitted",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N02",
+      "stage": "PARSE",
+      "operator": "PARSE",
+      "input": "N01.output",
+      "output": "state.parse",
+      "precondition": "N01.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N03",
+      "stage": "NORMALIZE",
+      "operator": "NORMALIZE",
+      "input": "N02.output",
+      "output": "state.normalize",
+      "precondition": "N02.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N04",
+      "stage": "TRANSLATE",
+      "operator": "TRANSFORM",
+      "input": "N03.output",
+      "output": "state.translate",
+      "precondition": "N03.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N05",
+      "stage": "CANONICALIZE",
+      "operator": "NORMALIZE",
+      "input": "N04.output",
+      "output": "state.canonicalize",
+      "precondition": "N04.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N06",
+      "stage": "VALIDATE",
+      "operator": "VALIDATE",
+      "input": "N05.output",
+      "output": "state.validate",
+      "precondition": "N05.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N07",
+      "stage": "PACKAGE",
+      "operator": "MATERIALIZE",
+      "input": "N06.output",
+      "output": "state.package",
+      "precondition": "N06.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N08",
+      "stage": "EVIDENCE",
+      "operator": "RECORD",
+      "input": "N07.output",
+      "output": "canonical_target_artifact/loss_report",
+      "precondition": "N07.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E01",
+      "from": "N01",
+      "to": "N02",
+      "kind": "control+data"
+    },
+    {
+      "id": "E02",
+      "from": "N02",
+      "to": "N03",
+      "kind": "control+data"
+    },
+    {
+      "id": "E03",
+      "from": "N03",
+      "to": "N04",
+      "kind": "control+data"
+    },
+    {
+      "id": "E04",
+      "from": "N04",
+      "to": "N05",
+      "kind": "control+data"
+    },
+    {
+      "id": "E05",
+      "from": "N05",
+      "to": "N06",
+      "kind": "control+data"
+    },
+    {
+      "id": "E06",
+      "from": "N06",
+      "to": "N07",
+      "kind": "control+data"
+    },
+    {
+      "id": "E07",
+      "from": "N07",
+      "to": "N08",
+      "kind": "control+data"
+    }
+  ],
+  "legacy_signals": [
+    "RENDER"
+  ],
+  "deterministic_order": true
+}

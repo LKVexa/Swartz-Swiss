@@ -1,0 +1,20 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {fixture}=require('./helpers/app-fixture.cjs');
+test('large repeated GFM reports export recent evidence while retaining state, records and inert provenance',async()=>{
+  const h=fixture();assert.equal((await h.app.run('model.reapply all')).ok,true);await h.app.run('ledger.record Preserved model');
+  const packet=await h.exported(),full=h.plain(h.app.getReturns()[0]);
+  const count=Math.floor((h.app.limits.fileBytes-50000)/new TextEncoder().encode(h.app.stableStringify(full)).length);
+  packet.data.returns=Array.from({length:count},(_,i)=>({...full,id:'ret-many-'+i}));
+  packet.data.commandProvenance=Array(count).fill('model.reapply all');packet.sha256=await h.app.digest(packet.data);
+  const restored=fixture();await restored.import(packet);assert.equal(restored.app.getReturns().length,count);
+  for(let i=0;i<3;i++)assert.equal((await restored.app.run('model.reapply all')).ok,true);
+  const before=restored.plain(restored.app.snapshot()),records=restored.plain(restored.app.getRecords()),returns=restored.plain(restored.app.getReturns());
+  const exported=await restored.exported();assert.ok(exported.data.exportRetention.omittedReturns>0);
+  assert.equal(exported.data.returns.length,returns.length-exported.data.exportRetention.omittedReturns);
+  assert.deepEqual(exported.data.snapshot,before);assert.deepEqual(exported.data.records,records);assert.equal(exported.data.commandProvenance.length,count+3);
+  assert.equal(restored.app.getReturns().length,count+4,'export retains the in-memory reports and adds its ordinary return');
+  assert.deepEqual(restored.plain(restored.app.getReturns()).slice(0,count+3),returns);
+  assert.ok(new TextEncoder().encode(restored.app.stableStringify(exported.data)).length<=restored.app.limits.fileBytes);
+  assert.equal(exported.sha256,await restored.app.digest(exported.data));await restored.app.validatePacket(exported);
+});

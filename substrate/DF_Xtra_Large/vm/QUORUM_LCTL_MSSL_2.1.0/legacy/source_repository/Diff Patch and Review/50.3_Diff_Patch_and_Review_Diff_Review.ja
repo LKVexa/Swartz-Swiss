@@ -1,0 +1,14 @@
+ja source 0.3
+module suite50.diff_patch_review.diff_review
+use Core
+policy no_network
+
+record DiffReviewPlan { id: Count, repository_root: Text, baseline_hash: Text, diff_hash: Text, review_scope: Text, finding_profile: Text, approval_state: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_diff_review(item: DiffReviewPlan) -> Result<DiffReviewPlan, Text> effects { pure } {
+    let normalized: Text = item.review_scope
+    return Ok(DiffReviewPlan { id: item.id, repository_root: item.repository_root, baseline_hash: item.baseline_hash, diff_hash: item.diff_hash, review_scope: normalized, finding_profile: item.finding_profile, approval_state: item.approval_state, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: DiffReviewPlan = DiffReviewPlan { id: 5003, repository_root: "selected_work_repository", baseline_hash: "required_sha256_baseline", diff_hash: "required_sha256_diff", review_scope: "selected_diff_and_affected_context", finding_profile: "correctness_security_data_loss_and_regression", approval_state: "review_does_not_apply", sophia: "interpret_change_and_author_intent", charlotte: "validate_prioritized_findings", landon: "collect_bounded_review_context", professor: "explain_actionable_findings", podium: "publish_review_history_record" }
+let result = prepare_diff_review(sample)
+assert result.is_ok == true
+emit json result

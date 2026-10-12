@@ -1,0 +1,19 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.world.persistence_ledger:7.0.0-applied-remediated-26",
+λ≡"quorum.rcpw.world.persistence_ledger",
+ℛ≡{
+  "0001":"module(\"quorum.rcpw.world.persistence_ledger\")",
+  "0002":"learn(\"entity_identity\",literal(\"stable monotonic IDs; no recycling\"))",
+  "0003":"learn(\"ledger\",literal(\"append-only hash-chained causal event records\"))",
+  "0004":"learn(\"save\",literal(\"canonical JSON save with SHA-256 integrity and ledger verification\"))",
+  "0005":"learn(\"replay\",literal(\"deterministic command replay over seeded baseline\"))",
+  "0006":"learn(\"archive\",literal(\"archive state retains canonical identities and semantic digest\"))"
+},
+π≡[],δ≡6,τ≡0,
+μ≡{"learn.entity_identity":"stable monotonic IDs; no recycling","learn.ledger":"append-only hash-chained causal event records","learn.save":"canonical JSON save with SHA-256 integrity and ledger verification","learn.replay":"deterministic command replay over seeded baseline","learn.archive":"archive state retains canonical identities and semantic digest"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"entity_identity":"stable monotonic IDs; no recycling","ledger":"append-only hash-chained causal event records","save":"canonical JSON save with SHA-256 integrity and ledger verification","replay":"deterministic command replay over seeded baseline","archive":"archive state retains canonical identities and semantic digest"}},
+ν≡{}
+,κ≡"sha256:d91d628e0483e380d355515bdff8a1c6d29f1bdf7fa1176fa46adf21c0b318d9"
+}⇒⊤

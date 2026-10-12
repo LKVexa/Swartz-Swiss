@@ -1,0 +1,21 @@
+ja source 0.3
+module cypher.fingerprints
+use Security
+policy no_network
+
+principal SOPHIA_CHARLOTTE_LANDON_Professor_Podium_FingerprintWorker
+role CypherFingerprintWorker {
+    grant artifact.fingerprint:approved
+    grant provenance.read:approved
+}
+resource FingerprintArtifact classification restricted
+policy CypherFingerprintPolicy {
+    deny network.* by default
+    allow FingerprintArtifact when principal.role == CypherFingerprintWorker
+    require human_approval for artifact.fingerprint
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == true
+emit mcrt "CypherFingerprintPolicy.decision.mcrt"

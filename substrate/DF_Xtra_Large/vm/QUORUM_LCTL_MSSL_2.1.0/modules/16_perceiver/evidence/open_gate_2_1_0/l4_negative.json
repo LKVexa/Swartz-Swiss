@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "ca7ec6839f2f7f678ac43b8ae4654ecbf71373a75fc8fe97ca17271c277adc53",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Perceiver",
+  "module_id": 16,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

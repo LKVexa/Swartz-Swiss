@@ -1,0 +1,6 @@
+{
+  "authority_tamper_rejected": true,
+  "negative_fail_closed": true,
+  "network_default_deny": true,
+  "status": "PASS"
+}

@@ -1,0 +1,13 @@
+JA21 9.1.2 Windows warning-as-error compile repair
+
+Observed target error:
+  Warning as Error: BrowserWindow._modeIndicator is never used
+
+Root cause:
+  Optical Instrument state declared the renderer mode indicator but never instantiated or consumed it. Windows PowerShell Add-Type treats compiler warnings as terminating compiler errors. The portable launcher also contained stale hard-coded 9.1.0 identity text.
+
+Repair:
+  - _modeIndicator is now a real transform-animated selection underline in BuildRendererInstrument/SyncRenderModeButton.
+  - joined-C# private-field compile-hygiene gates reject declaration-only private state.
+  - launcher banner reads VERSION dynamically.
+  - release advanced coherently to 9.1.2.

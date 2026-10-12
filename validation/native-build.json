@@ -1,0 +1,21 @@
+{
+  "schema": "GFM-JA21-native-build/1",
+  "compiler": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\csc.exe",
+  "exitCode": 0,
+  "fullHostUnits": 7,
+  "references": [
+    "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\System.dll",
+    "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\System.Core.dll",
+    "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\System.Xaml.dll",
+    "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\System.Web.Extensions.dll",
+    "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\WPF\\PresentationFramework.dll",
+    "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\WPF\\PresentationCore.dll",
+    "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\WPF\\WindowsBase.dll",
+    "D:\\Codex\\GFM-JA21\\runtime\\webview2-sdk\\1.0.4191.47\\Microsoft.Web.WebView2.Core.dll",
+    "D:\\Codex\\GFM-JA21\\runtime\\webview2-sdk\\1.0.4191.47\\Microsoft.Web.WebView2.Wpf.dll"
+  ],
+  "windowsPolicyChanged": false,
+  "output": "D:\\Codex\\GFM-JA21\\GfmJa21.exe",
+  "bytes": 307712,
+  "sha256": "cd14251eb2bb920bf9f5ffbad79bab231bdc4e519045997037a9cc04ad0f045e"
+}

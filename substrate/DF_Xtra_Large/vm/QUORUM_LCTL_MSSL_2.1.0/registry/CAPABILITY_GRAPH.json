@@ -1,0 +1,157 @@
+{
+  "schema": "QUORUM-CAPABILITY-GRAPH/2.0",
+  "default": "deny",
+  "network_default": "deny",
+  "capabilities": [
+    {
+      "id": "artifact.read",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "artifact.write",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "checkpoint.write",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "compiler.execute",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "evidence.write",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "external.adapter",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "filesystem.read",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "filesystem.write",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "interface.event",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "log.read",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "model.compute",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "module.invoke",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "network.inbound",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "network.outbound",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "package.install",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "package.write",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "patch.propose",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "policy.evaluate",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "privileged.action",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "process.execute",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "renderer.use",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "repository.read",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "repository.write",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "secret.access",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    },
+    {
+      "id": "state.write",
+      "default": "deny",
+      "grant": "explicit",
+      "evidence_required": true
+    }
+  ]
+}

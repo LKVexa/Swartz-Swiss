@@ -1,0 +1,35 @@
+ja source 0.3
+module suite32.orchestrator_ii.reconstruction
+use Agent
+policy no_network
+
+agent OrchestratorIIReconstruction {
+    identity "orchestrator_ii_reconstruction"
+    role "sophia-charlotte-landon-professor-podium-orchestrator"
+    goal produce_deterministic_reconstruction when confidence >= 0.95
+    memory session retention 1h
+    budget steps 55 tools 5
+    tool LANDONStageReconstructionInputs(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIASynthesizeReconstruction(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateReconstruction(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainReconstruction(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordReconstruction(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONStageReconstructionInputs
+        authorize SOPHIASynthesizeReconstruction
+        authorize CHARLOTTEValidateReconstruction
+        authorize ProfessorExplainReconstruction
+        authorize PodiumRecordReconstruction
+        continue when policy_allows
+        execute LANDONStageReconstructionInputs("approved_reconstruction_inputs")
+        execute SOPHIASynthesizeReconstruction("canonical_feature_and_geometry_evidence")
+        execute CHARLOTTEValidateReconstruction("candidate_reconstruction")
+        execute ProfessorExplainReconstruction("validated_reconstruction")
+        execute PodiumRecordReconstruction("reconstruction_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "OrchestratorIIReconstruction.mcrt"

@@ -1,0 +1,41 @@
+ja source 0.3
+module suite54.local_model_provider.provider_readiness
+use Service
+policy explicit_network
+
+service LocalProviderReadiness {
+    message ProviderReadinessRequest {
+        request_id: Text,
+        provider_id: Text,
+        model_id: Text,
+        provider_descriptor_hash: Text,
+        artifact_hash: Text,
+        configuration_hash: Text,
+        required_capabilities: Text,
+        readiness_policy_hash: Text
+    }
+    message ProviderReadinessResponse {
+        readiness_status: Text,
+        readiness_checks: Text,
+        failed_predicates: Text,
+        readiness_evidence_hash: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_provider_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint inspect(request: ProviderReadinessRequest) -> Stream<ProviderReadinessResponse>
+        auth capability local_model.provider.readiness.inspect
+        deadline 20s
+        retry max 1
+        idempotency request.request_id
+    protocol ProviderReadinessSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json LocalProviderReadiness.compatibility_report

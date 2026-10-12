@@ -1,0 +1,41 @@
+profile ja.interface
+source_level 0.3
+
+subsuite Terminal.T_15 StructuredDiagnosticsIlluminatorView {
+    identity { suite = "66"; id = "T-15"; deterministic = true; autorun = false }
+
+    integrate { Suite_10_Illuminator; Suite_01_Observer; Suite_58_Logs_and_Recovery }
+
+    accept {
+        TerminalResult
+        OrderedTerminalEventStream
+        presentation_redaction_map
+        parser_findings
+        policy_findings
+    }
+
+    emit TerminalDiagnosticViewModel
+
+    procedure render(result, defense) {
+        diagnostics = classify {
+            command_error
+            policy_denial
+            path_error
+            runtime_error
+            timeout
+            resource_limit
+            output_validation_error
+            security_finding
+        }
+        link_every_diagnostic_to_evidence_ref
+        show_exit_code_and_terminal_state
+        show_safe_bounded_context
+        show_reviewable_next_step_without_autorun
+        return accessible_view_model(diagnostics)
+    }
+
+    deny { fabricated_cause; hidden_exit_code; raw_secret_display; automatic_fix_execution }
+    evidence { diagnostic_records; evidence_links; classification_version; view_model_hash }
+    tests { each_failure_class; redaction; evidence_link; screen_reader_order; large_diagnostic_set }
+}
+

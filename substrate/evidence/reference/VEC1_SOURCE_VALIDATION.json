@@ -1,0 +1,15 @@
+{
+  "actionable_checkboxes": 286440,
+  "catalog_rows": 286440,
+  "components": 110,
+  "evidence_schema": "VEC1-EVIDENCE/1.0",
+  "hardening": "VEC1-HARDENING/1.3",
+  "package_version": "1.3.0",
+  "result": "PASS",
+  "schema": "VEC1/SOURCE_VALIDATION_RECORD/1",
+  "source_archive": "VEC1_Component_Checklists_1_110_v1.3.0_Audited_Hardened(1).zip",
+  "source_sha256": "875b4276995757bd07f36db559f452ef4f6d8ac23fe7341ed4a5275972a24d3e",
+  "unique_prompts": 286440,
+  "unique_workflows": 286440,
+  "validator": "tools/validate_vec1.py"
+}

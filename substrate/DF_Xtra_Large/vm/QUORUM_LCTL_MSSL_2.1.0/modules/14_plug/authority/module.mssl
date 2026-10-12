@@ -1,0 +1,15 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum:generic_project:14:plug:2.0.0",
+λ≡"quorum.generic_project.module.14.plug",
+ℛ≡{"0001":"module(\"quorum.generic_project.module.14.plug\")","0002":"learn(\"module_id\",literal(\"14\"))","0003":"learn(\"canonical_name\",literal(\"\\\"Plug\\\"\"))","0004":"learn(\"slug\",literal(\"\\\"plug\\\"\"))","0005":"learn(\"version\",literal(\"\\\"2.0.0\\\"\"))","0006":"learn(\"plane\",literal(\"\\\"interfaces_services\\\"\"))","0007":"learn(\"purpose\",literal(\"\\\"Individual JA Service and Protocol Language scripts for the Plug suite.\\\"\"))","0008":"learn(\"legacy_sha256\",literal(\"\\\"fc9ad34c8d0ffd4086519f2901b67c2b6ac6184badbf696a312b64f07ada3afb\\\"\"))","0009":"learn(\"legacy_source_count\",literal(\"7\"))","0010":"learn(\"legacy_signals\",literal(\"[\\\"RENDER\\\",\\\"TRANSLATE\\\"]\"))","0011":"learn(\"maturity\",literal(\"\\\"L3_STRUCTURALLY_VERIFIED\\\"\"))","0012":"learn(\"claim_boundary\",literal(\"\\\"Native semantic/graph/LCTL structure is implemented and canonical-verified; module-specific legacy behavioral equivalence and production runtime effects remain unproven unless separately evidenced.\\\"\"))"},
+π≡[],
+δ≡12,
+τ≡0,
+μ≡{"learn.module_id":14,"learn.canonical_name":"Plug","learn.slug":"plug","learn.version":"2.0.0","learn.plane":"interfaces_services","learn.purpose":"Individual JA Service and Protocol Language scripts for the Plug suite.","learn.legacy_sha256":"fc9ad34c8d0ffd4086519f2901b67c2b6ac6184badbf696a312b64f07ada3afb","learn.legacy_source_count":7,"learn.legacy_signals":["RENDER","TRANSLATE"],"learn.maturity":"L3_STRUCTURALLY_VERIFIED","learn.claim_boundary":"Native semantic/graph/LCTL structure is implemented and canonical-verified; module-specific legacy behavioral equivalence and production runtime effects remain unproven unless separately evidenced."},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},
+χ≡[],
+η≡{"events":[],"state":{"module_id":14,"canonical_name":"Plug","slug":"plug","version":"2.0.0","plane":"interfaces_services","purpose":"Individual JA Service and Protocol Language scripts for the Plug suite.","legacy_sha256":"fc9ad34c8d0ffd4086519f2901b67c2b6ac6184badbf696a312b64f07ada3afb","legacy_source_count":7,"legacy_signals":["RENDER","TRANSLATE"],"maturity":"L3_STRUCTURALLY_VERIFIED","claim_boundary":"Native semantic/graph/LCTL structure is implemented and canonical-verified; module-specific legacy behavioral equivalence and production runtime effects remain unproven unless separately evidenced."}},
+ν≡{}
+,κ≡"sha256:9b1d0adbf41dcf74e09e258aa198da5c26bbb1f218303ee21b491dd6ec3b15a4"
+}⇒⊤

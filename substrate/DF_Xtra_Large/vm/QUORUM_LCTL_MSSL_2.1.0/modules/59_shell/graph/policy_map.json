@@ -1,0 +1,13 @@
+{
+  "schema": "QUORUM-POLICY-MAP/2.0",
+  "module_id": 59,
+  "default": "deny",
+  "network": "deny",
+  "capabilities": [
+    "checkpoint.write",
+    "evidence.write",
+    "log.read",
+    "process.execute"
+  ],
+  "gates": []
+}

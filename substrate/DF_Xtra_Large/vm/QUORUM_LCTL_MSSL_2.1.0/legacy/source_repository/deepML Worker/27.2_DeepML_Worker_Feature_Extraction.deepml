@@ -1,0 +1,21 @@
+deepml core 0.3
+module suite27.deepml_worker.feature_extraction
+policy deterministic
+policy no_network
+
+tensor asset_observation: f32[1,16] = constant(0.0)
+tensor feature_projection: f32[16,12] = variable(seed=2711)
+tensor feature_encoder: f32[12,8] = variable(seed=2712)
+graph FeatureExtraction {
+  SOPHIA = layer_norm(asset_observation)
+  CHARLOTTE = relu(matmul(SOPHIA, feature_projection))
+  LANDON = relu(matmul(CHARLOTTE, feature_encoder))
+  Professor = LANDON + broadcast(0.0, shape(LANDON))
+  Podium = layer_norm(Professor)
+}
+infer FeatureExtraction -> Podium
+execute FeatureExtraction on cpu
+optimize FeatureExtraction using [constant_folding, algebraic_simplification, operator_fusion, common_subexpression_elimination, memory_planning, device_partitioning]
+lower FeatureExtraction to DEEPML_CORE_R12
+package model FeatureExtraction as "deepml_worker_feature_extraction.msslb"
+certify graph FeatureExtraction profile strict

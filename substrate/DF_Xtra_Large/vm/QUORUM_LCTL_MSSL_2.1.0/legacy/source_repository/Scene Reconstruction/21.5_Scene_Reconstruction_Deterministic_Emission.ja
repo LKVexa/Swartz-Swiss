@@ -1,0 +1,36 @@
+ja portal.scene 0.3
+module suite21.scene_reconstruction.deterministic_emission
+policy no_execute_unknown_code
+policy no_network
+
+scene SceneReconstructionDeterministicEmission {
+  resource FinalSceneMesh: Mesh = "geometry/final_scene.mesh"
+  material FinalSceneMaterial { shader: "portal/pbr" metallic: 0.1 roughness: 0.4 }
+  entity WorldRoot {
+    component Transform3D {
+      position: vec3(0m, 0m, 0m)
+      rotation: quat.identity
+      scale: vec3(1, 1, 1)
+    }
+    component Tag { value: "scene.reconstruction.final" }
+  }
+  entity ReconstructedScene parent WorldRoot {
+    component MeshRenderer { mesh: FinalSceneMesh material: FinalSceneMaterial }
+  }
+  entity MainCamera parent WorldRoot {
+    component Camera { projection: perspective(60deg) near_clip: 0.1m far_clip: 1000m priority: 0 }
+  }
+  entity SOPHIA_FinalSynthesis parent WorldRoot { component Tag { value: "sophia.final.synthesis" } }
+  entity CHARLOTTE_FinalCertification parent WorldRoot { component Tag { value: "charlotte.final.certification" } }
+  entity LANDON_FinalAssembly parent WorldRoot { component Tag { value: "landon.final.assembly" } }
+  entity Professor_FinalExplanation parent WorldRoot { component Tag { value: "professor.final.explanation" } }
+  entity Podium_FinalReceipt parent WorldRoot { component Tag { value: "podium.final.receipt" } }
+  system SaveLoad { checkpoint: "scene_reconstruction_final" serialize: [WorldRoot, ReconstructedScene, MainCamera, SOPHIA_FinalSynthesis, CHARLOTTE_FinalCertification, LANDON_FinalAssembly, Professor_FinalExplanation, Podium_FinalReceipt] }
+}
+serialize SceneReconstructionDeterministicEmission using canonical_scene_v1
+snapshot SceneReconstructionDeterministicEmission as "scene_reconstruction_final.snapshot"
+optimize scene SceneReconstructionDeterministicEmission using [stable_ids, topological_order, resource_deduplication, constant_transform]
+lower SceneReconstructionDeterministicEmission to PORTAL_SCENE_R12
+trace SceneReconstructionDeterministicEmission to "scene_reconstruction_final.mcrt"
+package scene SceneReconstructionDeterministicEmission as ScenePackage "scene_reconstruction_final.msslb"
+certify scene SceneReconstructionDeterministicEmission using strict_portal_scene

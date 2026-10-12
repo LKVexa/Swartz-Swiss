@@ -1,0 +1,220 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 65,
+  "legacy_root": "legacy/source_repository/Sandbox Engine",
+  "legacy_sha256": "5bad333812d6e4375de11fc31236b7e8ccecb21a26e0874a245d45452b1d036b",
+  "files": [
+    {
+      "path": "65.01_Run_Contract_Intake.jad",
+      "sha256": "d11b47bfc4991228b3b8ea73592ca086dfe6d77beabf72abe6183d5f21a39569",
+      "bytes": 2954
+    },
+    {
+      "path": "65.02_Asset_Intake_and_Inspection.deepml",
+      "sha256": "c12cf0536e25409a9f1162224dde8b8365ee4d1abd74f22146e29032cd80ca44",
+      "bytes": 941
+    },
+    {
+      "path": "65.03_Repository_Context_Snapshot.jad",
+      "sha256": "6f3a956092f196c19beb5ef87dbcffda7e2810a2ee0ca2167a9a4d08550bb4e3",
+      "bytes": 2671
+    },
+    {
+      "path": "65.04_Workspace_Staging.ja",
+      "sha256": "72648d6eac3cf722a5f87d2099e5655b5bad97fd523e8717634335f4cc726225",
+      "bytes": 1741
+    },
+    {
+      "path": "65.05_Suite_Registry_and_Dependency_Graph.jad",
+      "sha256": "7ee795fca70eb69045a292e7a9ef506d0e6c0a5cd054e9bb34e68907f2e1014f",
+      "bytes": 2559
+    },
+    {
+      "path": "65.06_Capability_Manifest.jasec",
+      "sha256": "eee0b0b257c1a5d307485c83c4d3d57ef09b490a0577c77fd868a0cfe708ae5a",
+      "bytes": 966
+    },
+    {
+      "path": "65.07_Authorization_and_Approval_Gate.jasec",
+      "sha256": "1660392b595d95b054b7035bd2ee34cd8e00b8919a4cba84e40d3cddc96b9f49",
+      "bytes": 909
+    },
+    {
+      "path": "65.08_Static_Safety_and_Content_Defense.jasec",
+      "sha256": "ae089c8e7643a1a5a3aa9526fff9401d52e6c5b256e60e24cd6a5ab525d8c90a",
+      "bytes": 915
+    },
+    {
+      "path": "65.09_Network_and_Air_Gap_Policy.jasec",
+      "sha256": "8303079c5f1e1be7f58feaa2e8c75ae13ae54a178fbead09f19f9975a3f1019a",
+      "bytes": 898
+    },
+    {
+      "path": "65.10_Resource_Budget_and_Quota.jaops",
+      "sha256": "f20cbff6da99f6fa20b6464cb0181bd2831e1f21d3c728a47c07735dcd295222",
+      "bytes": 1052
+    },
+    {
+      "path": "65.11_Job_Queue_and_Scheduler.jaops",
+      "sha256": "1c25a7ddd2709eee07a8aa1ff2073f8c56f4a869a9b8226c209b171a3f421b78",
+      "bytes": 1036
+    },
+    {
+      "path": "65.12_Worker_Provisioning_and_Health.jaops",
+      "sha256": "403d8512ac5526faaeeaf1465bb1e3ba19826a751eebf878c33eb77e23e3d752",
+      "bytes": 1074
+    },
+    {
+      "path": "65.13_HERMIT_Execution_Cell.jaops",
+      "sha256": "a972ab277699e72cb4c266e40e237240d9f18c1b680963a6038328026469c2b9",
+      "bytes": 1042
+    },
+    {
+      "path": "65.14_Job_Family_Router.jasp",
+      "sha256": "b8cd02a91a292e614965ddc32b0742a0dc93a818be76f862ef88051dfe23e1f1",
+      "bytes": 1149
+    },
+    {
+      "path": "65.15_JA_Record_and_Artifact_Adapter.jasp",
+      "sha256": "e54b263b335a668808edb0a3e794e225a4d91edc18954baa8a7c9cbf8c7160ac",
+      "bytes": 1251
+    },
+    {
+      "path": "65.16_Translation_and_Build_Pipeline.ebnf",
+      "sha256": "d10934fb097e0b33fd6c043b3af94e84511fd5611f5d4877c3fb92d949a334e4",
+      "bytes": 1619
+    },
+    {
+      "path": "65.17_Test_Evaluation_and_Certification_Pipeline.jate",
+      "sha256": "abd953c4c554126d9c54d9194669bd18fe714bd3334f55b747c444343a56bf10",
+      "bytes": 1130
+    },
+    {
+      "path": "65.18_Reconstruction_Pipeline.ja",
+      "sha256": "7db6e7607c9b6b54c800252d4e4aba22a9b114383244c9362106b8b042508057",
+      "bytes": 2289
+    },
+    {
+      "path": "65.19_Motion_and_Animation_Pipeline.deepml",
+      "sha256": "b55c07ea8e19f2c07a0e422fe8539ad055bac30640ca6607c13dc745933bdbff",
+      "bytes": 1501
+    },
+    {
+      "path": "65.20_Rendering_and_VFX_Pipeline.deepml",
+      "sha256": "e20e2e3cb3321a5518b91c03a6f0d23bd9ef8714c684ba18711f18fc7c7bf61f",
+      "bytes": 1440
+    },
+    {
+      "path": "65.21_Media_Export_Pipeline.jaops",
+      "sha256": "b9b15e365e726f585f839856eb80109928e901c12e27dfc22904b2b4ebc2b155",
+      "bytes": 1052
+    },
+    {
+      "path": "65.22_UI_Preview_and_Popup_Pipeline.jaui",
+      "sha256": "1dce87765e3ac691cb96073d8d7178f94b4338ecc7ebc14369fb402a2cacb5ef",
+      "bytes": 1728
+    },
+    {
+      "path": "65.23_Model_Provider_and_DeepML_Pipeline.deepml",
+      "sha256": "5074a0ed9d50b8754afdfd19a872e3fe1fc4902a36786ba07c5efe134b202399",
+      "bytes": 986
+    },
+    {
+      "path": "65.24_Visual_Feedback_and_Bounded_Correction.jate",
+      "sha256": "a47254e62367e04381aea39209d7ead04ee15b7dc4080a3523b1e674edf05dca",
+      "bytes": 1133
+    },
+    {
+      "path": "65.25_Runtime_Events_Logs_and_Diagnostics.jaa",
+      "sha256": "69f408f5ad7a9f10cc87bd2d8adcd0de3a725e84e7b49c5ddb95094a0ef6578b",
+      "bytes": 1657
+    },
+    {
+      "path": "65.26_Checkpoint_Retry_and_Recovery.jaops",
+      "sha256": "624f8815e81ba61919b932269efdfb4834656df592f3f701c0d5e32cd2cfdfe3",
+      "bytes": 1098
+    },
+    {
+      "path": "65.27_Archive_Provenance_and_Filing.jad",
+      "sha256": "eb79cba66e701f9482ae905e3bb0e448bce595210ff4a92ab731d8adf3285d11",
+      "bytes": 2733
+    },
+    {
+      "path": "65.28_Diff_Patch_and_Review.ja",
+      "sha256": "161695eb8fb3c1f221561ccf859ee40bbafe0e56b195d2b0807ba77160c9a29e",
+      "bytes": 1791
+    },
+    {
+      "path": "65.29_Release_Installer_and_Air_Gap_Certification.jaops",
+      "sha256": "778b446e44a38fac4f7f8ac33334a7a697ccc918e3ac1790c7ddef208d0a4cad",
+      "bytes": 1110
+    },
+    {
+      "path": "65.30_LANDON_Run_and_Run_All_Control.jaa",
+      "sha256": "9bfe8772f4c2cab876bd162d47e0b5e5549f76599c5110c572e24b57a69f5ec4",
+      "bytes": 1598
+    },
+    {
+      "path": "65.31_Professor_Proposal_and_Action_Cards.jaa",
+      "sha256": "e6824b1d5cf8a40799161dccad41c174110a0f9863b245948bd5475e38600074",
+      "bytes": 1716
+    },
+    {
+      "path": "65.32_Podium_Authorization_and_Dispatch.jaa",
+      "sha256": "2454ff06a491f9fb87a9e0d63b0a62f2299ab824cded7bb591622c96755195d7",
+      "bytes": 1777
+    },
+    {
+      "path": "65.33_SOPHIA_Evaluation_and_Accepted_Learning.jate",
+      "sha256": "d8b177ed09f89101f4f5d8fc429ac546b56d27339088cc05dccd5548c4dea91f",
+      "bytes": 1155
+    },
+    {
+      "path": "65.34_CHARLOTTE_Construction_and_Inspection.jaui",
+      "sha256": "02d195f17f83add3a62da47989678ccfe30da413f54e38bb3288c18aa59304fc",
+      "bytes": 2040
+    },
+    {
+      "path": "65.35_Localization_Accessibility_and_Large_File_Windows.jaui",
+      "sha256": "03d3343571cdc8ddc07a9f3a036c484088871fac5f17a3ce9691532aed281a23",
+      "bytes": 1924
+    },
+    {
+      "path": "65.36_Final_Validation_and_Compatibility_Report.jad",
+      "sha256": "a1d0df1202f81739f745148892521f24f2305aa8a0537a2db671a31897668442",
+      "bytes": 3219
+    },
+    {
+      "path": "README.md",
+      "sha256": "7f61d3c777b0fffd406a54c4f24e90e24881088fc265018b240d6e7f015c4acb",
+      "bytes": 23917
+    },
+    {
+      "path": "repository_context_snapshots.dmk",
+      "sha256": "005ce49bf07bcc2a5e530bad690c5644373751c4d5a321694a3ad20d4d373b5b",
+      "bytes": 2858
+    },
+    {
+      "path": "sandbox_archive_records.dmk",
+      "sha256": "294918900c252873f46b3e7a383bf36858dbbbf1d7e3b51bf33af5bab022b342",
+      "bytes": 2880
+    },
+    {
+      "path": "sandbox_compatibility_reports.dmk",
+      "sha256": "95ad3f15402d8722ca638d60a24b66e304c3f316c76ce7a3bb3186b538a82838",
+      "bytes": 3174
+    },
+    {
+      "path": "sandbox_run_contracts.dmk",
+      "sha256": "537f86f95bfc1ce4be68f9cbca116096c18293c6d1c0666fe5cf3aa597515001",
+      "bytes": 3024
+    },
+    {
+      "path": "suite_dependency_records.dmk",
+      "sha256": "61385feb5af2ad85c0c7e86111177e4981d34805b05eccb0116c9c7b39abfe9c",
+      "bytes": 2780
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

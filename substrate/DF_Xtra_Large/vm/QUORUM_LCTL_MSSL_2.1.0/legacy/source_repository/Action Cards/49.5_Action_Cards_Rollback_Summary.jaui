@@ -1,0 +1,47 @@
+ja source 0.3
+module suite49.action_cards.rollback_summary
+use Interface
+policy no_network
+
+interface ActionCardRollbackSummary {
+    state selected_action: Text? = null
+    state summarizing_rollback: Flag = false
+    derived can_select_action = not summarizing_rollback
+    derived can_summarize_rollback = selected_action != null and not summarizing_rollback
+    component SOPHIA_RollbackModel {
+        label "Interpret proposed action rollback"
+        enabled bind can_summarize_rollback
+        accessibility role button name "Interpret rollback for selected action"
+        action interpret_rollback_summary requires admin.action:approved
+    }
+    component CHARLOTTE_RollbackGate {
+        label "Validate rollback availability and recovery limits"
+        enabled bind can_summarize_rollback
+        accessibility role button name "Validate rollback summary for selected action"
+        action validate_rollback_summary requires admin.action:approved
+    }
+    component LANDON_RollbackBind {
+        label "Bind validated rollback summary"
+        enabled bind can_summarize_rollback
+        accessibility role button name "Bind rollback summary to selected action card"
+        action bind_rollback_summary requires admin.action:approved
+    }
+    component Professor_RollbackGuide {
+        label "Explain rollback steps and irreversible effects"
+        enabled bind can_select_action
+        accessibility role button name "Explain selected action rollback summary"
+        action explain_rollback_summary requires admin.action:approved
+    }
+    component Podium_RollbackEvidence {
+        label "View rollback evidence and receipt"
+        enabled bind can_summarize_rollback
+        accessibility role button name "View selected action rollback evidence"
+        action show_rollback_evidence requires admin.action:approved
+    }
+    component RollbackSummaryViewport {
+        embed portal.scene "action_card_rollback_summary"
+        motion bind timeline.rollback_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface ActionCardRollbackSummary

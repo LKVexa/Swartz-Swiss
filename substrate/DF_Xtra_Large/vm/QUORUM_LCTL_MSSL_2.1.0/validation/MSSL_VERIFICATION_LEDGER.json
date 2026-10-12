@@ -1,0 +1,407 @@
+{
+  "schema": "QUORUM-MSSL-VERIFICATION/1.0",
+  "count": 80,
+  "all_pass": true,
+  "records": [
+    {
+      "path": "authority/repository.mssl",
+      "sha256": "88298c33b155d8a8468bb08c717b868c925010f536e32a0e684005ebc72c6b69",
+      "kappa_valid": true
+    },
+    {
+      "path": "authority/security.mssl",
+      "sha256": "547b25f11383f81ca292f6dca7b0d3f220f484ac15366dc85b6feb76ab1d1960",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/01_observer/authority/module.mssl",
+      "sha256": "efa470c7084d2ef2e46b8bf54b4cf8e53c67e07740afcee2b745baacb3e91ff6",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/02_anthology/authority/module.mssl",
+      "sha256": "0cb6933f7a26feccf11558bed095df11f92a38c7a47d7b07555e76bcc285a0f5",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/03_atlas/authority/module.mssl",
+      "sha256": "c66084220c38b8b0ababeac3ab5cf9bcd660c92924346847a00f277806820bc4",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/04_compass/authority/module.mssl",
+      "sha256": "6622104b9c46e949ab39f16b2f77759fc4e2cb1eb3774e5492ca7d85e03ee572",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/05_pencil/authority/module.mssl",
+      "sha256": "492a97ac957e45bacb881d71a20cfe795b27b383358b5c155c47e80960e6da80",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/06_pencil_sharpener/authority/module.mssl",
+      "sha256": "0aca7549ea3f293cd0bdae2199ba10913de46182725af9a2e12f466372b68293",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/07_grinder/authority/module.mssl",
+      "sha256": "89207d0cb9390ca711495175a4bea435863145d9e4e7a6456b544c24da2de4ce",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/08_tables/authority/module.mssl",
+      "sha256": "8950f68de9c7a14b0408639c72c20621c89f76e8a2e1ac7b40ce66c8eec50e11",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/09_funnel/authority/module.mssl",
+      "sha256": "bd7bd7c0e50f6edf76afdad024d6ead52ec06c8bfdd62c943093c1ed7060b4db",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/10_illuminator/authority/module.mssl",
+      "sha256": "2370b65bf64a9f2c35ccbb52655598328fc65ad204ce2513f5154fecc7b41a02",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/11_cypher/authority/module.mssl",
+      "sha256": "213f8819e3c7d24223f5be6e3ccef7a8b88614f19df7399755ea795465108086",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/12_filing_cabinet/authority/module.mssl",
+      "sha256": "917646a10ac82c73f05fd12d7f6c9e5cbdc8a07ba73bfefe23de8055861b7fa7",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/13_chair/authority/module.mssl",
+      "sha256": "c3e79bc217f473d4770a418f8b56eff2bee490e1115c148306005364227b57a2",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/14_plug/authority/module.mssl",
+      "sha256": "e9590f5e5fb8d775adecd22921300e78534d96d5197dde5d79a1d90a008aa508",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/15_orchestrator/authority/module.mssl",
+      "sha256": "fd7ae1c16b0b4f2833b5d725cd91a3cfcf391290da728e793df377f6981d83cb",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/16_perceiver/authority/module.mssl",
+      "sha256": "b01a142183dd0a71fddeb392a2757b9b2dab9c81e20686fc562d07172ad6d118",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/17_asset_observer/authority/module.mssl",
+      "sha256": "7656a68f10722202a91bc69f4e4bf6c88f441a803b9d5a110e56b28c58390003",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/18_feature_graph/authority/module.mssl",
+      "sha256": "3d3b5b50b54df9bd562f1b54400a66edf089a3eff7a2acc6766ca372b0fcb337",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/19_mesh_geometry/authority/module.mssl",
+      "sha256": "bab2f722d5aa14dda043f5e6784c5253b491fd66cd3c0f00bdf06e22eb5344fa",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/20_equation_operator_bank/authority/module.mssl",
+      "sha256": "604eb9734f6532eae1b77f5945599bb14b861af50db394f82eed4b48f8371370",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/21_scene_reconstruction/authority/module.mssl",
+      "sha256": "3f77a44f7379920a541581624ac93e1ec02670ec7aa0db374e1c82945ed5d261",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/22_motion_planner/authority/module.mssl",
+      "sha256": "a40c7ceec27c54cd89c89c5cef9231394a7e424e07693cc4d4c5e1dd24bde79c",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/23_temporal_animator/authority/module.mssl",
+      "sha256": "5575bb508240f3febc98d40eac2aaba856cd5ca19d4264ad751c75db4c02d5bb",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/24_csharp_renderer/authority/module.mssl",
+      "sha256": "255c35a5bac11ea9a28162005c647d9e5e3dd453d43844d4e95b50afb25e155a",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/25_media_export/authority/module.mssl",
+      "sha256": "bc72f55e9d6eb057f87829843b9d43d1db0e6cb5db3005a4987c81f6d08e87ea",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/26_full_stack_ui/authority/module.mssl",
+      "sha256": "6977db0f2a3a4cd80fa71f427af5adabf87a07d8d4931ad08cf1c68e361eb7a0",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/27_deepml_worker/authority/module.mssl",
+      "sha256": "c779e683d7d899ebada97d993d218e797f5198b11691ff88547285e3cb491685",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/28_safety_gate/authority/module.mssl",
+      "sha256": "4a4aed8f97f7d69beb83753e99c0ff66c0c0d9dcf79be457b142a00d5f3b45df",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/29_archive_ledger/authority/module.mssl",
+      "sha256": "f1c48035156d9efeec7f192a95f0569322eab879da864916f9f63fb732915e51",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/30_ja_adapter/authority/module.mssl",
+      "sha256": "f15da135e598f1f3ccb8eb5b5e0aaac93244d2076bc4937db4dd775addc8dd3b",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/31_vexxa/authority/module.mssl",
+      "sha256": "2144f6c37bb45aa1b7ff8a49bc68e5872c125dc21bb118bf2980d7f125d71641",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/32_orchestrator_ii/authority/module.mssl",
+      "sha256": "6ffd7a75dd1cab2ccdfbcbdbd05c26d2877f3eb7e99b745b26d5c58ddcf7b212",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/33_visual_feedback/authority/module.mssl",
+      "sha256": "e23148b255a533ea598d01c818be8d203bef5ee9ecb2e622a471c27905c37a21",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/34_animation_vfx_workspace/authority/module.mssl",
+      "sha256": "8ee8517917fb662aa5704e6c84cf659ea08ba84cd716110f499722c0a7187391",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/35_app_designer/authority/module.mssl",
+      "sha256": "bc616b5a9df30e5fbdcbfd0c7ed0cb1746bcff86a1d529a79a4ead0fda37a4ec",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/36_visual_correction_system/authority/module.mssl",
+      "sha256": "0d6ad1c2d336cb82c6d638b3c9e47ba7f64ec929e5357bf3ee6682d206c48096",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/37_training_and_evaluation/authority/module.mssl",
+      "sha256": "6c1f1a33f9193b2be3345d5086d35ae6403951900b73341c1c74eb4c9edd7d47",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/38_preview_designer/authority/module.mssl",
+      "sha256": "def541ea78924066186c3b9fc3994927b2c6d6e1b8991b1feb7593230b09a96e",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/39_core_studio/authority/module.mssl",
+      "sha256": "f06137a6e41045ad633945f1a00983c01e7bb3e8df967500055efdb2e0ed201f",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/40_repository_context_engine/authority/module.mssl",
+      "sha256": "6e1e3fbd15f7a53b1bb9ef669bc0e0e7cfe6003e1ea0fce77bddbed7ed74d24a",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/41_knowledge_repository/authority/module.mssl",
+      "sha256": "e56fb084681af9b1ff57e1a64e25c8510b849838b6c451135c989c6d52f20c14",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/42_transition_plane/authority/module.mssl",
+      "sha256": "377148a6b8f4a11a7a13ccd2c8c4f7a68278c855b37614544e3e938cf03163a6",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/43_release_plane/authority/module.mssl",
+      "sha256": "5afa117cde79bf0a0f6b99449ff1d5fe416b56550bb069a533a2001bb42be056",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/44_capability_and_security_plane/authority/module.mssl",
+      "sha256": "702cd833d8ca9224619793861043f4addca306487c052d2b3b222378d882aa9e",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/45_localization_and_large_file_plane/authority/module.mssl",
+      "sha256": "3120fad0530130f765bc064711a5325d33a1b066807a66812cf14b81ef18bc18",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/46_air_gap_certification_and_installer_plane/authority/module.mssl",
+      "sha256": "b7f4a8fa23ac3ab1a186b0887d577f33d1e7274607508cf4c0d996fc38069189",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/47_chatbot/authority/module.mssl",
+      "sha256": "1ab912177d4747bf1b0edf26160092c7c76de3ba27d4dd4511f8dc860f4e6068",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/48_answer_modes_and_specialized_roles/authority/module.mssl",
+      "sha256": "85cd64001a15dc86f8d09b3fbe226b3eb3560596fb051665c538962e1ddb2d27",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/49_action_cards/authority/module.mssl",
+      "sha256": "d47ab4e7d5a0516fbe0f1f360078730cc6cc34a64725dc3cdf7ffdc2fb9f6a5f",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/50_diff_patch_and_review/authority/module.mssl",
+      "sha256": "282e13294e65cbd36f8690325d058d3a82859739a69e82126f28a06ec082a266",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/51_repository_retrieval_and_memory/authority/module.mssl",
+      "sha256": "14997aab6cc67cdda69718ba8d25ec479de2d369c32fa9ccc861e353e256b146",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/52_evaluation_and_content_defense/authority/module.mssl",
+      "sha256": "b8bda2fe995610dc9495338588d05dd8f7e2d120cb8d4dd6142e64e44386740e",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/53_operations_plane/authority/module.mssl",
+      "sha256": "1066e9d4832cc6a60fa9ab52c31910a418da687d32f3864d25e42772dd936ec3",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/54_local_model_provider_and_health/authority/module.mssl",
+      "sha256": "75e7eb5c3f6ef38cea1a6dcd9e6ee8e17133616617d7d220afb225565eaac01a",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/55_capability_manifests_and_permissions/authority/module.mssl",
+      "sha256": "b3ea5f83cfc6dfd67675fd89738dd05ffc961c2f1dd9e362804f26428dca14e2",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/56_job_queue_workers_and_sandboxes/authority/module.mssl",
+      "sha256": "e189c91574f9867df5ffc0c866fe67a0a3b996ac24983db47616c856faef44d2",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/57_translation_build_test_and_evaluation_jobs/authority/module.mssl",
+      "sha256": "980443b2c563f6458750052539f8298585bcc62ccd83fa4912061fb8941f3b4d",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/58_indexing_storage_resources_logs_and_recovery/authority/module.mssl",
+      "sha256": "c16a429aa1ad1a1bcc90b1f184bca0eee4cf9f03d31ffa970ef1d433531c72e8",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/59_shell/authority/module.mssl",
+      "sha256": "c5a469c89bd5ced178bebfe7017aa93e4ff4533c03916497707bade3541a0df6",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/60_worker/authority/module.mssl",
+      "sha256": "40b558bfa17cfc7ae1d0efbacbc315770e34a8ab5ebdc06a1755fed6738d837b",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/61_popup_runner/authority/module.mssl",
+      "sha256": "c05e28fec9ebde0d29de567c56303b9798087595995ab67a4cb4a2392a6e524e",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/62_landon_integration_and_run_all/authority/module.mssl",
+      "sha256": "73278f662c5195f9afb529aa204a8153b76c9c082dcfa8bb8cf919678f98be3f",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/63_sandbox_and_offline_runtime/authority/module.mssl",
+      "sha256": "b4a580e3224b5a1acdfda2c854490880ebaa213bb93c4c6d4d0f5f53d414f2bc",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/64_training_desktop_and_android_workers/authority/module.mssl",
+      "sha256": "3b96daf16244c309a24bbed9e2a7ce479310a682aa077a87a8d1802e32295202",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/65_sandbox_engine/authority/module.mssl",
+      "sha256": "e556e5c77993ae9efb0e7aeb27afdcb45c2a203f4a8c2d1ac155c65f799d3b4f",
+      "kappa_valid": true
+    },
+    {
+      "path": "modules/66_terminal/authority/module.mssl",
+      "sha256": "c4622c174f627c97e2d8772900e9cc6cab5e6d744a5d6302af89b6c5a1915e2f",
+      "kappa_valid": true
+    },
+    {
+      "path": "planes/01_sense_context/plane.mssl",
+      "sha256": "0ec9077eb3f17e6e0759231a6f4de0f14c7235248e22c60bc2ed04f3c9cb463b",
+      "kappa_valid": true
+    },
+    {
+      "path": "planes/02_intent_reasoning/plane.mssl",
+      "sha256": "62bf3ce1e85da66268980de3ac22dcef72ae710c0ac0a879083a1131d912020d",
+      "kappa_valid": true
+    },
+    {
+      "path": "planes/03_data_evidence/plane.mssl",
+      "sha256": "a3a70867767c1decc42d390d3092137dc96b064d75c9224d67367a6ba4c0b76c",
+      "kappa_valid": true
+    },
+    {
+      "path": "planes/04_orchestration/plane.mssl",
+      "sha256": "90ddfac7990e96736ab27293ca7873f45640be4aa944fe6aec781f459f046b1e",
+      "kappa_valid": true
+    },
+    {
+      "path": "planes/05_security_authorization/plane.mssl",
+      "sha256": "33643e6dc9d77068b83d066d1d11ab0fc30ef98c9c2aa945eacc5141e3927946",
+      "kappa_valid": true
+    },
+    {
+      "path": "planes/06_interfaces_services/plane.mssl",
+      "sha256": "b19b001d9adcb9790079cc8840a13c9d2cd3f5212da551ffea5894ededafbf81",
+      "kappa_valid": true
+    },
+    {
+      "path": "planes/07_media_visual/plane.mssl",
+      "sha256": "49c2833c2533c1672df05bf3427e5ce7bab03f3e426043a33f47b80a790854dd",
+      "kappa_valid": true
+    },
+    {
+      "path": "planes/08_model_compute/plane.mssl",
+      "sha256": "c0b65f9403b6b7456e0a6652215287fdfb978be1592064f9954298a80baf3e19",
+      "kappa_valid": true
+    },
+    {
+      "path": "planes/09_translation_interop/plane.mssl",
+      "sha256": "3dd2952a03c797370370746849858d0cf3907c5394286be4ce9a77da13d14cd9",
+      "kappa_valid": true
+    },
+    {
+      "path": "planes/10_release_delivery/plane.mssl",
+      "sha256": "34194d408e0ee7c5242987ed2100b4939cce3991c321ddc36c5b71ae7033b5cb",
+      "kappa_valid": true
+    },
+    {
+      "path": "planes/11_operations_recovery/plane.mssl",
+      "sha256": "08add2d398fe73aba600022161b757753a5df8cc95350f972cad45778c06674b",
+      "kappa_valid": true
+    },
+    {
+      "path": "planes/12_governance_control/plane.mssl",
+      "sha256": "b4681c7e3b9b3fc041341f9b7ff7fc941ac4d8e52a273847e7bc019ea51b4935",
+      "kappa_valid": true
+    }
+  ]
+}

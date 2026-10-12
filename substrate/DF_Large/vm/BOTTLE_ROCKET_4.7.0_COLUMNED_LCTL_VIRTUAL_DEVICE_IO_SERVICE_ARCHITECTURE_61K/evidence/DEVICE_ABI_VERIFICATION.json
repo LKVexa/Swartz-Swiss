@@ -1,0 +1,22 @@
+{
+  "builtins": 7,
+  "default_network": false,
+  "device_abi_version": 1,
+  "guest_store_capacity_bytes": 1856,
+  "max_device_transfer_bytes": 64,
+  "optional_extensions": [
+    "network",
+    "wall_clock"
+  ],
+  "quotas": {
+    "entropy_requests_per_run": 8,
+    "mailbox_depth": 1,
+    "storage_writes_per_run": 4,
+    "transfer_bytes_per_run": 1024
+  },
+  "record": "BR.DeviceABIVerification",
+  "release": "4.7.0",
+  "spec": "spec/DEVICE_ABI.json",
+  "spec_sha256": "a761c12d7af4d79255bb29c03a211daab10f030746c92bdbb2888acf016c80f2",
+  "status": "PASS"
+}

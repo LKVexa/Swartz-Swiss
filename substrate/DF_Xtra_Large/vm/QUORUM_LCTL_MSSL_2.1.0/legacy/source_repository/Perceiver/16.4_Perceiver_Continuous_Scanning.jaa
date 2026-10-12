@@ -1,0 +1,36 @@
+ja source 0.3
+module suite16.perceiver.continuous_scanning
+use Agent
+policy no_network
+
+agent PerceiverContinuousScanning {
+    identity "perceiver_continuous_scanning"
+    role "sophia-charlotte-landon-professor-podium-perceiver"
+    goal complete_bounded_scan_cycle when confidence >= 0.90
+    memory session retention 1h
+    budget steps 50 tools 5
+    tool LANDONScanApprovedSources(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAClassifyObservations(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEFilterInjection(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainScan(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordScan(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONScanApprovedSources
+        authorize SOPHIAClassifyObservations
+        authorize CHARLOTTEFilterInjection
+        authorize ProfessorExplainScan
+        authorize PodiumRecordScan
+        continue when policy_allows
+        execute LANDONScanApprovedSources("approved_local_sources")
+        execute SOPHIAClassifyObservations("scan_observations")
+        execute CHARLOTTEFilterInjection("classified_observations")
+        execute ProfessorExplainScan("validated_scan_cycle")
+        execute PodiumRecordScan("scan_cycle_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "PerceiverContinuousScanning.mcrt"
+

@@ -1,0 +1,68 @@
+{
+  "atomic_requirements_operational": 97,
+  "atomic_requirements_total": 97,
+  "command_log_count": 22,
+  "completed_utc": "2026-08-11T03:47:53+00:00",
+  "decision": "OPERATIONAL",
+  "external_scope": [
+    "physical SIM/UICC/eSIM hardware and issuer qualification",
+    "native Windows OS execution qualification",
+    "third-party independent certification",
+    "external LCTL 1.6.1-RC1 JAR verification when no JAR is supplied"
+  ],
+  "inherited_core_tests": 18,
+  "record": "BR.Qualification",
+  "release": "BOTTLE_ROCKET 4.2.0 COLUMNED LCTL \u2014 Native Semantic Authority",
+  "reproducibility": {
+    "build_A": {
+      ".build/br_tests": "5b92ff6fdf149bd9fba3d556b24f21f9d70de40a50589972bd13c529ccd3250b",
+      ".build/brctl": "2f9350a7caf0faef4c9e9614bc21cbbbc85c80903375e5d18925cc4f32326566",
+      ".build/libbrvm_core.a": "af0ff58a43dcf553da98eb65c6fee50bf02c01f068e20afe0b06a750a26313f0",
+      "deploy/BOTTLE_ROCKET_SIM_CORE_4.2.0.brimg": "5fb13ad12b8e3e8791b57969d6d27731cba8d15836bd1ad54f667ceca55b6507",
+      "deploy/BOTTLE_ROCKET_SIM_CORE_4.2.0.brir.json": "ac555fe7c22ace9457b1509b86228ebb4c3ecfe09215dffcbbdacbde8428b092",
+      "deploy/BOTTLE_ROCKET_SIM_CORE_4.2.0.provenance.json": "13ba0f2c9ccf90f5a6f5bd5e78b037f780d6c1c4f88f326c792061935ebc12bf"
+    },
+    "build_B": {
+      ".build/br_tests": "5b92ff6fdf149bd9fba3d556b24f21f9d70de40a50589972bd13c529ccd3250b",
+      ".build/brctl": "2f9350a7caf0faef4c9e9614bc21cbbbc85c80903375e5d18925cc4f32326566",
+      ".build/libbrvm_core.a": "af0ff58a43dcf553da98eb65c6fee50bf02c01f068e20afe0b06a750a26313f0",
+      "deploy/BOTTLE_ROCKET_SIM_CORE_4.2.0.brimg": "5fb13ad12b8e3e8791b57969d6d27731cba8d15836bd1ad54f667ceca55b6507",
+      "deploy/BOTTLE_ROCKET_SIM_CORE_4.2.0.brir.json": "ac555fe7c22ace9457b1509b86228ebb4c3ecfe09215dffcbbdacbde8428b092",
+      "deploy/BOTTLE_ROCKET_SIM_CORE_4.2.0.provenance.json": "13ba0f2c9ccf90f5a6f5bd5e78b037f780d6c1c4f88f326c792061935ebc12bf"
+    },
+    "byte_identical": true,
+    "record": "BR.Reproducibility"
+  },
+  "semantic_tests": 53,
+  "size": {
+    "brim_bytes": 176,
+    "brim_ceiling_bytes": 51200,
+    "brim_pass": true,
+    "brir_bytes": 1788,
+    "core_archive_bytes": 33958,
+    "host_brctl_bytes": 58000,
+    "production_source_boundary": "Makefile + src/** + adapters/** + spec/**",
+    "production_source_bytes": 60937,
+    "production_source_ceiling_lt_bytes": 61000,
+    "production_source_pass": true,
+    "provenance_manifest_bytes": 647,
+    "record": "BR.Size",
+    "repository_source_bytes_excluding_build_evidence_deploy": 367629
+  },
+  "started_utc": "2026-08-11T03:47:20+00:00",
+  "unresolved_critical_or_high_defects": [],
+  "work_packages": {
+    "BR-420-01": "OPERATIONAL",
+    "BR-420-02": "OPERATIONAL",
+    "BR-420-03": "OPERATIONAL",
+    "BR-420-04": "OPERATIONAL",
+    "BR-420-05": "OPERATIONAL",
+    "BR-420-06": "OPERATIONAL",
+    "BR-420-07": "OPERATIONAL",
+    "BR-420-08": "OPERATIONAL",
+    "BR-420-09": "OPERATIONAL",
+    "BR-420-10": "OPERATIONAL",
+    "BR-420-11": "OPERATIONAL",
+    "BR-420-12": "OPERATIONAL"
+  }
+}

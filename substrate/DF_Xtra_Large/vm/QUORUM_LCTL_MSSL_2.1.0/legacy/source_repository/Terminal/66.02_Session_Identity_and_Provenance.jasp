@@ -1,0 +1,45 @@
+profile ja.data
+source_level 0.3
+
+subsuite Terminal.T_02 SessionIdentityProvenance {
+    identity { suite = "66"; id = "T-02"; deterministic = true; autorun = false }
+
+    accept {
+        terminal_run_id
+        requested_by
+        local_session_ref
+        repository_context_ref
+    }
+
+    emit TerminalSessionIdentity
+
+    procedure bind(requested_by, terminal_run_id) {
+        principal = resolve_authorized_local_identity(requested_by)
+        session = create_session_id(terminal_run_id, principal)
+
+        require principal.authenticated
+        require session.one_run_scope
+        require repository_context_ref.content_addressed
+
+        return TerminalSessionIdentity {
+            terminal_run_id
+            session_id = session.id
+            principal_id = principal.id
+            repository_context_ref
+            parent_session_ref
+            created_at
+            provenance_chain
+        }
+    }
+
+    deny {
+        anonymous_execution
+        session_identity_reuse_across_principals
+        missing_repository_provenance
+        mutable_provenance_record
+    }
+
+    evidence { principal_resolution; session_ledger; provenance_chain; identity_hash }
+    tests { identity_binding; cross_principal_denial; provenance_immutability }
+}
+

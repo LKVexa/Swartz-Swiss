@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "42729d1a743bcd47a616f4c56cc71317e5cb94e7a07ff94755d2aadc6ae98a1b",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Atlas",
+  "module_id": 3,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

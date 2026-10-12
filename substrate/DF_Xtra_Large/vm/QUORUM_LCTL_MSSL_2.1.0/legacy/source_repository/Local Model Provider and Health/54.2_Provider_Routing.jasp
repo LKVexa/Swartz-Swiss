@@ -1,0 +1,42 @@
+ja source 0.3
+module suite54.local_model_provider.provider_routing
+use Service
+policy explicit_network
+
+service LocalProviderRouting {
+    message ProviderRouteRequest {
+        request_id: Text,
+        operation_class: Text,
+        model_requirement: Text,
+        provider_allowlist_hash: Text,
+        capability_requirement: Text,
+        resource_budget: Text,
+        compatibility_version: Text,
+        routing_policy_hash: Text
+    }
+    message ProviderRouteResponse {
+        route_status: Text,
+        selected_provider_id: Text,
+        selected_model_id: Text,
+        local_endpoint_descriptor: Text,
+        route_evidence_hash: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_provider_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint route(request: ProviderRouteRequest) -> Stream<ProviderRouteResponse>
+        auth capability local_model.provider.route
+        deadline 10s
+        retry max 1
+        idempotency request.request_id
+    protocol ProviderRoutingSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json LocalProviderRouting.compatibility_report

@@ -1,0 +1,509 @@
+{
+  "backend_policy": "none",
+  "consistency_rules": {
+    "ordering": "PROGRAM_ORDER",
+    "profile": "SINGLE_OWNER",
+    "quantum_scope": "SINGLE_OWNER_ONLY"
+  },
+  "df_release": "DF-PA21.2-1.0.0",
+  "domain_descriptions": {
+    "D_BR": {
+      "description": "BOTTLE ROCKET lineage: 3.0.0-MODEL (MSSL), 5.0.0/ISA 4.1 (LCTLC/1.1), 4.7.0/BR 1.1 (LCTLC/1.2)"
+    },
+    "D_QVM": {
+      "description": "QUORUM VM lineage: 5.0.0-candidate hosted Python VM (LCTLC/1.0)"
+    }
+  },
+  "domains": [
+    {
+      "consistency_rules": {
+        "ordering": "PROGRAM_ORDER",
+        "profile": "SINGLE_OWNER",
+        "quantum_scope": "SINGLE_OWNER_ONLY"
+      },
+      "domain_id": "D_BR",
+      "failure_boundary": "DOMAIN",
+      "federation_id": "DF0",
+      "groups": [
+        {
+          "capabilities": [
+            "bottle_rocket",
+            "classical",
+            "lctlc/1.2",
+            "row_sequence_witness"
+          ],
+          "consistency_rules": {
+            "ordering": "PROGRAM_ORDER",
+            "profile": "SINGLE_OWNER",
+            "quantum_scope": "SINGLE_OWNER_ONLY"
+          },
+          "domain_id": "D_BR",
+          "failure_boundary": "GROUP",
+          "federation_id": "DF0",
+          "group_id": "G_BR11",
+          "limits": {
+            "bandwidth_bytes_per_tick": 1000000.0,
+            "cpu_slots": 1,
+            "ebit_budget": 0,
+            "memory_bytes": 40000000,
+            "qpu_slots": 0
+          },
+          "members": [
+            {
+              "alive": true,
+              "capabilities": [
+                "bottle_rocket",
+                "classical",
+                "lctlc/1.2",
+                "row_sequence_witness"
+              ],
+              "consistency_rules": {
+                "ordering": "PROGRAM_ORDER",
+                "profile": "SINGLE_OWNER",
+                "quantum_scope": "SINGLE_OWNER_ONLY"
+              },
+              "domain_id": "D_BR",
+              "failure_domain": "FD_LARGE",
+              "federation_id": "DF0",
+              "group_id": "G_BR11",
+              "limits": {
+                "bandwidth_bytes_per_tick": 1000000.0,
+                "cpu_slots": 1,
+                "ebit_budget": 0,
+                "memory_bytes": 40000000,
+                "qpu_slots": 0
+              },
+              "migration_rules": {
+                "allow_classical_migration": true,
+                "allow_quantum_migration": false,
+                "forbid_cross_trust": true,
+                "max_hops": 2,
+                "require_explicit_movable": true
+              },
+              "ownership_scope": [],
+              "provenance": {
+                "created_at_logical": 0,
+                "created_by": "DF-PA21.2-1.0.0",
+                "seal": "-",
+                "source_ref": "DF_Large/node/NODE_DESCRIPTOR.json"
+              },
+              "replication_rules": {
+                "allow_classical_replication": true,
+                "allow_quantum_replication": false,
+                "consistency_profile": "SINGLE_OWNER",
+                "replication_factor": 1
+              },
+              "signals": {
+                "completed_tasks": 0,
+                "heartbeat_latency": 0.0,
+                "memory_pressure": 0.0,
+                "queue_delay": 0.0,
+                "throughput_ema": 1.0
+              },
+              "trust": "LOCAL_TRUSTED",
+              "worker_id": "W_LARGE"
+            }
+          ],
+          "migration_rules": {
+            "allow_classical_migration": true,
+            "allow_quantum_migration": false,
+            "forbid_cross_trust": true,
+            "max_hops": 2,
+            "require_explicit_movable": true
+          },
+          "provenance": {
+            "created_at_logical": 0,
+            "created_by": "DF-PA21.2-1.0.0",
+            "seal": "-",
+            "source_ref": "-"
+          },
+          "replication_rules": {
+            "allow_classical_replication": true,
+            "allow_quantum_replication": false,
+            "consistency_profile": "SINGLE_OWNER",
+            "replication_factor": 1
+          },
+          "trust": "LOCAL_TRUSTED"
+        },
+        {
+          "capabilities": [
+            "bottle_rocket",
+            "classical",
+            "mssl/asm-1",
+            "row_sequence_witness"
+          ],
+          "consistency_rules": {
+            "ordering": "PROGRAM_ORDER",
+            "profile": "SINGLE_OWNER",
+            "quantum_scope": "SINGLE_OWNER_ONLY"
+          },
+          "domain_id": "D_BR",
+          "failure_boundary": "GROUP",
+          "federation_id": "DF0",
+          "group_id": "G_BR3",
+          "limits": {
+            "bandwidth_bytes_per_tick": 1000000.0,
+            "cpu_slots": 1,
+            "ebit_budget": 0,
+            "memory_bytes": 35926544,
+            "qpu_slots": 0
+          },
+          "members": [
+            {
+              "alive": true,
+              "capabilities": [
+                "bottle_rocket",
+                "classical",
+                "mssl/asm-1",
+                "row_sequence_witness"
+              ],
+              "consistency_rules": {
+                "ordering": "PROGRAM_ORDER",
+                "profile": "SINGLE_OWNER",
+                "quantum_scope": "SINGLE_OWNER_ONLY"
+              },
+              "domain_id": "D_BR",
+              "failure_domain": "FD_SMALL",
+              "federation_id": "DF0",
+              "group_id": "G_BR3",
+              "limits": {
+                "bandwidth_bytes_per_tick": 1000000.0,
+                "cpu_slots": 1,
+                "ebit_budget": 0,
+                "memory_bytes": 35926544,
+                "qpu_slots": 0
+              },
+              "migration_rules": {
+                "allow_classical_migration": true,
+                "allow_quantum_migration": false,
+                "forbid_cross_trust": true,
+                "max_hops": 2,
+                "require_explicit_movable": true
+              },
+              "ownership_scope": [],
+              "provenance": {
+                "created_at_logical": 0,
+                "created_by": "DF-PA21.2-1.0.0",
+                "seal": "-",
+                "source_ref": "DF_Small/node/NODE_DESCRIPTOR.json"
+              },
+              "replication_rules": {
+                "allow_classical_replication": true,
+                "allow_quantum_replication": false,
+                "consistency_profile": "SINGLE_OWNER",
+                "replication_factor": 1
+              },
+              "signals": {
+                "completed_tasks": 0,
+                "heartbeat_latency": 0.0,
+                "memory_pressure": 0.0,
+                "queue_delay": 0.0,
+                "throughput_ema": 1.0
+              },
+              "trust": "LOCAL_TRUSTED",
+              "worker_id": "W_SMALL"
+            }
+          ],
+          "migration_rules": {
+            "allow_classical_migration": true,
+            "allow_quantum_migration": false,
+            "forbid_cross_trust": true,
+            "max_hops": 2,
+            "require_explicit_movable": true
+          },
+          "provenance": {
+            "created_at_logical": 0,
+            "created_by": "DF-PA21.2-1.0.0",
+            "seal": "-",
+            "source_ref": "-"
+          },
+          "replication_rules": {
+            "allow_classical_replication": true,
+            "allow_quantum_replication": false,
+            "consistency_profile": "SINGLE_OWNER",
+            "replication_factor": 1
+          },
+          "trust": "LOCAL_TRUSTED"
+        },
+        {
+          "capabilities": [
+            "bottle_rocket",
+            "classical",
+            "lctlc/1.1",
+            "row_sequence_witness"
+          ],
+          "consistency_rules": {
+            "ordering": "PROGRAM_ORDER",
+            "profile": "SINGLE_OWNER",
+            "quantum_scope": "SINGLE_OWNER_ONLY"
+          },
+          "domain_id": "D_BR",
+          "failure_boundary": "GROUP",
+          "federation_id": "DF0",
+          "group_id": "G_ISA41",
+          "limits": {
+            "bandwidth_bytes_per_tick": 1000000.0,
+            "cpu_slots": 1,
+            "ebit_budget": 0,
+            "memory_bytes": 11000000,
+            "qpu_slots": 0
+          },
+          "members": [
+            {
+              "alive": true,
+              "capabilities": [
+                "bottle_rocket",
+                "classical",
+                "lctlc/1.1",
+                "row_sequence_witness"
+              ],
+              "consistency_rules": {
+                "ordering": "PROGRAM_ORDER",
+                "profile": "SINGLE_OWNER",
+                "quantum_scope": "SINGLE_OWNER_ONLY"
+              },
+              "domain_id": "D_BR",
+              "failure_domain": "FD_MEDIUM",
+              "federation_id": "DF0",
+              "group_id": "G_ISA41",
+              "limits": {
+                "bandwidth_bytes_per_tick": 1000000.0,
+                "cpu_slots": 1,
+                "ebit_budget": 0,
+                "memory_bytes": 11000000,
+                "qpu_slots": 0
+              },
+              "migration_rules": {
+                "allow_classical_migration": true,
+                "allow_quantum_migration": false,
+                "forbid_cross_trust": true,
+                "max_hops": 2,
+                "require_explicit_movable": true
+              },
+              "ownership_scope": [],
+              "provenance": {
+                "created_at_logical": 0,
+                "created_by": "DF-PA21.2-1.0.0",
+                "seal": "-",
+                "source_ref": "DF_Medium/node/NODE_DESCRIPTOR.json"
+              },
+              "replication_rules": {
+                "allow_classical_replication": true,
+                "allow_quantum_replication": false,
+                "consistency_profile": "SINGLE_OWNER",
+                "replication_factor": 1
+              },
+              "signals": {
+                "completed_tasks": 0,
+                "heartbeat_latency": 0.0,
+                "memory_pressure": 0.0,
+                "queue_delay": 0.0,
+                "throughput_ema": 1.0
+              },
+              "trust": "LOCAL_TRUSTED",
+              "worker_id": "W_MEDIUM"
+            }
+          ],
+          "migration_rules": {
+            "allow_classical_migration": true,
+            "allow_quantum_migration": false,
+            "forbid_cross_trust": true,
+            "max_hops": 2,
+            "require_explicit_movable": true
+          },
+          "provenance": {
+            "created_at_logical": 0,
+            "created_by": "DF-PA21.2-1.0.0",
+            "seal": "-",
+            "source_ref": "-"
+          },
+          "replication_rules": {
+            "allow_classical_replication": true,
+            "allow_quantum_replication": false,
+            "consistency_profile": "SINGLE_OWNER",
+            "replication_factor": 1
+          },
+          "trust": "LOCAL_TRUSTED"
+        }
+      ],
+      "migration_rules": {
+        "allow_classical_migration": true,
+        "allow_quantum_migration": false,
+        "forbid_cross_trust": true,
+        "max_hops": 2,
+        "require_explicit_movable": true
+      },
+      "provenance": {
+        "created_at_logical": 0,
+        "created_by": "DF-PA21.2-1.0.0",
+        "seal": "-",
+        "source_ref": "-"
+      },
+      "replication_rules": {
+        "allow_classical_replication": true,
+        "allow_quantum_replication": false,
+        "consistency_profile": "SINGLE_OWNER",
+        "replication_factor": 1
+      },
+      "trust": "LOCAL_TRUSTED"
+    },
+    {
+      "consistency_rules": {
+        "ordering": "PROGRAM_ORDER",
+        "profile": "SINGLE_OWNER",
+        "quantum_scope": "SINGLE_OWNER_ONLY"
+      },
+      "domain_id": "D_QVM",
+      "failure_boundary": "DOMAIN",
+      "federation_id": "DF0",
+      "groups": [
+        {
+          "capabilities": [
+            "classical",
+            "lctlc/1.0",
+            "quorum_vm",
+            "row_sequence_witness"
+          ],
+          "consistency_rules": {
+            "ordering": "PROGRAM_ORDER",
+            "profile": "SINGLE_OWNER",
+            "quantum_scope": "SINGLE_OWNER_ONLY"
+          },
+          "domain_id": "D_QVM",
+          "failure_boundary": "GROUP",
+          "federation_id": "DF0",
+          "group_id": "G_QVM1",
+          "limits": {
+            "bandwidth_bytes_per_tick": 1000000.0,
+            "cpu_slots": 1,
+            "ebit_budget": 0,
+            "memory_bytes": 60000000,
+            "qpu_slots": 0
+          },
+          "members": [
+            {
+              "alive": true,
+              "capabilities": [
+                "classical",
+                "lctlc/1.0",
+                "quorum_vm",
+                "row_sequence_witness"
+              ],
+              "consistency_rules": {
+                "ordering": "PROGRAM_ORDER",
+                "profile": "SINGLE_OWNER",
+                "quantum_scope": "SINGLE_OWNER_ONLY"
+              },
+              "domain_id": "D_QVM",
+              "failure_domain": "FD_XLARGE",
+              "federation_id": "DF0",
+              "group_id": "G_QVM1",
+              "limits": {
+                "bandwidth_bytes_per_tick": 1000000.0,
+                "cpu_slots": 1,
+                "ebit_budget": 0,
+                "memory_bytes": 60000000,
+                "qpu_slots": 0
+              },
+              "migration_rules": {
+                "allow_classical_migration": true,
+                "allow_quantum_migration": false,
+                "forbid_cross_trust": true,
+                "max_hops": 2,
+                "require_explicit_movable": true
+              },
+              "ownership_scope": [],
+              "provenance": {
+                "created_at_logical": 0,
+                "created_by": "DF-PA21.2-1.0.0",
+                "seal": "-",
+                "source_ref": "DF_Xtra_Large/node/NODE_DESCRIPTOR.json"
+              },
+              "replication_rules": {
+                "allow_classical_replication": true,
+                "allow_quantum_replication": false,
+                "consistency_profile": "SINGLE_OWNER",
+                "replication_factor": 1
+              },
+              "signals": {
+                "completed_tasks": 0,
+                "heartbeat_latency": 0.0,
+                "memory_pressure": 0.0,
+                "queue_delay": 0.0,
+                "throughput_ema": 1.0
+              },
+              "trust": "LOCAL_TRUSTED",
+              "worker_id": "W_XLARGE"
+            }
+          ],
+          "migration_rules": {
+            "allow_classical_migration": true,
+            "allow_quantum_migration": false,
+            "forbid_cross_trust": true,
+            "max_hops": 2,
+            "require_explicit_movable": true
+          },
+          "provenance": {
+            "created_at_logical": 0,
+            "created_by": "DF-PA21.2-1.0.0",
+            "seal": "-",
+            "source_ref": "-"
+          },
+          "replication_rules": {
+            "allow_classical_replication": true,
+            "allow_quantum_replication": false,
+            "consistency_profile": "SINGLE_OWNER",
+            "replication_factor": 1
+          },
+          "trust": "LOCAL_TRUSTED"
+        }
+      ],
+      "migration_rules": {
+        "allow_classical_migration": true,
+        "allow_quantum_migration": false,
+        "forbid_cross_trust": true,
+        "max_hops": 2,
+        "require_explicit_movable": true
+      },
+      "provenance": {
+        "created_at_logical": 0,
+        "created_by": "DF-PA21.2-1.0.0",
+        "seal": "-",
+        "source_ref": "-"
+      },
+      "replication_rules": {
+        "allow_classical_replication": true,
+        "allow_quantum_replication": false,
+        "consistency_profile": "SINGLE_OWNER",
+        "replication_factor": 1
+      },
+      "trust": "LOCAL_TRUSTED"
+    }
+  ],
+  "failure_boundary": "FEDERATION",
+  "federation_id": "DF0",
+  "migration_rules": {
+    "allow_classical_migration": true,
+    "allow_quantum_migration": false,
+    "forbid_cross_trust": true,
+    "max_hops": 2,
+    "require_explicit_movable": true
+  },
+  "network_policy": "deny",
+  "note": "A model of a federation executed locally (PA_LCTL_FABRIC_SPEC.md s1). Every worker is a local process running one embedded VM. Cross-machine federation is BLOCKED (NETWORK=deny).",
+  "provenance": {
+    "created_at_logical": 0,
+    "created_by": "DF-PA21.2-1.0.0",
+    "seal": "-",
+    "source_ref": "fabric/FABRIC.pal"
+  },
+  "replication_rules": {
+    "allow_classical_replication": true,
+    "allow_quantum_replication": false,
+    "consistency_profile": "SINGLE_OWNER",
+    "replication_factor": 1
+  },
+  "schema": "DF/FEDERATION/1",
+  "trust": "LOCAL_TRUSTED",
+  "worker_count": 4
+}

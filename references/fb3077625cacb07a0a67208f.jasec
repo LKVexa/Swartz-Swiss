@@ -1,0 +1,27 @@
+ja source 0.3
+module suite44.capability_security_plane.policy_enforcement
+use Security
+policy no_network
+
+principal PolicyEnforcementWorker
+role CapabilitySecurityEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant policy.enforce:approved
+}
+resource EnforcementRequest classification restricted
+policy PolicyEnforcementPolicy {
+    deny network.* by default
+    deny process.* by default
+    deny EnforcementRequest when principal.role != CapabilitySecurityEnsemble
+    allow EnforcementRequest when principal.role == CapabilitySecurityEnsemble
+    require human_approval for policy.override
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "PolicyEnforcementPolicy.decision.mcrt"

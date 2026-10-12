@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "032",
+  "title": "Outbound Queue",
+  "source_file": "032_Outbound_Queue.md",
+  "source_sha256": "3cf5ed9b173cb0f3d73cc2fbf6c09348d248ab74e291570bec6a6b839c0e558b",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "DF0+N_LARGE",
+  "integration_mechanism": "Fabric interaction plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

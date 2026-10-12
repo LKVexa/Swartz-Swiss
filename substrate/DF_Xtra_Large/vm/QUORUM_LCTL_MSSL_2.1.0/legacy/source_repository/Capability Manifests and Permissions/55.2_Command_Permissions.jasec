@@ -1,0 +1,27 @@
+ja source 0.3
+module suite55.capability_manifests_permissions.command_permissions
+use Security
+policy no_network
+
+principal CommandPermissionWorker
+role CapabilityPermissionEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant command.permission.evaluate:approved
+}
+resource CommandPermissionRequest classification restricted
+policy CommandPermissionPolicy {
+    deny network.* by default
+    deny process.* by default
+    deny CommandPermissionRequest when principal.role != CapabilityPermissionEnsemble
+    allow CommandPermissionRequest when principal.role == CapabilityPermissionEnsemble
+    require human_approval for command.permission.grant
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "CommandPermissionPolicy.decision.mcrt"

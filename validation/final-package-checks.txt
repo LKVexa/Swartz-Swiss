@@ -1,0 +1,18 @@
+GFM Cylindrical Pulse Laboratory v2.1.0
+
+Live preview: D:\Codex\GFM-Blackhole-Console\GFM\Open GFM Preview.html
+
+The calculation runs inside the viewer. A separate server or console is not required.
+Initial example: covered plasma, two nanoseconds of calculated pulse history.
+Use Run, Step and the phase/plasma/aggie layer selector.
+Verified 442 files; longest path 135 characters.
+âœ” default Windows launcher selects the verified self-contained preview (319.733ms)
+âœ” per-machine desktop publication status is excluded from immutable launch verification (335.1305ms)
+â„¹ tests 2
+â„¹ suites 0
+â„¹ pass 2
+â„¹ fail 0
+â„¹ cancelled 0
+â„¹ skipped 0
+â„¹ todo 0
+â„¹ duration_ms 426.9652

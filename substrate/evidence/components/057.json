@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "057",
+  "title": "Replay Engine",
+  "source_file": "057_Replay_Engine.md",
+  "source_sha256": "61e76752e6e3718438de5497a7f483b592da8626c810e96e334cb7a730d4a4b9",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "VEC_CONTROL+DF0",
+  "integration_mechanism": "Integrity/evidence plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

@@ -1,0 +1,53 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "c31cee02233a6f40fcf52cb204567ab8dfe8b9a41a6b2c695fe13590aaafdea3",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (TRANSACTION_CONCURRENCY, NARRATIVE_KNOWLEDGE, MULTI_WORKER_CONFORMANCE) plus Stage 09 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "MULTI_WORKER_CONFORMANCE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "NARRATIVE_KNOWLEDGE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "TRANSACTION_CONCURRENCY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-04",
+    "GW-12",
+    "GW-35",
+    "GW-68",
+    "GW-69",
+    "GW-70"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T3_FABRIC",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Narrative state read from a lagging partition is revision-checked before committing canonical story consequences.",
+  "requirement_id": "RCPW-09-R22",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 9,
+  "stage_title": "Narrative Gravity Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "TRANSACTION_CONCURRENCY",
+    "NARRATIVE_KNOWLEDGE",
+    "MULTI_WORKER_CONFORMANCE"
+  ],
+  "workflow_file": "09_NARRATIVE_GRAVITY_AUTHORITY/129_RCPW_09_R22_NARRATIVE_STATE_READ_FROM_A_LAGGING_PARTITION_IS_REVISION_CHECKED_BEFORE_COMMITTING_C.md",
+  "workflow_tier": "T3_FABRIC"
+}

@@ -1,0 +1,27 @@
+ja source 0.3
+module suite44.capability_security_plane.trust_plane
+use Security
+policy no_network
+
+principal TrustPlaneWorker
+role CapabilitySecurityEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant trust.coordinate:approved
+}
+resource TrustPlaneTransition classification restricted
+policy TrustPlanePolicy {
+    deny network.* by default
+    deny process.* by default
+    deny TrustPlaneTransition when principal.role != CapabilitySecurityEnsemble
+    allow TrustPlaneTransition when principal.role == CapabilitySecurityEnsemble
+    require human_approval for trust.promote
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "TrustPlanePolicy.decision.mcrt"

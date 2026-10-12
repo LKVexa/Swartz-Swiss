@@ -1,0 +1,31 @@
+ja source 0.3
+module suite43.release_plane.test_gates
+use Operations
+policy explicit_network
+
+workspace ReleasePlaneTestGates {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 8 memory 16GB
+    network disabled
+    secret signing_key reference "vault://release-plane/signing"
+    service SOPHIA_test_gate_profile replicas 1
+    health_check SOPHIA_test_gate_profile every 10s
+    service CHARLOTTE_test_gate_validator replicas 1
+    health_check CHARLOTTE_test_gate_validator every 10s
+    service LANDON_test_gate_coordinator replicas 1
+    health_check LANDON_test_gate_coordinator every 10s
+    service Professor_test_gate_report replicas 1
+    health_check Professor_test_gate_report every 10s
+    service Podium_test_gate_receipt replicas 1
+    health_check Podium_test_gate_receipt every 10s
+    service release_test_gate_worker replicas 1
+    health_check release_test_gate_worker every 5s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == true
+emit package "release_plane_test_gates.msslb"

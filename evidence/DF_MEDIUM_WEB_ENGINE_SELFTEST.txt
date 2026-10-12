@@ -1,0 +1,5 @@
+Linux native counterpart: PASS
+selftest=0
+scene=5 resources=2 nodes=10 rules=2 scripts=0 vm_calls=2
+Windows x64 DLL exports: 15
+DF_Medium baseline VERIFY --full: 20 passed / 0 failed / 0 skipped

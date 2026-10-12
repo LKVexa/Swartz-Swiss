@@ -1,0 +1,50 @@
+profile ja.operations
+source_level 0.3
+
+subsuite Terminal.T_24 CheckpointReconnectRecovery {
+    identity { suite = "66"; id = "T-24"; deterministic = true; autorun = false }
+
+    integrate {
+        Suite_12_Filing_Cabinet
+        Suite_56_Failures_and_Retries
+        Suite_58_Logs_and_Recovery
+        Suite_65_SE_26_Checkpoint_Retry_and_Recovery
+    }
+
+    accept { terminal_run_id; sealed_evidence_refs[]; last_verified_checkpoint_ref; retry_policy }
+    emit TerminalRecoveryPlan
+
+    procedure checkpoint() {
+        snapshot presentation_state
+        snapshot ordered_stream_cursor
+        snapshot artifact_inventory
+        never_snapshot_secret_values_into_presentation_state
+        seal_checkpoint
+    }
+
+    procedure restore_from_sealed_evidence_only() {
+        checkpoint = verify(last_verified_checkpoint_ref)
+        restore_layout_and_presentation(checkpoint)
+        reconnect_to_live_job_only_if_same_attested_cell_and_policy_allows
+        otherwise show_terminal_state_from_evidence
+        return no_execution_authority
+    }
+
+    procedure retry_failed_job() {
+        require retry_policy.attempts_remaining
+        require Podium_new_retry_authorization
+        require new_HERMIT_cell_id
+        resume_from_verified_input_checkpoint
+    }
+
+    procedure rollback_presentation_and_staged_handoffs() {
+        remove_unapproved_handoffs
+        restore_last_approved_presentation
+        preserve_rejected_evidence
+    }
+
+    deny { mutable_cell_reuse; silent_retry; capability_expansion; evidence_overwrite }
+    evidence { checkpoints; recovery_plan; retry_attempts; new_cell_ids; rollback_record }
+    tests { presentation_restore; live_reconnect_policy; new_cell_retry; rollback; corrupt_checkpoint }
+}
+

@@ -1,0 +1,3 @@
+#include "brvm.h"
+#include <stdio.h>
+int main(void){printf("{\"record\":\"BOTTLE_ROCKET.ResourceGeometry/4.7.0\",\"word_bytes\":%zu,\"vm_struct_bytes\":%zu,\"word_descriptor_bytes\":%zu,\"register_descriptor_bytes\":%zu,\"stack_descriptor_bytes\":%zu,\"legacy_dense_register_bytes\":%zu,\"legacy_dense_stack_bytes\":%zu,\"legacy_scratch_bytes\":%zu,\"zero_init_wide_heap_bytes\":0,\"vm_wide_ceiling\":%u,\"register_ceiling\":%u,\"stack_byte_ceiling\":%u,\"scratch_byte_ceiling\":%u,\"device_buffer_ceiling\":%u}\n",(size_t)N47,sizeof(br_vm),sizeof(br_word),sizeof(((br_vm*)0)->regs),sizeof(((br_vm*)0)->stack),(size_t)N43*N47,(size_t)N69*N47,(size_t)2*N47,N89,BR_REGISTER_CEILING,N70,N63,N13);return 0;}

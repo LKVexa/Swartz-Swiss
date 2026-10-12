@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "019",
+  "title": "Interaction Radius",
+  "source_file": "019_Interaction_Radius.md",
+  "source_sha256": "487a99c2ff382c8e57099d7ba5d10ad1383b1ae7306d6a4d335a5668fa9362d1",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "VEC_CONTROL+DF0",
+  "integration_mechanism": "Virtual property state",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

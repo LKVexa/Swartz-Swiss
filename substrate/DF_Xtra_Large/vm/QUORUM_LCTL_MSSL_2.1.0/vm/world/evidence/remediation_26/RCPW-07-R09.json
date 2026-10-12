@@ -1,0 +1,48 @@
+{
+  "evidence_sha256": "04e75375f58cd2b843dc45ce0c987a72b27da2c1b7c668e9caa89137dae92f01",
+  "exit_code": 0,
+  "observed_results": {
+    "after": {
+      "4": {
+        "deer": 87,
+        "forage": 1332,
+        "wolves": 9
+      },
+      "5": {
+        "deer": 148,
+        "forage": 1324,
+        "wolves": 2
+      }
+    },
+    "before": {
+      "4": {
+        "deer": 89,
+        "forage": 1312,
+        "wolves": 9
+      },
+      "5": {
+        "deer": 149,
+        "forage": 1314,
+        "wolves": 2
+      }
+    },
+    "canonical_ecological_adjacency": false,
+    "folded_close": true,
+    "independent_region_records": true,
+    "pass": true,
+    "regions": [
+      "4",
+      "5"
+    ]
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "requirement_id": "RCPW-07-R09",
+  "result_sha256": "3800e1b9610a30a235e907260cf967846c5c170af0703c7565c195b2bd0594d1",
+  "schema": "RCPW-26-GATE-EVIDENCE/1",
+  "status": "OPERATIONAL",
+  "test_command": "python vm/world/qualification/remediate_26.py",
+  "tool_versions": {
+    "python": "3.11.15",
+    "world_runtime": "7.0.0-applied-remediated-26"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "GFM-phase-adaptive-worker-benchmark/1",
+  "date": "2026-10-12T11:02:12.278Z",
+  "runtime": "v24.19.0",
+  "measurement": "Actual Node worker executes production phase-worker.js and unchanged phase session; no HTTP, browser GPU or native window measurement.",
+  "priorNominalTriggerHz": 5,
+  "physicalStepUnchanged": 0.05,
+  "cases": [
+    {
+      "resolution": 16,
+      "computedFrames": 103,
+      "wallMilliseconds": 2215.416,
+      "deliveredFieldHz": 46.49239691326595,
+      "meanStepMilliseconds": 4.5002504854368945,
+      "p95StepMilliseconds": 5.411000000000058,
+      "targetHz": 60,
+      "simulationTime": 5.149999999999995,
+      "expectedSimulationTime": 5.15,
+      "pauseFrozen": true,
+      "pendingTimersAfterPause": 0
+    },
+    {
+      "resolution": 32,
+      "computedFrames": 65,
+      "wallMilliseconds": 2207.9187999999995,
+      "deliveredFieldHz": 29.4394884449555,
+      "meanStepMilliseconds": 19.795249230769176,
+      "p95StepMilliseconds": 22.66969999999992,
+      "targetHz": 60,
+      "simulationTime": 3.250000000000003,
+      "expectedSimulationTime": 3.25,
+      "pauseFrozen": true,
+      "pendingTimersAfterPause": 0
+    },
+    {
+      "resolution": 64,
+      "computedFrames": 12,
+      "wallMilliseconds": 2284.2327999999998,
+      "deliveredFieldHz": 5.253404994447151,
+      "meanStepMilliseconds": 141.99228333333326,
+      "p95StepMilliseconds": 157.33479999999963,
+      "targetHz": 60,
+      "simulationTime": 0.5999999999999999,
+      "expectedSimulationTime": 0.6000000000000001,
+      "pauseFrozen": true,
+      "pendingTimersAfterPause": 0
+    }
+  ]
+}

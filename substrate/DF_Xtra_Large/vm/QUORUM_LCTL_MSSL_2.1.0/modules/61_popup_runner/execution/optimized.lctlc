@@ -1,0 +1,26 @@
+LCTLC/1.0
+@unit id=quorum.generic_project.module.61.popup_runner version=2.0.0 profile=native
+@defaults qspace=H basis=computational regime=exact assume=finite_dimension error=exact conf=1.0
+@frame id=F0000 parent=ROOT module=quorum.generic_project.module.61.popup_runner
+ID│LANE│OP│OUT│CTRL│IN│ARG│META
+D0001│alloc│Q│q│_│_│1│res="logical_qubits=1";p=lctl:1.2
+D0002│alloc│C│c│_│_│1│res="classical_bits=1";p=lctl:1.2
+S0001│semantic│REG│_│_│_│node=N01;stage=EVENT;operator=OBSERVE;plane=interfaces_services│asm=finite_dimension;p=quorum:deep2.optimized
+S0002│semantic│REG│_│_│_│node=N02;stage=PARSE;operator=PARSE;plane=interfaces_services│asm=finite_dimension;p=quorum:deep2.optimized
+E0001│control│DEP│_│_│_│from=N01;to=N02;kind=control_data│asm=finite_dimension;p=quorum:deep2.optimized
+S0003│semantic│REG│_│_│_│node=N03;stage=VALIDATE;operator=VALIDATE;plane=interfaces_services│asm=finite_dimension;p=quorum:deep2.optimized
+E0002│control│DEP│_│_│_│from=N02;to=N03;kind=control_data│asm=finite_dimension;p=quorum:deep2.optimized
+S0004│semantic│REG│_│_│_│node=N04;stage=ROUTE;operator=ROUTE;plane=interfaces_services│asm=finite_dimension;p=quorum:deep2.optimized
+E0003│control│DEP│_│_│_│from=N03;to=N04;kind=control_data│asm=finite_dimension;p=quorum:deep2.optimized
+S0005│semantic│REG│_│_│_│node=N05;stage=STATE_TRANSITION;operator=TRANSFORM;plane=interfaces_services│asm=finite_dimension;p=quorum:deep2.optimized
+E0004│control│DEP│_│_│_│from=N04;to=N05;kind=control_data│asm=finite_dimension;p=quorum:deep2.optimized
+S0006│semantic│REG│_│_│_│node=N06;stage=MATERIALIZE;operator=MATERIALIZE;plane=interfaces_services│asm=finite_dimension;p=quorum:deep2.optimized
+E0005│control│DEP│_│_│_│from=N05;to=N06;kind=control_data│asm=finite_dimension;p=quorum:deep2.optimized
+S0007│semantic│REG│_│_│_│node=N07;stage=RECORD;operator=RECORD;plane=interfaces_services│asm=finite_dimension;p=quorum:deep2.optimized
+E0006│control│DEP│_│_│_│from=N06;to=N07;kind=control_data│asm=finite_dimension;p=quorum:deep2.optimized
+S0008│semantic│REG│_│_│_│node=N08;stage=EVIDENCE;operator=RECORD;plane=interfaces_services│asm=finite_dimension;p=quorum:deep2.optimized
+E0007│control│DEP│_│_│_│from=N07;to=N08;kind=control_data│asm=finite_dimension;p=quorum:deep2.optimized
+P9001│security│REG│_│_│_│default=deny;network=deny;caps=evidence.write,interface.event,state.write│asm=finite_dimension;p=quorum:security2
+V9001│evidence│REG│_│_│_│receipt=required;replay=contract;legacy_sha256=8bab1185260bde11│asm=finite_dimension;p=quorum:evidence2
+C9999│terminal│.│_│_│_│terminal=sealed_graph_end;justification=canonical_entry_sentinel│p=lctl:nop
+@end

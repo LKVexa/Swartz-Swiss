@@ -1,0 +1,31 @@
+ja source 0.3
+module suite43.release_plane.release_evidence
+use Operations
+policy explicit_network
+
+workspace ReleasePlaneReleaseEvidence {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 4 memory 8GB
+    network disabled
+    secret signing_key reference "vault://release-plane/signing"
+    service SOPHIA_evidence_profile replicas 1
+    health_check SOPHIA_evidence_profile every 10s
+    service CHARLOTTE_evidence_gate replicas 1
+    health_check CHARLOTTE_evidence_gate every 10s
+    service LANDON_evidence_collector replicas 1
+    health_check LANDON_evidence_collector every 10s
+    service Professor_evidence_report replicas 1
+    health_check Professor_evidence_report every 10s
+    service Podium_release_receipt replicas 1
+    health_check Podium_release_receipt every 10s
+    service release_evidence_sealer replicas 1
+    health_check release_evidence_sealer every 5s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == true
+emit package "release_plane_release_evidence.msslb"

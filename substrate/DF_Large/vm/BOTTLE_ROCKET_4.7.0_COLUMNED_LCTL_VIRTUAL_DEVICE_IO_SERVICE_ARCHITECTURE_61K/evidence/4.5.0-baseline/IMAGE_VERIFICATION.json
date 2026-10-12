@@ -1,0 +1,10 @@
+{
+  "brim_bytes": 112,
+  "brim_sha256": "4f0b5e321f59e69bf515e84a1fb6c397ce41e08d37a152561d33865cfd778f00",
+  "brir_sha256": "d24a483a13c3abb79bb3a0131900d85d56d3caea9be6d127ac99e62d98cddac6",
+  "independent_verifier": "{\"checks\": {\"capabilities\": true, \"cfg\": true, \"header\": true, \"instruction_semantics\": true, \"manifest\": true, \"payload_sha256\": true, \"versioned_isa_abi\": true}, \"image\": \"deploy/BOTTLE_ROCKET_SIM_CORE_4.5.0.brimg\", \"instructions\": 2, \"profile\": \"4.3-current\", \"requested_caps\": 1, \"sha256\": \"4f0b5e321f59e69bf515e84a1fb6c397ce41e08d37a152561d33865cfd778f00\", \"signed\": false, \"status\": \"PASS\"}",
+  "provenance_sha256": "5ef303fd2abc3bb7d4bc922d5db1d766d83f4f5c85520bde4193f11bb75829d7",
+  "provenance_verifier": "{\"checks\": {\"brim_sha256\": true, \"brir_sha256\": true, \"compiler_version\": true, \"header_source_hash_prefix\": true, \"isa_version\": true, \"language_version\": true, \"source_sha256\": true, \"verifier_version\": true}, \"status\": \"PASS\"}",
+  "record": "BR.ImageVerification",
+  "status": "PASS"
+}

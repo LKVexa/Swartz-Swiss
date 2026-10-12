@@ -1,0 +1,28 @@
+{
+  "schema": "QUORUM-REFERENCE-FIXTURE-ADMISSION/2.0.1",
+  "module_id": 62,
+  "scope": "host_admission_adapter_plus_native_lctl_execution_not_domain_operator_behavior",
+  "fixtures": {
+    "positive": {
+      "path": "modules/62_landon_integration_and_run_all/fixtures/positive/nominal.json",
+      "admitted": true,
+      "expected_admitted": true,
+      "pass": true
+    },
+    "negative": {
+      "path": "modules/62_landon_integration_and_run_all/fixtures/negative/malformed.json",
+      "admitted": false,
+      "expected_admitted": false,
+      "pass": true
+    },
+    "edge": {
+      "path": "modules/62_landon_integration_and_run_all/fixtures/edge/minimal.json",
+      "admitted": true,
+      "expected_admitted": true,
+      "pass": true
+    }
+  },
+  "native_protocol_execution_pass": true,
+  "pass": true,
+  "claim_boundary": "This proves fixture admission/denial and native LCTL execution linkage, not module-specific domain transformation semantics."
+}

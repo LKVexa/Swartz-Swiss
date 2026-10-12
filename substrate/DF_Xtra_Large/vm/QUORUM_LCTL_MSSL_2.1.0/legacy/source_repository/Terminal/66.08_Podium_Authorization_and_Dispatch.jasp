@@ -1,0 +1,41 @@
+profile ja.agent
+source_level 0.3
+
+subsuite Terminal.T_08 PodiumAuthorizationDispatch {
+    identity { suite = "66"; id = "T-08"; deterministic = true; autorun = false }
+
+    principal PODIUM {
+        may = authorize + route + schedule + pause + cancel + recover
+        must_not = invent_capability + widen_scope + execute_unrouted_command
+    }
+
+    accept {
+        ProfessorTerminalActionCard
+        TerminalCapabilityManifest
+        content_defense_report
+        network_policy
+        resource_budget
+        approval_policy
+    }
+
+    emit PodiumTerminalAuthorization
+
+    procedure authorize_and_dispatch(card, manifest, defense, network, resources) {
+        require card.complete
+        require manifest.exactly_covers(card.planned_steps)
+        require defense.required_gates_pass
+        require network.matches_contract
+        require resources.reserved
+        require required_human_approval.present
+
+        route = Suite_65_Sandbox_Engine.authorized_terminal_route
+        decision = approve_exact(card.hash, manifest.hash, route.hash)
+        schedule_only_after(decision.sealed)
+        return decision
+    }
+
+    deny { incomplete_contract; undeclared_scope; missing_approval; failed_safety_gate }
+    evidence { evaluated_inputs; decision; reason_codes; route; authorization_hash }
+    tests { approve_exact; reject_scope_expansion; missing_approval; route_integrity }
+}
+

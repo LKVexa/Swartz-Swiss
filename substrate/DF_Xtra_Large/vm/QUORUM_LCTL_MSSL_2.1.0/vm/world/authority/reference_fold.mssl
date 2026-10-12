@@ -1,0 +1,19 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.world.reference_fold:7.0.0-applied-remediated-26",
+λ≡"quorum.rcpw.world.reference_fold",
+ℛ≡{
+  "0001":"module(\"quorum.rcpw.world.reference_fold\")",
+  "0002":"learn(\"fold_policy\",literal(\"near-field identity; rational C1 compactification to finite horizon\"))",
+  "0003":"learn(\"shells\",literal(\"S0..S8 concentric authority shells\"))",
+  "0004":"learn(\"lod\",literal(\"L0 state-only through L8 reference authority\"))",
+  "0005":"learn(\"targeting\",literal(\"interaction target must resolve to one canonical entity or fail\"))",
+  "0006":"learn(\"no_unload\",literal(\"distance changes fidelity only\"))"
+},
+π≡[],δ≡6,τ≡0,
+μ≡{"learn.fold_policy":"near-field identity; rational C1 compactification to finite horizon","learn.shells":"S0..S8 concentric authority shells","learn.lod":"L0 state-only through L8 reference authority","learn.targeting":"interaction target must resolve to one canonical entity or fail","learn.no_unload":"distance changes fidelity only"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"fold_policy":"near-field identity; rational C1 compactification to finite horizon","shells":"S0..S8 concentric authority shells","lod":"L0 state-only through L8 reference authority","targeting":"interaction target must resolve to one canonical entity or fail","no_unload":"distance changes fidelity only"}},
+ν≡{}
+,κ≡"sha256:f85bcc30230f7f313c2e05774b5591ab2dcf5f066b936c7fef148935b45159fd"
+}⇒⊤

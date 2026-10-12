@@ -1,0 +1,561 @@
+Black-hole and wormhole definitions / source audit
+End-to-end audit followed by a physical phase and pulse-coupling proposal
+Review and proposed equations only. Original attachment and simulator preserved; no model incorporation.
+All nine pages extracted and visually checked, including the circuit schematic, raw TeX and summary table continuing onto page 9.
+
+Audit scope and disposition
+The attachment is a nine-page explanatory report about an unspecified article. It gives no author, bibliography, article identifier, calibration data, measured uncertainties or derivation linking all six domains. Its statements are evidence to evaluate, not instructions to execute.
+
+Complete inspection
+Pages 1-2: static/dynamic geometry, null-energy and horizon claims. Pages 2-4: junction conditions and shell stability. Pages 4-5: magnetic-vortex analogue. Pages 5-6: p-adic geometry and Galois/AME tensors. Pages 6-7: circuits, entropy and scrambling. Pages 7-8: latency, path integral, Hopf algebra and proposed master equation. Pages 8-9: all six summary rows. All pages are US Letter; the file contains no image objects, attachment files or link annotations. Several formulas appear as literal TeX; the schematic is text rather than a defined circuit.
+
+How to read the audit
+RETAIN means a recognizable expression with its assumptions stated. CORRECT means a definite algebraic, sign, dimensional or domain error. CONDITIONAL means a framework-specific expression requiring missing definitions. UNESTABLISHED means the report supplies no derived or verified physical law for the claim. Each item below identifies its source page and records the parsed expression or the reason it cannot be completed.
+
+Consequential findings
+The general NEC expression has wrong factors/sign despite a correct throat limit. Shell pressure has an extra inverse radius and the wrong sigma sign; the asymmetric potential has an extra radius in its denominator. A cross-null derivative uses the inner sign as a wormhole flare-out criterion. A rotating-coordinate cross term does not prove frame dragging or an event horizon. Arithmetic and tensor identities do not provide the missing material-to-spacetime dynamics.
+
+Preservation and use
+The original PDF remains unchanged. Corrections in this review are separate proposed expressions. Independent reviews checked GR, analogue physics and arithmetic/quantum sections. Sixteen independent algebra and uniform temporal checks accompany the proposed corrected equations; these are not observational validation or a spatial black-hole simulation.
+
+Notation
+Audit GR formulas use signature (-,+,+,+), c=1, G explicit, and rho as energy density. SI factors are restored in the definition/bridge pages. r or R is areal radius; shell a is not Kerr spin length. sigma is surface energy density, distinct from electrical conductivity. Material/electromagnetic equations later use SI local-frame quantities.
+
+Pages 1-2 / static geometry and NEC
+The Morris-Thorne ansatz is useful for a specified static spherical wormhole. An ansatz by itself does not supply its matter source, stability or traversability for a chosen traveler. References [A1,A2].
+
+A01 - RETAIN: metric and regular redshift (p1)
+Phi finite prevents a lapse zero in this static chart. Add two connected branches, regularity, asymptotic/boundary conditions, and traveler-specific tidal constraints. The radial chart degenerates at the throat; use proper distance there.
+ds^2=-e^{2\Phi(r)}dt^2+\frac{dr^2}{1-b(r)/r}+r^2d\Omega_2^2
+d\Omega_2^2=d\vartheta^2+\sin^2\vartheta\,d\varphi^2
+
+A02 - CORRECT: strict throat and flare-out (p1)
+The printed b'(r0)<=1 includes a degenerate case. Strict flare-out requires b'(r0)<1, with b(r0)=r0 and 1-b/r>0 off the throat in the exterior. The raw-TeX embedding formula is correct where the embedding is real; an embedding picture alone is not the spacetime solution.
+b(r_0)=r_0,\qquad b'(r_0)<1
+\frac{d^2r}{dz_{\rm emb}^2}=\frac{b-rb'}{2b^2}>0
+
+A03 - CORRECT: general radial NEC (p1)
+The printed general expression is inconsistent with its own throat result. For the orthonormal radial null direction, the correct Einstein-equation components and sum are below. The throat limit assumes the redshift derivative is sufficiently regular. Here rho is energy density; using mass density requires rho c^2 in the sum.
+\rho=\frac{b'}{8\pi G r^2},\qquad p_r=\frac{-b/r^3+2(1-b/r)\Phi'/r}{8\pi G}
+\rho+p_r=\frac{b'/r^2-b/r^3+2(1-b/r)\Phi'/r}{8\pi G}
+(\rho+p_r)_{r_0}=\frac{b'(r_0)-1}{8\pi G r_0^2}<0
+
+A04 - RETAIN with throat-chart care: null vector and NEC conclusion (p1)
+The coordinate vector k=e^(-Phi) partial_t+sqrt(1-b/r) partial_r is null off the throat and represents unit orthonormal time/radial components. Its radial coordinate coefficient vanishes at the throat because that chart is singular. Evaluate the physical limit in proper radial distance. Strict classical spherical flare-out violates the radial NEC; ordinary positive-energy gas is not supplied as the supporting source.
+
+Page 2 / dynamics and causal classification
+Dynamic geometry requires field equations, matter evolution and consistent initial/boundary data. It cannot be completed by adding t arguments or an ellipsis. References [A2-A4,A19,A20].
+
+A05 - CONDITIONAL: time-dependent diagonal and double-null metrics
+Phi(t,r), b(t,r) is a restricted polar/areal gauge, not an arbitrary collapse solution or a horizon-regular chart. The second displayed metric is a double-null ansatz, not itself a Painleve-Gullstrand or Vaidya metric. Use areal radius R(u,v) and solve its Einstein/matter equations.
+ds^2=-2e^{2f(u,v)}du\,dv+R(u,v)^2d\Omega_2^2
+
+A06 - RETAIN with scope: Misner-Sharp mass and marginal spheres
+The invariant spherical mass relation is correct with c=1. In the diagonal areal gauge b=2Gm follows, but it is not universal outside that gauge. A marginal sphere satisfies R=2Gm; a static wormhole throat does too. The equality alone therefore does not classify a black hole.
+1-\frac{2Gm}{R}=g^{ab}\nabla_aR\nabla_bR
+1-2Gm/R=-2e^{-2f}(\partial_uR)(\partial_vR)
+\theta_\pm=\frac{2}{R}\ell_\pm^a\nabla_aR
+
+A07 - CORRECT: outer condition and wormhole flare-out
+For future null normals l+ and l-, a future OUTER trapping horizon needs all three signs below. The report omits the outer sign. Its L_- theta_+>0 is the INNER sign, not Hayward's outer wormhole criterion. Hayward's dynamic wormhole horizon is timelike and outer. A same-congruence null flare-out test instead uses d theta_+/d lambda_+>0 at theta_+=0, with separate normalization and congruence assumptions. The printed partial_t b+... has no defined equation.
+\theta_+=0,\qquad\theta_-<0,\qquad\mathcal L_-\theta_+<0
+
+A08 - UNESTABLISHED as written: positive matter and GJW shift
+A tensor inequality Delta T_mu nu>0 is not defined; use specified null contractions or an energy condition. A spherical ansatz cannot describe a Kerr transition. The printed Delta v=-8piG integral exp(2f) T_uu is not a universal shift law: background dimension, radius, gauge and null-coordinate normalization matter. Gao-Jafferis-Wall derive a negative averaged null-energy effect for a specified interacting two-boundary AdS/BTZ setup. Retain that framework-specific possibility, not a pulse-operated astrophysical opening rule. In the original Kruskal convention, Delta V is obtained by integrating the metric perturbation h_UU and relating that integral to null stress with background-dependent factors; the report supplies neither.
+
+A09 - CORRECT: event horizon versus local horizon
+A local marginal/trapping surface is a useful numerical diagnostic. An event horizon is a global causal boundary. The assertion 'traversability is zero' needs the chosen endpoints and global spacetime; it cannot follow solely from R=2Gm.
+
+Pages 2-4 / thin-shell equations
+The recognizable shell construction glues two static spherical exteriors at a timelike throat. It is not a rotating material lid. Let beta_+=sqrt(adot^2+f_+) and beta_-=sqrt(adot^2+f_-). Dots denote shell proper time. Reference [A5].
+
+A10 - RETAIN: induced metric and Israel relation (pp2-3)
+The induced metric -d tau^2+a(tau)^2 dOmega2^2 and S^i_j=diag(-sigma,p,p) are correct. Choose one normal convention and use it consistently in the jump.
+[K^i{}_j]-\delta^i{}_j[K]=-8\pi G S^i{}_j
+
+A11 - CORRECT: normal orientations and exterior function (p3)
+For the two-exterior wormhole orientation, the displayed positive expressions need opposite orientation signs to produce the stated density sum. The general spherical exterior f=1-2GM/r-Lambda r^2/3+q^2/r^2 is meaningful when q is geometric charge length. It cannot mix an SI electric charge Q with that coefficient; q^2=G Q_SI^2/(4pi epsilon0 c^4). Different redshift functions or time-dependent exteriors need more general expressions.
+K^\vartheta{}_{\vartheta,\pm}=\pm\frac{\beta_\pm}{a},\qquad K^\tau{}_{\tau,\pm}=\pm\frac{\ddot a+f'_\pm/2}{\beta_\pm}
+
+A12 - RETAIN density; CORRECT pressure (p3)
+The source density is correct for that orientation. Pressure has two errors: remove the prefactor's extra 1/a on the acceleration terms and replace +sigma/2 with -sigma/2. The corrected pressure agrees with the static Schwarzschild limit and shell conservation.
+\sigma=-\frac{\beta_++\beta_-}{4\pi G a}
+p=\frac{1}{8\pi G}\left(\frac{\ddot a+f'_+/2}{\beta_+}+\frac{\ddot a+f'_-/2}{\beta_-}\right)-\frac{\sigma}{2}
+
+A13 - CORRECT: effective potential (p3)
+The printed asymmetric denominator contains a^2; it must contain a before squaring. The density is a surface energy, so the source term otherwise has incompatible dimensions. Squaring the junction equation can introduce unwanted branches: retain the original density relation, signs and real square roots.
+\dot a^2+V(a)=0
+V=\frac{f_++f_-}{2}-\left(\frac{f_+-f_-}{8\pi G\sigma a}\right)^2-4\pi^2G^2\sigma^2a^2
+
+Page 4 / shell stability and magnetic analogue
+A stability test needs a closed shell model. An emergent electron metric needs its own microscopic model. Neither can substitute for material/plasma dynamics by sharing the word throat. References [A5,A6].
+
+A14 - CORRECT: equilibrium, stability and collapse
+Add V'(a0)=0 to V(a0)=0 and V''(a0)>0 for linear radial stability, plus an equation of state and flux conservation specifying sigma(a). Linear stability is not proof of a finite-amplitude bounce. Crossing a root of a static exterior f does not by itself construct an event horizon or validate continuation of the two-exterior wormhole chart.
+\frac{d}{d\tau}(\sigma A)+p\frac{dA}{d\tau}=0,\qquad A=4\pi a^2\quad(\mathrm{no\ shell\ flux})
+V(a_0)=V'(a_0)=0,\qquad V''(a_0)>0
+
+A15 - RETAIN geometry; CONDITIONAL microscopic scale
+The planar unit magnetization m=(cos(n phi),sin(n phi)) has integer winding outside a core. Its spatial Ellis form and change r=sqrt(rho^2+lambda_E^2) are algebraically correct. This is a 2+1-dimensional effective geometry, not a complete four-dimensional Einstein solution. The expression lambda_E proportional to hbar |n|/sqrt(2 m_e J_H) has length units but lacks its coefficient and exchange convention.
+ds_{\rm eff}^2=-dt^2+d\rho^2+(\rho^2+\lambda_E^2)d\varphi^2
+ds_{\rm eff}^2=-dt^2+\frac{dr^2}{1-\lambda_E^2/r^2}+r^2d\varphi^2,\qquad b(r)=\lambda_E^2/r
+
+A16 - Traceable source with a restricted physical meaning
+The August 2026 preprint by Dordevic, Molina and Juricic derives a_q=|q| hbar/(2 sqrt(m J)) under its Hund-exchange convention. It explicitly describes the exterior geometry sampled by an electron with a microscopic core cutoff. The report supplies no derivation that turns this electron analogue into a real spacetime bridge or plasma aperture. The microscopic result is theoretical, not black-hole observational validation.
+
+A17 - CONDITIONAL: LLGS (p4)
+The LLGS structure is recognizable for a unit magnetization vector. Specify gyromagnetic convention (H in A/m needs the appropriate mu0 factor), effective field from an energy functional, nonnegative damping, and the explicit current-driven torque perpendicular to m. None of those inputs appears in the report. LLGS describes magnetization dynamics; it does not automatically evolve an Einstein metric. Generic cross-product LLGS needs a three-component unit vector; a constrained planar angle model must be derived separately.
+\partial_t\mathbf m=-\gamma\mathbf m\times\mathbf H_{\rm eff}+\alpha_G\mathbf m\times\partial_t\mathbf m+\mathbf T_{\rm STT}
+
+Pages 4-5 / Berry response and rotation
+Three phases must remain distinct: electromagnetic carrier phase, magnetization orientation, and quantum-state Berry phase. Their equations, units and observables differ. References [A6,A7,A21].
+
+A18 - CONDITIONAL: Berry connection and effective field (p4)
+A_mu=-i hbar <psi|partial_mu psi> is a permissible connection convention for normalized states; it carries action-based units, not automatically volts or tesla. F_0i=partial_t A_i-partial_i A_0 follows that convention. Physical effective electric fields need an effective charge, projection onto a specified band, and consistent temporal/spatial signs. Only gauge-invariant curvature/closed-loop phase is observable. It is not the Maxwell pulse field unless a coupling dictionary is derived. With t in seconds and x in meters, this F_0i has force units; divide by the signed effective charge to obtain V/m. A rigidly precessing planar texture has zero local Berry curvature away from its singular core because its temporal and spatial derivatives are parallel.
+
+A19 - CORRECT: rotating-coordinate metric (p5)
+The displayed metric factorizes as below. For constant Omega and constant lambda it is obtained by phi'=phi-Omega t. The cross term therefore can be a coordinate effect. In this metric g^tt=-1, the block determinant stays negative, and radial null curves with dphi=Omega dt have drho/dt=+/-1. A g_tt sign change marks the rotating coordinate light cylinder, not an event horizon or proof of Kerr frame dragging.
+F=\rho^2+\lambda_E^2,\qquad ds^2=-dt^2+d\rho^2+F(d\varphi-\Omega dt)^2
+g_{tt}=-1+F\Omega^2,\quad g_{t\varphi}=-F\Omega,\quad\det(g_{t\varphi\ block})=-F
+g^{tt}=-1\quad(F>0)
+
+A20 - UNESTABLISHED: dynamic Kerr/acoustic horizon inference (p5)
+A time-dependent lambda(t) is an additional ansatz, not a dynamics law derived from LLGS. A propagating-mode horizon requires the relevant characteristic cone and directional flow, ordinarily a normal component exceeding the mode speed. A swirl speed or cross term alone is insufficient. Restore the chosen effective velocity scale if time is SI; -dt^2 is otherwise dimensionally incompatible with spatial lengths.
+
+Meaning for the phase cylinder
+Retain a magnetic-texture analogue as a separate optional study after specifying its Hamiltonian and magnetization equations. The first electromagnetic pulse model instead evolves Maxwell fields and plasma/cover currents in a local physical volume. Its phase colors come from field history and its material layer from thermal state; Berry phase and winding require separately labeled data.
+
+Page 5 / p-adic geometry and dynamics
+The valid mathematical objects define a separate arithmetic model. A map from its numbers, time and topology to metric tensors and measured fields is absent. References [A8,A9].
+
+A21 - RETAIN: ultrametric and tree with adjacency
+For prime p, |x+y|_p<=max(|x|_p,|y|_p) is correct. The PGL(2,Qp)/PGL(2,Zp) quotient describes the tree's vertex set; lattice adjacency must be supplied to obtain the (p+1)-regular Bruhat-Tits graph. Its boundary is P^1(Qp). This is not a finite field GF(p^k), nor a physical three-dimensional space.
+V(\mathcal T_p)=\mathrm{PGL}(2,\mathbb Q_p)/\mathrm{PGL}(2,\mathbb Z_p),\qquad\partial\mathcal T_p=\mathbb P^1(\mathbb Q_p)
+
+A22 - RETAIN: Vladimirov kernel with specified domain
+The printed coefficient and sign are correct for alpha>0, normalized Haar measure mu(Zp)=1, and a suitable test-function/operator domain. It is a positive fractional kinetic operator with Fourier multiplier |xi|_p^alpha. Acting on boundary functions in Qp does not automatically evolve weighted bulk-tree geometry.
+D_p^\alpha\psi(x)=\frac{p^\alpha-1}{1-p^{-\alpha-1}}\int_{\mathbb Q_p}\frac{\psi(x)-\psi(y)}{|x-y|_p^{\alpha+1}}d\mu_p(y)
+
+A23 - CONDITIONAL: continuous-time arithmetic evolution
+i partial_tau Psi=D_p^2 Psi+V Psi is a Schrodinger-like model in declared units. Norm conservation requires a self-adjoint kinetic operator and a real/self-adjoint potential. In physical units use i hbar partial_t Psi=H Psi with a kinetic coefficient carrying the energy scale. Diffusion would instead use a real dissipative equation partial_tau Psi=-D Psi. The summary table calls it diffusion while displaying unitary evolution.
+
+A24 - CONDITIONAL: Schottky quotient
+A specified discrete Schottky subgroup can define a quotient geometry with cycles. The report does not supply generators, quotient graph, boundary regions or a causal metric. Identifying branches is therefore a mathematical construction to define, not proof of a Lorentzian traversable wormhole.
+
+A25 - CORRECT: weighted-link disconnection
+w_e(t)->0 can reduce transport for a declared conductance/Hamiltonian. Ordinary combinatorial graph distance does not change when weights change; distance tends to infinity only with a specified inverse-weight length or when every connecting path is removed. A transport bottleneck or disconnected graph has no event horizon until causal propagation and a spacetime dictionary are defined.
+
+Pages 5-6 / Galois tensors, AME and circuits
+These are algebra and quantum-information statements. They do not supply material constants, stress-energy or a classical spacetime evolution law. References [A10-A12].
+
+A26 - RETAIN with finite Galois condition (pp5-6)
+For a finite Galois extension L/K the algebra isomorphism below is correct. Without finite, normal and separable hypotheses the stated finite product is not that theorem. The component action is explicit; it is not automatically a unitary quantum-state update.
+L\otimes_K L\longrightarrow\prod_{\sigma\in\mathrm{Gal}(L/K)}L,\qquad a\otimes b\longmapsto(a\,\sigma(b))_\sigma
+
+A27 - RETAIN AME condition; CORRECT input-isometry claim (p6)
+The maximally mixed reduction condition is correct for a normalized AME state; testing every maximal allowed A implies smaller reductions. Not every Reed-Solomon or stabilizer tensor is AME. A tensor can be reshaped to a suitably normalized isometry only with at most half the legs as inputs; a larger input Hilbert space cannot isometrically map to a smaller output space. Construction distance, field size and normalization must be specified.
+\rho_A=\mathrm{Tr}_B|\Psi\rangle\langle\Psi|=\frac{I_A}{d^{|A|}},\qquad |A|\leq\lfloor n/2\rfloor
+
+A28 - RETAIN evolution; CONDITIONAL double trace (p6)
+Time ordering is correct if the Hamiltonian is self-adjoint; restore hbar in physical units. H_int=(g/K) sum_j O_L^j O_R^j is one interaction choice. Traversability is not guaranteed for arbitrary state, sign, operator dimensions or coupling schedule: the AdS construction needs its specified negative averaged null-energy backreaction.
+U(t)=\mathcal T\exp\left[-\frac{i}{\hbar}\int_0^t(H_L+H_R+H_{\rm int})ds\right]
+
+A29 - CONDITIONAL: circuit schematic and proto-area (p6)
+The text schematic names Galois tensors and an AME state but gives no tensor dimensions, gates, state, contraction or geometry map. S(rho_A)=-Tr rho_A ln rho_A is entropy in nats, not area in square meters. A cut bounds entropy by sum ln(D_e); equality requires the appropriate isometric/saturation conditions. A gravitational area relation requires its gravity dictionary and bulk corrections. A fixed network's cut is not automatically a time-evolved metric.
+S(\rho_A)=-\mathrm{Tr}(\rho_A\ln\rho_A),\qquad S_A\leq\min_\gamma\sum_{e\in\gamma}\ln D_e
+
+Page 7 / scrambling, latency and phase
+A bound or scaling law in a specified quantum system does not define a source for a classical plasma simulation. References [A4,A13,A14].
+
+A30 - CONDITIONAL: scrambling and OTOC
+t_* approximately beta/(2pi) ln S_BH is a framework-dependent parametric scale in hbar=kB=1 units, not a universal clock. State, thermal regularization, operators and large-N normalization are absent. The exponential form applies before scrambling and cannot extrapolate indefinitely. L/R operators commute in decoupled Hilbert factors; a cross-boundary OTOC needs specified coupling and state. Generic AME tensors do not supply a chaos exponent.
+F(t)\simeq1-\frac{f}{N^2}e^{\lambda_Lt},\qquad\lambda_L\leq\frac{2\pi k_BT}{\hbar}
+
+A31 - CORRECT: saturation and shock inference
+The equality lambda_L=2pi/beta needs a system saturating the chaos bound under its assumptions; a general black-hole/wormhole simulation cannot impose it from notation. alpha proportional to exp[2pi(t-t*)/beta] is a model- and perturbation-dependent shift estimate. Its sign, energy and background determine its effect. A positive shock may spoil transmission in a specified setup; this does not prove literal topological disconnection into two isolated universes.
+
+A32 - UNESTABLISHED: stress from arithmetic latency
+T_mu nu=kappa Xi_mu nu(deconf) is an undefined constitutive proposal. Xi has no operational definition, covariance law, units, conservation equation, measured coefficient or derivation. It cannot replace a stress-energy tensor in Einstein equations without those properties, including covariant conservation. Algorithmic computation time is not gravitational proper time.
+
+A33 - CORRECT scope: Lense-Thirring phase
+2GJ/(c^2 r^3) has angular-frequency units and can set a weak-field precession scale. The actual precession vector depends on orientation and trajectory. A phase needs a specified clock/spin/interferometer and integration along its path. The report's loop-integral equality lacks normalization and path dependence. Delta t_eff=tau_prop(1+eta_lag) is an uncalibrated hypothesis; it is not part of established frame dragging.
+\Omega_{\rm LT,scale}=\frac{2GJ}{c^2r^3},\qquad\Delta\phi=\int\Omega_{\rm observable}(\tau)\,d\tau
+
+Pages 7-9 / path integral and proposed master law
+The last section makes the largest unsupported bridges. The summary table repeats them and does not supply missing definitions or evidence. References [A15-A17].
+
+A34 - CONDITIONAL: path integral and nonfactorization (p7)
+The integral Z(B1,B2)=integral Dg exp(-S_EH) is schematic. A Euclidean form needs I_E/hbar, matter, boundary terms, gauge fixing, topology class and measure; a Lorentzian form uses exp(iS/hbar). A two-geometry theory also needs its chosen action. Nonfactorizing contributions can occur in particular models; the displayed inequality is not universal and supplies no evolution algorithm. In two dimensions the Einstein-Hilbert term alone is topological; a JT model requires its dilaton and boundary terms.
+
+A35 - CORRECT: Hopf-algebra attribution (p8)
+The schematic sum over subobjects tensor contracted quotient resembles a graph-renormalization coproduct. It is not a defined Faa di Bruno coproduct, which concerns composition of formal series and its partitions. W_g,n and the allowed W_sub are not defined. Neither schematic formula proves that physical topology changes are caused by a coproduct operation.
+
+A36 - CORRECT: Cosmic Galois group identification (p8)
+Motivic/cosmic Galois constructions acting on periods are not automatically a subgroup of the absolute arithmetic group Gal(Qbar/Q). One must specify the category, representation and relation; the report does not. Arithmetic field automorphisms are not automatically completely positive quantum channels or transformations between Lorentzian geometries.
+
+A37 - CORRECT / UNESTABLISHED: master equation (p8)
+A scalar derivative of <O> cannot equal the displayed operator-valued RHS. Expectations and explicit time derivatives are missing; hbar is suppressed. An infinite group sum needs a measure/convergence and defined nonnegative rates. A mathematically consistent finite random-unitary example is below, only if H is self-adjoint, Gamma_s>=0 and each U_s unitary. This is a repair example, not a recovered Cosmic Galois or topology-change law.
+\dot\rho=-\frac{i}{\hbar}[H,\rho]+\sum_s\Gamma_s(U_s\rho U_s^\dagger-\rho)
+\frac{d\langle O\rangle}{dt}=\left\langle\partial_tO+\frac{i}{\hbar}[H,O]+\sum_s\Gamma_s(U_s^\dagger O U_s-O)\right\rangle
+
+A38 - Summary table audited in full (pp8-9)
+GR: mass and expansions are diagnostics, not a causal classification alone. Thin shells: corrected potential needs EOS/conservation. Magnetic vortex: LLGS does not derive an event horizon. Arithmetic bulk: the displayed Schrodinger form is not diffusion. Tensor networks: entropy/cuts need a gravitational dictionary and specified dynamics. Topology change, including the last row on page 9: no verified transition law is provided. There are no additional equations or evidence on page 9.
+
+Refined definitions / spacetime and local material
+Use the attachment's corrected geometry to define a spacetime branch, and the pulse model to define a material response. Keep their observables distinct. References [A1-A4,A18].
+
+Black hole: a causal definition
+Relative to a chosen asymptotically flat exterior, the black-hole region contains events that cannot send future-directed causal signals to that exterior's future null infinity. Its boundary is the event horizon. It is not defined by solid versus gaseous infall, a physical lid or spin-induced timelessness. Local trapping horizons are numerical diagnostics and need their signs/causal character recorded.
+\mathcal B=M\setminus J^-(\mathscr I^+),\qquad\mathcal H^+=\partial\mathcal B
+
+Wormhole and traversable wormhole
+A wormhole is a bridge-like spacetime geometry connecting regions; the term includes nontraversable Einstein-Rosen bridges. For the present passage question, require an explicit two-region geometry and causal paths through the throat reaching the intended exterior, with the requested direction(s), finite traveler conditions and no blocking event horizon along those paths. Static Morris-Thorne geometry is a bounded candidate; its required radial stress is specified by A03. Dynamic traversability needs solved geometry and worldlines.
+
+Matched exterior observations are not a tensor identity
+Treat observational equivalence as agreement of a declared list of predictions over a measured domain and uncertainty, not identity of every metric or interior. Such degeneracy may motivate matched-exterior candidate runs, but it cannot classify an aperture by material composition. A map I+epsilon K needs defined domain/codomain and pullback of metric/matter/observables before it becomes a physical equivalence map.
+
+Aperture / aggie: operational local definition
+Aperture means a geometric opening in the study volume. Aggie means the user's hypothetical obstructing material with specified composition, thickness, mass, conductivity and thermal properties. Its geometric cover fraction C_g, liquid fraction f_l, transmission and heat are independent quantities. A clear hole permits local material passage subject to trajectory/forces; it does not by itself establish spacetime traversal.
+
+Spin must carry units
+For an uncharged Kerr exterior use rg=GM/c^2, spin length a=J/(Mc), and dimensionless chi=cJ/(GM^2). Its outer horizon radius is below for |chi|<=1. Shell radius a(tau), magnetization winding, cylinder rotation rate and Kerr chi are distinct inputs. There is no derived aperture law r_A(chi) in this attachment.
+r_+=r_g\left(1+\sqrt{1-\chi^2}\right),\qquad r_g=GM/c^2
+
+Refined model boundary / a coupling that can be defended
+The following physical phase and pulse derivation answers the prior request without incorporating the model. It is a local electromagnetic/material experiment associated with a proposed aperture; it is not yet a solved wormhole or black-hole interior.
+
+What the attachment contributes
+Retain corrected Morris-Thorne geometry and radial NEC as a candidate wormhole reference; retain correctly classified trapping diagnostics and Israel shell equations for separately specified spacetime studies. Retain p-adic/Galois/AME constructions only in a distinct arithmetic or quantum-information model with explicit maps. The source does not define a transform from measured E, plasma temperature or solid fraction to a metric tensor.
+
+Stress-energy is the bridge to gravity
+A coupled spacetime calculation would need a metric, covariant matter/field equations and a total conserved stress-energy tensor. In a test-field model one specifies the background and neglects backreaction; this still needs curved-spacetime Maxwell propagation and local orthonormal measurement frames. To support the classical static throat, its negative radial null contraction needs an explicit additional source. Ordinary ideal positive-energy matter plus classical Maxwell fields do not supply it.
+G_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G}{c^4}T^{\rm total}_{\mu\nu},\qquad\nabla_\mu T_{\rm total}^{\mu\nu}=0
+
+First physical pulse model
+Define wave amplitude as peak electric strength [V/m], and phase as timing relative to a declared incident carrier [rad]. Solve Maxwell plus a causal frozen-density plasma current. Track reversible electron drift storage and collision heat separately. Treat the stationary cover with conductivity and sensible/latent heat, fixed geometry initially. Thermal contact can exchange heat conservatively; it needs a specified interface conductance.
+
+What must be supplied before incorporation
+Specify pulse spectrum/polarization and calibration plane; physical dimensions; plasma composition, density and collision law; cover composition and property tables; initial states and boundaries. Magnetization, spin, moving cover, ionization and angular structure need the additional equations listed later. The report's undefined latency, Cosmic Galois jump rates and unproved aperture thresholds do not enter the physical solver.
+
+Preserved status
+No simulator equation, launch file or release package was changed. The audit has been completed before using its corrected parts in the definitions above. The following derivation remains a reviewable proposal with independent equation checks, ready for a later, explicitly scoped implementation.
+
+1. Physical meaning of the texture
+The cylinder bounds a local measurement volume around the aperture axis. The wave layer shows a calculated electric-field envelope; the material layer shows thermal and phase state. A displayed radius is geometric, not determined by electric amplitude. The earlier dimensionless neutral CGLE texture remains a separate reference.
+
+Wave amplitude and phase
+Choose the azimuthal electric component in the local cylindrical basis and the negative-exponential carrier convention. The phase is relative to a declared incident-field reference, not to an arbitrary color origin. A single instantaneous real field snapshot cannot determine the envelope uniquely.
+E_\phi=\mathrm{Re}\{\mathcal E_\phi e^{-i\omega_0t}\},\qquad \mathcal E_\phi=A_E e^{i\theta_E}
+\mathcal E_\phi=2\,\mathrm{LPF}_W\{E_\phi e^{i\omega_0t}\},\qquad A_E=|\mathcal E_\phi|
+\Delta\theta_E=\mathrm{arg}(\mathcal E_\phi\mathcal E_{\rm ref}^{*}),\qquad E_{\rm rms}=A_E/\sqrt{2}
+
+Operational definition
+A_E is peak electric amplitude [V/m]; theta_E and relative phase are angles [rad]. For a slowly varying envelope, Ephi=A_E cos(omega0 t-theta_E). Specify the carrier, reference plane, filter bandwidth/window, delay compensation and amplitude threshold. Mask phase when either the measured or reference envelope is below threshold. Few-cycle pulses need a declared analysis band; their carrier phase is an analysis-dependent diagnostic. [1]
+
+Energy and transport have separate quantities
+Use the real Maxwell fields for exact energy accounting. The cycle averages below apply to slowly varying peak phasors. Electric amplitude alone does not determine total wave energy or transport in a standing wave or dispersive plasma. [2] Vector peak phasors/envelopes are denoted with hats; scalar Ecal is the chosen component envelope.
+u_{\rm EM}=\frac{\epsilon_0|\mathbf E|^2+\mu_0|\mathbf H|^2}{2},\qquad \mathbf S=\mathbf E\times\mathbf H
+\langle u_{\rm EM}\rangle=\frac{\epsilon_0|\widehat{\mathbf E}|^2+\mu_0|\widehat{\mathbf H}|^2}{4}
+\langle\mathbf S\rangle=\frac12\mathrm{Re}(\widehat{\mathbf E}\times\widehat{\mathbf H}^{*})
+
+Material phase
+The material layer uses liquid mass fraction f_l in [0,1], with solid fraction 1-f_l. These are thermodynamic state fractions, not angles. Geometric cover fraction C_g and electromagnetic transmittance are additional, independent quantities. Phase color is never a proxy for temperature or openness.
+
+2. Governing fields and a controlled pulse input
+Start with fixed material geometry, stationary ions, fixed plasma density and no imposed magnetic bias or bulk rotation. Electromagnetic fields are real and evolved in physical time. Vacuum epsilon0 and mu0 are the baseline background constants; conduction/dispersive material response is carried explicitly by current.
+
+Volume fractions and Maxwell coupling
+Let f_p and f_c be fixed plasma and cover volume fractions, with f_p+f_c<=1. J_p is current per full computational-cell volume; sigma_eff=f_c sigma_c. Intrinsic n_e is electron number density per plasma volume. Pure-domain masks are the special case f=0 or 1. These are homogenized cells, not conformal interfaces.
+\epsilon_0\partial_t\mathbf E=\nabla\times\mathbf H-\mathbf J_p-\sigma_{\rm eff}\mathbf E-\mathbf J_{\rm ext}
+\mu_0\partial_t\mathbf H=-\nabla\times\mathbf E,\qquad \sigma_{\rm eff}=f_c\sigma_c(T_c,f_l)
+\nabla\cdot(\epsilon_0\mathbf E)=\rho_q,\quad\nabla\cdot\mathbf B=0,\quad\partial_t\rho_q+\nabla\cdot\mathbf J_{\rm total}=0
+
+Direct extension of the current axisymmetric sector
+For azimuthally uniform Ephi, Jp,phi and Jext,phi, the following scalar-polarization system closes in an unmagnetized isotropic medium. Ephi and Hr vanish regularly at r=0; Hz is finite. Azimuthal current has zero divergence in this sector.
+\epsilon_0\partial_t E_\phi=\partial_zH_r-\partial_rH_z-J_{p,\phi}-\sigma_{\rm eff}E_\phi+F_\phi
+\mu_0\partial_tH_r=\partial_zE_\phi,\qquad\mu_0\partial_tH_z=-\frac1r\partial_r(rE_\phi)
+F_\phi=-J_{{\rm ext},\phi},\qquad P_{\rm source}=-\int_V\mathbf E\cdot\mathbf J_{\rm ext}\,dV
+
+A prescribed pulse train
+One reproducible drive is a localized impressed ring-current profile G(r,z), regular as O(r) at the axis, multiplied by Gaussian carrier bursts. The source-density scale J0 is in A/m^2; it is not electric-field amplitude. Calibrate the incident waveform in a reference run or use a validated incoming-mode boundary. [2]
+J_{{\rm ext},\phi}=J_0G(r,z)\sum_k e^{-(t-t_k)^2/(2\tau^2)}\cos[\omega_0(t-t_k)+\varphi_k]
+
+Boundary specification
+Prescribe initial E, H and J_p consistently, material temperatures, and the incoming waveform. Define physical outgoing flux at measurement surfaces. Artificial sponge/PML losses remain a separate ledger; PEC outer walls reflect and do not represent radiation escaping to infinity.
+
+3. Plasma current, phase lag, and collisional heating
+The bounded first model is linear collisional electron response at frozen density. It resolves electron inertia and therefore distinguishes reversible drift storage from irreversible heat. It excludes ionization, flow, pressure-driven currents, relativistic motion and kinetic resonances.
+
+Derive the current equation from electron momentum
+Take e>0 as the elementary charge magnitude and a nonnegative effective collision frequency nu. With J_p=-f_p n_e e v_e and fixed f_p n_e, multiplying the electron momentum equation gives the causal current response. At f_p n_e=0, set J_p=K_p=q_nu=0 without dividing by zero. [3]
+m_e(\partial_t+\nu)\mathbf v_e=-e\mathbf E,\qquad \alpha=\frac{f_p n_e e^2}{m_e}=f_p\epsilon_0\omega_p^2
+\partial_t\mathbf J_p+\nu\mathbf J_p=\alpha\mathbf E,\qquad \omega_p^2=\frac{n_e e^2}{\epsilon_0m_e}
+
+The measurable amplitude and phase response
+For harmonic peak phasors with exp(-i omega t), omega>0 and coefficients held fixed for the response, conductivity is complex. Its positive phasor angle means current lags electric field in time under this convention; at nu=0 the lag is pi/2. The instantaneous current equation remains authoritative for finite pulses or varying temperature; the conductivity is a frozen-coefficient harmonic diagnostic.
+\sigma_p(\omega)=\frac{\alpha}{\nu-i\omega},\qquad |\widehat{\mathbf J}_p|=\frac{\alpha|\widehat{\mathbf E}|}{\sqrt{\nu^2+\omega^2}}
+\Delta\theta_{J,E}=\mathrm{atan2}(\omega,\nu),\qquad \epsilon_r(\omega)=1-\frac{f_p\omega_p^2}{\omega(\omega+i\nu)}
+
+Storage and irreversible heat
+Dot the current equation with J_p/alpha. This gives the following identity exactly for fixed alpha, including temperature-dependent nu>=0. Instantaneous J_p dot E can be negative when current returns stored energy to the wave; it must not all be called heat. [4]
+K_p=\frac{|\mathbf J_p|^2}{2\alpha},\qquad q_\nu=\frac{\nu|\mathbf J_p|^2}{\alpha}\geq0
+\mathbf J_p\cdot\mathbf E=\partial_tK_p+q_\nu
+\langle q_\nu\rangle=\frac{\nu|\widehat{\mathbf J}_p|^2}{2\alpha}=\frac12\mathrm{Re}(\sigma_p)|\widehat{\mathbf E}|^2
+
+A thermal closure
+For a common, locally equilibrated ideal plasma temperature T_p, let C_p=(3/2) f_p(n_e+n_i) k_B, with n_i=n_e/Z. This single-temperature closure requires equilibration on the thermal time scale; otherwise use separate species energies and heat partition. k_p,eff is cell-effective thermal conductivity. Q_pc is heat transferred from plasma to cover per cell volume [W/m^3], entered with opposite signs. Set g_pc=0 for the insulated-contact benchmark, or calibrate g_pc=h_pc A_interface/V_cell from interface conductance h_pc [W/(m^2 K)]. Its support requires both media. Constant nu is a controlled first benchmark; a positive nu(T_p) must be calibrated.
+C_p\partial_tT_p=\nabla\cdot(k_{p,\rm eff}\nabla T_p)+q_\nu-Q_{pc}
+Q_{pc}=g_{pc}(T_p-T_c),\qquad g_{pc}\geq0
+
+4. Aggie cover: current, latent heat, and geometry
+Aggie denotes the user's hypothetical covering material. This local model treats it as a specified conducting material with measurable properties; no black-hole material, timeless spin or traversable horizon is inferred. Geometry remains prescribed during the first thermal/electromagnetic calculation.
+
+Conductive response and deposited power
+The memoryless Ohmic cover is valid only over a calibrated frequency/temperature range. A metal with significant dispersion needs a causal Drude/Lorentz material response instead. Here sigma_c is nonnegative, with separately measured solid/liquid values. A linear fraction mixture is a declared constitutive approximation, not a universal microstructure law. [5]
+\mathbf J_c=f_c\sigma_c(T_c,f_l)\mathbf E,\qquad q_c=f_c\sigma_c|\mathbf E|^2
+\sigma_c=(1-f_l)\sigma_{\rm solid}(T_c)+f_l\sigma_{\rm liquid}(T_c)
+
+Enthalpy carries the energy of melting
+Use a stationary constant-density approximation with equal phase densities and negligible pressure-volume work. Under that approximation, specific enthalpy h_c [J/kg] can serve as the stored thermal energy variable. L_m is latent heat [J/kg]; c_c is specific heat [J/(kg K)]. The mushy interval is a declared regularization/alloy model; a pure substance at fixed pressure has an isothermal melting plateau. Interphase heat Q_pc enters here with the opposite sign to its plasma term. Real density change, stress or motion needs internal energy and mechanical work. [6]
+h_c(T_c)=\int_{T_*}^{T_c}c_c(T')\,dT'+L_m f_l(T_c)
+\partial_t(f_c\rho_c h_c)=\nabla\cdot(k_{c,\rm eff}\nabla T_c)+q_c+Q_{pc}
+f_l(T)=\mathrm{clip}\left(\frac{T-T_s}{T_l-T_s},0,1\right),\qquad T_l>T_s
+\frac{dh_c}{dT}=c_c(T)+\frac{L_m}{T_l-T_s}\quad(T_s<T<T_l)
+
+Geometric cover is a separate observable
+C_g is covered mouth area divided by total cavity-mouth area, not solid fraction or absorption. For a concentric annular cover, the radius relation below is geometric only. Areal mass is a through-thickness integral; integrating bulk density over an area alone has the wrong units for areal mass.
+C_g=\frac{A_{\rm covered}}{A_{\rm mouth}},\qquad r_{\rm clear}=R_i\sqrt{1-C_g}
+\Sigma_c(\mathbf x_\perp)=\int_{\rm column}\rho_c\,ds\quad[\mathrm{kg}/\mathrm{m}^2]
+
+Opening requires a material-motion law
+A molten cover still contains mass and can still conduct or obstruct. The baseline holds f_c and C_g fixed. Cover opening, breakup, displacement, ablation and ejecta require mass, momentum and phase-change/vaporization energy equations. No threshold in wave amplitude or melting fraction automatically creates a passage.
+
+5. Coupling chain and conservation test
+The actual coupling is E to J_p/J_c; current feeds back into Maxwell; q_nu and q_c heat their respective media; material temperature changes the calibrated collision/conductivity laws. This makes pulse reception a response governed by equations, not a prescribed visual animation.
+
+Exact local energy balance
+Combine Maxwell's Poynting identity, the plasma drift identity and both thermal equations. The interphase Q_pc terms cancel exactly. With fixed masks/density, no bulk motion, negligible pressure work and no omitted radiation or chemistry, the complete energy is below. Thermal fluxes are q_th,p=-k_p,eff grad T_p and q_th,c=-k_c,eff grad T_c. These are local SI equations, not global black-hole energy laws. [2,4]
+u_{\rm total}=u_{\rm EM}+K_p+C_p(T_p-T_{p,*})+f_c\rho_c h_c
+\partial_t u_{\rm total}+\nabla\cdot(\mathbf S+\mathbf q_{\rm th,p}+\mathbf q_{\rm th,c})=-\mathbf E\cdot\mathbf J_{\rm ext}
+
+Volume-integrated ledger
+For V with outward normal n, source work is signed. Include physical thermal boundary flux, or set it to zero with insulated boundaries. Contact heat cancels internally. Material heating and artificial absorber loss remain distinct. The second identity tracks deposited heat cumulatively instead of adding thermal stored energy; never count both representations in the same total.
+\Delta U_{\rm total}+\int_0^t\!\oint_{\partial V}(\mathbf S+\mathbf q_{\rm th})\cdot\mathbf n\,dA\,dt'=W_{\rm source}
+\Delta(U_{\rm EM}+K_p)+Q_p+Q_c+W_{\rm EM,out}=W_{\rm source}
+
+Meaning of intake in this cylinder
+The present receiving mouth is at the smaller-z end, with outward normal -e_z. Therefore positive S_z is inward. The integral is signed net intake; its positive-only part is not a uniquely separated incident pulse because recrossings and interference can occur. Separate incident/reflected energy with calibrated mode decomposition or an appropriate reference/scattering measurement.
+S_z=-E_\phi H_r,\qquad P_{\rm mouth,net}=\int_{A_{\rm mouth}}S_z\,dA
+Q_p=\int_0^t\!\int_Vq_\nu\,dV\,dt',\qquad Q_c=\int_0^t\!\int_Vq_c\,dV\,dt'
+
+Matched branch experiment
+Use the same calibrated incident pulse, plasma density, numerical domain and initial temperatures for the open and covered cases. Record reflected/transmitted energy, net mouth intake, drift storage, cover/plasma heat, temperatures, liquid fraction and clear area. Compare after transients decay or explicitly retain stored energy. This tests the local hypothetical branches; it does not establish black-hole/wormhole equivalence.
+
+6. Limits, required extensions, and readiness
+The frozen-density, static-cover, unmagnetized baseline is a mathematically closed model once coefficient tables, initial states and boundary conditions are supplied. The following extensions need additional energy terms and solver components before they can be claimed.
+
+Magnetization and rotation
+A prescribed magnetic bias adds the Hall term shown below. It does no direct work because J dot (J cross B0)=0, but usually rotates current into other components. An axial B0 converts azimuthal current into radial response, so the current TEphi sector is insufficient. A rotating cover uses its rest-frame electric field; mechanical work must be counted separately.
+\partial_t\mathbf J_p+\nu\mathbf J_p+\frac{e}{m_e}\mathbf J_p\times\mathbf B_0=\alpha\mathbf E
+\mathbf J_c=\sigma_{\rm eff}(\mathbf E+\mathbf u_c\times\mathbf B),\qquad q_c=\sigma_{\rm eff}|\mathbf E+\mathbf u_c\times\mathbf B|^2
+\mathbf J_c\cdot\mathbf E=q_c+\mathbf u_c\cdot(\mathbf J_c\times\mathbf B)
+
+Changing density is not a free coefficient substitution
+If alpha varies while the same current equation is used, the extra term below appears. Ionization or moving masks therefore require species continuity, consistent momentum sources and ionization/mechanical energy. The baseline freezes n_e and f_p. Ionization fraction is not carrier phase.
+\partial_tK_p=\mathbf J_p\cdot\mathbf E-q_\nu-K_p\partial_t\ln\alpha\quad(\alpha>0)
+
+Angular texture and material resolution
+An m=0 solution is circumferentially uniform. Actual angular variation needs additional azimuthal modes and components; an asymmetric or fragmenting cover may require a full 3D solver. Rendering subdivisions add no physical degrees of freedom. Conductive skin depth and plasma wavelengths must be resolved; homogenized partial cells need an interface-convergence study. [7]
+
+Inputs still to specify
+Plasma: composition/Z, density, collision law and thermal transport. Cover: composition, sigma_solid/liquid(T,frequency), rho_c, c_c(T), thermal conductivity, solidus/liquidus and latent heat. Also specify pulse spectrum, polarization, physical dimensions, masks, reference plane, initial states and boundary conditions. The word aggie supplies none of these measured constants.
+
+Equation checks versus incorporation
+Sixteen independent algebra and uniform temporal checks pass: harmonic response, averaged and instantaneous work, reversible storage, midpoint ledger, second-order current convergence, enthalpy inversion, fractional cells, corrected NEC/Israel relations, and rotating metric inverse. These do not validate a spatial plasma solver or black-hole observations. No simulator or release files were modified.
+
+7. Review references and next implementation boundary
+The component equations and energy identities are explicit derivations for this study. Sources below support the underlying electromagnetic, collisional-current, signal-analysis, material and symmetry assumptions. No experimental validation or particular astrophysical material is asserted.
+
+Primary technical sources
+[1] MathWorks, Discrete-time analytic signal / Hilbert transform. https://www.mathworks.com/help/signal/ref/hilbert.html
+[2] Richard Fitzpatrick, University of Texas, Energy Conservation. https://farside.ph.utexas.edu/teaching/355/Surveyhtml/node117.html
+[3] MIT, Introduction to Plasma Physics, Chapter 5. https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2003/75c75c5df51f8fba1b2a903fde937ddc_chap5.pdf
+[4] Richard Fitzpatrick, University of Texas, Collisional plasma dielectric response. https://farside.ph.utexas.edu/teaching/em/lectures/node103.html
+[5] Meep developers, Materials. https://meep.readthedocs.io/en/stable/Materials/
+[6] NIST FiPy, Phase anisotropy (thermal/latent-heat coupling). https://pages.nist.gov/fipy/en/latest/generated/examples.phase.anisotropy.html
+[7] Meep developers, Cylindrical Coordinates. https://meep.readthedocs.io/en/latest/Python_Tutorials/Cylindrical_Coordinates/
+
+Recommended first incorporation
+Add one scalar causal plasma current Jp,phi to the existing unmagnetized TEphi solver, fixed density, separate drift/thermal ledgers, and an enthalpy/conductivity cover with fixed geometry. Save adequately sampled probe histories for envelope/phase reconstruction. Retain the original neutral CGLE cylinder as a separately identified reference. Expand the electromagnetic components before magnetized spin or angular texture is physically coupled.
+
+Acceptance requirements
+Recover vacuum at n_e=0; recover Ohmic response when omega/nu is small; conserve field-plus-drift energy with nu=sigma=0; reproduce damped plasma dispersion; close source/boundary/thermal balance; converge across grid/time/material interfaces; reproduce latent-heat tests; resolve pulse bandwidth and skin depth. Compare a specified measured plasma/cover experiment with uncertainty before prediction claims.
+
+Observable definitions
+Brightness: A_E on a fixed V/m scale. Hue: incident-referenced phase [rad], masked near zero. Transport arrows: S [W/m^2]. Plasma state: n_e [m^-3], T_p [K], J_p [A/m^2] and K_p [J/m^3]. Cover state: T_c [K], enthalpy [J/kg], liquid/solid fraction, areal mass [kg/m^2], and geometric clear area [m^2]. Physical aperture radius is never derived from wave amplitude.
+
+Audit references
+[A1] Morris and Thorne (1988), Wormholes in spacetime and their use for interstellar travel
+https://doi.org/10.1119/1.15620
+[A2] Hayward, Dynamic wormholes
+https://arxiv.org/abs/gr-qc/9805019
+[A3] Hochberg and Visser, The null energy condition in dynamic wormholes
+https://arxiv.org/abs/gr-qc/9802048
+[A4] Gao, Jafferis and Wall, Traversable Wormholes via a Double Trace Deformation
+https://arxiv.org/abs/1608.05687
+[A5] Poisson and Visser, Thin-shell wormholes: Linearization stability
+https://arxiv.org/abs/gr-qc/9506083
+[A6] Dordevic, Molina and Juricic (2026), Wormhole Geometry from a Magnetic Vortex
+https://arxiv.org/html/2608.12285v1
+[A7] OOMMF developers, Oxs_Evolver documentation (LLG and field conventions)
+https://math.nist.gov/oommf/doc/userguide21a0/userguide/Evolvers.html
+[A8] Gubser et al., p-adic AdS/CFT
+https://arxiv.org/abs/1605.01061
+[A9] Complex-network p-adic evolution paper (Vladimirov normalization)
+https://doi.org/10.1007/s11868-025-00693-8
+[A10] Stacks Project, Section 59.56, proof of Lemma 59.56.5 (finite Galois splitting)
+https://stacks.math.columbia.edu/tag/03QW
+[A11] Helwig and Cui, Absolutely Maximally Entangled States: Existence and Applications
+https://arxiv.org/abs/1306.2536
+[A12] Pastawski et al., Holographic quantum error-correcting codes
+https://arxiv.org/abs/1503.06237
+[A13] Maldacena, Shenker and Stanford, A bound on chaos
+https://arxiv.org/abs/1503.01409
+[A14] Iyer and Vishveshwara, A General Treatment of Orbiting Gyroscope Precession
+https://arxiv.org/abs/gr-qc/9909054
+[A15] Brown, Feynman Amplitudes and Cosmic Galois group
+https://arxiv.org/abs/1512.06409
+[A16] Figueroa and Gracia-Bondia, Combinatorial Hopf algebras in quantum field theory I
+https://arxiv.org/abs/hep-th/0408145
+[A17] Lindblad, On the generators of quantum dynamical semigroups
+https://doi.org/10.1007/BF01608499
+[A18] Reall, Black Holes lecture notes, section 5.3 (causal definition)
+https://www.damtp.cam.ac.uk/user/hsr1000/black_holes_lectures_2024.pdf
+[A19] Hayward, Gravitational Energy in Spherical Symmetry (Misner-Sharp mass)
+https://arxiv.org/abs/gr-qc/9408002
+[A20] Hayward, General laws of black-hole dynamics (outer trapping definition)
+https://arxiv.org/abs/gr-qc/9303006
+[A21] Visser, Acoustic black holes: horizons, ergospheres and Hawking radiation
+https://arxiv.org/abs/gr-qc/9712010
+[A22] Shenker and Stanford, Black holes and the butterfly effect
+https://arxiv.org/abs/1306.0622
+[A23] Saad, Shenker and Stanford, JT gravity as a matrix integral
+https://arxiv.org/abs/1903.11115
+
+Independent equation checks
+{
+  "scope": "Independent proposed-equation algebra and uniform temporal checks; not simulator integration, spacetime evolution, or observational validation.",
+  "synthetic_coefficients": true,
+  "passed": 16,
+  "total": 16,
+  "checks": [
+    {
+      "name": "Harmonic Drude equation",
+      "passed": true,
+      "error": 1.1102230246251565e-16,
+      "tolerance": 1e-13,
+      "detail": "Negative-exponential carrier convention; complex current response."
+    },
+    {
+      "name": "Cycle-averaged collision heat",
+      "passed": true,
+      "error": 5.551115123125783e-17,
+      "tolerance": 1e-13,
+      "detail": "Peak phasor factor 1/2; collisional heat equals averaged current work."
+    },
+    {
+      "name": "Cycle-averaged current work",
+      "passed": true,
+      "error": 5.551115123125783e-17,
+      "tolerance": 1e-13,
+      "detail": "Storage averages to zero over a steady harmonic cycle."
+    },
+    {
+      "name": "Instantaneous drift identity",
+      "passed": true,
+      "error": 3.885780586188048e-16,
+      "tolerance": 1e-13,
+      "detail": "Field work splits into drift-energy change and positive heat."
+    },
+    {
+      "name": "Collisionless reversible exchange",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 1e-13,
+      "detail": "Heat is zero; instantaneous current work has both signs."
+    },
+    {
+      "name": "Collisionless work changes sign",
+      "passed": true,
+      "detail": "Storage return is not negative heat."
+    },
+    {
+      "name": "Midpoint source / drift / two heat channels",
+      "passed": true,
+      "error": 1.0658141036401503e-14,
+      "tolerance": 2e-12,
+      "detail": "Uniform independent temporal test; no spatial boundary or plasma propagation claim."
+    },
+    {
+      "name": "Second-order current convergence",
+      "passed": true,
+      "error": 0.010393275799140511,
+      "tolerance": 0.15,
+      "detail": "Errors [2.72286e-03, 6.82489e-04, 1.70567e-04]; error ratios [3.98961, 4.00130]."
+    },
+    {
+      "name": "Enthalpy inversion through melting interval",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": "Synthetic properties; sensible and latent heat share one energy variable."
+    },
+    {
+      "name": "Partial-cell current and energy normalization",
+      "passed": true,
+      "error": 5.551115123125783e-17,
+      "tolerance": 1e-13,
+      "detail": "Cell-average current and alpha both include plasma volume fraction."
+    },
+    {
+      "name": "Morris-Thorne NEC identity",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "detail": "Phi=0 Ellis example; corrected rho+pr is negative."
+    },
+    {
+      "name": "Source NEC inconsistency exposed",
+      "passed": true,
+      "detail": "Printed general expression gives positive NEC for the same Ellis example; its stated throat limit is negative."
+    },
+    {
+      "name": "Asymmetric Israel potential",
+      "passed": true,
+      "error": 2.42861286636753e-17,
+      "tolerance": 1e-14,
+      "detail": "Correct denominator contains a, not a squared; retains unsquared density branch."
+    },
+    {
+      "name": "Static shell pressure",
+      "passed": true,
+      "error": 0.0,
+      "tolerance": 1e-15,
+      "detail": "Correct pressure has no extra a prefactor and ends in minus sigma/2."
+    },
+    {
+      "name": "No-flux shell energy conservation",
+      "passed": true,
+      "error": 8.673617379884035e-19,
+      "tolerance": 1e-15,
+      "detail": "d(sigma area)/d tau + p d(area)/d tau = 0, along a static family."
+    },
+    {
+      "name": "Rotating-coordinate inverse metric",
+      "passed": true,
+      "error": 5.551115123125783e-16,
+      "tolerance": 1e-14,
+      "detail": "g^tt=-1 and determinant=-radius squared even when g_tt changes sign."
+    }
+  ]
+}

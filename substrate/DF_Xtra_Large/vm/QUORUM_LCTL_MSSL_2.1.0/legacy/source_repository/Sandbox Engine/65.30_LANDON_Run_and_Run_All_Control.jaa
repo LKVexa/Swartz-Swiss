@@ -1,0 +1,35 @@
+ja source 0.3
+module suite65.sandbox_engine.landon_run_run_all_control
+use Agent
+policy no_network
+
+agent LANDONSandboxRunControl {
+    identity "landon_sandbox_run_run_all_control"
+    role "sophia-charlotte-landon-professor-podium-orchestrator"
+    goal govern_authorized_run_or_run_all when confidence >= 0.99
+    memory session retention 1h
+    budget steps 60 tools 5
+    tool SOPHIAInterpretRunContract(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEInspectRunOutputs(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONGovernRunControl(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainRunPlan(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumVerifyRunAuthorization(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIAInterpretRunContract
+        authorize CHARLOTTEInspectRunOutputs
+        authorize LANDONGovernRunControl
+        authorize ProfessorExplainRunPlan
+        authorize PodiumVerifyRunAuthorization
+        continue when policy_allows
+        execute SOPHIAInterpretRunContract("sandbox_run_contract")
+        execute CHARLOTTEInspectRunOutputs("reviewable_outputs")
+        execute ProfessorExplainRunPlan("action_card")
+        execute PodiumVerifyRunAuthorization("exact_suite_selection")
+        execute LANDONGovernRunControl("run_pause_cancel_review_integrate")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "LANDONSandboxRunControl.mcrt"

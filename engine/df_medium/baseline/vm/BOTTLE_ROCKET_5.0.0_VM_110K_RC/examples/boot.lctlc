@@ -1,0 +1,12 @@
+LCTLC/1.1
+@unit id=br.boot version=4.7.0 profile=brvm-native entry=B001 target=local-reference backend=brir network=deny replay=deterministic image_version=9 requested_caps=CONTROL|ARITH max_steps=32 termination=bounded
+@defaults mode=WRAP width=WIDE
+@frame id=F0000 parent=ROOT module=br.boot
+ID│LANE│OP│OUT│CTRL│IN│ARG│META
+B001│boot│MOVI│R0│C0│_│u64:40│width=WIDE
+B002│boot│MOVI│R1│C0│_│u64:2│width=WIDE
+B003│boot│ADD│R2│C0│R0›R1│_│mode=CHECKED;width=WIDE
+B004│boot│MOVI│R3│C0│_│u64:42│width=WIDE
+B005│boot│CMP│R0│C0│R2›R3│_│width=WIDE
+B006│boot│HALT│_│C0│_│_│_
+@end

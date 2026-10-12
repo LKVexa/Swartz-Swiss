@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "107",
+  "title": "Quorum Dashboard",
+  "source_file": "107_Quorum_Dashboard.md",
+  "source_sha256": "69f327a69222036040d01d5b6eebb5c6768d6f7b53612edfeda1d12f4880db5a",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "VEC_CONTROL+UI",
+  "integration_mechanism": "Observability plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

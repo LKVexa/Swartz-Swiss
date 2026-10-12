@@ -1,0 +1,184 @@
+TAP version 13
+# Subtest: SSE backpressure retains the latest pending frame and resumes on drain without disconnecting
+ok 1 - SSE backpressure retains the latest pending frame and resumes on drain without disconnecting
+  ---
+  duration_ms: 2.3279
+  type: 'test'
+  ...
+# Subtest: closed or failed SSE connections discard pending data and release drain listeners
+ok 2 - closed or failed SSE connections discard pending data and release drain listeners
+  ---
+  duration_ms: 0.5001
+  type: 'test'
+  ...
+# Subtest: real HTTP parameter/control/export endpoints use the GFM backend and preserve invalid state
+ok 3 - real HTTP parameter/control/export endpoints use the GFM backend and preserve invalid state
+  ---
+  duration_ms: 243.7509
+  type: 'test'
+  ...
+# Subtest: SSE publishes initial and changed frames through a real local connection
+ok 4 - SSE publishes initial and changed frames through a real local connection
+  ---
+  duration_ms: 29.4799
+  type: 'test'
+  ...
+# Subtest: SSE continues across repeated frames larger than the HTTP write buffer
+ok 5 - SSE continues across repeated frames larger than the HTTP write buffer
+  ---
+  duration_ms: 85.7194
+  type: 'test'
+  ...
+# Subtest: host, origin, request-size, path and method restrictions are enforced
+ok 6 - host, origin, request-size, path and method restrictions are enforced
+  ---
+  duration_ms: 110.2071
+  type: 'test'
+  ...
+# Subtest: all backend engines and the preserved terminal retain the registered source bytes
+ok 7 - all backend engines and the preserved terminal retain the registered source bytes
+  ---
+  duration_ms: 138.5968
+  type: 'test'
+  ...
+# Subtest: shared exterior and distinct cover branches produce the declared default passage bits
+ok 8 - shared exterior and distinct cover branches produce the declared default passage bits
+  ---
+  duration_ms: 6.7203
+  type: 'test'
+  ...
+# Subtest: critical spin equality closes, cover equality seals, and raw zero GFM values remain valid
+ok 9 - critical spin equality closes, cover equality seals, and raw zero GFM values remain valid
+  ---
+  duration_ms: 9.3648
+  type: 'test'
+  ...
+# Subtest: invalid parameters preserve the complete state and do not emit updates
+ok 10 - invalid parameters preserve the complete state and do not emit updates
+  ---
+  duration_ms: 3.9826
+  type: 'test'
+  ...
+# Subtest: play, pause, step and bounded export record real backend values without outside mutation
+ok 11 - play, pause, step and bounded export record real backend values without outside mutation
+  ---
+  duration_ms: 6.3802
+  type: 'test'
+  ...
+# Subtest: repeatable demo exposes sealed, open and low-spin-closed states and pauses at completion
+ok 12 - repeatable demo exposes sealed, open and low-spin-closed states and pauses at completion
+  ---
+  duration_ms: 63.3918
+  type: 'test'
+  ...
+# Subtest: play resumes the illustration clock after the scripted experiment has completed
+ok 13 - play resumes the illustration clock after the scripted experiment has completed
+  ---
+  duration_ms: 35.9452
+  type: 'test'
+  ...
+# Subtest: isolated DOM client receives real HTTP/SSE calculations, controls spin/cover, and displays raw GFM rows
+ok 14 - isolated DOM client receives real HTTP/SSE calculations, controls spin/cover, and displays raw GFM rows
+  ---
+  duration_ms: 463.8717
+  type: 'test'
+  ...
+# Subtest: isolated DOM playback, step, reset, demo and accessible data tabs route to the backend
+ok 15 - isolated DOM playback, step, reset, demo and accessible data tabs route to the backend
+  ---
+  duration_ms: 140.4551
+  type: 'test'
+  ...
+# Subtest: schematic WebGL geometry stays finite at zero, threshold, open and covered cases (GPU rendering unverified)
+ok 16 - schematic WebGL geometry stays finite at zero, threshold, open and covered cases (GPU rendering unverified)
+  ---
+  duration_ms: 183.1607
+  type: 'test'
+  ...
+# Subtest: research UI receives computed ray diagnostics and routes view/accuracy/inclination controls correctly
+ok 17 - research UI receives computed ray diagnostics and routes view/accuracy/inclination controls correctly
+  ---
+  duration_ms: 4786.131
+  type: 'test'
+  ...
+# Subtest: worker computes deterministic Kerr paths without altering the aperture hypothesis or exposing stale spin
+ok 18 - worker computes deterministic Kerr paths without altering the aperture hypothesis or exposing stale spin
+  ---
+  duration_ms: 337.3952
+  type: 'test'
+  ...
+# Subtest: physics settings reject nonfinite, unknown and unbounded workloads
+ok 19 - physics settings reject nonfinite, unknown and unbounded workloads
+  ---
+  duration_ms: 0.8575
+  type: 'test'
+  ...
+# Subtest: actual HTTP worker settings, physics export and source hashes reflect the current computed run
+ok 20 - actual HTTP worker settings, physics export and source hashes reflect the current computed run
+  ---
+  duration_ms: 920.8503
+  type: 'test'
+  ...
+# Subtest: analytic Kerr limits reproduce Schwarzschild horizon, photon sphere and critical impact
+ok 21 - analytic Kerr limits reproduce Schwarzschild horizon, photon sphere and critical impact
+  ---
+  duration_ms: 2.3206
+  type: 'test'
+  ...
+# Subtest: Schwarzschild rays on opposite sides of critical impact capture or escape and stay planar
+ok 22 - Schwarzschild rays on opposite sides of critical impact capture or escape and stay planar
+  ---
+  duration_ms: 37.8784
+  type: 'test'
+  ...
+# Subtest: tail-corrected weak Schwarzschild bending approaches 4M/b and refines with tighter tolerances
+ok 23 - tail-corrected weak Schwarzschild bending approaches 4M/b and refines with tighter tolerances
+  ---
+  duration_ms: 22.7521
+  type: 'test'
+  ...
+# Subtest: non-equatorial Kerr trajectories satisfy Carter and metric null constraints with finite output
+ok 24 - non-equatorial Kerr trajectories satisfy Carter and metric null constraints with finite output
+  ---
+  duration_ms: 7.1606
+  type: 'test'
+  ...
+# Subtest: equatorial Kerr photon-orbit benchmarks separate prograde and retrograde capture thresholds
+ok 25 - equatorial Kerr photon-orbit benchmarks separate prograde and retrograde capture thresholds
+  ---
+  duration_ms: 30.6565
+  type: 'test'
+  ...
+# Subtest: exact and numerically near-critical radial separatrices stay unresolved while off-band rays retain capture/escape
+ok 26 - exact and numerically near-critical radial separatrices stay unresolved while off-band rays retain capture/escape
+  ---
+  duration_ms: 88.8784
+  type: 'test'
+  ...
+# Subtest: mass scaling preserves dimensionless bending and the extremal exterior remains guarded
+ok 27 - mass scaling preserves dimensionless bending and the extremal exterior remains guarded
+  ---
+  duration_ms: 28.448
+  type: 'test'
+  ...
+# Subtest: an outward-only segment does not report a fictitious complete scattering deflection
+ok 28 - an outward-only segment does not report a fictitious complete scattering deflection
+  ---
+  duration_ms: 3.3479
+  type: 'test'
+  ...
+# Subtest: bounded bundle reports resolved and unresolved outcomes and guards unsupported initial data
+ok 29 - bounded bundle reports resolved and unresolved outcomes and guards unsupported initial data
+  ---
+  duration_ms: 21.8327
+  type: 'test'
+  ...
+1..29
+# tests 29
+# suites 0
+# pass 29
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5773.5453

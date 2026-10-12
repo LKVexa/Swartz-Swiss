@@ -1,0 +1,219 @@
+VIRTUAL TERMINAL FOUNDATION CONTRACT — RUSSL 0.3.0
+
+1. TERMINAL SURFACE
+The shell owns the command catalogue, editable sequence composer, ordered
+execution, typed result envelopes, command provenance, and snapshot ledger.
+Only registered commands are executable. Uploaded candidate documents and
+imported histories stay inert. Every implemented operation has a visible entry.
+
+2. MATHEMATICAL ENGINE
+src/engine.js is a dependency-free numerical module with a browser global and
+CommonJS exports. Field labels encode polynomial coefficients in base p.
+Prime GF3 and GF4/GF8/GF9/GF16 have declared field profiles. Integer values
+are labels, not ordinary modular integers for extension-field multiplication.
+Small-field amplitudes are ordinary complex values. The normalized positive
+trace-character Fourier transform, shift, phase, and Frobenius label permutation
+are the initial executable candidate. Arithmetic and mathematical checks are
+tested independently of the UI. Custom vectors must already be normalized.
+
+src/refined-field.js adds odd-characteristic quadratic characters, symmetric
+displacement, point reflection, and normalized pure-state Wigner evaluation.
+GF3 and GF9 supply registered odd-characteristic profiles. The
+specific half-phase and reflection/Wigner formulas reject characteristic two.
+The displacement convention is chi(-xi*zeta/2) Z(zeta) X(xi); reflection at
+(q0,p0) maps input label y=2*q0-x to output x with character chi(p0*(x-y)).
+W(q0,p0)=<psi|R(q0,p0)|psi>/q has position rows and momentum columns. Its
+momentum marginal uses the engine's negative-sign Fourier transform. Returns
+include reality, normalization, position/momentum marginal and purity checks,
+with mana defined as log2(sum(abs(W))). Raw numerical values are not clipped.
+
+The 2x2 symplectic command is a finite-field label calculation in any registered
+field: M^T Omega M=det(M) Omega, and preservation requires det(M)=1 in that
+field. It reports the determinant and mapped labels; no general metaplectic
+amplitude operator is inferred from the matrix.
+
+src/refined-scalar.js is a separate ordinary real/complex/integer domain.
+Clebsch–Gordan coefficients use SU(2), the Condon–Shortley phase convention,
+selection rules, bounded integer/half-integer spins, and exact rational squared
+coefficients. Arithmetic delta uses integer lifts modulo p^2 with output modulo
+p, exact division before reduction, and primes 2..97. It is not an additive
+ordinary derivative and is not an operation on the extension-field labels.
+
+The scalar Cayley demonstration solves the corrected forward equation
+(I+i*dt*H/(2*hbar))*psi_next=(I-i*dt*H/(2*hbar))*psi_now for a declared finite
+Hermitian complex H. It returns the calculated state, solve and norm residuals,
+and precision status without renormalization. This bounded inspect-only
+calculation does not alter the active finite-field state. Its rational time
+step approximates the exponential; no exact long-time phase or finite-field
+positive-norm claim is made.
+
+3. RUSSL ADAPTER
+The original word workbench is a sandboxed local iframe. The derivative only
+adds src/workbench-bridge.js to its outer HTML, and a relay to its existing
+research iframe. Its original adapter supplies bounded snapshots and exact
+replay. Source-window identity, method whitelist, identifiers, data shape, and
+UTF-8 byte limits govern each request. Parent and child cannot access each
+other's DOM or storage. No native helper or external API is called.
+See workbench-adapter.txt for message schemas and source-witness scope.
+
+4. RESULT AND EVIDENCE CONTRACTS
+Return envelopes include id, command, success, summary, declared profile,
+elapsed browser wall time, and structured details. They are locally measured
+calculations, not native throughput or device instruction counts.
+RUSSL-research-record/1 contains kind, label, capture time, and snapshot payload.
+SHA-256 uses canonical JSON with recursively sorted object keys and array order
+preserved. The hash sits outside the data it covers. RUSSL-virtual-session/1
+packages snapshots, records, and optional recent returns/history. Integrity is
+separate from mathematical validity and source authorship. Imported records
+remain inert. GF80 replay rechecks bounded units and evolved pixels through
+the existing workbench; small-field Restore validates values and audits state.
+Small-field Restore runs through the serialized ledger.restore command path,
+including hash checking, visible rejection, a structured return, and provenance.
+Session exports use version 0.3.0 in the existing schema; the importer also
+accepts versions 0.1.0 and 0.2.0 when their field and operator conventions
+validate. Historical record data and covered hashes are retained unchanged;
+imported commands never execute.
+
+5. EQUATION AUDIT AND REPORT INTEGRATION
+The supplied audit narrative is preserved unchanged as a source. The Equation
+audit view, equation-audit.json, and docs/Equation_Audit.txt connect displayed
+formulas and source line numbers with verified, refined, rejected or unresolved
+dispositions, declared domains, references and available commands. Candidate
+equation numbers are aliases from that report, not primary-paper equation
+numbers and not proof that the unavailable 500-equation suite was inspected.
+
+eq.list optionally filters a disposition; eq.show inspects an entry; eq.export
+downloads the register. eq.verify runs bounded runtime smoke checks for
+implemented definitions. The full automated test suite is a separate check.
+Reference-only rejected or unresolved formulas have no executable equation
+adapter. In particular, the reported Klein transmission, unspecified modular
+partial waves, and conflicting automaton normalizations are not promoted into
+physical solvers. Detailed scalar and relativity audits retain counterexamples
+and the assumptions required for qualified replacements.
+
+Tests exercise production numerical and command/record code in local fixtures.
+Browser rendering, live preview and live iframe behavior remain unverified in
+this environment; source tests do not certify those interactions.
+
+6. IMAGE EQUATIONS AND GFM REAPPLICATION
+image-equations.json preserves the visible equations of the three supplied
+images, their source-byte identities, qualified domains, primary references and
+available model families. docs/Image_Equation_Audit.txt records the independent
+assessment. Source images remain reference data, with visible attribution and
+original rights retained. Formula acceptance applies to the stated ordinary
+domain; it does not certify an unrelated field analogue.
+
+The new view accounts for all 20 prior report entries and three image entries.
+An applicability manifest names each entry's operator-conjugation, sampled
+profile, basis-covariance, retained-metadata or reference-only route. Missing
+adapters and rejected/unresolved expressions remain visible. A register entry
+does not acquire an execution adapter from its title or source equation number.
+
+The trace-character F is complex and unitary, with one row/column per field
+label. Reapplication is an explicit finite basis contract:
+  vector y=F*v, then v_returned=F^dagger*y;
+  operator A_GFM=F*A*F^dagger, then A_returned=F^dagger*A_GFM*F.
+Matrix/vector dimension must match the declared field order. Returned operator
+entries remain complex values. Similarity preserves the spectrum and, for a
+unitary input operator, unitarity. It does not convert scalar coefficients to
+field labels. Checks report numerical round-trip and covariance residuals.
+
+model.pendulum <g> <length> <max-angle-rad> samples ordinary restoring
+acceleration -(g/length)*sin(theta) on a declared angle grid. It prepares the
+normalized Fourier signal in the active field-sized amplitude interface and
+retains the original scale and sample-coordinate metadata in its result.
+The accompanying small-angle frequency and period are ordinary mechanical
+references. This is a finite signal representation, not a time integrator
+or a predicted quantum wavefunction.
+
+model.rotate <axis> <degrees> requires the dimension-three GF3 profile. The
+ordinary input R is an active, right-handed axis rotation of column vectors;
+degrees are converted to radians. Input and operator are changed together:
+the transformed operator F3*R*F3^dagger acts on F3*psi, and the result returns
+through F3^dagger. The final active output equals R*psi in its original basis,
+with orthogonality, determinant and covariance/recovery checks. The image's
+theta=232.75 degrees keeps this ordinary-domain interpretation.
+
+model.zeta <s> accepts real integer s=2..8. Its sampled ordinary Mellin kernel
+is normalized into a Fourier signal, with scale and sample bounds retained.
+Any quadrature/cutoff comparison is a bounded numerical reference. The source
+zeta(s)*Gamma(s) improper integral requires Re(s)>1, and the transformed finite
+profile is not a field-valued zeta/Gamma or an improper-integral identity.
+
+model.oscillator <q> <v> <kappa> <h> [steps] inspects exact odd-field velocity
+Verlet on dimensionless field coordinates. Its half-step requires 2 invertible.
+Reversal and determinant are algebraic checks; no positive energy, physical
+seconds, square-root frequency or sinusoidal field function is inferred.
+model.fieldrotate <axis> <t|infinity> <X> <Y> <Z> inspects an exact odd-field
+quadratic-form rotation. Finite t uses c=(1-t^2)/(1+t^2), s=2t/(1+t^2), and rejects
+1+t^2=0. The separate infinity case gives c=-1,s=0. The field matrix has
+R^T*R=I and determinant one; its quadratic form is not a positive Euclidean
+norm. These inspectors leave the active complex amplitude state unchanged.
+
+model.reapply <stored-id|all> routes entries through their declared adapters or
+returns a reference-only disposition. The all route builds full 20+3 coverage
+and a GF9 sampled-signal displacement/reflection demonstration. model.verify
+checks the new bounded contracts; model.export preserves a reapplication packet.
+Examples insert for review and require explicit execution. Stored source text
+and old command provenance remain inert.
+
+No identity-preserving ring homomorphism R -> F_p exists: p=0 in F_p, while
+1=p*(1/p) in R. Exact finite-field models therefore require separately chosen
+algebraic definitions. Integer/rational transport excludes denominators that
+vanish in the field. Real sine/cosine/exponential values, arbitrary real
+constants, derivatives and continuum integrals cannot be blindly reduced
+modulo p. Round-trip checks certify finite representation recovery, not these
+missing constructions or any new physical interpretation.
+
+7. EXTENSION POINTS
+Add a model by defining its domain, exact label/state representation, operators,
+inverse, precision policy, reference equations, and falsifiable checks first.
+Register commands only when their execution adapter exists. A future native
+SpinDoctor connector should declare service/version, backend availability,
+authentication boundaries, accepted input schema, job lifecycle, cancellation
+semantics, response accounting, and independent result verification. No native
+connector is assumed to be active in this browser-only foundation.
+
+GF80 and small complex-state domains must retain their names and codecs. A
+mapping between them needs an explicit contract stating retained/discarded
+information. Never reinterpret Pixel160 payloads as arbitrary probability
+amplitudes or identify a 5D address domain with a native quantum Hilbert space.
+
+8. FUTURE RESEARCH
+Candidate extensions include even-characteristic phase-space constructions,
+mixed-state Wigner functions, general metaplectic amplitude operators, affine
+striations and MUBs, coding-transform modules, and p-adic models. Each requires
+its own definitions, state representation, domain restrictions, and independent
+checks before execution. The finite complex and exact field models in release
+0.3 do not establish these missing sectors or a universal physical theory.
+
+RELEASE 0.4 HORIZON FOUNDATION
+
+RELEASE 0.4
+The Aperture & aggie view integrates the supplied black-hole PDF, three metric/
+aperture diagrams, tensor-map screenshot and the preserved user write-up.
+The register contains 49 findings: all 23 numbered PDF equations, 22 image
+formula groups and four narrative qualifications. Each source expression,
+audited correction, domain and applicability is retained separately.
+
+Standard Schwarzschild, Reissner–Nordström, Kerr and Kerr–Newman references
+include horizons, exterior metrics, thermodynamics, Smarr and charged mass
+identities. GFM encodes selected exterior scalar samples and hypothetical
+aperture/passage samples with the grid, units and original L2 scale retained.
+It does not prove metric equivalence or solve a formation/perturbation system.
+
+The proposed gaseous aperture and aggie cover remain explicitly hypothetical.
+With identical permitted exterior observations, posterior probabilities equal
+the priors; balanced classification cannot exceed 50%. An optional toy passage
+test distinguishes different assumed passage bits and therefore changes the
+all-tests-indistinguishable premise. Extreme spin is not timeless matter;
+the proposed electromagnetic zap has no supplied interaction law.
+
+Open Aperture & aggie, adjust the case and select Apply & compare. Load GFM
+signal recomputes the audited report, prepares the GF9 exterior signal followed
+by D(3,4) and R(3,4), and adds a ledger record. Existing ledger records remain.
+Read docs/Horizon_Simulation_Specification.txt and docs/Horizon_Equation_Audit.txt.
+Import examples/Horizon-Simulation-session.json through Evidence & ledger to
+reload the saved case, three state records and complete numeric report.
+Import replaces the active session after validating its integrity and domains.
+

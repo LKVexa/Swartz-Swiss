@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "094",
+  "title": "Electron Pool",
+  "source_file": "094_Electron_Pool.md",
+  "source_sha256": "4e8d76a86dc30b21f9586054a00b23db234ca92125e50946abe0bf0f4b7fb615",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "N_XLARGE+DF0",
+  "integration_mechanism": "QAM integration plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

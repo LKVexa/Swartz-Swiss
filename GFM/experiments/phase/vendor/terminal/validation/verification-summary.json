@@ -1,0 +1,265 @@
+{
+  "release": "RUSSL Galois Field Mechanics Terminal foundation 0.5.1",
+  "prepared": "2026-10-11",
+  "localOnly": true,
+  "dataAndSessionVersion": "0.5.0",
+  "projectTests": {
+    "passed": 271,
+    "failed": 0,
+    "skipped": 0,
+    "command": "node --test --test-reporter=tap tests/*.test.cjs",
+    "transcript": "tests-v0.5.1.txt",
+    "sha256": "000e9a035f746c645ef4d88e8ead810d0b76af5ede556390fa6905848fed8485",
+    "scope": "Existing mathematics, raw datasets, scoped adapters and records; isolated assembled-HTML VM/DOM execution; startup readiness/failure gating; static no-script fallback presence and numeric tables; exact offline build and source identities. No live browser rendering, downloads or iframe communication verified."
+  },
+  "independentPendulumPreview": {
+    "status": "PASS",
+    "assertionsEvaluated": 257,
+    "maximumScaledError": 5.551115123125783e-16,
+    "tolerance": 1e-10,
+    "maximumDisplayScaledError": 2.5144098604698816e-09,
+    "displayTolerance": 1e-08,
+    "evidence": "pendulum-preview-independent-verification.json",
+    "evidenceSha256": "9d80382c2b76ac7a535827323958952920d501a2799b7b79721aadeadcb8c837",
+    "files": {
+      "docs/Pendulum_Example.json": {
+        "sha256": "e294b9c7a60f68b1976443eaf914d2903cdb78a617a5b29580583e6d8e66ea84",
+        "bytes": 8513
+      },
+      "docs/Pendulum_Example.csv": {
+        "sha256": "d35bbcb5f856e1f90c326a1a7be389162044076e21fe79825da108344c5db764",
+        "bytes": 870
+      },
+      "docs/Pendulum_Example.html": {
+        "sha256": "efc722b0b8563d604849c306e8dfb2196d1c26da7b51b59796fe03619c351671",
+        "bytes": 3184
+      },
+      "src/gfm-mechanics.js": {
+        "sha256": "031cf5a05eb3ab3e48cab1f5db18cee6da5c43b78fd90a9a3a26322c7a77e28f",
+        "bytes": 23075
+      }
+    },
+    "scope": "Saved raw GF9 pendulum angles, ordinary acceleration, positive trace coefficients, inverse recovery and CSV table.",
+    "details": {
+      "maximumAbsoluteRecoveryError": 8.886256463788155e-16,
+      "relativeRecoveryError": 2.350391198053242e-16,
+      "csvRows": 9,
+      "htmlRows": 9,
+      "htmlVerification": "Static source table only; no browser/network/UI execution"
+    },
+    "method": "Independent Python standard-library reconstruction of field trace, ordinary pendulum acceleration, saved transform coefficients, inverse recovery and CSV/static HTML rows. It does not execute JavaScript or a browser."
+  },
+  "independentMechanics": {
+    "status": "PASS",
+    "assertionsEvaluated": 3112,
+    "maximumScaledError": 3.7944826909687133e-13,
+    "tolerance": 1e-10,
+    "evidence": "mechanics-independent-verification.json",
+    "evidenceSha256": "ca3c709081ee217feae78dcfc48ed59055485f2d4d138b6ca850d6c2da650220",
+    "files": {
+      "mechanics-reapplication.json": {
+        "sha256": "99d2184aa0858513475b7a835e068d78de8b0cf53a2e9fac49eae92e25286c18",
+        "bytes": 305004
+      },
+      "examples/GFM-Mechanics-session.json": {
+        "sha256": "da42cf1e613e2c5abcb6bb0cc1785edf6ae4578fcb4d63ef04347f69dd54ce44",
+        "bytes": 380226
+      },
+      "src/gfm-mechanics.js": {
+        "sha256": "031cf5a05eb3ab3e48cab1f5db18cee6da5c43b78fd90a9a3a26322c7a77e28f",
+        "bytes": 23075
+      }
+    },
+    "scope": "Finite saved mechanics datasets, transform/rotation recovery, declared source laws, canonical integrity and unchanged historical bytes.",
+    "method": "Separate standard-library numeric reconstruction of saved results; the source-module hash binds the inspected revision without claiming Python executes the JavaScript module."
+  },
+  "coverage": {
+    "newFindings": 49,
+    "pdfNumberedEquations": 23,
+    "previousFindings": 20,
+    "previousImageFamilies": 3
+  },
+  "applicability": {
+    "ordinary-reference-calculated": 22,
+    "reference-retained": 20,
+    "hypothetical-rule-evaluated": 7
+  },
+  "primaryMechanics": {
+    "passed": true,
+    "field": "gf9",
+    "domain": "complex-signal",
+    "representation": "trace-coefficients",
+    "description": "Raw Kerr exterior gtt samples → trace Fourier coefficients; inverse recovery checked.",
+    "checks": {
+      "normPreservation": {
+        "residual": 2.612367684563703e-16,
+        "absoluteResidual": 4.440892098500626e-16,
+        "passed": true
+      },
+      "energyPreservation": {
+        "residual": 4.440892098500626e-16,
+        "inputEnergy": 2.889826948131754,
+        "outputEnergy": 2.889826948131755,
+        "energyUnderflow": false,
+        "passed": true
+      },
+      "inverseRecovery": {
+        "residual": 6.595178816254497e-17,
+        "absoluteResidual": 1.1211468303779313e-16,
+        "passed": true
+      },
+      "ordinaryReferences": {
+        "residual": 0,
+        "passed": true
+      },
+      "recoveredSamples": {
+        "residual": 5.886891023162229e-17,
+        "absoluteResidual": 1.0007415106216804e-16,
+        "passed": true
+      },
+      "imageTransports": {
+        "residual": 6.661338147750939e-16,
+        "passed": true
+      }
+    },
+    "scope": "Raw sample/coefficient scale and zero data are retained. Complex trace transforms and exact field-valued polynomial transforms are distinct domains. No Born probabilities or normalized quantum-state preparation define the primary dataset."
+  },
+  "previousReleaseEvidence": {
+    "release": "0.5.0",
+    "projectTestsPassed": 266,
+    "independentMechanicsAssertions": 3112,
+    "archiveSha256": "b73e660c1791e4ad3a67488108255ea79a96d4360350da286b24936dc0119f96",
+    "summary": "verification-summary-v0.5.json",
+    "summaryText": "tests-summary-v0.5.txt",
+    "retainedFilesUnchanged": [
+      "LICENSE.txt",
+      "Open-Terminal.cmd",
+      "audited-examples-build.cjs",
+      "docs/Equation_Audit.txt",
+      "docs/FOUNDATIONS.txt",
+      "docs/GFM_Correction_Report.txt",
+      "docs/GFM_Reapplication_Report.txt",
+      "docs/GFM_Terminal_Identity.txt",
+      "docs/Horizon_Equation_Audit.txt",
+      "docs/Horizon_Reapplication_Report.txt",
+      "docs/Horizon_Simulation_Specification.txt",
+      "docs/Image_Equation_Audit.txt",
+      "docs/app-review.txt",
+      "docs/candidate-review.txt",
+      "docs/relativity-audit.txt",
+      "docs/scalar-audit.txt",
+      "docs/workbench-adapter.txt",
+      "equation-audit-build.cjs",
+      "equation-audit.json",
+      "examples-build.cjs",
+      "examples/Audited-Equations-session.json",
+      "examples/Fourier-Weyl-session.json",
+      "examples/GFM-Mechanics-session.json",
+      "examples/GFM-Reapplied-session.json",
+      "examples/Horizon-Simulation-session.json",
+      "gfm-reapplication-build.cjs",
+      "gfm-reapplication.json",
+      "horizon-equations.json",
+      "horizon-reapplication-build.cjs",
+      "horizon-reapplication.json",
+      "image-equations.json",
+      "mechanics-reapplication-build.cjs",
+      "mechanics-reapplication.json",
+      "package.json",
+      "reference/Equation audit candidate.txt",
+      "reference/Galois Field Mechanics Equations.txt",
+      "reference/Galois Field Transform Mechanics.txt",
+      "reference/RUSSL_Research_Workbench.zip",
+      "reference/SpinDoctor-3.1.2-QUANTUM_TERMINAL.html",
+      "reference/SpinDoctor-QUANTUM-GUIDE.txt",
+      "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "reference/blackhole-specification/ETM.jpg",
+      "reference/blackhole-specification/Screenshot 2026-10-11 053124.png",
+      "reference/blackhole-specification/User_Simulation_Writeup.txt",
+      "reference/blackhole-specification/aggie aperture.png",
+      "reference/blackhole-specification/eventHorizon.jpg",
+      "reference/galois_field_transform_mechanics.pdf",
+      "reference/image-equations/HJPJPQbaYAADLiP.jpg",
+      "reference/image-equations/HKIRhAvaYAEyfhj.jpg",
+      "reference/image-equations/HQMFVPabcAArgH_.jpg",
+      "reference/workbench-original.html",
+      "reference/workbench.html",
+      "src/audit-styles.css",
+      "src/engine.js",
+      "src/gfm-exact.js",
+      "src/gfm-matrix.js",
+      "src/gfm-mechanics.js",
+      "src/gfm-models.js",
+      "src/gfm-styles.css",
+      "src/horizon-gr.js",
+      "src/horizon-models.js",
+      "src/horizon-scenario.js",
+      "src/horizon-styles.css",
+      "src/refined-field.js",
+      "src/refined-scalar.js",
+      "src/styles.css",
+      "src/workbench-bridge.js",
+      "tests/bridge.test.cjs",
+      "tests/candidate-diagnostics.test.cjs",
+      "tests/engine.test.cjs",
+      "tests/equation-integration.test.cjs",
+      "tests/equation-registry.test.cjs",
+      "tests/export-retention.test.cjs",
+      "tests/gfm-exact.test.cjs",
+      "tests/gfm-integration.test.cjs",
+      "tests/gfm-matrix.test.cjs",
+      "tests/gfm-mechanics.test.cjs",
+      "tests/gfm-models.test.cjs",
+      "tests/gfm-terminal.test.cjs",
+      "tests/horizon-gr.test.cjs",
+      "tests/horizon-integration.test.cjs",
+      "tests/horizon-models.test.cjs",
+      "tests/horizon-preparation.test.cjs",
+      "tests/horizon-scenario.test.cjs",
+      "tests/refined-field.test.cjs",
+      "tests/refined-scalar.test.cjs",
+      "tests/verify-audited-example.py",
+      "tests/verify-example.py",
+      "validation/gfm-independent-validation.txt",
+      "validation/horizon-independent-validation.txt",
+      "validation/independent-audited-example-check.json",
+      "validation/independent-example-check.json",
+      "validation/mechanics-independent-verification.json",
+      "validation/original-gfm-tests.txt",
+      "validation/original-research-tests.txt",
+      "validation/original-session-independent.json",
+      "validation/tests-summary-v0.4.txt",
+      "validation/tests-v0.1.txt",
+      "validation/tests-v0.2.txt",
+      "validation/tests-v0.3.txt",
+      "validation/tests-v0.4.txt",
+      "validation/tests-v0.5.txt",
+      "validation/verification-summary-v0.1.json",
+      "validation/verification-summary-v0.2.json",
+      "validation/verification-summary-v0.3.json",
+      "validation/verification-summary-v0.4.json",
+      "validation/verify-gfm-models.py",
+      "validation/verify-horizon-models.py",
+      "validation/verify-mechanics-data.py",
+      "workbench-notices/COPYRIGHT",
+      "workbench-notices/LICENSE",
+      "workbench-notices/NOTICE",
+      "workbench-notices/RESEARCH-INTEGRATION-NOTICE.txt",
+      "workbench-notices/THIRD-PARTY-NOTICES.txt"
+    ],
+    "scope": "All v0.5 files outside the explicit preview/product/test changes are retained byte-for-byte, including mathematical modules, data/session contracts, examples, audits, sources and prior numeric evidence."
+  },
+  "sourceCount": 15,
+  "originalFilesChanged": false,
+  "liveBrowser": {
+    "status": "unverified",
+    "scope": "No live browser rendering, native download interaction or live GF80 iframe communication was verified. Isolated VM/DOM and static source checks are separate evidence."
+  },
+  "scientificLimits": [
+    "Ordinary sampled signals and exact finite-field labels have distinct coefficient domains.",
+    "Transforms do not establish a new physical theory or metric equivalence.",
+    "Formation, cover and passage rules remain explicitly hypothetical.",
+    "Full perturbation equations and the original 500-equation suite are not implemented.",
+    "Historical quantum/reference demonstrations retain their original, separate scope."
+  ]
+}

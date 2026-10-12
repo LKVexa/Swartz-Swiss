@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "083",
+  "title": "Capability Manifest",
+  "source_file": "083_Capability_Manifest.md",
+  "source_sha256": "d286a07e261bb1ee985fae9127a07805d4051e93d7b42bf35948eef25516e855",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "VEC_CONTROL+DF0",
+  "integration_mechanism": "Security envelope",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

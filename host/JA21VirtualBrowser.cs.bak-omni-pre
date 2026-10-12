@@ -1,0 +1,1036 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Net;
+using System.Globalization;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Web.Script.Serialization;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
+using System.Windows.Input;
+using System.Windows.Interop;
+using System.Windows.Media;
+using System.Windows.Media.Animation;
+using System.Windows.Media.Effects;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace VBJA21
+{
+    public sealed class Ja21Diagnostic : Exception
+    {
+        public Ja21Diagnostic(string message) : base(message) { }
+    }
+
+    public sealed class Ja21Vm
+    {
+        private readonly Dictionary<string, object> _unit;
+        private readonly Dictionary<string, object> _functions;
+        private readonly Dictionary<string, object> _records;
+        private int _steps;
+        private int _calls;
+
+        public Ja21Vm(Dictionary<string, object> unit)
+        {
+            _unit = unit;
+            _functions = Dict(unit["functions"]);
+            _records = Dict(unit["records"]);
+        }
+
+        public object Run(string name, params object[] args)
+        {
+            _steps = 0;
+            _calls = 0;
+            return Invoke(name, args);
+        }
+
+        private void Tick()
+        {
+            _steps++;
+            if (_steps > 20000) throw new Ja21Diagnostic("Execution budget exceeded");
+        }
+
+        private object Invoke(string name, object[] args)
+        {
+            Tick();
+            _calls++;
+            if (_calls > 48) throw new Ja21Diagnostic("Call depth exceeded");
+            try
+            {
+                object fnObj;
+                if (!_functions.TryGetValue(name, out fnObj)) throw new Ja21Diagnostic("Unknown function " + name);
+                Dictionary<string, object> fn = Dict(fnObj);
+                object[] pars = Arr(fn["params"]);
+                if (args.Length != pars.Length) throw new Ja21Diagnostic("Arity mismatch " + name);
+                Dictionary<string, object> scope = new Dictionary<string, object>(StringComparer.Ordinal);
+                int i;
+                for (i = 0; i < pars.Length; i++)
+                {
+                    Dictionary<string, object> p = Dict(pars[i]);
+                    scope[Str(p["name"])] = Check(args[i], Str(p["type"]));
+                }
+                EvalResult r = Block(Arr(fn["body"]), scope);
+                if (!r.Returned) throw new Ja21Diagnostic("Missing return from " + name);
+                return Check(r.Value, Str(fn["returns"]));
+            }
+            finally { _calls--; }
+        }
+
+        private EvalResult Block(object[] statements, Dictionary<string, object> parent)
+        {
+            Dictionary<string, object> scope = new Dictionary<string, object>(parent, StringComparer.Ordinal);
+            int i;
+            for (i = 0; i < statements.Length; i++)
+            {
+                Tick();
+                Dictionary<string, object> s = Dict(statements[i]);
+                string op = Str(s["op"]);
+                if (op == "return") return new EvalResult(true, Eval(Dict(s["value"]), scope));
+                if (op == "let")
+                {
+                    string n = Str(s["name"]);
+                    if (scope.ContainsKey(n)) throw new Ja21Diagnostic("Duplicate binding " + n);
+                    object v = Eval(Dict(s["value"]), scope);
+                    object t;
+                    if (s.TryGetValue("type", out t) && t != null && Str(t).Length > 0) v = Check(v, Str(t));
+                    scope[n] = v;
+                    continue;
+                }
+                if (op == "assert")
+                {
+                    if (!(bool)Check(Eval(Dict(s["value"]), scope), "Flag")) throw new Ja21Diagnostic("Assertion failed");
+                    continue;
+                }
+                if (op == "if")
+                {
+                    bool cond = (bool)Check(Eval(Dict(s["condition"]), scope), "Flag");
+                    object[] branch = Arr(cond ? s["yes"] : s["no"]);
+                    EvalResult nested = Block(branch, scope);
+                    if (nested.Returned) return nested;
+                    continue;
+                }
+                throw new Ja21Diagnostic("Unsupported statement " + op);
+            }
+            return new EvalResult(false, null);
+        }
+
+        private object Eval(Dictionary<string, object> node, Dictionary<string, object> scope)
+        {
+            Tick();
+            string op = Str(node["op"]);
+            if (op == "literal") return node.ContainsKey("value") ? node["value"] : null;
+            if (op == "name")
+            {
+                string n = Str(node["name"]); object v;
+                if (!scope.TryGetValue(n, out v)) throw new Ja21Diagnostic("Unknown field " + n);
+                return v;
+            }
+            if (op == "get")
+            {
+                Dictionary<string, object> obj = Dict(Eval(Dict(node["object"]), scope));
+                string key = Str(node["key"]); object v;
+                if (IsForbidden(key) || !obj.TryGetValue(key, out v)) throw new Ja21Diagnostic("Unknown field " + key);
+                return v;
+            }
+            if (op == "record")
+            {
+                Dictionary<string, object> v = new Dictionary<string, object>(StringComparer.Ordinal);
+                object[] fields = Arr(node["fields"]); int i;
+                for (i = 0; i < fields.Length; i++)
+                {
+                    Dictionary<string, object> f = Dict(fields[i]);
+                    v[Str(f["name"])] = Eval(Dict(f["value"]), scope);
+                }
+                return Check(v, Str(node["name"]));
+            }
+            if (op == "call")
+            {
+                string name = CallName(Dict(node["callee"]));
+                object[] argNodes = Arr(node["args"]); object[] args = new object[argNodes.Length]; int i;
+                for (i = 0; i < argNodes.Length; i++) args[i] = Eval(Dict(argNodes[i]), scope);
+                if (name == "URL.analyze") return UrlAnalyze(Str(args[0]));
+                if (name == "URL.encode") return Uri.EscapeDataString(Str(args[0]));
+                return Invoke(name, args);
+            }
+            if (op == "unary")
+            {
+                string kind = Str(node["kind"]); object v = Eval(Dict(node["value"]), scope);
+                if (kind == "not") return !(bool)Check(v, "Flag");
+                if (kind == "-") return -ToLong(Check(v, "Count"));
+                throw new Ja21Diagnostic("Unsupported unary operation " + kind);
+            }
+            if (op == "binary")
+            {
+                object a = Eval(Dict(node["left"]), scope); string kind = Str(node["kind"]);
+                if (kind == "and")
+                {
+                    bool av = (bool)Check(a, "Flag");
+                    return av && (bool)Check(Eval(Dict(node["right"]), scope), "Flag");
+                }
+                if (kind == "or")
+                {
+                    bool av = (bool)Check(a, "Flag");
+                    return av || (bool)Check(Eval(Dict(node["right"]), scope), "Flag");
+                }
+                object b = Eval(Dict(node["right"]), scope);
+                if (kind == "==") return StrictEqual(a, b);
+                if (kind == "!=") return !StrictEqual(a, b);
+                if (a is string && b is string)
+                {
+                    string sa = (string)a, sb = (string)b;
+                    if (kind == "+") return sa + sb;
+                    int c = String.CompareOrdinal(sa, sb);
+                    if (kind == "<") return c < 0; if (kind == ">") return c > 0; if (kind == "<=") return c <= 0; if (kind == ">=") return c >= 0;
+                }
+                if (IsInteger(a) && IsInteger(b))
+                {
+                    long x = ToLong(a), y = ToLong(b);
+                    if (kind == "+") return x + y;
+                    if (kind == "-") return x - y;
+                    if (kind == "*") return x * y;
+                    if (kind == "/") { if (y == 0) throw new Ja21Diagnostic("Division by zero"); if (x % y != 0) throw new Ja21Diagnostic("Count division produced a non-integer"); return x / y; }
+                    if (kind == "<") return x < y; if (kind == ">") return x > y; if (kind == "<=") return x <= y; if (kind == ">=") return x >= y;
+                }
+                throw new Ja21Diagnostic("Operand type mismatch");
+            }
+            throw new Ja21Diagnostic("Unsupported operation " + op);
+        }
+
+        private object Check(object value, string type)
+        {
+            if (type == "Text")
+            {
+                string s = value as string;
+                if (s == null || s.Length > 16384) throw new Ja21Diagnostic("Expected bounded Text");
+                return s;
+            }
+            if (type == "Count")
+            {
+                if (!IsInteger(value)) throw new Ja21Diagnostic("Expected Count");
+                long n = ToLong(value);
+                if (n < 0 || n > 9007199254740991L) throw new Ja21Diagnostic("Expected Count");
+                if (n <= Int32.MaxValue) return (int)n;
+                return n;
+            }
+            if (type == "Flag")
+            {
+                if (!(value is bool)) throw new Ja21Diagnostic("Expected Flag");
+                return value;
+            }
+            object fieldsObj;
+            if (!_records.TryGetValue(type, out fieldsObj)) throw new Ja21Diagnostic("Expected " + type);
+            Dictionary<string, object> d = value as Dictionary<string, object>;
+            object[] fields = Arr(fieldsObj);
+            if (d == null || d.Count != fields.Length) throw new Ja21Diagnostic("Expected " + type);
+            int i;
+            for (i = 0; i < fields.Length; i++)
+            {
+                Dictionary<string, object> f = Dict(fields[i]); string n = Str(f["name"]); object v;
+                if (IsForbidden(n) || !d.TryGetValue(n, out v)) throw new Ja21Diagnostic("Expected " + type);
+                Check(v, Str(f["type"]));
+            }
+            return d;
+        }
+
+        private static Dictionary<string, object> UrlAnalyze(string input)
+        {
+            if (input.Length > 16384) throw new Ja21Diagnostic("Address exceeds limit");
+            string text = input.Trim();
+            bool local = Regex.IsMatch(text, @"^(?:localhost|\[[0-9a-f:]+\]|\d{1,3}(?:\.\d{1,3}){3})(?::\d+)?(?:[/?#].*)?$", RegexOptions.IgnoreCase);
+            bool host = Regex.IsMatch(text, @"^[^\s/:?#]+\.[^\s/:?#]+(?::\d+)?(?:[/?#].*)?$");
+            bool explicitScheme = !local && !host && Regex.IsMatch(text, @"^[a-z][a-z\d+.-]*:", RegexOptions.IgnoreCase);
+            string scheme = ""; bool valid = false; Uri uri;
+            if (Uri.TryCreate(text, UriKind.Absolute, out uri))
+            {
+                scheme = uri.Scheme.ToLowerInvariant();
+                valid = (scheme == "https" || scheme == "http") && !String.IsNullOrEmpty(uri.Host) && String.IsNullOrEmpty(uri.UserInfo);
+            }
+            if (explicitScheme)
+            {
+                int i; for (i = 0; i < text.Length; i++) if (text[i] < 32 || text[i] == 127) valid = false;
+            }
+            Dictionary<string, object> d = new Dictionary<string, object>(StringComparer.Ordinal);
+            d["text"] = text; d["scheme"] = scheme; d["explicit"] = explicitScheme; d["local"] = local; d["host"] = host; d["valid"] = valid;
+            return d;
+        }
+
+        private string CallName(Dictionary<string, object> node)
+        {
+            string op = Str(node["op"]);
+            if (op == "name") return Str(node["name"]);
+            if (op == "get") return CallName(Dict(node["object"])) + "." + Str(node["key"]);
+            throw new Ja21Diagnostic("Only named calls are supported");
+        }
+
+        private static bool StrictEqual(object a, object b)
+        {
+            if (a == null || b == null) return a == b;
+            if (IsInteger(a) && IsInteger(b)) return ToLong(a) == ToLong(b);
+            if (a.GetType() != b.GetType()) return false;
+            return Object.Equals(a, b);
+        }
+        private static bool IsInteger(object v) { return v is Byte || v is SByte || v is Int16 || v is UInt16 || v is Int32 || v is UInt32 || v is Int64; }
+        private static long ToLong(object v) { return Convert.ToInt64(v); }
+        private static bool IsForbidden(string s) { return s == "__proto__" || s == "prototype" || s == "constructor"; }
+        private static string Str(object o) { if (o == null) return ""; return Convert.ToString(o, System.Globalization.CultureInfo.InvariantCulture); }
+        private static Dictionary<string, object> Dict(object o) { Dictionary<string, object> d = o as Dictionary<string, object>; if (d == null) throw new Ja21Diagnostic("Expected object"); return d; }
+        private static object[] Arr(object o) { object[] a = o as object[]; if (a == null) throw new Ja21Diagnostic("Expected array"); return a; }
+
+        private sealed class EvalResult
+        {
+            public readonly bool Returned; public readonly object Value;
+            public EvalResult(bool returned, object value) { Returned = returned; Value = value; }
+        }
+    }
+
+    public static class RuntimeSeal
+    {
+        public static void Verify(string root)
+        {
+            string path = System.IO.Path.Combine(root, "engine", "ja21", "runtime.integrity.json");
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            Dictionary<string, object> seal = (Dictionary<string, object>)js.DeserializeObject(File.ReadAllText(path, Encoding.UTF8));
+            object[] files = (object[])seal["files"];
+            int i;
+            for (i = 0; i < files.Length; i++)
+            {
+                Dictionary<string, object> e = (Dictionary<string, object>)files[i];
+                string rel = Convert.ToString(e["path"]);
+                if (rel.Contains("..") || rel.Contains(":") || rel.StartsWith("/") || rel.StartsWith("\\")) throw new Exception("Unsafe runtime seal path: " + rel);
+                string full = System.IO.Path.Combine(root, rel.Replace('/', System.IO.Path.DirectorySeparatorChar));
+                if (!File.Exists(full)) throw new Exception("Missing sealed runtime file: " + rel);
+                string actual = Sha256(File.ReadAllBytes(full));
+                if (!String.Equals(actual, Convert.ToString(e["sha256"]), StringComparison.OrdinalIgnoreCase)) throw new Exception("Runtime integrity failure: " + rel);
+            }
+        }
+        public static string Sha256(byte[] data)
+        {
+            using (SHA256 s = SHA256.Create())
+            {
+                byte[] h = s.ComputeHash(data); StringBuilder b = new StringBuilder(h.Length * 2); int i;
+                for (i = 0; i < h.Length; i++) b.Append(h[i].ToString("x2")); return b.ToString();
+            }
+        }
+    }
+
+    internal sealed class BrowserTab
+    {
+        public int Id;
+        public bool Private;
+        public bool Loading;
+        public string LogicalUrl;
+        public bool ShowingHome;
+        public string Title;
+        public Grid Surface;
+        public Grid PageHost;
+        public Button Pill;
+        public TextBlock PillText;
+        public readonly List<string> History = new List<string>();
+        public int HistoryIndex = -1;
+        public int Generation;
+        public bool CanGoBack { get { return HistoryIndex > 0; } }
+        public bool CanGoForward { get { return HistoryIndex >= 0 && HistoryIndex + 1 < History.Count; } }
+    }
+
+    public sealed class DfSmallHelper
+    {
+        private readonly string _root;
+        private readonly string _helperRoot;
+        private readonly Dictionary<string, object> _descriptor;
+        private readonly string _staticStatus;
+
+        public DfSmallHelper(string root)
+        {
+            _root = root;
+            _helperRoot = System.IO.Path.Combine(root, "helper", "DF_Small");
+            JavaScriptSerializer js = new JavaScriptSerializer(); js.MaxJsonLength = Int32.MaxValue;
+            string desc = System.IO.Path.Combine(_helperRoot, "node", "NODE_DESCRIPTOR.json");
+            if (!File.Exists(desc)) throw new Exception("DF_Small descriptor is missing.");
+            _descriptor = (Dictionary<string, object>)js.DeserializeObject(File.ReadAllText(desc, Encoding.UTF8));
+            _staticStatus = VerifyPayloadDigest();
+        }
+
+        public string Summary
+        {
+            get
+            {
+                Dictionary<string, object> bounds = (Dictionary<string, object>)_descriptor["bounds"];
+                string node = Convert.ToString(_descriptor["node_id"]);
+                string network = Convert.ToString(_descriptor["network_policy"]);
+                return node + " · " + Convert.ToString(bounds["cli_step_budget"]) + "-step budget · network " + network + " · " + _staticStatus;
+            }
+        }
+
+        public string VerifyPayloadDigest()
+        {
+            string digestPath = System.IO.Path.Combine(_helperRoot, "node", "PAYLOAD_DIGEST.json");
+            JavaScriptSerializer js = new JavaScriptSerializer(); js.MaxJsonLength = Int32.MaxValue;
+            Dictionary<string, object> digest = (Dictionary<string, object>)js.DeserializeObject(File.ReadAllText(digestPath, Encoding.UTF8));
+            string vmRoot = System.IO.Path.Combine(_helperRoot, "vm", "BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K");
+            object[] files = (object[])digest["files"];
+            int i;
+            for (i = 0; i < files.Length; i++)
+            {
+                Dictionary<string, object> e = (Dictionary<string, object>)files[i];
+                string rel = Convert.ToString(e["path"]);
+                if (rel.Contains("..") || rel.Contains(":")) throw new Exception("Unsafe DF_Small payload path.");
+                string full = System.IO.Path.Combine(vmRoot, rel.Replace('/', System.IO.Path.DirectorySeparatorChar));
+                if (!File.Exists(full)) throw new Exception("DF_Small payload file missing: " + rel);
+                string actual = RuntimeSeal.Sha256(File.ReadAllBytes(full));
+                if (!String.Equals(actual, Convert.ToString(e["sha256"]), StringComparison.OrdinalIgnoreCase)) throw new Exception("DF_Small payload integrity failure: " + rel);
+            }
+            return "payload seal PASS";
+        }
+
+        public void RunNativeAsync(string operation, Action<string, bool> done)
+        {
+            string args;
+            if (operation == "verify") args = "/d /s /c call \"" + System.IO.Path.Combine(_helperRoot, "VERIFY.cmd") + "\"";
+            else if (operation == "pulse") args = "/d /s /c call \"" + System.IO.Path.Combine(_helperRoot, "RUN.cmd") + "\" examples\\add42.mssl";
+            else { done("Unsupported helper operation.", false); return; }
+
+            Task.Factory.StartNew(delegate
+            {
+                bool ok = false; string text = "";
+                try
+                {
+                    ProcessStartInfo psi = new ProcessStartInfo();
+                    psi.FileName = Environment.GetEnvironmentVariable("ComSpec");
+                    if (String.IsNullOrEmpty(psi.FileName)) psi.FileName = "cmd.exe";
+                    psi.Arguments = args;
+                    psi.WorkingDirectory = _helperRoot;
+                    psi.UseShellExecute = false;
+                    psi.CreateNoWindow = true;
+                    psi.RedirectStandardOutput = true;
+                    psi.RedirectStandardError = true;
+                    using (Process p = Process.Start(psi))
+                    {
+                        string stdout = p.StandardOutput.ReadToEnd();
+                        string stderr = p.StandardError.ReadToEnd();
+                        if (!p.WaitForExit(90000))
+                        {
+                            try { p.Kill(); } catch { }
+                            text = "DF_Small helper timed out after 90 seconds.";
+                        }
+                        else
+                        {
+                            ok = p.ExitCode == 0;
+                            text = (stdout + Environment.NewLine + stderr).Trim();
+                            if (text.Length > 6000) text = text.Substring(text.Length - 6000);
+                            if (String.IsNullOrWhiteSpace(text)) text = ok ? "DF_Small helper completed." : "DF_Small helper returned a non-zero exit code.";
+                        }
+                    }
+                }
+                catch (Exception ex) { text = "DF_Small helper: " + ex.Message; }
+                done(text, ok);
+            });
+        }
+    }
+
+    internal sealed class SpringScalar
+    {
+        private readonly Action<double> _setter;
+        private double _value;
+        private double _target;
+        private double _velocity;
+        private bool _running;
+        private long _lastTicks;
+        private readonly Stopwatch _clock = Stopwatch.StartNew();
+
+        public SpringScalar(Action<double> setter) { _setter = setter; }
+        public void Snap(double value) { _value = value; _target = value; _velocity = 0; _setter(value); }
+        public void AnimateTo(double target)
+        {
+            _target = target;
+            if (_running) return;
+            _running = true; _lastTicks = _clock.ElapsedTicks;
+            CompositionTarget.Rendering += OnFrame;
+        }
+        private void OnFrame(object sender, EventArgs e)
+        {
+            long now = _clock.ElapsedTicks;
+            double dt = (now - _lastTicks) / (double)Stopwatch.Frequency;
+            _lastTicks = now;
+            if (dt <= 0) return;
+            if (dt > 0.033) dt = 0.033;
+            const double stiffness = 360.0;
+            const double damping = 32.0;
+            double acceleration = stiffness * (_target - _value) - damping * _velocity;
+            _velocity += acceleration * dt;
+            _value += _velocity * dt;
+            if (Math.Abs(_target - _value) < 0.18 && Math.Abs(_velocity) < 0.18)
+            {
+                _value = _target; _velocity = 0; _setter(_value);
+                CompositionTarget.Rendering -= OnFrame; _running = false; return;
+            }
+            _setter(_value);
+        }
+    }
+
+    internal static class NativeGlass
+    {
+        [DllImport("dwmapi.dll")]
+        private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int value, int size);
+        public static void Apply(Window window)
+        {
+            try
+            {
+                IntPtr hwnd = new WindowInteropHelper(window).Handle;
+                int corner = 2; DwmSetWindowAttribute(hwnd, 33, ref corner, sizeof(int));
+                int backdrop = 2; DwmSetWindowAttribute(hwnd, 38, ref backdrop, sizeof(int));
+            }
+            catch { }
+        }
+    }
+
+    public sealed class ContextDrawerWindow : Window
+    {
+        private readonly BrowserWindow _owner;
+        private readonly SpringScalar _leftSpring;
+        private readonly TextBlock _helperState;
+        private readonly TextBlock _detail;
+        private bool _open;
+
+        public ContextDrawerWindow(BrowserWindow owner, DfSmallHelper helper)
+        {
+            _owner = owner;
+            Width = 386; MinHeight = 480; ShowInTaskbar = false; WindowStyle = WindowStyle.None; ResizeMode = ResizeMode.NoResize;
+            AllowsTransparency = true; Background = Brushes.Transparent; Opacity = 0; Topmost = owner.Topmost;
+            Owner = owner;
+            _leftSpring = new SpringScalar(delegate(double x) { Left = x; });
+
+            Border shell = new Border();
+            shell.CornerRadius = new CornerRadius(26);
+            shell.BorderThickness = new Thickness(1);
+            shell.BorderBrush = BrowserWindow.Brush("#488CA4BC");
+            shell.Background = BrowserWindow.Brush("#F4FFFFFF");
+            shell.Padding = new Thickness(22, 20, 22, 18);
+            shell.Effect = new DropShadowEffect { BlurRadius = 34, ShadowDepth = 8, Opacity = 0.14, Color = Colors.SlateGray };
+            Content = shell;
+
+            ScrollViewer scroll = new ScrollViewer(); scroll.VerticalScrollBarVisibility = ScrollBarVisibility.Auto; scroll.HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled;
+            StackPanel stack = new StackPanel(); scroll.Content = stack; shell.Child = scroll;
+            stack.Children.Add(BrowserWindow.Label("CONTEXT", 11, FontWeights.SemiBold, "#74849B", new Thickness(0,0,0,4)));
+            stack.Children.Add(BrowserWindow.Label("Progressive controls", 25, FontWeights.SemiBold, "#182338", new Thickness(0,0,0,6)));
+            stack.Children.Add(BrowserWindow.Label("Only the controls you ask for are surfaced. Nothing here changes the page without an explicit action.", 13, FontWeights.Normal, "#64748B", new Thickness(0,0,0,22)));
+
+            stack.Children.Add(Section("JA21 runtime", "Application lifecycle, address normalization, tab actions and host effects are mediated by the bounded JA21 IR VM."));
+            stack.Children.Add(Section("Auxiliary DF_Small helper", helper.Summary));
+            _helperState = BrowserWindow.Label("Static helper seal verified.", 12, FontWeights.Medium, "#4F647A", new Thickness(0,5,0,10)); stack.Children.Add(_helperState);
+
+            WrapPanel helperActions = new WrapPanel(); helperActions.Margin = new Thickness(0,0,0,18);
+            Button verify = BrowserWindow.GhostButton("Verify helper", 118); verify.Click += delegate { _owner.DispatchPublic("helper_verify", "", 0); };
+            Button pulse = BrowserWindow.GhostButton("Run pulse", 96); pulse.Margin = new Thickness(8,0,0,0); pulse.Click += delegate { _owner.DispatchPublic("helper_pulse", "", 0); };
+            helperActions.Children.Add(verify); helperActions.Children.Add(pulse); stack.Children.Add(helperActions);
+
+            stack.Children.Add(Section("DF_Medium JA21 document engine", "Remote bytes are fetched through a bounded OS socket/TLS primitive. DF_Medium performs HTML/CSS/resource/layout/scene semantics; this shell only presents the resulting scene. Arbitrary site scripts remain isolated."));
+            _detail = BrowserWindow.Label("", 12, FontWeights.Normal, "#52667C", new Thickness(0,2,0,16)); _detail.TextWrapping = TextWrapping.Wrap; stack.Children.Add(_detail);
+
+            Button privateTab = BrowserWindow.GhostButton("New private control tab", 210); privateTab.HorizontalAlignment = HorizontalAlignment.Stretch; privateTab.Click += delegate { _owner.DispatchPublic("private_tab", "", 0); }; stack.Children.Add(privateTab);
+            Button downloads = BrowserWindow.GhostButton("Open downloads", 210); downloads.HorizontalAlignment = HorizontalAlignment.Stretch; downloads.Margin = new Thickness(0,8,0,0); downloads.Click += delegate { _owner.DispatchPublic("downloads", "", 0); }; stack.Children.Add(downloads);
+            Button immersive = BrowserWindow.GhostButton("Toggle immersive F11", 210); immersive.HorizontalAlignment = HorizontalAlignment.Stretch; immersive.Margin = new Thickness(0,8,0,0); immersive.Click += delegate { _owner.DispatchPublic("fullscreen", "", 0); }; stack.Children.Add(immersive);
+            Button about = BrowserWindow.GhostButton("Runtime details", 210); about.HorizontalAlignment = HorizontalAlignment.Stretch; about.Margin = new Thickness(0,8,0,0); about.Click += delegate { _owner.DispatchPublic("about", "", 0); }; stack.Children.Add(about);
+        }
+
+        private Border Section(string title, string body)
+        {
+            Border card = new Border(); card.CornerRadius = new CornerRadius(18); card.BorderThickness = new Thickness(1); card.BorderBrush = BrowserWindow.Brush("#328CA4BC"); card.Background = BrowserWindow.Brush("#8FFFFFFF"); card.Padding = new Thickness(14); card.Margin = new Thickness(0,0,0,10);
+            StackPanel s = new StackPanel(); card.Child = s;
+            s.Children.Add(BrowserWindow.Label(title, 13, FontWeights.SemiBold, "#24354B", new Thickness(0,0,0,5)));
+            TextBlock b = BrowserWindow.Label(body, 12, FontWeights.Normal, "#66768C", new Thickness(0)); b.TextWrapping = TextWrapping.Wrap; s.Children.Add(b); return card;
+        }
+
+        public bool IsOpen { get { return _open; } }
+        public void Toggle() { if (_open) CloseDrawer(); else OpenDrawer(); }
+        public void OpenDrawer()
+        {
+            _open = true; Topmost = _owner.Topmost; Position(false); if (!IsVisible) Show();
+            double target = TargetLeft(); _leftSpring.Snap(_owner.Left + _owner.ActualWidth + 20); _leftSpring.AnimateTo(target);
+            DoubleAnimation a = new DoubleAnimation(1.0, TimeSpan.FromMilliseconds(190)); a.EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }; BeginAnimation(Window.OpacityProperty, a);
+        }
+        public void CloseDrawer()
+        {
+            if (!_open) return; _open = false;
+            _leftSpring.AnimateTo(_owner.Left + _owner.ActualWidth + 20);
+            DoubleAnimation a = new DoubleAnimation(0.0, TimeSpan.FromMilliseconds(150)); a.EasingFunction = new CubicEase { EasingMode = EasingMode.EaseIn };
+            a.Completed += delegate { if (!_open) Hide(); }; BeginAnimation(Window.OpacityProperty, a);
+        }
+        public void Position(bool snap)
+        {
+            if (!_owner.IsVisible) return;
+            Top = _owner.Top + 92; Height = Math.Max(480, _owner.ActualHeight - 116);
+            double x = TargetLeft(); if (snap) _leftSpring.Snap(x); else if (_open) _leftSpring.AnimateTo(x);
+        }
+        private double TargetLeft() { return _owner.Left + Math.Max(18, _owner.ActualWidth - Width - 18); }
+        public void SetHelperResult(string text, bool ok)
+        {
+            _helperState.Text = ok ? "Native helper completed." : "Native helper needs attention.";
+            _helperState.Foreground = BrowserWindow.Brush(ok ? "#3D7768" : "#926B4C");
+            _detail.Text = text;
+        }
+        public void SetDetail(string text) { _detail.Text = text; }
+    }
+
+
+    internal sealed class JaMirrorFetchResult
+    {
+        public Uri FinalUri; public string ContentType; public string Text; public byte[] Data; public int Bytes; public int Redirects; public string Status;
+    }
+
+    // 8.0.3 link-target repair. The 8.0.2 DF_Medium DLL returns attribute values without HTML
+    // character-reference decoding, so href="/l/?uddg=...&amp;rut=..." was fetched literally and
+    // DuckDuckGo answered HTTP 400. The presenter now decodes references before any URL reaches the
+    // network, and unwraps DuckDuckGo's /l/ redirector (a script/meta-refresh page the isolated
+    // engine cannot follow) to its declared http(s) destination. The engine-side fix is staged in
+    // engine/df_medium/patches/8.0.3-html-character-references.patch for the next native rebuild.
+    internal static class JaLinkTarget
+    {
+        public static string Resolve(string raw)
+        {
+            if (String.IsNullOrEmpty(raw)) return raw;
+            string url = raw.Trim();
+            if (url.IndexOf('&') >= 0) url = WebUtility.HtmlDecode(url);
+            Uri u;
+            if (!Uri.TryCreate(url, UriKind.Absolute, out u)) return url;
+            string host = u.Host.ToLowerInvariant();
+            if ((host == "duckduckgo.com" || host.EndsWith(".duckduckgo.com", StringComparison.Ordinal)) && u.AbsolutePath == "/l/")
+            {
+                string target = QueryValue(u.Query, "uddg");
+                Uri t;
+                if (!String.IsNullOrEmpty(target) && Uri.TryCreate(target, UriKind.Absolute, out t) && (t.Scheme == Uri.UriSchemeHttp || t.Scheme == Uri.UriSchemeHttps) && String.IsNullOrEmpty(t.UserInfo)) return t.AbsoluteUri;
+            }
+            return url;
+        }
+        internal static void SelfTest()
+        {
+            Check("https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.google.com%2F&amp;rut=4a90d085", "https://www.google.com/");
+            Check("https://html.duckduckgo.com/q?a=1&#38;b=2", "https://html.duckduckgo.com/q?a=1&b=2");
+            Check("https://example.com/p?x=1&y=2", "https://example.com/p?x=1&y=2");
+            Check("https://duckduckgo.com/l/?uddg=javascript%3Aalert(1)", "https://duckduckgo.com/l/?uddg=javascript%3Aalert(1)");
+        }
+        private static void Check(string input, string expected)
+        {
+            string got = Resolve(input);
+            if (!String.Equals(got, expected, StringComparison.Ordinal)) throw new Exception("JA21 link-target self-test failed: " + input + " -> " + got);
+        }
+        internal static string QueryValue(string query, string name)
+        {
+            if (String.IsNullOrEmpty(query)) return null;
+            foreach (string part in query.TrimStart('?').Split('&'))
+            {
+                int eq = part.IndexOf('=');
+                string k = eq < 0 ? part : part.Substring(0, eq);
+                if (String.Equals(Uri.UnescapeDataString(k.Replace('+', ' ')), name, StringComparison.Ordinal))
+                    return eq < 0 ? "" : Uri.UnescapeDataString(part.Substring(eq + 1).Replace('+', ' '));
+            }
+            return null;
+        }
+    }
+
+    internal sealed class JaMirrorNetworkClient
+    {
+        public const int MaxDocumentBytes = 8 * 1024 * 1024; public const int MaxRedirects = 8;
+        public JaMirrorFetchResult Fetch(Uri initial) { return FetchInternal(initial, MaxDocumentBytes, true); }
+        public byte[] FetchResource(Uri initial, int maxBytes) { return FetchInternal(initial, maxBytes, false).Data; }
+        private JaMirrorFetchResult FetchInternal(Uri initial, int maxBytes, bool textDocument)
+        {
+            if(initial==null)throw new Exception("No network target was supplied."); Uri current=initial; int redirects=0;
+            ServicePointManager.SecurityProtocol=ServicePointManager.SecurityProtocol|SecurityProtocolType.Tls12;
+            while(true){ string scheme=current.Scheme.ToLowerInvariant(); if(scheme!="http"&&scheme!="https")throw new Exception("DF_Medium Web Device only permits HTTP/HTTPS."); if(!String.IsNullOrEmpty(current.UserInfo))throw new Exception("Credential-bearing URLs are blocked.");
+                HttpWebRequest req=(HttpWebRequest)WebRequest.Create(current); req.Method="GET"; req.AllowAutoRedirect=false; req.AutomaticDecompression=DecompressionMethods.GZip|DecompressionMethods.Deflate; req.Timeout=20000; req.ReadWriteTimeout=20000; req.UserAgent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) DFMedium-JA21-Web/8.0"; req.Accept=textDocument?"text/html,application/xhtml+xml,text/plain;q=0.9,*/*;q=0.2":"*/*";
+                HttpWebResponse raw;try{raw=(HttpWebResponse)req.GetResponse();}catch(WebException wex){HttpWebResponse er=wex.Response as HttpWebResponse;if(er==null)throw new Exception("Network error reaching "+current.Host+": "+wex.Status+" ("+wex.Message+")");int ec=(int)er.StatusCode;string ed=er.StatusDescription;er.Close();if(ec<300||ec>399)throw new Exception("HTTP "+ec.ToString(CultureInfo.InvariantCulture)+" "+ed+" from "+current.Host+" for "+current.AbsoluteUri);raw=null;}
+                if(raw==null)throw new Exception("Unexpected redirect failure.");
+                using(HttpWebResponse resp=raw){int code=(int)resp.StatusCode;if(code>=300&&code<=399){string loc=resp.Headers[HttpResponseHeader.Location];if(String.IsNullOrWhiteSpace(loc))throw new Exception("Redirect without Location.");if(++redirects>MaxRedirects)throw new Exception("Redirect budget exceeded.");current=new Uri(current,loc);continue;}string type=resp.ContentType??"";using(Stream st=resp.GetResponseStream())using(MemoryStream ms=new MemoryStream()){byte[] buf=new byte[32768];int total=0;while(true){int n=st.Read(buf,0,buf.Length);if(n<=0)break;total+=n;if(total>maxBytes)throw new Exception("Resource exceeds JA21 Web Device byte budget.");ms.Write(buf,0,n);}byte[] data=ms.ToArray();Encoding enc=Encoding.UTF8;Match charset=Regex.Match(type,"charset\\s*=\\s*['\"]?([^;'\"\\s]+)",RegexOptions.IgnoreCase);if(charset.Success){try{enc=Encoding.GetEncoding(charset.Groups[1].Value);}catch{}}return new JaMirrorFetchResult{FinalUri=current,ContentType=type,Text=textDocument?enc.GetString(data):"",Data=data,Bytes=total,Redirects=redirects,Status=code.ToString(CultureInfo.InvariantCulture)};}}
+            }
+        }
+    }
+
+    [StructLayout(LayoutKind.Sequential)] internal struct DfWebSceneItem { public UInt32 type; public float x,y,w,h,font_size; public UInt32 fg,bg,flags,text_id,url_id; }
+    [StructLayout(LayoutKind.Sequential)] internal struct DfWebResourceItem { public UInt32 kind,url_id; }
+
+    internal static class DfMediumNative
+    {
+        private const string Dll="dfmedium-ja21-web.dll";
+        [DllImport("kernel32.dll",CharSet=CharSet.Unicode,SetLastError=true)] private static extern bool SetDllDirectory(string path);
+        [DllImport(Dll,CallingConvention=CallingConvention.Cdecl)] internal static extern UInt32 dfweb_abi();
+        [DllImport(Dll,CallingConvention=CallingConvention.Cdecl)] internal static extern UInt32 dfweb_vm_core_abi();
+        [DllImport(Dll,CallingConvention=CallingConvention.Cdecl)] internal static extern int dfweb_init();
+        [DllImport(Dll,CallingConvention=CallingConvention.Cdecl,CharSet=CharSet.Ansi)] internal static extern int dfweb_begin(string baseUrl,UInt32 viewportW,UInt32 viewportH);
+        [DllImport(Dll,CallingConvention=CallingConvention.Cdecl)] internal static extern int dfweb_feed_document(byte[] data,UInt32 len);
+        [DllImport(Dll,CallingConvention=CallingConvention.Cdecl,CharSet=CharSet.Ansi)] internal static extern int dfweb_add_stylesheet(string url,byte[] data,UInt32 len);
+        [DllImport(Dll,CallingConvention=CallingConvention.Cdecl)] internal static extern int dfweb_commit();
+        [DllImport(Dll,CallingConvention=CallingConvention.Cdecl)] internal static extern UInt32 dfweb_scene_count();
+        [DllImport(Dll,CallingConvention=CallingConvention.Cdecl)] internal static extern int dfweb_scene_get(UInt32 index,out DfWebSceneItem item);
+        [DllImport(Dll,CallingConvention=CallingConvention.Cdecl)] internal static extern UInt32 dfweb_resource_count();
+        [DllImport(Dll,CallingConvention=CallingConvention.Cdecl)] internal static extern int dfweb_resource_get(UInt32 index,out DfWebResourceItem item);
+        [DllImport(Dll,CallingConvention=CallingConvention.Cdecl)] internal static extern int dfweb_string_get(UInt32 id,StringBuilder output,UInt32 cap);
+        [DllImport(Dll,CallingConvention=CallingConvention.Cdecl)] internal static extern int dfweb_title_get(StringBuilder output,UInt32 cap);
+        [DllImport(Dll,CallingConvention=CallingConvention.Cdecl)] internal static extern int dfweb_stats_get(out UInt32 nodes,out UInt32 rules,out UInt32 scripts,out UInt32 vmCalls);
+        [DllImport(Dll,CallingConvention=CallingConvention.Cdecl)] internal static extern int dfweb_selftest();
+        [DllImport(Dll,CallingConvention=CallingConvention.Cdecl)] internal static extern int dfweb_profile_hash_get(StringBuilder output,UInt32 cap);
+        internal static void Boot(string root){string native=System.IO.Path.Combine(root,"engine","df_medium","native","win-x64");if(!Directory.Exists(native))throw new Exception("DF_Medium native engine directory missing: "+native);if(!SetDllDirectory(native))throw new Exception("Unable to establish DF_Medium native DLL directory.");int r=dfweb_init();if(r!=0)throw new Exception("DF_Medium VM initialization failed: "+r);StringBuilder ph=new StringBuilder(80);if(dfweb_profile_hash_get(ph,(UInt32)ph.Capacity)!=0)throw new Exception("DF_Medium engine did not expose its JA21 profile binding.");string expected=RuntimeSeal.Sha256(File.ReadAllBytes(System.IO.Path.Combine(root,"source","web_engine.ja")));if(!String.Equals(ph.ToString(),expected,StringComparison.OrdinalIgnoreCase))throw new Exception("DF_Medium native engine / JA21 web-profile binding mismatch.");int st=dfweb_selftest();if(st!=0)throw new Exception("DF_Medium JA21 Web Engine self-test failed: "+st);InteropSelfTest();JaLinkTarget.SelfTest();}
+        internal static string Str(UInt32 id){if(id==0)return "";StringBuilder b=new StringBuilder(4096);int n=dfweb_string_get(id,b,(UInt32)b.Capacity);return n>=0?b.ToString():"";}
+        internal static string Title(){StringBuilder b=new StringBuilder(1024);int n=dfweb_title_get(b,(UInt32)b.Capacity);return n>=0?b.ToString():"";}
+        internal static void InteropSelfTest(){if(dfweb_abi()!=0x00080000u)throw new Exception("DF_Medium Web ABI mismatch.");if(Marshal.SizeOf(typeof(DfWebSceneItem))!=44)throw new Exception("DF_Medium scene ABI packing mismatch.");if(Marshal.SizeOf(typeof(DfWebResourceItem))!=8)throw new Exception("DF_Medium resource ABI packing mismatch.");string html="<html><head><title>JA21 Interop</title></head><body><h1>Visible JA21</h1><img src='image.png'></body></html>";byte[] doc=Encoding.UTF8.GetBytes(html);int r=dfweb_begin("https://example.com/interop/index.html",800,600);if(r!=0)throw new Exception("DF_Medium interop begin failed: "+r);r=dfweb_feed_document(doc,(UInt32)doc.Length);if(r!=0)throw new Exception("DF_Medium interop feed failed: "+r);r=dfweb_commit();if(r!=0)throw new Exception("DF_Medium interop commit failed: "+r);if(Title()!="JA21 Interop")throw new Exception("DF_Medium title interop failed.");bool text=false,image=false;UInt32 n=dfweb_scene_count();for(UInt32 i=0;i<n;i++){DfWebSceneItem q;if(dfweb_scene_get(i,out q)!=0)continue;if(q.type==1&&Str(q.text_id).IndexOf("Visible JA21",StringComparison.Ordinal)>=0)text=true;if(q.type==3&&Str(q.url_id).IndexOf("https://example.com/interop/image.png",StringComparison.OrdinalIgnoreCase)>=0)image=true;}if(!text)throw new Exception("DF_Medium scene text interop failed.");if(!image)throw new Exception("DF_Medium scene URL interop failed.");}
+    }
+
+    internal sealed class DfMediumDocumentSurface
+    {
+        private readonly Action<string> _navigate; public string Title{get;private set;} public UInt32 NodeCount{get;private set;} public UInt32 ScriptCount{get;private set;} public UInt32 VmCalls{get;private set;}
+        public DfMediumDocumentSurface(Action<string> navigate){_navigate=navigate;Title="Document";}
+        private static System.Windows.Media.Brush Argb(UInt32 c){byte a=(byte)(c>>24),r=(byte)(c>>16),g=(byte)(c>>8),b=(byte)c;return new SolidColorBrush(Color.FromArgb(a,r,g,b));}
+        private static void Pos(FrameworkElement e,DfWebSceneItem q){e.Width=Math.Max(1,q.w);e.Height=Math.Max(1,q.h);Canvas.SetLeft(e,Math.Max(0,q.x));Canvas.SetTop(e,Math.Max(0,q.y));}
+        public UIElement Build(string html,Uri baseUri)
+        {
+            lock(typeof(DfMediumNative)){
+                byte[] doc=Encoding.UTF8.GetBytes(html??"");int r=DfMediumNative.dfweb_begin(baseUri.AbsoluteUri,1280,1600);if(r!=0)throw new Exception("DF_Medium begin failed: "+r);r=DfMediumNative.dfweb_feed_document(doc,(UInt32)doc.Length);if(r!=0)throw new Exception("DF_Medium document ingress failed: "+r);r=DfMediumNative.dfweb_commit();if(r!=0)throw new Exception("DF_Medium layout commit failed: "+r);
+                JaMirrorNetworkClient net=new JaMirrorNetworkClient();UInt32 rc=DfMediumNative.dfweb_resource_count();int cssLoaded=0;for(UInt32 i=0;i<rc&&cssLoaded<16;i++){DfWebResourceItem ri;if(DfMediumNative.dfweb_resource_get(i,out ri)!=0||ri.kind!=1)continue;string u=DfMediumNative.Str(ri.url_id);Uri cu;if(!Uri.TryCreate(JaLinkTarget.Resolve(u),UriKind.Absolute,out cu))continue;try{byte[] css=net.FetchResource(cu,1024*1024);if(DfMediumNative.dfweb_add_stylesheet(u,css,(UInt32)css.Length)==0)cssLoaded++;}catch{} }if(cssLoaded>0){r=DfMediumNative.dfweb_commit();if(r!=0)throw new Exception("DF_Medium CSS recommit failed: "+r);}
+                string nativeTitle=DfMediumNative.Title();if(!String.IsNullOrWhiteSpace(nativeTitle))Title=nativeTitle;UInt32 nodeCount,rules,scripts,calls;DfMediumNative.dfweb_stats_get(out nodeCount,out rules,out scripts,out calls);NodeCount=nodeCount;ScriptCount=scripts;VmCalls=calls;
+                Canvas canvas=new Canvas();canvas.Background=BrowserWindow.Brush("#FFF9FBFD");double bottom=500;UInt32 n=DfMediumNative.dfweb_scene_count();for(UInt32 i=0;i<n;i++){DfWebSceneItem q;if(DfMediumNative.dfweb_scene_get(i,out q)!=0)continue;bottom=Math.Max(bottom,q.y+q.h+48);string text=DfMediumNative.Str(q.text_id),url=JaLinkTarget.Resolve(DfMediumNative.Str(q.url_id));
+                    if(q.type==1){TextBlock t=BrowserWindow.Label(text,Math.Max(9,q.font_size),((q.flags&2)!=0)?FontWeights.SemiBold:FontWeights.Normal,"#24364A",new Thickness(0));t.Foreground=Argb(q.fg);t.TextWrapping=TextWrapping.Wrap;if((q.flags&4)!=0)t.FontStyle=FontStyles.Italic;if((q.flags&8)!=0)t.TextDecorations=TextDecorations.Underline;if((q.flags&1)!=0&&!String.IsNullOrWhiteSpace(url)){t.Cursor=Cursors.Hand;string link=url;t.MouseLeftButtonUp+=delegate{_navigate(link);};}Pos(t,q);canvas.Children.Add(t);}
+                    else if(q.type==2){Border b=new Border();b.Background=q.bg==0?BrowserWindow.Brush("#00FFFFFF"):Argb(q.bg);b.CornerRadius=new CornerRadius(10);Pos(b,q);canvas.Children.Add(b);}
+                    else if(q.type==5){Border line=new Border();line.Background=BrowserWindow.Brush("#3A8197AA");Pos(line,q);canvas.Children.Add(line);}
+                    else if(q.type==3){Border frame=new Border();frame.Background=BrowserWindow.Brush("#55EEF4F8");frame.BorderBrush=BrowserWindow.Brush("#3B89A0B5");frame.BorderThickness=new Thickness(1);frame.CornerRadius=new CornerRadius(12);Image img=new Image();img.Stretch=Stretch.Uniform;frame.Child=img;Pos(frame,q);canvas.Children.Add(frame);Uri iu;if(Uri.TryCreate(url,UriKind.Absolute,out iu)){Task.Factory.StartNew(delegate{try{byte[] data=net.FetchResource(iu,12*1024*1024);Application.Current.Dispatcher.BeginInvoke(new Action(delegate{try{BitmapImage bi=new BitmapImage();bi.BeginInit();bi.CacheOption=BitmapCacheOption.OnLoad;bi.StreamSource=new MemoryStream(data);bi.EndInit();bi.Freeze();img.Source=bi;}catch{}}));}catch{}});}}
+                    else if(q.type==4){Border frame=new Border();frame.Background=BrowserWindow.Brush("#FF121A24");frame.BorderBrush=BrowserWindow.Brush("#4D8EA6B8");frame.BorderThickness=new Thickness(1);frame.CornerRadius=new CornerRadius(12);MediaElement media=new MediaElement();media.LoadedBehavior=MediaState.Manual;media.UnloadedBehavior=MediaState.Stop;media.Stretch=Stretch.Uniform;frame.Child=media;Pos(frame,q);canvas.Children.Add(frame);Uri vu;if(Uri.TryCreate(url,UriKind.Absolute,out vu)){media.Source=vu;media.Loaded+=delegate{try{media.Play();media.Pause();}catch{}};frame.MouseLeftButtonUp+=delegate{try{media.Play();}catch{}};}}
+                }canvas.Height=bottom;canvas.Width=1280;ScrollViewer scroll=new ScrollViewer();scroll.Content=canvas;scroll.VerticalScrollBarVisibility=ScrollBarVisibility.Auto;scroll.HorizontalScrollBarVisibility=ScrollBarVisibility.Auto;scroll.PanningMode=PanningMode.Both;return scroll;
+            }
+        }
+    }
+
+    public sealed class BrowserWindow : Window
+    {
+        private readonly string _root;
+        private readonly Ja21Vm _vm;
+        private readonly Ja21Vm _rendererVm;
+        private readonly DfSmallHelper _helper;
+        private readonly List<BrowserTab> _tabs = new List<BrowserTab>();
+        private readonly StackPanel _tabRail = new StackPanel();
+        private readonly Grid _surface = new Grid();
+        private readonly TextBox _address = new TextBox();
+        private readonly TextBlock _predict = new TextBlock();
+        private readonly TextBlock _status = new TextBlock();
+        private readonly TextBlock _trust = new TextBlock();
+        private ContextDrawerWindow _drawer;
+        private int _nextId = 1;
+        private bool _syncing;
+        private bool _immersive;
+
+        public BrowserWindow(string root, Ja21Vm vm, Ja21Vm rendererVm, DfSmallHelper helper)
+        {
+            _root = root; _vm = vm; _rendererVm = rendererVm; _helper = helper;
+            Title = "VB JA21 DF_Medium Browser 8.0.3";
+            Width = 1440; Height = 920; MinWidth = 880; MinHeight = 620;
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            WindowStyle = WindowStyle.None; ResizeMode = ResizeMode.CanResize; Background = Brush("#FFF7FAFF");
+            UseLayoutRounding = true; SnapsToDevicePixels = true;
+            TextOptions.SetTextFormattingMode(this, TextFormattingMode.Display);
+            TextOptions.SetTextRenderingMode(this, TextRenderingMode.ClearType);
+            string ico = System.IO.Path.Combine(root, "assets", "vb.ico");
+            if (File.Exists(ico)) { try { Icon = BitmapFrame.Create(new Uri(ico)); } catch { } }
+            BuildUi();
+            SourceInitialized += delegate { NativeGlass.Apply(this); };
+            Loaded += delegate { WindowState = WindowState.Maximized; Dispatch("new_tab", "", 0);
+            try { string startUrl = Environment.GetEnvironmentVariable("JA21_START_URL");
+                if (!String.IsNullOrWhiteSpace(startUrl)) { Dispatch("navigate", startUrl.Trim(), 0); Status("Opening model shell at " + startUrl.Trim()); }
+            } catch (Exception startEx) { Status("Start URL skipped: " + startEx.Message); } if(_tabs.Count==0)CreateTab("vb://new-tab",false); try{_drawer = new ContextDrawerWindow(this, _helper);}catch(Exception drawerEx){_drawer=null;Status("DF_Medium JA21 online · optional context drawer unavailable: "+drawerEx.Message);} if(_tabs.Count>0)Status("DF_Medium JA21 web engine online · native + interop self-tests PASS"); };
+            LocationChanged += delegate { if (_drawer != null && _drawer.IsOpen) _drawer.Position(false); };
+            SizeChanged += delegate { if (_drawer != null && _drawer.IsOpen) _drawer.Position(false); };
+            StateChanged += delegate { if (_drawer != null && _drawer.IsOpen) _drawer.Position(false); };
+            Closing += delegate { if (_drawer != null) { try { _drawer.Close(); } catch { } } _tabs.Clear(); };
+            PreviewKeyDown += OnPreviewKeyDown;
+        }
+
+        public static System.Windows.Media.Brush Brush(string hex)
+        {
+            System.Windows.Media.Brush b = (System.Windows.Media.Brush)new BrushConverter().ConvertFromString(hex); if (b.CanFreeze) b.Freeze(); return b;
+        }
+        public static TextBlock Label(string text, double size, FontWeight weight, string color, Thickness margin)
+        {
+            TextBlock t = new TextBlock(); t.Text = text; t.FontFamily = new FontFamily("Segoe UI Variable Text, Segoe UI"); t.FontSize = size; t.FontWeight = weight; t.Foreground = Brush(color); t.Margin = margin; return t;
+        }
+        private static ControlTemplate RoundTemplate(Type targetType, double radius)
+        {
+            ControlTemplate t = new ControlTemplate(targetType);
+            FrameworkElementFactory border = new FrameworkElementFactory(typeof(Border));
+            border.SetBinding(Border.BackgroundProperty, new System.Windows.Data.Binding("Background") { RelativeSource = System.Windows.Data.RelativeSource.TemplatedParent });
+            border.SetBinding(Border.BorderBrushProperty, new System.Windows.Data.Binding("BorderBrush") { RelativeSource = System.Windows.Data.RelativeSource.TemplatedParent });
+            border.SetBinding(Border.BorderThicknessProperty, new System.Windows.Data.Binding("BorderThickness") { RelativeSource = System.Windows.Data.RelativeSource.TemplatedParent });
+            border.SetValue(Border.CornerRadiusProperty, new CornerRadius(radius));
+            border.SetValue(Border.SnapsToDevicePixelsProperty, true);
+            FrameworkElementFactory content = new FrameworkElementFactory(typeof(ContentPresenter));
+            content.SetValue(ContentPresenter.HorizontalAlignmentProperty, HorizontalAlignment.Center);
+            content.SetValue(ContentPresenter.VerticalAlignmentProperty, VerticalAlignment.Center);
+            content.SetBinding(ContentPresenter.ContentProperty, new System.Windows.Data.Binding("Content") { RelativeSource = System.Windows.Data.RelativeSource.TemplatedParent });
+            content.SetBinding(ContentPresenter.ContentTemplateProperty, new System.Windows.Data.Binding("ContentTemplate") { RelativeSource = System.Windows.Data.RelativeSource.TemplatedParent });
+            border.AppendChild(content); t.VisualTree = border; return t;
+        }
+        public static Button GhostButton(string text, double width)
+        {
+            Button b = new Button(); b.Content = text; b.Width = width; b.Height = 36; b.Padding = new Thickness(12,0,12,0); b.FontFamily = new FontFamily("Segoe UI Variable Text, Segoe UI"); b.FontSize = 12.5; b.FontWeight = FontWeights.Medium; b.Foreground = Brush("#33475F"); b.Background = Brush("#5FFFFFFF"); b.BorderBrush = Brush("#408CA4BC"); b.BorderThickness = new Thickness(1); b.Template = RoundTemplate(typeof(Button), 18); b.Cursor = Cursors.Hand; WireMotion(b, 1.026); return b;
+        }
+        private static Button BubbleButton(string glyph, string tip)
+        {
+            Button b = GhostButton(glyph, 40); b.Height = 40; b.Padding = new Thickness(0); b.FontSize = 17; b.Template = RoundTemplate(typeof(Button), 20); b.ToolTip = tip; b.Background = Brush("#BFFFFFFF"); b.BorderBrush = Brush("#4A7F96AD"); return b;
+        }
+        private static void WireMotion(UIElement e, double targetScale)
+        {
+            ScaleTransform scale = new ScaleTransform(1,1); e.RenderTransform = scale; e.RenderTransformOrigin = new Point(.5,.5);
+            e.MouseEnter += delegate
+            {
+                CubicEase ease = new CubicEase { EasingMode = EasingMode.EaseOut };
+                DoubleAnimation x = new DoubleAnimation(targetScale, TimeSpan.FromMilliseconds(130)); x.EasingFunction = ease;
+                DoubleAnimation y = new DoubleAnimation(targetScale, TimeSpan.FromMilliseconds(130)); y.EasingFunction = ease;
+                scale.BeginAnimation(ScaleTransform.ScaleXProperty,x); scale.BeginAnimation(ScaleTransform.ScaleYProperty,y);
+            };
+            e.MouseLeave += delegate
+            {
+                CubicEase ease = new CubicEase { EasingMode = EasingMode.EaseOut };
+                DoubleAnimation x = new DoubleAnimation(1.0, TimeSpan.FromMilliseconds(170)); x.EasingFunction = ease;
+                DoubleAnimation y = new DoubleAnimation(1.0, TimeSpan.FromMilliseconds(170)); y.EasingFunction = ease;
+                scale.BeginAnimation(ScaleTransform.ScaleXProperty,x); scale.BeginAnimation(ScaleTransform.ScaleYProperty,y);
+            };
+        }
+
+        private void BuildUi()
+        {
+            Grid root = new Grid(); root.Background = new LinearGradientBrush(Color.FromRgb(247,250,255), Color.FromRgb(250,248,255), new Point(0,0), new Point(1,1)); Content = root;
+            Ellipse aqua = new Ellipse(); aqua.Width = 720; aqua.Height = 720; aqua.HorizontalAlignment = HorizontalAlignment.Left; aqua.VerticalAlignment = VerticalAlignment.Top; aqua.Margin = new Thickness(-250,-330,0,0); aqua.Opacity = .28;
+            aqua.Fill = new RadialGradientBrush(Color.FromArgb(165,167,236,245), Color.FromArgb(0,167,236,245)); root.Children.Add(aqua);
+            Ellipse violet = new Ellipse(); violet.Width = 800; violet.Height = 800; violet.HorizontalAlignment = HorizontalAlignment.Right; violet.VerticalAlignment = VerticalAlignment.Top; violet.Margin = new Thickness(0,-360,-320,0); violet.Opacity = .22;
+            violet.Fill = new RadialGradientBrush(Color.FromArgb(150,200,190,255), Color.FromArgb(0,200,190,255)); root.Children.Add(violet);
+
+            Grid layout = new Grid(); layout.Margin = new Thickness(1); root.Children.Add(layout);
+            layout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(76) });
+            layout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(38) });
+            layout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+            layout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(34) });
+
+            Border command = new Border(); command.Margin = new Thickness(14,10,14,6); command.CornerRadius = new CornerRadius(24); command.Background = Brush("#DFFFFFFF"); command.BorderBrush = Brush("#458CA4BC"); command.BorderThickness = new Thickness(1); command.Padding = new Thickness(10,6,10,6); command.Effect = new DropShadowEffect { BlurRadius = 24, ShadowDepth = 4, Opacity = .08, Color = Colors.SlateGray }; Grid.SetRow(command,0); layout.Children.Add(command);
+            Grid bar = new Grid(); command.Child = bar;
+            bar.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(144) });
+            bar.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(156) });
+            bar.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+            bar.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(198) });
+            bar.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(132) });
+
+            Border brand = new Border(); brand.CornerRadius = new CornerRadius(18); brand.Background = Brush("#52FFFFFF"); brand.BorderBrush = Brush("#318CA4BC"); brand.BorderThickness = new Thickness(1); brand.Padding = new Thickness(12,0,12,0); brand.Cursor = Cursors.SizeAll; brand.MouseLeftButtonDown += OnBrandMouseDown; Grid.SetColumn(brand,0); bar.Children.Add(brand);
+            StackPanel brandStack = new StackPanel(); brandStack.Orientation = Orientation.Horizontal; brandStack.VerticalAlignment = VerticalAlignment.Center; brand.Child = brandStack;
+            Ellipse dot = new Ellipse(); dot.Width = 9; dot.Height = 9; dot.Fill = Brush("#FF6ED6E8"); dot.Margin = new Thickness(0,0,8,0); brandStack.Children.Add(dot);
+            StackPanel brandText = new StackPanel(); brandStack.Children.Add(brandText); brandText.Children.Add(Label("JA21",12.5,FontWeights.SemiBold,"#21354B",new Thickness(0))); brandText.Children.Add(Label("OMNI RUNTIME",9.5,FontWeights.Medium,"#708196",new Thickness(0,-1,0,0)));
+
+            StackPanel nav = new StackPanel(); nav.Orientation = Orientation.Horizontal; nav.VerticalAlignment = VerticalAlignment.Center; nav.Margin = new Thickness(10,0,8,0); Grid.SetColumn(nav,1); bar.Children.Add(nav);
+            Button back = BubbleButton("←","Back"); back.Click += delegate { Dispatch("back","",0); }; nav.Children.Add(back);
+            Button forward = BubbleButton("→","Forward"); forward.Margin = new Thickness(6,0,0,0); forward.Click += delegate { Dispatch("forward","",0); }; nav.Children.Add(forward);
+            Button reload = BubbleButton("↻","Reload / stop"); reload.Margin = new Thickness(6,0,0,0); reload.Click += delegate { Dispatch("refresh","",0); }; nav.Children.Add(reload);
+
+            Border addressShell = new Border(); addressShell.CornerRadius = new CornerRadius(22); addressShell.BorderThickness = new Thickness(1); addressShell.BorderBrush = Brush("#518CA4BC"); addressShell.Background = Brush("#CFFFFFFF"); addressShell.Margin = new Thickness(4,0,8,0); addressShell.Padding = new Thickness(16,5,14,4); Grid.SetColumn(addressShell,2); bar.Children.Add(addressShell);
+            Grid addressGrid = new Grid(); addressGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(24) }); addressGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(15) }); addressShell.Child = addressGrid;
+            _address.BorderThickness = new Thickness(0); _address.Background = Brushes.Transparent; _address.Foreground = Brush("#172235"); _address.FontFamily = new FontFamily("Segoe UI Variable Text, Segoe UI"); _address.FontSize = 14.5; _address.VerticalContentAlignment = VerticalAlignment.Center; _address.Padding = new Thickness(0); _address.CaretBrush = Brush("#436F83"); _address.TextChanged += OnAddressChanged; _address.GotKeyboardFocus += delegate { _predict.Opacity = .92; }; _address.LostKeyboardFocus += delegate { _predict.Opacity = .58; }; _address.KeyDown += OnAddressKeyDown; Grid.SetRow(_address,0); addressGrid.Children.Add(_address);
+            _predict.Text = "Ask, search, or enter an address"; _predict.FontFamily = new FontFamily("Segoe UI Variable Text, Segoe UI"); _predict.FontSize = 10.5; _predict.Foreground = Brush("#708196"); _predict.Opacity = .62; _predict.VerticalAlignment = VerticalAlignment.Center; Grid.SetRow(_predict,1); addressGrid.Children.Add(_predict);
+
+            StackPanel actions = new StackPanel(); actions.Orientation = Orientation.Horizontal; actions.HorizontalAlignment = HorizontalAlignment.Right; actions.VerticalAlignment = VerticalAlignment.Center; Grid.SetColumn(actions,3); bar.Children.Add(actions);
+            Button add = BubbleButton("+","New tab"); add.Click += delegate { Dispatch("new_tab","",0); }; actions.Children.Add(add);
+            Button helper = BubbleButton("◇","Auxiliary DF_Small helper"); helper.Margin = new Thickness(7,0,0,0); helper.Click += delegate { Dispatch("helper_status","",0); }; actions.Children.Add(helper);
+            Button context = BubbleButton("···","Context"); context.Margin = new Thickness(7,0,0,0); context.FontSize = 15; context.Click += delegate { Dispatch("drawer_toggle","",0); }; actions.Children.Add(context);
+            Button privateTab = BubbleButton("◌","Private control tab"); privateTab.Margin = new Thickness(7,0,0,0); privateTab.Click += delegate { Dispatch("private_tab","",0); }; actions.Children.Add(privateTab);
+
+            StackPanel win = new StackPanel(); win.Orientation = Orientation.Horizontal; win.HorizontalAlignment = HorizontalAlignment.Right; win.VerticalAlignment = VerticalAlignment.Center; Grid.SetColumn(win,4); bar.Children.Add(win);
+            Button min = BubbleButton("−","Minimize"); min.Width=36; min.Height=36; min.Template=RoundTemplate(typeof(Button),18); min.Click += delegate { Dispatch("minimize","",0); }; win.Children.Add(min);
+            Button max = BubbleButton("□","Maximize / restore"); max.Width=36; max.Height=36; max.Template=RoundTemplate(typeof(Button),18); max.Margin=new Thickness(5,0,0,0); max.Click += delegate { Dispatch("maximize","",0); }; win.Children.Add(max);
+            Button close = BubbleButton("×","Close"); close.Width=36; close.Height=36; close.Template=RoundTemplate(typeof(Button),18); close.Margin=new Thickness(5,0,0,0); close.Click += delegate { Dispatch("close_window","",0); }; win.Children.Add(close);
+
+            Border tabsShell = new Border(); tabsShell.Margin = new Thickness(18,0,18,3); tabsShell.CornerRadius = new CornerRadius(18); tabsShell.Background = Brush("#4DFFFFFF"); tabsShell.BorderBrush = Brush("#2B8CA4BC"); tabsShell.BorderThickness = new Thickness(1); Grid.SetRow(tabsShell,1); layout.Children.Add(tabsShell);
+            ScrollViewer tabsScroll = new ScrollViewer(); tabsScroll.HorizontalScrollBarVisibility = ScrollBarVisibility.Hidden; tabsScroll.VerticalScrollBarVisibility = ScrollBarVisibility.Disabled; tabsScroll.Padding = new Thickness(6,3,6,3); tabsShell.Child = tabsScroll;
+            _tabRail.Orientation = Orientation.Horizontal; tabsScroll.Content = _tabRail;
+
+            Border contentFrame = new Border(); contentFrame.Margin = new Thickness(14,4,14,4); contentFrame.CornerRadius = new CornerRadius(22); contentFrame.BorderThickness = new Thickness(1); contentFrame.BorderBrush = Brush("#458CA4BC"); contentFrame.Background = Brush("#EBFFFFFF"); contentFrame.Effect = new DropShadowEffect { BlurRadius = 28, ShadowDepth = 4, Opacity = .07, Color = Colors.SlateGray }; Grid.SetRow(contentFrame,2); layout.Children.Add(contentFrame); contentFrame.Child = _surface; _surface.ClipToBounds = true;
+
+            Grid statusGrid = new Grid(); statusGrid.Margin = new Thickness(18,2,18,8); statusGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) }); statusGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto }); Grid.SetRow(statusGrid,3); layout.Children.Add(statusGrid);
+            Border statusPill = new Border(); statusPill.CornerRadius = new CornerRadius(12); statusPill.Background = Brush("#52FFFFFF"); statusPill.BorderBrush = Brush("#2D8CA4BC"); statusPill.BorderThickness = new Thickness(1); statusPill.Padding = new Thickness(10,3,10,3); statusPill.HorizontalAlignment = HorizontalAlignment.Left; statusPill.Child = _status; _status.FontFamily = new FontFamily("Segoe UI Variable Text, Segoe UI"); _status.FontSize=10.5; _status.Foreground=Brush("#65748A"); Grid.SetColumn(statusPill,0); statusGrid.Children.Add(statusPill);
+            Border trustPill = new Border(); trustPill.CornerRadius = new CornerRadius(12); trustPill.Background = Brush("#52FFFFFF"); trustPill.BorderBrush = Brush("#2D8CA4BC"); trustPill.BorderThickness = new Thickness(1); trustPill.Padding = new Thickness(10,3,10,3); trustPill.HorizontalAlignment = HorizontalAlignment.Right; trustPill.Child = _trust; _trust.Text="JA21 policy · DF_Small sealed · Electron absent"; _trust.FontFamily=new FontFamily("Segoe UI Variable Text, Segoe UI"); _trust.FontSize=10.5; _trust.Foreground=Brush("#65748A"); Grid.SetColumn(trustPill,1); statusGrid.Children.Add(trustPill);
+
+            Border edge = new Border(); edge.BorderThickness = new Thickness(1); edge.BorderBrush = Brush("#428CA4BC"); edge.IsHitTestVisible = false; root.Children.Add(edge);
+        }
+
+        private void OnBrandMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2) { Dispatch("maximize","",0); e.Handled = true; return; }
+            if (e.LeftButton == MouseButtonState.Pressed && WindowState == WindowState.Normal && !_immersive) { try { DragMove(); } catch { } }
+        }
+        private void OnAddressKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter) { e.Handled = true; Dispatch("navigate", _address.Text, 0); }
+            else if (e.Key == Key.Escape) { SyncChrome(); Keyboard.ClearFocus(); }
+        }
+        private void OnAddressChanged(object sender, TextChangedEventArgs e)
+        {
+            if (_syncing) return;
+            string raw = _address.Text;
+            if (String.IsNullOrWhiteSpace(raw)) { _predict.Text = "Ask, search, or enter an address"; return; }
+            try
+            {
+                string normalized = Convert.ToString(_vm.Run("normalize", raw));
+                if (String.IsNullOrEmpty(normalized)) { _predict.Text = "Blocked by JA21 policy"; return; }
+                if (normalized.StartsWith("https://html.duckduckgo.com/html/?q=", StringComparison.OrdinalIgnoreCase)) _predict.Text = "Search the web · Enter";
+                else if (normalized == "vb://new-tab") _predict.Text = "Open a calm new workspace · Enter";
+                else { Uri u; _predict.Text = Uri.TryCreate(normalized, UriKind.Absolute, out u) ? "Open " + u.Host + " · Enter" : "Open · Enter"; }
+            }
+            catch { _predict.Text = "Review input"; }
+        }
+
+        private BrowserTab ActiveTab
+        {
+            get { int i; for (i=0;i<_tabs.Count;i++) if (_tabs[i].Surface.Visibility==Visibility.Visible) return _tabs[i]; return null; }
+        }
+        private Dictionary<string, object> Model()
+        {
+            BrowserTab t=ActiveTab; Dictionary<string,object> m=new Dictionary<string,object>(StringComparer.Ordinal);
+            m["active"]=t==null?0:t.Id; m["count"]=_tabs.Count; m["can_back"]=t!=null&&t.CanGoBack; m["can_forward"]=t!=null&&t.CanGoForward; m["loading"]=t!=null&&t.Loading; return m;
+        }
+        public void DispatchPublic(string kind, string input, int id) { Dispatch(kind,input,id); }
+        private void Dispatch(string kind, string input, int id)
+        {
+            try
+            {
+                Dictionary<string,object> ev=new Dictionary<string,object>(StringComparer.Ordinal); ev["kind"]=kind; ev["id"]=id; ev["input"]=input==null?"":input;
+                Dictionary<string,object> action=(Dictionary<string,object>)_vm.Run("on_event",Model(),ev); Execute(action);
+            }
+            catch(Exception ex){ Status("JA21 · "+ex.Message); }
+        }
+        private void Execute(Dictionary<string, object> a)
+        {
+            string kind=Convert.ToString(a["kind"]); int id=Convert.ToInt32(a["id"]); string value=Convert.ToString(a["value"]);
+            if(kind=="create"){CreateTab(value,false);return;} if(kind=="create_private"){CreateTab(value,true);Status("Private control tab · history remains in memory for this process only.");return;}
+            if(kind=="load"){BrowserTab t=FindTab(id);if(t!=null)Navigate(t,value);return;} if(kind=="select"){SelectTab(id);return;} if(kind=="close"){CloseTab(id);return;}
+            BrowserTab active=ActiveTab;
+            if(kind=="back"&&active!=null&&active.CanGoBack){active.HistoryIndex--;Navigate(active,active.History[active.HistoryIndex],false);return;} if(kind=="forward"&&active!=null&&active.CanGoForward){active.HistoryIndex++;Navigate(active,active.History[active.HistoryIndex],false);return;}
+            if(kind=="reload"&&active!=null){Navigate(active,active.LogicalUrl,false);return;} if(kind=="stop"&&active!=null){active.Generation++;active.Loading=false;Status("Load stopped · current generation retired");SyncChrome();return;}
+            if(kind=="downloads"){try{Process.Start("explorer.exe",Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)+"\\Downloads");}catch(Exception ex){Status(ex.Message);}return;}
+            if(kind=="clear_data"){Status("DF_Medium JA21 Web Engine keeps no persistent cookie/local-storage engine in this profile; there is no ambient site store to clear.");return;}
+            if(kind=="about"){ShowAbout();return;} if(kind=="drawer_toggle"){if(_drawer!=null)_drawer.Toggle();return;} if(kind=="drawer_close"){if(_drawer!=null)_drawer.CloseDrawer();return;}
+            if(kind=="helper_status"){if(_drawer!=null){_drawer.OpenDrawer();_drawer.SetDetail(_helper.Summary);}Status("Auxiliary DF_Small · "+_helper.Summary);return;}
+            if(kind=="helper_verify"){RunHelper("verify");return;} if(kind=="helper_pulse"){RunHelper("pulse");return;}
+            if(kind=="minimize"){WindowState=WindowState.Minimized;return;} if(kind=="maximize"){ToggleMaximize();return;} if(kind=="fullscreen"){ToggleImmersive();return;} if(kind=="close_window"){Close();return;}
+            if(kind=="focus_address"){_address.Focus();_address.SelectAll();return;} if(kind=="status"){Status(value);return;}
+        }
+        private void RunHelper(string operation)
+        {
+            Status("Auxiliary DF_Small · running "+operation+"…"); if(_drawer!=null)_drawer.OpenDrawer();
+            _helper.RunNativeAsync(operation,delegate(string text,bool ok){Dispatcher.BeginInvoke(new Action(delegate{if(_drawer!=null)_drawer.SetHelperResult(text,ok);Status(ok?"Auxiliary DF_Small · completed":"Auxiliary DF_Small · host toolchain or gate needs attention");}));});
+        }
+
+        private void CreateTab(string url, bool isPrivate)
+        {
+            BrowserTab t=new BrowserTab();t.Id=_nextId++;t.Private=isPrivate;t.LogicalUrl="vb://new-tab";t.Title=isPrivate?"Private":"New tab";
+            Grid surface=new Grid();surface.Visibility=Visibility.Collapsed;surface.Background=Brush("#FFF9FBFD");t.Surface=surface;Grid pageHost=new Grid();t.PageHost=pageHost;surface.Children.Add(pageHost);_surface.Children.Add(surface);
+            TextBlock label=Label(t.Title,11.5,FontWeights.Medium,"#3E5066",new Thickness(0));t.PillText=label;
+            Button pill=GhostButton("",118);pill.Height=28;pill.Margin=new Thickness(3,0,3,0);pill.Background=Brush("#75FFFFFF");pill.BorderBrush=Brush("#338CA4BC");pill.Content=label;pill.Tag=t.Id;pill.Click+=delegate{Dispatch("select_tab","",t.Id);};pill.MouseRightButtonUp+=delegate{Dispatch("close_tab","",t.Id);};t.Pill=pill;_tabRail.Children.Add(pill);
+            _tabs.Add(t);SelectTab(t.Id);Navigate(t,url,true);
+        }
+        private void UpdateTabTitle(BrowserTab t)
+        {
+            string title=String.IsNullOrWhiteSpace(t.Title)?(t.Private?"Private":"New tab"):t.Title;if(title.Length>24)title=title.Substring(0,23)+"…";t.PillText.Text=(t.Private?"◌ ":"")+title;
+        }
+        private void Navigate(BrowserTab t,string url){Navigate(t,url,true);}
+        private void Navigate(BrowserTab t,string url,bool pushHistory)
+        {
+            if(t==null)return;if(String.IsNullOrEmpty(url)||url=="vb://new-tab"){ShowHome(t);if(pushHistory)PushHistory(t,"vb://new-tab");return;}if(url=="about:blank"){ShowBlank(t);if(pushHistory)PushHistory(t,"about:blank");return;}
+            url=JaLinkTarget.Resolve(url);Uri u;if(!Uri.TryCreate(url,UriKind.Absolute,out u)){Status("Invalid address.");return;}string scheme=u.Scheme.ToLowerInvariant();bool allowed=false;try{allowed=(bool)_vm.Run("page_allowed",scheme,false);}catch{allowed=false;}if(!allowed||(scheme!="http"&&scheme!="https")){Status("Navigation blocked by JA21 policy.");return;}if(!String.IsNullOrEmpty(u.UserInfo)){Status("Credential-bearing URLs are blocked.");return;}
+            int generation=++t.Generation;t.Loading=true;t.ShowingHome=false;t.LogicalUrl=u.AbsoluteUri;t.Title=u.Host;UpdateTabTitle(t);if(pushHistory)PushHistory(t,t.LogicalUrl);ShowLoading(t,u);SyncChrome();Status("DF_Medium Web Device fetch · "+u.Host);
+            Task.Factory.StartNew(delegate
+            {
+                try
+                {
+                    JaMirrorNetworkClient net=new JaMirrorNetworkClient();JaMirrorFetchResult result=net.Fetch(u);
+                    Dictionary<string,object> meta=new Dictionary<string,object>(StringComparer.Ordinal);meta["scheme"]=result.FinalUri.Scheme.ToLowerInvariant();meta["mime"]=MimeOnly(result.ContentType);meta["bytes"]=result.Bytes;meta["redirects"]=result.Redirects;if(!(bool)_rendererVm.Run("fetch_allowed",meta))throw new Exception("JA renderer policy rejected the fetched document budget.");Dictionary<string,object> docPolicy=(Dictionary<string,object>)_rendererVm.Run("document_policy",MimeOnly(result.ContentType));if(!Convert.ToBoolean(docPolicy["allow"]))throw new Exception(Convert.ToString(docPolicy["reason"]));
+                    Dispatcher.BeginInvoke(new Action(delegate
+                    {
+                        if(generation!=t.Generation)return;try{DfMediumDocumentSurface renderer=new DfMediumDocumentSurface(delegate(string link){Navigate(t,JaLinkTarget.Resolve(link),true);});UIElement view=renderer.Build(result.Text,result.FinalUri);t.PageHost.Children.Clear();t.PageHost.Children.Add(view);t.Loading=false;t.LogicalUrl=result.FinalUri.AbsoluteUri;t.Title=renderer.Title;UpdateTabTitle(t);ReplaceCurrentHistory(t,t.LogicalUrl);SyncChrome();Status("DF_Medium JA21 ready · "+result.Bytes+" bytes · "+renderer.NodeCount+" nodes · "+renderer.ScriptCount+" scripts isolated · "+renderer.VmCalls+" VM device calls");}catch(Exception renderEx){t.Loading=false;ShowError(t,"Render",renderEx.Message);SyncChrome();}
+                    }));
+                }
+                catch(Exception ex)
+                {
+                    Dispatcher.BeginInvoke(new Action(delegate{if(generation!=t.Generation)return;t.Loading=false;ShowError(t,"Fetch",ex.Message);SyncChrome();Status("JA Mirror · "+ex.Message);}));
+                }
+            });
+        }
+        private static string MimeOnly(string contentType){if(String.IsNullOrWhiteSpace(contentType))return "";int semi=contentType.IndexOf(';');return (semi<0?contentType:contentType.Substring(0,semi)).Trim().ToLowerInvariant();}
+        private void PushHistory(BrowserTab t,string url){if(t.HistoryIndex>=0&&t.HistoryIndex<t.History.Count&&t.History[t.HistoryIndex]==url)return;if(t.HistoryIndex+1<t.History.Count)t.History.RemoveRange(t.HistoryIndex+1,t.History.Count-t.HistoryIndex-1);t.History.Add(url);t.HistoryIndex=t.History.Count-1;}
+        private void ReplaceCurrentHistory(BrowserTab t,string url){if(t.HistoryIndex>=0&&t.HistoryIndex<t.History.Count)t.History[t.HistoryIndex]=url;}
+        private void ShowLoading(BrowserTab t,Uri u)
+        {
+            t.PageHost.Children.Clear();Grid g=new Grid();g.Background=Brush("#FFF9FBFD");StackPanel s=new StackPanel();s.Width=540;s.HorizontalAlignment=HorizontalAlignment.Center;s.VerticalAlignment=VerticalAlignment.Center;g.Children.Add(s);Border orb=new Border();orb.Width=52;orb.Height=52;orb.CornerRadius=new CornerRadius(26);orb.Background=Brush("#BDE7F6FA");orb.BorderBrush=Brush("#598AA5B8");orb.BorderThickness=new Thickness(1);orb.HorizontalAlignment=HorizontalAlignment.Center;orb.Child=Label("JA",13,FontWeights.SemiBold,"#32556D",new Thickness(0));s.Children.Add(orb);TextBlock h=Label("Reconstituting document",22,FontWeights.SemiBold,"#25384C",new Thickness(0,18,0,6));h.HorizontalAlignment=HorizontalAlignment.Center;s.Children.Add(h);TextBlock p=Label(u.Host+" · DF_Medium JA21 web engine",12.5,FontWeights.Normal,"#718294",new Thickness(0));p.HorizontalAlignment=HorizontalAlignment.Center;s.Children.Add(p);t.PageHost.Children.Add(g);
+        }
+        private void ShowError(BrowserTab t,string stage,string message)
+        {
+            t.PageHost.Children.Clear();Grid g=new Grid();g.Background=Brush("#FFF9FBFD");Border card=new Border();card.MaxWidth=760;card.Padding=new Thickness(32);card.CornerRadius=new CornerRadius(24);card.BorderThickness=new Thickness(1);card.BorderBrush=Brush("#448EA6B8");card.Background=Brush("#EFFFFFFF");card.HorizontalAlignment=HorizontalAlignment.Center;card.VerticalAlignment=VerticalAlignment.Center;StackPanel s=new StackPanel();card.Child=s;s.Children.Add(Label("DF_MEDIUM · "+stage.ToUpperInvariant(),10.5,FontWeights.SemiBold,"#758698",new Thickness(0,0,0,8)));s.Children.Add(Label("The JA21 web workload could not be completed.",25,FontWeights.SemiBold,"#26394C",new Thickness(0,0,0,10)));TextBlock p=Label(message,13.5,FontWeights.Normal,"#687A8C",new Thickness(0));p.TextWrapping=TextWrapping.Wrap;s.Children.Add(p);g.Children.Add(card);t.PageHost.Children.Add(g);
+        }
+        private void ShowBlank(BrowserTab t){t.Generation++;t.LogicalUrl="about:blank";t.Loading=false;t.Title="Blank";t.PageHost.Children.Clear();t.PageHost.Background=Brush("#FFF9FBFD");UpdateTabTitle(t);SyncChrome();}
+        private void ShowHome(BrowserTab t)
+        {
+            t.Generation++;t.LogicalUrl="vb://new-tab";t.Loading=false;t.ShowingHome=true;t.Title=t.Private?"Private":"New tab";UpdateTabTitle(t);t.PageHost.Children.Clear();
+            Grid g=new Grid();g.Background=Brush("#00FFFFFF");Ellipse e1=new Ellipse();e1.Width=620;e1.Height=620;e1.Fill=new RadialGradientBrush(Color.FromArgb(105,170,238,245),Color.FromArgb(0,170,238,245));e1.HorizontalAlignment=HorizontalAlignment.Left;e1.VerticalAlignment=VerticalAlignment.Top;e1.Margin=new Thickness(-220,-260,0,0);g.Children.Add(e1);Ellipse e2=new Ellipse();e2.Width=720;e2.Height=720;e2.Fill=new RadialGradientBrush(Color.FromArgb(90,204,190,255),Color.FromArgb(0,204,190,255));e2.HorizontalAlignment=HorizontalAlignment.Right;e2.VerticalAlignment=VerticalAlignment.Bottom;e2.Margin=new Thickness(0,0,-280,-320);g.Children.Add(e2);
+            Border card=new Border();card.Width=790;card.Padding=new Thickness(42,38,42,36);card.CornerRadius=new CornerRadius(30);card.BorderThickness=new Thickness(1);card.BorderBrush=Brush("#4C8EA6B8");card.Background=Brush("#E9FFFFFF");card.HorizontalAlignment=HorizontalAlignment.Center;card.VerticalAlignment=VerticalAlignment.Center;card.Effect=new DropShadowEffect{BlurRadius=45,ShadowDepth=9,Opacity=.075,Color=Colors.SlateGray};g.Children.Add(card);StackPanel s=new StackPanel();card.Child=s;
+            s.Children.Add(Label("DF_MEDIUM · JA21 NATIVE WEB ENGINE",10.5,FontWeights.SemiBold,"#6E8193",new Thickness(0,0,0,9)));s.Children.Add(Label("A native JA21 web machine.",36,FontWeights.SemiBold,"#203346",new Thickness(0,0,0,13)));TextBlock copy=Label("Search or enter an address above. DF_Medium executes the JA21 web workload: document ingress, HTML interpretation, CSS cascade, resource discovery, layout and scene generation occur inside the Bottle Rocket VM-derived engine. Windows supplies only the omni window, TLS byte transport, pixels and media-device primitives.",14,FontWeights.Normal,"#64778A",new Thickness(0));copy.TextWrapping=TextWrapping.Wrap;copy.LineHeight=23;s.Children.Add(copy);Border line=new Border();line.Height=1;line.Background=Brush("#318EA6B8");line.Margin=new Thickness(0,24,0,18);s.Children.Add(line);WrapPanel pills=new WrapPanel();s.Children.Add(pills);string[] items=new string[]{"DF_Medium VM","JA21 web ABI","JA HTML/CSS","JA scene graph","image + video resources","scripts isolated"};for(int i=0;i<items.Length;i++){Border p=new Border();p.CornerRadius=new CornerRadius(999);p.BorderThickness=new Thickness(1);p.BorderBrush=Brush("#358EA6B8");p.Background=Brush("#7AFFFFFF");p.Padding=new Thickness(10,6,10,6);p.Margin=new Thickness(0,0,7,7);p.Child=Label(items[i],10.5,FontWeights.Medium,"#52677A",new Thickness(0));pills.Children.Add(p);}t.PageHost.Children.Add(g);SyncChrome();
+        }
+        private BrowserTab FindTab(int id){int i;for(i=0;i<_tabs.Count;i++)if(_tabs[i].Id==id)return _tabs[i];return null;}
+        private void SelectTab(int id)
+        {
+            BrowserTab t=FindTab(id);if(t==null)return;int i;for(i=0;i<_tabs.Count;i++){bool active=_tabs[i].Id==id;_tabs[i].Surface.Visibility=active?Visibility.Visible:Visibility.Collapsed;_tabs[i].Pill.Background=Brush(active?"#D9FFFFFF":"#62FFFFFF");_tabs[i].Pill.BorderBrush=Brush(active?"#647B9CB7":"#338CA4BC");}SyncChrome();
+        }
+        private void CloseTab(int id)
+        {
+            BrowserTab t=FindTab(id);if(t==null)return;bool was=t.Surface.Visibility==Visibility.Visible;_surface.Children.Remove(t.Surface);_tabRail.Children.Remove(t.Pill);_tabs.Remove(t);t.Generation++;
+            if(_tabs.Count==0)Dispatch("new_tab","",0);else if(was)SelectTab(_tabs[Math.Max(0,_tabs.Count-1)].Id);else SyncChrome();
+        }
+        private void SyncChrome()
+        {
+            BrowserTab t=ActiveTab;if(t==null)return;_syncing=true;_address.Text=t.LogicalUrl=="vb://new-tab"?"":t.LogicalUrl;_syncing=false;OnAddressChanged(null,null);Title="VB JA21 DF_Medium Browser 8.0.3"+(t.Private?" · Private control":"");
+        }
+        private void Status(string text){_status.Text=text;}
+        private void ShowAbout()
+        {
+            if(_drawer!=null){_drawer.OpenDrawer();_drawer.SetDetail("VB JA21 DF_Medium Browser 8.0.3\n\nWeb engine: DF_Medium / Bottle Rocket native VM derivative\nJA21 workload: HTML/CSS/resource/layout/scene semantics\nNative shell adapter: Windows WPF presenter only\nNetwork device primitive: bounded .NET/Windows HTTPS byte transport\nImage/media device primitives: WPF/WIC/Media Foundation presentation\n\nNo Chromium, Edge, WebView2, Electron, Node or MSHTML browser engine is loaded. Site JavaScript remains isolated in this release; server HTML/CSS, images and directly addressable media are handled through the DF_Medium JA21 engine/resource graph.");}
+        }
+        private void ToggleMaximize(){if(_immersive){ToggleImmersive();return;}WindowState=WindowState==WindowState.Maximized?WindowState.Normal:WindowState.Maximized;}
+        private void ToggleImmersive()
+        {
+            if(!_immersive){_immersive=true;WindowState=WindowState.Normal;Left=0;Top=0;Width=SystemParameters.PrimaryScreenWidth;Height=SystemParameters.PrimaryScreenHeight;Topmost=true;Status("Immersive omni mode · F11 to return");}
+            else{_immersive=false;Topmost=false;WindowState=WindowState.Maximized;Status("Omni window · maximized");}
+            if(_drawer!=null){_drawer.Topmost=Topmost;if(_drawer.IsOpen)_drawer.Position(true);}
+        }
+        private void OnPreviewKeyDown(object sender,KeyEventArgs e)
+        {
+            if(e.Key==Key.F11){Dispatch("fullscreen","",0);e.Handled=true;return;} if(e.Key==Key.Escape&&_drawer!=null&&_drawer.IsOpen){_drawer.CloseDrawer();e.Handled=true;return;}
+            if(Keyboard.Modifiers==ModifierKeys.Control&&e.Key==Key.L){Dispatch("focus_address","",0);e.Handled=true;return;} if(Keyboard.Modifiers==ModifierKeys.Control&&e.Key==Key.T){Dispatch("new_tab","",0);e.Handled=true;return;}
+            if(Keyboard.Modifiers==ModifierKeys.Control&&e.Key==Key.W){Dispatch("close_active","",0);e.Handled=true;return;} if(Keyboard.Modifiers==ModifierKeys.Control&&e.Key==Key.R){Dispatch("refresh","",0);e.Handled=true;return;}
+            if(Keyboard.Modifiers==(ModifierKeys.Control|ModifierKeys.Shift)&&e.Key==Key.N){Dispatch("private_tab","",0);e.Handled=true;return;} if(Keyboard.Modifiers==ModifierKeys.Alt&&e.Key==Key.Left){Dispatch("back","",0);e.Handled=true;return;} if(Keyboard.Modifiers==ModifierKeys.Alt&&e.Key==Key.Right){Dispatch("forward","",0);e.Handled=true;return;}
+        }
+    }
+
+    public static class Program
+    {
+        [STAThread]
+        public static void Run(string root)
+        {
+            RuntimeSeal.Verify(root);
+            string source=File.ReadAllText(System.IO.Path.Combine(root,"source","browser.ja"),Encoding.UTF8); string sourceHash=RuntimeSeal.Sha256(Encoding.UTF8.GetBytes(source));
+            JavaScriptSerializer js=new JavaScriptSerializer();js.MaxJsonLength=Int32.MaxValue;
+            Dictionary<string,object> unit=(Dictionary<string,object>)js.DeserializeObject(File.ReadAllText(System.IO.Path.Combine(root,"engine","ja21","browser.ir.json"),Encoding.UTF8));
+            if(!String.Equals(sourceHash,Convert.ToString(unit["sourceHash"]),StringComparison.OrdinalIgnoreCase))throw new Exception("JA21 source/IR identity mismatch.");
+            Dictionary<string,object> corpus=(Dictionary<string,object>)js.DeserializeObject(File.ReadAllText(System.IO.Path.Combine(root,"engine","ja21","corpus.lock.json"),Encoding.UTF8)); if(Convert.ToInt32(corpus["suite_count"])!=20)throw new Exception("JA21 corpus lock is incomplete.");
+            Dictionary<string,object> profile=(Dictionary<string,object>)js.DeserializeObject(File.ReadAllText(System.IO.Path.Combine(root,"engine","ja21","profile.json"),Encoding.UTF8)); if(Convert.ToBoolean(profile["electron"]))throw new Exception("JA21 profile unexpectedly enables Electron.");
+            string rendererSource=File.ReadAllText(System.IO.Path.Combine(root,"source","renderer.ja"),Encoding.UTF8);string rendererSourceHash=RuntimeSeal.Sha256(Encoding.UTF8.GetBytes(rendererSource));Dictionary<string,object> rendererUnit=(Dictionary<string,object>)js.DeserializeObject(File.ReadAllText(System.IO.Path.Combine(root,"engine","ja21","renderer.ir.json"),Encoding.UTF8));if(!String.Equals(rendererSourceHash,Convert.ToString(rendererUnit["sourceHash"]),StringComparison.OrdinalIgnoreCase))throw new Exception("JA Mirror renderer source/IR identity mismatch.");
+            string webSource=File.ReadAllText(System.IO.Path.Combine(root,"source","web_engine.ja"),Encoding.UTF8);string webHash=RuntimeSeal.Sha256(Encoding.UTF8.GetBytes(webSource));Dictionary<string,object> webUnit=(Dictionary<string,object>)js.DeserializeObject(File.ReadAllText(System.IO.Path.Combine(root,"engine","ja21","web_engine.ir.json"),Encoding.UTF8));if(!String.Equals(webHash,Convert.ToString(webUnit["sourceHash"]),StringComparison.OrdinalIgnoreCase))throw new Exception("DF_Medium JA21 web-engine source/IR identity mismatch.");
+            DfMediumNative.Boot(root);
+            DfSmallHelper helper=new DfSmallHelper(root);
+            System.Windows.Application app=new System.Windows.Application();app.ShutdownMode=ShutdownMode.OnMainWindowClose;BrowserWindow window=new BrowserWindow(root,new Ja21Vm(unit),new Ja21Vm(rendererUnit),helper);app.Run(window);
+        }
+    }
+}

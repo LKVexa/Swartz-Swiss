@@ -1,0 +1,131 @@
+{
+  "authority_sha256": "6a070afbae23628799bb3e715a0836ae754aa2f796f2d6eda7144c4553455f6c",
+  "domain_output": {
+    "governance_receipt": {
+      "change_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "mutation_applied": false,
+      "requires_real_patch_for_production": true,
+      "review": "APPROVED_REFERENCE"
+    },
+    "input_type": "change/review_context",
+    "legacy_signals": [
+      "PACKAGE",
+      "VALIDATE",
+      "AUTHORIZE",
+      "INDEX"
+    ],
+    "module": "Diff Patch and Review",
+    "output_type": "approved_patch/governance_receipt",
+    "payload_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+    "plane": "governance_control",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "3d78c0fab64b6a6e10e35b7d5b5443553c25ec9ff13f1771066275db9565b3ec",
+  "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+  "module": "Diff Patch and Review",
+  "module_id": 50,
+  "plane": "governance_control",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "6de860b6b058120fb03c0ecab074213095ca5bc948f53d7b921f029de78d4934",
+  "stage_count": 9,
+  "stages": [
+    {
+      "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "node": "N01",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "INSPECT",
+      "output_sha256": "5e60d1cc8aad6db26c5cba027a8084651adb29e5720d37d014593cecc5e604ce",
+      "stage": "CHANGE"
+    },
+    {
+      "input_sha256": "5e60d1cc8aad6db26c5cba027a8084651adb29e5720d37d014593cecc5e604ce",
+      "node": "N02",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "INSPECT",
+      "output_sha256": "8e6b5683bb2116880572bfbe1b7b60002c2966109a4821a2d84cc0cc79b95ec6",
+      "stage": "INSPECT"
+    },
+    {
+      "comparison": "SELF_CONSISTENT",
+      "input_sha256": "8e6b5683bb2116880572bfbe1b7b60002c2966109a4821a2d84cc0cc79b95ec6",
+      "node": "N03",
+      "operator": "COMPARE",
+      "output_sha256": "0dec0331a762385a6456d02166c26e3499d53d2c738a039141e3590e7e29f1fd",
+      "stage": "DIFF"
+    },
+    {
+      "input_sha256": "0dec0331a762385a6456d02166c26e3499d53d2c738a039141e3590e7e29f1fd",
+      "node": "N04",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "INSPECT",
+      "output_sha256": "0271f29ce1adfbca01a5edca95856c42bd2355a89ee43306a8823a6dcd0c1f4b",
+      "stage": "REVIEW"
+    },
+    {
+      "authorized": true,
+      "capabilities": [
+        "evidence.write",
+        "patch.propose",
+        "repository.read"
+      ],
+      "input_sha256": "0271f29ce1adfbca01a5edca95856c42bd2355a89ee43306a8823a6dcd0c1f4b",
+      "network": "DENY",
+      "node": "N05",
+      "operator": "AUTHORIZE",
+      "output_sha256": "5a62b6ed5f94073dc3b3fbd8b0fa233a632f481c63b77db6a96db238fb76d638",
+      "stage": "AUTHORIZE"
+    },
+    {
+      "execution_token": "a72aa850cc8575ef2d07d442",
+      "input_sha256": "5a62b6ed5f94073dc3b3fbd8b0fa233a632f481c63b77db6a96db238fb76d638",
+      "node": "N06",
+      "operator": "EXECUTE",
+      "output_sha256": "e30464a8bb33d07c18ae9ff06c6d22d5cd39cbba7b4c1c9b024e7597f4034515",
+      "stage": "APPLY"
+    },
+    {
+      "input_sha256": "e30464a8bb33d07c18ae9ff06c6d22d5cd39cbba7b4c1c9b024e7597f4034515",
+      "node": "N07",
+      "operator": "VALIDATE",
+      "output_sha256": "0e9fba70f642eac7bb81d17209bcdeba044f2327ce224a268becb31a25c54036",
+      "stage": "VERIFY",
+      "valid": true
+    },
+    {
+      "input_sha256": "0e9fba70f642eac7bb81d17209bcdeba044f2327ce224a268becb31a25c54036",
+      "node": "N08",
+      "operator": "RECORD",
+      "output_sha256": "c3d939daa10e821c2d3d0df596667ee0ca29f2f5d0a64d61d4cea44b562f0547",
+      "receipt_sha256": "f6e0a78401061371d9d4fc4c434029d13281732494eeb83248ed7a25271631bb",
+      "stage": "RECORD"
+    },
+    {
+      "input_sha256": "c3d939daa10e821c2d3d0df596667ee0ca29f2f5d0a64d61d4cea44b562f0547",
+      "node": "N09",
+      "operator": "RECORD",
+      "output_sha256": "e0fb8a58ca7f38628657b3d47f5fb4acbe1d0eaccd334c169d5f64094f1bc6ee",
+      "receipt_sha256": "ca553c82d13d1b19c047308ba532478ffc12f13ef61f3cb6d648e0419c0efe1c",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

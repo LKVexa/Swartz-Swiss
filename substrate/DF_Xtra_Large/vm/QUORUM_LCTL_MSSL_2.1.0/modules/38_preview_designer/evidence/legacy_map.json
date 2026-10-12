@@ -1,0 +1,34 @@
+{
+  "suite_id": 38,
+  "suite_name": "Preview Designer",
+  "plane": "interfaces_services",
+  "legacy_sha256": "32bd27abc5b5bcce719907be350adc2494440251149fdbd3c2987931b5b089dc",
+  "legacy_root": "legacy/source_repository/Preview Designer",
+  "files": [
+    {
+      "path": "38.1_Preview_Designer_Reviewable_Application.jaui",
+      "sha256": "def1a340d2353bcd147482e992f2451ab8348bb1a810a47fcc3d5c2225ea113c",
+      "bytes": 2247
+    },
+    {
+      "path": "38.2_Preview_Designer_Scene.jaui",
+      "sha256": "3f543e4f98047a686ae45cd5bdbfb07d529c27e328827ebe48b3f95d13b02e83",
+      "bytes": 1989
+    },
+    {
+      "path": "38.3_Preview_Designer_Animation.jaui",
+      "sha256": "6e6df1766e2a11a5d3c3984182cf0ee6fa2c8a0e566804c4733e7c7de1b43339",
+      "bytes": 2143
+    },
+    {
+      "path": "38.4_Preview_Designer_Release.jaui",
+      "sha256": "8044f8487c4ef8aa6cb4c76832e12fd0c1eef67d7a10ddbc4470c6f13fdc9a60",
+      "bytes": 2063
+    },
+    {
+      "path": "README.md",
+      "sha256": "5808b6353372b33a572b1db94a1387cc939ea48e3f687822e8fefd8fce8dad1d",
+      "bytes": 20194
+    }
+  ]
+}

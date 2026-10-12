@@ -1,0 +1,31 @@
+ja source 0.3
+module suite46.air_gap_certification_installer_plane.installer
+use Operations
+policy explicit_network
+
+workspace Installer {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 8 memory 16GB
+    network disabled
+    secret installer_key reference "vault://suite46/installer"
+    service SOPHIA_installer_intent replicas 1
+    health_check SOPHIA_installer_intent every 10s
+    service CHARLOTTE_installer_preflight replicas 1
+    health_check CHARLOTTE_installer_preflight every 10s
+    service LANDON_installer_engine replicas 1
+    health_check LANDON_installer_engine every 10s
+    service Professor_installer_guide replicas 1
+    health_check Professor_installer_guide every 10s
+    service Podium_installer_receipt replicas 1
+    health_check Podium_installer_receipt every 10s
+    service installer_worker replicas 1
+    health_check installer_worker every 5s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == true
+emit package "installer.msslb"

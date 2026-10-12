@@ -1,0 +1,27 @@
+ja source 0.3
+module suite65.sandbox_engine.static_safety_content_defense
+use Security
+policy no_network
+
+principal SandboxStaticSafetyGate
+role SandboxStaticSafetyEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant sandbox.static_scan.evaluate:approved
+}
+resource SandboxStaticInput classification untrusted
+policy SandboxStaticSafetyPolicy {
+    deny network.* by default
+    deny process.* by default
+    deny SandboxStaticInput when principal.role != SandboxStaticSafetyEnsemble
+    allow SandboxStaticInput when principal.role == SandboxStaticSafetyEnsemble
+    require human_approval for sandbox.static_finding.override
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "SandboxStaticSafetyPolicy.decision.mcrt"

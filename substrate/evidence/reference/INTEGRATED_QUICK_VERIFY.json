@@ -1,0 +1,88 @@
+{
+  "component_map": {
+    "count": 110,
+    "ok": true,
+    "unique": 110
+  },
+  "doctor": {
+    "bound_nodes": [
+      "N_LARGE",
+      "N_MEDIUM",
+      "N_SMALL",
+      "N_XLARGE"
+    ],
+    "component_map": {
+      "count": 110,
+      "ok": true,
+      "unique": 110
+    },
+    "fabric_attest_exit": 0,
+    "hint": "If C nodes are unbound, run BUILD_VEC1.cmd. On Windows use an MSYS2/MinGW-compatible C11+GNU make+OpenSSL toolchain or another environment that satisfies the DF package REQUIREMENTS.txt files.",
+    "make": "/usr/bin/make",
+    "network_policy": "deny",
+    "nodes": {
+      "N_LARGE": {
+        "bound": true,
+        "present": true,
+        "root": "/mnt/data/VEC1_ES_0.1.0/DF_Large/vm/BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE_61K",
+        "sums_match": true
+      },
+      "N_MEDIUM": {
+        "bound": true,
+        "present": true,
+        "root": "/mnt/data/VEC1_ES_0.1.0/DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC",
+        "sums_match": true
+      },
+      "N_SMALL": {
+        "bound": true,
+        "present": true,
+        "root": "/mnt/data/VEC1_ES_0.1.0/DF_Small/vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K",
+        "sums_match": true
+      },
+      "N_XLARGE": {
+        "bound": true,
+        "present": true,
+        "root": "/mnt/data/VEC1_ES_0.1.0/DF_Xtra_Large/vm/QUORUM_LCTL_MSSL_2.1.0",
+        "sums_match": true
+      }
+    },
+    "ok": true,
+    "paths": {
+      "DF_Fabric": true,
+      "DF_Large": true,
+      "DF_Medium": true,
+      "DF_Small": true,
+      "DF_Xtra_Large": true,
+      "Technical_Institute": true,
+      "config": true,
+      "evidence": true,
+      "governance": true
+    },
+    "platform": "linux",
+    "python": "3.13.5",
+    "ready_for_strict_execution": true,
+    "schema": "VEC1/DOCTOR/1",
+    "sh": "/usr/bin/sh",
+    "version": "0.1.0-candidate"
+  },
+  "fabric_exit": 0,
+  "fabric_verdict": "CROSS_NODE_DIFFERENTIAL_AGREEMENT",
+  "ledger_checks": {},
+  "replay_ok": true,
+  "schema": "VEC1/VERIFY/1",
+  "security_policy": {
+    "cross_machine_federation": "disabled",
+    "filesystem": "package-runtime-only",
+    "host_calls": "deny-unless-allowlisted",
+    "integrity_failure": "fail-closed",
+    "network": "deny",
+    "node_disagreement": "fail-closed",
+    "physical_qpu_claims": "forbidden",
+    "plugins": "deny-unless-allowlisted",
+    "schema": "VEC1/SECURITY_POLICY/1",
+    "schema_failure": "fail-closed",
+    "unbound_required_node": "fail-closed"
+  },
+  "static_ok": true,
+  "verdict": "PASS"
+}

@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "55a35c304aa0051e3524cc68a7d39e8fce7d08525932dfd1f104f340bffefc00",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Action Cards",
+  "module_id": 49,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

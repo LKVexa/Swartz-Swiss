@@ -1,0 +1,47 @@
+profile ja.agent
+source_level 0.3
+
+subsuite Terminal.T_07 ProfessorProposalActionCard {
+    identity { suite = "66"; id = "T-07"; deterministic = true; autorun = false }
+
+    principal PROFESSOR {
+        may = explain + plan + propose + review
+        must_not = execute + authorize + modify_repository
+    }
+
+    accept {
+        NormalizedTerminalContract
+        PinnedTerminalRepositoryContext
+        TerminalEnvironmentManifest
+        TerminalCapabilityManifest
+        parsed_command_ast
+    }
+
+    emit ProfessorTerminalActionCard
+
+    procedure propose(contract, context, environment, policy, ast) {
+        card = ProfessorTerminalActionCard {
+            objective = contract.intent
+            constraints
+            assumptions
+            planned_steps = ast.reviewable_steps
+            required_capabilities = policy.capabilities
+            expected_artifacts = contract.output_contract
+            completion_criteria
+            validation_requirements
+            risks
+            impact
+            rollback_needs
+            command_display = non_authoritative_display(ast)
+            hashes = contract.contract_hash + context.hash + policy.hash
+            approval_requirements
+        }
+        require card.complete
+        return card
+    }
+
+    deny { silent_execution; hidden_step; fabricated_evidence; incomplete_action_card }
+    evidence { action_card; explanation_refs; assumptions; proposal_hash }
+    tests { complete_card; execution_attempt_denied; evidence_grounding }
+}
+

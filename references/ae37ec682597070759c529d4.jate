@@ -1,0 +1,30 @@
+ja source 0.3
+module suite36.visual_correction.verification_and_rollback
+use Training
+policy no_network
+
+experiment VisualCorrectionVerificationAndRollback {
+    model ref "models/sophia_charlotte_landon_professor_podium/verification_and_rollback"
+    dataset ref "datasets/visual_correction/verification_cases" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 32 accumulate 2
+    precision mixed
+    seed 3606
+    checkpoint every 16 steps
+    evaluate {
+        metric defect_resolution
+        metric regression_safety
+        metric deterministic_replay
+        metric rollback_readiness
+        metric loss
+        require defect_resolution >= 0.95
+        require regression_safety >= 0.99
+        require deterministic_replay >= 1.00
+        require rollback_readiness >= 1.00
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "VisualCorrectionVerificationAndRollback.lineage.mcrt"

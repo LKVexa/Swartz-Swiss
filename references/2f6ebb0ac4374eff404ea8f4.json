@@ -1,0 +1,85 @@
+{
+  "decision": "OPERATIONAL",
+  "package": "BR-420-06",
+  "requirements": [
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-06_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: capability_state_declared_derived",
+      "requirement": "Declare required capabilities",
+      "requirement_id": "BR-420-06-R01",
+      "result": "PASS",
+      "sha256": "1b795e22d5e656101d0b9868eea1fa8e971cbca73b68f445854306779cc7850d",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-06_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: capability_reject_undeclared_state",
+      "requirement": "Derive capability set",
+      "requirement_id": "BR-420-06-R02",
+      "result": "PASS",
+      "sha256": "1b795e22d5e656101d0b9868eea1fa8e971cbca73b68f445854306779cc7850d",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-06_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: capability_reject_undeclared_device",
+      "requirement": "Ensure instructions cannot exceed declared capabilities",
+      "requirement_id": "BR-420-06-R03",
+      "result": "PASS",
+      "sha256": "1b795e22d5e656101d0b9868eea1fa8e971cbca73b68f445854306779cc7850d",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-06_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: capability_privileged_instruction_declared",
+      "requirement": "Reject undeclared device access",
+      "requirement_id": "BR-420-06-R04",
+      "result": "PASS",
+      "sha256": "1b795e22d5e656101d0b9868eea1fa8e971cbca73b68f445854306779cc7850d",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-06_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: capability_reject_undeclared_privileged",
+      "requirement": "Reject undeclared persistent-state access",
+      "requirement_id": "BR-420-06-R05",
+      "result": "PASS",
+      "sha256": "1b795e22d5e656101d0b9868eea1fa8e971cbca73b68f445854306779cc7850d",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-06_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: capability_state_declared_derived",
+      "requirement": "Reject undeclared privileged instructions",
+      "requirement_id": "BR-420-06-R06",
+      "result": "PASS",
+      "sha256": "1b795e22d5e656101d0b9868eea1fa8e971cbca73b68f445854306779cc7850d",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "title": "Capability verification"
+}

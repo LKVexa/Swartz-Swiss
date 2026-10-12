@@ -1,0 +1,54 @@
+{
+  "commands": [
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.1.0_COLUMNED_LCTL_PRODUCTION_EXECUTION_BOUNDARY_61K/.build/br_tests",
+      "elapsed_ns": 209721148,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "PASS core_selftest\nPASS lifecycle_create_initialize_configure_reset_load_verify_start_step_run_suspend_resume_stop_fault_destroy\nPASS explicit_instance_isolation\nPASS hal_memory_all_16_calls\nPASS hal_deterministic_adapter\nPASS hal_bare_metal_adapter\nPASS hal_smart_card_adapter\nPASS posix_adapter_storage_monotonic\nPASS windows_adapter_portable_contract\nPASS same_brim_three_adapters\nPASS persistence_dual_slot_monotonic_replay\nPASS loader_error_model_abi_isa_integrity_replay\nPASS sandbox_caps_fixed_host_table_bounds_quotas\nPASS per_instance_device_table\nPASS apdu_length_pointer_protocol_rejection\nPASS wide_1048576_bit_stack_roundtrip\nPASS execution_budget_and_cancel\nPASS public_pointer_validation\n{\"suite\":\"BR-410\",\"tests\":18,\"failures\":0,\"result\":\"PASS\"}\n"
+    },
+    {
+      "command": "make operational",
+      "elapsed_ns": 1024299542,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "make[1]: Entering directory '/mnt/data/BOTTLE_ROCKET_4.1.0_COLUMNED_LCTL_PRODUCTION_EXECUTION_BOUNDARY_61K'\n! grep -En '#include <(stdio|unistd|fcntl|sys/|openssl)|\\b(fopen|fread|fwrite|open|read|write|rename|unlink|fsync|getenv|isatty|EVP_|RAND_)\\b' src/brvm.c\n.build/br_tests\nPASS core_selftest\nPASS lifecycle_create_initialize_configure_reset_load_verify_start_step_run_suspend_resume_stop_fault_destroy\nPASS explicit_instance_isolation\nPASS hal_memory_all_16_calls\nPASS hal_deterministic_adapter\nPASS hal_bare_metal_adapter\nPASS hal_smart_card_adapter\nPASS posix_adapter_storage_monotonic\nPASS windows_adapter_portable_contract\nPASS same_brim_three_adapters\nPASS persistence_dual_slot_monotonic_replay\nPASS loader_error_model_abi_isa_integrity_replay\nPASS sandbox_caps_fixed_host_table_bounds_quotas\nPASS per_instance_device_table\nPASS apdu_length_pointer_protocol_rejection\nPASS wide_1048576_bit_stack_roundtrip\nPASS execution_budget_and_cancel\nPASS public_pointer_validation\n{\"suite\":\"BR-410\",\"tests\":18,\"failures\":0,\"result\":\"PASS\"}\npython3 tools/qualify.py --lctl-only >/dev/null\nmkdir -p deploy; .build/brctl assemble src/BOOT.lctlc deploy/BOTTLE_ROCKET_SIM_CORE_4.1.0.brimg --factory\ntest \"$(wc -c < deploy/BOTTLE_ROCKET_SIM_CORE_4.1.0.brimg)\" -le 51200\n.build/brctl build-image .build/factory.brimg && cmp deploy/BOTTLE_ROCKET_SIM_CORE_4.1.0.brimg .build/factory.brimg\n.build/brctl assemble src/BOOT.lctlc .build/a.brimg --factory && .build/brctl assemble src/BOOT.lctlc .build/b.brimg --factory && cmp .build/a.brimg .build/b.brimg\n.build/brctl run deploy/BOTTLE_ROCKET_SIM_CORE_4.1.0.brimg\n{\"status\":2,\"trap\":0,\"R2\":42}\n.build/br_sizes\n{\"record\":\"BOTTLE_ROCKET.RuntimeMemoryMeasurement\",\"word_bits\":1048576,\"word_bytes\":131072,\"register_count\":16,\"register_requested_bytes\":2097152,\"register_usable_bytes\":2101232,\"stack_words\":256,\"stack_requested_bytes\":33554432,\"stack_usable_bytes\":33558512,\"scratch_words\":2,\"scratch_requested_bytes\":262144,\"scratch_usable_bytes\":266232,\"fragment_requested_bytes\":51200,\"fragment_usable_bytes\":51208,\"vm_inline_bytes\":8792,\"heap_requested_bytes\":35964928,\"heap_usable_bytes\":35977184,\"allocator_overhead_bytes\":12256,\"rss_before_init_kib\":1408,\"rss_idle_kib\":1864,\"native_stack_limit_bytes\":8388608}\nrm -f .build/k .build/p .build/s.brimg .build/state*; .build/brctl keygen .build/k .build/p\n.build/brctl sign-image deploy/BOTTLE_ROCKET_SIM_CORE_4.1.0.brimg .build/s.brimg .build/k\n.build/brctl verify-image .build/s.brimg .build/p && .build/brctl run-signed .build/s.brimg .build/p\n{\"image_version\":6,\"bytes\":240,\"status\":0,\"trap\":0}\n{\"image_version\":6,\"bytes\":240,\"status\":2,\"trap\":0}\n{ printf 'LCTLC/1.0\\n@unit id=br.alt version=4.1.0 profile=native br_image_version=7 br_request_caps=CONTROL|UPDATE\\n@defaults qspace=H basis=computational regime=exact assume=finite_dimension error=exact conf=1.0\\n@frame id=F parent=ROOT module=br.alt\\nID\u2502LANE\u2502OP\u2502OUT\u2502CTRL\u2502IN\u2502ARG\u2502META\\nD0\u2502a\u2502Q\u2502q\u2502_\u2502_\u25021\u2502p=br:sentinel\\n'; i=0; while [ $i -lt 255 ]; do printf 'N%03d\u2502e\u2502NOP\u2502R0\u2502C0\u2502_\u2502br.op=NOP;br.mode=WRAP;br.imm=0\u2502qs=C;p=br:isa\\n' $i; i=$((i+1)); done; printf 'H\u2502e\u2502NOP\u2502R0\u2502C0\u2502_\u2502br.op=HALT;br.mode=WRAP;br.imm=0\u2502qs=C;p=br:isa\\n@end\\n'; } > .build/alt.lctlc\n.build/brctl assemble .build/alt.lctlc .build/alt.brimg && .build/brctl sign-image .build/alt.brimg .build/alt.signed .build/k\n.build/brctl update .build/alt.signed .build/p --state .build/state\n{\"update\":\"PASS\",\"version\":7,\"generation\":1}\n.build/brctl recover-state .build/state .build/p\n{\"generation\":1,\"image_version\":7,\"txid\":1,\"slot\":1}\nprintf '010800000200000000000000\\n' | .build/brctl serve --state .build/state .build/p | grep '^9000'\n9000020000000000\n! .build/brctl update .build/s.brimg .build/p --state .build/state\nrm -f .build/k .build/p .build/s.brimg .build/alt* .build/state*\nmake[1]: Leaving directory '/mnt/data/BOTTLE_ROCKET_4.1.0_COLUMNED_LCTL_PRODUCTION_EXECUTION_BOUNDARY_61K'\n"
+    },
+    {
+      "command": "make sanitize",
+      "elapsed_ns": 2482211083,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "make[1]: Entering directory '/mnt/data/BOTTLE_ROCKET_4.1.0_COLUMNED_LCTL_PRODUCTION_EXECUTION_BOUNDARY_61K'\ncc -Isrc -Iadapters -std=c11 -O1 -g -Wall -Wextra -Werror -fsanitize=address,undefined src/brvm.c adapters/br_memory_adapter.c adapters/br_posix_adapter.c adapters/br_windows_adapter.c tests/test_410.c -o .build/san -lcrypto\nASAN_OPTIONS=detect_leaks=0 .build/san\nPASS core_selftest\nPASS lifecycle_create_initialize_configure_reset_load_verify_start_step_run_suspend_resume_stop_fault_destroy\nPASS explicit_instance_isolation\nPASS hal_memory_all_16_calls\nPASS hal_deterministic_adapter\nPASS hal_bare_metal_adapter\nPASS hal_smart_card_adapter\nPASS posix_adapter_storage_monotonic\nPASS windows_adapter_portable_contract\nPASS same_brim_three_adapters\nPASS persistence_dual_slot_monotonic_replay\nPASS loader_error_model_abi_isa_integrity_replay\nPASS sandbox_caps_fixed_host_table_bounds_quotas\nPASS per_instance_device_table\nPASS apdu_length_pointer_protocol_rejection\nPASS wide_1048576_bit_stack_roundtrip\nPASS execution_budget_and_cancel\nPASS public_pointer_validation\n{\"suite\":\"BR-410\",\"tests\":18,\"failures\":0,\"result\":\"PASS\"}\nmake[1]: Leaving directory '/mnt/data/BOTTLE_ROCKET_4.1.0_COLUMNED_LCTL_PRODUCTION_EXECUTION_BOUNDARY_61K'\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.1.0_COLUMNED_LCTL_PRODUCTION_EXECUTION_BOUNDARY_61K/.build/br_tests",
+      "elapsed_ns": 203744175,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "PASS core_selftest\nPASS lifecycle_create_initialize_configure_reset_load_verify_start_step_run_suspend_resume_stop_fault_destroy\nPASS explicit_instance_isolation\nPASS hal_memory_all_16_calls\nPASS hal_deterministic_adapter\nPASS hal_bare_metal_adapter\nPASS hal_smart_card_adapter\nPASS posix_adapter_storage_monotonic\nPASS windows_adapter_portable_contract\nPASS same_brim_three_adapters\nPASS persistence_dual_slot_monotonic_replay\nPASS loader_error_model_abi_isa_integrity_replay\nPASS sandbox_caps_fixed_host_table_bounds_quotas\nPASS per_instance_device_table\nPASS apdu_length_pointer_protocol_rejection\nPASS wide_1048576_bit_stack_roundtrip\nPASS execution_budget_and_cancel\nPASS public_pointer_validation\n{\"suite\":\"BR-410\",\"tests\":18,\"failures\":0,\"result\":\"PASS\"}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.1.0_COLUMNED_LCTL_PRODUCTION_EXECUTION_BOUNDARY_61K/.build/br_tests",
+      "elapsed_ns": 232439741,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "PASS core_selftest\nPASS lifecycle_create_initialize_configure_reset_load_verify_start_step_run_suspend_resume_stop_fault_destroy\nPASS explicit_instance_isolation\nPASS hal_memory_all_16_calls\nPASS hal_deterministic_adapter\nPASS hal_bare_metal_adapter\nPASS hal_smart_card_adapter\nPASS posix_adapter_storage_monotonic\nPASS windows_adapter_portable_contract\nPASS same_brim_three_adapters\nPASS persistence_dual_slot_monotonic_replay\nPASS loader_error_model_abi_isa_integrity_replay\nPASS sandbox_caps_fixed_host_table_bounds_quotas\nPASS per_instance_device_table\nPASS apdu_length_pointer_protocol_rejection\nPASS wide_1048576_bit_stack_roundtrip\nPASS execution_budget_and_cancel\nPASS public_pointer_validation\n{\"suite\":\"BR-410\",\"tests\":18,\"failures\":0,\"result\":\"PASS\"}\n"
+    }
+  ],
+  "negative_contracts": [
+    "malformed/truncated/unsupported ABI/ISA/integrity/replay rejected",
+    "capability violations return BR_ECAP",
+    "bounds/pointer errors rejected",
+    "resource quota/execution budget enforced",
+    "APDU malformed length/protocol rejected"
+  ],
+  "same_brim_multiple_adapters": true,
+  "suite": {
+    "failures": 0,
+    "result": "PASS",
+    "suite": "BR-410",
+    "tests": 18
+  },
+  "wide_word_boundary_bits": 1048576
+}

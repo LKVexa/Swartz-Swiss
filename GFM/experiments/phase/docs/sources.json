@@ -1,0 +1,141 @@
+{
+  "schema": "GFM-Research-scientific-sources/1",
+  "prepared": "2026-10-11",
+  "status": "Primary catalogue; independent numerical and 29 software tests passed; actual browser GPU/controls/export replay passed; final integration runtime fingerprints and package verification pending",
+  "certification": "No NASA certification, approval, or full standards-compliance claim",
+  "sources": [
+    {
+      "id": "nasa-7009b",
+      "title": "NASA-STD-7009B: Standard for Models and Simulations",
+      "organization": "NASA Office of the Chief Engineer",
+      "date": "2024-03-05",
+      "type": "Primary technical standard",
+      "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/B/1/NASA-STD-7009B-Final-3-5-2024.pdf",
+      "catalogueUrl": "https://standards.nasa.gov/standard/NASA/NASA-STD-7009",
+      "locations": ["Sections 4.1-4.3", "Appendix E"],
+      "use": "Credibility checklist and evidence taxonomy",
+      "doesNotEstablish": "Project certification or prescribed numerical tolerances"
+    },
+    {
+      "id": "gralla-lupsasca-2020",
+      "title": "Null geodesics of the Kerr exterior",
+      "authors": ["Samuel E. Gralla", "Alexandru Lupsasca"],
+      "year": 2020,
+      "type": "Primary research paper",
+      "doi": "10.1103/PhysRevD.101.044032",
+      "url": "https://arxiv.org/html/1910.12881v2",
+      "journalUrl": "https://doi.org/10.1103/PhysRevD.101.044032",
+      "locations": ["Equations 1-9", "Section IV"],
+      "use": "Boyer-Lindquist Kerr potentials and Mino parametrization",
+      "doesNotEstablish": "Implementation accuracy, emission intensity, or aperture/cover physics"
+    },
+    {
+      "id": "teo-2003",
+      "title": "Spherical photon orbits around a Kerr black hole",
+      "authors": ["Edward Teo"],
+      "year": 2003,
+      "type": "Primary research paper hosted by the author's institution",
+      "doi": "10.1023/A:1026286607562",
+      "url": "https://www.physics.nus.edu.sg/wp-content/uploads/sites/5/2019/10/paper.pdf",
+      "locations": ["Equations 1-11"],
+      "use": "Metric, photon-orbit radii and spherical-orbit double-root benchmarks",
+      "doesNotEstablish": "Current solver convergence or horizon-interior continuation"
+    },
+    {
+      "id": "carter-1968",
+      "title": "Global Structure of the Kerr Family of Gravitational Fields",
+      "authors": ["Brandon Carter"],
+      "year": 1968,
+      "type": "Primary historical research paper",
+      "doi": "10.1103/PhysRev.174.1559",
+      "url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.174.1559",
+      "authorCopy": "https://people-lux.obspm.fr/carter/trav/Carter68.pdf",
+      "use": "Historical Kerr separability and conserved-quantity pedigree",
+      "doesNotEstablish": "Equivalence of incomplete user-supplied metric diagrams"
+    },
+    {
+      "id": "chis-banga-balsa-canto-2011",
+      "title": "Structural Identifiability of Systems Biology Models: A Critical Comparison of Methods",
+      "authors": ["Oana-Teodora Chis", "Julio R. Banga", "Eva Balsa-Canto"],
+      "year": 2011,
+      "type": "Primary methodology research paper",
+      "doi": "10.1371/journal.pone.0027755",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0027755",
+      "locations": ["Structural identifiability definition"],
+      "use": "Observation-map identifiability concept; project equal-likelihood result is a direct inference",
+      "doesNotEstablish": "An astrophysical cover classifier or empirical validation of this model"
+    },
+    {
+      "id": "eht-m87-vi-2019",
+      "title": "First M87 Event Horizon Telescope Results. VI. The Shadow and Mass of the Central Black Hole",
+      "authors": ["Event Horizon Telescope Collaboration"],
+      "year": 2019,
+      "type": "Primary observational research paper",
+      "doi": "10.3847/2041-8213/ab1141",
+      "url": "https://arxiv.org/abs/1906.11243",
+      "use": "Example of visibility-data/model comparison; not a validation dataset used by this project",
+      "doesNotEstablish": "Aperture/cover formation, passage, or agreement of this renderer with observations"
+    },
+    {
+      "id": "project-kerr-implementation",
+      "title": "Project Kerr implementation and coordinate-display conventions",
+      "type": "Local implementation and explicit derivation/convention",
+      "paths": ["backend/relativity.cjs", "validation/independent-kerr-check.py", "validation/independent-relativity-results.json"],
+      "sourceSha256": "94facda381ccf78ed204114d7e02929c99e513c898e343a76712feb576607f77",
+      "use": "Inverse-radius/cosine variable changes, coordinate embedding, and measured numerical evidence",
+      "doesNotEstablish": "Proper-distance visualization or empirical agreement"
+    },
+    {
+      "id": "preserved-gfm-engine",
+      "title": "Preserved RUSSL GFM Terminal 0.5.1 computation modules",
+      "type": "Local implementation provenance",
+      "paths": ["SOURCE_PROVENANCE.json", "backend/gfm/gfm-mechanics.js", "backend/gfm/horizon-gr.js", "backend/gfm/horizon-scenario.js"],
+      "use": "Exact inherited byte hashes and implemented representation/hypothesis rules",
+      "doesNotEstablish": "Empirical physical support for the user hypothesis"
+    },
+    {
+      "id": "user-aperture-hypothesis",
+      "title": "User-supplied aperture/cover hypothesis",
+      "type": "Declared hypothesis rather than a scientific validation source",
+      "paths": ["vendor/terminal/reference/blackhole-specification", "backend/simulation.cjs"],
+      "use": "Provenance of assumed opening, sealing and passage rules",
+      "doesNotEstablish": "A derivation from standard Kerr geometry or an observed astronomical mechanism"
+    }
+  ],
+  "equations": [
+    {"id":"kerr-metric","sources":["teo-2003","gralla-lupsasca-2020"],"classification":"Established reference geometry","symbols":"M mass, a=J/M, Sigma, Delta; spacetime electric charge Q_e=0","implementation":"backend/relativity.cjs","verificationStatus":"Independent reconstruction passed for documented sampled trajectories"},
+    {"id":"carter-potentials","sources":["gralla-lupsasca-2020","teo-2003"],"classification":"Established neutral-null geodesic equations","symbols":"E=1, L=Lz/E, eta=Q_C/E^2; Q_C is not electric charge","implementation":"backend/relativity.cjs","verificationStatus":"Independent first-integral/metric checks passed for documented cases"},
+    {"id":"inverse-radius-cosine-system","sources":["gralla-lupsasca-2020","project-kerr-implementation"],"classification":"Project chain-rule reparameterization of established equations","symbols":"u=1/r, mu=cos(theta), primes are Mino derivatives","implementation":"backend/relativity.cjs","verificationStatus":"Independent trajectory reconstruction passed for documented cases"},
+    {"id":"photon-orbit-benchmarks","sources":["teo-2003","project-kerr-implementation"],"classification":"Analytic reference; Schwarzschild b_critical follows from double-root potential","implementation":"backend/relativity.cjs and independent validation","verificationStatus":"15 mass/spin analytic cases and documented trajectory boundaries passed; extremal prograde horizon is excluded from regular exterior double-root test"},
+    {"id":"critical-numerical-guard","sources":["project-kerr-implementation","teo-2003"],"classification":"Project numerical uncertainty policy near an unstable radial double root; not a physical layer","symbols":"normalized stationary-potential gap, tolerance-dependent band, critical-limit outcome","implementation":"backend/relativity.cjs","verificationStatus":"Independent dimensionless stationary-root/band reconstruction and 37 unresolved critical-limit rays passed; off-band capture/escape checked at three tolerances"},
+    {"id":"oblate-display-embedding","sources":["project-kerr-implementation"],"classification":"Project coordinate-display convention, not Euclidean proper distance","symbols":"y polar axis; x,z use sqrt(r^2+a^2)*sin(theta)","implementation":"backend/relativity.cjs and public/renderer.js","verificationStatus":"Exported coordinate arithmetic and actual research GPU/camera behavior verified within documented scope"},
+    {"id":"aperture-cover-passage","sources":["user-aperture-hypothesis","preserved-gfm-engine"],"classification":"Speculative declared rule","symbols":"spin>critical opens; load>=threshold seals","implementation":"backend/simulation.cjs","verificationStatus":"235 inherited snapshots and one fresh current-backend snapshot passed independent reconstruction; empirical support absent","empiricalValidation":"none"},
+    {"id":"gf9-trace-transform","sources":["preserved-gfm-engine"],"classification":"Complex representation transform indexed by a finite field; no new gravitational dynamics","symbols":"GF9=F3[alpha]/(alpha^2+1), trace-character kernel, raw nine-sample spin sweep","implementation":"backend/gfm/gfm-mechanics.js","verificationStatus":"236 snapshots and nine independent basis round trips passed; empirical physical validation none"},
+    {"id":"equal-exterior-posterior","sources":["chis-banga-balsa-canto-2011","user-aperture-hypothesis"],"classification":"Project inference from equal likelihoods and Bayes rule","symbols":"posterior=prior for equal branch likelihoods under the declared protocol","implementation":"backend/gfm/horizon-scenario.js","verificationStatus":"declared-model inference; no empirical classifier"}
+  ],
+  "verificationEvidence": {
+    "solverCases": "validation/independent-relativity-cases.json",
+    "independentResult": "validation/independent-relativity-results.json",
+    "refinementAndNegativeChecks": "validation/kerr-convergence-and-negative-checks.json",
+    "hypothesisResult": "validation/research-hypothesis-independent.json",
+    "softwareTests": "validation/research-tests.txt",
+    "counts": {"cases":115,"rays":205,"sampledPoints":29245,"criticalLimitRays":37,"negativeChecks":8,"softwareTests":29},
+    "liveResearchBrowser": {
+      "report": "validation/browser/research-browser-qa.json",
+      "passed": true,
+      "status": "partial",
+      "checksPassed": 10,
+      "exactFrozenSolverReplay": {"report":"validation/browser/live-export-replay.json","rays":32,"points":6079,"passed":true},
+      "finalIntegrationRuntimeFingerprint": "pending service restart; output replay does not establish in-memory module fingerprints"
+    },
+    "plannedPackage": {
+      "status": "planned; packaging verification not yet run at document freeze",
+      "summary": "validation/verification-summary.json",
+      "manifest": "SHA256SUMS.txt",
+      "archive": "../outputs/GFM_Research_Simulator_v2.0.0.zip",
+      "preservedHistoricalSummary": "validation/verification-summary-v1.0.0.json",
+      "preservedHistoricalManifest": "validation/SHA256SUMS-v1.0.0.txt"
+    },
+    "empiricalValidation": "none"
+  }
+}

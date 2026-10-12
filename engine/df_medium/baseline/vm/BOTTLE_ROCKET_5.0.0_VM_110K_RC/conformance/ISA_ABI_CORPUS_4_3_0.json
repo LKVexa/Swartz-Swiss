@@ -1,0 +1,267 @@
+{
+  "record": "BR-430.ISA_ABI.ConformanceCorpus",
+  "version": "4.3.0",
+  "isa": "4.1",
+  "abi": "1.0",
+  "positive_opcode_vectors": [
+    "NOP",
+    "MOVI",
+    "MOV",
+    "JMP",
+    "JZ",
+    "JNZ",
+    "HALT",
+    "ADD",
+    "SUB",
+    "MUL",
+    "DIVU",
+    "MODU",
+    "AND",
+    "OR",
+    "XOR",
+    "NOT",
+    "SHL",
+    "SHR",
+    "CMP",
+    "LOAD",
+    "STORE",
+    "PUSH",
+    "POP",
+    "SVC",
+    "CALL",
+    "RET",
+    "YIELD",
+    "TRAP",
+    "CAPQ",
+    "CHECKPOINT",
+    "LDX",
+    "STX"
+  ],
+  "negative_opcode_vectors": [
+    {
+      "opcode": "NOP",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "MOVI",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "MOV",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "JMP",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "JZ",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "JNZ",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "HALT",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "ADD",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "SUB",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "MUL",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "DIVU",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "MODU",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "AND",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "OR",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "XOR",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "NOT",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "SHL",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "SHR",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "CMP",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "LOAD",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "STORE",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "PUSH",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "POP",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "SVC",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "CALL",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "RET",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "YIELD",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "TRAP",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "CAPQ",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "CHECKPOINT",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "LDX",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    },
+    {
+      "opcode": "STX",
+      "case": "invalid destination register R16",
+      "expected_trap": "INVALID_REGISTER"
+    }
+  ],
+  "boundary_vectors": [
+    "zero",
+    "one",
+    "u64_max",
+    "wide_all_ones",
+    "word_bits-1 shift",
+    "word_bits shift rejection",
+    "memory 0",
+    "memory 4088",
+    "unaligned memory",
+    "indexed overflow"
+  ],
+  "modes": [
+    "WRAP",
+    "CHECKED",
+    "SATURATE",
+    "TRAPPING"
+  ],
+  "required_traps": [
+    "illegal_opcode",
+    "malformed_instruction",
+    "invalid_register",
+    "invalid_memory",
+    "access_violation",
+    "capability_violation",
+    "divide_by_zero",
+    "arithmetic_overflow",
+    "stack_overflow",
+    "stack_underflow",
+    "resource_exhaustion",
+    "execution_budget",
+    "device_error",
+    "signature_failure"
+  ],
+  "control_flow": [
+    "taken/not-taken conditional",
+    "CALL/RET",
+    "CFI continuation check",
+    "HALT",
+    "YIELD",
+    "execution budget"
+  ],
+  "services": [
+    "YIELD",
+    "STATUS",
+    "REVOKE",
+    "DELEGATE",
+    "CONFIGURE",
+    "COMMIT",
+    "DIAG_EVENT",
+    "SHA256",
+    "ED25519_VERIFY",
+    "DEVICE_CALL",
+    "CONSOLE_READ",
+    "CONSOLE_WRITE",
+    "STORAGE_READ",
+    "STORAGE_WRITE",
+    "ENTROPY",
+    "MONOTONIC",
+    "TIMER",
+    "DIAGNOSTIC",
+    "MAILBOX",
+    "DEVICE_ENUM"
+  ],
+  "runner": "tests/isa_abi_conformance.c"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 17,
+  "legacy_root": "legacy/source_repository/Asset Observer",
+  "legacy_sha256": "6985247f393e0cd232aa5787e5c927634171fd0dad69543f79f49191258db2b5",
+  "files": [
+    {
+      "path": "17.1_Asset_Observer_Images.deepml",
+      "sha256": "a363c3ab2b3f4d2994676d267171f731764db13b7455726d9e2c75dcb3fd0ab9",
+      "bytes": 1314
+    },
+    {
+      "path": "17.2_Asset_Observer_Video.deepml",
+      "sha256": "f73a0559b42c02facbcc1ccfacc2cd67043bde976847bf499c0e17c09602b545",
+      "bytes": 1386
+    },
+    {
+      "path": "17.3_Asset_Observer_Archives.deepml",
+      "sha256": "47d8eae524ea9829c9fd4aa0d2700098bd2855a210feef9a9ef0ff0f3ffefd18",
+      "bytes": 1263
+    },
+    {
+      "path": "17.4_Asset_Observer_UI_Assets.deepml",
+      "sha256": "bc89af6575105416739f090662b5d9ef5fe6c19961f5bf33db1dbd5321a47bfc",
+      "bytes": 1287
+    },
+    {
+      "path": "17.5_Asset_Observer_Code.deepml",
+      "sha256": "ef1933bebb27f342db032cc8499ae01aa92c50829867783a4645a79bbbeb9acd",
+      "bytes": 1250
+    },
+    {
+      "path": "17.6_Asset_Observer_Metadata.deepml",
+      "sha256": "779f42e4c0fbf918255615efcad79e2b15ab770951485e5e74759b927f49e81b",
+      "bytes": 1255
+    },
+    {
+      "path": "README.md",
+      "sha256": "3dee8fecdd0d0ff71a44c2d218a1f292ac9749d3e909a31f2b9a21b406e1d700",
+      "bytes": 9899
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

@@ -1,0 +1,27 @@
+ja source 0.3
+module suite52.evaluation_content_defense.malicious_repository_content_evaluation
+use Security
+policy no_network
+
+principal RepositoryContentEvaluationWorker
+role EvaluationDefenseEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant repository_content.evaluate:approved
+}
+resource RepositoryContentCandidate classification restricted
+policy RepositoryContentEvaluationPolicy {
+    deny network.* by default
+    deny process.* by default
+    deny RepositoryContentCandidate when principal.role != EvaluationDefenseEnsemble
+    allow RepositoryContentCandidate when principal.role == EvaluationDefenseEnsemble
+    require human_approval for repository_content.release
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "RepositoryContentEvaluationPolicy.decision.mcrt"

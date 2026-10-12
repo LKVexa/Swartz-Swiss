@@ -1,0 +1,105 @@
+{
+  "inputs": [
+    {
+      "bytes": 5088669,
+      "name": "PROJECT_LCTL_MSSL_L4_L9_OPEN_2.1.0_CANDIDATE.zip",
+      "sha256": "45942331714562ea25b9cbdf81094fe97702fb4e0e229223137e68deb9db0daf"
+    },
+    {
+      "bytes": 554254,
+      "name": "COLUMNED_LCTL_CORPUS_1.0.0.zip",
+      "sha256": "b60b268a05b817bd7a9865f77f36b26b3952ef9bc28023eb3a8216b908bb634e"
+    },
+    {
+      "bytes": 5970356,
+      "name": "LCTL_1.6.1_RC1_COLUMNED_HYPERFEDERATED_EXECUTION_LANGUAGE.zip",
+      "sha256": "f4bb3c50e16f40cb243fc25c134d997b93efb09ee24dfff2b2e6c0a912fe25c5"
+    },
+    {
+      "bytes": 5678614,
+      "name": "MSSL_WRITERS_CORPUS_1.0.0 (1).zip",
+      "sha256": "4019023232fc43c659ddebf3ab69b92e25e91731ec7400e6d43033b435b3920b"
+    },
+    {
+      "bytes": 58613,
+      "name": "11_5_0_0_columned_lctl_fully_operational_vm.zip",
+      "sha256": "2f44460eeb508b0dacc45d99203eef8fefd072820bfd7582903bf203c1014d08"
+    },
+    {
+      "bytes": 44157,
+      "name": "10_4_9_0_release_candidate_operational_qualification.zip",
+      "sha256": "88781144bc39114ded2db67e2280dadc2a675172fe687370fac8343ea0ed4a7b"
+    },
+    {
+      "bytes": 67436,
+      "name": "09_4_8_0_independent_verification_security_qualification.zip",
+      "sha256": "e6208e73ea79a41435afcadc57b2a2eb6f7ac44a5a2dbbbc602c456d1c31a9cd"
+    },
+    {
+      "bytes": 51147,
+      "name": "08_4_7_0_virtual_device_i_o_service_architecture.zip",
+      "sha256": "b969248b8a2bb811d8c8a5435083c7798d7013f0e4cfef09137a499677bf2c08"
+    },
+    {
+      "bytes": 47396,
+      "name": "07_4_6_0_wide_state_memory_performance_architecture.zip",
+      "sha256": "425d5e949420cf53deed02eda380d367303945f8abba7fdaef4aaf4ad25a56f4"
+    },
+    {
+      "bytes": 44160,
+      "name": "06_4_5_0_transactional_persistence_crash_recovery.zip",
+      "sha256": "526bd18feaae244466523ac621e8f51d6394411f653fb851237f62c6417f7566"
+    },
+    {
+      "bytes": 43905,
+      "name": "05_4_4_0_secure_boot_signing_trust_authority.zip",
+      "sha256": "4fb8a52a879bb6aef7fe79a5c7e9a0bb7f25831e2669c0b5492165127464cf1c"
+    },
+    {
+      "bytes": 58856,
+      "name": "04_4_3_0_production_isa_abi_completion.zip",
+      "sha256": "db45ced2de551689f7e11abb01af4e2845e06d2bbe76acc55dc355c09e72c1b8"
+    },
+    {
+      "bytes": 48475,
+      "name": "03_4_2_0_native_columned_lctl_semantic_authority.zip",
+      "sha256": "af95ac1998e38203530b305ca485ae86722de601c3bd58eb7504a80259aa96fd"
+    },
+    {
+      "bytes": 36254,
+      "name": "02_4_1_0_production_execution_boundary.zip",
+      "sha256": "bdd58e12907c07cb6a2cb7bf58fb9909f4bd26ba50c6dfb24d241b0947af94ff"
+    },
+    {
+      "bytes": 37713,
+      "name": "01_4_0_1_truth_measurement_evidence_rectification.zip",
+      "sha256": "8b51b481dcbe530a390bcc4947440e0c083253107b722b55cca46700ee1cccef"
+    },
+    {
+      "bytes": 112702,
+      "name": "QUORUM_TRACK_A_R2_ARCHITECTURAL_REMEDIATION_PROMPT_WORKFLOW_PACKAGE_3.0.0.zip",
+      "sha256": "c9771895cba951cdd1fa71d258f999cdfed76fd54c300b603ec30f9f69144f79"
+    },
+    {
+      "bytes": 27331,
+      "name": "QUORUM_TRACK_A_R2_ARCHITECTURAL_REMEDIATION_PROMPT_WORKFLOW_PACKAGE_1.0.0.zip",
+      "sha256": "93262057a0c0cbff539a96b866b062c57f67b702b70c4e50387b522a389510c7"
+    },
+    {
+      "bytes": 302291,
+      "name": "QUORUM_BASIC_MSSL_SHS2_TO_FULLY_OPERATIONAL_VM_OS_HARD_OPEN_GATE_PACKAGE_3.1.0.zip",
+      "sha256": "164506527c900e9cd2cb2b3fc893c75530c624f5376e84f59c8ad0d61cb30845"
+    },
+    {
+      "bytes": 260321,
+      "name": "QUORUM_BASIC_MSSL_SHS2_TO_FULLY_OPERATIONAL_VM_OS_PROMPT_WORKFLOW_PACKAGE_3.0.0.zip",
+      "sha256": "1284ed4630f9437be84b020f54d0519997af99733b43e7d9a52997a10c6a0fa5"
+    },
+    {
+      "bytes": 110352,
+      "name": "QUORUM_BASIC_MSSL_SHS_OPERATIONALIZATION_PROMPT_WORKFLOW_PACKAGE_2.0.0.zip",
+      "sha256": "e7549fe7271e887b291a59175c05ee8462adef28cf3bd0919cc9f042ba421810"
+    }
+  ],
+  "schema": "QVM-INPUT-PROVENANCE/1"
+}

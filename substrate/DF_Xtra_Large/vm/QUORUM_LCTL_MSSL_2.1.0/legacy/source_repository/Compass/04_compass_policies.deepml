@@ -1,0 +1,59 @@
+deepml logic 0.3
+module repository.compass.policies
+policy pure_by_default
+policy no_network
+
+type PolicyDisposition = Required | Allowed | Blocked | Review
+
+knowledge_base CompassPolicies {
+  fact suite_assignment("SOPHIA", "semantic_judgment")
+  fact suite_assignment("CHARLOTTE", "structural_validation")
+  fact suite_assignment("LANDON", "repository_integration")
+  fact suite_assignment("PROFESSOR", "reviewable_explanation")
+  fact suite_assignment("PODIUM", "job_and_evidence_queue")
+  fact required_policy("no_network")
+  fact required_policy("pure_by_default")
+  fact required_policy("preserve_provenance")
+  fact required_policy("stable_ids")
+  fact required_policy("reviewable_changes")
+  fact action("inspect_repository")
+  fact action("score_route")
+  fact action("emit_evidence")
+  fact action_satisfies("inspect_repository", "no_network")
+  fact action_satisfies("inspect_repository", "pure_by_default")
+  fact action_satisfies("inspect_repository", "preserve_provenance")
+  fact action_satisfies("inspect_repository", "stable_ids")
+  fact action_satisfies("inspect_repository", "reviewable_changes")
+  fact action_satisfies("score_route", "no_network")
+  fact action_satisfies("score_route", "pure_by_default")
+  fact action_satisfies("score_route", "preserve_provenance")
+  fact action_satisfies("score_route", "stable_ids")
+  fact action_satisfies("score_route", "reviewable_changes")
+  fact action_satisfies("emit_evidence", "no_network")
+  fact action_satisfies("emit_evidence", "pure_by_default")
+  fact action_satisfies("emit_evidence", "preserve_provenance")
+  fact action_satisfies("emit_evidence", "stable_ids")
+  fact action_satisfies("emit_evidence", "reviewable_changes")
+
+  rule policy_complete(A) :-
+    action(A),
+    action_satisfies(A, "no_network"),
+    action_satisfies(A, "pure_by_default"),
+    action_satisfies(A, "preserve_provenance"),
+    action_satisfies(A, "stable_ids"),
+    action_satisfies(A, "reviewable_changes")
+
+  rule permitted_action(A) :-
+    policy_complete(A),
+    sophia_approved(A),
+    charlotte_validated(A),
+    landon_integrated(A),
+    professor_explained(A),
+    podium_evidence_complete(A)
+}
+
+query policy_complete(Action) strategy tabled
+plan CompassPolicyPlan goal policy_compliance_proven actions [collect, compare, explain, certify]
+certify logic CompassPolicies using proof_carrying
+optimize module using [rule_indexing, common_subexpression_elimination, tabling, proof_normalization]
+lower module to DEEPML_LOGIC_R12

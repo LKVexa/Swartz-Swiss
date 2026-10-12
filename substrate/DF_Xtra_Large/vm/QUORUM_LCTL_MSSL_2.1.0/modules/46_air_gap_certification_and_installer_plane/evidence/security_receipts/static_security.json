@@ -1,0 +1,14 @@
+{
+  "schema": "QUORUM-SECURITY-RECEIPT/2.0",
+  "module_id": 46,
+  "network_default_deny": true,
+  "mssl_original_seal_valid": true,
+  "mssl_tamper_detected": true,
+  "declared_capabilities": [
+    "artifact.read",
+    "evidence.write",
+    "package.install",
+    "package.write"
+  ],
+  "verdict": "PASS_STATIC_CONTRACT_SECURITY"
+}

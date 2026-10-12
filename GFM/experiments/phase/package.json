@@ -1,0 +1,14 @@
+{
+  "name": "gfm-phase-texture-simulator",
+  "version": "3.0.0",
+  "private": true,
+  "license": "GPL-3.0-only",
+  "description": "GFM phase texture laboratory with compressible local MHD, separate iron enthalpy fields, Kerr references, and held-out EHT comparison",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.cjs",
+    "test": "node --test tests/*.cjs"
+  }
+}

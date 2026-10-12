@@ -1,0 +1,47 @@
+ja source 0.3
+module suite49.action_cards.capability_contract
+use Interface
+policy no_network
+
+interface ActionCardCapabilityContract {
+    state selected_action: Text? = null
+    state validating_contract: Flag = false
+    derived can_select_action = not validating_contract
+    derived can_validate_contract = selected_action != null and not validating_contract
+    component SOPHIA_CapabilityModel {
+        label "Interpret requested capability and effect"
+        enabled bind can_validate_contract
+        accessibility role button name "Interpret capability contract for selected action"
+        action interpret_capability_contract requires admin.action:approved
+    }
+    component CHARLOTTE_CapabilityGate {
+        label "Validate principal, scope, resource, effect, and approval"
+        enabled bind can_validate_contract
+        accessibility role button name "Validate capability contract for selected action"
+        action validate_capability_contract requires admin.action:approved
+    }
+    component LANDON_CapabilityBind {
+        label "Bind least-privilege capability contract"
+        enabled bind can_validate_contract
+        accessibility role button name "Bind capability contract to selected action card"
+        action bind_capability_contract requires admin.action:approved
+    }
+    component Professor_CapabilityGuide {
+        label "Explain granted, denied, and required capabilities"
+        enabled bind can_select_action
+        accessibility role button name "Explain selected action capability contract"
+        action explain_capability_contract requires admin.action:approved
+    }
+    component Podium_CapabilityEvidence {
+        label "View capability decision evidence"
+        enabled bind can_validate_contract
+        accessibility role button name "View selected action capability evidence"
+        action show_capability_evidence requires admin.action:approved
+    }
+    component CapabilityContractViewport {
+        embed portal.scene "action_card_capability_contract"
+        motion bind timeline.capability_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface ActionCardCapabilityContract

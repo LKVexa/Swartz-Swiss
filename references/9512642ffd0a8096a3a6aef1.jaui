@@ -1,0 +1,47 @@
+ja source 0.3
+module suite45.localization_large_file_plane.localization_system
+use Interface
+policy no_network
+
+interface LocalizationSystem {
+    state selected_locale_profile: Text? = null
+    state applying_locale_profile: Flag = false
+    derived can_select_locale_profile = not applying_locale_profile
+    derived can_apply_locale_profile = selected_locale_profile != null and not applying_locale_profile
+    component SOPHIA_LocalizationModel {
+        label "Interpret application-wide localization intent"
+        enabled bind can_apply_locale_profile
+        accessibility role button name "Interpret selected localization profile"
+        action interpret_localization_profile requires admin.action:approved
+    }
+    component CHARLOTTE_LocalizationGate {
+        label "Validate catalog, fallback, direction, formats, and coverage"
+        enabled bind can_apply_locale_profile
+        accessibility role button name "Validate selected localization profile"
+        action validate_localization_profile requires admin.action:approved
+    }
+    component LANDON_LocalizationApply {
+        label "Apply validated localization profile"
+        enabled bind can_apply_locale_profile
+        accessibility role button name "Apply selected localization profile"
+        action apply_localization_profile requires admin.action:approved
+    }
+    component Professor_LocalizationGuide {
+        label "Explain localization coverage and fallback behavior"
+        enabled bind can_select_locale_profile
+        accessibility role button name "Explain localization system behavior"
+        action explain_localization_system requires admin.action:approved
+    }
+    component Podium_LocalizationEvidence {
+        label "View catalog and locale-profile evidence"
+        enabled bind can_apply_locale_profile
+        accessibility role button name "View localization system evidence"
+        action show_localization_evidence requires admin.action:approved
+    }
+    component LocalizationSystemViewport {
+        embed portal.scene "localization_system"
+        motion bind timeline.localization_profile
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface LocalizationSystem

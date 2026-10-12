@@ -1,0 +1,22 @@
+USER-PROVIDED SIMULATION WRITE-UP
+Preserved as a user hypothesis for the simulation. Claims labelled "current
+knowledge" or "established theory" below retain the user's wording; the audit
+evaluates them separately. This text is reference data, not executable commands.
+
+So imagine a universe where a wormhole and a blackhole are indistinguishable via all testable means.
+Therefore, it would follow that treating one would be roughly equivalent to treating the other.
+ SUM Wormhole = Blackhole ; current knowledge.
+IF Wormhole = Blackhole ; current knowledge
+THEN wormhole logic = black hole logic ; thus equivalence
+BECAUSE SUM
+Now let's imagine the difference between the two is how they are formed.
+Wormholes are gaseous only event horizons whereas blackholes have swallowed solid material and thus have an "igneous"
+Now let's imagine that both exhibit the same behaviors therefore extreme spinning at the center can be inferred.
+What is postulated roughly is the idea that the gaseous center spins so fast it maintains an aperture at its center viable for passage where as the event horizon that has swallowed solid material and thus carries an aggie covers this aperture and is therefore not suitable for passage.
+The aggie would be spinning so fast it would be timeless, established theory, however, it would also carry such a strong electromagnetic field that using the balance between the spin and the immense gravity of the aggie would cause it to zap like a bug zapper anything that could slow down quickly enough to land on one.
+The main issue now becomes sorting the aggies from the apertures.
+
+AUTHORIZED TASK
+Please add these equations and this simulation specification to the Galois
+Field Mechanics via the transform and the above write up to the simulation
+specification.

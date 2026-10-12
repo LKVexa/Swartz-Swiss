@@ -1,0 +1,184 @@
+{
+  "validator": "Independent Python standard library; no JavaScript/UI/network execution",
+  "scope": "Saved raw GF9 pendulum angles, ordinary acceleration, positive trace coefficients, inverse recovery and CSV table.",
+  "tolerance": 1e-10,
+  "expected": {
+    "field": {
+      "id": "gf9",
+      "p": 3,
+      "n": 2,
+      "q": 9,
+      "polynomial": [
+        1,
+        0,
+        1
+      ]
+    },
+    "parameters": {
+      "g": 9.81,
+      "length": 1.0,
+      "maxAngle": 0.2
+    },
+    "formula": "theta_ddot=-(g/length)*sin(theta)",
+    "units": {
+      "theta": "radians",
+      "value": "radians/second^2"
+    },
+    "omega": 3.132091952673165,
+    "smallAnglePeriod": 2.006066680710647,
+    "inputNorm": 3.780756357132537,
+    "outputNorm": 3.7807563571325375,
+    "inputEnergy": 14.294118631998092,
+    "expectedRecoveryResidual": 1.4107372352603e-16,
+    "rows": [
+      {
+        "label": 0,
+        "theta": -0.2,
+        "sample": 1.9489461350995507,
+        "coefficient": {
+          "re": 1.1102230246251565e-16,
+          "im": 0.0
+        },
+        "recovered": {
+          "re": 1.948946135099551,
+          "im": -1.850733108432756e-16
+        }
+      },
+      {
+        "label": 1,
+        "theta": -0.15000000000000002,
+        "sample": 1.4659880795660087,
+        "coefficient": {
+          "re": 0.7299379841697604,
+          "im": -0.42142989165214395
+        },
+        "recovered": {
+          "re": 1.465988079566009,
+          "im": -2.0458894994801469e-16
+        }
+      },
+      {
+        "label": 2,
+        "theta": -0.1,
+        "sample": 0.9793658173053843,
+        "coefficient": {
+          "re": 0.7299379841697607,
+          "im": 0.4214298916521439
+        },
+        "recovered": {
+          "re": 0.9793658173053846,
+          "im": -1.6501557065229377e-16
+        }
+      },
+      {
+        "label": 3,
+        "theta": -0.05,
+        "sample": 0.49029565054535446,
+        "coefficient": {
+          "re": 2.1971500159854727,
+          "im": 1.2685251531792026
+        },
+        "recovered": {
+          "re": 0.4902956505453541,
+          "im": -3.7621815385247004e-17
+        }
+      },
+      {
+        "label": 4,
+        "theta": 0.0,
+        "sample": -0.0,
+        "coefficient": {
+          "re": 0.0,
+          "im": 0.0021208317150269718
+        },
+        "recovered": {
+          "re": -5.219349258345218e-16,
+          "im": -1.098296800727816e-16
+        }
+      },
+      {
+        "label": 5,
+        "theta": 0.05,
+        "sample": -0.49029565054535446,
+        "coefficient": {
+          "re": -0.003668797505906096,
+          "im": 0.0021181812276371836
+        },
+        "recovered": {
+          "re": -0.4902956505453548,
+          "im": -7.41594285980085e-17
+        }
+      },
+      {
+        "label": 6,
+        "theta": 0.1,
+        "sample": -0.9793658173053843,
+        "coefficient": {
+          "re": 2.1971500159854718,
+          "im": -1.2685251531792028
+        },
+        "recovered": {
+          "re": -0.9793658173053845,
+          "im": -2.209604027525458e-16
+        }
+      },
+      {
+        "label": 7,
+        "theta": 0.15000000000000002,
+        "sample": -1.4659880795660087,
+        "coefficient": {
+          "re": -0.003668797505906096,
+          "im": -0.0021181812276371836
+        },
+        "recovered": {
+          "re": -1.465988079566009,
+          "im": -2.402592014227878e-16
+        }
+      },
+      {
+        "label": 8,
+        "theta": 0.2,
+        "sample": -1.9489461350995507,
+        "coefficient": {
+          "re": 0.0,
+          "im": -0.0021208317150269718
+        },
+        "recovered": {
+          "re": -1.948946135099551,
+          "im": -2.5999168096202396e-16
+        }
+      }
+    ]
+  },
+  "status": "PASS",
+  "assertionsEvaluated": 257,
+  "maximumScaledError": 5.551115123125783e-16,
+  "maximumDisplayScaledError": 2.5144098604698816e-09,
+  "displayTolerance": 1e-08,
+  "details": {
+    "maximumAbsoluteRecoveryError": 8.886256463788155e-16,
+    "relativeRecoveryError": 2.350391198053242e-16,
+    "csvRows": 9,
+    "htmlRows": 9,
+    "htmlVerification": "Static source table only; no browser/network/UI execution"
+  },
+  "failures": [],
+  "files": {
+    "docs/Pendulum_Example.json": {
+      "sha256": "e294b9c7a60f68b1976443eaf914d2903cdb78a617a5b29580583e6d8e66ea84",
+      "bytes": 8513
+    },
+    "docs/Pendulum_Example.csv": {
+      "sha256": "d35bbcb5f856e1f90c326a1a7be389162044076e21fe79825da108344c5db764",
+      "bytes": 870
+    },
+    "docs/Pendulum_Example.html": {
+      "sha256": "efc722b0b8563d604849c306e8dfb2196d1c26da7b51b59796fe03619c351671",
+      "bytes": 3184
+    },
+    "src/gfm-mechanics.js": {
+      "sha256": "031cf5a05eb3ab3e48cab1f5db18cee6da5c43b78fd90a9a3a26322c7a77e28f",
+      "bytes": 23075
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "atomic_requirements": 85,
+  "brim_pass": true,
+  "core_independent_build": true,
+  "decision": "OPERATIONAL",
+  "external_nonblocking_qualification_not_claimed": [
+    "native Windows OS execution qualification (portable Windows adapter source contract is compiled/tested on this host)",
+    "physical SIM/UICC/eSIM issuer and hardware qualification",
+    "independent third-party LCTL 1.6.1-RC1 verifier unless LCTL_JAR is supplied"
+  ],
+  "host_filesystem_dependency_in_core": false,
+  "host_service_calls_mediated_by_hal": true,
+  "lctl_fail_closed": true,
+  "production_source_pass": true,
+  "reproducible_build": true,
+  "same_brim_at_least_two_adapters": true,
+  "scope": "host-reference production execution boundary and portable adapter source contracts",
+  "tests": {
+    "failures": 0,
+    "result": "PASS",
+    "suite": "BR-410",
+    "tests": 18
+  },
+  "vm_instance_isolation": true
+}

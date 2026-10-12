@@ -1,0 +1,10 @@
+{
+  "deterministic_result_hash": true,
+  "iterations": 12,
+  "max_ms": 1.615594,
+  "median_ms": 0.837009,
+  "min_ms": 0.676007,
+  "p95_ms": 1.182803,
+  "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+  "scope": "local reference domain runtime; not production-domain performance"
+}

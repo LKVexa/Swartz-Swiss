@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "aed93f9def47e38ca201d53f7b539317922a79a29777463cc1652c362ac7553d",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Capability Manifests and Permissions",
+  "module_id": 55,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

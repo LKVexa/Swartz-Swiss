@@ -1,0 +1,14 @@
+ja source 0.3
+module suite50.diff_patch_review.patch_review
+use Core
+policy no_network
+
+record PatchReviewPlan { id: Count, repository_root: Text, baseline_hash: Text, patch_hash: Text, path_scope: Text, validation_profile: Text, approval_state: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_patch_review(item: PatchReviewPlan) -> Result<PatchReviewPlan, Text> effects { pure } {
+    let normalized: Text = item.path_scope
+    return Ok(PatchReviewPlan { id: item.id, repository_root: item.repository_root, baseline_hash: item.baseline_hash, patch_hash: item.patch_hash, path_scope: normalized, validation_profile: item.validation_profile, approval_state: item.approval_state, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: PatchReviewPlan = PatchReviewPlan { id: 5004, repository_root: "selected_work_repository", baseline_hash: "required_sha256_baseline", patch_hash: "required_sha256_patch", path_scope: "approved_relative_paths_only", validation_profile: "syntax_paths_hunks_modes_tests_and_rollback", approval_state: "human_approval_required", sophia: "interpret_patch_effects", charlotte: "validate_patch_against_baseline", landon: "stage_patch_in_isolated_review", professor: "explain_patch_risk_and_repair", podium: "publish_patch_review_receipt" }
+let result = prepare_patch_review(sample)
+assert result.is_ok == true
+emit json result

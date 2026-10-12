@@ -1,0 +1,10 @@
+{
+  "scope": "Deterministic example, independent closed-form GF9 calculation and canonical byte digests",
+  "schema": "RUSSL-independent-example-check/1",
+  "sessionHashVerified": true,
+  "recordHashVerified": true,
+  "referenceFormula": "psi(x0+x1*a)=exp(2*pi*i*(x0+x1)/3)/3",
+  "maximumAmplitudeResidual": 1.4946834900704541e-16,
+  "normSquared": 1.0,
+  "passed": true
+}

@@ -1,0 +1,21 @@
+VB JA21 DF_Medium Browser 8.0.2 — blank surface repair
+
+Root cause:
+- dfweb_string_get() returns the number of bytes written on success.
+- dfweb_title_get() returns the number of bytes written on success.
+- 8.0.1 incorrectly accepted only return code 0, discarding every non-empty text/title/URL.
+- This made valid DF_Medium scene output appear blank and prevented image/video URL presentation.
+
+Repairs:
+- Managed string/title bridge now accepts any non-negative return length.
+- Added native/managed InteropSelfTest before UI startup.
+- Interop self-test validates ABI=0x00080000, scene struct=44 bytes, resource struct=8 bytes, non-empty title, visible scene text, and resolved image URL.
+- First tab/home is created before the optional context drawer and has a direct fallback if JA21 event dispatch does not create it.
+
+Independent Linux native source test:
+- scene_size=44
+- resource_size=8
+- title_rc=12 title=JA21 Interop
+- text_rc=12 text=Visible JA21
+- url_rc=37 url=https://example.com/interop/image.png
+- DFWEB_NATIVE_INTEROP_PASS

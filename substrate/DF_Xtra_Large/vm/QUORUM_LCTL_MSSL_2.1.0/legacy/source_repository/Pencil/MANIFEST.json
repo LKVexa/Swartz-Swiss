@@ -1,0 +1,132 @@
+{
+  "package": "JA21_Pencil_DeepML_Logic_Individual_Scripts",
+  "repository": "05. Pencil",
+  "language": "Logic Functional Language (DeepML)",
+  "language_id": "deepml.logic",
+  "version": "0.3",
+  "extension": ".deepml",
+  "source_declaration": "deepml logic 0.3",
+  "generated_at_utc": "2026-07-22T20:07:59.384341+00:00",
+  "source_corpus": {
+    "filename": "DeepML_Logic_Functional_Language_Coupling_Mechanics_Corpus.jsonl.gz",
+    "sha256": "4470d579e165ad09847ce153dac61af1bfdd1587b1bb0cb247459ad1501bfcab",
+    "outer_bundle_records": 102,
+    "parsed_examples": 10000
+  },
+  "scripts": {
+    "01_pencil_authors.deepml": {
+      "checks": {
+        "source_declaration": true,
+        "module_declared": true,
+        "pure_by_default": true,
+        "network_disabled": true,
+        "knowledge_base_declared": true,
+        "rule_present": true,
+        "query_or_infer_present": true,
+        "plan_present": true,
+        "proof_carrying_certification": true,
+        "optimization_declared": true,
+        "r12_lowering": true,
+        "all_suite_assignments": true,
+        "brace_balance": true,
+        "bracket_balance": true,
+        "parenthesis_balance": true
+      },
+      "passed": true,
+      "bytes": 1830,
+      "sha256": "70ef593492877da0de75355474ddd8305760d7eb2e6822e3bd78c52937918427"
+    },
+    "02_pencil_rewrites.deepml": {
+      "checks": {
+        "source_declaration": true,
+        "module_declared": true,
+        "pure_by_default": true,
+        "network_disabled": true,
+        "knowledge_base_declared": true,
+        "rule_present": true,
+        "query_or_infer_present": true,
+        "plan_present": true,
+        "proof_carrying_certification": true,
+        "optimization_declared": true,
+        "r12_lowering": true,
+        "all_suite_assignments": true,
+        "brace_balance": true,
+        "bracket_balance": true,
+        "parenthesis_balance": true
+      },
+      "passed": true,
+      "bytes": 2054,
+      "sha256": "a59630b0ecdad2d13ff80c998514880d0737645434950e325929c5d04fd444c1"
+    },
+    "03_pencil_transforms.deepml": {
+      "checks": {
+        "source_declaration": true,
+        "module_declared": true,
+        "pure_by_default": true,
+        "network_disabled": true,
+        "knowledge_base_declared": true,
+        "rule_present": true,
+        "query_or_infer_present": true,
+        "plan_present": true,
+        "proof_carrying_certification": true,
+        "optimization_declared": true,
+        "r12_lowering": true,
+        "all_suite_assignments": true,
+        "brace_balance": true,
+        "bracket_balance": true,
+        "parenthesis_balance": true
+      },
+      "passed": true,
+      "bytes": 2252,
+      "sha256": "c7b1bccddd5da9092e247ee485b037e5417ff9ee3fc10ac6deb8eb66e528913e"
+    },
+    "04_pencil_source_artifacts.deepml": {
+      "checks": {
+        "source_declaration": true,
+        "module_declared": true,
+        "pure_by_default": true,
+        "network_disabled": true,
+        "knowledge_base_declared": true,
+        "rule_present": true,
+        "query_or_infer_present": true,
+        "plan_present": true,
+        "proof_carrying_certification": true,
+        "optimization_declared": true,
+        "r12_lowering": true,
+        "all_suite_assignments": true,
+        "brace_balance": true,
+        "bracket_balance": true,
+        "parenthesis_balance": true
+      },
+      "passed": true,
+      "bytes": 2461,
+      "sha256": "fa035c2aeb88b262c674c4db930b1edd932d01cfa118b3011be1545f7a0bf42b"
+    },
+    "05_pencil_logic.deepml": {
+      "checks": {
+        "source_declaration": true,
+        "module_declared": true,
+        "pure_by_default": true,
+        "network_disabled": true,
+        "knowledge_base_declared": true,
+        "rule_present": true,
+        "query_or_infer_present": true,
+        "plan_present": true,
+        "proof_carrying_certification": true,
+        "optimization_declared": true,
+        "r12_lowering": true,
+        "all_suite_assignments": true,
+        "brace_balance": true,
+        "bracket_balance": true,
+        "parenthesis_balance": true
+      },
+      "passed": true,
+      "bytes": 1880,
+      "sha256": "52f9b838701768887dc97114272cb93593887060ba534521d59ba9a4437ffb19"
+    }
+  },
+  "runtime_execution": {
+    "performed": false,
+    "reason": "No production-certified DeepML Logic Functional Language compiler/runtime was included with the attachment."
+  }
+}

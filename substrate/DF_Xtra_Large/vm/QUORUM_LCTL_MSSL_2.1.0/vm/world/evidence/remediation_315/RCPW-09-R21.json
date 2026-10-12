@@ -1,0 +1,63 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "77dbb651227614f137dedd0f6971c1dc0f5c5a45f68a0cbc774cb7fb40f29996",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (VERSION_MIGRATION, ECOLOGY_CONSERVATION, SAVE_RECOVERY, RESOURCE_STRESS, MULTI_WORKER_CONFORMANCE) plus Stage 09 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "ECOLOGY_CONSERVATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "MULTI_WORKER_CONFORMANCE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "RESOURCE_STRESS": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "SAVE_RECOVERY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "VERSION_MIGRATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-04",
+    "GW-12",
+    "GW-35",
+    "GW-68",
+    "GW-69",
+    "GW-70"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T3_FABRIC",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Exclusive actor/resource reservations use deterministic conflict resolution and survive partition migration/recovery.",
+  "requirement_id": "RCPW-09-R21",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 9,
+  "stage_title": "Narrative Gravity Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "VERSION_MIGRATION",
+    "ECOLOGY_CONSERVATION",
+    "SAVE_RECOVERY",
+    "RESOURCE_STRESS",
+    "MULTI_WORKER_CONFORMANCE"
+  ],
+  "workflow_file": "09_NARRATIVE_GRAVITY_AUTHORITY/128_RCPW_09_R21_EXCLUSIVE_ACTOR_RESOURCE_RESERVATIONS_USE_DETERMINISTIC_CONFLICT_RESOLUTION_AND_SURVI.md",
+  "workflow_tier": "T3_FABRIC"
+}

@@ -1,0 +1,34 @@
+ja source 0.3
+module suite57.translation_build_test_evaluation.test_jobs
+use Operations
+policy explicit_network
+
+workspace TestJobs {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 8 memory 16GB
+    network disabled
+    secret test_key reference "vault://suite57/test-jobs"
+
+    service SOPHIA_test_context replicas 1
+    health_check SOPHIA_test_context every 10s
+    service CHARLOTTE_test_gate replicas 1
+    health_check CHARLOTTE_test_gate every 10s
+    service LANDON_test_controller replicas 1
+    health_check LANDON_test_controller every 10s
+    service Professor_test_report replicas 1
+    health_check Professor_test_report every 10s
+    service Podium_test_receipt replicas 1
+    health_check Podium_test_receipt every 10s
+    service test_job_worker replicas 1
+    health_check test_job_worker every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "translation_build_test_evaluation_test_jobs.msslb"

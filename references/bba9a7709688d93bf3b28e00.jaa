@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.specialized_roles.software_architect
+use Agent
+policy no_network
+
+agent SoftwareArchitect {
+    identity "software_architect"
+    role "sophia-charlotte-landon-professor-podium-specialist"
+    goal produce_constraint_valid_evolution_ready_architecture when confidence >= 0.95
+    memory session retention 1h
+    budget steps 65 tools 5
+    tool LANDONCollectSystemArchitecture(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAModelSoftwareArchitecture(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateArchitectureConstraints(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainArchitectureDecision(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordArchitectureDecision(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectSystemArchitecture
+        authorize SOPHIAModelSoftwareArchitecture
+        authorize CHARLOTTEValidateArchitectureConstraints
+        authorize ProfessorExplainArchitectureDecision
+        authorize PodiumRecordArchitectureDecision
+        continue when policy_allows
+        execute LANDONCollectSystemArchitecture("selected_system_scope")
+        execute SOPHIAModelSoftwareArchitecture("system_inventory_and_constraints")
+        execute CHARLOTTEValidateArchitectureConstraints("candidate_architecture")
+        execute ProfessorExplainArchitectureDecision("validated_architecture")
+        execute PodiumRecordArchitectureDecision("architecture_decision_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "SoftwareArchitect.mcrt"

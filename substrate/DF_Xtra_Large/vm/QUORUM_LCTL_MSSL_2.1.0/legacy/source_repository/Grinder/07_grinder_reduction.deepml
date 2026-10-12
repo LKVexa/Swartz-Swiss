@@ -1,0 +1,28 @@
+deepml specialized 0.3
+module grinder.reduction
+policy deterministic
+policy no_network
+
+domain grinder_reduction {
+  unit Score = base("dimensionless")
+  schema ReductionEvidence { value: f64<Score> timestamp: Time provenance: Hash }
+  tensor workload: f64<Score>[256,32]
+  operator SophiaPreserve(x) -> Tensor pure deterministic
+  operator CharlotteFactor(x) -> Tensor pure deterministic
+  operator LandonReduce(x) -> Tensor pure deterministic
+  operator ProfessorEquivalence(x) -> Tensor pure deterministic
+  operator PodiumAdmit(x) -> Tensor pure deterministic
+  calibration ReductionCalibration { method: bounded_least_squares tolerance: 1e-6 }
+  constraint EquivalenceBounds { min: 0 max: 1 }
+  graph GrinderReductionGraph {
+    sophia = SophiaPreserve(workload)
+    charlotte = CharlotteFactor(sophia)
+    landon = LandonReduce(charlotte)
+    professor = ProfessorEquivalence(landon)
+    podium = PodiumAdmit(professor)
+  }
+  validate podium with [SophiaPreserve, CharlotteFactor, LandonReduce, ProfessorEquivalence, PodiumAdmit, ReductionCalibration, EquivalenceBounds]
+  optimize GrinderReductionGraph using [unit_propagation, dimensional_simplification, op_specialization, sparse_planning, calibration_folding, target_lowering]
+  lower GrinderReductionGraph to DEEPML_SPECIALIZED_R12
+  package hybrid GrinderReductionGraph as "grinder_reduction.msslb"
+}

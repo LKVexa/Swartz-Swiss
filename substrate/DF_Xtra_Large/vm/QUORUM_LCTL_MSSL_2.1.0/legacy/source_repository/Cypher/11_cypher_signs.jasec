@@ -1,0 +1,21 @@
+ja source 0.3
+module cypher.signs
+use Security
+policy no_network
+
+principal SOPHIA_CHARLOTTE_LANDON_Professor_Podium_SignWorker
+role CypherSignWorker {
+    grant artifact.sign:approved
+    grant signing_key.use:approved
+}
+resource SignatureArtifact classification restricted
+policy CypherSignPolicy {
+    deny network.* by default
+    allow SignatureArtifact when principal.role == CypherSignWorker
+    require human_approval for artifact.sign
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == true
+emit mcrt "CypherSignPolicy.decision.mcrt"

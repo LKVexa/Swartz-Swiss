@@ -1,0 +1,32 @@
+ja portal.scene 0.3
+module suite65.sandbox_engine.reconstruction_pipeline
+policy no_execute_unknown_code
+policy no_network
+
+scene SandboxReconstructionPipeline {
+  resource ReconstructionProxy: Mesh = "geometry/sandbox_reconstruction_proxy.mesh"
+  material ReconstructionMaterial { shader: "portal/pbr" metallic: 0.1 roughness: 0.5 }
+  entity WorldRoot {
+    component Transform3D {
+      position: vec3(0m, 0m, 0m)
+      rotation: quat.identity
+      scale: vec3(1, 1, 1)
+    }
+    component Tag { value: "sandbox.reconstruction.root" }
+  }
+  entity ReconstructedScene parent WorldRoot { component MeshRenderer { mesh: ReconstructionProxy material: ReconstructionMaterial } }
+  entity MainCamera parent WorldRoot { component Camera { projection: perspective(60deg) near_clip: 0.1m far_clip: 1000m priority: 0 } }
+  entity SOPHIA_ReconstructionContext parent WorldRoot { component Tag { value: "sophia.reconstruction.context" } }
+  entity CHARLOTTE_ReconstructionInspection parent WorldRoot { component Tag { value: "charlotte.reconstruction.inspection" } }
+  entity LANDON_ReconstructionControl parent WorldRoot { component Tag { value: "landon.reconstruction.control" } }
+  entity Professor_ReconstructionExplanation parent WorldRoot { component Tag { value: "professor.reconstruction.explanation" } }
+  entity Podium_ReconstructionReceipt parent WorldRoot { component Tag { value: "podium.reconstruction.receipt" } }
+  system SaveLoad { checkpoint: "sandbox_reconstruction_pipeline" serialize: [WorldRoot, ReconstructedScene, MainCamera, SOPHIA_ReconstructionContext, CHARLOTTE_ReconstructionInspection, LANDON_ReconstructionControl, Professor_ReconstructionExplanation, Podium_ReconstructionReceipt] }
+}
+serialize SandboxReconstructionPipeline using canonical_scene_v1
+snapshot SandboxReconstructionPipeline as "sandbox_reconstruction_pipeline.snapshot"
+optimize scene SandboxReconstructionPipeline using [stable_ids, topological_order, resource_deduplication, constant_transform]
+lower SandboxReconstructionPipeline to PORTAL_SCENE_R12
+trace SandboxReconstructionPipeline to "sandbox_reconstruction_pipeline.mcrt"
+package scene SandboxReconstructionPipeline as ScenePackage "sandbox_reconstruction_pipeline.msslb"
+certify scene SandboxReconstructionPipeline using strict_portal_scene

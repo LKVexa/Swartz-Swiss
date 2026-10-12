@@ -1,0 +1,70 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 46,
+  "legacy_root": "legacy/source_repository/Air Gap Certification and Installer Plane",
+  "legacy_sha256": "dcb23fdf6dc55aa084fab76b7ab760c28817739dfa976fc566c8461cfdba5c3d",
+  "files": [
+    {
+      "path": "46.10_Air_Gap_Certification_and_Installer_Plane_Installer.jaops",
+      "sha256": "39cb2391265e394387319c0bccdc0ba01f9c87d5b4d5bfc1c2dca8821fe9d0a8",
+      "bytes": 1086
+    },
+    {
+      "path": "46.11_Air_Gap_Certification_and_Installer_Plane_License_System.jaops",
+      "sha256": "0ee0cbdfce1f2176615fc86ec69d8e2a0d82500f647a393886d8645ac6ff862d",
+      "bytes": 1103
+    },
+    {
+      "path": "46.1_Air_Gap_Certification_and_Installer_Plane_Offline_Runtime_Policy.jaops",
+      "sha256": "b21fc347baa8924e0492b14ba65270f5007cc4cf12ae6c1de636e33f985c3e02",
+      "bytes": 1174
+    },
+    {
+      "path": "46.2_Air_Gap_Certification_and_Installer_Plane_Certification_Records.jaops",
+      "sha256": "4d7b241c53dfb2ef2efc7aba377ee739e7a55236737e7bb680719091a8e43185",
+      "bytes": 1196
+    },
+    {
+      "path": "46.3_Air_Gap_Certification_and_Installer_Plane_One_Click_Setup_Transaction.jaops",
+      "sha256": "b5b0a405120356b846d52973c40fa75d025c888d712244902f807be693b4e789",
+      "bytes": 1147
+    },
+    {
+      "path": "46.4_Air_Gap_Certification_and_Installer_Plane_Licensing.jaops",
+      "sha256": "9b9f6dd196ff9f8e79b4670d3883adbca80d5fcb438e719d92acce9006fd8ead",
+      "bytes": 1063
+    },
+    {
+      "path": "46.5_Air_Gap_Certification_and_Installer_Plane_Installer_Integration.jaops",
+      "sha256": "d9bd20fcd7828dafe22bd8651b2ae18202064c74725cb68826319aac3859ab6f",
+      "bytes": 1173
+    },
+    {
+      "path": "46.6_Air_Gap_Certification_and_Installer_Plane_Air_Gap_Runtime.jaops",
+      "sha256": "7b1112e573b68a9b04b7473e48390384d8a52f4c28b05476bbb61c6329d10621",
+      "bytes": 1094
+    },
+    {
+      "path": "46.7_Air_Gap_Certification_and_Installer_Plane_Certification_Fabric.jaops",
+      "sha256": "cbdd44d4e48a09cca35f54828e2d45ffb2dede4eb26c4d8d2053dc67f3834a6c",
+      "bytes": 1120
+    },
+    {
+      "path": "46.8_Air_Gap_Certification_and_Installer_Plane_One_Click_Setup.jaops",
+      "sha256": "1249cd0479e89fccd7281d99c47fc4fdc28269b05dc435bf93fd9e8be41ba075",
+      "bytes": 1087
+    },
+    {
+      "path": "46.9_Air_Gap_Certification_and_Installer_Plane_Multilingual_Setup.jaops",
+      "sha256": "301492b068e4c0ae4f6a5f8171d9740d8ae143efbf375e130e9d30579303e847",
+      "bytes": 1095
+    },
+    {
+      "path": "README.md",
+      "sha256": "cd5401bc81a5bc117424d339df6942f9b8b427ebef5fb910c882d23423648ff7",
+      "bytes": 20887
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

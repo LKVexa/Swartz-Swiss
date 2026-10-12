@@ -1,0 +1,108 @@
+{
+  "authority_sha256": "78cab4230e69b9aea52bdb12b8de1343e56d4761e6d518fcb090b51b8ce6017d",
+  "domain_output": {
+    "input_type": "qualified_artifacts",
+    "legacy_signals": [
+      "CACHE",
+      "PACKAGE",
+      "VALIDATE",
+      "INSTALL"
+    ],
+    "module": "Release Plane",
+    "output_type": "release_package/release_receipt",
+    "payload_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "plane": "release_delivery",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+    "release_package": {
+      "network_required": false,
+      "package_manifest_sha256": "bc0b28418ed6896f6733ebcf67344ba60475902b0d9dbb82991f21134a6a3f4a",
+      "qualified": true
+    }
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "ff8852a4115dbbff9945a3b67f67c3888762662955789e8720822ea93771b32a",
+  "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "module": "Release Plane",
+  "module_id": 43,
+  "plane": "release_delivery",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "b982a1251e8ba609cada5796b503c231e5c511fd7f2d727a7f9184b42734b094",
+  "stage_count": 8,
+  "stages": [
+    {
+      "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "node": "N01",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "93777932b9910dd65838b9b71d2ab3ddff2c00759e767d8c00b1fb35dea9042f",
+      "stage": "INPUT"
+    },
+    {
+      "input_sha256": "93777932b9910dd65838b9b71d2ab3ddff2c00759e767d8c00b1fb35dea9042f",
+      "node": "N02",
+      "operator": "VALIDATE",
+      "output_sha256": "c811e8d8a7334087732a093dea72282af4588d774be17a4b32922d3c1da0d472",
+      "stage": "VERIFY",
+      "valid": true
+    },
+    {
+      "execution_token": "2635614d29a36b7ca1ea0173",
+      "input_sha256": "c811e8d8a7334087732a093dea72282af4588d774be17a4b32922d3c1da0d472",
+      "node": "N03",
+      "operator": "EXECUTE",
+      "output_sha256": "ab92516f1c1aad1730d77ba806857b0a064ab75945d06316c51ff15d0e4e31d9",
+      "stage": "BUILD"
+    },
+    {
+      "artifact_descriptor": {
+        "sha256": "6d439cfddf001ccb4dd9328fa25aa1fde3c6653e4cce3714fac1424918d44319",
+        "type": "state.package"
+      },
+      "input_sha256": "ab92516f1c1aad1730d77ba806857b0a064ab75945d06316c51ff15d0e4e31d9",
+      "node": "N04",
+      "operator": "MATERIALIZE",
+      "output_sha256": "4b5c75cb6d402d47a54d613e1fc6f477bf763ea62fdead33ebdd671aee4c2f2f",
+      "stage": "PACKAGE"
+    },
+    {
+      "input_sha256": "4b5c75cb6d402d47a54d613e1fc6f477bf763ea62fdead33ebdd671aee4c2f2f",
+      "node": "N05",
+      "operator": "RECORD",
+      "output_sha256": "b9b8169371b130a16001a16a700262f182212dc703cca39ba3e99484881737d5",
+      "receipt_sha256": "82fb3d6ad46077d7ebfed37cc207b795bdd2f155af2be579bb99cda4fb530272",
+      "stage": "HASH"
+    },
+    {
+      "certification": "REFERENCE_PROFILE_ONLY",
+      "input_sha256": "b9b8169371b130a16001a16a700262f182212dc703cca39ba3e99484881737d5",
+      "node": "N06",
+      "operator": "CERTIFY",
+      "output_sha256": "3b28b774994ec095ce15f58477c751ce9bf8e74a503707130abbaa1305946917",
+      "stage": "CERTIFY"
+    },
+    {
+      "artifact_descriptor": {
+        "sha256": "eb34313fab57a8773d7de18cd2d7e1a9bee62acb9993e24cffc6ed618b67c02b",
+        "type": "state.release"
+      },
+      "input_sha256": "3b28b774994ec095ce15f58477c751ce9bf8e74a503707130abbaa1305946917",
+      "node": "N07",
+      "operator": "MATERIALIZE",
+      "output_sha256": "2f0cc3538c2efc2605552468cd6a08fddd1c73a8e454313db828e7b9efc1498e",
+      "stage": "RELEASE"
+    },
+    {
+      "input_sha256": "2f0cc3538c2efc2605552468cd6a08fddd1c73a8e454313db828e7b9efc1498e",
+      "node": "N08",
+      "operator": "RECORD",
+      "output_sha256": "ef9a517b66b922967b7de04a7be4c41afc85da2935ddb5190fb8c2d236ad2518",
+      "receipt_sha256": "7728030447a8368c4995cb71fb233fe59987c81b226013a2e6bdf832e745108e",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

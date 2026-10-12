@@ -1,0 +1,30 @@
+deepml motion 0.3
+module suite22.motion_planner.constraints
+policy deterministic
+policy no_network
+
+skeleton ConstraintPlanRig {
+  joint Root parent none bind transform(vec3(0,0,0), quat.identity)
+  joint Hip parent Root bind transform(vec3(0,1,0), quat.identity)
+  joint Knee parent Hip bind transform(vec3(0,-0.5,0), quat.identity)
+  joint Foot parent Knee bind transform(vec3(0,-0.5,0), quat.identity)
+  joint GroundTarget parent Root bind transform(vec3(0,0,0), quat.identity)
+}
+ik ConstraintPlanIK chain [Hip, Knee, Foot] target GroundTarget iterations 12
+procedural animation ConstraintPlan seed 2202 {
+  trajectory = predict_trajectory(velocity, horizon=1.0s)
+  constrain contact Foot to ground when phase >= 0.0
+}
+motion_graph ConstraintPlanEvidence {
+  pose SOPHIA = constant_pose(ConstraintPlanRig)
+  pose CHARLOTTE = constant_pose(ConstraintPlanRig)
+  pose LANDON = constant_pose(ConstraintPlanRig)
+  pose Professor = constant_pose(ConstraintPlanRig)
+  pose Podium = constant_pose(ConstraintPlanRig)
+  blend Ensemble weights [0.2,0.2,0.2,0.2,0.2]
+  ik ConstraintChain schedule after blend
+}
+optimize ConstraintPlanEvidence using [pose_constant_folding, curve_compression(0.001), dead_channel_removal, blend_normalization, retarget_cache, ik_scheduling, state_minimization]
+lower ConstraintPlanEvidence to DEEPML_MOTION_R12
+package motion ConstraintPlanRig as "motion_planner_constraints.msslb"
+certify motion ConstraintPlanRig profile strict

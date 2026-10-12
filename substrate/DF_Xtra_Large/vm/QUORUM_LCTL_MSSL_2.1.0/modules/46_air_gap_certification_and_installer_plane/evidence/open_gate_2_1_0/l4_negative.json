@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "40140a71efdecdc680d7c342b77ae05e4d88bd00a421844ae6b1137f6a56a24a",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Air Gap Certification and Installer Plane",
+  "module_id": 46,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

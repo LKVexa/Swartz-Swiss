@@ -1,0 +1,72 @@
+{
+  "method": "reference-host process/harness wall clock; not target-hardware certification",
+  "metrics": {
+    "device_host_call_suite": {
+      "max_ms": 2.284106,
+      "median_ms": 2.25273,
+      "min_ms": 2.208314,
+      "runs": 3
+    },
+    "execution_throughput_inprocess": {
+      "branch_ops_per_second": 106205328.6,
+      "load_store_ops_per_second": 62389283.8,
+      "method": "single process; br_vm_load_code+br_vm_run loop over 256-instruction base-ISA programs; best of 3 calibrated samples (>=0.2 s each)",
+      "mixed_instructions_per_second": 38262918.6,
+      "nop_instructions_per_second": 123793908.5,
+      "record": "BOTTLE_ROCKET.InProcessThroughput/5.0.0",
+      "small_add_ops_per_second": 51088753.2
+    },
+    "execution_throughput_reference_note": "in-process guest instructions per second on a 256-instruction mixed ALU/memory/stack program (host/br_bench.c); see execution_throughput_inprocess for NOP, small-ADD, load/store and branch rates",
+    "execution_throughput_reference_ops_per_sec": 38262918.6,
+    "image_load_plus_reference_execution": {
+      "max_ms": 2.977684,
+      "median_ms": 1.752526,
+      "min_ms": 1.6965,
+      "runs": 7
+    },
+    "image_verification": {
+      "max_ms": 4.410458,
+      "median_ms": 3.254017,
+      "min_ms": 3.153221,
+      "runs": 7
+    },
+    "persistence_and_recovery_accelerated": {
+      "max_ms": 77.236351,
+      "median_ms": 77.172375,
+      "min_ms": 77.052348,
+      "runs": 3
+    },
+    "process_launch_load_run_note": "reference-image instruction count divided by whole-process wall time; dominated by process start-up and image verification, not by the interpreter",
+    "process_launch_load_run_ops_per_sec": 3423.6296636968577,
+    "secure_execution_end_to_end": {
+      "max_ms": 3.58318,
+      "median_ms": 3.29276,
+      "min_ms": 3.245469,
+      "runs": 7
+    },
+    "startup_lctl_verify": {
+      "max_ms": 1.777926,
+      "median_ms": 1.686708,
+      "min_ms": 1.620193,
+      "runs": 7
+    },
+    "wide_arithmetic_add": {
+      "max_ms": 2.16261,
+      "median_ms": 2.132803,
+      "min_ms": 2.110139,
+      "runs": 5
+    }
+  },
+  "record": "BOTTLE_ROCKET.PerformanceQualification/4.9.0",
+  "requirements": {
+    "arithmetic": "PASS",
+    "execution": "PASS",
+    "host_call": "PASS",
+    "load": "PASS",
+    "persistence": "PASS",
+    "recovery": "PASS",
+    "startup": "PASS",
+    "verification": "PASS"
+  },
+  "result": "PASS"
+}

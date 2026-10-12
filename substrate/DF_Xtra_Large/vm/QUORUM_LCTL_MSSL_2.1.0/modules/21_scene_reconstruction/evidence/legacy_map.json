@@ -1,0 +1,39 @@
+{
+  "suite_id": 21,
+  "suite_name": "Scene Reconstruction",
+  "plane": "media_visual",
+  "legacy_sha256": "d323d3e92cf7ce6a3c0444525791263ba4456ce0d4b28b4e175a6962f2120efc",
+  "legacy_root": "legacy/source_repository/Scene Reconstruction",
+  "files": [
+    {
+      "path": "21.1_Scene_Reconstruction_Source_Imagery.ja",
+      "sha256": "4861d0e3e9f4078272620028e47642dac5f69e71091b516609367691e27a0c9b",
+      "bytes": 1718
+    },
+    {
+      "path": "21.2_Scene_Reconstruction_Inferred_Geometry.ja",
+      "sha256": "1b2892b7ff37b0ab1c316cf93894e6342e3befe766a84e5592d397e3c96f5d39",
+      "bytes": 1651
+    },
+    {
+      "path": "21.3_Scene_Reconstruction_Layer_Assembly.ja",
+      "sha256": "15dcd0d97cccb683be4d4a31613ac71d3f363cb28059b9435be24c11ef35b24c",
+      "bytes": 1651
+    },
+    {
+      "path": "21.4_Scene_Reconstruction_Camera_Material_Binding.ja",
+      "sha256": "90c415cda07f66775138aed1d729b2f1469e7348ce0975e6149a43611f012603",
+      "bytes": 1933
+    },
+    {
+      "path": "21.5_Scene_Reconstruction_Deterministic_Emission.ja",
+      "sha256": "86245125a2002d3e23c5a5c06c74172b52c35da3de114b13714c8d9a0aa076f0",
+      "bytes": 2221
+    },
+    {
+      "path": "README.md",
+      "sha256": "6e3e51f5041fb689d86a2aa52fb571f4158af2d291eca2c3354423e0a99dbd37",
+      "bytes": 10946
+    }
+  ]
+}

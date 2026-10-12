@@ -1,0 +1,14 @@
+ja source 0.3
+module suite50.diff_patch_review.repository_confinement
+use Core
+policy no_network
+
+record RepositoryConfinementPlan { id: Count, repository_root: Text, worktree_identity: Text, canonical_target: Text, path_policy: Text, escape_policy: Text, approval_state: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_repository_confinement(item: RepositoryConfinementPlan) -> Result<RepositoryConfinementPlan, Text> effects { pure } {
+    let normalized: Text = item.canonical_target
+    return Ok(RepositoryConfinementPlan { id: item.id, repository_root: item.repository_root, worktree_identity: item.worktree_identity, canonical_target: normalized, path_policy: item.path_policy, escape_policy: item.escape_policy, approval_state: item.approval_state, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: RepositoryConfinementPlan = RepositoryConfinementPlan { id: 5006, repository_root: "selected_work_repository", worktree_identity: "required_worktree_and_snapshot_hash", canonical_target: "explicit_repository_relative_target", path_policy: "canonicalize_and_revalidate_at_effect_time", escape_policy: "deny_absolute_parent_symlink_mount_and_device_escape", approval_state: "approval_cannot_expand_root", sophia: "interpret_selected_repository_scope", charlotte: "validate_paths_links_mounts_and_freshness", landon: "confine_staging_to_approved_root", professor: "explain_scope_and_denials", podium: "publish_confinement_receipt" }
+let result = prepare_repository_confinement(sample)
+assert result.is_ok == true
+emit json result

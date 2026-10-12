@@ -1,0 +1,50 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "fe8d00b7a3ee176972aa8d947923e94f8696a9f160ae67882f517e21b1c2b2ea",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (REFERENCE_PRECISION, IDENTITY_PERSISTENCE, MULTI_WORKER_CONFORMANCE) plus Stage 05 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "IDENTITY_PERSISTENCE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "MULTI_WORKER_CONFORMANCE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "REFERENCE_PRECISION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-15",
+    "GW-27",
+    "GW-66"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T3_FABRIC",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Entity references crossing partitions use stable canonical IDs and never rely on process-local pointers as authority.",
+  "requirement_id": "RCPW-05-R21",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 5,
+  "stage_title": "Entity Persistence Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "REFERENCE_PRECISION",
+    "IDENTITY_PERSISTENCE",
+    "MULTI_WORKER_CONFORMANCE"
+  ],
+  "workflow_file": "05_ENTITY_PERSISTENCE_AUTHORITY/064_RCPW_05_R21_ENTITY_REFERENCES_CROSSING_PARTITIONS_USE_STABLE_CANONICAL_IDS_AND_NEVER_RELY_ON_PROC.md",
+  "workflow_tier": "T3_FABRIC"
+}

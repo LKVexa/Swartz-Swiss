@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "quorum://schemas/evidence.schema.json",
+  "title": "evidence.schema.json",
+  "type": "object",
+  "required": [
+    "receipt_id",
+    "module_id",
+    "authority_hash",
+    "execution_hash",
+    "input_hash",
+    "output_hash",
+    "verdict"
+  ],
+  "additionalProperties": true
+}

@@ -1,0 +1,2215 @@
+{
+  "fail": 0,
+  "pass": 80,
+  "results": [
+    {
+      "detail": {
+        "fold": {
+          "bounded": true,
+          "c1": true,
+          "c2_boundary": true,
+          "monotonic": true,
+          "samples": [
+            [
+              0,
+              0.0
+            ],
+            [
+              512,
+              512.0
+            ],
+            [
+              1022,
+              1022.0
+            ],
+            [
+              1023,
+              1023.0
+            ],
+            [
+              1024,
+              1024.0
+            ],
+            [
+              1025,
+              1025.0
+            ],
+            [
+              1026,
+              1026.0
+            ],
+            [
+              2048,
+              2047.9986349269407
+            ],
+            [
+              655360,
+              65515.405038906
+            ]
+          ]
+        },
+        "identities": true,
+        "nonref": true
+      },
+      "id": "GW-01",
+      "name": "Fold Circuit",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "conserved": true,
+        "digest": "393088bcec01a86f6030f1d83bf6d7f60c652c1f8a733d0658d51953fe746d09",
+        "equal": true
+      },
+      "id": "GW-02",
+      "name": "Remote Ecology",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "after": {
+          "consumption": 18,
+          "food": 801,
+          "labor": 24,
+          "law": 70,
+          "money": 12000,
+          "morale": 66,
+          "population": 240,
+          "production": 24,
+          "region": "3",
+          "storage": 50
+        },
+        "before": {
+          "consumption": 18,
+          "food": 800,
+          "law": 70,
+          "money": 12000,
+          "morale": 66,
+          "population": 240,
+          "production": 24,
+          "region": "3"
+        },
+        "journal": {
+          "balanced": true,
+          "consumed": 18,
+          "food_after": 801,
+          "food_before": 800,
+          "produced": 19,
+          "settlement": "eastvale",
+          "tick": 0
+        },
+        "labor": 24,
+        "market": {
+          "backorders": 0,
+          "demand_food": 20,
+          "price_food": 3,
+          "substitute": "forage"
+        },
+        "recovery": {
+          "after": {
+            "consumption": 18,
+            "food": 807,
+            "labor": 24,
+            "law": 70,
+            "money": 12000,
+            "morale": 66,
+            "population": 240,
+            "production": 24,
+            "region": "3",
+            "storage": 50
+          },
+          "before": {
+            "consumption": 18,
+            "food": 801,
+            "labor": 24,
+            "law": 70,
+            "money": 12000,
+            "morale": 66,
+            "population": 240,
+            "production": 24,
+            "region": "3",
+            "storage": 50
+          },
+          "journal": {
+            "balanced": true,
+            "consumed": 18,
+            "food_after": 807,
+            "food_before": 801,
+            "produced": 24,
+            "settlement": "eastvale",
+            "tick": 0
+          },
+          "labor": 24,
+          "market": {
+            "backorders": 0,
+            "demand_food": 20,
+            "price_food": 2,
+            "substitute": "forage"
+          },
+          "transport_open": false
+        },
+        "transport_open": false
+      },
+      "id": "GW-03",
+      "name": "Settlement Shock",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "well": "W0001",
+        "winner": "W0001"
+      },
+      "id": "GW-04",
+      "name": "Narrative Well",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "all_interaction_ready": true,
+        "duplicate_tasks": false,
+        "elapsed_ms": 173.9906479997444,
+        "entities": 120,
+        "readiness_digest": "9bed5c2658c5f51a28cd5c5fcfd38cdafa2bac777529f6b7625fae747b3aab83",
+        "tasks": 600,
+        "worker_count": 4
+      },
+      "id": "GW-05",
+      "name": "Materialization Storm Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "errors": [],
+        "trace": {
+          "cause": "teleport",
+          "epoch": 2,
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "invalidations": {
+            "audio_spatial": 1,
+            "interaction_targets": 1,
+            "navigation_cache": 1,
+            "physics_broadphase": 1,
+            "render_history": 1
+          },
+          "tick": 0,
+          "to": [
+            500000,
+            -200000,
+            50
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "id": "GW-06",
+      "name": "Teleport Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "wells": [
+          "W0001",
+          "W0002",
+          "W0003",
+          "W0004"
+        ],
+        "winner": "W0004"
+      },
+      "id": "GW-07",
+      "name": "Multi-Well Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "ledger": true,
+        "state": true
+      },
+      "id": "GW-08",
+      "name": "Crash/Recovery Save",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "compat": {
+          "archive": [
+            2,
+            3
+          ],
+          "fold_policy": [
+            "rational-c1/1",
+            "c2-compactification/2"
+          ],
+          "runtime_abi": [
+            2,
+            3
+          ],
+          "save_schema": [
+            "QVM-RCPW-SAVE/1",
+            "QVM-RCPW-SAVE/2"
+          ],
+          "transition": [
+            2,
+            3
+          ],
+          "world_schema": [
+            "QVM-RCPW-WORLD/1",
+            "QVM-RCPW-WORLD/2"
+          ]
+        },
+        "transition": {
+          "conservation": {
+            "health": 100,
+            "inventory": {},
+            "obligations": [],
+            "ownership": "canonical",
+            "pos": [
+              1,
+              2,
+              3
+            ]
+          },
+          "entity_id": "3",
+          "schema": "RCPW-TRANSITION/3",
+          "source": 7,
+          "target": 2,
+          "tick": 1,
+          "version": 3
+        }
+      },
+      "id": "GW-09",
+      "name": "Save Migration",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "autonomous_days": 120,
+        "elapsed_seconds": 0.1160009680006624,
+        "end_digest": "901609dc30fa9dd720020f0702001831edc50e75bfa12d7ff89734d8e058ea37",
+        "era": "ERA_1",
+        "generation_years": 30,
+        "growth_bytes": 396,
+        "invariants": [],
+        "ledger_ok": true,
+        "pass": true,
+        "profile": "HOSTED_REFERENCE_SOAK/1",
+        "serialized_bytes_max": 13101,
+        "serialized_bytes_min": 12705,
+        "start_digest": "9ded11dc52b1e1e91756ad040613c2e03d6ad3adf30db8cdafb3365e9b907f2e",
+        "successor": "8",
+        "ticks": 4000
+      },
+      "id": "GW-10",
+      "name": "Long Soak",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "stale_rejected": true,
+        "trace": {
+          "cause": "portal",
+          "epoch": 2,
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "invalidations": {
+            "audio_spatial": 1,
+            "interaction_targets": 1,
+            "navigation_cache": 1,
+            "physics_broadphase": 1,
+            "render_history": 1
+          },
+          "tick": 0,
+          "to": [
+            20000,
+            0,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "id": "GW-11",
+      "name": "Portal/Reference Continuity",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "crime": {
+          "actor": "1",
+          "id": "crime:1",
+          "kind": "theft",
+          "region": "3",
+          "status": "reported",
+          "tick": 0
+        },
+        "institution_knows": true,
+        "reputation": -10
+      },
+      "id": "GW-12",
+      "name": "Law Knowledge Persistence",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "a": {
+          "after": {
+            "fire": 0,
+            "front": 20,
+            "precip": 0,
+            "season": "spring",
+            "temperature": 18,
+            "wind": [
+              3,
+              0,
+              0
+            ]
+          },
+          "before": {
+            "fire": 0,
+            "front": 0,
+            "precip": 0,
+            "season": "spring",
+            "temperature": 18,
+            "wind": [
+              1,
+              0,
+              0
+            ]
+          },
+          "canonical_region": "3"
+        },
+        "b": {
+          "after": {
+            "fire": 0,
+            "front": 40,
+            "precip": 0,
+            "season": "spring",
+            "temperature": 18,
+            "wind": [
+              2,
+              0,
+              0
+            ]
+          },
+          "before": {
+            "fire": 0,
+            "front": 20,
+            "precip": 0,
+            "season": "spring",
+            "temperature": 18,
+            "wind": [
+              3,
+              0,
+              0
+            ]
+          },
+          "canonical_region": "3"
+        }
+      },
+      "id": "GW-13",
+      "name": "Weather Front Crossing",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "plan": {
+          "bounded_speculation": true,
+          "camera_lead": 100,
+          "canonical_distance": 20000,
+          "milestones": [
+            {
+              "eta": 0,
+              "node": "1",
+              "priority": "HIGH"
+            },
+            {
+              "eta": 400,
+              "node": "3",
+              "priority": "HIGH"
+            }
+          ],
+          "route": "route:heart-east",
+          "speed": 50,
+          "teleport": false
+        },
+        "shock": {
+          "after": {
+            "consumption": 18,
+            "food": 801,
+            "labor": 24,
+            "law": 70,
+            "money": 12000,
+            "morale": 66,
+            "population": 240,
+            "production": 24,
+            "region": "3",
+            "storage": 50
+          },
+          "before": {
+            "consumption": 18,
+            "food": 800,
+            "law": 70,
+            "money": 12000,
+            "morale": 66,
+            "population": 240,
+            "production": 24,
+            "region": "3"
+          },
+          "journal": {
+            "balanced": true,
+            "consumed": 18,
+            "food_after": 801,
+            "food_before": 800,
+            "produced": 19,
+            "settlement": "eastvale",
+            "tick": 0
+          },
+          "labor": 24,
+          "market": {
+            "backorders": 0,
+            "demand_food": 20,
+            "price_food": 3,
+            "substitute": "forage"
+          },
+          "transport_open": false
+        }
+      },
+      "id": "GW-14",
+      "name": "Logistics Chain",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "entity": "8",
+        "exists": true,
+        "x": 300
+      },
+      "id": "GW-15",
+      "name": "Persistent Companion",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "duplicate_landmarks": [],
+        "horizon_inversion": false,
+        "pass": true,
+        "scale_discontinuity": false,
+        "topology_leaks": []
+      },
+      "id": "GW-16",
+      "name": "Fold-Horizon Safety",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "final": {
+          "approximation_debt": 0,
+          "last_change": 0,
+          "lod": 6,
+          "promotion_debt": 0,
+          "valid_until": 80
+        },
+        "transitions": 0
+      },
+      "id": "GW-17",
+      "name": "Oscillation Torture Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "high": "FULL_SIM",
+        "low": "DEFERRED"
+      },
+      "id": "GW-18",
+      "name": "Event Barrier",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "accepted": false,
+        "unrelated_unchanged": true
+      },
+      "id": "GW-19",
+      "name": "Content Pack Degradation",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "ecology": {
+          "1": {
+            "deer": 120,
+            "forage": 800,
+            "wolves": 8
+          },
+          "2": {
+            "deer": 220,
+            "forage": 1400,
+            "wolves": 18
+          },
+          "3": {
+            "deer": 90,
+            "forage": 650,
+            "wolves": 4
+          }
+        },
+        "economy": {
+          "eastvale": {
+            "consumption": 18,
+            "food": 806,
+            "labor": 24,
+            "law": 70,
+            "money": 12000,
+            "morale": 66,
+            "population": 240,
+            "production": 24,
+            "region": "3",
+            "storage": 50
+          },
+          "heartland_camp": {
+            "consumption": 2,
+            "food": 120,
+            "law": 1,
+            "money": 600,
+            "morale": 70,
+            "population": 18,
+            "production": 4,
+            "region": "1"
+          }
+        },
+        "history": "824f28ccc6cf70f56ae6ba74dd797483b09bb250a9e63abc15e5badcbaaa3c86",
+        "weather": {
+          "1": {
+            "fire": 0,
+            "front": 0,
+            "precip": 0,
+            "season": "spring",
+            "temperature": 16,
+            "wind": [
+              1,
+              0,
+              0
+            ]
+          },
+          "2": {
+            "fire": 0,
+            "front": 0,
+            "precip": 0,
+            "season": "spring",
+            "temperature": 17,
+            "wind": [
+              1,
+              0,
+              0
+            ]
+          },
+          "3": {
+            "fire": 0,
+            "front": 0,
+            "precip": 0,
+            "season": "spring",
+            "temperature": 18,
+            "wind": [
+              1,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "id": "GW-20",
+      "name": "Full World Day",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "graph": true,
+        "same": true
+      },
+      "id": "GW-21",
+      "name": "World Package Rebuild",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "frame": {
+          "epoch": 1,
+          "frame_id": "vehicle:train",
+          "frame_type": "vehicle",
+          "origin": [
+            10000,
+            5000,
+            0
+          ],
+          "parent": "world",
+          "tick": 0,
+          "velocity": [
+            10,
+            0,
+            0
+          ]
+        },
+        "warm": {
+          "animation_phase": 0,
+          "deterministic": true,
+          "entity": "6",
+          "physics": {
+            "pose": [
+              10000,
+              5000,
+              0
+            ],
+            "velocity": [
+              10,
+              0,
+              0
+            ]
+          },
+          "route_phase": 0,
+          "velocity": [
+            10,
+            0,
+            0
+          ]
+        }
+      },
+      "id": "GW-22",
+      "name": "Nested Moving Frame Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "distance": 11000,
+        "exists": true
+      },
+      "id": "GW-23",
+      "name": "Pursuit Across Shells",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "plan": {
+          "bounded_speculation": true,
+          "camera_lead": 100,
+          "canonical_distance": 22000,
+          "milestones": [
+            {
+              "eta": 0,
+              "node": "1",
+              "priority": "HIGH"
+            },
+            {
+              "eta": 183,
+              "node": "3",
+              "priority": "HIGH"
+            }
+          ],
+          "route": "rail:east",
+          "speed": 120,
+          "teleport": false
+        },
+        "warm": {
+          "animation_phase": 0,
+          "deterministic": true,
+          "entity": "6",
+          "physics": {
+            "pose": [
+              10000,
+              5000,
+              0
+            ],
+            "velocity": [
+              10,
+              0,
+              0
+            ]
+          },
+          "route_phase": 0,
+          "velocity": [
+            10,
+            0,
+            0
+          ]
+        }
+      },
+      "id": "GW-24",
+      "name": "Rail/Route Continuity",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "barrier": "FULL_SIM",
+        "law": {
+          "crime": {
+            "actor": "1",
+            "id": "crime:1",
+            "kind": "theft",
+            "region": "3",
+            "status": "reported",
+            "tick": 0
+          },
+          "institution_knows": true,
+          "reputation": -10
+        },
+        "target": "3"
+      },
+      "id": "GW-25",
+      "name": "Combat at Fold Boundary",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "event": "E00000002",
+        "resolution": "FULL_SIM"
+      },
+      "id": "GW-26",
+      "name": "Remote Combat Resolution",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "economy": {
+          "after": {
+            "consumption": 18,
+            "food": 866,
+            "labor": 24,
+            "law": 70,
+            "money": 12000,
+            "morale": 66,
+            "population": 240,
+            "production": 24,
+            "region": "3",
+            "storage": 50
+          },
+          "before": {
+            "consumption": 18,
+            "food": 860,
+            "law": 70,
+            "money": 12000,
+            "morale": 66,
+            "population": 240,
+            "production": 24,
+            "region": "3"
+          },
+          "journal": {
+            "balanced": true,
+            "consumed": 18,
+            "food_after": 866,
+            "food_before": 860,
+            "produced": 24,
+            "settlement": "eastvale",
+            "tick": 100
+          },
+          "labor": 24,
+          "market": {
+            "backorders": 0,
+            "demand_food": 20,
+            "price_food": 3,
+            "substitute": "forage"
+          },
+          "transport_open": true
+        },
+        "inventory_before": {
+          "coin": 100,
+          "food": 25
+        },
+        "merchant": {
+          "alive": true,
+          "faction": "neutral",
+          "goal": "idle",
+          "health": 100,
+          "id": "3",
+          "inventory": {
+            "coin": 100,
+            "food": 25
+          },
+          "kind": "merchant",
+          "lineage": {
+            "generation": 0,
+            "parent": null
+          },
+          "narrative_gravity": 0,
+          "persistent": true,
+          "pos": [
+            500,
+            100,
+            0
+          ],
+          "provenance": {
+            "class": "AUTHORED_DEMO",
+            "created_tick": 0
+          },
+          "region": "1",
+          "revision": 1,
+          "schedule": "default",
+          "velocity": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "id": "GW-27",
+      "name": "Persistent Merchant Day",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "after_role": "8",
+        "households": {
+          "HH1": {
+            "home": "interior:eastvale-store",
+            "members": [
+              "3",
+              "7"
+            ],
+            "money": 150,
+            "region": "3"
+          }
+        },
+        "workplaces": {
+          "WORK1": {
+            "kind": "merchant",
+            "production_site": "PS1",
+            "region": "3",
+            "workers": [
+              "3"
+            ]
+          }
+        }
+      },
+      "id": "GW-28",
+      "name": "Household and Occupation",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "blocked": true,
+        "economic": {
+          "after": {
+            "consumption": 18,
+            "food": 801,
+            "labor": 24,
+            "law": 70,
+            "money": 12000,
+            "morale": 66,
+            "population": 240,
+            "production": 24,
+            "region": "3",
+            "storage": 50
+          },
+          "before": {
+            "consumption": 18,
+            "food": 800,
+            "law": 70,
+            "money": 12000,
+            "morale": 66,
+            "population": 240,
+            "production": 24,
+            "region": "3"
+          },
+          "journal": {
+            "balanced": true,
+            "consumed": 18,
+            "food_after": 801,
+            "food_before": 800,
+            "produced": 19,
+            "settlement": "eastvale",
+            "tick": 0
+          },
+          "labor": 24,
+          "market": {
+            "backorders": 0,
+            "demand_food": 20,
+            "price_food": 3,
+            "substitute": "forage"
+          },
+          "transport_open": false
+        }
+      },
+      "id": "GW-29",
+      "name": "Dynamic Blockage",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "same": true
+      },
+      "id": "GW-30",
+      "name": "Procedural Region Regeneration",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "generated": {
+          "anchor": "1",
+          "class": "GENERATED",
+          "generator": "semantic-frontier/1",
+          "seed": 16360754849604867932
+        },
+        "override": {
+          "anchor": "1",
+          "class": "GENERATED",
+          "generator": "semantic-frontier/1",
+          "override": "authored/1",
+          "seed": 16360754849604867932
+        }
+      },
+      "id": "GW-31",
+      "name": "Generated/Authored Override",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "collision": false,
+        "interactable": false
+      },
+      "id": "GW-32",
+      "name": "Materialization Dependency Failure",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "fire": 4,
+        "weather": {
+          "after": {
+            "fire": 4,
+            "front": 25,
+            "precip": 0,
+            "season": "spring",
+            "temperature": 18,
+            "wind": [
+              2,
+              0,
+              0
+            ]
+          },
+          "before": {
+            "fire": 5,
+            "front": 0,
+            "precip": 0,
+            "season": "spring",
+            "temperature": 18,
+            "wind": [
+              1,
+              0,
+              0
+            ]
+          },
+          "canonical_region": "3"
+        }
+      },
+      "id": "GW-33",
+      "name": "Moving Weather + Fire",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "jurisdiction": {
+          "law:eastvale": {
+            "institution": "eastvale_law",
+            "regions": [
+              "3"
+            ]
+          }
+        },
+        "law": {
+          "crime": {
+            "actor": "1",
+            "id": "crime:1",
+            "kind": "theft",
+            "region": "3",
+            "status": "reported",
+            "tick": 0
+          },
+          "institution_knows": true,
+          "reputation": -10
+        }
+      },
+      "id": "GW-34",
+      "name": "Law Pursuit and Jurisdiction",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "a": {
+          "candidate": {
+            "actor": "3",
+            "created": 0,
+            "event_id": "A",
+            "expires": 100,
+            "owner": "P0",
+            "priority": 20,
+            "resolved": false
+          },
+          "winner": "A"
+        },
+        "b": {
+          "candidate": {
+            "actor": "3",
+            "created": 0,
+            "event_id": "B",
+            "expires": 100,
+            "owner": "P0",
+            "priority": 80,
+            "resolved": false
+          },
+          "winner": "B"
+        }
+      },
+      "id": "GW-35",
+      "name": "Event Reservation Conflict",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "count": 6,
+        "plan": {
+          "bounded_speculation": true,
+          "camera_lead": 100,
+          "canonical_distance": 22000,
+          "milestones": [
+            {
+              "eta": 0,
+              "node": "1",
+              "priority": "HIGH"
+            },
+            {
+              "eta": 220,
+              "node": "3",
+              "priority": "HIGH"
+            }
+          ],
+          "route": "rail:east",
+          "speed": 100,
+          "teleport": false
+        },
+        "winner": "W0006"
+      },
+      "id": "GW-36",
+      "name": "Multi-Well Transport Crisis",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "checkpoint": "b8dc7ff9cbc0b228d8891c09ef86ec0b75a30c634673e71945a8cd868e8fe3ff",
+        "state": true
+      },
+      "id": "GW-37",
+      "name": "Checkpoint Under Load",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "abi": {
+          "abi_version": 3,
+          "fold_policy": "c2-compactification/2",
+          "scheduler_version": "RCPW-SCHED/3",
+          "services": [
+            "canonical_mutation",
+            "scheduler",
+            "ledger_commit",
+            "lod_fold_plan",
+            "materialization",
+            "navigation",
+            "ai",
+            "environment",
+            "render_view",
+            "save_replay",
+            "diagnostics",
+            "fabric",
+            "history",
+            "world_expansion"
+          ]
+        },
+        "compatible": true
+      },
+      "id": "GW-38",
+      "name": "Runtime ABI Upgrade",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "corrupt_exit_code": 2,
+        "corrupt_rejected": true,
+        "digest_equal": true,
+        "isolated_exit_code": 0,
+        "ledger_equal": true,
+        "producer_ledger_head": "b3e5df0bdb004b943d1c19b85b80748d97a6db3634f98289744e5f5e6d6ed40a",
+        "producer_state_sha256": "9ff174ca39dc0b504ed60b9bd9238ba47712b17021655a0da6c59cd6b32e76a7",
+        "receipt": {
+          "entities": 7,
+          "ledger_head": "b3e5df0bdb004b943d1c19b85b80748d97a6db3634f98289744e5f5e6d6ed40a",
+          "regions": 4,
+          "renderer_created": false,
+          "schema": "RCPW-HEADLESS-VERIFY/1",
+          "semantic_ledger_sha256": "7ab616cb20f074bbbe4af4aa49d9c8d6aefd8ef8eab942603714cca9a2e3e13e",
+          "state_sha256": "9ff174ca39dc0b504ed60b9bd9238ba47712b17021655a0da6c59cd6b32e76a7",
+          "status": "PASS",
+          "tick": 30,
+          "unresolved_obligations": 0
+        }
+      },
+      "id": "GW-39",
+      "name": "Headless Replay",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "autonomous_days": 365,
+        "elapsed_seconds": 0.14389894100077072,
+        "end_digest": "dba75475a91e043d2b67de8bfdf87fd6da2d71c6d8f232fe6acec98900a885eb",
+        "era": "ERA_2",
+        "generation_years": 30,
+        "growth_bytes": 398,
+        "invariants": [],
+        "ledger_ok": true,
+        "pass": true,
+        "profile": "HOSTED_REFERENCE_SOAK/1",
+        "serialized_bytes_max": 13104,
+        "serialized_bytes_min": 12706,
+        "start_digest": "07b357ae2bd9feee442436c3fcf16e797c2ff4662ce50d10799acc24777d2e16",
+        "successor": "8",
+        "ticks": 6000
+      },
+      "id": "GW-40",
+      "name": "Operational World Soak",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "equal": true,
+        "layouts": [
+          {
+            "canonical": "8d05734e1ca9cf9a4b8863c9c213abb1b0d1214b5c72dad98e96a3049e02c6c0",
+            "fold_digest": "d946f7eb758c4e89b2d1076fc411f7d7b9baec50c5aac799469e36373e963067",
+            "ledger": "772e688a64128c39bf95522365a9e96f5ebf4fe868f2fd9425b87cb570270918",
+            "lod_digest": "a3810fa2f8684b286fb3c78188c164a7021a0c29f5cc5c907159b9d0aaf3a95c",
+            "workers": 1
+          },
+          {
+            "canonical": "8d05734e1ca9cf9a4b8863c9c213abb1b0d1214b5c72dad98e96a3049e02c6c0",
+            "fold_digest": "d946f7eb758c4e89b2d1076fc411f7d7b9baec50c5aac799469e36373e963067",
+            "ledger": "772e688a64128c39bf95522365a9e96f5ebf4fe868f2fd9425b87cb570270918",
+            "lod_digest": "a3810fa2f8684b286fb3c78188c164a7021a0c29f5cc5c907159b9d0aaf3a95c",
+            "workers": 2
+          },
+          {
+            "canonical": "8d05734e1ca9cf9a4b8863c9c213abb1b0d1214b5c72dad98e96a3049e02c6c0",
+            "fold_digest": "d946f7eb758c4e89b2d1076fc411f7d7b9baec50c5aac799469e36373e963067",
+            "ledger": "772e688a64128c39bf95522365a9e96f5ebf4fe868f2fd9425b87cb570270918",
+            "lod_digest": "a3810fa2f8684b286fb3c78188c164a7021a0c29f5cc5c907159b9d0aaf3a95c",
+            "workers": 4
+          }
+        ]
+      },
+      "id": "GW-41",
+      "name": "Single-vs-Multi Layout Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "canonical_changed_for_declared_migration": true,
+        "entities": 7,
+        "owner": "P4"
+      },
+      "id": "GW-42",
+      "name": "Repartition While Traveling",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "equal": true,
+        "recovered_workers": 1
+      },
+      "id": "GW-43",
+      "name": "Worker Loss During Fold",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "before": {
+          "all_interaction_ready": true,
+          "duplicate_tasks": false,
+          "elapsed_ms": 130.49788900025305,
+          "entities": 80,
+          "readiness_digest": "7a667f0ee68a1c544ef7bc9fbcfab6d96f66bc983d48908192eddf8ed42331d8",
+          "tasks": 400,
+          "worker_count": 4
+        },
+        "recovery": true
+      },
+      "id": "GW-44",
+      "name": "Worker Loss During Materialization",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "applied": true,
+        "conserved": true,
+        "duplicate": false
+      },
+      "id": "GW-45",
+      "name": "Cross-Partition Inventory Transfer",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "event": "E00000003",
+        "law": {
+          "crime": {
+            "actor": "1",
+            "id": "crime:1",
+            "kind": "theft",
+            "region": "3",
+            "status": "reported",
+            "tick": 0
+          },
+          "institution_knows": true,
+          "reputation": -10
+        },
+        "owner": "P2"
+      },
+      "id": "GW-46",
+      "name": "Cross-Partition Combat",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "after": {
+          "bounded_speculation": true,
+          "camera_lead": 100,
+          "canonical_distance": 20000,
+          "milestones": [
+            {
+              "eta": 0,
+              "node": "1",
+              "priority": "HIGH"
+            },
+            {
+              "eta": 200,
+              "node": "2",
+              "priority": "HIGH"
+            }
+          ],
+          "route": "route:heart-west",
+          "speed": 100,
+          "teleport": false
+        },
+        "before": {
+          "bounded_speculation": true,
+          "camera_lead": 100,
+          "canonical_distance": 20000,
+          "milestones": [
+            {
+              "eta": 0,
+              "node": "1",
+              "priority": "HIGH"
+            },
+            {
+              "eta": 200,
+              "node": "3",
+              "priority": "HIGH"
+            }
+          ],
+          "route": "route:heart-east",
+          "speed": 100,
+          "teleport": false
+        }
+      },
+      "id": "GW-47",
+      "name": "Concurrent Route Mutation",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "balanced": true,
+        "rows": 20
+      },
+      "id": "GW-48",
+      "name": "Settlement Transaction Storm",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "before": 220,
+        "conserved": true,
+        "merged": 220,
+        "owner": "P2",
+        "split": [
+          110,
+          110
+        ]
+      },
+      "id": "GW-49",
+      "name": "Ecology Boundary Migration",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "fidelity_debt": 7,
+        "owner": "P3",
+        "well": "W0001"
+      },
+      "id": "GW-50",
+      "name": "Authority-Well Reassignment",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "before": {
+          "bounded": true,
+          "c1": true,
+          "c2_boundary": true,
+          "monotonic": true,
+          "samples": [
+            [
+              0,
+              0.0
+            ],
+            [
+              512,
+              512.0
+            ],
+            [
+              1022,
+              1022.0
+            ],
+            [
+              1023,
+              1023.0
+            ],
+            [
+              1024,
+              1024.0
+            ],
+            [
+              1025,
+              1025.0
+            ],
+            [
+              1026,
+              1026.0
+            ],
+            [
+              2048,
+              2047.9986349269407
+            ],
+            [
+              655360,
+              65515.405038906
+            ]
+          ]
+        },
+        "old": "c2-compactification/2",
+        "rollback": true
+      },
+      "id": "GW-51",
+      "name": "Hot Fold-Policy Patch",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "canonical": true
+      },
+      "id": "GW-52",
+      "name": "Presentation Hot Reload",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "admitted": true,
+        "invalid": {
+          "accepted": false,
+          "unrelated_unchanged": true
+        },
+        "unrelated": true
+      },
+      "id": "GW-53",
+      "name": "Canonical Content Patch",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "digest": true,
+        "owners": {
+          "1": "P0",
+          "2": "P0",
+          "3": "P3"
+        }
+      },
+      "id": "GW-54",
+      "name": "Partition Checkpoint Barrier",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "stale_rejected": true
+      },
+      "id": "GW-55",
+      "name": "Replica Staleness",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "count": 1,
+        "first": true,
+        "second": false
+      },
+      "id": "GW-56",
+      "name": "Duplicate Transaction Delivery",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "reservations": {
+          "race0": {
+            "actor": "3",
+            "created": 0,
+            "event_id": "race0",
+            "expires": 100,
+            "owner": "P0",
+            "priority": 50,
+            "resolved": false
+          },
+          "raceA": {
+            "actor": "3",
+            "created": 0,
+            "event_id": "raceA",
+            "expires": 100,
+            "owner": "P0",
+            "priority": 50,
+            "resolution": "preempted",
+            "resolved": true
+          }
+        },
+        "winner": "race0"
+      },
+      "id": "GW-57",
+      "name": "Causal Ordering Race",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "actions": [
+          {
+            "action": "RESTORE_OR_HOLD",
+            "canonical_protected": true,
+            "level": 0,
+            "pressure": {
+              "cpu": 50,
+              "gpu": 0,
+              "io": 50,
+              "ledger_backlog": 0,
+              "materialization_backlog": 50,
+              "memory": 50,
+              "storage": 0
+            },
+            "tick": 0
+          },
+          {
+            "action": "REDUCE_REMOTE_FIDELITY",
+            "canonical_protected": true,
+            "level": 2,
+            "pressure": {
+              "cpu": 100,
+              "gpu": 0,
+              "io": 100,
+              "ledger_backlog": 0,
+              "materialization_backlog": 100,
+              "memory": 100,
+              "storage": 0
+            },
+            "tick": 0
+          },
+          {
+            "action": "PROTECT_CANONICAL_LEDGER_CHECKPOINT",
+            "canonical_protected": true,
+            "level": 3,
+            "pressure": {
+              "cpu": 180,
+              "gpu": 0,
+              "io": 180,
+              "ledger_backlog": 0,
+              "materialization_backlog": 180,
+              "memory": 180,
+              "storage": 0
+            },
+            "tick": 0
+          },
+          {
+            "action": "RESTORE_OR_HOLD",
+            "canonical_protected": true,
+            "level": 0,
+            "pressure": {
+              "cpu": 20,
+              "gpu": 0,
+              "io": 20,
+              "ledger_backlog": 0,
+              "materialization_backlog": 20,
+              "memory": 20,
+              "storage": 0
+            },
+            "tick": 0
+          }
+        ],
+        "recovered": true
+      },
+      "id": "GW-58",
+      "name": "Resource Saturation Across Workers",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "canonical": {
+          "digest": "4405c9fbe97d64cd6162bb6697361506a96f69d0ee82f673ebf9e5a6017517d6",
+          "errors": [],
+          "pass": true,
+          "without_renderer": true
+        },
+        "tests": [
+          {
+            "accepted": false,
+            "unrelated_unchanged": true
+          },
+          {
+            "rejected": "WorldError"
+          }
+        ]
+      },
+      "id": "GW-59",
+      "name": "Security/Capability Abuse",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "autonomous_days": 365,
+        "elapsed_seconds": 0.14580314800059568,
+        "end_digest": "79487441d6dc5092e708395201685ec4e5730a455dd35bd384abc904df440363",
+        "era": "ERA_2",
+        "generation_years": 30,
+        "growth_bytes": 397,
+        "invariants": [],
+        "ledger_ok": true,
+        "pass": true,
+        "profile": "HOSTED_REFERENCE_SOAK/1",
+        "serialized_bytes_max": 13103,
+        "serialized_bytes_min": 12706,
+        "start_digest": "f91b85e677d479113bdb9b9219255a53c53c74dedb20400137f496a0e28631b5",
+        "successor": "8",
+        "ticks": 8000
+      },
+      "id": "GW-60",
+      "name": "Sovereign World Fabric Soak",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "admitted": true,
+        "preexisting_unrelated_unchanged": true,
+        "provenance": {
+          "anchor": "1",
+          "class": "GENERATED",
+          "generator": "semantic-frontier/1",
+          "seed": 9501436377538441680
+        },
+        "region": "4",
+        "validation": {
+          "errors": [],
+          "grammar_version": "world-grammar/2",
+          "pass": true
+        }
+      },
+      "id": "GW-61",
+      "name": "Frontier Admission",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "errors": [
+          "biome",
+          "anchor",
+          "seed"
+        ],
+        "grammar_version": "world-grammar/2",
+        "pass": false
+      },
+      "id": "GW-62",
+      "name": "Frontier Rejection",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "admitted": true,
+        "fold": {
+          "canonical_delta": [
+            26612,
+            -298,
+            0
+          ],
+          "canonical_distance": 26613.668443113962,
+          "fold_policy": "c2-compactification/2",
+          "folded": [
+            26100.78820671212,
+            -292.27547292951346,
+            0.0
+          ],
+          "folded_distance": 26102.424599330207,
+          "shell": 5
+        },
+        "region": "4"
+      },
+      "id": "GW-63",
+      "name": "Expansion Horizon",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "era": {
+          "created": [
+            "8"
+          ],
+          "era": "ERA_1",
+          "role": "8",
+          "world_age_days": 7300,
+          "years": 20
+        },
+        "new": "frontier-town",
+        "settlements": 3
+      },
+      "id": "GW-64",
+      "name": "Deep-Time Settlement Growth",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "after": {
+          "consumption": 18,
+          "food": 835,
+          "labor": 24,
+          "law": 70,
+          "money": 12000,
+          "morale": 66,
+          "population": 240,
+          "production": 24,
+          "region": "3",
+          "storage": 50
+        },
+        "before": {
+          "consumption": 18,
+          "food": 800,
+          "law": 70,
+          "money": 12000,
+          "morale": 66,
+          "population": 240,
+          "production": 24,
+          "region": "3"
+        }
+      },
+      "id": "GW-65",
+      "name": "Settlement Decline and Reclamation",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "g1": {
+          "created": [
+            "8"
+          ],
+          "era": "ERA_1",
+          "role": "8",
+          "world_age_days": 7300,
+          "years": 20
+        },
+        "g2": {
+          "created": [
+            "9"
+          ],
+          "era": "ERA_2",
+          "role": "9",
+          "world_age_days": 14600,
+          "years": 20
+        },
+        "old": "7",
+        "unique": true
+      },
+      "id": "GW-66",
+      "name": "Generational Household",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "institution": {
+          "kind": "law",
+          "leader_role": "sheriff:eastvale",
+          "legitimacy": 72,
+          "region": "3",
+          "treasury": 4000
+        },
+        "new": "8",
+        "old": "7"
+      },
+      "id": "GW-67",
+      "name": "Institutional Succession",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "after": {
+          "canonical_hidden": true,
+          "known": {
+            "remote.event": {
+              "confidence": 80,
+              "learned_tick": 20,
+              "source": "communicated",
+              "value": true
+            }
+          },
+          "observer": "7"
+        },
+        "before": {
+          "canonical_hidden": true,
+          "known": {},
+          "observer": "7"
+        }
+      },
+      "id": "GW-68",
+      "name": "Information Delay",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "belief": {
+          "confidence": 40,
+          "learned_tick": 1,
+          "source": "rumor",
+          "value": false
+        },
+        "canonical_truth_not_changed": true
+      },
+      "id": "GW-69",
+      "name": "False Rumor",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "archive": "dc5debfe0b8370b4e38c52b8b31264699a5741055e7a6f564e4d2e162b0c0bb7",
+        "event": "E00000002",
+        "hook": true
+      },
+      "id": "GW-70",
+      "name": "Historical Narrative Hook",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "after": {
+          "1": {
+            "deer": 120,
+            "forage": 800,
+            "wolves": 8
+          },
+          "2": {
+            "deer": 220,
+            "forage": 1400,
+            "wolves": 18
+          },
+          "3": {
+            "deer": 90,
+            "forage": 650,
+            "wolves": 4
+          }
+        },
+        "before": {
+          "1": {
+            "deer": 120,
+            "forage": 800,
+            "wolves": 8
+          },
+          "2": {
+            "deer": 220,
+            "forage": 1400,
+            "wolves": 18
+          },
+          "3": {
+            "deer": 90,
+            "forage": 650,
+            "wolves": 4
+          }
+        },
+        "conserved_nonnegative": true
+      },
+      "id": "GW-71",
+      "name": "Ecology Succession",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "current": {
+          "capacity": 80,
+          "distance": 20000,
+          "kind": "road",
+          "nodes": [
+            "1",
+            "3"
+          ],
+          "open": true
+        },
+        "ledger": "f7e3f70bf740453003c49d7b4c24e4daee25e8cc08d934a30acf0be8b9cc5d76",
+        "old": {
+          "capacity": 80,
+          "distance": 20000,
+          "kind": "road",
+          "nodes": [
+            "1",
+            "3"
+          ],
+          "open": true
+        }
+      },
+      "id": "GW-72",
+      "name": "Infrastructure Era Change",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "archived": true,
+        "summary": {
+          "digest": "4da780b76e82f6ebb94ced903fff21a3eb5a1e814a7c3883ae58f66732a59aff",
+          "ecology": {
+            "deer": 220,
+            "forage": 1400,
+            "wolves": 18
+          },
+          "era": "ERA_0",
+          "exact_entity_ids": [
+            "4",
+            "5"
+          ],
+          "history_proof": {
+            "aggregate": {
+              "WORLD_INIT": 1
+            },
+            "digest": "cad8c4d03d86bed78bf8e843719fcccf9f505d8e907187a41f8aabf3b718ecfa",
+            "exact": [],
+            "proof_boundary": {
+              "aggregate_kinds": [
+                "WORLD_INIT"
+              ],
+              "exact_kinds": [],
+              "unavailable": []
+            },
+            "schema": "RCPW-ARCHIVE/3",
+            "source_head": "8dd174db6b707789c01e877bce67f7d77acaff8faeed757b5b04dc3da6f439ed"
+          },
+          "institutional": {},
+          "proof_class": "EXACT_PLUS_AGGREGATED",
+          "region": "2",
+          "schema": "RCPW-ARCHIVE/3",
+          "semantic_digest": "e6a340b2cfa67102f2ca20f78bf128ff561e72d02330d3f7d5e777365f1b1163",
+          "tick": 0
+        }
+      },
+      "id": "GW-73",
+      "name": "Archive Region",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "after_digest": "69d9cec1dff31aae3b844854fd9e787bca8943f72747ae628e27539edbad02a3",
+        "archive": {
+          "archived": true,
+          "summary": {
+            "digest": "706610f523c62cfaf451bc55ac2666b9d0e2c39900db28f1d7cc6899c4f39dfb",
+            "ecology": {
+              "deer": 220,
+              "forage": 1400,
+              "wolves": 18
+            },
+            "era": "ERA_0",
+            "exact_entity_ids": [
+              "4",
+              "5"
+            ],
+            "history_proof": {
+              "aggregate": {
+                "WORLD_INIT": 1
+              },
+              "digest": "ce76a2aec6dbf6a724303a6b133a7413e9ddaff5c5f7b731641582159613218c",
+              "exact": [],
+              "proof_boundary": {
+                "aggregate_kinds": [
+                  "WORLD_INIT"
+                ],
+                "exact_kinds": [],
+                "unavailable": []
+              },
+              "schema": "RCPW-ARCHIVE/3",
+              "source_head": "9c8087a81af99526fa06b0aefc98e49abdd4fbe6b9e503c23340f5815f4d2166"
+            },
+            "institutional": {},
+            "proof_class": "EXACT_PLUS_AGGREGATED",
+            "region": "2",
+            "schema": "RCPW-ARCHIVE/3",
+            "semantic_digest": "69d9cec1dff31aae3b844854fd9e787bca8943f72747ae628e27539edbad02a3",
+            "tick": 0
+          }
+        },
+        "before_digest": "69d9cec1dff31aae3b844854fd9e787bca8943f72747ae628e27539edbad02a3",
+        "exact_vs_reconstructed": {
+          "entity_ids": "exact",
+          "microdetail": "reconstructed"
+        },
+        "provenance": "archive/rehydration",
+        "region": "2"
+      },
+      "id": "GW-74",
+      "name": "Rehydrate Region",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "archived": false,
+        "protected": [
+          {
+            "kind": "quest",
+            "region": "2"
+          }
+        ]
+      },
+      "id": "GW-75",
+      "name": "Archive During Active Obligation",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "new_regions": 4,
+        "old_digest_stable": true,
+        "old_regions": 3
+      },
+      "id": "GW-76",
+      "name": "Old Save into Expanded World",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "coarse": 1160,
+        "days": 60,
+        "drift": 0,
+        "error_budget": 1,
+        "fine": 1160,
+        "pass": true
+      },
+      "id": "GW-77",
+      "name": "Long-Horizon vs Fine-Step",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "economy": {
+          "after": {
+            "consumption": 18,
+            "food": 801,
+            "labor": 24,
+            "law": 70,
+            "money": 12000,
+            "morale": 66,
+            "population": 240,
+            "production": 24,
+            "region": "3",
+            "storage": 50
+          },
+          "before": {
+            "consumption": 18,
+            "food": 800,
+            "law": 70,
+            "money": 12000,
+            "morale": 66,
+            "population": 240,
+            "production": 24,
+            "region": "3"
+          },
+          "journal": {
+            "balanced": true,
+            "consumed": 18,
+            "food_after": 801,
+            "food_before": 800,
+            "produced": 19,
+            "settlement": "eastvale",
+            "tick": 0
+          },
+          "labor": 24,
+          "market": {
+            "backorders": 0,
+            "demand_food": 20,
+            "price_food": 3,
+            "substitute": "forage"
+          },
+          "transport_open": false
+        },
+        "event": {
+          "candidate": {
+            "actor": "3",
+            "created": 0,
+            "event_id": "cascade",
+            "expires": 100,
+            "owner": "P0",
+            "priority": 90,
+            "resolved": false
+          },
+          "winner": "cascade"
+        },
+        "law": {
+          "crime": {
+            "actor": "1",
+            "id": "crime:1",
+            "kind": "theft",
+            "region": "3",
+            "status": "reported",
+            "tick": 0
+          },
+          "institution_knows": true,
+          "reputation": -10
+        },
+        "weather": {
+          "after": {
+            "fire": 2,
+            "front": 30,
+            "precip": 0,
+            "season": "spring",
+            "temperature": 18,
+            "wind": [
+              1,
+              0,
+              0
+            ]
+          },
+          "before": {
+            "fire": 3,
+            "front": 0,
+            "precip": 0,
+            "season": "spring",
+            "temperature": 18,
+            "wind": [
+              1,
+              0,
+              0
+            ]
+          },
+          "canonical_region": "3"
+        }
+      },
+      "id": "GW-78",
+      "name": "Autonomous Event Cascade",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "after": "3d59f60c41794725c99cf4fee3084aa1fc9359d2d43c63ee203fbd8ed02c48b9",
+        "before": "9b52d612d97366813b565a35400572f9ab9b0ba7bfbb5c0b2b5a6ec10ef4ad28",
+        "era": "ERA_2",
+        "view": {
+          "entities": {
+            "1": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "2": [
+              20.0,
+              0.0,
+              0.0
+            ],
+            "3": [
+              500.0,
+              100.0,
+              0.0
+            ],
+            "4": [
+              -14952.92878224374,
+              249.21547970406235,
+              0.0
+            ],
+            "5": [
+              -14755.543540338484,
+              299.09885554740174,
+              0.0
+            ],
+            "6": [
+              9988.215169835332,
+              4994.107584917666,
+              0.0
+            ],
+            "7": [
+              20035.0027206468,
+              49.5915908926901,
+              0.0
+            ],
+            "8": [
+              20044.662370779766,
+              54.550046036263595,
+              0.0
+            ]
+          },
+          "fold_policy": "c2-compactification/2",
+          "lod": {
+            "1": 8,
+            "2": 8,
+            "3": 6,
+            "4": 3,
+            "5": 3,
+            "6": 3,
+            "7": 3,
+            "8": 0
+          },
+          "presentation_version": "presentation/2",
+          "reference": [
+            0,
+            0,
+            0
+          ],
+          "temporal_history_version": 1,
+          "tick": 0,
+          "view_revision": 0
+        }
+      },
+      "id": "GW-79",
+      "name": "Player Reentry After Era",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "autonomous_days": 1095,
+        "elapsed_seconds": 0.20924580999962927,
+        "end_digest": "1d8791b7889ffef4a84d0dcd6dff5ade954c9328481207f6ba0565d670d9fcd4",
+        "era": "ERA_4",
+        "generation_years": 30,
+        "growth_bytes": 399,
+        "invariants": [],
+        "ledger_ok": true,
+        "pass": true,
+        "profile": "HOSTED_REFERENCE_SOAK/1",
+        "serialized_bytes_max": 13105,
+        "serialized_bytes_min": 12706,
+        "start_digest": "ee5beae385c3801d84785a0a3f0756d039f373dea70ccb5fc8653f17f7902fa6",
+        "successor": "8",
+        "ticks": 10000
+      },
+      "id": "GW-80",
+      "name": "Autonomous Continuum Reference Soak",
+      "status": "PASS"
+    }
+  ],
+  "scenario_count": 80
+}

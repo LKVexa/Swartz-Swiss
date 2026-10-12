@@ -1,0 +1,16 @@
+{
+  "schema": "QUORUM-DEPENDENCY-MAP/2.0",
+  "module_id": 17,
+  "upstream_declared": [],
+  "downstream_declared": [],
+  "required_services": [],
+  "optional_services": [],
+  "runtime_dependencies": [
+    "pinned_lctl_1.6.1_rc1_for_lowering_verification"
+  ],
+  "build_dependencies": [
+    "mssl_authority",
+    "lctl_column_lowerer"
+  ],
+  "legacy_mentions_unpromoted": []
+}

@@ -1,0 +1,303 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 13,
+    "PARTIAL": 16,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Settlements retain authoritative economic and social state when outside local rendering range.",
+      "requirement_id": "RCPW-08-R01",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Individual citizens and aggregate households/cohorts convert without duplicating or erasing population.",
+      "requirement_id": "RCPW-08-R02",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Production, consumption, inventory, transport, scarcity, pricing, labor, migration, crime, and law have explicit state transitions.",
+      "requirement_id": "RCPW-08-R03",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Remote shocks propagate causally through connected trade/transport networks.",
+      "requirement_id": "RCPW-08-R04",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Aggregate history materializes into locally coherent inventories, prices, NPC schedules, prosperity/damage, law state, and migration.",
+      "requirement_id": "RCPW-08-R05",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Economic abstraction error is measured against a smaller high-fidelity reference simulation.",
+      "requirement_id": "RCPW-08-R06",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Economic ledgers obey non-negative inventory/cash constraints or explicitly modeled debt/credit rules.",
+      "requirement_id": "RCPW-08-R07",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Transport latency and capacity remain canonical and are not shortened merely because geography is visually folded.",
+      "requirement_id": "RCPW-08-R08",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Aggregate-to-individual materialization conserves population, ownership, and inventory within declared tolerance.",
+      "requirement_id": "RCPW-08-R09",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Remote shocks include causal delay, substitution, and recovery rather than instantaneous global propagation.",
+      "requirement_id": "RCPW-08-R10",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Settlement economies include explicit production chains, storage, transport dependency, labor allocation, demand substitution, and recovery after shocks.",
+      "requirement_id": "RCPW-08-R11",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Law, reputation, faction control, crime, policing, and social response remain causally active outside the local render shell.",
+      "requirement_id": "RCPW-08-R12",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Transport/logistics time uses canonical geography and capacity rather than folded display distance.",
+      "requirement_id": "RCPW-08-R13",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Settlement materialization reconstructs a locally coherent cross-section of population, shops, inventories, schedules, damage, and infrastructure from aggregate state.",
+      "requirement_id": "RCPW-08-R14",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Civilization/economy authority includes household, workplace, production-site, merchant, transport, and jurisdiction relationships in the canonical world graph.",
+      "requirement_id": "RCPW-08-R15",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Economic transactions are double-entry or equivalently conservation-auditable for money/inventory/value flows where applicable.",
+      "requirement_id": "RCPW-08-R16",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Remote settlements maintain schedule/time-zone or local-time semantics from canonical time rather than player proximity.",
+      "requirement_id": "RCPW-08-R17",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Markets and logistics expose delivery promises, backorders, shortages, substitution, and recovery state that persists across folding.",
+      "requirement_id": "RCPW-08-R18",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Economy qualification includes multi-settlement shocks, route loss/restoration, population movement, and repeated materialization without inventory duplication.",
+      "requirement_id": "RCPW-08-R19",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Settlement/economy partitions exchange trade, transport, migration, law, and ownership changes through canonical transactions rather than shared mutable caches.",
+      "requirement_id": "RCPW-08-R20",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Cross-region economic transfers are idempotent and exactly-once at the canonical ledger level or use an explicitly equivalent compensation protocol.",
+      "requirement_id": "RCPW-08-R21",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Economic worker restart cannot duplicate money, inventory, population, deliveries, or outstanding obligations.",
+      "requirement_id": "RCPW-08-R22",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Regional simulation lag is bounded and surfaced; stale economic state cannot silently satisfy interaction-critical transactions.",
+      "requirement_id": "RCPW-08-R23",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Economy scale qualification includes concurrent settlements, partition migration, route disruption, worker loss, recovery, and ledger reconciliation.",
+      "requirement_id": "RCPW-08-R24",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Civilization/economy authority models settlement founding, growth, contraction, abandonment, rebuilding, infrastructure investment, institutional succession, and trade-network evolution.",
+      "requirement_id": "RCPW-08-R25",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Demographics include household formation/dissolution, migration, births/creations, deaths/retirement, occupation transfer, and role succession with conservation/accounting rules.",
+      "requirement_id": "RCPW-08-R26",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-lived property, debt, ownership, contracts, reputation, and institutional obligations survive individual-agent succession where the world rules require it.",
+      "requirement_id": "RCPW-08-R27",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "New settlements and routes created by systemic/worldbuilding processes are canonical transactions with provenance, budgets, topology validation, and rollback.",
+      "requirement_id": "RCPW-08-R28",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes multi-generation town growth/decline, migration waves, infrastructure change, route-network evolution, and economic continuity after archival/rehydration.",
+      "requirement_id": "RCPW-08-R29",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    }
+  ],
+  "stage": 8,
+  "title": "Civilization / Economy Authority"
+}

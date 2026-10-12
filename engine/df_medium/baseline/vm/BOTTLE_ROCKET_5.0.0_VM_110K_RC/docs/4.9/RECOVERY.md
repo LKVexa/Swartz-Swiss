@@ -1,0 +1,2 @@
+# Recovery Guide
+On startup, recover the newest authenticated BRCR/1 state compatible with the monotonic trust anchor. A TESTING candidate that did not confirm is rolled back to previous-good. Corrupt/stale control records fail closed; guest BRGD/1 data falls back to the newest valid authenticated generation. Production recovery requires signed BRCT/1 authority and must not bypass BRTM verification.

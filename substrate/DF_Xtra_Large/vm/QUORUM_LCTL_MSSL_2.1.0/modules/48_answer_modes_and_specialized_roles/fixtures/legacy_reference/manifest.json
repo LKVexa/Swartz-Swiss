@@ -1,0 +1,130 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 48,
+  "legacy_root": "legacy/source_repository/Answer Modes and Specialized Roles",
+  "legacy_sha256": "06ec84755d6c5a741eb7533cb52a4b64c9fb641b9d8e2a7cb1dfadc31c5015ad",
+  "files": [
+    {
+      "path": "48.10_Specialized_Roles_Technical_Coordinator.jaa",
+      "sha256": "68883d42e7273b35eeb0a76ce21adc0e48a9bc1cce8c4f76ceb9909fa54d74d4",
+      "bytes": 1679
+    },
+    {
+      "path": "48.11_Specialized_Roles_Repository_Analyst.jaa",
+      "sha256": "f0ec9a604665ce0ecedc0371e1e12fe5ffefc6b376ebda49bb03352780833259",
+      "bytes": 1667
+    },
+    {
+      "path": "48.12_Specialized_Roles_Software_Engineer.jaa",
+      "sha256": "8d2b4575a062c29a82377974090ed12513071e454e175fa781188f4af129eaea",
+      "bytes": 1633
+    },
+    {
+      "path": "48.13_Specialized_Roles_Debugger.jaa",
+      "sha256": "83a677112d21d03d4e4690d021e6fa17675cc0134051e1a2c6f070fd094e6e18",
+      "bytes": 1634
+    },
+    {
+      "path": "48.14_Specialized_Roles_Software_Architect.jaa",
+      "sha256": "f2e6cd5591cd84b2c853a50402d7e3e21c814169f85892c6a87f0ef360d72825",
+      "bytes": 1743
+    },
+    {
+      "path": "48.15_Specialized_Roles_Security_Reviewer.jaa",
+      "sha256": "cbd6ee843c00a6be5afe9ff6307c9aae1cdd6b8ef500aa07a521991140b32e10",
+      "bytes": 1654
+    },
+    {
+      "path": "48.16_Specialized_Roles_Test_Engineer.jaa",
+      "sha256": "f38f0dd7aff60f07e402c746aa28d1d7702d2d68b26884751221963a8128baf3",
+      "bytes": 1562
+    },
+    {
+      "path": "48.17_Specialized_Roles_Code_Reviewer.jaa",
+      "sha256": "d006d35e9c24e6cfad85a79303b0370861dd0dbe03dc25ee01ed15897f995b46",
+      "bytes": 1604
+    },
+    {
+      "path": "48.18_Specialized_Roles_Operations_Engineer.jaa",
+      "sha256": "b7c10ca2409e88b9f6b6eded34d43263b1e2cde471a48f33a9d285902b64f196",
+      "bytes": 1670
+    },
+    {
+      "path": "48.19_Specialized_Roles_Release_Engineer.jaa",
+      "sha256": "291144948a0b22af033bc4d19e585bdf9d3faa4b91ad92eb748008685a4039d5",
+      "bytes": 1623
+    },
+    {
+      "path": "48.1_Answer_Modes_Auto.jaa",
+      "sha256": "5258c5d4f0b694850e295651eff7e15ad7d6b3a20844ded979de99e1f9a2d360",
+      "bytes": 1537
+    },
+    {
+      "path": "48.20_Specialized_Roles_Roles.jaa",
+      "sha256": "6ad11dde1926cc3b0cc2f9f7e65313936c242c0d052a493c4373e7ca79ddd7a3",
+      "bytes": 1583
+    },
+    {
+      "path": "48.21_Specialized_Roles_Documentation_Instructor.jaa",
+      "sha256": "d3563cf28252c35a3db732785945870c515d53053b1274f6b2d8fd6a161205a3",
+      "bytes": 1734
+    },
+    {
+      "path": "48.22_Specialized_Roles_AI_and_Model_Engineer.jaa",
+      "sha256": "7f4889b1e4e990020db423e6489cacfd7dd2de6211c2824efa68c1fcbe9a792e",
+      "bytes": 1686
+    },
+    {
+      "path": "48.23_Specialized_Roles_Language_Toolchain_Engineer.jaa",
+      "sha256": "75bda44e59aae8eabe580660ab4a0e09d14aed3374ed0bcf36bee4be41e42781",
+      "bytes": 1753
+    },
+    {
+      "path": "48.2_Answer_Modes_Concise.jaa",
+      "sha256": "13269a12911a98faa81ed0affafa9e0d33ea8e6914e47dd0e4372cb40ed289f7",
+      "bytes": 1599
+    },
+    {
+      "path": "48.3_Answer_Modes_Detailed.jaa",
+      "sha256": "f47788eec8992099266c2ab4ee87c3461741cf410b4c671f7eba20d9f04c5148",
+      "bytes": 1636
+    },
+    {
+      "path": "48.4_Answer_Modes_Tutorial.jaa",
+      "sha256": "a244959bd6ec5206b87681401f7b4239237e703020232db981ce1f4284f35f55",
+      "bytes": 1550
+    },
+    {
+      "path": "48.5_Answer_Modes_Code.jaa",
+      "sha256": "baadd5104947ed022c2c87682e454d5dcf6d40d43ce3b6bbd44d6890a2c68828",
+      "bytes": 1514
+    },
+    {
+      "path": "48.6_Answer_Modes_Debug.jaa",
+      "sha256": "fb7a4ce78a3d512d04bc19effa9cc5b057fa559a81449771e44afc6583618cfd",
+      "bytes": 1568
+    },
+    {
+      "path": "48.7_Answer_Modes_Architect.jaa",
+      "sha256": "88cfd01a73699a835e8f2648b8c5586ca772d817ffdd1c5a57f50a3a69ddd1ff",
+      "bytes": 1661
+    },
+    {
+      "path": "48.8_Answer_Modes_Review.jaa",
+      "sha256": "a362afc58b2264c91bfdbcffe6df3f87ebebb4d90ffd1eb1473e74a26ede3283",
+      "bytes": 1606
+    },
+    {
+      "path": "48.9_Specialized_Roles_Auto_Coordinator.jaa",
+      "sha256": "5594bff688adc789ecf30b53708e31caa56354947113a39c87388e6ad9a922a0",
+      "bytes": 1557
+    },
+    {
+      "path": "README.md",
+      "sha256": "aa6fa01f24319e32a2aa2f0189edc133172f64a5ca356287b26e83d490062c85",
+      "bytes": 23359
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

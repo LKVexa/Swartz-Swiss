@@ -1,0 +1,33 @@
+ja source 0.3
+module suite65.sandbox_engine.checkpoint_retry_recovery
+use Operations
+policy explicit_network
+
+workspace SandboxCheckpointRetryRecovery {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 8 memory 16GB
+    network disabled
+
+    service SOPHIA_recovery_context replicas 1
+    health_check SOPHIA_recovery_context every 10s
+    service CHARLOTTE_recovery_gate replicas 1
+    health_check CHARLOTTE_recovery_gate every 10s
+    service LANDON_recovery_controller replicas 1
+    health_check LANDON_recovery_controller every 5s
+    service Professor_recovery_report replicas 1
+    health_check Professor_recovery_report every 10s
+    service Podium_recovery_receipt replicas 1
+    health_check Podium_recovery_receipt every 10s
+    service bounded_checkpoint_recovery_worker replicas 1
+    health_check bounded_checkpoint_recovery_worker every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "sandbox_engine_checkpoint_retry_recovery.msslb"

@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.specialized_roles.release_engineer
+use Agent
+policy no_network
+
+agent ReleaseEngineer {
+    identity "release_engineer"
+    role "sophia-charlotte-landon-professor-podium-specialist"
+    goal produce_gate_complete_reproducible_release_decision when confidence >= 0.98
+    memory session retention 1h
+    budget steps 75 tools 5
+    tool LANDONCollectReleaseEvidence(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIABuildReleasePlan(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateReleaseGates(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainReleaseDecision(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordReleaseDecision(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectReleaseEvidence
+        authorize SOPHIABuildReleasePlan
+        authorize CHARLOTTEValidateReleaseGates
+        authorize ProfessorExplainReleaseDecision
+        authorize PodiumRecordReleaseDecision
+        continue when policy_allows
+        execute LANDONCollectReleaseEvidence("selected_release_scope")
+        execute SOPHIABuildReleasePlan("release_evidence_inventory")
+        execute CHARLOTTEValidateReleaseGates("candidate_release_plan")
+        execute ProfessorExplainReleaseDecision("release_gate_decision")
+        execute PodiumRecordReleaseDecision("release_decision_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "ReleaseEngineer.mcrt"

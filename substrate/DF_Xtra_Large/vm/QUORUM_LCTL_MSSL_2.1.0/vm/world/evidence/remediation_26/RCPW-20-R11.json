@@ -1,0 +1,60 @@
+{
+  "evidence_sha256": "39645751bf04bf83c6228efafa47dd96ec1a0eec3dd89efa16338b7b77f016aa",
+  "exit_code": 0,
+  "observed_results": {
+    "profiles": {
+      "QP0": {
+        "mandatory": [
+          "semantic-contracts",
+          "deterministic-fixtures"
+        ],
+        "name": "REFERENCE_MODEL"
+      },
+      "QP1": {
+        "mandatory": [
+          "world-tests",
+          "headless-verify",
+          "resource-evidence",
+          "clean-room-replay"
+        ],
+        "name": "HOSTED_OPERATIONAL"
+      },
+      "QP2": {
+        "mandatory": [
+          "canonical-lctl",
+          "native-world-primitives"
+        ],
+        "name": "NATIVE_VM_AUTHORITY",
+        "status_hint": "PARTIAL"
+      },
+      "QP3": {
+        "mandatory": [
+          "production-renderer-physics-ai",
+          "content-scale-soak",
+          "target-hardware"
+        ],
+        "name": "PRODUCTION_SCALE",
+        "status_hint": "BLOCKED"
+      },
+      "QP4": {
+        "mandatory": [
+          "external-party-rebuild-replay"
+        ],
+        "name": "INDEPENDENTLY_QUALIFIED",
+        "status_hint": "BLOCKED"
+      }
+    },
+    "rule": "lower-profile evidence never promotes a higher profile",
+    "schema": "RCPW-QUALIFICATION-COMPATIBILITY/1"
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "requirement_id": "RCPW-20-R11",
+  "result_sha256": "942d6253201c641be5a006a26ef6d7d0ab6fb91bc4541135009818e01f78b973",
+  "schema": "RCPW-26-GATE-EVIDENCE/1",
+  "status": "OPERATIONAL",
+  "test_command": "python vm/world/qualification/remediate_26.py",
+  "tool_versions": {
+    "python": "3.11.15",
+    "world_runtime": "7.0.0-applied-remediated-26"
+  }
+}

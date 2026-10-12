@@ -1,0 +1,53 @@
+ja certifier 0.3
+module suite42.translation_plane.intermediate_representations
+policy no_execute_unknown_code
+policy no_network
+grammar TranslationPlaneIntermediateRepresentations {
+  token IDENT = letter, { letter | digit | "_" } ;
+  production ir_bundle = source_record, ast_record, semantic_record, r12_record, mcrt_record ;
+  production source_record = "source", IDENT ;
+  production ast_record = "ast", IDENT ;
+  production semantic_record = "semantic", IDENT ;
+  production r12_record = "r12", IDENT ;
+  production mcrt_record = "mcrt", IDENT ;
+  start ir_bundle ;
+  ast suite TranslationAST { provenance: line_column semantic_ids: stable }
+  type suite TranslationTypes { judgments: [WellFormed, WellTyped, ProvenanceBound] }
+  lower suite TranslationLowering { profiles: [R12, MCRT] }
+  predicate stable_node_identity(ir_bundle) ;
+  predicate source_to_ir_trace_complete(ir_bundle) ;
+  type_judgment ir_bundle : CertifiedIntermediateRepresentation ;
+  policy_validator IntermediateRepresentationSafety requires [no_network, no_execute_unknown_code] ;
+  compiler_validator IntermediateRepresentationValidator verifies [AST, R12, MCRT] ;
+  evidence IntermediateRepresentationEvidence {
+    source_hash: required
+    ast_hash: required
+    semantic_hash: required
+    r12_hash: required
+    mcrt_hash: required
+    compiler_hash: required
+    runtime_hash: required
+    sophia_judgment: required
+    charlotte_validation: required
+    landon_status: required
+    professor_explanation: required
+    podium_receipt: required
+  }
+  certification profile TranslationPlaneIntermediateRepresentationsStrict { require all validators }
+}
+certify grammar TranslationPlaneIntermediateRepresentations profile strict
+
+(* Smithson 8S Coupled Mechanics editorial extension. Confirm compiler adoption before treating these productions as normative. *)
+couplingMechanics8SRecord = "coupling8s", "{", identityField, geometry5Field, elucidationField, activationField, phaseField, couplingField, projectionField, relationField, efficacyField, certificationField, "}" ;
+identityField = "identity", ":", object ;
+geometry5Field = "geometry5", ":", object ;
+elucidationField = "elucidation", ":", object ;
+activationField = "activation", ":", object ;
+phaseField = "phase", ":", object ;
+couplingField = "coupling", ":", object ;
+projectionField = "projection", ":", object ;
+relationField = "relation", ":", object ;
+efficacyField = "efficacy", ":", object ;
+certificationField = "certification", ":", object ;
+(* Required fields include c5, t8_meaning, eta_ind, W, optional H, p, support, radius, g5, delta8, g3, gJ, Delta_8S, interaction_order, projection_version, uncertainty, provenance, and limitations. *)
+(* g5>tol5 and g3<=tol3 remains PROJECTION_ONLY. No S^8 topology or physical quantum entanglement is claimed. *)

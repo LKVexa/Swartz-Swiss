@@ -1,0 +1,608 @@
+{
+  "atomic_requirements": 96,
+  "blocked_requirements": 8,
+  "local_blocked_work_packages": 4,
+  "local_operational_work_packages": 11,
+  "local_work_package_status": {
+    "BR-500-01": "OPERATIONAL",
+    "BR-500-02": "OPERATIONAL",
+    "BR-500-03": "OPERATIONAL",
+    "BR-500-04": "OPERATIONAL",
+    "BR-500-05": "OPERATIONAL",
+    "BR-500-06": "OPERATIONAL",
+    "BR-500-07": "OPERATIONAL",
+    "BR-500-08": "OPERATIONAL",
+    "BR-500-09": "OPERATIONAL",
+    "BR-500-10": "BLOCKED",
+    "BR-500-11": "BLOCKED",
+    "BR-500-12": "BLOCKED",
+    "BR-500-13": "OPERATIONAL",
+    "BR-500-14": "OPERATIONAL",
+    "BR-500-15": "BLOCKED"
+  },
+  "operational_requirements": 88,
+  "predecessor_dependency": "BR-490-11 strict gate BLOCKED (72-hour soak and independent replay)",
+  "record": "BOTTLE_ROCKET.Acceptance/5.0.0",
+  "requirements": [
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-01-R01",
+      "status": "OPERATIONAL",
+      "text": "COLUMNED LCTL is authoritative"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-01-R02",
+      "status": "OPERATIONAL",
+      "text": "Language specification frozen"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-01-R03",
+      "status": "OPERATIONAL",
+      "text": "Canonical verifier operational"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-02-R01",
+      "status": "OPERATIONAL",
+      "text": "Compile LCTL to BRIR"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-02-R02",
+      "status": "OPERATIONAL",
+      "text": "Lower BRIR to BRIM"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-02-R03",
+      "status": "OPERATIONAL",
+      "text": "Compile deterministically"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-02-R04",
+      "status": "OPERATIONAL",
+      "text": "Produce reproducible output"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-03-R01",
+      "status": "OPERATIONAL",
+      "text": "Perform structural verification"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-03-R02",
+      "status": "OPERATIONAL",
+      "text": "Perform semantic verification"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-03-R03",
+      "status": "OPERATIONAL",
+      "text": "Perform capability verification"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-03-R04",
+      "status": "OPERATIONAL",
+      "text": "Perform control-flow verification"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-03-R05",
+      "status": "OPERATIONAL",
+      "text": "Perform image verification"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-04-R01",
+      "status": "OPERATIONAL",
+      "text": "Use stable ISA"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-04-R02",
+      "status": "OPERATIONAL",
+      "text": "Use stable ABI"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-04-R03",
+      "status": "OPERATIONAL",
+      "text": "Use isolated VM state"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-04-R04",
+      "status": "OPERATIONAL",
+      "text": "Provide complete traps"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-04-R05",
+      "status": "OPERATIONAL",
+      "text": "Bound resources"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-04-R06",
+      "status": "OPERATIONAL",
+      "text": "Guarantee deterministic semantics"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-05-R01",
+      "status": "OPERATIONAL",
+      "text": "Allow signed images only"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-05-R02",
+      "status": "OPERATIONAL",
+      "text": "Enforce rollback resistance"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-05-R03",
+      "status": "OPERATIONAL",
+      "text": "Derive capabilities"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-05-R04",
+      "status": "OPERATIONAL",
+      "text": "Enforce strict version compatibility"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-06-R01",
+      "status": "OPERATIONAL",
+      "text": "Transactional persistence"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-06-R02",
+      "status": "OPERATIONAL",
+      "text": "Authenticated persistence"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-06-R03",
+      "status": "OPERATIONAL",
+      "text": "Crash-safe persistence"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-06-R04",
+      "status": "OPERATIONAL",
+      "text": "Recoverable persistence"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-06-R05",
+      "status": "OPERATIONAL",
+      "text": "Monotonic persistence"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-07-R01",
+      "status": "OPERATIONAL",
+      "text": "Versioned device ABI"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-07-R02",
+      "status": "OPERATIONAL",
+      "text": "Capability gating"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-07-R03",
+      "status": "OPERATIONAL",
+      "text": "Bounded I/O"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-07-R04",
+      "status": "OPERATIONAL",
+      "text": "Deterministic replay support"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-08-R01",
+      "status": "OPERATIONAL",
+      "text": "Use lazy wide words"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-08-R02",
+      "status": "OPERATIONAL",
+      "text": "Use bounded stack"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-08-R03",
+      "status": "OPERATIONAL",
+      "text": "Use bounded scratch"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-08-R04",
+      "status": "OPERATIONAL",
+      "text": "Provide predictable resource consumption"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-08-R05",
+      "status": "OPERATIONAL",
+      "text": "Retain megabit values"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-09-R01",
+      "status": "OPERATIONAL",
+      "text": "Use immutable trust root"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-09-R02",
+      "status": "OPERATIONAL",
+      "text": "Support key rotation"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-09-R03",
+      "status": "OPERATIONAL",
+      "text": "Support revocation"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-09-R04",
+      "status": "OPERATIONAL",
+      "text": "Use secure boot"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-09-R05",
+      "status": "OPERATIONAL",
+      "text": "Use signed updates"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-09-R06",
+      "status": "OPERATIONAL",
+      "text": "Prevent rollback"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-09-R07",
+      "status": "OPERATIONAL",
+      "text": "Enforce isolation"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-10-R01",
+      "status": "OPERATIONAL",
+      "text": "Generate full automated ledger"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-10-R02",
+      "status": "OPERATIONAL",
+      "text": "All mandatory tests PASS"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-10-R03",
+      "status": "OPERATIONAL",
+      "text": "Hash all evidence"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-10-R04",
+      "status": "OPERATIONAL",
+      "text": "Record exact build provenance"
+    },
+    {
+      "blocker": "Independent second-machine/operator replay is unavailable in this execution environment.",
+      "requirement_id": "BR-500-10-R05",
+      "status": "BLOCKED",
+      "text": "Independent replay PASS"
+    },
+    {
+      "blocker": "Independent rebuild on a genuinely separate machine/operator has not been performed.",
+      "requirement_id": "BR-500-11-R01",
+      "status": "BLOCKED",
+      "text": "Independent rebuild passes"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-11-R02",
+      "status": "OPERATIONAL",
+      "text": "BRIM is deterministic"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-11-R03",
+      "status": "OPERATIONAL",
+      "text": "Test outputs are deterministic"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-11-R04",
+      "status": "OPERATIONAL",
+      "text": "Build provenance complete"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-12-R01",
+      "status": "OPERATIONAL",
+      "text": "Crash recovery passes"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-12-R02",
+      "status": "OPERATIONAL",
+      "text": "Interrupted-update recovery passes"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-12-R03",
+      "status": "OPERATIONAL",
+      "text": "Malformed input is contained"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-12-R04",
+      "status": "OPERATIONAL",
+      "text": "Execution resources are enforced"
+    },
+    {
+      "blocker": "Literal 72-hour native soak has not elapsed.",
+      "requirement_id": "BR-500-12-R05",
+      "status": "BLOCKED",
+      "text": "72-hour soak passes"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-13-R01",
+      "status": "OPERATIONAL",
+      "text": "Publish benchmark baseline"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-13-R02",
+      "status": "OPERATIONAL",
+      "text": "Bound startup"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-13-R03",
+      "status": "OPERATIONAL",
+      "text": "Bound verification"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-13-R04",
+      "status": "OPERATIONAL",
+      "text": "Bound memory"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-13-R05",
+      "status": "OPERATIONAL",
+      "text": "Optimize wide arithmetic"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-14-R01",
+      "status": "OPERATIONAL",
+      "text": "Version package"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-14-R02",
+      "status": "OPERATIONAL",
+      "text": "Create immutable release manifest"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-14-R03",
+      "status": "OPERATIONAL",
+      "text": "Sign release"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-14-R04",
+      "status": "OPERATIONAL",
+      "text": "Include source package"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-14-R05",
+      "status": "OPERATIONAL",
+      "text": "Include core binary"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-14-R06",
+      "status": "OPERATIONAL",
+      "text": "Include verifier"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-14-R07",
+      "status": "OPERATIONAL",
+      "text": "Include compiler"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-14-R08",
+      "status": "OPERATIONAL",
+      "text": "Include specification"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-14-R09",
+      "status": "OPERATIONAL",
+      "text": "Include tests"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-14-R10",
+      "status": "OPERATIONAL",
+      "text": "Include evidence"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R01",
+      "status": "OPERATIONAL",
+      "text": "Native COLUMNED LCTL authority OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R02",
+      "status": "OPERATIONAL",
+      "text": "Native compiler OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R03",
+      "status": "OPERATIONAL",
+      "text": "Native verifier OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R04",
+      "status": "OPERATIONAL",
+      "text": "VM execution core OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R05",
+      "status": "OPERATIONAL",
+      "text": "ISA OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R06",
+      "status": "OPERATIONAL",
+      "text": "ABI OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R07",
+      "status": "OPERATIONAL",
+      "text": "Memory system OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R08",
+      "status": "OPERATIONAL",
+      "text": "Capability system OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R09",
+      "status": "OPERATIONAL",
+      "text": "Secure loader OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R10",
+      "status": "OPERATIONAL",
+      "text": "Signed-image chain OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R11",
+      "status": "OPERATIONAL",
+      "text": "Rollback protection OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R12",
+      "status": "OPERATIONAL",
+      "text": "Persistence OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R13",
+      "status": "OPERATIONAL",
+      "text": "Recovery OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R14",
+      "status": "OPERATIONAL",
+      "text": "Virtual devices OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R15",
+      "status": "OPERATIONAL",
+      "text": "APDU interface OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R16",
+      "status": "OPERATIONAL",
+      "text": "Deterministic replay OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R17",
+      "status": "OPERATIONAL",
+      "text": "Resource enforcement OPERATIONAL"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R18",
+      "status": "OPERATIONAL",
+      "text": "Security qualification PASS"
+    },
+    {
+      "blocker": null,
+      "requirement_id": "BR-500-15-R19",
+      "status": "OPERATIONAL",
+      "text": "Fuzz qualification PASS"
+    },
+    {
+      "blocker": "Cross-platform qualification is incomplete: AArch64 and Windows execution environments are unavailable.",
+      "requirement_id": "BR-500-15-R20",
+      "status": "BLOCKED",
+      "text": "Cross-platform qualification PASS"
+    },
+    {
+      "blocker": "Literal 72-hour native soak has not elapsed.",
+      "requirement_id": "BR-500-15-R21",
+      "status": "BLOCKED",
+      "text": "72-hour native soak PASS"
+    },
+    {
+      "blocker": "Independent rebuild on a separate machine/operator has not been performed.",
+      "requirement_id": "BR-500-15-R22",
+      "status": "BLOCKED",
+      "text": "Independent rebuild PASS"
+    },
+    {
+      "blocker": "Independent replay on a separate machine/operator has not been performed.",
+      "requirement_id": "BR-500-15-R23",
+      "status": "BLOCKED",
+      "text": "Independent replay PASS"
+    },
+    {
+      "blocker": "Release evidence ledger cannot be 100% PASS while required external qualification records remain BLOCKED.",
+      "requirement_id": "BR-500-15-R24",
+      "status": "BLOCKED",
+      "text": "Release evidence ledger 100% PASS"
+    }
+  ],
+  "strict_dependency_chain": "BLOCKED",
+  "strict_gate": "BLOCKED",
+  "unresolved_critical_findings": 0,
+  "unresolved_high_findings": 0
+}

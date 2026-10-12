@@ -1,0 +1,32 @@
+deepml specialized 0.3
+module suite19.mesh_geometry.depth_hypotheses
+policy deterministic
+policy no_network
+
+domain graphics {
+  unit Meter = base("length")
+  schema DepthHypothesisEvidence { asset: Hash sophia: Hash charlotte: Hash landon: Hash professor: Hash podium: Hash timestamp: Time provenance: Hash }
+  tensor depth_hypotheses: f64<Meter>[64,512,512]
+  tensor depth_confidence: f64<Dimensionless>[64,512,512]
+  tensor occlusion_masks: f64<Dimensionless>[64,512,512]
+  tensor depth_uncertainty: f64<Meter>[64,512,512]
+  operator sophia_generate_depth(x) -> Tensor pure deterministic
+  operator charlotte_rank_depth(x) -> Tensor pure deterministic
+  operator landon_stage_depth(x) -> Tensor pure deterministic
+  operator professor_explain_depth(x) -> Tensor pure deterministic
+  operator podium_certify_depth(x) -> Tensor pure deterministic
+  calibration DepthCalibration { method: bounded_least_squares tolerance: 1e-6 }
+  constraint PositiveDepth { min: 0 max: 100000 }
+  validate depth_hypotheses with [sophia_generate_depth, charlotte_rank_depth, landon_stage_depth, professor_explain_depth, podium_certify_depth, DepthCalibration, PositiveDepth]
+  validate depth_confidence with [charlotte_rank_depth, DepthCalibration]
+  validate depth_uncertainty with [charlotte_rank_depth, PositiveDepth]
+  graph DepthHypothesisGraph {
+    proposed = sophia_generate_depth(depth_hypotheses)
+    ranked = charlotte_rank_depth(proposed)
+    staged = landon_stage_depth(ranked)
+    explained = professor_explain_depth(staged)
+    receipt = podium_certify_depth(explained)
+  }
+  optimize DepthHypothesisGraph using [unit_propagation, dimensional_simplification, op_specialization, sparse_planning, calibration_folding, target_lowering]
+  lower DepthHypothesisGraph to DEEPML_SPECIALIZED_R12
+}

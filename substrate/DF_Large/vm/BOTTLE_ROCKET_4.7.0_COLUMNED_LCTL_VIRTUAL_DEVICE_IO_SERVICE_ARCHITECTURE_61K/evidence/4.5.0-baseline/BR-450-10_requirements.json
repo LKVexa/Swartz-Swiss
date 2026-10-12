@@ -1,0 +1,64 @@
+{
+  "package": "BR-450-10",
+  "record": "BR.PackageRequirements",
+  "requirements": [
+    {
+      "evidence": [
+        "evidence/BR-450-10_audit.md",
+        "evidence/BR-450-10_tests.log"
+      ],
+      "id": "BR-450-10-R01",
+      "status": "OPERATIONAL",
+      "text": "Separate executable state from guest data"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-10_audit.md",
+        "evidence/BR-450-10_tests.log"
+      ],
+      "id": "BR-450-10-R02",
+      "status": "OPERATIONAL",
+      "text": "Namespace persistent objects"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-10_audit.md",
+        "evidence/BR-450-10_tests.log"
+      ],
+      "id": "BR-450-10-R03",
+      "status": "OPERATIONAL",
+      "text": "Enforce quotas"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-10_audit.md",
+        "evidence/BR-450-10_tests.log"
+      ],
+      "id": "BR-450-10-R04",
+      "status": "OPERATIONAL",
+      "text": "Version persistent data"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-10_audit.md",
+        "evidence/BR-450-10_tests.log"
+      ],
+      "id": "BR-450-10-R05",
+      "status": "OPERATIONAL",
+      "text": "Protect integrity"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-10_audit.md",
+        "evidence/BR-450-10_tests.log"
+      ],
+      "id": "BR-450-10-R06",
+      "status": "OPERATIONAL",
+      "text": "Support migration"
+    }
+  ],
+  "scope": "host-reference",
+  "status": "OPERATIONAL",
+  "title": "Persistent VM data",
+  "workflow": "docs/WORKFLOW_APPLIED_4.5.0/10_BR-450-10_persistent_vm_data_PROMPT_AND_WORKFLOW.md"
+}

@@ -1,0 +1,27 @@
+ja source 0.3
+module suite28.safety_gate.path
+use Security
+policy no_network
+
+principal SafetyGatePathWorker
+role SafetyGateEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant path.inspect:approved
+}
+resource PathCandidate classification restricted
+policy SafetyGatePathPolicy {
+    deny network.* by default
+    deny process.* by default
+    deny path.escape.* by default
+    allow PathCandidate when principal.role == SafetyGateEnsemble
+    require human_approval for path.write
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "SafetyGatePathPolicy.decision.mcrt"

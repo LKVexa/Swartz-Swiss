@@ -1,0 +1,30 @@
+ja source 0.3
+module suite37.training_suite.feedback_records
+use Training
+policy no_network
+
+experiment TrainingSuiteFeedbackRecords {
+    model ref "models/sophia_charlotte_landon_professor_podium/feedback_records"
+    dataset ref "datasets/training_suite/feedback_records" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 24 accumulate 2
+    precision mixed
+    seed 3703
+    checkpoint every 12 steps
+    evaluate {
+        metric feedback_traceability
+        metric correction_evidence_quality
+        metric conflict_resolution_consistency
+        metric reviewer_agreement
+        metric loss
+        require feedback_traceability >= 0.99
+        require correction_evidence_quality >= 0.97
+        require conflict_resolution_consistency >= 0.98
+        require reviewer_agreement >= 0.95
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "TrainingSuiteFeedbackRecords.lineage.mcrt"

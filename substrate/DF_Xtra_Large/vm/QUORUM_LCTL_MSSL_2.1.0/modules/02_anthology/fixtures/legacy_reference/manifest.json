@@ -1,0 +1,65 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 2,
+  "legacy_root": "legacy/source_repository/Anthology",
+  "legacy_sha256": "fbbe8b16ab4a28776a891a8fc598bfc12319d1ff54bd3416b308668bc523c79b",
+  "files": [
+    {
+      "path": "02_anthology_chronology.jad",
+      "sha256": "50099600f25c0d8570757df64300894fbccf1e015b8c9d11545495758e96777a",
+      "bytes": 2424
+    },
+    {
+      "path": "02_anthology_immutable_provenance.jad",
+      "sha256": "9b666dd74dfa0112eaf71d11bb82d564680f4a5e344802af5909ee5b5beabc62",
+      "bytes": 2564
+    },
+    {
+      "path": "02_anthology_ordered_experience_records.jad",
+      "sha256": "c4febfff0ed1554420a6767357a5d9d6c974cf68832a51bf7cbe6ec4a1cd0e87",
+      "bytes": 2626
+    },
+    {
+      "path": "02_anthology_prior_artifacts.jad",
+      "sha256": "145c5df218c8aa48702ed6dd197d0a0002aa62597825c5938fd9f1a94bf1b6d6",
+      "bytes": 2639
+    },
+    {
+      "path": "MANIFEST.json",
+      "sha256": "f639e01b4f81c4c161d999cc463d7241b9d580da8cdaa7e56cc0ae400e774728",
+      "bytes": 3390
+    },
+    {
+      "path": "README.md",
+      "sha256": "821ec6afccad60edcd605099e8bfc5b108234f5992abae9eebea4e9fe487674b",
+      "bytes": 2400
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "sha256": "606b4c5c21227a8d4ebe7ad924d75d71be19d0766bbe95709e7a39ca0da38b4e",
+      "bytes": 1132
+    },
+    {
+      "path": "chronology_records.dmk",
+      "sha256": "16416531c67c18e721e88e3cdda9976cdbe27f78b717cd47e563ebd8da81906e",
+      "bytes": 2726
+    },
+    {
+      "path": "experience_records.dmk",
+      "sha256": "1ff587c09a124e8f2f58f63dbfefd1ec2c5d6ea0fa39a78ee9edfca91a8137ed",
+      "bytes": 2832
+    },
+    {
+      "path": "prior_artifact_records.dmk",
+      "sha256": "fa8187e0f5337de57ac673d5f5e338298d056094e6bcd72306f485154a8fa631",
+      "bytes": 2847
+    },
+    {
+      "path": "provenance_records.dmk",
+      "sha256": "4063f973e50b82058e833d098dc4b13df29d05db9ef00dbca09b5b95e2b521ef",
+      "bytes": 2789
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

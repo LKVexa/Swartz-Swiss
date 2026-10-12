@@ -1,0 +1,47 @@
+ja source 0.3
+module suite49.action_cards.risk_summary
+use Interface
+policy no_network
+
+interface ActionCardRiskSummary {
+    state selected_action: Text? = null
+    state evaluating_risk: Flag = false
+    derived can_select_action = not evaluating_risk
+    derived can_evaluate_risk = selected_action != null and not evaluating_risk
+    component SOPHIA_RiskModel {
+        label "Interpret proposed action risk"
+        enabled bind can_evaluate_risk
+        accessibility role button name "Interpret risk for selected action"
+        action interpret_action_risk requires admin.action:approved
+    }
+    component CHARLOTTE_RiskGate {
+        label "Validate risk factors, uncertainty, and severity"
+        enabled bind can_evaluate_risk
+        accessibility role button name "Validate risk for selected action"
+        action validate_action_risk requires admin.action:approved
+    }
+    component LANDON_RiskBind {
+        label "Bind validated risk summary"
+        enabled bind can_evaluate_risk
+        accessibility role button name "Bind validated risk summary to action card"
+        action bind_risk_summary requires admin.action:approved
+    }
+    component Professor_RiskGuide {
+        label "Explain risk, uncertainty, and mitigation"
+        enabled bind can_select_action
+        accessibility role button name "Explain selected action risk"
+        action explain_action_risk requires admin.action:approved
+    }
+    component Podium_RiskEvidence {
+        label "View risk evidence and receipt"
+        enabled bind can_evaluate_risk
+        accessibility role button name "View selected action risk evidence"
+        action show_risk_evidence requires admin.action:approved
+    }
+    component RiskSummaryViewport {
+        embed portal.scene "action_card_risk_summary"
+        motion bind timeline.risk_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface ActionCardRiskSummary

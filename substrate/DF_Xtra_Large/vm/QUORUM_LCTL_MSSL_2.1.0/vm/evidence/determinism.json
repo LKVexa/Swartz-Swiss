@@ -1,0 +1,9 @@
+{
+  "brir_byte_identical": true,
+  "payload_byte_identical": true,
+  "signed_image_byte_identical": true,
+  "state_hash_identical": true,
+  "state_sha256": "2b0de78c5fbbe349ea8c341717ea4aef328a9f867f132a95c0d17306b18dea34",
+  "trace_hash_identical": true,
+  "trace_sha256": "d73028868d2ae6a403fc9b2fdd9b4bdc804bd3eb3129b4c7cf57cd3d75a595cf"
+}

@@ -1,0 +1,458 @@
+{
+  "schema": "GFM-Research-verification/1",
+  "version": "2.0.0",
+  "prepared": "2026-10-11",
+  "release": "GFM Research Simulator",
+  "localOnly": true,
+  "tests": {
+    "passed": 29,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "todo": 0,
+    "transcript": "validation/research-tests.txt",
+    "sha256": "13c0747a955d9abba38f0d35c16fb78c8193ff6f116584a5d1adbc45c411aa44",
+    "bytes": 7439,
+    "command": "node --test --test-reporter=tap tests/*.cjs",
+    "scope": "Final production code, HTTP/SSE, physics worker/settings/export, numerical domains, isolated DOM controls and finite/cached renderer geometry. Mocked graphics checks do not establish GPU appearance."
+  },
+  "independentRelativity": {
+    "passed": true,
+    "evidence": "validation/independent-relativity-results.json",
+    "sha256": "1fed9e9d004425069b349b80b561e1aa9c9a83c30add36482210e509b54b3269",
+    "bytes": 253971,
+    "criterion": 1e-06,
+    "casesChecked": 115,
+    "raysChecked": 205,
+    "pointsChecked": 29245,
+    "criticalLimitRays": 37,
+    "maximumErrors": {
+      "radial": 1.023810280267316e-09,
+      "polar": 8.974009459150611e-08,
+      "null": 3.028982537125419e-09,
+      "energy": 7.275957614183426e-12,
+      "Lz": 4.1345407057412275e-12,
+      "carter": 1.6455182821530442e-08
+    },
+    "maximumInitialErrors": {
+      "radial": 5.551115123125783e-16,
+      "polar": 3.552713678800501e-15,
+      "null": 9.85280649054723e-16,
+      "energy": 3.552713678800501e-15,
+      "Lz": 2.366662044027057e-15,
+      "carter": 6.696750277122791e-16
+    },
+    "maximumIndependentBendingError": 5.324273647744349e-06,
+    "maximumNormalizedIndependentBendingError": 2.707023457958691e-07,
+    "scope": "Independent code/analytic verification of sampled exterior null trajectories. Not empirical validation or NASA certification.",
+    "bendingCriterion": "abs(error)/max(1,abs(independent reference angle)) <= criterion; the absolute and normalized maxima are recorded separately.",
+    "source": {
+      "path": "D:\\Codex\\2026-10-11\\pl\\GFM_Research_Simulator\\backend\\relativity.cjs",
+      "sha256": "94facda381ccf78ed204114d7e02929c99e513c898e343a76712feb576607f77"
+    },
+    "checker": {
+      "path": "D:\\Codex\\2026-10-11\\pl\\GFM_Research_Simulator\\validation\\independent-kerr-check.py",
+      "sha256": "1d0ab1070e560b88c126ac85ee7424cf2b5930112f40cb6665af959a9253392d"
+    },
+    "inputEvidence": [
+      {
+        "path": "validation/independent-relativity-cases.json",
+        "sha256": "599e0ece69aedbf3fd64b9fdc2561fe732f85d56571f0a0e0beec6c673c19d8f",
+        "bytes": 16759514
+      }
+    ]
+  },
+  "convergenceAndNegativeChecks": {
+    "passed": true,
+    "evidence": "validation/kerr-convergence-and-negative-checks.json",
+    "sha256": "e15fbbeeff2b3517016d3dc47000a6542ed44efaebf3bcdd45ea1fe3f230212a",
+    "bytes": 4092,
+    "convergence": {
+      "observable": "Tail-corrected complete equatorial Schwarzschild b=6 scattering angle",
+      "independentQuadratureRadians": 1.7193883102301681,
+      "angleTargetRadians": 1e-06,
+      "rows": [
+        {
+          "tolerance": 1e-05,
+          "internalTolerance": 2e-09,
+          "outcome": "escaped",
+          "acceptedSteps": 59,
+          "rejectedSteps": 6,
+          "deflectionRadians": 1.7193883097567255,
+          "absoluteIndependentAngleError": 4.734426184427321e-10,
+          "previousRefinementAngleDifference": null,
+          "endpointRadius": 20,
+          "endpointPhi": 4.2523338938074655
+        },
+        {
+          "tolerance": 1e-07,
+          "internalTolerance": 2e-09,
+          "outcome": "escaped",
+          "acceptedSteps": 59,
+          "rejectedSteps": 6,
+          "deflectionRadians": 1.7193883097567255,
+          "absoluteIndependentAngleError": 4.734426184427321e-10,
+          "previousRefinementAngleDifference": 0.0,
+          "endpointRadius": 20,
+          "endpointPhi": 4.2523338938074655
+        },
+        {
+          "tolerance": 1e-09,
+          "internalTolerance": 2.0000000000000002e-11,
+          "outcome": "escaped",
+          "acceptedSteps": 147,
+          "rejectedSteps": 2,
+          "deflectionRadians": 1.7193883102286325,
+          "absoluteIndependentAngleError": 1.5356604876615165e-12,
+          "previousRefinementAngleDifference": 4.719069579550705e-10,
+          "endpointRadius": 19.999999999999996,
+          "endpointPhi": 4.2523338942793725
+        },
+        {
+          "tolerance": 1e-11,
+          "internalTolerance": 1.9999999999999998e-13,
+          "outcome": "escaped",
+          "acceptedSteps": 369,
+          "rejectedSteps": 2,
+          "deflectionRadians": 1.719388310230162,
+          "absoluteIndependentAngleError": 6.217248937900877e-15,
+          "previousRefinementAngleDifference": 1.5294432387236157e-12,
+          "endpointRadius": 20,
+          "endpointPhi": 4.252333894280902
+        }
+      ],
+      "passed": true,
+      "scope": "This observable and case only. Plateau at loose tolerances follows the internal-tolerance cap; no global trajectory error bound is claimed."
+    },
+    "negativeChecksPassed": 8,
+    "negativeChecks": [
+      {
+        "name": "altered-coordinate",
+        "rejected": true,
+        "reason": "ray point 1: Display coordinate x differs from independent reference"
+      },
+      {
+        "name": "altered-radial-velocity",
+        "rejected": true,
+        "reason": "ray point 1: Reported radial residual differs from independent reference"
+      },
+      {
+        "name": "false-capture-on-separatrix",
+        "rejected": true,
+        "reason": "Ambiguous separatrix was labeled resolved"
+      },
+      {
+        "name": "deleted-integration-limit",
+        "rejected": true,
+        "reason": "'maxMino'"
+      },
+      {
+        "name": "wrong-explicit-input",
+        "rejected": true,
+        "reason": "Exported input differs for maxMino"
+      },
+      {
+        "name": "falsified-deflection",
+        "rejected": true,
+        "reason": "Schwarzschild bending differs from independent full quadrature"
+      },
+      {
+        "name": "nonfinite-coordinate",
+        "rejected": true,
+        "reason": "ray point 1: phi must be finite numeric data"
+      },
+      {
+        "name": "wrong-source-hash",
+        "rejected": true,
+        "reason": "Output source hash differs from current solver"
+      }
+    ],
+    "scope": "Checker credibility and case-specific numerical refinement, not empirical validation."
+  },
+  "independentHypothesisAndGFM": {
+    "passed": true,
+    "evidence": "validation/research-hypothesis-independent.json",
+    "sha256": "ae7965f7023e66596b03ed01163fa6ca1b6e50e2f5ab056c6c6a87194d2cc7d8",
+    "bytes": 6891,
+    "snapshotsChecked": 236,
+    "gf9BasisRoundTrips": 9,
+    "maximumCoefficientError": 4.002966042486721e-16,
+    "maximumRecoveredError": 2.2215299868541707e-16,
+    "inputsAtPackaging": {
+      "examples/default-frame.json": {
+        "sha256": "ebbdb347072ca1757dda72eec02de01fed241ef8e14fc8791ff97b01d053fba5",
+        "bytes": 9035
+      },
+      "examples/two-branch-example.json": {
+        "sha256": "fc81a763c95f02b1a85c3d1afc84fe9604966fd50fdbfbb2d73abe4fb8d4a4fe",
+        "bytes": 1267331
+      },
+      "validation/parameter-cases.json": {
+        "sha256": "e1238229181064198b91bd1e1c55f00857417b1a3938aa07b059534a0485291e",
+        "bytes": 748205
+      },
+      "validation/current-hypothesis-frame.json": {
+        "sha256": "558820793174738727113ec8b83468945145d98b6993a29fa6910d7853f505e5",
+        "bytes": 9035
+      }
+    },
+    "checkerAtPackaging": {
+      "sha256": "a6cff62a64eaf9025efa76d05a0b84a921c8e67ea520dc91d190110690af17e2",
+      "bytes": 14976
+    },
+    "identityScope": "This report has no embedded source/input hashes. Packaging records the current report, referenced input files and checker separately; it does not imply identities were embedded in the independent report.",
+    "scope": "Independent aperture/cover, stationary exterior, GF9 raw trace and inverse reconstruction. Time/motion remain illustrative."
+  },
+  "browserVerification": {
+    "passed": true,
+    "status": "partial",
+    "restartPending": true,
+    "liveFinalBackendSourceVerified": false,
+    "evidence": "validation/browser/research-browser-qa.json",
+    "sha256": "ed6a5ec9d124f090bc7275a37d0b4653582a6e51d24f16e498034069c8b4a995",
+    "bytes": 4807,
+    "url": "http://127.0.0.1:8788/",
+    "title": "GFM Research Observatory — Kerr / Aperture",
+    "checkedAt": "2026-10-11T15:38:25.496Z",
+    "sourceHashes": {
+      "server.cjs": "8f77c77b5d305ef6ce76fc146509b0233b7f6abeef31479236012b7da8aabf1c",
+      "backend/simulation.cjs": "235e67f8d55cba41acade9d05a1a4fcfbf0f1340b3ac1973a076972507868feb",
+      "backend/relativity.cjs": "94facda381ccf78ed204114d7e02929c99e513c898e343a76712feb576607f77",
+      "backend/physics-service.cjs": "18afdb6befe25a73c4f6c79d7230b19f36cf405dee89b42866f71b2fae467a23",
+      "backend/physics-worker.cjs": "ac4ad16d97b3b8d7958baaaa709cb0c2f43702c525cf43f3e50980d695d8c9fe",
+      "public/index.html": "c127c26bd1596eba82656218bfea80bd897a09ec0fe43e406264eb42d1e917e0",
+      "public/app.js": "1993b2737d837a021436520ab295136201795e6226b21d732e0e2f383ba4f7c8",
+      "public/style.css": "25f36eefcb2bce12811cdd5031275209ba3a3b758f6cad48db66807ecfa8e955",
+      "public/renderer.js": "1cb735fa048d80da95b7cbf817e3da8e5dfa5dff9b28b39ae007e300745864b6"
+    },
+    "loadedBackendSha256": null,
+    "checks": [
+      {
+        "name": "Actual WebGL split view",
+        "passed": true,
+        "details": "Both physical exteriors show matched computed paths; screenshot confirms real GPU rendering."
+      },
+      {
+        "name": "3D camera",
+        "passed": true,
+        "details": "Dragging the canvas changed both branches together; Reset view restored the camera."
+      },
+      {
+        "name": "Live controls and hypothesis equality boundary",
+        "passed": true,
+        "details": "At spin0.99/cover0 both passage bits1. At spin0.8 equal to critical spin, both apertures close and passage bits0."
+      },
+      {
+        "name": "Stale-result protection",
+        "passed": true,
+        "details": "Changing spin clears old counts/residuals and trajectories while Calculating light paths is displayed."
+      },
+      {
+        "name": "Refined live calculation",
+        "passed": true,
+        "details": "Spin0.8, inclination85deg, tolerance1e-9,32rays:16captured/16escaped, normalized null1.98e-11, radial8.08e-12, polar3.10e-10."
+      },
+      {
+        "name": "Two-branch12-second example",
+        "passed": true,
+        "details": "Live cover removal and spin reduction updated geometry and timeline; completion restored spin0.99/cover2 and paused at12s."
+      },
+      {
+        "name": "GFM transform data",
+        "passed": true,
+        "details": "Nine raw spin-sweep rows, complex coefficients and recovered values visible. Displayed inverse error5.551e-17 and checksPASS."
+      },
+      {
+        "name": "Scope and credibility display",
+        "passed": true,
+        "details": "Physical exterior, experimental passage law, coordinate embedding, illustrative disk and absence of NASA certification are explicitly labeled."
+      },
+      {
+        "name": "Live export and exact frozen-solver replay",
+        "passed": true,
+        "details": "Full bundle after JSON serialization, exact equality",
+        "rayCount": 32,
+        "pointCount": 6079,
+        "evidence": "validation/browser/live-export-replay.json"
+      },
+      {
+        "name": "Working example left open",
+        "passed": true,
+        "details": "Physical exterior with32refined rays, spin0.99, cover2, inclination85deg, running live clock; tab marked deliverable."
+      }
+    ],
+    "screenshots": {
+      "validation/browser/research-working-example.png": {
+        "sha256": "c49488d28fd936eb4b93abd45e72f0dd32ea373c3e64ee7ef64f19d179bd4a69",
+        "bytes": 129164
+      },
+      "validation/browser/research-hypothesis.png": {
+        "sha256": "74e905fbcd2b46df2130d47371ff1f623b6f6764430dc736818395c6ad02b17e",
+        "bytes": 178613
+      },
+      "validation/browser/research-credibility.png": {
+        "sha256": "f65ec2dc0f233a3921c24aaf5c7cb17f91bd1ca460e99fee3f18cf611bbb23f4",
+        "bytes": 212916
+      }
+    },
+    "consoleErrors": [],
+    "scope": "Actual UI/GPU/control/live-export verification passed. Full32ray/6079point output exactly matches the frozen archived solver. Final integration fingerprint metadata awaits restart; analytic numerical reports test the final archive independently. No optical intensity rendering, empirical validation or NASA certification is implied.",
+    "qualification": "Current frontend/browser checks passed as scoped below, and the live downloaded result is separately replayed with the final solver. Whole running-backend module fingerprints remain pending restart."
+  },
+  "liveExportReplay": {
+    "passed": true,
+    "evidence": "validation/browser/live-export-replay.json",
+    "sha256": "a0f3c8c7232546678cff9a70f88e396fe82da58cef6a1884f2ff594de1710d7b",
+    "bytes": 624,
+    "downloadedRecording": {
+      "path": "validation/browser/live-kerr-export.json",
+      "sha256": "bfceecbf1dc9e19618b6d93d7d4b0c4da3de76ce3e906d6b5cabc96124d24d05",
+      "bytes": 6345370
+    },
+    "sourceSha256": "94facda381ccf78ed204114d7e02929c99e513c898e343a76712feb576607f77",
+    "rayCount": 32,
+    "pointCount": 6079,
+    "parameters": {
+      "spin": 0.99,
+      "observerRadius": 20,
+      "inclination": 1.4835298641951802,
+      "rayCount": 32,
+      "tolerance": 1e-09
+    },
+    "comparison": "Full bundle after JSON serialization, exact equality",
+    "scope": "Downloaded through the live UI and exactly reproduced with the archived solver. Live service lacks latest loaded-module identity fields; this comparison verifies output, not in-memory code fingerprints."
+  },
+  "sourceFiles": {
+    "SOURCE_PROVENANCE.json": {
+      "sha256": "f7912b99b2c85da2a459242111e38c938e3f995b11abdf6f8faf48ce04f8d9f3",
+      "bytes": 28992
+    },
+    "backend/physics-service.cjs": {
+      "sha256": "18afdb6befe25a73c4f6c79d7230b19f36cf405dee89b42866f71b2fae467a23",
+      "bytes": 4950
+    },
+    "backend/physics-worker.cjs": {
+      "sha256": "ac4ad16d97b3b8d7958baaaa709cb0c2f43702c525cf43f3e50980d695d8c9fe",
+      "bytes": 746
+    },
+    "backend/relativity.cjs": {
+      "sha256": "94facda381ccf78ed204114d7e02929c99e513c898e343a76712feb576607f77",
+      "bytes": 19729
+    },
+    "backend/simulation.cjs": {
+      "sha256": "235e67f8d55cba41acade9d05a1a4fcfbf0f1340b3ac1973a076972507868feb",
+      "bytes": 8757
+    },
+    "launch.cjs": {
+      "sha256": "40ff4b6dbbc8574d84bada890f5f7959cc2b102d278f147c6abe5361f5eada8b",
+      "bytes": 1560
+    },
+    "public/app.js": {
+      "sha256": "1993b2737d837a021436520ab295136201795e6226b21d732e0e2f383ba4f7c8",
+      "bytes": 13933
+    },
+    "public/index.html": {
+      "sha256": "c127c26bd1596eba82656218bfea80bd897a09ec0fe43e406264eb42d1e917e0",
+      "bytes": 14168
+    },
+    "public/renderer.js": {
+      "sha256": "1cb735fa048d80da95b7cbf817e3da8e5dfa5dff9b28b39ae007e300745864b6",
+      "bytes": 23777
+    },
+    "public/style.css": {
+      "sha256": "25f36eefcb2bce12811cdd5031275209ba3a3b758f6cad48db66807ecfa8e955",
+      "bytes": 15070
+    },
+    "server.cjs": {
+      "sha256": "8f77c77b5d305ef6ce76fc146509b0233b7f6abeef31479236012b7da8aabf1c",
+      "bytes": 10515
+    },
+    "validation/export-research-example.cjs": {
+      "sha256": "604ad0bd6711880abafcb84c48b8a0b128797c62a581426116af9ebf303a0d15",
+      "bytes": 1110
+    },
+    "validation/generate-relativity-cases.cjs": {
+      "sha256": "8311f2a215906b712c804738126e1860e845aee030657ec500c7f3d27f430527",
+      "bytes": 4279
+    },
+    "validation/independent-check.py": {
+      "sha256": "a6cff62a64eaf9025efa76d05a0b84a921c8e67ea520dc91d190110690af17e2",
+      "bytes": 14976
+    },
+    "validation/independent-kerr-check.py": {
+      "sha256": "1d0ab1070e560b88c126ac85ee7424cf2b5930112f40cb6665af959a9253392d",
+      "bytes": 25546
+    },
+    "validation/kerr-evidence-audit.py": {
+      "sha256": "48fd415bb417517b746dd1c828142939b4ff34e1829228a75e46d1bf8632b0f5",
+      "bytes": 6138
+    },
+    "validation/package-research-release.py": {
+      "sha256": "aa60053d43c5c3847d7de7eeaff3cf98fe0cbf6b7dd5fa620fdf5cc83467306c",
+      "bytes": 28619
+    }
+  },
+  "preservedOriginals": {
+    "modulesUnchanged": 9,
+    "terminalFilesUnchanged": 141,
+    "provenance": "SOURCE_PROVENANCE.json",
+    "sha256": "f7912b99b2c85da2a459242111e38c938e3f995b11abdf6f8faf48ce04f8d9f3",
+    "bytes": 28992,
+    "scope": "Nine original module identities and 141 original terminal identities match provenance exactly; the provenance model-scope metadata describes research v2."
+  },
+  "documentationFiles": {
+    "docs/README-science.txt": {
+      "sha256": "452bdca5b40d884c191692b68608518d85c63688739f907c11c0950b972f7dab",
+      "bytes": 3534
+    },
+    "docs/README-v1.0.1.txt": {
+      "sha256": "c9171b5fe400078d1e1a5b2cdba4f101549f9f280a82589134d25155566e8ec3",
+      "bytes": 4837
+    },
+    "docs/scientific-validation.txt": {
+      "sha256": "1faf19266fa7165fa3494d36da26492b0407f04b9544fd90fb740d0f805827a7",
+      "bytes": 20378
+    },
+    "docs/sources.json": {
+      "sha256": "60278d9e15bd79e8e499b63cb3a52fdf145a309f07036744c53f2fb08cdbf3ad",
+      "bytes": 10802
+    }
+  },
+  "example": {
+    "path": "examples/kerr-default.json",
+    "sha256": "1dba54fe643504df875879378938dd7fb655ef3d70d34e64a6e3f46092a61df5",
+    "bytes": 1297178,
+    "scope": {
+      "physical": "Neutral vacuum Kerr exterior light paths; G=c=M=1",
+      "hypothesis": "Aperture/cover law is independent; no material cover affects this metric",
+      "view": "Oblate coordinate embedding, not proper distance; emission is illustrative"
+    },
+    "inputs": {
+      "spin": 0.99,
+      "observerRadius": 20,
+      "inclination": 1.0471975511965976,
+      "rayCount": 16,
+      "tolerance": 1e-07
+    }
+  },
+  "historicalV1": {
+    "summary": "validation/verification-summary-v1.0.0.json",
+    "summarySha256": "4b6a88952df9d0db0fedcdc8b9bde64cb255ddaad38e7b3788fbc316b92cde1a",
+    "manifest": "validation/SHA256SUMS-v1.0.0.txt",
+    "manifestSha256": "39f5ba6f8791c70be31e646aaec28627967c54bb4e51931b4a400ed6431bd4f7",
+    "version": "1.0.0",
+    "testsPassedThen": 13,
+    "scope": "Original v1 evidence retained verbatim. Its old blocked browser status and old no-trajectory scope describe v1, not this research release."
+  },
+  "scientificFidelityLimits": [
+    "Neutral stationary vacuum Kerr exterior test-light trajectories, in geometrized M units; no evolving spacetime, matter/plasma/EM dynamics or radiation transfer.",
+    "The finite-radius asymptotic impact-coordinate bundle is not a local observer tetrad or an optical camera/shadow image.",
+    "Boyer-Lindquist oblate surfaces and ray coordinates are a display embedding; 0.2 display units per M is a uniform presentation scale, not proper distance.",
+    "Disk emission, particles and stars are illustrative. Hypothesis mouths/covers are schematic and do not alter the Kerr trajectory metric.",
+    "Aperture, cover and passage rules remain explicit hypotheses without observational validation or a traversable spacetime model.",
+    "GFM preserves raw sampled-signal scale and zeros in a separate finite-field trace transform; it does not replace the ordinary real-valued relativistic integrator.",
+    "Capture is a guarded near-horizon numerical classification. Critical, integration-limited and other unresolved paths are retained as unresolved.",
+    "Independent residual checks and case-specific refinement are numerical/code verification, not empirical validation or a global trajectory error bound.",
+    "No NASA affiliation, endorsement, certification or mission-grade validation is claimed."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "quorum://schemas/state_contract.schema.json",
+  "title": "state_contract.schema.json",
+  "type": "object",
+  "required": [
+    "immutable",
+    "mutable",
+    "transient",
+    "persistent",
+    "checkpointable",
+    "transitions",
+    "terminal"
+  ],
+  "additionalProperties": true
+}

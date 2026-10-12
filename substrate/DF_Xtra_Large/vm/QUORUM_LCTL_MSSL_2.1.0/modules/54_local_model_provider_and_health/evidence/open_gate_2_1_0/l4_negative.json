@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "71448969e640c2e84d06191964a542a43ee007bc1b4e6abb40242946801afc26",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Local Model Provider and Health",
+  "module_id": 54,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

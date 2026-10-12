@@ -1,0 +1,28 @@
+{
+  "workflow_series": {
+    "name": "QUORUM_RC_PW_PROMPT_WORKFLOW_SERIES_7.0.0.zip",
+    "bytes": 306763,
+    "sha256": "032121bfb3c473a6f9ebf5b3e98c3a49a5e42a8ea725e07ba8c0e108dc3bc4fe"
+  },
+  "vm_candidate": {
+    "name": "QUORUM_GENERIC_PROJECT_LCTL_MSSL_VIRTUAL_MACHINE_5.0.0_CANDIDATE.zip",
+    "bytes": 5975975,
+    "sha256": "861b352216eb9db77b9d892bab36001fd8c56486260f79dce95d746323aace0d"
+  },
+  "columned_lctl_corpus": {
+    "name": "COLUMNED_LCTL_CORPUS_1.0.0.zip",
+    "bytes": 554254,
+    "sha256": "b60b268a05b817bd7a9865f77f36b26b3952ef9bc28023eb3a8216b908bb634e"
+  },
+  "lctl_language": {
+    "name": "LCTL_1.6.1_RC1_COLUMNED_HYPERFEDERATED_EXECUTION_LANGUAGE.zip",
+    "bytes": 5970356,
+    "sha256": "f4bb3c50e16f40cb243fc25c134d997b93efb09ee24dfff2b2e6c0a912fe25c5"
+  },
+  "mssl_corpus": {
+    "name": "MSSL_WRITERS_CORPUS_1.0.0 (1).zip",
+    "bytes": 5678614,
+    "sha256": "4019023232fc43c659ddebf3ab69b92e25e91731ec7400e6d43033b435b3920b"
+  },
+  "application_note": "Corpora guide source-language style, canonical verifier use, semantic contract style, and claim boundaries; they are not copied as executable runtime dependencies."
+}

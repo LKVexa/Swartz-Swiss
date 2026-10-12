@@ -1,0 +1,7 @@
+RELEASE 0.4 VALIDATION SUMMARY
+
+232 project tests passed; 0 failed; 0 skipped.
+Actual final output: tests-v0.4.txt.
+1661 independent horizon assertions passed; see horizon-independent-validation.txt.
+Prior releases and their examples remain unchanged.
+Live browser rendering, downloads and iframe communication remain unverified.

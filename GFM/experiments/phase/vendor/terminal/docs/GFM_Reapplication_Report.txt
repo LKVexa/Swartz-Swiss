@@ -1,0 +1,63 @@
+RUSSL — GFM REAPPLICATION REPORT / RELEASE 0.3.0
+Prepared 2026-10-11
+
+RESULT
+Completed the explicit trace-character transform pass over all 20 stored audit findings and all 3 supplied image families (15 transcribed mathematical statements).
+All three pictured rotations Rx, Ry and Rz at 232.75 degrees are computed, saved and checked. The final GF9 model is the transformed pendulum acceleration signal followed by D(3,4) and R(3,4).
+The model is reloadable in examples/GFM-Reapplied-session.json. Open index.html, select GFM reapplication, then Load reapplied model to recompute and record the result without replacing the existing ledger. Importing the saved example instead replaces the session with its three image-family records and full report.
+
+IMPLEMENTED TRANSFORM
+F[k,x]=exp(2*pi*i*Tr(k*x)/p)/sqrt(q), positive sign; inverse F^dagger.
+Signal: y=F*(v/||v||2), with sample coordinates and original L2 scale retained.
+Operator: A_GFM=F*A*F^dagger. Apply it to F*psi, then apply F^dagger to recover A*psi in the original basis.
+This distinguishes a change of basis from applying Fourier as a physical gate. The finite-field labels index ordinary complex vectors; transcendental functions are evaluated in their stated real or complex reference domain.
+
+CONCRETE DEFAULT VALUES
+Pendulum: g=9.81 m/s²; l=1 m; maximum angle=0.2 rad. omega=3.13209195267317 rad/s; small-angle T=2.00606668071065 s.
+Acceleration signal: 9 declared angle samples; original L2 scale=3.78075635713254; relative linear error bound=0.00666666666666667. This is acceleration versus angle, not a time trajectory.
+Rotations: ordinary active, right-handed column matrices over C³, with GF3 basis labels. Degrees are converted to radians; the angle is not reduced modulo 3.
+Zeta–gamma: s=2; reference product=1.64493406684823; bounded numerical integral=1.6449340668482; relative residual=1.7e-14.
+The 9 Mellin midpoint samples on [0,12] give a coarse window estimate 1.60782195637328. This sample sum is distinct from the improper integral.
+Final model: GFM pendulum signal → D(3,4) → R(3,4); norm²=0.999999999999999; mana₂=1.26198379751257. Wigner values are quasiprobabilities.
+Exact-field oscillator and rational axial rotation are separate, dimensionless algebraic analogues. Their finite orbit length is not a physical period in seconds.
+
+STORED FINDING DISPOSITIONS
+field-algebra | verified | metadata-retained | gf9
+eq-28 | verified | signal-transformed | gf9
+eq-37 | refined | signal-transformed | gf9
+eq-67 | refined | operator-reapplied | gf9
+eq-78 | refined | label-map-checked | gf9
+eq-88 | refined | operator-reapplied | gf9
+wigner | verified | basis-covariance-verified | gf9
+mana | refined | basis-covariance-verified | gf9
+eq-181 | refined | operator-reapplied | gf4
+eq-318 | verified | signal-transformed | gf9
+eq-319 | verified | signal-transformed | gf9
+eq-417 | refined | operator-reapplied | gf3
+eq-437 | rejected | reference-only | gf9
+eq-438 | unresolved | reference-only | gf9
+eq-370 | rejected | reference-only | gf9
+characteristic-two | unresolved | reference-only | gf9
+intervals | refined | metadata-retained | gf9
+stabilizer | refined | metadata-retained | gf9
+complexity | refined | metadata-retained | gf9
+report-scope | unresolved | reference-only | gf9
+
+VERIFICATION
+167 project tests passed; 2201 independent Python assertions passed. Maximum independent scaled error: 3.78e-13.
+The independent verifier reconstructs field arithmetic, amplitudes, operators, all rotation axes and the full Wigner grid without calling the production JavaScript modules. Additional module tests verify zeta reference values for integer s=2..8.
+Reloadable example timings are deterministic zeros, not performance measurements. Original 0.1 and 0.2 examples remain byte-for-byte unchanged.
+
+LIMITS AND SOURCES
+The attached report is an audit narrative; the original 500-equation suite was not supplied. Rejected and unresolved expressions remain visible as reference-only findings.
+The X post was unavailable during retrieval. No surrounding post text was inferred; the supplied image bytes are preserved and identified by hashes.
+No live browser rendering, native download interaction, live iframe transport or quantum hardware run was completed. A successful finite transform does not establish a unified physical theory.
+See docs/Image_Equation_Audit.txt and image-equations.json for exact transcriptions, qualifications and MIT, NASA/JPL, NIST and Vourdas primary references.
+equation-audit.json preserves the version 0.2 audit of the original report; gfm-reapplication.json is the version 0.3 transport and applicability result.
+
+FILES
+index.html — offline terminal; README.txt — startup and commands
+gfm-reapplication.json — full numeric report, domains, source hashes and coverage
+examples/GFM-Reapplied-session.json — reloadable model with three image-family records
+validation/tests-v0.3.txt — actual completed test output
+validation/gfm-independent-validation.txt — independent check evidence

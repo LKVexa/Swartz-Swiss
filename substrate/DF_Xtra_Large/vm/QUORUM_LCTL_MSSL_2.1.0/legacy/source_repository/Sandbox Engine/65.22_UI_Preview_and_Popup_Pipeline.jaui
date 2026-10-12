@@ -1,0 +1,43 @@
+ja source 0.3
+module suite65.sandbox_engine.ui_preview_popup_pipeline
+use Interface
+policy no_network
+
+interface SandboxUIPreviewPopupPipeline {
+    state selected_job: Text? = null
+    state authorized: Flag = false
+    state running: Flag = false
+    derived can_launch = selected_job != null and authorized and not running
+    component SOPHIA_RunContext {
+        label "Interpret approved run"
+        accessibility role button name "Interpret approved sandbox run"
+        action interpret_run requires sandbox.ui.review:approved
+    }
+    component CHARLOTTE_PreviewInspection {
+        label "Inspect preview and output contract"
+        accessibility role button name "Inspect sandbox preview"
+        action inspect_preview requires sandbox.ui.review:approved
+    }
+    component LANDON_RunControls {
+        label "Run controls"
+        enabled bind can_launch
+        accessibility role button name "Launch approved sandbox job"
+        action launch_approved_job requires sandbox.run.launch:approved
+    }
+    component Professor_ActionCard {
+        label "Explain action card"
+        accessibility role button name "Explain sandbox action card"
+        action explain_action_card requires sandbox.ui.review:approved
+    }
+    component Podium_AuthorizationEvidence {
+        label "View authorization evidence"
+        accessibility role button name "View Podium authorization evidence"
+        action show_authorization_evidence requires sandbox.ui.review:approved
+    }
+    component SandboxPreviewViewport {
+        embed portal.scene "sandbox_engine_preview"
+        motion bind timeline.sandbox_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface SandboxUIPreviewPopupPipeline

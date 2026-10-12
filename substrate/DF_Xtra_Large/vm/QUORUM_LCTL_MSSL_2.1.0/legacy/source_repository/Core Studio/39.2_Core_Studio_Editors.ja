@@ -1,0 +1,14 @@
+ja source 0.3
+module suite39.core_studio.editors
+use Core
+policy no_network
+
+record EditorsPlan { id: Count, scope: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_editors_plan(item: EditorsPlan) -> Result<EditorsPlan, Text> effects { pure } {
+    let normalized: Text = item.scope
+    return Ok(EditorsPlan { id: item.id, scope: normalized, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: EditorsPlan = EditorsPlan { id: 3902, scope: "typed_editors", sophia: "interpret_editor_intent", charlotte: "validate_editor_state", landon: "stage_editor_plan", professor: "explain_editor_behavior", podium: "publish_editor_receipt" }
+let result = prepare_editors_plan(sample)
+assert result.is_ok == true
+emit json result

@@ -1,0 +1,502 @@
+[
+  {
+    "detail": {
+      "reason": "SHA256SUMS.txt not present (pre-seal assembly run)"
+    },
+    "id": "G0.1",
+    "name": "container SHA256SUMS.txt verifies (every delivered byte)",
+    "seconds": 0.0,
+    "status": "SKIPPED"
+  },
+  {
+    "detail": {
+      "reason": "MANIFEST.json not present (pre-seal assembly run)"
+    },
+    "id": "G0.2",
+    "name": "MANIFEST.json inventory matches disk (paths, sizes, digests; no extras)",
+    "seconds": 0.0,
+    "status": "SKIPPED"
+  },
+  {
+    "detail": {
+      "expected_files": 241,
+      "extra": [],
+      "found_files": 241,
+      "missing": [],
+      "pass": true,
+      "tree_sha256_expected": "887f41e99771bd09a9e539959d375fdc3f018c8a345e807e590118789a7ff0ff",
+      "tree_sha256_found": "887f41e99771bd09a9e539959d375fdc3f018c8a345e807e590118789a7ff0ff"
+    },
+    "id": "G0.3",
+    "name": "embedded VM payload byte-identical to the pinned digest (source zip content)",
+    "seconds": 0.012,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "expected": "046a9930c61b1d5a8a98de87b65feb933f8c5979351289953ea72dead5e304a0",
+      "files": 21,
+      "found": "046a9930c61b1d5a8a98de87b65feb933f8c5979351289953ea72dead5e304a0",
+      "pinned_from": "PA_Language_PA21.2/reference/pacore (byte-identical in all 22 PA21.2 packages)"
+    },
+    "id": "G0.4",
+    "name": "core/pacore tree digest equals the pinned digest (one core, many consumers)",
+    "seconds": 0.003,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "corpus_records_validated": 30,
+      "not_yet_present_pre_seal": [
+        "MANIFEST.json"
+      ],
+      "validated": [
+        "node/NODE_DESCRIPTOR.json",
+        "conformance/DF_GATE_RESULTS.json",
+        "reports/DF_CAPABILITY_LEDGER.json",
+        "provenance/DF_PROVENANCE.json",
+        "authority/DF_SOURCE_AUTHORITY.json"
+      ],
+      "violations": {}
+    },
+    "id": "G2",
+    "name": "every JSON artifact validates against the schema shipped beside it",
+    "seconds": 0.002,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "items": 23,
+      "unresolved": []
+    },
+    "id": "G3",
+    "name": "every evidence citation in the capability ledger resolves to a delivered path",
+    "seconds": 0.0,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "returncode": 0,
+      "seconds": 0.586
+    },
+    "id": "G1",
+    "name": "reference core selfcheck (python3 -B -m reference.pacore.cli selfcheck) -> SELFCHECK_PASS",
+    "seconds": 0.586,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "can_build": true,
+      "declared": [
+        "C11 compiler (cc/gcc/clang)",
+        "GNU make",
+        "OpenSSL 3 libcrypto headers+lib (-lcrypto)",
+        "Python 3 (qualification tools)",
+        "POSIX sh"
+      ],
+      "found": {
+        "cc": "/usr/bin/cc",
+        "java": "/usr/bin/java",
+        "make": "/usr/bin/make",
+        "openssl_headers": true,
+        "python3": "/usr/bin/python3",
+        "sh": "/usr/bin/sh",
+        "sha256sum": "/usr/bin/sha256sum"
+      },
+      "missing": [],
+      "node_id": "N_MEDIUM"
+    },
+    "id": "N0",
+    "name": "toolchain preflight against REQUIREMENTS.txt",
+    "seconds": 0.0,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "failed_steps": {},
+      "note": "run in a scratch copy; the sealed payload is never mutated",
+      "scratch_root": "/tmp/df-verify-n_medium-m78r5lpb/BOTTLE_ROCKET_5.0.0_VM_110K_RC",
+      "steps": {
+        "build": {
+          "returncode": 0,
+          "seconds": 11.887,
+          "tail": "cc -DBR_PRODUCTION -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong -ffreestanding -c src/brtrust.c -o .build/brtrust-core.o\ncc -DBR_PRODUCTION -Isrc -Ihost -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong src/brvm.c src/brtrust.c host/br_prod_host.c src/brlctlc.c host/brctl.c -o .build/brctl -lcrypto\ncc -Isrc -Ihost -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong src/brvm.c src/brtrust.c host/br_host.c src/brlctlc.c host/brsign.c host/bradmin.c -o .build/bradmin -lcrypto\ncc -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong host/brverify.c -o .build/brverify -lcrypto\ncc -Isrc -Ihost -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong src/brvm.c src/brtrust.c host/br_host.c src/brlctlc.c tests/test_main.c -o .build/br_tests -lcrypto\ncc -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong host/br_sizes.c -o .build/br_sizes"
+        },
+        "own_gate": {
+          "returncode": 0,
+          "seconds": 9.423,
+          "tail": "brim_bytes=272 ceiling=51200\n{\"record\":\"BOTTLE_ROCKET.ResourceGeometry/4.7.0\",\"word_bytes\":131072,\"vm_struct_bytes\":22304,\"word_descriptor_bytes\":24,\"register_descriptor_bytes\":384,\"stack_descriptor_bytes\":6144,\"legacy_dense_register_bytes\":2097152,\"legacy_dense_stack_bytes\":33554432,\"legacy_scratch_bytes\":262144,\"zero_init_wide_heap_bytes\":0,\"vm_wide_ceiling\":4194304,\"register_ceiling\":131072,\"stack_byte_ceiling\":1048576,\"scratch_byte_ceiling\":262144,\"device_buffer_ceiling\":4096}\nproduction_runtime_and_authority_source_bytes=107675 ceiling=110000\nindependent_verifier_source_bytes=6266\nqualification_test_source_bytes=10257\nisa_abi_conformance_source_bytes=10328"
+        },
+        "own_sums": {
+          "returncode": 0,
+          "seconds": 0.009,
+          "tail": ""
+        }
+      }
+    },
+    "id": "N1",
+    "name": "the VM's own build (stock flags) and its own acceptance gate reproduce",
+    "seconds": 21.32,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "feature_classes": {
+        "CX": "UNSUPPORTED",
+        "ENTANGLE_LINK": "UNSUPPORTED",
+        "H": "UNSUPPORTED",
+        "MEASURE": "UNSUPPORTED",
+        "PREP0": "UNSUPPORTED",
+        "TELEPORT": "UNSUPPORTED",
+        "bounded_termination": "SUPPORTED",
+        "classical_face_execution": "UNSUPPORTED",
+        "compile_from_source": "SUPPORTED",
+        "declared_step_budget": "SUPPORTED",
+        "deterministic_replay": "SUPPORTED",
+        "image_signing": "SUPPORTED",
+        "independent_image_verification": "SUPPORTED",
+        "integer_arithmetic": "SUPPORTED",
+        "native_semantic_verifier": "SUPPORTED",
+        "pacore_bottlerocket_adapter_compatible": "SUPPORTED",
+        "quantum_face_execution": "UNSUPPORTED",
+        "row_sequence_witness": "SUPPORTED_WITH_LIMITS",
+        "segmented_row_sequence_witness": "SUPPORTED",
+        "signature_checked_execution": "SUPPORTED",
+        "wide_word_arithmetic_1048576": "SUPPORTED"
+      },
+      "label": "CLASSICAL_NATIVE_VM_BOUNDED_EXECUTION",
+      "limits": {
+        "cli_step_budget": 4096,
+        "instruction_ceiling": 256,
+        "instructions_per_row": 3,
+        "max_rows_per_lowering": 84,
+        "prologue_epilogue": 4,
+        "qubits": 0,
+        "ram_per_live_vm_bytes_measured": 11000000,
+        "segmentation": "a bundle longer than max_rows_per_lowering is executed as a chain of segments; each segment starts from the previous accumulator",
+        "shots": 1
+      },
+      "target_id": "bottle-rocket-5.0.0-local",
+      "toolchain": {
+        "bradmin_sha256": "64fe6f6d24aa701e6ebf6d5eec7579d0a5218cf61138daeaa5d6ae89651f4920",
+        "brverify_sha256": "93146cd2f8e72e9888f0786bdfa562c63b1c0a410c414fb61b815e74c7318182"
+      }
+    },
+    "id": "A1",
+    "name": "adapter attestation (PA-LCTL/TARGET_ADAPTER/1): LOCAL_TRUSTED, CLASSICAL_ label, no physical flag, empty gate set",
+    "seconds": 0.001,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "negatives": [
+        {
+          "negative": 1,
+          "reason": "a DF adapter may not claim trust domain 'PHYSICAL_TARGET_AUTHENTICATED'; permitted: ('LOCAL_TRUSTED', 'LOCAL_UNTRUSTED')",
+          "refused": true
+        },
+        {
+          "negative": 2,
+          "reason": "execution label 'QPU_NATIVE_EXECUTION' must begin 'CLASSICAL_'",
+          "refused": true
+        },
+        {
+          "negative": 3,
+          "reason": "execution label 'CLASSICAL_HARDWARE_EXECUTION' contains forbidden token 'HARDWARE'",
+          "refused": true
+        }
+      ]
+    },
+    "id": "A2",
+    "name": "physical-evidence firewall: three physical claims are refused at construction",
+    "seconds": 0.0,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "examples": {
+        "01_bell_pair.pal": {
+          "agree": true,
+          "extra": {},
+          "image_sha256": "bfa730bfbd740bc8396684735e72d2abbd7d253997b7402dbf7a8fcb7c2d0226",
+          "native_witness": 17360368901394384785,
+          "program_seal": "b29d31d01996f0e9b3047e9f4dcb7f5ab9b316c5bae137d9943d302b48951353",
+          "reference_witness": 17360368901394384785,
+          "rows": 12,
+          "steps": [
+            "verify-lctlc",
+            "lctl-to-brir",
+            "compile-lctlc",
+            "independent-brim-verify",
+            "keygen",
+            "sign-image",
+            "verify-image",
+            "run-signed"
+          ],
+          "wall_s": 0.0316
+        },
+        "02_ghz3.pal": {
+          "agree": true,
+          "extra": {},
+          "image_sha256": "51336204ba1327be140f0643300cf0aead37a1bfafe87ad132f7cd3a88204bd7",
+          "native_witness": 6735235137199922533,
+          "program_seal": "18873576016d494c27f93088b559b1cc524d45655fd98bbd83d6ac409104fd7e",
+          "reference_witness": 6735235137199922533,
+          "rows": 15,
+          "steps": [
+            "verify-lctlc",
+            "lctl-to-brir",
+            "compile-lctlc",
+            "independent-brim-verify",
+            "keygen",
+            "sign-image",
+            "verify-image",
+            "run-signed"
+          ],
+          "wall_s": 0.0285
+        },
+        "03_two_lane_parallel.pal": {
+          "agree": true,
+          "extra": {},
+          "image_sha256": "840815c1685890ef4b42b3138e00660e2491da083902a4b472d45461a189d682",
+          "native_witness": 2035133056847448988,
+          "program_seal": "7af6e85e1b234b815230a4a0c7cb601b55d3c9837bcb15205aaa9c9e368a6490",
+          "reference_witness": 2035133056847448988,
+          "rows": 16,
+          "steps": [
+            "verify-lctlc",
+            "lctl-to-brir",
+            "compile-lctlc",
+            "independent-brim-verify",
+            "keygen",
+            "sign-image",
+            "verify-image",
+            "run-signed"
+          ],
+          "wall_s": 0.0272
+        },
+        "04_distributed_teleport.pal": {
+          "agree": true,
+          "extra": {},
+          "image_sha256": "1491bc6705031b461e2082dbb2bcf7364ef1ead813c03a27e4ba6f9a979e90db",
+          "native_witness": 11114974373231215855,
+          "program_seal": "c32f67190ed34409897afec60212189864dbec013a8113d53acbf2945b3db72d",
+          "reference_witness": 11114974373231215855,
+          "rows": 15,
+          "steps": [
+            "verify-lctlc",
+            "lctl-to-brir",
+            "compile-lctlc",
+            "independent-brim-verify",
+            "keygen",
+            "sign-image",
+            "verify-image",
+            "run-signed"
+          ],
+          "wall_s": 0.028
+        },
+        "05_measurement_feedback.pal": {
+          "agree": true,
+          "extra": {},
+          "image_sha256": "3ebaacad6937f244521d9c668270039d44995e927b62c8ff8eb5bc655f920575",
+          "native_witness": 1825703198280153005,
+          "program_seal": "753b9cb030c67416a721df8c07b5a75d937c009511983fcbd5a4004663e25403",
+          "reference_witness": 1825703198280153005,
+          "rows": 14,
+          "steps": [
+            "verify-lctlc",
+            "lctl-to-brir",
+            "compile-lctlc",
+            "independent-brim-verify",
+            "keygen",
+            "sign-image",
+            "verify-image",
+            "run-signed"
+          ],
+          "wall_s": 0.0295
+        },
+        "06_noise_density.pal": {
+          "agree": true,
+          "extra": {},
+          "image_sha256": "4733b6deaf0423f10d4a6f9e1dc858040d98564325e2f9ea52f70d4c76bb4703",
+          "native_witness": 725229432034669365,
+          "program_seal": "7e0315be683ad3378924d744116e84572a241c0b2db305e9fa3c742911346144",
+          "reference_witness": 725229432034669365,
+          "rows": 14,
+          "steps": [
+            "verify-lctlc",
+            "lctl-to-brir",
+            "compile-lctlc",
+            "independent-brim-verify",
+            "keygen",
+            "sign-image",
+            "verify-image",
+            "run-signed"
+          ],
+          "wall_s": 0.0282
+        },
+        "NODE.pal": {
+          "agree": true,
+          "extra": {},
+          "image_sha256": "ca0128f546ef50b9ed10828ecb9cce1ba91df08406800b932c4f5c84f4925900",
+          "native_witness": 6166177028250500253,
+          "program_seal": "d06b22ebfecfaa672ed9ab714f7033c8adaabd715716b6688a9834e74ded7412",
+          "reference_witness": 6166177028250500253,
+          "rows": 18,
+          "steps": [
+            "verify-lctlc",
+            "lctl-to-brir",
+            "compile-lctlc",
+            "independent-brim-verify",
+            "keygen",
+            "sign-image",
+            "verify-image",
+            "run-signed"
+          ],
+          "wall_s": 0.0288
+        }
+      }
+    },
+    "id": "A3",
+    "name": "row-sequence witness executes natively and agrees with the CPython reference on 7 bundles",
+    "seconds": 0.21,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "base": 17360368901394384785,
+      "mutations": {
+        "cell_change": {
+          "changed": true,
+          "native": 11554785166328667109,
+          "reference": 11554785166328667109
+        },
+        "row_delete": {
+          "changed": true,
+          "native": 4536442608457809243,
+          "reference": 4536442608457809243
+        },
+        "row_insert": {
+          "changed": true,
+          "native": 18384023426024859841,
+          "reference": 18384023426024859841
+        },
+        "row_reorder": {
+          "changed": true,
+          "native": 5398684778699812071,
+          "reference": 5398684778699812071
+        }
+      }
+    },
+    "id": "A4",
+    "name": "witness sensitivity: cell change, row reorder, row delete, row insert each change the native witness",
+    "seconds": 0.145,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "at_bound_agree": true,
+      "at_bound_instructions": 256,
+      "at_bound_rows": 84,
+      "max_rows": 84,
+      "over_bound_refusal": {
+        "feature_class": "SUPPORTED_WITH_LIMITS",
+        "instruction_ceiling": 256,
+        "max_rows": 84,
+        "node": "N_MEDIUM",
+        "rows": 85
+      }
+    },
+    "id": "A5",
+    "name": "stated bounds are refusals: max_rows+1 refused (SUPPORTED_WITH_LIMITS), max_rows executes",
+    "seconds": 0.032,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "last_step": {
+        "returncode": 1,
+        "stderr": "",
+        "stdout": "status=3 trap=24 ip=2 image_version=9 result=FAIL",
+        "step": "run-signed"
+      },
+      "refusal": "N_MEDIUM run-signed failed (exit 1)"
+    },
+    "id": "A6",
+    "name": "declared step budget is enforced: an unbounded loop traps (BUDGET / TRAP_RESOURCE) instead of running",
+    "seconds": 0.029,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "image_sha256": [
+        "bfa730bfbd740bc8396684735e72d2abbd7d253997b7402dbf7a8fcb7c2d0226",
+        "bfa730bfbd740bc8396684735e72d2abbd7d253997b7402dbf7a8fcb7c2d0226"
+      ],
+      "note": "the signed image differs between runs on nodes that mint a fresh key per run; the unsigned image and the witness are identical",
+      "witness": 17360368901394384785
+    },
+    "id": "A7",
+    "name": "deterministic replay: the same rows lower to the same source and image and produce the same witness twice",
+    "seconds": 0.062,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "refusals": {
+        "bad_qcir_schema": "refused: QCIR-P2 schema 'WRONG/1' is not 'PA-LCTL/QCIR-P2/1'",
+        "empty_rows": "refused: no rows to witness",
+        "shots_2": "refused: the row-sequence witness is deterministic; shots > 1 would report repeated ident"
+      }
+    },
+    "id": "A8",
+    "name": "shots > 1, a wrong QCIR-P2 schema and an empty row list are refused, never answered",
+    "seconds": 0.001,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "result_low64": 42,
+      "result_register": "R2",
+      "steps": [
+        "verify-lctlc",
+        "lctl-to-brir",
+        "compile-lctlc",
+        "independent-brim-verify",
+        "keygen",
+        "sign-image",
+        "verify-image",
+        "run-signed"
+      ],
+      "wall_s": 0.0282
+    },
+    "id": "A9",
+    "name": "a native LCTLC/1.1 program (examples/add42.lctlc) runs and returns 42",
+    "seconds": 0.028,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "df_native_witness": 17360368901394384785,
+      "df_source_sha256": "111b92e2541bde554e58ebfacf50184a5173a61112dd8b0a2b38c5b20e6e3e8e",
+      "lowering_byte_identical_to_brlower": true,
+      "pacore_lctlc_source_sha256": "111b92e2541bde554e58ebfacf50184a5173a61112dd8b0a2b38c5b20e6e3e8e",
+      "pacore_native_witness": 17360368901394384785
+    },
+    "id": "A10",
+    "name": "equivalence with the corpora's own adapter: lowering byte-identical to pacore.adapters.brlower and identical witness via pacore.adapters.bottlerocket",
+    "seconds": 0.062,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "returncode": 0,
+      "seconds": 0.136,
+      "tail": "  [PASS] provenance.execution_class begins CLASSICAL_                       \n  [PASS] provenance.target_class names a classical VM                       \n\n====================================================================================================\n  TOTAL 30   PASS 30   FAIL 0\n====================================================================================================\n\nALL CHECKS PASS"
+    },
+    "id": "A11",
+    "name": "the corpora's own backend suite (pamath/tests/test_bottlerocket_backend.py, 30 checks) passes against this node",
+    "seconds": 0.137,
+    "status": "PASS"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "schema": "QUORUM-POLICY-MAP/2.0",
+  "module_id": 60,
+  "default": "deny",
+  "network": "deny",
+  "capabilities": [
+    "evidence.write",
+    "module.invoke",
+    "process.execute"
+  ],
+  "gates": [
+    {
+      "before": "N04",
+      "gate": "authority+input+capability"
+    },
+    {
+      "before": "N06",
+      "gate": "authority+input+capability"
+    }
+  ]
+}

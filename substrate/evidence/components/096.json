@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "096",
+  "title": "Proton Interface",
+  "source_file": "096_Proton_Interface.md",
+  "source_sha256": "cd787d36cddbc266595144cd6960e502d13bb92e65da5afa517aed44ec9efd5a",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "N_XLARGE+DF0",
+  "integration_mechanism": "QAM integration plane",
+  "implementation_status": "REFERENCE_INTERFACE_ONLY",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

@@ -1,0 +1,240 @@
+{
+  "title": "Physical phase, amplitude, and pulse coupling",
+  "subtitle": "GFM cylindrical study volume / plasma and aggie cover",
+  "date": "October 11, 2026",
+  "status": "Proposed physical extension. Derivation and independent equation checks only; not incorporated into the simulator.",
+  "pages": [
+    {
+      "title": "1. Physical meaning of the texture",
+      "intro": "The cylinder bounds a local measurement volume around the aperture axis. The wave layer shows a calculated electric-field envelope; the material layer shows thermal and phase state. A displayed radius is geometric, not determined by electric amplitude. The earlier dimensionless neutral CGLE texture remains a separate reference.",
+      "blocks": [
+        {
+          "heading": "Wave amplitude and phase",
+          "text": "Choose the azimuthal electric component in the local cylindrical basis and the negative-exponential carrier convention. The phase is relative to a declared incident-field reference, not to an arbitrary color origin. A single instantaneous real field snapshot cannot determine the envelope uniquely.",
+          "equations": [
+            "E_\\phi=\\mathrm{Re}\\{\\mathcal E_\\phi e^{-i\\omega_0t}\\},\\qquad \\mathcal E_\\phi=A_E e^{i\\theta_E}",
+            "\\mathcal E_\\phi=2\\,\\mathrm{LPF}_W\\{E_\\phi e^{i\\omega_0t}\\},\\qquad A_E=|\\mathcal E_\\phi|",
+            "\\Delta\\theta_E=\\mathrm{arg}(\\mathcal E_\\phi\\mathcal E_{\\rm ref}^{*}),\\qquad E_{\\rm rms}=A_E/\\sqrt{2}"
+          ]
+        },
+        {
+          "heading": "Operational definition",
+          "text": "A_E is peak electric amplitude [V/m]; theta_E and relative phase are angles [rad]. For a slowly varying envelope, Ephi=A_E cos(omega0 t-theta_E). Specify the carrier, reference plane, filter bandwidth/window, delay compensation and amplitude threshold. Mask phase when either the measured or reference envelope is below threshold. Few-cycle pulses need a declared analysis band; their carrier phase is an analysis-dependent diagnostic. [1]"
+        },
+        {
+          "heading": "Energy and transport have separate quantities",
+          "text": "Use the real Maxwell fields for exact energy accounting. The cycle averages below apply to slowly varying peak phasors. Electric amplitude alone does not determine total wave energy or transport in a standing wave or dispersive plasma. [2] Vector peak phasors/envelopes are denoted with hats; scalar Ecal is the chosen component envelope.",
+          "equations": [
+            "u_{\\rm EM}=\\frac{\\epsilon_0|\\mathbf E|^2+\\mu_0|\\mathbf H|^2}{2},\\qquad \\mathbf S=\\mathbf E\\times\\mathbf H",
+            "\\langle u_{\\rm EM}\\rangle=\\frac{\\epsilon_0|\\widehat{\\mathbf E}|^2+\\mu_0|\\widehat{\\mathbf H}|^2}{4}",
+            "\\langle\\mathbf S\\rangle=\\frac12\\mathrm{Re}(\\widehat{\\mathbf E}\\times\\widehat{\\mathbf H}^{*})"
+          ]
+        },
+        {
+          "heading": "Material phase",
+          "text": "The material layer uses liquid mass fraction f_l in [0,1], with solid fraction 1-f_l. These are thermodynamic state fractions, not angles. Geometric cover fraction C_g and electromagnetic transmittance are additional, independent quantities. Phase color is never a proxy for temperature or openness."
+        }
+      ]
+    },
+    {
+      "title": "2. Governing fields and a controlled pulse input",
+      "intro": "Start with fixed material geometry, stationary ions, fixed plasma density and no imposed magnetic bias or bulk rotation. Electromagnetic fields are real and evolved in physical time. Vacuum epsilon0 and mu0 are the baseline background constants; conduction/dispersive material response is carried explicitly by current.",
+      "blocks": [
+        {
+          "heading": "Volume fractions and Maxwell coupling",
+          "text": "Let f_p and f_c be fixed plasma and cover volume fractions, with f_p+f_c<=1. J_p is current per full computational-cell volume; sigma_eff=f_c sigma_c. Intrinsic n_e is electron number density per plasma volume. Pure-domain masks are the special case f=0 or 1. These are homogenized cells, not conformal interfaces.",
+          "equations": [
+            "\\epsilon_0\\partial_t\\mathbf E=\\nabla\\times\\mathbf H-\\mathbf J_p-\\sigma_{\\rm eff}\\mathbf E-\\mathbf J_{\\rm ext}",
+            "\\mu_0\\partial_t\\mathbf H=-\\nabla\\times\\mathbf E,\\qquad \\sigma_{\\rm eff}=f_c\\sigma_c(T_c,f_l)",
+            "\\nabla\\cdot(\\epsilon_0\\mathbf E)=\\rho_q,\\quad\\nabla\\cdot\\mathbf B=0,\\quad\\partial_t\\rho_q+\\nabla\\cdot\\mathbf J_{\\rm total}=0"
+          ]
+        },
+        {
+          "heading": "Direct extension of the current axisymmetric sector",
+          "text": "For azimuthally uniform Ephi, Jp,phi and Jext,phi, the following scalar-polarization system closes in an unmagnetized isotropic medium. Ephi and Hr vanish regularly at r=0; Hz is finite. Azimuthal current has zero divergence in this sector.",
+          "equations": [
+            "\\epsilon_0\\partial_t E_\\phi=\\partial_zH_r-\\partial_rH_z-J_{p,\\phi}-\\sigma_{\\rm eff}E_\\phi+F_\\phi",
+            "\\mu_0\\partial_tH_r=\\partial_zE_\\phi,\\qquad\\mu_0\\partial_tH_z=-\\frac1r\\partial_r(rE_\\phi)",
+            "F_\\phi=-J_{{\\rm ext},\\phi},\\qquad P_{\\rm source}=-\\int_V\\mathbf E\\cdot\\mathbf J_{\\rm ext}\\,dV"
+          ]
+        },
+        {
+          "heading": "A prescribed pulse train",
+          "text": "One reproducible drive is a localized impressed ring-current profile G(r,z), regular as O(r) at the axis, multiplied by Gaussian carrier bursts. The source-density scale J0 is in A/m^2; it is not electric-field amplitude. Calibrate the incident waveform in a reference run or use a validated incoming-mode boundary. [2]",
+          "equations": [
+            "J_{{\\rm ext},\\phi}=J_0G(r,z)\\sum_k e^{-(t-t_k)^2/(2\\tau^2)}\\cos[\\omega_0(t-t_k)+\\varphi_k]"
+          ]
+        },
+        {
+          "heading": "Boundary specification",
+          "text": "Prescribe initial E, H and J_p consistently, material temperatures, and the incoming waveform. Define physical outgoing flux at measurement surfaces. Artificial sponge/PML losses remain a separate ledger; PEC outer walls reflect and do not represent radiation escaping to infinity."
+        }
+      ]
+    },
+    {
+      "title": "3. Plasma current, phase lag, and collisional heating",
+      "intro": "The bounded first model is linear collisional electron response at frozen density. It resolves electron inertia and therefore distinguishes reversible drift storage from irreversible heat. It excludes ionization, flow, pressure-driven currents, relativistic motion and kinetic resonances.",
+      "blocks": [
+        {
+          "heading": "Derive the current equation from electron momentum",
+          "text": "Take e>0 as the elementary charge magnitude and a nonnegative effective collision frequency nu. With J_p=-f_p n_e e v_e and fixed f_p n_e, multiplying the electron momentum equation gives the causal current response. At f_p n_e=0, set J_p=K_p=q_nu=0 without dividing by zero. [3]",
+          "equations": [
+            "m_e(\\partial_t+\\nu)\\mathbf v_e=-e\\mathbf E,\\qquad \\alpha=\\frac{f_p n_e e^2}{m_e}=f_p\\epsilon_0\\omega_p^2",
+            "\\partial_t\\mathbf J_p+\\nu\\mathbf J_p=\\alpha\\mathbf E,\\qquad \\omega_p^2=\\frac{n_e e^2}{\\epsilon_0m_e}"
+          ]
+        },
+        {
+          "heading": "The measurable amplitude and phase response",
+          "text": "For harmonic peak phasors with exp(-i omega t), omega>0 and coefficients held fixed for the response, conductivity is complex. Its positive phasor angle means current lags electric field in time under this convention; at nu=0 the lag is pi/2. The instantaneous current equation remains authoritative for finite pulses or varying temperature; the conductivity is a frozen-coefficient harmonic diagnostic.",
+          "equations": [
+            "\\sigma_p(\\omega)=\\frac{\\alpha}{\\nu-i\\omega},\\qquad |\\widehat{\\mathbf J}_p|=\\frac{\\alpha|\\widehat{\\mathbf E}|}{\\sqrt{\\nu^2+\\omega^2}}",
+            "\\Delta\\theta_{J,E}=\\mathrm{atan2}(\\omega,\\nu),\\qquad \\epsilon_r(\\omega)=1-\\frac{f_p\\omega_p^2}{\\omega(\\omega+i\\nu)}"
+          ]
+        },
+        {
+          "heading": "Storage and irreversible heat",
+          "text": "Dot the current equation with J_p/alpha. This gives the following identity exactly for fixed alpha, including temperature-dependent nu>=0. Instantaneous J_p dot E can be negative when current returns stored energy to the wave; it must not all be called heat. [4]",
+          "equations": [
+            "K_p=\\frac{|\\mathbf J_p|^2}{2\\alpha},\\qquad q_\\nu=\\frac{\\nu|\\mathbf J_p|^2}{\\alpha}\\geq0",
+            "\\mathbf J_p\\cdot\\mathbf E=\\partial_tK_p+q_\\nu",
+            "\\langle q_\\nu\\rangle=\\frac{\\nu|\\widehat{\\mathbf J}_p|^2}{2\\alpha}=\\frac12\\mathrm{Re}(\\sigma_p)|\\widehat{\\mathbf E}|^2"
+          ]
+        },
+        {
+          "heading": "A thermal closure",
+          "text": "For a common, locally equilibrated ideal plasma temperature T_p, let C_p=(3/2) f_p(n_e+n_i) k_B, with n_i=n_e/Z. This single-temperature closure requires equilibration on the thermal time scale; otherwise use separate species energies and heat partition. k_p,eff is cell-effective thermal conductivity. Q_pc is heat transferred from plasma to cover per cell volume [W/m^3], entered with opposite signs. Set g_pc=0 for the insulated-contact benchmark, or calibrate g_pc=h_pc A_interface/V_cell from interface conductance h_pc [W/(m^2 K)]. Its support requires both media. Constant nu is a controlled first benchmark; a positive nu(T_p) must be calibrated.",
+          "equations": [
+            "C_p\\partial_tT_p=\\nabla\\cdot(k_{p,\\rm eff}\\nabla T_p)+q_\\nu-Q_{pc}",
+            "Q_{pc}=g_{pc}(T_p-T_c),\\qquad g_{pc}\\geq0"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Aggie cover: current, latent heat, and geometry",
+      "intro": "Aggie denotes the user's hypothetical covering material. This local model treats it as a specified conducting material with measurable properties; no black-hole material, timeless spin or traversable horizon is inferred. Geometry remains prescribed during the first thermal/electromagnetic calculation.",
+      "blocks": [
+        {
+          "heading": "Conductive response and deposited power",
+          "text": "The memoryless Ohmic cover is valid only over a calibrated frequency/temperature range. A metal with significant dispersion needs a causal Drude/Lorentz material response instead. Here sigma_c is nonnegative, with separately measured solid/liquid values. A linear fraction mixture is a declared constitutive approximation, not a universal microstructure law. [5]",
+          "equations": [
+            "\\mathbf J_c=f_c\\sigma_c(T_c,f_l)\\mathbf E,\\qquad q_c=f_c\\sigma_c|\\mathbf E|^2",
+            "\\sigma_c=(1-f_l)\\sigma_{\\rm solid}(T_c)+f_l\\sigma_{\\rm liquid}(T_c)"
+          ]
+        },
+        {
+          "heading": "Enthalpy carries the energy of melting",
+          "text": "Use a stationary constant-density approximation with equal phase densities and negligible pressure-volume work. Under that approximation, specific enthalpy h_c [J/kg] can serve as the stored thermal energy variable. L_m is latent heat [J/kg]; c_c is specific heat [J/(kg K)]. The mushy interval is a declared regularization/alloy model; a pure substance at fixed pressure has an isothermal melting plateau. Interphase heat Q_pc enters here with the opposite sign to its plasma term. Real density change, stress or motion needs internal energy and mechanical work. [6]",
+          "equations": [
+            "h_c(T_c)=\\int_{T_*}^{T_c}c_c(T')\\,dT'+L_m f_l(T_c)",
+            "\\partial_t(f_c\\rho_c h_c)=\\nabla\\cdot(k_{c,\\rm eff}\\nabla T_c)+q_c+Q_{pc}",
+            "f_l(T)=\\mathrm{clip}\\left(\\frac{T-T_s}{T_l-T_s},0,1\\right),\\qquad T_l>T_s",
+            "\\frac{dh_c}{dT}=c_c(T)+\\frac{L_m}{T_l-T_s}\\quad(T_s<T<T_l)"
+          ]
+        },
+        {
+          "heading": "Geometric cover is a separate observable",
+          "text": "C_g is covered mouth area divided by total cavity-mouth area, not solid fraction or absorption. For a concentric annular cover, the radius relation below is geometric only. Areal mass is a through-thickness integral; integrating bulk density over an area alone has the wrong units for areal mass.",
+          "equations": [
+            "C_g=\\frac{A_{\\rm covered}}{A_{\\rm mouth}},\\qquad r_{\\rm clear}=R_i\\sqrt{1-C_g}",
+            "\\Sigma_c(\\mathbf x_\\perp)=\\int_{\\rm column}\\rho_c\\,ds\\quad[\\mathrm{kg}/\\mathrm{m}^2]"
+          ]
+        },
+        {
+          "heading": "Opening requires a material-motion law",
+          "text": "A molten cover still contains mass and can still conduct or obstruct. The baseline holds f_c and C_g fixed. Cover opening, breakup, displacement, ablation and ejecta require mass, momentum and phase-change/vaporization energy equations. No threshold in wave amplitude or melting fraction automatically creates a passage."
+        }
+      ]
+    },
+    {
+      "title": "5. Coupling chain and conservation test",
+      "intro": "The actual coupling is E to J_p/J_c; current feeds back into Maxwell; q_nu and q_c heat their respective media; material temperature changes the calibrated collision/conductivity laws. This makes pulse reception a response governed by equations, not a prescribed visual animation.",
+      "blocks": [
+        {
+          "heading": "Exact local energy balance",
+          "text": "Combine Maxwell's Poynting identity, the plasma drift identity and both thermal equations. The interphase Q_pc terms cancel exactly. With fixed masks/density, no bulk motion, negligible pressure work and no omitted radiation or chemistry, the complete energy is below. Thermal fluxes are q_th,p=-k_p,eff grad T_p and q_th,c=-k_c,eff grad T_c. These are local SI equations, not global black-hole energy laws. [2,4]",
+          "equations": [
+            "u_{\\rm total}=u_{\\rm EM}+K_p+C_p(T_p-T_{p,*})+f_c\\rho_c h_c",
+            "\\partial_t u_{\\rm total}+\\nabla\\cdot(\\mathbf S+\\mathbf q_{\\rm th,p}+\\mathbf q_{\\rm th,c})=-\\mathbf E\\cdot\\mathbf J_{\\rm ext}"
+          ]
+        },
+        {
+          "heading": "Volume-integrated ledger",
+          "text": "For V with outward normal n, source work is signed. Include physical thermal boundary flux, or set it to zero with insulated boundaries. Contact heat cancels internally. Material heating and artificial absorber loss remain distinct. The second identity tracks deposited heat cumulatively instead of adding thermal stored energy; never count both representations in the same total.",
+          "equations": [
+            "\\Delta U_{\\rm total}+\\int_0^t\\!\\oint_{\\partial V}(\\mathbf S+\\mathbf q_{\\rm th})\\cdot\\mathbf n\\,dA\\,dt'=W_{\\rm source}",
+            "\\Delta(U_{\\rm EM}+K_p)+Q_p+Q_c+W_{\\rm EM,out}=W_{\\rm source}"
+          ]
+        },
+        {
+          "heading": "Meaning of intake in this cylinder",
+          "text": "The present receiving mouth is at the smaller-z end, with outward normal -e_z. Therefore positive S_z is inward. The integral is signed net intake; its positive-only part is not a uniquely separated incident pulse because recrossings and interference can occur. Separate incident/reflected energy with calibrated mode decomposition or an appropriate reference/scattering measurement.",
+          "equations": [
+            "S_z=-E_\\phi H_r,\\qquad P_{\\rm mouth,net}=\\int_{A_{\\rm mouth}}S_z\\,dA",
+            "Q_p=\\int_0^t\\!\\int_Vq_\\nu\\,dV\\,dt',\\qquad Q_c=\\int_0^t\\!\\int_Vq_c\\,dV\\,dt'"
+          ]
+        },
+        {
+          "heading": "Matched branch experiment",
+          "text": "Use the same calibrated incident pulse, plasma density, numerical domain and initial temperatures for the open and covered cases. Record reflected/transmitted energy, net mouth intake, drift storage, cover/plasma heat, temperatures, liquid fraction and clear area. Compare after transients decay or explicitly retain stored energy. This tests the local hypothetical branches; it does not establish black-hole/wormhole equivalence."
+        }
+      ]
+    },
+    {
+      "title": "6. Limits, required extensions, and readiness",
+      "intro": "The frozen-density, static-cover, unmagnetized baseline is a mathematically closed model once coefficient tables, initial states and boundary conditions are supplied. The following extensions need additional energy terms and solver components before they can be claimed.",
+      "blocks": [
+        {
+          "heading": "Magnetization and rotation",
+          "text": "A prescribed magnetic bias adds the Hall term shown below. It does no direct work because J dot (J cross B0)=0, but usually rotates current into other components. An axial B0 converts azimuthal current into radial response, so the current TEphi sector is insufficient. A rotating cover uses its rest-frame electric field; mechanical work must be counted separately.",
+          "equations": [
+            "\\partial_t\\mathbf J_p+\\nu\\mathbf J_p+\\frac{e}{m_e}\\mathbf J_p\\times\\mathbf B_0=\\alpha\\mathbf E",
+            "\\mathbf J_c=\\sigma_{\\rm eff}(\\mathbf E+\\mathbf u_c\\times\\mathbf B),\\qquad q_c=\\sigma_{\\rm eff}|\\mathbf E+\\mathbf u_c\\times\\mathbf B|^2",
+            "\\mathbf J_c\\cdot\\mathbf E=q_c+\\mathbf u_c\\cdot(\\mathbf J_c\\times\\mathbf B)"
+          ]
+        },
+        {
+          "heading": "Changing density is not a free coefficient substitution",
+          "text": "If alpha varies while the same current equation is used, the extra term below appears. Ionization or moving masks therefore require species continuity, consistent momentum sources and ionization/mechanical energy. The baseline freezes n_e and f_p. Ionization fraction is not carrier phase.",
+          "equations": [
+            "\\partial_tK_p=\\mathbf J_p\\cdot\\mathbf E-q_\\nu-K_p\\partial_t\\ln\\alpha\\quad(\\alpha>0)"
+          ]
+        },
+        {
+          "heading": "Angular texture and material resolution",
+          "text": "An m=0 solution is circumferentially uniform. Actual angular variation needs additional azimuthal modes and components; an asymmetric or fragmenting cover may require a full 3D solver. Rendering subdivisions add no physical degrees of freedom. Conductive skin depth and plasma wavelengths must be resolved; homogenized partial cells need an interface-convergence study. [7]"
+        },
+        {
+          "heading": "Inputs still to specify",
+          "text": "Plasma: composition/Z, density, collision law and thermal transport. Cover: composition, sigma_solid/liquid(T,frequency), rho_c, c_c(T), thermal conductivity, solidus/liquidus and latent heat. Also specify pulse spectrum, polarization, physical dimensions, masks, reference plane, initial states and boundary conditions. The word aggie supplies none of these measured constants."
+        },
+        {
+          "heading": "Equation checks versus incorporation",
+          "text": "Sixteen independent algebra and uniform temporal checks pass: harmonic response, averaged and instantaneous work, reversible storage, midpoint ledger, second-order current convergence, enthalpy inversion, fractional cells, corrected NEC/Israel relations, and rotating metric inverse. These do not validate a spatial plasma solver or black-hole observations. No simulator or release files were modified."
+        }
+      ]
+    },
+    {
+      "title": "7. Review references and next implementation boundary",
+      "intro": "The component equations and energy identities are explicit derivations for this study. Sources below support the underlying electromagnetic, collisional-current, signal-analysis, material and symmetry assumptions. No experimental validation or particular astrophysical material is asserted.",
+      "blocks": [
+        {
+          "heading": "Primary technical sources",
+          "text": "[1] MathWorks, Discrete-time analytic signal / Hilbert transform. https://www.mathworks.com/help/signal/ref/hilbert.html\n[2] Richard Fitzpatrick, University of Texas, Energy Conservation. https://farside.ph.utexas.edu/teaching/355/Surveyhtml/node117.html\n[3] MIT, Introduction to Plasma Physics, Chapter 5. https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2003/75c75c5df51f8fba1b2a903fde937ddc_chap5.pdf\n[4] Richard Fitzpatrick, University of Texas, Collisional plasma dielectric response. https://farside.ph.utexas.edu/teaching/em/lectures/node103.html\n[5] Meep developers, Materials. https://meep.readthedocs.io/en/stable/Materials/\n[6] NIST FiPy, Phase anisotropy (thermal/latent-heat coupling). https://pages.nist.gov/fipy/en/latest/generated/examples.phase.anisotropy.html\n[7] Meep developers, Cylindrical Coordinates. https://meep.readthedocs.io/en/latest/Python_Tutorials/Cylindrical_Coordinates/"
+        },
+        {
+          "heading": "Recommended first incorporation",
+          "text": "Add one scalar causal plasma current Jp,phi to the existing unmagnetized TEphi solver, fixed density, separate drift/thermal ledgers, and an enthalpy/conductivity cover with fixed geometry. Save adequately sampled probe histories for envelope/phase reconstruction. Retain the original neutral CGLE cylinder as a separately identified reference. Expand the electromagnetic components before magnetized spin or angular texture is physically coupled."
+        },
+        {
+          "heading": "Acceptance requirements",
+          "text": "Recover vacuum at n_e=0; recover Ohmic response when omega/nu is small; conserve field-plus-drift energy with nu=sigma=0; reproduce damped plasma dispersion; close source/boundary/thermal balance; converge across grid/time/material interfaces; reproduce latent-heat tests; resolve pulse bandwidth and skin depth. Compare a specified measured plasma/cover experiment with uncertainty before prediction claims."
+        },
+        {
+          "heading": "Observable definitions",
+          "text": "Brightness: A_E on a fixed V/m scale. Hue: incident-referenced phase [rad], masked near zero. Transport arrows: S [W/m^2]. Plasma state: n_e [m^-3], T_p [K], J_p [A/m^2] and K_p [J/m^3]. Cover state: T_c [K], enthalpy [J/kg], liquid/solid fraction, areal mass [kg/m^2], and geometric clear area [m^2]. Physical aperture radius is never derived from wave amplitude."
+        }
+      ]
+    }
+  ]
+}

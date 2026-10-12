@@ -1,0 +1,51 @@
+{
+  "df_release": "DF-PA21.2-1.0.0",
+  "nodes": [
+    {
+      "container": "DF_Small",
+      "manifest_sha256": "c75d67beebc3daae9f701a3eef08537cfe56aee8bd8bc5b70475b94f0f07127a",
+      "node_id": "N_SMALL",
+      "payload_tree_sha256": "1cf22c38121bcd3b6d56944426ca137129a0f7bfeac5803d38a1bd2b087adc3a",
+      "relative_path": "../DF_Small",
+      "source_zip_sha256": "3fd95ec274d475d759d60832b413fbff9e3a8db5003da7e34a3c37d5b3b79fab",
+      "sums_sha256": "2d5a150de8398bfd5308bb9e78048643038adaee8faa88d202e7ab757d690211",
+      "vm_package_dir": "BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K",
+      "zip_sha256": "d64085ac90f44b24196b0d0ed1b2859bb974723f8644a7258d1347550b9a5e07"
+    },
+    {
+      "container": "DF_Medium",
+      "manifest_sha256": "979a6904755f2c7512718f7677590aa5558175d1cd336c3a58edf8d4b5452cef",
+      "node_id": "N_MEDIUM",
+      "payload_tree_sha256": "887f41e99771bd09a9e539959d375fdc3f018c8a345e807e590118789a7ff0ff",
+      "relative_path": "../DF_Medium",
+      "source_zip_sha256": "fcc7ec8e027d187fa00ab7bc7bb9e69a98f35c362931bc6a6b636541ce9f9c1a",
+      "sums_sha256": "43913d1896725514554b7e38d66b1183b2fc7811acd00d445dc1cf87b4d68ec2",
+      "vm_package_dir": "BOTTLE_ROCKET_5.0.0_VM_110K_RC",
+      "zip_sha256": "7c57c6ce49f7ff4c492cc53c3177778d04adfa96f3a96525c57c3c9f4ef2cda4"
+    },
+    {
+      "container": "DF_Large",
+      "manifest_sha256": "76606fbe78236f8fa0d9bb8a8b1735642237ce78b5334bdbccce764ea19f251b",
+      "node_id": "N_LARGE",
+      "payload_tree_sha256": "e3f53aa6551c9dd58277d5d57f769992fb244690de94f264f0f914985a279f46",
+      "relative_path": "../DF_Large",
+      "source_zip_sha256": "94b612d849d9990906e8090ae6576cf187a2154349acd2c44a821b43a4da7574",
+      "sums_sha256": "772fa1c64c2dc6528e83f8dcba8e1d2bc81f0ad2d795ee5d2dacf96e6e93002d",
+      "vm_package_dir": "BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE_61K",
+      "zip_sha256": "7acac542729a118c58e02ad85918391a02d50f09aec04a1c07a9aa2e401e1ab9"
+    },
+    {
+      "container": "DF_Xtra_Large",
+      "manifest_sha256": "151ec87a0fd3c76389cfa85a6b357cba6367b09728efd438d9e715a51f3b7194",
+      "node_id": "N_XLARGE",
+      "payload_tree_sha256": "f782f75c8cd8d1818e7c5348efb050a0c1aff221dd421f233e528ffeca068a42",
+      "relative_path": "../DF_Xtra_Large",
+      "source_zip_sha256": "cea7cb3704c24e89cc95470b721faaf38aa54ac597530a50e5a9ee0700e8d4ca",
+      "sums_sha256": "46f68fdb5d0382e0e996bdae69673d2d0062963d93a3846fdb87b9359d28795b",
+      "vm_package_dir": "QUORUM_LCTL_MSSL_2.1.0",
+      "zip_sha256": "c0432c148083baf01cc8dbf159a5f742cf1f9b9d4780f89db5a0a8870fec9a83"
+    }
+  ],
+  "rule": "DF_Fabric locates each node container beside itself (or under --nodes-root / DF_<NODE>_ROOT) and compares the container's SHA256SUMS.txt digest with the value pinned here; a mismatch is a FAIL, an absent container is SKIPPED with its name",
+  "schema": "DF/NODES/1"
+}

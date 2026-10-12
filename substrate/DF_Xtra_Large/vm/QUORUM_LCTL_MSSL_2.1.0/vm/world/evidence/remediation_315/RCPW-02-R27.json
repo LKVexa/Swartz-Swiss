@@ -1,0 +1,48 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "5c036d1b430ab5d1908c7736390a2e8252c9acfff849868fc5f85afb2d39950c",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (REFERENCE_PRECISION, NARRATIVE_KNOWLEDGE) plus Stage 02 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "NARRATIVE_KNOWLEDGE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "REFERENCE_PRECISION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-01",
+    "GW-06",
+    "GW-11",
+    "GW-22",
+    "GW-42",
+    "GW-63"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Reference-local observations expose only information physically or narratively available to the observer rather than globally omniscient canonical state.",
+  "requirement_id": "RCPW-02-R27",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 2,
+  "stage_title": "Reference Frame Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "REFERENCE_PRECISION",
+    "NARRATIVE_KNOWLEDGE"
+  ],
+  "workflow_file": "02_REFERENCE_FRAME_AUTHORITY/031_RCPW_02_R27_REFERENCE_LOCAL_OBSERVATIONS_EXPOSE_ONLY_INFORMATION_PHYSICALLY_OR_NARRATIVELY_AVAILA.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

@@ -1,0 +1,44 @@
+ja source 0.3
+module suite65.sandbox_engine.charlotte_construction_inspection
+use Interface
+policy no_network
+
+interface SandboxCHARLOTTEConstructionInspection {
+    state proposal_loaded: Flag = false
+    state authorized: Flag = false
+    state inspection_complete: Flag = false
+    derived can_construct = proposal_loaded and authorized
+    component SOPHIA_ConstructionContext {
+        label "Interpret construction context"
+        accessibility role button name "Interpret approved construction context"
+        action interpret_construction_context requires sandbox.construction.review:approved
+    }
+    component CHARLOTTE_ConstructInspect {
+        label "Construct and inspect approved output"
+        enabled bind can_construct
+        accessibility role button name "Construct and inspect approved sandbox output"
+        action construct_and_inspect requires sandbox.construction.execute:approved
+    }
+    component LANDON_ConstructionControls {
+        label "Govern construction pass"
+        enabled bind can_construct
+        accessibility role button name "Govern bounded construction pass"
+        action govern_construction_pass requires sandbox.construction.review:approved
+    }
+    component Professor_ConstructionExplanation {
+        label "Explain construction and findings"
+        accessibility role button name "Explain construction and inspection findings"
+        action explain_construction_findings requires sandbox.construction.review:approved
+    }
+    component Podium_ConstructionEvidence {
+        label "View construction authorization"
+        accessibility role button name "View construction authorization and evidence"
+        action show_construction_evidence requires sandbox.construction.review:approved
+    }
+    component ConstructionInspectionViewport {
+        embed portal.scene "sandbox_charlotte_construction_inspection"
+        motion bind timeline.construction_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface SandboxCHARLOTTEConstructionInspection

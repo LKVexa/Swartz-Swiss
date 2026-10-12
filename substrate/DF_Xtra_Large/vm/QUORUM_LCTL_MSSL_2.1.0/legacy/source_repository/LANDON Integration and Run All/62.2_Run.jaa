@@ -1,0 +1,35 @@
+ja source 0.3
+module suite62.landon_integration.run
+use Agent
+policy no_network
+
+agent LANDONRun {
+    identity "landon_run"
+    role "sophia-charlotte-landon-professor-podium-orchestrator"
+    goal execute_one_approved_job when confidence >= 0.95
+    memory session retention 1h
+    budget steps 40 tools 5
+    tool SOPHIAInterpretRunRequest(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEGateSingleRun(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONExecuteApprovedJob(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainRunResult(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordRunResult(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIAInterpretRunRequest
+        authorize CHARLOTTEGateSingleRun
+        authorize LANDONExecuteApprovedJob
+        authorize ProfessorExplainRunResult
+        authorize PodiumRecordRunResult
+        continue when policy_allows
+        execute SOPHIAInterpretRunRequest("single_job_request")
+        execute CHARLOTTEGateSingleRun("canonical_job_commitment")
+        execute LANDONExecuteApprovedJob("approved_single_job")
+        execute ProfessorExplainRunResult("single_job_result")
+        execute PodiumRecordRunResult("single_job_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "LANDONRun.mcrt"

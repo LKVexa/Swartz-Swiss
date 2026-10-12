@@ -1,0 +1,35 @@
+ja source 0.3
+module suite47.chatbot.documenting_projects
+use Agent
+policy no_network
+
+agent ChatbotDocumentingProjects {
+    identity "chatbot_documenting_projects"
+    role "sophia-charlotte-landon-professor-podium-chatbot"
+    goal produce_current_traceable_project_documentation when confidence >= 0.93
+    memory session retention 1h
+    budget steps 55 tools 5
+    tool LANDONCollectDocumentationSources(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAModelDocumentationAudience(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateDocumentationInputs(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorWriteProjectDocumentation(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordDocumentationEvidence(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectDocumentationSources
+        authorize SOPHIAModelDocumentationAudience
+        authorize CHARLOTTEValidateDocumentationInputs
+        authorize ProfessorWriteProjectDocumentation
+        authorize PodiumRecordDocumentationEvidence
+        continue when policy_allows
+        execute LANDONCollectDocumentationSources("selected_project_scope")
+        execute SOPHIAModelDocumentationAudience("project_source_inventory")
+        execute CHARLOTTEValidateDocumentationInputs("audience_and_source_model")
+        execute ProfessorWriteProjectDocumentation("validated_documentation_inputs")
+        execute PodiumRecordDocumentationEvidence("documentation_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "ChatbotDocumentingProjects.mcrt"

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "quorum://schemas/capability.schema.json",
+  "title": "capability.schema.json",
+  "type": "object",
+  "required": [
+    "id",
+    "scope",
+    "default",
+    "evidence"
+  ],
+  "additionalProperties": true
+}

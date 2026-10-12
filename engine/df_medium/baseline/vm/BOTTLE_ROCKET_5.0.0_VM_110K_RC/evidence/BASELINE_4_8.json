@@ -1,0 +1,20 @@
+{
+  "record": "BOTTLE_ROCKET.QualificationBaseline/4.8.0",
+  "baseline_archive": "BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE_110K_RELEASE.zip",
+  "baseline_sha256": "49aeddfc7bb30b2c1a8dab418039e353fec21e6bf5a485c13b3571cdb67aac0a",
+  "workflow_archive": "09_4_8_0_independent_verification_security_qualification.zip",
+  "workflow_sha256": "e6208e73ea79a41435afcadc57b2a2eb6f7ac44a5a2dbbbc602c456d1c31a9cd",
+  "baseline_gate": "make clean operational PASS",
+  "baseline_production_boundary_bytes": 107629,
+  "candidate_production_boundary_bytes": 107675,
+  "production_ceiling_bytes": 110000,
+  "host_os": "Linux 6.18.35 x86_64",
+  "gcc": "gcc (Debian 14.2.0-19) 14.2.0",
+  "clang": "clang version 17.0.0 (https://github.com/swiftlang/llvm-project.git 10999b6d034fe318f3d56c83bddb6572593a8bb0)",
+  "openssl": "OpenSSL 3.5.5 27 Jan 2026 (Library: OpenSSL 3.5.5 27 Jan 2026)",
+  "aarch64_toolchain_runtime": false,
+  "windows_toolchain_runtime": false,
+  "independent_machine": false,
+  "independent_operator": false,
+  "literal_72_hour_soak_complete": false
+}

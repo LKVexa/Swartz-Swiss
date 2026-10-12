@@ -1,0 +1,9 @@
+{
+  "compiler": "cc (Debian 14.2.0-19) 14.2.0",
+  "machine": "x86_64",
+  "make": "GNU Make 4.4.1",
+  "openssl": "OpenSSL 3.5.5 27 Jan 2026 (Library: OpenSSL 3.5.5 27 Jan 2026)",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "python": "3.13.5",
+  "timestamp_utc": "2026-08-11T03:03:46+00:00"
+}

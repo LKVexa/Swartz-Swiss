@@ -1,0 +1,47 @@
+ja source 0.3
+module suite38.preview_designer.reviewable_application
+use Interface
+policy no_network
+
+interface PreviewDesignerReviewableApplication {
+    state selected_application: Text? = null
+    state opening_application_preview: Flag = false
+    derived can_select_application = not opening_application_preview
+    derived can_open_application_preview = selected_application != null and not opening_application_preview
+    component SOPHIA_ApplicationPreviewModel {
+        label "Interpret application preview"
+        enabled bind can_open_application_preview
+        accessibility role button name "Interpret selected application preview"
+        action interpret_application_preview requires admin.action:approved
+    }
+    component CHARLOTTE_ApplicationPreviewGate {
+        label "Validate application review readiness"
+        enabled bind can_open_application_preview
+        accessibility role button name "Validate selected application review readiness"
+        action validate_application_preview requires admin.action:approved
+    }
+    component LANDON_ApplicationPreviewOpen {
+        label "Open reviewable application"
+        enabled bind can_open_application_preview
+        accessibility role button name "Open selected reviewable application preview"
+        action open_application_preview requires admin.action:approved
+    }
+    component Professor_ApplicationPreviewGuide {
+        label "Explain application preview"
+        enabled bind can_select_application
+        accessibility role button name "Explain application preview states and limitations"
+        action explain_application_preview requires admin.action:approved
+    }
+    component Podium_ApplicationPreviewEvidence {
+        label "View application preview evidence"
+        enabled bind can_open_application_preview
+        accessibility role button name "View application preview validation evidence"
+        action show_application_preview_evidence requires admin.action:approved
+    }
+    component ApplicationReviewViewport {
+        embed portal.scene "preview_designer_application"
+        motion bind timeline.application_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface PreviewDesignerReviewableApplication

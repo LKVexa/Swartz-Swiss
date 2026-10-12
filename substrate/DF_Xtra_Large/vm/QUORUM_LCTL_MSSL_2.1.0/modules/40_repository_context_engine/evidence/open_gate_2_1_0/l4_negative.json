@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "ad7afbcf1ced471d99f0dfc794241f7c708770925258ce5ad2b9df1687b50461",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Repository Context Engine",
+  "module_id": 40,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

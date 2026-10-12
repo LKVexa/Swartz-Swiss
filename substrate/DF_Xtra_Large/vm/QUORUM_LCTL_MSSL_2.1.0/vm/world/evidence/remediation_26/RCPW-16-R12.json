@@ -1,0 +1,21 @@
+{
+  "evidence_sha256": "f79828a34d38a99d75ead3e8f10c983af359fcfe08c3411d9ac9543ef307a08a",
+  "exit_code": 0,
+  "observed_results": {
+    "canonical_spatial_semantics_equal": true,
+    "mapping_after": "RCPW-8S-MAP/EXPERIMENTAL-2",
+    "mapping_before": "RCPW-8S-MAP/1",
+    "mapping_independently_versioned": true,
+    "runtime_schema": "QVM-RCPW-WORLD/1"
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "requirement_id": "RCPW-16-R12",
+  "result_sha256": "be62706af30fef81b4d76c91bbbf7d58b7a3cd9d583e13c1429f8dcb66bbe935",
+  "schema": "RCPW-26-GATE-EVIDENCE/1",
+  "status": "OPERATIONAL",
+  "test_command": "python vm/world/qualification/remediate_26.py",
+  "tool_versions": {
+    "python": "3.11.15",
+    "world_runtime": "7.0.0-applied-remediated-26"
+  }
+}

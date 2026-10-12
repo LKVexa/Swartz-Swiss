@@ -1,0 +1,27 @@
+ja source 0.3
+module suite55.capability_manifests_permissions.policy_bound_execution_rights
+use Security
+policy no_network
+
+principal ExecutionRightWorker
+role CapabilityPermissionEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant execution.right.evaluate:approved
+}
+resource ExecutionRightRequest classification restricted
+policy PolicyBoundExecutionRightPolicy {
+    deny network.* by default
+    deny process.* by default
+    deny ExecutionRightRequest when principal.role != CapabilityPermissionEnsemble
+    allow ExecutionRightRequest when principal.role == CapabilityPermissionEnsemble
+    require human_approval for execution.right.exercise
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "PolicyBoundExecutionRightPolicy.decision.mcrt"

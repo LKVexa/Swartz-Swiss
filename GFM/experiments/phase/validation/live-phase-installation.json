@@ -1,0 +1,50 @@
+{
+  "execution": "Browser Worker with shared numerical engine on existing v2 static server",
+  "url": "http://127.0.0.1:8788/phase-console.html",
+  "originalPublicFilesReplaced": [],
+  "assets": [
+    {
+      "path": "phase-controls.css",
+      "sha256": "47b490ebc755a21c8029375968ce22d26cdb291a9c84a7d0bc78e39f236f3af2"
+    },
+    {
+      "path": "phase-app.css",
+      "sha256": "2bb197284c18b48da43368c3c1cb69100cc3411bdd03c216e595adcc60a1e7c9"
+    },
+    {
+      "path": "phase-mhd.js",
+      "sha256": "1a834a359572281279868c4dd29403b7a8dd13d2f386ccc9f214917048e30373"
+    },
+    {
+      "path": "phase-session.js",
+      "sha256": "2033b3d1cb2adfda7122a1cc49e50ba4fa215cc23554df54f9dae9b787fa1754"
+    },
+    {
+      "path": "phase-worker.js",
+      "sha256": "a35f44d578b35f7244439aa14f5dfb0656d89341cab1c51575cd093e076b4828"
+    },
+    {
+      "path": "phase-view.js",
+      "sha256": "2891eea4b7b77d407237d794a963d3dc4f586ddc2375df6e4434e38a3d8f0448"
+    },
+    {
+      "path": "phase-app.js",
+      "sha256": "1135be2ca83111b268d38e1a1e0bab843715bcddb916e2cd92dc0a8c778b33c9"
+    },
+    {
+      "path": "gfm/engine.js",
+      "sha256": "4e0973c85eaec595cd80815b0a402e66fc50f7085f9ba74df417bd65d8bb3833"
+    },
+    {
+      "path": "observation-report.json",
+      "sha256": "fd68427b65b552d751fe1c0562b0faff04da3926c39098e48d790143fa6b45e0"
+    },
+    {
+      "path": "phase-console.html",
+      "sha256": "b5b53a892b5800372c446f4138aaa5db62db1ad0fe64929ab3b37e7f83eb3e30"
+    }
+  ],
+  "verifiedCoreSha256": "1a834a359572281279868c4dd29403b7a8dd13d2f386ccc9f214917048e30373",
+  "browserEvidence": "validation/browser/phase-texture-working.png",
+  "sharedWorkerParityTestsPassed": 7
+}

@@ -1,0 +1,35 @@
+ja source 0.3
+module suite62.landon_integration.run_all
+use Agent
+policy no_network
+
+agent LANDONRunAll {
+    identity "landon_run_all"
+    role "sophia-charlotte-landon-professor-podium-orchestrator"
+    goal execute_governed_multi_job_run when confidence >= 0.95
+    memory session retention 2h
+    budget steps 80 tools 5
+    tool SOPHIAPlanRunAll(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEGateEveryJob(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONDispatchApprovedJobs(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainRunAll(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordRunAll(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIAPlanRunAll
+        authorize CHARLOTTEGateEveryJob
+        authorize LANDONDispatchApprovedJobs
+        authorize ProfessorExplainRunAll
+        authorize PodiumRecordRunAll
+        continue when policy_allows
+        execute SOPHIAPlanRunAll("multi_job_manifest")
+        execute CHARLOTTEGateEveryJob("canonical_dependency_graph")
+        execute LANDONDispatchApprovedJobs("approved_run_all_plan")
+        execute ProfessorExplainRunAll("deterministic_fan_in_result")
+        execute PodiumRecordRunAll("run_all_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "LANDONRunAll.mcrt"

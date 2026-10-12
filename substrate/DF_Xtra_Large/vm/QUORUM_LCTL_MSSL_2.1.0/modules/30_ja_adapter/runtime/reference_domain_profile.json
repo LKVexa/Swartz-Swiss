@@ -1,0 +1,67 @@
+{
+  "execution_scope": "deterministic local/offline reference semantics consuming module fixtures and emitting typed reference-domain outputs",
+  "input_type": "source_artifact",
+  "module": "JA Adapter",
+  "module_id": 30,
+  "non_claims": [
+    "not production domain fidelity",
+    "not executable legacy-runtime equivalence",
+    "not physical distributed authority"
+  ],
+  "operators": [
+    {
+      "node": "N01",
+      "operator": "OBSERVE",
+      "stage": "SOURCE"
+    },
+    {
+      "node": "N02",
+      "operator": "PARSE",
+      "stage": "PARSE"
+    },
+    {
+      "node": "N03",
+      "operator": "NORMALIZE",
+      "stage": "NORMALIZE"
+    },
+    {
+      "node": "N04",
+      "operator": "TRANSFORM",
+      "stage": "TRANSLATE"
+    },
+    {
+      "node": "N05",
+      "operator": "NORMALIZE",
+      "stage": "CANONICALIZE"
+    },
+    {
+      "node": "N06",
+      "operator": "VALIDATE",
+      "stage": "VALIDATE"
+    },
+    {
+      "node": "N07",
+      "operator": "MATERIALIZE",
+      "stage": "PACKAGE"
+    },
+    {
+      "node": "N08",
+      "operator": "RECORD",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "output_type": "canonical_target_artifact/loss_report",
+  "plane": "translation_interop",
+  "policy": {
+    "capabilities": [
+      "artifact.read",
+      "artifact.write",
+      "evidence.write"
+    ],
+    "default": "deny",
+    "network": "deny"
+  },
+  "runner": "qualification/open_gate_runtime.py",
+  "schema": "QUORUM-REFERENCE-DOMAIN-PROFILE/2.1",
+  "version": "2.1.0"
+}

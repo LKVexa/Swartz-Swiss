@@ -1,0 +1,15 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum:generic_project:repository:2.0.0",
+λ≡"quorum.generic_project.repository",
+ℛ≡{"0001":"module(\"quorum.generic_project.repository\")","0002":"learn(\"repository_id\",literal(\"\\\"quorum.generic_project.deep_computational\\\"\"))","0003":"learn(\"version\",literal(\"\\\"2.0.0\\\"\"))","0004":"learn(\"module_count\",literal(\"66\"))","0005":"learn(\"plane_count\",literal(\"12\"))","0006":"learn(\"authority_chain\",literal(\"[\\\"MSSL\\\",\\\"typed_graph\\\",\\\"Columned_LCTL\\\",\\\"canonical_LCTL\\\",\\\"verification\\\",\\\"evidence\\\",\\\"qualification\\\"]\"))","0007":"learn(\"network_default\",literal(\"\\\"deny\\\"\"))","0008":"learn(\"legacy_authority\",literal(\"\\\"reference_only\\\"\"))","0009":"learn(\"maturity\",literal(\"\\\"DEEP_COMPUTATIONAL_DEVELOPMENT_CANDIDATE\\\"\"))","0010":"learn(\"claim_boundary\",literal(\"\\\"Structural deep-computation architecture, canonical LCTL, contract fixtures, replay/security evidence are implemented. Domain-specific behavioral equivalence, legacy executable differential qualification, production performance and L9 operational status remain unproven.\\\"\"))"},
+π≡[],
+δ≡10,
+τ≡0,
+μ≡{"learn.repository_id":"quorum.generic_project.deep_computational","learn.version":"2.0.0","learn.module_count":66,"learn.plane_count":12,"learn.authority_chain":["MSSL","typed_graph","Columned_LCTL","canonical_LCTL","verification","evidence","qualification"],"learn.network_default":"deny","learn.legacy_authority":"reference_only","learn.maturity":"DEEP_COMPUTATIONAL_DEVELOPMENT_CANDIDATE","learn.claim_boundary":"Structural deep-computation architecture, canonical LCTL, contract fixtures, replay/security evidence are implemented. Domain-specific behavioral equivalence, legacy executable differential qualification, production performance and L9 operational status remain unproven."},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},
+χ≡[],
+η≡{"events":[],"state":{"repository_id":"quorum.generic_project.deep_computational","version":"2.0.0","module_count":66,"plane_count":12,"authority_chain":["MSSL","typed_graph","Columned_LCTL","canonical_LCTL","verification","evidence","qualification"],"network_default":"deny","legacy_authority":"reference_only","maturity":"DEEP_COMPUTATIONAL_DEVELOPMENT_CANDIDATE","claim_boundary":"Structural deep-computation architecture, canonical LCTL, contract fixtures, replay/security evidence are implemented. Domain-specific behavioral equivalence, legacy executable differential qualification, production performance and L9 operational status remain unproven."}},
+ν≡{}
+,κ≡"sha256:928215c15635febc951a4f450027467a0e4bfc4b233883e77c3dd8058a41654e"
+}⇒⊤

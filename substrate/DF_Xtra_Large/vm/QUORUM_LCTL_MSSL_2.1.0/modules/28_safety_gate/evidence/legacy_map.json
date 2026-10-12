@@ -1,0 +1,49 @@
+{
+  "suite_id": 28,
+  "suite_name": "Safety Gate",
+  "plane": "security_authorization",
+  "legacy_sha256": "6f624064dd0776aea9bcc7ac31fe6f2f40d7aac95f39a54d8a3d72512c15c277",
+  "legacy_root": "legacy/source_repository/Safety Gate",
+  "files": [
+    {
+      "path": "28.1_Safety_Gate_AST.jasec",
+      "sha256": "e9d562537596fb3693ab3b1dce95318955f611b27d851510e33f37ef8938ec21",
+      "bytes": 725
+    },
+    {
+      "path": "28.2_Safety_Gate_Lint.jasec",
+      "sha256": "7656006aba2b83470a45569b353d58402de3280de9f25f3b035481749a918ba0",
+      "bytes": 734
+    },
+    {
+      "path": "28.3_Safety_Gate_Archive.jasec",
+      "sha256": "ddbbd9efbe38fddaa22d77bc123d0a01c798f221f1932bb346166ea22eae53ff",
+      "bytes": 795
+    },
+    {
+      "path": "28.4_Safety_Gate_Path.jasec",
+      "sha256": "a198b22cc294d5c6a5cceb708a23af0f77cea1bb9b853aa8159b5a244bb3bdc6",
+      "bytes": 765
+    },
+    {
+      "path": "28.5_Safety_Gate_Execution.jasec",
+      "sha256": "a39dc579269f4867fabb80ef192a7f706eb04597013ebc94e291ce5d5f47b5dc",
+      "bytes": 774
+    },
+    {
+      "path": "28.6_Safety_Gate_Network.jasec",
+      "sha256": "baf6563a5ce7b38072b65b8cd753009a33738fa2b3fd6e3369e6fa945301b84c",
+      "bytes": 792
+    },
+    {
+      "path": "28.7_Safety_Gate_Output_Validation.jasec",
+      "sha256": "c6556acdc34afd7b5922aae0d85e2f84bfcfe3983a30ea640e82c58468b9a2f2",
+      "bytes": 760
+    },
+    {
+      "path": "README.md",
+      "sha256": "e6d3b20ffa1502e30820aa6e70c72bbd44bf336f412ff838e55fe4909805c4ef",
+      "bytes": 12177
+    }
+  ]
+}

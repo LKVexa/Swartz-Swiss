@@ -1,0 +1,46 @@
+profile ja.data
+source_level 0.3
+
+subsuite Terminal.T_29 EvidenceArchiveFiling {
+    identity { suite = "66"; id = "T-29"; deterministic = true; autorun = false }
+
+    integrate { Suite_02_Anthology; Suite_11_Cypher; Suite_12_Filing_Cabinet; Suite_29_Archive_Ledger }
+
+    accept {
+        normalized_contract
+        action_card
+        authorization
+        context_manifest
+        capability_manifest
+        environment_manifest
+        network_policy
+        cell_attestation
+        stream_index
+        terminal_result
+        evaluations
+        review_decision
+        compatibility_report
+    }
+
+    emit TerminalEvidenceManifest
+
+    procedure file_canonical_terminal_run() {
+        inventory_every_required_record
+        require every_record.content_addressed
+        require every_artifact.hash_present
+        preserve_chronological_state_ledger
+        preserve_raw_stream_evidence_and_redacted_view_binding
+        store_rollback_or_integration_disposition
+        manifest = seal_with_hash_tree
+        return manifest
+    }
+
+    procedure file_rejection(decision) { file_contract + decision + reasons + available_evidence }
+    procedure file_evidence_only() { mark_no_artifact_published; preserve_review_and_rollback }
+    procedure seal_manifest() { require completeness_or_explicit_missing_reason; finalize_immutable }
+
+    deny { evidence_overwrite; missing_hash_silently; chronology_reorder; rejected_artifact_publish }
+    evidence { canonical_manifest; hash_tree_root; filing_pointers; retention_policy; disposition }
+    tests { approved_run; rejected_run; rolled_back_run; missing_record; hash_mismatch; retention }
+}
+

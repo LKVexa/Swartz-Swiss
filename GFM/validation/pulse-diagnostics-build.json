@@ -1,0 +1,9 @@
+{
+  "version": "2.1.0",
+  "source": "backend/pulse-diagnostics.cjs",
+  "sourceSHA256": "e03a79d9a9236711ec7413cd6cf52eda9817dbfd85c1296b1982614ee9366a55",
+  "output": "public/pulse-diagnostics.js",
+  "outputSHA256": "0e618dd4dfa9e4b96800bff855315502933a5f2e210377aaa6cf1b5e34493535",
+  "bytes": 13034,
+  "solverEquationsChanged": false
+}

@@ -1,0 +1,777 @@
+{
+  "bounds": {
+    "call_depth": 64,
+    "cli_invocation_ms_measured": "2-4",
+    "declared_max_steps_range": "1..1000000000 (provenance only)",
+    "device_quotas": {
+      "bytes": 8192,
+      "calls": 64,
+      "entropy": 8,
+      "mailbox_depth": 4,
+      "writes": 16
+    },
+    "host_call_budget_per_run": 128,
+    "image_header_bytes": 80,
+    "max_data_bytes": 4096,
+    "max_image_bytes_loader": 51200,
+    "max_instructions_per_unit": 256,
+    "max_labels": 256,
+    "max_line_chars": 512,
+    "max_native_image_bytes": 8368,
+    "max_native_signed_image_bytes": 8432,
+    "max_secure_image_bytes": 51616,
+    "max_source_lines": 512,
+    "memory_bytes": 4096,
+    "network": "none (offline; network=deny mandatory)",
+    "process_peak_rss_kib_measured": 10664,
+    "provenance_bytes": 96,
+    "registers": 16,
+    "runtime_step_budget_apdu_exec": "u32 (default 4096)",
+    "runtime_step_budget_cli": 4096,
+    "scratch_bytes_ceiling": 262144,
+    "service_budget_per_run": 64,
+    "signature_bytes": 64,
+    "stack_bytes_ceiling": 1048576,
+    "stack_words": 256,
+    "vm_struct_bytes": 22304,
+    "wide_bytes_ceiling_per_vm": 4194304,
+    "word_bits": 1048576
+  },
+  "build_flags": "-std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong -Isrc -Ihost -lcrypto; core objects -DBR_PRODUCTION -ffreestanding; sanitizers -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer; Core-61 -Os -ffreestanding + strip --strip-unneeded",
+  "bytes": 1513315,
+  "capabilities": {
+    "compile_source": true,
+    "deterministic_replay": true,
+    "device_abi": true,
+    "sign_images": true,
+    "step_bound": true,
+    "trust_chain": true
+  },
+  "capability_notes": {
+    "compile_source": "bradmin/brctl verify-lctlc | lctl-to-brir | compile-lctlc; deterministic and toolchain-independent (gcc/clang O0/O2/O3 same BRIM).",
+    "deterministic_replay": "Deterministic HAL adapter used by bradmin run/run-signed; replay substitution for entropy/time/mailbox; bit-identical rebuilds of images/binaries.",
+    "device_abi": "8 device classes, capability/quota gated; 66/66 conformance PASS (also under ASan/UBSan); APDU serve loop exercised; network absent by default.",
+    "sign_images": "bradmin keygen/sign-image/verify-image/run-signed with 32-byte raw Ed25519 host-evaluation keys (OpenSSL EVP). Admin/development path.",
+    "step_bound": "br_vm_run(vm,budget): CLI run/run-signed/secure-run hard-code 4096 (exceed -> status=3 trap=24 exit 1); APDU EXEC takes u32 budget; unit max_steps is BRPV provenance only (not enforced at runtime by CLI); infinite loops rejected statically ('no terminal').",
+    "trust_chain": "BRTM/1 chain enforced by production brctl (shipped .brsb runs; ad-hoc root -> trap 14 TRUST). Root private key is not in the package, so new production bundles cannot be minted here."
+  },
+  "classification": {
+    "distribution": "RELEASE_CANDIDATE",
+    "local_gate": "PASS",
+    "strict_gate": "BLOCKED",
+    "target_class": "CLASSICAL_LOCAL_VM"
+  },
+  "cli_surface": {
+    "bradmin": [
+      "verify-lctlc SRC",
+      "lctl-to-brir SRC BRIR",
+      "compile-lctlc SRC IMAGE [--image-version N]",
+      "inspect-image IMAGE",
+      "run IMAGE",
+      "keygen PRIVATE PUBLIC",
+      "sign-image INPUT OUTPUT PRIVATE",
+      "secure-sign INPUT OUTPUT ROOT_PRIV ISSUER_PRIV RELEASE_PRIV EPOCH GENERATION TXSEQ [EXPIRY]",
+      "trust-control OUTPUT rotate|revoke-issuer|revoke-image|recovery TX EPOCH ISSUER_ID IMAGE_VERSION PRIVATE",
+      "verify-image FILE PUBLIC",
+      "run-signed FILE PUBLIC",
+      "update SIGNED PUBLIC --state STATE",
+      "save-state STATE",
+      "recover-state STATE [PUBLIC]",
+      "status --state STATE",
+      "serve --state STATE [--issuer-public-key PUBLIC]"
+    ],
+    "brctl": [
+      "verify-lctlc SRC",
+      "lctl-to-brir SRC BRIR",
+      "compile-lctlc SRC IMAGE [--image-version N]",
+      "inspect-image IMAGE",
+      "verify-secure BRSB",
+      "secure-run BRSB"
+    ],
+    "brverify": [
+      "brverify [--disasm] IMAGE [SOURCE BRIR]"
+    ],
+    "exit_codes": "0 ok / 1 fail / 2 usage (all three tools)"
+  },
+  "container": "Medium",
+  "dependencies": [
+    "POSIX/Linux",
+    "C11 compiler (cc)",
+    "GNU Make",
+    "OpenSSL 3 libcrypto (-lcrypto: EVP SHA-256, EVP Ed25519, RAND_bytes, OPENSSL_cleanse)",
+    "Python 3 (provenance.py, qualification/evidence/spec-sync scripts)",
+    "binutils strip/nm",
+    "sh/bash/awk/sed/grep/cmp",
+    "GNU /usr/bin/time (br490-memory only; absent here)",
+    "clang (optional, br480-cross)",
+    "valgrind (optional, environment probe)"
+  ],
+  "df_release": "DF-PA21.2-1.0.0",
+  "entry_points": {
+    "build": "make   (target all -> .build/brvm-core.o brtrust-core.o brctl bradmin brverify br_tests br_sizes)",
+    "run": ".build/bradmin run-signed SIGNED.brimg k.public   (or bradmin run IMAGE.brimg unsigned; production: .build/brctl secure-run X.brsb)",
+    "verify": "make operational   (package acceptance gate); full: make clean operational && make sanitize && make br500-local && python3 evidence/verify_br500.py && python3 qualification/br500_release_bundle.py --verify"
+  },
+  "file_count": 241,
+  "files_of_note": [
+    "README.md",
+    "PACKAGE_INFO.json",
+    "MANIFEST.json",
+    "SHA256SUMS",
+    "Makefile",
+    "AUDIT_ERRATA.md",
+    "REPRODUCE_5_0.md",
+    "src/brvm.c",
+    "src/brvm.h",
+    "src/brtrust.c",
+    "src/brlctlc.c",
+    "src/CORE.lctlc",
+    "examples/boot.lctlc",
+    "include/brvm_compat_names.h",
+    "host/bradmin.c",
+    "host/brctl.c",
+    "host/brverify.c",
+    "host/br_host.c",
+    "host/br_prod_host.c",
+    "host/brsign.c",
+    "host/br_bench.c",
+    "spec/BR_SPEC.json",
+    "spec/LCTLC_1_1.json",
+    "spec/DEVICE_IO_4_7.md",
+    "spec/WIDE_STATE_4_6.md",
+    "spec/PERSISTENCE_4_5.md",
+    "spec/RELEASE_FREEZE_5_0.json",
+    "spec/RELEASE_PROFILES_4_9.json",
+    "tests/semantic_tests.sh",
+    "tests/isa_abi_conformance.c",
+    "tests/wide_state_conformance.c",
+    "tests/device_io_conformance.c",
+    "tests/spec_sync.py",
+    "tools/provenance.py",
+    "independent/brim_ref.py",
+    "qualification/br500_acceptance.py",
+    "qualification/br500_release_bundle.py",
+    "qualification/ACCEPTANCE_5_0.json",
+    "evidence/BR500_ACCEPTANCE.json",
+    "evidence/BR500_FINAL_LOCAL_QUALIFICATION.log",
+    "evidence/CORE61_5_0.json",
+    "evidence/ENVIRONMENT_5_0.json",
+    "evidence/verify_br500.py",
+    "release/IMMUTABLE_RELEASE_MANIFEST.json",
+    "release/IMMUTABLE_RELEASE_MANIFEST.sig",
+    "release/RELEASE_SIGNING_PUBLIC.pem",
+    "release/bin/brctl",
+    "release/bin/brverify",
+    "release/bin/brvm-core61.stripped.o",
+    "deploy/BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE.brimg",
+    "deploy/BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE.brsb",
+    "compat/BOTTLE_ROCKET_4.6.0.brsb",
+    "replay/run.py",
+    "workflows/5.0/README.md",
+    "security/QUALIFICATION_LIMITATIONS_4_8.md"
+  ],
+  "guest_languages": [
+    "Columned LCTL, LCTLC/1.1 (native C compiler src/brlctlc.c): line1 'LCTLC/1.1'; '@unit id= version=4.7.0 profile=brvm-native [entry= target= backend= network=deny replay=] image_version=N requested_caps=A|B max_steps=N termination=bounded'; '@defaults mode=WRAP|CHECKED|SATURATE|TRAPPING width=WIDE'; '@frame id= parent= module='; header row 'ID\u2502LANE\u2502OP\u2502OUT\u2502CTRL\u2502IN\u2502ARG\u2502META'; rows of 8 \u2502-separated columns (IN operands joined by \u203a; ASCII | and > also accepted); DATA rows 'DATA\u2502MEMORY[off]\u2502_\u2502_\u2502hex:..\u2502_'; '@end'. ARG types u64:/u32:/label:/mem:/svc:/cap:/hex:. META '_' for control ops, width=SCALAR64 for LOAD/STORE/LDX/STX, width=WIDE[;mode=..] otherwise (mode before width). No tabs/CR; requested_caps must equal derived caps; every path must reach HALT/TRAP.",
+    "BRIR/1.1 (text intermediate emitted by lctl-to-brir; consumed by brverify for provenance hash checks; not directly compiled)"
+  ],
+  "image_formats": [
+    "BRIM/1 + BRPV/1: 80-byte header ('BRIM',4,1,1,flags{1 FACTORY,2 SIGNED,4 PROVENANCE},image_abi 1,20,16,16,32,4,hdr 80,image_version u32,requested_caps u32,ext_len 96,code_count u16,data_len u16,SHA-256(payload)[32],'Q17-BRVM-ISA41') + code(16B*n<=256) + data(<=4096) + 96-byte BRPV provenance (compiler/verifier 0x00040700, max_steps, derived caps, sha256(source), sha256(BRIR), image_version, features) [+ 64-byte Ed25519 signature]. Ceiling 51200 bytes (loader/inspector/writer); native compiler max 8368 unsigned / 8432 signed.",
+    "BRTM/1 secure bundle (.brsb): BRIM + 416-byte Root->Issuer->Release->Image trust trailer; ceiling 51616; only bundles under the compiled-in root verify (root private key not packaged).",
+    "BRCR/1 transactional control records + BRGD/1 guest persistence (state dir files <prefix>.state0/1 .image0/1 .issuer .lock .statekey); BRCT/1 128-byte signed trust controls."
+  ],
+  "isa": {
+    "abi": {
+      "args": "R0-R3",
+      "major": 1,
+      "minor": 0,
+      "preserved": "R8-R15",
+      "returns": "R0-R1",
+      "scratch": "R2-R7",
+      "version": 65536
+    },
+    "arithmetic_modes": [
+      "WRAP",
+      "CHECKED",
+      "SATURATE",
+      "TRAPPING"
+    ],
+    "call_stack_entries": 64,
+    "capability_bits": {
+      "ARITH": 2,
+      "CONTROL": 1,
+      "DIAG": 128,
+      "MEMORY": 4,
+      "SERVICE": 16,
+      "STACK": 8,
+      "STATE": 32,
+      "UPDATE": 64
+    },
+    "capability_registers": 16,
+    "constant_pool": 8,
+    "device_abi": {
+      "devices": {
+        "block": "0x4702",
+        "clock": "0x4705",
+        "console": "0x4701",
+        "diagnostics": "0x4707",
+        "entropy": "0x4704",
+        "mailbox": "0x4706",
+        "monotonic": "0x4703",
+        "network(optional,absent by default)": "0x4708"
+      },
+      "network_packet_bytes": 512,
+      "packet_bytes": 256,
+      "per_run_quotas": {
+        "bytes": 8192,
+        "calls": 64,
+        "entropy": 8,
+        "mailbox_depth": 4,
+        "writes": 16
+      },
+      "version": "1.0"
+    },
+    "feature_flags": {
+      "CALL_RET": 1,
+      "INDEXED_MEMORY": 2,
+      "SERVICE_ABI": 16,
+      "STRICT_ALIGN": 8,
+      "SYSTEM": 4,
+      "TRAP_TABLE": 32
+    },
+    "instruction_bytes": 16,
+    "instruction_encoding": "op,mode,rd,ra,rb,cap,flags(u16),imm(u64) little-endian",
+    "limbs_u64": 16384,
+    "memory_bytes": 4096,
+    "name": "ISA 4.1 (32-opcode BOTTLE ROCKET 5.0.0 lineage; NOT the 41-opcode BR/1.1 of Large.zip -- see AUDIT_ERRATA F9)",
+    "opcode_list": [
+      "NOP",
+      "MOVI",
+      "MOV",
+      "JMP",
+      "JZ",
+      "JNZ",
+      "HALT",
+      "ADD",
+      "SUB",
+      "MUL",
+      "DIVU",
+      "MODU",
+      "AND",
+      "OR",
+      "XOR",
+      "NOT",
+      "SHL",
+      "SHR",
+      "CMP",
+      "LOAD",
+      "STORE",
+      "PUSH",
+      "POP",
+      "SVC",
+      "CALL",
+      "RET",
+      "YIELD",
+      "TRAP",
+      "CAPQ",
+      "CHECKPOINT",
+      "LDX",
+      "STX"
+    ],
+    "opcodes": 32,
+    "registers": 16,
+    "required_trap_classes": [
+      "illegal_opcode",
+      "malformed_instruction",
+      "invalid_register",
+      "invalid_memory",
+      "access_violation",
+      "capability_violation",
+      "divide_by_zero",
+      "arithmetic_overflow",
+      "stack_overflow",
+      "stack_underflow",
+      "resource_exhaustion",
+      "execution_budget",
+      "device_error",
+      "signature_failure"
+    ],
+    "services": [
+      "YIELD",
+      "STATUS",
+      "REVOKE",
+      "DELEGATE",
+      "CONFIGURE",
+      "COMMIT",
+      "DIAG_EVENT",
+      "SHA256",
+      "ED25519_VERIFY",
+      "DEVICE_CALL",
+      "CONSOLE_READ",
+      "CONSOLE_WRITE",
+      "STORAGE_READ",
+      "STORAGE_WRITE",
+      "ENTROPY",
+      "MONOTONIC",
+      "TIMER",
+      "DIAGNOSTIC",
+      "MAILBOX",
+      "DEVICE_ENUM"
+    ],
+    "stack_words": 256,
+    "status_values": {
+      "CANCELLED": 4,
+      "HALTED": 2,
+      "READY": 0,
+      "RUNNING": 1,
+      "SUSPENDED": 5,
+      "TRAPPED": 3
+    },
+    "trap_ids_observed": {
+      "DIV_ZERO": 6,
+      "EXEC_BUDGET": 24,
+      "TRUST": 14
+    },
+    "word_bits": 1048576,
+    "word_bytes": 131072
+  },
+  "measured_here": {
+    "build": {
+      "cmd": "make",
+      "exit": 0,
+      "log": "Medium_gates/build_make_all.log (+ .compact.log)",
+      "notes": "-Werror clean; only GCC notes about column tracking disabled on minified lines; produced .build/bradmin and .build/brverify (needed by PA-LCTL adapter) plus brctl, br_tests, br_sizes, core objects",
+      "ok": true,
+      "seconds": 12.26
+    },
+    "example_run": {
+      "cmd": "hand-written add42.lctlc (MOVI R0 40; MOVI R1 2; ADD R3 R0\u203aR1; MOV R2 R3; HALT) -> bradmin verify-lctlc; lctl-to-brir; compile-lctlc; brverify IMG SRC BRIR; keygen; sign-image; verify-image; run-signed",
+      "exit": 0,
+      "image_bytes": 256,
+      "log": "Medium_gates/hand_roundtrip_add42.log",
+      "signed_image_bytes": 320,
+      "stdout_tail": "Columned LCTL semantic verify: PASS\nLCTL -> BRIR: PASS\nColumned LCTL compile: PASS\nindependent BRIM verifier: PASS\nEd25519 host-evaluation key generation: PASS\nBOTTLE ROCKET signed image: PASS\nstatus=0 trap=0 ip=0 image_version=9 result=PASS\nstatus=2 trap=0 ip=5 image_version=9 result=PASS\nR2.low64=42"
+    },
+    "extra_checks": [
+      {
+        "cmd": "verify-lctlc JMP-to-self unit (max_steps 8 and 100000)",
+        "name": "infinite_loop_static_reject",
+        "result": "FAIL \u2014 line 6: no terminal (exit 1): unbounded loops cannot compile"
+      },
+      {
+        "cmd": "bradmin run countdown loop 6005 steps (unit max_steps=10000)",
+        "name": "cli_step_budget",
+        "result": "status=3 trap=24 ip=4 result=FAIL exit 1 -> CLI budget 4096 enforced; 3005-step loop PASS"
+      },
+      {
+        "cmd": "bradmin run 305-step loop with max_steps=8",
+        "name": "unit_max_steps_not_runtime_enforced",
+        "result": "status=2 trap=0 result=PASS R2.low64=0 -> max_steps is provenance only"
+      },
+      {
+        "cmd": "ADD with requested_caps=CONTROL / MOVI-only with CONTROL|ARITH",
+        "name": "cap_least_privilege",
+        "result": "'cap excess' / 'caps mismatch' rejects (exit 1): requested must equal derived"
+      },
+      {
+        "cmd": "256 vs 257 instructions",
+        "name": "instruction_ceiling",
+        "result": "256 accepted (4272-byte image, ip=256, R2=254); 257 -> 'line 262: row limit'"
+      },
+      {
+        "cmd": "single DATA row with 8192 hex chars",
+        "name": "line_length",
+        "result": "'line 6: line size' (512-char limit); 21 DATA rows x 200 B accepted"
+      },
+      {
+        "cmd": "4096 data bytes + 256 instructions",
+        "name": "max_native_image",
+        "result": "8368-byte BRIM (8432 signed) compiles, verifies, runs, run-signed OK"
+      },
+      {
+        "cmd": "(2^64-1)+1 CHECKED then SHR 64; 42 SHL 1000000 then SHR 1000000",
+        "name": "wide_arithmetic",
+        "result": "R2.low64=1 and R2.low64=42 (no 64-bit wrap; full 1,048,576-bit width)"
+      },
+      {
+        "cmd": "LCTLC/1.0 header; CRLF endings",
+        "name": "dialect_rejects",
+        "result": "'language version' / 'CRLF' rejects"
+      },
+      {
+        "cmd": "DIVU by zero",
+        "name": "div_zero_trap",
+        "result": "status=3 trap=6 ip=2 result=FAIL exit 1"
+      },
+      {
+        "cmd": "unit whose last row is MOVI",
+        "name": "no_halt",
+        "result": "'fallthrough' reject"
+      },
+      {
+        "cmd": "DATA+LOAD mem:0 SCALAR64 (CONTROL|MEMORY); CALL/RET subroutine",
+        "name": "data_load_callret",
+        "result": "R2.low64=42 both"
+      },
+      {
+        "cmd": "bradmin secure-sign with fresh root/issuer/release keys -> brctl verify-secure",
+        "name": "secure_bundle_minting",
+        "result": "bundle written but production loader rejects: secure=FAIL trap=14 (TRUST); shipped .brsb PASS R2=42; root private key not packaged"
+      },
+      {
+        "cmd": "bradmin update SIGNED PUB --state DIR; status; recover-state; serve EXEC+STATE",
+        "name": "persistence_apdu",
+        "result": "update prints FAIL/exit 1 yet state staged (image_version 9 gen 1); serve EXEC ok, STATE R2 -> 2a00000000000000 (=42)"
+      },
+      {
+        "cmd": "5x each CLI invocation, RUSAGE_CHILDREN",
+        "name": "process_footprint",
+        "result": "peak RSS ~10.5 MiB; 2.1-4.0 ms wall per run/run-signed/secure-run/compile/brverify"
+      }
+    ],
+    "gates": [
+      {
+        "cmd": "timeout 900 make operational",
+        "exit": 0,
+        "log": "Medium_gates/gate_operational.log",
+        "name": "operational",
+        "ok": true,
+        "seconds": 10.11,
+        "summary": "ALL sub-gates PASS: br_tests 0 failures; image/provenance/brverify PASS; boundary PASS; repro identical; roundtrip identical; compatibility 4.1.0/4.2.0/4.6.0 R2=42 + 4.6.0 brsb secure; signed-smoke R2=42; semantic tests 40 cases; spec-sync isa 4.1 abi 1.0 devices 8 opcodes 32 services 20 traps 14; ISA/ABI conformance 0 failures; wide-state 59/59; constant-fold 40+2->42; secure-acceptance PASS + raw BRIM refused; device-IO 66/66; device audit PASS; size brim 272/51200, production source 107675/110000, stripped brctl 112856 B, debug 641624 B"
+      },
+      {
+        "cmd": "make bench",
+        "exit": 0,
+        "log": "Medium_gates/gate_bench.log",
+        "name": "bench",
+        "ok": true,
+        "seconds": 9.69,
+        "summary": "in-process throughput: nop 85.66M/s, small_add 37.04M/s, load_store 44.96M/s, branch 82.33M/s, mixed 27.14M insn/s"
+      },
+      {
+        "cmd": "timeout 900 make sanitize",
+        "exit": 0,
+        "log": "Medium_gates/gate_sanitize.log",
+        "name": "sanitize",
+        "ok": true,
+        "seconds": 11.72,
+        "summary": "ASan/UBSan br_tests + ISA/ABI conformance: 0 failures"
+      },
+      {
+        "cmd": "make wide-sanitize",
+        "exit": 0,
+        "log": "Medium_gates/gate_qualification_and_sanitizers.log",
+        "name": "wide-sanitize",
+        "ok": true,
+        "seconds": 4.76,
+        "summary": "BR-460 wide-state 59/59 under ASan/UBSan"
+      },
+      {
+        "cmd": "make device-sanitize",
+        "exit": 0,
+        "log": "Medium_gates/gate_qualification_and_sanitizers.log",
+        "name": "device-sanitize",
+        "ok": true,
+        "seconds": 4.06,
+        "summary": "BR-470 device-IO 66/66 under ASan/UBSan (leaks on)"
+      },
+      {
+        "cmd": "make br490-core61",
+        "exit": 0,
+        "log": "Medium_gates/gate_br490_measurements.log",
+        "name": "br490-core61",
+        "ok": true,
+        "seconds": 1.35,
+        "summary": "stripped core 48264/61000 bytes PASS; sha256 998744e7... == release/bin/brvm-core61.stripped.o (README says 49072)"
+      },
+      {
+        "cmd": "make br490-brim51",
+        "exit": 0,
+        "log": "Medium_gates/gate_br490_measurements.log",
+        "name": "br490-brim51",
+        "ok": true,
+        "seconds": 0.11,
+        "summary": "272/51200 PASS; 51201-byte oversize rejected by brctl inspect-image and bradmin run"
+      },
+      {
+        "cmd": "make br490-memory",
+        "exit": 2,
+        "log": "Medium_gates/gate_br490_measurements.log",
+        "name": "br490-memory",
+        "ok": false,
+        "seconds": 0.07,
+        "summary": "FAIL: qualification/br490_memory.py execs /usr/bin/time (GNU time) which is not installed in this sandbox; environment prerequisite, not a VM defect; not patched"
+      },
+      {
+        "cmd": "make br490-performance",
+        "exit": 0,
+        "log": "Medium_gates/gate_br490_measurements.log",
+        "name": "br490-performance",
+        "ok": true,
+        "seconds": 7.49,
+        "summary": "8/8 requirements PASS (arithmetic, execution, host_call, load, persistence, recovery, startup, verification)"
+      },
+      {
+        "cmd": "make br490-freeze br490-profiles br490-hardening br490-docs",
+        "exit": 0,
+        "log": "Medium_gates/gate_br490_measurements.log",
+        "name": "br490-freeze/profiles/hardening/docs",
+        "ok": true,
+        "seconds": 0.2,
+        "summary": "freeze 6 PASS (24 HAL ops, no format change); 6 profiles PASS; hardening 7 PASS (0 private-key fixtures, 0 bypass tokens); 12 docs PASS"
+      },
+      {
+        "cmd": "timeout 900 make br500-local",
+        "exit": 2,
+        "log": "Medium_gates/gate_br500_local.log",
+        "name": "br500-local",
+        "ok": false,
+        "seconds": 28.29,
+        "summary": "PASSED through: operational, br480-independent (parser compare + pure-Python brim_ref), br480-differential 169 vectors @1048576 bits, br480-opcode 11/11, br480-property 6/6, br480-fuzz C 25000 + Python 19700 cases, br480-image-attacks 9/9, br480-soak-fast 20000 cycles, br480-security 8/8, br490-core61, br490-brim51; STOPPED at br490-memory (missing /usr/bin/time). Remaining br490-performance/br490-docs/br480-cross were run separately and PASS."
+      },
+      {
+        "cmd": "make br480-cross",
+        "exit": 0,
+        "log": "Medium_gates/gate_br480_cross.log",
+        "name": "br480-cross",
+        "ok": true,
+        "seconds": 25.48,
+        "summary": "gcc+clang x O0/O2/O3 all produce BRIM sha 7cfd6d6c... and conformance PASS; AArch64/Windows rows BLOCKED (unavailable)"
+      },
+      {
+        "cmd": "make qualification",
+        "exit": 2,
+        "log": "Medium_gates/gate_qualification_and_sanitizers.log",
+        "name": "qualification",
+        "ok": false,
+        "seconds": 0.61,
+        "summary": "stops at missing tests/trust_conformance.c (trust/persistence fixtures + qualification_keys.h are segregated into the QUALIFIED candidate per README); trust-conformance/persistence-conformance/persistence-audit each exit 2"
+      },
+      {
+        "cmd": "make br500-release-check (python3 qualification/br500_release_bundle.py --verify)",
+        "exit": 0,
+        "log": "Medium_gates/release_manifest_check.log",
+        "name": "br500-release-check",
+        "ok": true,
+        "seconds": 0.06,
+        "summary": "BR-500_RELEASE_MANIFEST_VERIFY PASS manifest_sha256 0ffff663...; artifact hashes + src/host/spec/tests tree hashes match; no private key in release/"
+      },
+      {
+        "cmd": "python3 evidence/verify_br500.py",
+        "exit": 0,
+        "log": "Medium_gates/release_manifest_check.log",
+        "name": "verify_br500",
+        "ok": true,
+        "seconds": 0.06,
+        "summary": "PASS packages=15 requirements=96 operational=88 blocked=8 evidence_integrity=PASS strict_gate=BLOCKED"
+      },
+      {
+        "cmd": "openssl pkeyutl -verify -pubin -inkey release/RELEASE_SIGNING_PUBLIC.pem -rawin -in release/IMMUTABLE_RELEASE_MANIFEST.json -sigfile release/IMMUTABLE_RELEASE_MANIFEST.sig",
+        "exit": 0,
+        "log": "Medium_gates/release_manifest_check.log",
+        "name": "manifest_signature_openssl",
+        "ok": true,
+        "summary": "Signature Verified Successfully (Ed25519)"
+      },
+      {
+        "cmd": "python3 evidence/verify_br490.py",
+        "exit": 1,
+        "log": "Medium_gates/release_manifest_check.log",
+        "name": "verify_br490 (stale)",
+        "ok": false,
+        "summary": "requirement count/uniqueness failure 0/0 -- expects evidence/br490/ which is not shipped in this package"
+      },
+      {
+        "cmd": "python3 replay/run.py --check-only",
+        "exit": 0,
+        "log": "Medium_gates/release_manifest_check.log",
+        "name": "replay-check",
+        "ok": true,
+        "summary": "BR-490_REPLAY_PACKAGE PASS, independence_claimed=false"
+      }
+    ],
+    "integrity": {
+      "bad": 0,
+      "cmd": "sha256sum -c SHA256SUMS",
+      "entries": 240,
+      "file": "SHA256SUMS",
+      "log": "Medium_gates/integrity_sha256sums.log",
+      "notes": "run in the read-only source dir before and after all work; 240/240 OK both times",
+      "ok": 240,
+      "uncovered_files": [
+        "SHA256SUMS"
+      ]
+    },
+    "pa_lctl_adapter": {
+      "adapter_check": {
+        "bradmin_sha256": "64fe6f6d24aa701e6ebf6d5eec7579d0a5218cf61138daeaa5d6ae89651f4920",
+        "brverify_sha256": "93146cd2f8e72e9888f0786bdfa562c63b1c0a410c414fb61b815e74c7318182",
+        "cmd": "PA_LCTL_BOTTLE_ROCKET_ROOT=... python3 -B -m reference.pacore.cli adapter-check --target bottle-rocket",
+        "exit": 0,
+        "limits": {
+          "instruction_ceiling": 256,
+          "max_rows_per_lowering": 84,
+          "qubits": 0,
+          "shots": 1,
+          "source_line_ceiling": 512
+        },
+        "log": "Medium_gates/pa_adapter_check.log",
+        "native_gate_set": [],
+        "outcome": "OK",
+        "seconds": 0.51,
+        "target_class": "CLASSICAL_LOCAL_VM",
+        "target_id": "bottle-rocket-5.0.0-local",
+        "trust_domain": "LOCAL_TRUSTED"
+      },
+      "adapter_check_ok": true,
+      "backend_run": {
+        "cmd": "PA_LCTL_BOTTLE_ROCKET_ROOT=... python3 -B -m reference.pacore.cli backend-run examples/01_bell_pair.pal",
+        "differential_agreement": true,
+        "exit": 0,
+        "instructions": 40,
+        "label": "CLASSICAL_NATIVE_VM_BOUNDED_EXECUTION",
+        "log": "Medium_gates/pa_backend_run_01_bell_pair.log",
+        "native_witness": 17360368901394384785,
+        "outcome": "OK",
+        "reference_witness": 17360368901394384785,
+        "rows_lowered": 12,
+        "run_signed_stdout": "status=2 trap=0 ip=40 image_version=9 result=PASS\nR2.low64=17360368901394384785",
+        "seconds": 0.57,
+        "steps_ok": [
+          "verify-lctlc",
+          "lctl-to-brir",
+          "compile-lctlc",
+          "independent-brim-verify",
+          "keygen",
+          "sign-image",
+          "verify-image",
+          "run-signed"
+        ]
+      },
+      "backend_run_all_examples": {
+        "01_bell_pair": {
+          "agree": true,
+          "native": 17360368901394384785
+        },
+        "02_ghz3": {
+          "agree": true,
+          "native": 6735235137199922533
+        },
+        "03_two_lane_parallel": {
+          "agree": true,
+          "native": 2035133056847448988
+        },
+        "04_distributed_teleport": {
+          "agree": true,
+          "native": 11114974373231215855
+        },
+        "05_measurement_feedback": {
+          "agree": true,
+          "native": 1825703198280153005
+        },
+        "06_noise_density": {
+          "agree": true,
+          "native": 725229432034669365
+        },
+        "log": "Medium_gates/pa_backend_run_all_examples.log"
+      },
+      "root": "/home/claude/work/build/Medium/BOTTLE_ROCKET_5.0.0_VM_110K_RC",
+      "test_suite": {
+        "cmd": "PA_LCTL_BOTTLE_ROCKET_ROOT=... python3 -B pamath/tests/test_bottlerocket_backend.py",
+        "exit": 0,
+        "failed": 0,
+        "log": "Medium_gates/pa_test_bottlerocket_backend.log",
+        "ok": true,
+        "passed": 30,
+        "seconds": 0.13,
+        "total": 30
+      }
+    },
+    "reproducibility": {
+      "brctl_sha256": "415eccf3d3450034fe82433772d58524a2a67eb168cbce9a0e72fd7a0179e8d6",
+      "brir_sha256": "fe12e09b6b120b06fc4e5576b3a5951650288870e050e2bdfbd7e58f4365bdbc",
+      "brsb_sha256": "4779581a53f38ab38c8f4c650bf19f360383f1ece50d75410ccf6ea3976f72a6",
+      "brverify_sha256": "93146cd2f8e72e9888f0786bdfa562c63b1c0a410c414fb61b815e74c7318182",
+      "core61_stripped_sha256": "998744e798ef9562b74ed2fec8514a75bbce2f0b0977dfd6ff3dfe799a3bf354",
+      "deploy_brimg_sha256": "7cfd6d6c08c7114078477488814adb5365bc14731e2d6b65c15c66df67750bc9",
+      "matches_manifest": true,
+      "notes": "deploy BRIR/BRIM/provenance/BRSB, .build/brctl, .build/brverify, .build/brvm-core.o and core61 stripped object are byte-identical to shipped release/bin and manifest hashes (same GCC 13.3/OpenSSL 3.0.13 toolchain)",
+      "rebuilt_bit_identical": true
+    }
+  },
+  "measured_toolchain": {
+    "cc": "gcc 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1)",
+    "clang": "18.1.3",
+    "make": "GNU Make 4.3",
+    "matches_evidence_environment": true,
+    "openssl": "3.0.13",
+    "os": "Linux 6.18.5 x86_64",
+    "python": "3.11.15"
+  },
+  "note": "assembly-host profile; see VM_PROFILE_MEASURED.md",
+  "notes": [
+    "5.0.0 is a qualification/release-engineering overlay; the executable contract is the frozen 4.7.0 core (units must declare version=4.7.0, image_version 9; MANIFEST.json says release 4.9.0 / version 4.7.0).",
+    "Core-61 figure inconsistency: README/PACKAGE_INFO/MANIFEST say 49,072 B; re-sealed evidence, signed release manifest, shipped object and this measurement all say 48,264 B (both <= 61,000).",
+    "The 88/96 ledger is generated by qualification/br500_acceptance.py from a hard-coded BLOCKED list; evidence/verify_br500.py independently checks evidence-log hashes/exit codes and passes here.",
+    "evidence/verify_br490.py is stale (needs evidence/br490/, not shipped) and fails; make qualification fails immediately (trust/persistence fixtures segregated into the QUALIFIED candidate).",
+    "br490-memory needs GNU /usr/bin/time (undocumented; missing here) so br500-local exits 2 after every br480/core61/brim51 step passed.",
+    "bradmin update ... --state prints FAIL/exit 1 although the update is staged and recoverable (serve EXEC then yields R2=42).",
+    "Unit max_steps is BRPV provenance only; CLI runtime budget is hard-coded 4096 (trap 24 beyond); unconditional infinite loops are rejected at compile time.",
+    "requested_caps must EQUAL derived caps (over- and under-request both rejected) -- a fabric template must compute caps from the opcodes used.",
+    "Native compiler max image is 8,368 B (8,432 signed) vs 51,200-byte loader ceiling; 512-char line limit caps a DATA row at ~240 bytes.",
+    "New production BRTM/1 bundles cannot be minted (root private key not packaged); the practical fabric path is bradmin sign-image/run-signed with a per-node Ed25519 key, exactly what the PA-LCTL adapter does.",
+    "Only R2's low 64 bits are printed by the CLI; wider readback needs the APDU serve path (STATE <=512 B per call from any 131,072-byte register).",
+    "Sources are minified (35,170-char line in brvm.c; identifiers N46/Z37/K0); GCC disables column tracking; include/brvm_compat_names.h maps names.",
+    "'ISA 4.1' here is the 32-opcode set with 16-byte instructions/ABI 1.0/LCTLC 1.1 -- not binary compatible with Large.zip's BR/1.1 (AUDIT_ERRATA F9).",
+    "Bit-identical reproducibility on GCC 13.3/OpenSSL 3.0.13: brctl, brverify, core objects and all deploy artifacts match shipped release/bin and manifest hashes; gcc/clang O0/O2/O3 emit identical BRIM.",
+    "This session is a same-toolchain, single-machine, non-independent rebuild and therefore lifts none of the 8 self-reported external blockers."
+  ],
+  "package_name": "BOTTLE_ROCKET_5.0.0_VM_110K_RC",
+  "programmatic_drive": {
+    "compile_cmd": "B=<root>/.build; $B/bradmin verify-lctlc U.lctlc && $B/bradmin lctl-to-brir U.lctlc U.brir && $B/bradmin compile-lctlc U.lctlc U.brimg && $B/brverify U.brimg U.lctlc U.brir && $B/bradmin keygen k.private k.public && $B/bradmin sign-image U.brimg U.signed.brimg k.private && $B/bradmin verify-image U.signed.brimg k.public",
+    "result_parse": "stdout line 1 'status=<u> trap=<u> ip=<u> image_version=<u> result=PASS|FAIL' (success = status=2 HALTED, trap=0, result=PASS, exit 0); line 2 'R2.low64=<decimal u64>' only on success (guest convention: put result in R2; only low 64 bits printed). Failure: exit 1, result=FAIL, status=3 trap=<id>, no R2 line. Verify/compile errors: 'FAIL \u2014 line N: <reason>' / 'LCTL verify: line N: <reason>', exit 1. APDU STATE responses: sw(u16 BE) 0000 txid(u32 LE) payload (little-endian register bytes).",
+    "run_cmd": "$B/bradmin run-signed U.signed.brimg k.public   (fixed 4096-step budget; unsigned alternative: $B/bradmin run U.brimg; custom budget / wide readback: bradmin update U.signed.brimg k.public --state DIR then bradmin serve --state DIR --issuer-public-key k.public with APDU EXEC(4,u32 budget)+STATE(5,{kind,index,offset u32,len u16<=512}))"
+  },
+  "runtime_contract": "LCTLC/1.1 -> BRIR/1.1 -> BRIM/1+BRPV/1 -> BRTM/1; ISA 4.1; ABI 1.0; Device ABI 1.0; BRCR/1; BRGD/1; core ABI 0x00040700",
+  "schema": "DF/VM_PROFILE/1",
+  "self_reported": {
+    "accelerated_soak_cycles": 20000,
+    "blocked_ids": [
+      "BR-500-10-R05",
+      "BR-500-11-R01",
+      "BR-500-12-R05",
+      "BR-500-15-R20",
+      "BR-500-15-R21",
+      "BR-500-15-R22",
+      "BR-500-15-R23",
+      "BR-500-15-R24"
+    ],
+    "blocked_requirements": 8,
+    "blockers": [
+      "independent second-machine/operator replay",
+      "independent second-machine/operator rebuild",
+      "literal 72-hour native soak",
+      "AArch64 and Windows execution qualification",
+      "final 100% evidence ledger dependent on those proofs"
+    ],
+    "brim_bytes": 272,
+    "brim_ceiling": 51200,
+    "core61_ceiling": 61000,
+    "core61_stripped_bytes_evidence_reseal": 48264,
+    "core61_stripped_bytes_readme": 49072,
+    "differential_arithmetic_vectors": 169,
+    "fuzz_cases": 44700,
+    "operational_requirements": 88,
+    "production_boundary_bytes": 107675,
+    "production_boundary_ceiling": 110000,
+    "qualification_private_keys_included": false,
+    "release_manifest_signature_role": "qualification/release-engineering; not production HSM/root",
+    "release_manifest_signed": true,
+    "secure_execution": "R2.low64=42",
+    "strict_dependency_chain": "BLOCKED by inherited BR-490-11 external proofs and corresponding BR-500 gates",
+    "strict_gate": "BLOCKED",
+    "unresolved_critical_high": "0/0",
+    "workflow_requirements": 96
+  },
+  "version": "5.0.0-qualification-candidate (frozen 4.7.0 executable core; BR_CORE_ABI 0x00040700; native image version 9)",
+  "vm_name": "BOTTLE ROCKET"
+}

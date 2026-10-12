@@ -1,0 +1,33 @@
+{
+  "schema": "QUORUM-PLANE-GRAPH/2.0",
+  "plane_id": 3,
+  "plane": "data_evidence",
+  "modules": [
+    {
+      "module_id": 8,
+      "name": "Tables"
+    },
+    {
+      "module_id": 11,
+      "name": "Cypher"
+    },
+    {
+      "module_id": 12,
+      "name": "Filing Cabinet"
+    },
+    {
+      "module_id": 18,
+      "name": "Feature Graph"
+    },
+    {
+      "module_id": 29,
+      "name": "Archive Ledger"
+    },
+    {
+      "module_id": 49,
+      "name": "Action Cards"
+    }
+  ],
+  "integration": "independent module nodes with scenario-mediated orchestration",
+  "cycles": []
+}

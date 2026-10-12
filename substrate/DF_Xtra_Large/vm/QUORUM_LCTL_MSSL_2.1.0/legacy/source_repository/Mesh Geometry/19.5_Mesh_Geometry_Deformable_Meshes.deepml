@@ -1,0 +1,34 @@
+deepml specialized 0.3
+module suite19.mesh_geometry.deformable_meshes
+policy deterministic
+policy no_network
+
+domain simulation {
+  unit Meter = base("length")
+  unit MeshIndex = base("mesh_index")
+  schema DeformableMeshEvidence { asset: Hash sophia: Hash charlotte: Hash landon: Hash professor: Hash podium: Hash timestamp: Time provenance: Hash }
+  tensor rest_vertices: f64<Meter>[4096,3]
+  tensor deformed_vertices: f64<Meter>[4096,3]
+  tensor mesh_faces: f64<MeshIndex>[8192,3]
+  tensor deformation_weights: f64<Dimensionless>[4096,4]
+  tensor deformation_parameters: f64<Dimensionless>[256,16]
+  operator sophia_propose_deformation(x) -> Tensor pure deterministic
+  operator charlotte_validate_deformation(x) -> Tensor pure deterministic
+  operator landon_step_deformation(x) -> Tensor pure deterministic
+  operator professor_explain_deformation(x) -> Tensor pure deterministic
+  operator podium_certify_deformation(x) -> Tensor pure deterministic
+  calibration DeformationCalibration { method: bounded_least_squares tolerance: 1e-6 }
+  constraint DeformationBounds { min: -100000 max: 100000 }
+  validate rest_vertices with [sophia_propose_deformation, charlotte_validate_deformation, landon_step_deformation, professor_explain_deformation, podium_certify_deformation, DeformationCalibration, DeformationBounds]
+  validate deformed_vertices with [charlotte_validate_deformation, DeformationBounds]
+  validate deformation_weights with [charlotte_validate_deformation, DeformationCalibration]
+  graph DeformableMeshGraph {
+    proposed = sophia_propose_deformation(rest_vertices)
+    validated = charlotte_validate_deformation(proposed)
+    stepped = landon_step_deformation(validated)
+    explained = professor_explain_deformation(stepped)
+    receipt = podium_certify_deformation(explained)
+  }
+  optimize DeformableMeshGraph using [unit_propagation, dimensional_simplification, op_specialization, sparse_planning, calibration_folding, target_lowering]
+  lower DeformableMeshGraph to DEEPML_SPECIALIZED_R12
+}

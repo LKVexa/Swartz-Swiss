@@ -1,0 +1,7 @@
+{
+  "machine": "x86_64",
+  "platform": "Linux-6.18.5-fc-v20-x86_64-with-glibc2.39",
+  "python": "3.11.15 (main, Mar  3 2026, 09:26:23) [GCC 13.3.0]",
+  "release": "6.18.5-fc-v20",
+  "system": "Linux"
+}

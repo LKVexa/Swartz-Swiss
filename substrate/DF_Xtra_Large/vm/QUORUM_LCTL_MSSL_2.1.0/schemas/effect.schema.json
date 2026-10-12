@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "quorum://schemas/effect.schema.json",
+  "title": "effect.schema.json",
+  "type": "object",
+  "required": [
+    "id",
+    "class",
+    "side_effect",
+    "rollback"
+  ],
+  "additionalProperties": true
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "QUORUM-LOWERING-MAP/2.0",
+  "module_id": 43,
+  "mapping": [
+    {
+      "semantic_clause": "operator_contract:INPUT",
+      "graph_node": "N01",
+      "lctlc_row": "S0001",
+      "canonical_operation": "REGION",
+      "preservation": "declared"
+    },
+    {
+      "semantic_clause": "operator_contract:VERIFY",
+      "graph_node": "N02",
+      "lctlc_row": "S0002",
+      "canonical_operation": "REGION",
+      "preservation": "declared"
+    },
+    {
+      "semantic_clause": "operator_contract:BUILD",
+      "graph_node": "N03",
+      "lctlc_row": "S0003",
+      "canonical_operation": "REGION",
+      "preservation": "declared"
+    },
+    {
+      "semantic_clause": "operator_contract:PACKAGE",
+      "graph_node": "N04",
+      "lctlc_row": "S0004",
+      "canonical_operation": "REGION",
+      "preservation": "declared"
+    },
+    {
+      "semantic_clause": "operator_contract:HASH",
+      "graph_node": "N05",
+      "lctlc_row": "S0005",
+      "canonical_operation": "REGION",
+      "preservation": "declared"
+    },
+    {
+      "semantic_clause": "operator_contract:CERTIFY",
+      "graph_node": "N06",
+      "lctlc_row": "S0006",
+      "canonical_operation": "REGION",
+      "preservation": "declared"
+    },
+    {
+      "semantic_clause": "operator_contract:RELEASE",
+      "graph_node": "N07",
+      "lctlc_row": "S0007",
+      "canonical_operation": "REGION",
+      "preservation": "declared"
+    },
+    {
+      "semantic_clause": "operator_contract:EVIDENCE",
+      "graph_node": "N08",
+      "lctlc_row": "S0008",
+      "canonical_operation": "REGION",
+      "preservation": "declared"
+    }
+  ],
+  "terminal_sentinel": "C9999 NOP is justified only as canonical entry/end sentinel; semantic work is represented by preceding REGION/DEPENDENCY rows."
+}

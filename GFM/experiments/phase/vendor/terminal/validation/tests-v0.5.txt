@@ -1,0 +1,1606 @@
+TAP version 13
+# Subtest: GF9 commands preserve complex phases and return explicit model conventions
+ok 1 - GF9 commands preserve complex phases and return explicit model conventions
+  ---
+  duration_ms: 173.7509
+  type: 'test'
+  ...
+# Subtest: invalid mathematical and unknown commands preserve the current state
+ok 2 - invalid mathematical and unknown commands preserve the current state
+  ---
+  duration_ms: 179.7544
+  type: 'test'
+  ...
+# Subtest: sequences stop on the first error and preserve earlier completed operations
+ok 3 - sequences stop on the first error and preserve earlier completed operations
+  ---
+  duration_ms: 116.7292
+  type: 'test'
+  ...
+# Subtest: session export/import restores state and inert provenance with consistent metadata
+ok 4 - session export/import restores state and inert provenance with consistent metadata
+  ---
+  duration_ms: 232.9961
+  type: 'test'
+  ...
+# Subtest: ledger export uses the same envelope and omits command history and returns
+ok 5 - ledger export uses the same envelope and omits command history and returns
+  ---
+  duration_ms: 109.9688
+  type: 'test'
+  ...
+# Subtest: session and record tampering are rejected before import state changes
+ok 6 - session and record tampering are rejected before import state changes
+  ---
+  duration_ms: 110.6393
+  type: 'test'
+  ...
+# Subtest: even rehashed snapshots cannot silently change field or Fourier conventions
+ok 7 - even rehashed snapshots cannot silently change field or Fourier conventions
+  ---
+  duration_ms: 91.6656
+  type: 'test'
+  ...
+# Subtest: GF80 capture and replay retain the bridge snapshot and result schemas
+ok 8 - GF80 capture and replay retain the bridge snapshot and result schemas
+  ---
+  duration_ms: 115.4679
+  type: 'test'
+  ...
+# Subtest: GF80 session validation rejects snapshot shapes rejected by the existing bridge
+ok 9 - GF80 session validation rejects snapshot shapes rejected by the existing bridge
+  ---
+  duration_ms: 83.7656
+  type: 'test'
+  ...
+# Subtest: rejected oversized and non-string commands do not break session reimport
+ok 10 - rejected oversized and non-string commands do not break session reimport
+  ---
+  duration_ms: 127.8711
+  type: 'test'
+  ...
+# Subtest: ledger restoration reserves the terminal while its integrity check is pending
+ok 11 - ledger restoration reserves the terminal while its integrity check is pending
+  ---
+  duration_ms: 139.9805
+  type: 'test'
+  ...
+# Subtest: offline entrypoint contains exactly the seventeen current source modules and declared registers
+ok 12 - offline entrypoint contains exactly the seventeen current source modules and declared registers
+  ---
+  duration_ms: 71.2825
+  type: 'test'
+  ...
+# Subtest: all literal interactive targets, including the GFM and horizon panels, exist uniquely in the template
+ok 13 - all literal interactive targets, including the GFM and horizon panels, exist uniquely in the template
+  ---
+  duration_ms: 1.7747
+  type: 'test'
+  ...
+# Subtest: preserved references match every declared original byte identity
+ok 14 - preserved references match every declared original byte identity
+  ---
+  duration_ms: 34.0544
+  type: 'test'
+  ...
+# Subtest: all three supplied equation images retain their audited original bytes
+ok 15 - all three supplied equation images retain their audited original bytes
+  ---
+  duration_ms: 1.9971
+  type: 'test'
+  ...
+# Subtest: the five new horizon references and user writeup retain their declared package bytes
+ok 16 - the five new horizon references and user writeup retain their declared package bytes
+  ---
+  duration_ms: 16.1518
+  type: 'test'
+  ...
+# Subtest: workbench derivative consists of the original plus the identified bounded relay
+ok 17 - workbench derivative consists of the original plus the identified bounded relay
+  ---
+  duration_ms: 82.8055
+  type: 'test'
+  ...
+# Subtest: only identified, whitelisted, exact bounded requests are accepted
+ok 18 - only identified, whitelisted, exact bounded requests are accepted
+  ---
+  duration_ms: 2.9867
+  type: 'test'
+  ...
+# Subtest: plain JSON validation rejects executable, sparse, cyclic and oversized data
+ok 19 - plain JSON validation rejects executable, sparse, cyclic and oversized data
+  ---
+  duration_ms: 9.5353
+  type: 'test'
+  ...
+# Subtest: responses retain the explicit Pixel160 or GF80 profile and bounds
+ok 20 - responses retain the explicit Pixel160 or GF80 profile and bounds
+  ---
+  duration_ms: 1.0555
+  type: 'test'
+  ...
+# Subtest: srcdoc injection is idempotent and the relay is syntactically valid
+ok 21 - srcdoc injection is idempotent and the relay is syntactically valid
+  ---
+  duration_ms: 4.52
+  type: 'test'
+  ...
+# Subtest: inner relay delegates original adapter requests and ignores other senders
+ok 22 - inner relay delegates original adapter requests and ignores other senders
+  ---
+  duration_ms: 18.2019
+  type: 'test'
+  ...
+# Subtest: inner relay does not intercept original research messages
+ok 23 - inner relay does not intercept original research messages
+  ---
+  duration_ms: 0.4902
+  type: 'test'
+  ...
+# Subtest: outer bridge authenticates both windows, queues until ready and restores word view
+ok 24 - outer bridge authenticates both windows, queues until ready and restores word view
+  ---
+  duration_ms: 1.058
+  type: 'test'
+  ...
+# Subtest: actual retained build has a compatible static iframe and adapter export
+ok 25 - actual retained build has a compatible static iframe and adapter export
+  ---
+  duration_ms: 1316.5223
+  type: 'test'
+  ...
+# Subtest: Eq. 437 principal branches produce T=-3 inside the real lattice band
+ok 26 - Eq. 437 principal branches produce T=-3 inside the real lattice band
+  ---
+  duration_ms: 4.8385
+  type: 'test'
+  ...
+# Subtest: Eq. 437 lattice arccos enforces a finite real-energy band
+ok 27 - Eq. 437 lattice arccos enforces a finite real-energy band
+  ---
+  duration_ms: 0.5093
+  type: 'test'
+  ...
+# Subtest: Eq. 370 j versus j+1/2 mismatch under a declared oscillator offset
+ok 28 - Eq. 370 j versus j+1/2 mismatch under a declared oscillator offset
+  ---
+  duration_ms: 2.1283
+  type: 'test'
+  ...
+# Subtest: finite complex matrices cannot obey the global canonical CCR
+ok 29 - finite complex matrices cannot obey the global canonical CCR
+  ---
+  duration_ms: 5.5242
+  type: 'test'
+  ...
+# Subtest: a Hermitian GF(9) Hamiltonian can have a singular Cayley denominator
+ok 30 - a Hermitian GF(9) Hamiltonian can have a singular Cayley denominator
+  ---
+  duration_ms: 1.3278
+  type: 'test'
+  ...
+# Subtest: exports the same API to CommonJS and the browser global
+ok 31 - exports the same API to CommonJS and the browser global
+  ---
+  duration_ms: 5.189
+  type: 'test'
+  ...
+# Subtest: GF(8) explicitly follows α³ = α + 1 and the absolute trace
+ok 32 - GF(8) explicitly follows α³ = α + 1 and the absolute trace
+  ---
+  duration_ms: 0.9209
+  type: 'test'
+  ...
+# Subtest: GF(8) trace table, zero, and polynomial labels are exact
+ok 33 - GF(8) trace table, zero, and polynomial labels are exact
+  ---
+  duration_ms: 0.2473
+  type: 'test'
+  ...
+# Subtest: gf3 is a field with additive inverses, distributivity, and Frobenius automorphism
+ok 34 - gf3 is a field with additive inverses, distributivity, and Frobenius automorphism
+  ---
+  duration_ms: 1.4367
+  type: 'test'
+  ...
+# Subtest: gf3 additive character sums give exactly the orthogonality relation
+ok 35 - gf3 additive character sums give exactly the orthogonality relation
+  ---
+  duration_ms: 0.4317
+  type: 'test'
+  ...
+# Subtest: gf3 Fourier round trip and Frobenius cycle preserve a nontrivial complex state
+ok 36 - gf3 Fourier round trip and Frobenius cycle preserve a nontrivial complex state
+  ---
+  duration_ms: 1.7528
+  type: 'test'
+  ...
+# Subtest: gf3 obeys Z(b)X(a) = χ(ab)X(a)Z(b) for all labels
+ok 37 - gf3 obeys Z(b)X(a) = χ(ab)X(a)Z(b) for all labels
+  ---
+  duration_ms: 1.4026
+  type: 'test'
+  ...
+# Subtest: gf4 is a field with additive inverses, distributivity, and Frobenius automorphism
+ok 38 - gf4 is a field with additive inverses, distributivity, and Frobenius automorphism
+  ---
+  duration_ms: 0.9272
+  type: 'test'
+  ...
+# Subtest: gf4 additive character sums give exactly the orthogonality relation
+ok 39 - gf4 additive character sums give exactly the orthogonality relation
+  ---
+  duration_ms: 0.2235
+  type: 'test'
+  ...
+# Subtest: gf4 Fourier round trip and Frobenius cycle preserve a nontrivial complex state
+ok 40 - gf4 Fourier round trip and Frobenius cycle preserve a nontrivial complex state
+  ---
+  duration_ms: 1.0034
+  type: 'test'
+  ...
+# Subtest: gf4 obeys Z(b)X(a) = χ(ab)X(a)Z(b) for all labels
+ok 41 - gf4 obeys Z(b)X(a) = χ(ab)X(a)Z(b) for all labels
+  ---
+  duration_ms: 0.6189
+  type: 'test'
+  ...
+# Subtest: gf8 is a field with additive inverses, distributivity, and Frobenius automorphism
+ok 42 - gf8 is a field with additive inverses, distributivity, and Frobenius automorphism
+  ---
+  duration_ms: 8.425
+  type: 'test'
+  ...
+# Subtest: gf8 additive character sums give exactly the orthogonality relation
+ok 43 - gf8 additive character sums give exactly the orthogonality relation
+  ---
+  duration_ms: 0.67
+  type: 'test'
+  ...
+# Subtest: gf8 Fourier round trip and Frobenius cycle preserve a nontrivial complex state
+ok 44 - gf8 Fourier round trip and Frobenius cycle preserve a nontrivial complex state
+  ---
+  duration_ms: 31.3649
+  type: 'test'
+  ...
+# Subtest: gf8 obeys Z(b)X(a) = χ(ab)X(a)Z(b) for all labels
+ok 45 - gf8 obeys Z(b)X(a) = χ(ab)X(a)Z(b) for all labels
+  ---
+  duration_ms: 9.7028
+  type: 'test'
+  ...
+# Subtest: gf9 is a field with additive inverses, distributivity, and Frobenius automorphism
+ok 46 - gf9 is a field with additive inverses, distributivity, and Frobenius automorphism
+  ---
+  duration_ms: 8.1587
+  type: 'test'
+  ...
+# Subtest: gf9 additive character sums give exactly the orthogonality relation
+ok 47 - gf9 additive character sums give exactly the orthogonality relation
+  ---
+  duration_ms: 0.1838
+  type: 'test'
+  ...
+# Subtest: gf9 Fourier round trip and Frobenius cycle preserve a nontrivial complex state
+ok 48 - gf9 Fourier round trip and Frobenius cycle preserve a nontrivial complex state
+  ---
+  duration_ms: 3.0813
+  type: 'test'
+  ...
+# Subtest: gf9 obeys Z(b)X(a) = χ(ab)X(a)Z(b) for all labels
+ok 49 - gf9 obeys Z(b)X(a) = χ(ab)X(a)Z(b) for all labels
+  ---
+  duration_ms: 2.5664
+  type: 'test'
+  ...
+# Subtest: gf16 is a field with additive inverses, distributivity, and Frobenius automorphism
+ok 50 - gf16 is a field with additive inverses, distributivity, and Frobenius automorphism
+  ---
+  duration_ms: 35.1366
+  type: 'test'
+  ...
+# Subtest: gf16 additive character sums give exactly the orthogonality relation
+ok 51 - gf16 additive character sums give exactly the orthogonality relation
+  ---
+  duration_ms: 0.5662
+  type: 'test'
+  ...
+# Subtest: gf16 Fourier round trip and Frobenius cycle preserve a nontrivial complex state
+ok 52 - gf16 Fourier round trip and Frobenius cycle preserve a nontrivial complex state
+  ---
+  duration_ms: 56.025
+  type: 'test'
+  ...
+# Subtest: gf16 obeys Z(b)X(a) = χ(ab)X(a)Z(b) for all labels
+ok 53 - gf16 obeys Z(b)X(a) = χ(ab)X(a)Z(b) for all labels
+  ---
+  duration_ms: 22.7106
+  type: 'test'
+  ...
+# Subtest: GF(9) has non-real phase gates and the specified positive Fourier sign
+ok 54 - GF(9) has non-real phase gates and the specified positive Fourier sign
+  ---
+  duration_ms: 0.3256
+  type: 'test'
+  ...
+# Subtest: basis states shift by field addition and Frobenius permutes labels
+ok 55 - basis states shift by field addition and Frobenius permutes labels
+  ---
+  duration_ms: 0.2762
+  type: 'test'
+  ...
+# Subtest: normalization is explicit and audit reports an unnormalized input
+ok 56 - normalization is explicit and audit reports an unnormalized input
+  ---
+  duration_ms: 0.5086
+  type: 'test'
+  ...
+# Subtest: invalid field labels, exponents, dimensions, and amplitudes fail without coercion
+ok 57 - invalid field labels, exponents, dimensions, and amplitudes fail without coercion
+  ---
+  duration_ms: 13.2191
+  type: 'test'
+  ...
+# Subtest: odd-field displacement and reflection commands apply their declared operators
+ok 58 - odd-field displacement and reflection commands apply their declared operators
+  ---
+  duration_ms: 177.254
+  type: 'test'
+  ...
+# Subtest: binary-field odd-characteristic operations reject without changing state
+ok 59 - binary-field odd-characteristic operations reject without changing state
+  ---
+  duration_ms: 298.3861
+  type: 'test'
+  ...
+# Subtest: quadratic and symplectic inspectors retain finite-field labels and preserve amplitudes
+ok 60 - quadratic and symplectic inspectors retain finite-field labels and preserve amplitudes
+  ---
+  duration_ms: 115.4187
+  type: 'test'
+  ...
+# Subtest: Wigner negativity preset is inert until run and yields its declared mana
+ok 61 - Wigner negativity preset is inert until run and yields its declared mana
+  ---
+  duration_ms: 70.6601
+  type: 'test'
+  ...
+# Subtest: Wigner momentum marginal explicitly uses negative Fourier for asymmetric complex states
+ok 62 - Wigner momentum marginal explicitly uses negative Fourier for asymmetric complex states
+  ---
+  duration_ms: 78.8013
+  type: 'test'
+  ...
+# Subtest: scalar commands expose distinct SU2, arithmetic-ring and complex domains without mutating state
+ok 63 - scalar commands expose distinct SU2, arithmetic-ring and complex domains without mutating state
+  ---
+  duration_ms: 101.8675
+  type: 'test'
+  ...
+# Subtest: malformed scalar and registry commands reject while preserving the current model
+ok 64 - malformed scalar and registry commands reject while preserving the current model
+  ---
+  duration_ms: 112.9215
+  type: 'test'
+  ...
+# Subtest: registry lists and displays evidence while rejected and unresolved entries remain inert
+ok 65 - registry lists and displays evidence while rejected and unresolved entries remain inert
+  ---
+  duration_ms: 119.4164
+  type: 'test'
+  ...
+# Subtest: equation example insertion requires explicit sequence execution
+ok 66 - equation example insertion requires explicit sequence execution
+  ---
+  duration_ms: 64.0089
+  type: 'test'
+  ...
+# Subtest: registry filters and integrated verification controls work without changing current state
+ok 67 - registry filters and integrated verification controls work without changing current state
+  ---
+  duration_ms: 78.315
+  type: 'test'
+  ...
+# Subtest: current session exports preserve scalar domains, equation evidence and record hashes
+ok 68 - current session exports preserve scalar domains, equation evidence and record hashes
+  ---
+  duration_ms: 197.0956
+  type: 'test'
+  ...
+# Subtest: real v0.1 example imports without rewriting its metadata or historical digests
+ok 69 - real v0.1 example imports without rewriting its metadata or historical digests
+  ---
+  duration_ms: 64.4942
+  type: 'test'
+  ...
+# Subtest: actual audited-equations example imports inertly and restores its record with a fresh audit
+ok 70 - actual audited-equations example imports inertly and restores its record with a fresh audit
+  ---
+  duration_ms: 87.8324
+  type: 'test'
+  ...
+# Subtest: registry provenance matches the preserved report bytes and SHA-256
+ok 71 - registry provenance matches the preserved report bytes and SHA-256
+  ---
+  duration_ms: 1.9391
+  type: 'test'
+  ...
+# Subtest: all 12 raw displayed formulas retain exact source text and line locations
+ok 72 - all 12 raw displayed formulas retain exact source text and line locations
+  ---
+  duration_ms: 0.5529
+  type: 'test'
+  ...
+# Subtest: semantic display attribution separates delta, product rule, commutator and Cayley
+ok 73 - semantic display attribution separates delta, product rule, commutator and Cayley
+  ---
+  duration_ms: 1.4068
+  type: 'test'
+  ...
+# Subtest: registry IDs and aliases form an unambiguous lookup namespace
+ok 74 - registry IDs and aliases form an unambiguous lookup namespace
+  ---
+  duration_ms: 1.398
+  type: 'test'
+  ...
+# Subtest: only accepted-domain entries advertise executable commands
+ok 75 - only accepted-domain entries advertise executable commands
+  ---
+  duration_ms: 0.4821
+  type: 'test'
+  ...
+# Subtest: large repeated GFM reports export recent evidence while retaining state, records and inert provenance
+ok 76 - large repeated GFM reports export recent evidence while retaining state, records and inert provenance
+  ---
+  duration_ms: 4440.3314
+  type: 'test'
+  ...
+# Subtest: universal module exports the same API in CommonJS and a browser global
+ok 77 - universal module exports the same API in CommonJS and a browser global
+  ---
+  duration_ms: 11.4896
+  type: 'test'
+  ...
+# Subtest: GF(3) prime-field rotations have the expected quarter-turn orientation
+ok 78 - GF(3) prime-field rotations have the expected quarter-turn orientation
+  ---
+  duration_ms: 3.4368
+  type: 'test'
+  ...
+# Subtest: every admissible parameter in GF(3) and GF(9) is orthogonal with determinant one
+ok 79 - every admissible parameter in GF(3) and GF(9) is orthogonal with determinant one
+  ---
+  duration_ms: 8.0566
+  type: 'test'
+  ...
+# Subtest: GF(9) rotations preserve the exact quadratic form and reverse for every point
+ok 80 - GF(9) rotations preserve the exact quadratic form and reverse for every point
+  ---
+  duration_ms: 2901.5794
+  type: 'test'
+  ...
+# Subtest: GF(9) alpha and negative alpha are the only singular finite parameters
+ok 81 - GF(9) alpha and negative alpha are the only singular finite parameters
+  ---
+  duration_ms: 0.7912
+  type: 'test'
+  ...
+# Subtest: oscillator kick-drift-kick agrees with independent GF(9) arithmetic and its matrix
+ok 82 - oscillator kick-drift-kick agrees with independent GF(9) arithmetic and its matrix
+  ---
+  duration_ms: 205.4087
+  type: 'test'
+  ...
+# Subtest: all GF(9) oscillator coefficient pairs have symplectic matrices and explicit inverse steps
+ok 83 - all GF(9) oscillator coefficient pairs have symplectic matrices and explicit inverse steps
+  ---
+  duration_ms: 39.655
+  type: 'test'
+  ...
+# Subtest: prime-field oscillator gives fixed, free-shear, and six-step recurrence examples
+ok 84 - prime-field oscillator gives fixed, free-shear, and six-step recurrence examples
+  ---
+  duration_ms: 0.821
+  type: 'test'
+  ...
+# Subtest: 256-step bound is enforced and the full bounded trajectory reverses
+ok 85 - 256-step bound is enforced and the full bounded trajectory reverses
+  ---
+  duration_ms: 12.9286
+  type: 'test'
+  ...
+# Subtest: binary fields, unregistered fields, invalid labels and pictured real angles are rejected
+ok 86 - binary fields, unregistered fields, invalid labels and pictured real angles are rejected
+  ---
+  duration_ms: 2.0918
+  type: 'test'
+  ...
+# Subtest: rotation copies valid points and rejects sparse or accessor-backed point coordinates
+ok 87 - rotation copies valid points and rejects sparse or accessor-backed point coordinates
+  ---
+  duration_ms: 0.6032
+  type: 'test'
+  ...
+# Subtest: results identify exact field analogues and do not assign seconds or convert image angles
+ok 88 - results identify exact field analogues and do not assign seconds or convert image angles
+  ---
+  duration_ms: 0.5282
+  type: 'test'
+  ...
+# Subtest: pendulum command prepares the declared Fourier signal and exposes its codec and original scale
+ok 89 - pendulum command prepares the declared Fourier signal and exposes its codec and original scale
+  ---
+  duration_ms: 134.599
+  type: 'test'
+  ...
+# Subtest: real rotation command rejects the wrong profile and recovers all three 232.75 degree outputs
+ok 90 - real rotation command rejects the wrong profile and recovers all three 232.75 degree outputs
+  ---
+  duration_ms: 112.9641
+  type: 'test'
+  ...
+# Subtest: zeta command separates continuum verification from its coarse midpoint encoding
+ok 91 - zeta command separates continuum verification from its coarse midpoint encoding
+  ---
+  duration_ms: 55.2267
+  type: 'test'
+  ...
+# Subtest: exact-field inspectors retain amplitudes and preparation while reporting finite label dynamics
+ok 92 - exact-field inspectors retain amplitudes and preparation while reporting finite label dynamics
+  ---
+  duration_ms: 139.7191
+  type: 'test'
+  ...
+# Subtest: model.reapply all updates the actual snapshot to the independently derived final GF9 signal
+ok 93 - model.reapply all updates the actual snapshot to the independently derived final GF9 signal
+  ---
+  duration_ms: 603.3515
+  type: 'test'
+  ...
+# Subtest: every stored finding has command-level applicability on its proper profile
+ok 94 - every stored finding has command-level applicability on its proper profile
+  ---
+  duration_ms: 623.3768
+  type: 'test'
+  ...
+# Subtest: model verification and export preserve state and expose a reproducible complete-report hash
+ok 95 - model verification and export preserve state and expose a reproducible complete-report hash
+  ---
+  duration_ms: 637.4929
+  type: 'test'
+  ...
+# Subtest: malformed model commands roll back state and preparation, including declared domain errors
+ok 96 - malformed model commands roll back state and preparation, including declared domain errors
+  ---
+  duration_ms: 107.5471
+  type: 'test'
+  ...
+# Subtest: preparation follows unitary operations but explicit basis/state/field preparations clear it
+ok 97 - preparation follows unitary operations but explicit basis/state/field preparations clear it
+  ---
+  duration_ms: 84.1681
+  type: 'test'
+  ...
+# Subtest: v0.3 session import and ledger restoration retain the signal codec, scale and inert operations
+ok 98 - v0.3 session import and ledger restoration retain the signal codec, scale and inert operations
+  ---
+  duration_ms: 164.2197
+  type: 'test'
+  ...
+# Subtest: rehashing a malformed preparation does not make it admissible in a session or record
+ok 99 - rehashing a malformed preparation does not make it admissible in a session or record
+  ---
+  duration_ms: 109.353
+  type: 'test'
+  ...
+# Subtest: the GFM load button appends raw mechanics data while preserving existing GF80 evidence and reference state
+ok 100 - the GFM load button appends raw mechanics data while preserving existing GF80 evidence and reference state
+  ---
+  duration_ms: 93.6192
+  type: 'test'
+  ...
+# Subtest: GF3 uses prime-field arithmetic, absolute trace, and positive F3 roots
+ok 101 - GF3 uses prime-field arithmetic, absolute trace, and positive F3 roots
+  ---
+  duration_ms: 5.1556
+  type: 'test'
+  ...
+# Subtest: module loads in CommonJS and a dependency-free browser context
+ok 102 - module loads in CommonJS and a dependency-free browser context
+  ---
+  duration_ms: 3.9013
+  type: 'test'
+  ...
+# Subtest: F3 conjugation of a diagonal operator gives an independently known circulant matrix
+ok 103 - F3 conjugation of a diagonal operator gives an independently known circulant matrix
+  ---
+  duration_ms: 0.6902
+  type: 'test'
+  ...
+# Subtest: rotation 232.75 degrees uses real active column signs for all three axes
+ok 104 - rotation 232.75 degrees uses real active column signs for all three axes
+  ---
+  duration_ms: 2.0509
+  type: 'test'
+  ...
+# Subtest: complex Fourier representation of the real rotation agrees with explicit F3 conjugation
+ok 105 - complex Fourier representation of the real rotation agrees with explicit F3 conjugation
+  ---
+  duration_ms: 0.931
+  type: 'test'
+  ...
+# Subtest: gf3 matrix Fourier and operator construction agree with the production field action
+ok 106 - gf3 matrix Fourier and operator construction agree with the production field action
+  ---
+  duration_ms: 1.2499
+  type: 'test'
+  ...
+# Subtest: gf4 matrix Fourier and operator construction agree with the production field action
+ok 107 - gf4 matrix Fourier and operator construction agree with the production field action
+  ---
+  duration_ms: 1.15
+  type: 'test'
+  ...
+# Subtest: gf8 matrix Fourier and operator construction agree with the production field action
+ok 108 - gf8 matrix Fourier and operator construction agree with the production field action
+  ---
+  duration_ms: 3.2633
+  type: 'test'
+  ...
+# Subtest: gf9 matrix Fourier and operator construction agree with the production field action
+ok 109 - gf9 matrix Fourier and operator construction agree with the production field action
+  ---
+  duration_ms: 2.6199
+  type: 'test'
+  ...
+# Subtest: gf16 matrix Fourier and operator construction agree with the production field action
+ok 110 - gf16 matrix Fourier and operator construction agree with the production field action
+  ---
+  duration_ms: 13.9253
+  type: 'test'
+  ...
+# Subtest: nonunitary operators retain their actual norm while representation covariance passes
+ok 111 - nonunitary operators retain their actual norm while representation covariance passes
+  ---
+  duration_ms: 0.4845
+  type: 'test'
+  ...
+# Subtest: complex non-Hermitian operators also recover Aψ without implicit normalization
+ok 112 - complex non-Hermitian operators also recover Aψ without implicit normalization
+  ---
+  duration_ms: 3.0827
+  type: 'test'
+  ...
+# Subtest: sample preparation retains scale and independently known forward F3 phases
+ok 113 - sample preparation retains scale and independently known forward F3 phases
+  ---
+  duration_ms: 0.5355
+  type: 'test'
+  ...
+# Subtest: matrix and state inputs remain unchanged through transforms and application
+ok 114 - matrix and state inputs remain unchanged through transforms and application
+  ---
+  duration_ms: 0.5265
+  type: 'test'
+  ...
+# Subtest: dimension, finite-value, input-bound, and nonzero preparation rules are enforced
+ok 115 - dimension, finite-value, input-bound, and nonzero preparation rules are enforced
+  ---
+  duration_ms: 1.3817
+  type: 'test'
+  ...
+# Subtest: validation rejects executable accessors before invoking them
+ok 116 - validation rejects executable accessors before invoking them
+  ---
+  duration_ms: 0.2762
+  type: 'test'
+  ...
+# Subtest: mechanics API loads in CommonJS and a browser-like environment without quantum dataset prerequisites
+ok 117 - mechanics API loads in CommonJS and a browser-like environment without quantum dataset prerequisites
+  ---
+  duration_ms: 18.3728
+  type: 'test'
+  ...
+# Subtest: datasets preserve raw values, zero signals, codec data and independent copies
+ok 118 - datasets preserve raw values, zero signals, codec data and independent copies
+  ---
+  duration_ms: 2.5466
+  type: 'test'
+  ...
+# Subtest: raw gf3 trace coefficients agree with an independent positive-character matrix
+ok 119 - raw gf3 trace coefficients agree with an independent positive-character matrix
+  ---
+  duration_ms: 1.8309
+  type: 'test'
+  ...
+# Subtest: raw gf9 trace coefficients agree with an independent positive-character matrix
+ok 120 - raw gf9 trace coefficients agree with an independent positive-character matrix
+  ---
+  duration_ms: 1.6934
+  type: 'test'
+  ...
+# Subtest: all fields retain raw energy and exact zero data through forward and inverse trace transforms
+ok 121 - all fields retain raw energy and exact zero data through forward and inverse trace transforms
+  ---
+  duration_ms: 7.0656
+  type: 'test'
+  ...
+# Subtest: large and extremely small raw scales are preserved rather than replaced by unit norm
+ok 122 - large and extremely small raw scales are preserved rather than replaced by unit norm
+  ---
+  duration_ms: 1.2214
+  type: 'test'
+  ...
+# Subtest: exact prime and binary extension examples fix polynomial DFT root and inverse-length conventions
+ok 123 - exact prime and binary extension examples fix polynomial DFT root and inverse-length conventions
+  ---
+  duration_ms: 1.4218
+  type: 'test'
+  ...
+# Subtest: GF9 polynomial coefficients are independently evaluated in GF3[alpha]/(alpha squared+1)
+ok 124 - GF9 polynomial coefficients are independently evaluated in GF3[alpha]/(alpha squared+1)
+  ---
+  duration_ms: 1.9686
+  type: 'test'
+  ...
+# Subtest: every registered field polynomial DFT exactly preserves zero, constant and full-label sequences
+ok 125 - every registered field polynomial DFT exactly preserves zero, constant and full-label sequences
+  ---
+  duration_ms: 24.462
+  type: 'test'
+  ...
+# Subtest: transform direction and scalar domains must match the declared representation
+ok 126 - transform direction and scalar domains must match the declared representation
+  ---
+  duration_ms: 1.0068
+  type: 'test'
+  ...
+# Subtest: strict malformed-data checks reject coercions, field substitutions, accessors, sparse arrays and metadata cycles
+ok 127 - strict malformed-data checks reject coercions, field substitutions, accessors, sparse arrays and metadata cycles
+  ---
+  duration_ms: 0.9486
+  type: 'test'
+  ...
+# Subtest: pendulum mechanics profiles retain ordinary acceleration, units, parameters and large raw scale
+ok 128 - pendulum mechanics profiles retain ordinary acceleration, units, parameters and large raw scale
+  ---
+  duration_ms: 1.3541
+  type: 'test'
+  ...
+# Subtest: ordinary exterior profiles retain corrected metric values, scale, orientation and zero frame signals
+ok 129 - ordinary exterior profiles retain corrected metric values, scale, orientation and zero frame signals
+  ---
+  duration_ms: 2.6561
+  type: 'test'
+  ...
+# Subtest: raw hypothetical profiles retain zero passage and large unnormalized radius without quantum preparation
+ok 130 - raw hypothetical profiles retain zero passage and large unnormalized radius without quantum preparation
+  ---
+  duration_ms: 1.7185
+  type: 'test'
+  ...
+# Subtest: reapplication transports raw horizon and three image families while preserving scoped source dispositions
+ok 131 - reapplication transports raw horizon and three image families while preserving scoped source dispositions
+  ---
+  duration_ms: 24.9837
+  type: 'test'
+  ...
+# Subtest: all three saved rotation transports act on raw Cartesian [1,2,3] and independently recover real Rx/Ry/Rz outputs
+ok 132 - all three saved rotation transports act on raw Cartesian [1,2,3] and independently recover real Rx/Ry/Rz outputs
+  ---
+  duration_ms: 7.4235
+  type: 'test'
+  ...
+# Subtest: model adapters load as CommonJS and a dependency-free universal module
+ok 133 - model adapters load as CommonJS and a dependency-free universal module
+  ---
+  duration_ms: 11.9377
+  type: 'test'
+  ...
+# Subtest: pendulum reference uses exact sine, dimensional frequency and period, and the declared small-angle bound
+ok 134 - pendulum reference uses exact sine, dimensional frequency and period, and the declared small-angle bound
+  ---
+  duration_ms: 4.772
+  type: 'test'
+  ...
+# Subtest: pendulum signal transform preserves its scale and independently specified sample values
+ok 135 - pendulum signal transform preserves its scale and independently specified sample values
+  ---
+  duration_ms: 1.7334
+  type: 'test'
+  ...
+# Subtest: all three real rotation axes retain the 232.75 degree active-column signs after reapplication
+ok 136 - all three real rotation axes retain the 232.75 degree active-column signs after reapplication
+  ---
+  duration_ms: 2.8113
+  type: 'test'
+  ...
+# Subtest: Mellin integral at s=2 agrees with an independent zeta reference
+ok 137 - Mellin integral at s=2 agrees with an independent zeta reference
+  ---
+  duration_ms: 3.6027
+  type: 'test'
+  ...
+# Subtest: Mellin integral at s=3 agrees with an independent zeta reference
+ok 138 - Mellin integral at s=3 agrees with an independent zeta reference
+  ---
+  duration_ms: 4.3866
+  type: 'test'
+  ...
+# Subtest: Mellin integral at s=4 agrees with an independent zeta reference
+ok 139 - Mellin integral at s=4 agrees with an independent zeta reference
+  ---
+  duration_ms: 1.668
+  type: 'test'
+  ...
+# Subtest: Mellin integral at s=5 agrees with an independent zeta reference
+ok 140 - Mellin integral at s=5 agrees with an independent zeta reference
+  ---
+  duration_ms: 1.7735
+  type: 'test'
+  ...
+# Subtest: Mellin integral at s=6 agrees with an independent zeta reference
+ok 141 - Mellin integral at s=6 agrees with an independent zeta reference
+  ---
+  duration_ms: 1.4558
+  type: 'test'
+  ...
+# Subtest: Mellin integral at s=7 agrees with an independent zeta reference
+ok 142 - Mellin integral at s=7 agrees with an independent zeta reference
+  ---
+  duration_ms: 2.2936
+  type: 'test'
+  ...
+# Subtest: Mellin integral at s=8 agrees with an independent zeta reference
+ok 143 - Mellin integral at s=8 agrees with an independent zeta reference
+  ---
+  duration_ms: 1.3438
+  type: 'test'
+  ...
+# Subtest: coarse Mellin samples are a declared window encoding, with retained scale and no improper-integral claim
+ok 144 - coarse Mellin samples are a declared window encoding, with retained scale and no improper-integral claim
+  ---
+  duration_ms: 1.7308
+  type: 'test'
+  ...
+# Subtest: Wigner values are invariant when both the GF9 state and every phase-point operator change basis
+ok 145 - Wigner values are invariant when both the GF9 state and every phase-point operator change basis
+  ---
+  duration_ms: 125.1993
+  type: 'test'
+  ...
+# Subtest: stored displacement and reflection adapters agree with independent GF9 formulas
+ok 146 - stored displacement and reflection adapters agree with independent GF9 formulas
+  ---
+  duration_ms: 2.8049
+  type: 'test'
+  ...
+# Subtest: stored character and quadratic-sign signals are complex encodings with exact independently computed samples
+ok 147 - stored character and quadratic-sign signals are complex encodings with exact independently computed samples
+  ---
+  duration_ms: 1.5055
+  type: 'test'
+  ...
+# Subtest: SU2 coupling uses the GF4 complex dimension and the singlet relative minus sign
+ok 148 - SU2 coupling uses the GF4 complex dimension and the singlet relative minus sign
+  ---
+  duration_ms: 1.2763
+  type: 'test'
+  ...
+# Subtest: arithmetic-delta signals explicitly encode the residue table rather than GF9 arithmetic
+ok 149 - arithmetic-delta signals explicitly encode the residue table rather than GF9 arithmetic
+  ---
+  duration_ms: 1.5573
+  type: 'test'
+  ...
+# Subtest: GF3 Cayley adapter uses a complex forward-time phase and consistently transforms the Hamiltonian
+ok 150 - GF3 Cayley adapter uses a complex forward-time phase and consistently transforms the Hamiltonian
+  ---
+  duration_ms: 3.1141
+  type: 'test'
+  ...
+# Subtest: rejected and unresolved source findings remain reference-only even for recognized adapter IDs
+ok 151 - rejected and unresolved source findings remain reference-only even for recognized adapter IDs
+  ---
+  duration_ms: 0.3347
+  type: 'test'
+  ...
+# Subtest: full applicability pass retains every one of the 20 findings and produces the declared normalized GF9 demonstration
+ok 152 - full applicability pass retains every one of the 20 findings and produces the declared normalized GF9 demonstration
+  ---
+  duration_ms: 220.802
+  type: 'test'
+  ...
+# Subtest: invalid continuum parameters and incompatible mathematical domains reject without modifying supplied states
+ok 153 - invalid continuum parameters and incompatible mathematical domains reject without modifying supplied states
+  ---
+  duration_ms: 1.3321
+  type: 'test'
+  ...
+# Subtest: model adapters reject unregistered field objects rather than trusting substituted arithmetic
+ok 154 - model adapters reject unregistered field objects rather than trusting substituted arithmetic
+  ---
+  duration_ms: 0.9824
+  type: 'test'
+  ...
+# Subtest: primary terminal boots from raw pendulum data, with reference math hidden
+ok 155 - primary terminal boots from raw pendulum data, with reference math hidden
+  ---
+  duration_ms: 163.8255
+  type: 'test'
+  ...
+# Subtest: hidden reference Wigner view remains hidden through return-tab rerenders and mechanics commands
+ok 156 - hidden reference Wigner view remains hidden through return-tab rerenders and mechanics commands
+  ---
+  duration_ms: 93.2935
+  type: 'test'
+  ...
+# Subtest: raw complex trace transform matches an independent GF9 character calculation and retains magnitude
+ok 157 - raw complex trace transform matches an independent GF9 character calculation and retains magnitude
+  ---
+  duration_ms: 85.8334
+  type: 'test'
+  ...
+# Subtest: large raw signal scale remains in the returned values rather than a normalized state
+ok 158 - large raw signal scale remains in the returned values rather than a normalized state
+  ---
+  duration_ms: 78.5823
+  type: 'test'
+  ...
+# Subtest: exact coefficient transform uses finite-field polynomial evaluation on nonzero GF9 nodes
+ok 159 - exact coefficient transform uses finite-field polynomial evaluation on nonzero GF9 nodes
+  ---
+  duration_ms: 136.6969
+  type: 'test'
+  ...
+# Subtest: zero raw data are valid on every field and survive transformation, verification and the sealed passage profile
+ok 160 - zero raw data are valid on every field and survive transformation, verification and the sealed passage profile
+  ---
+  duration_ms: 229.7368
+  type: 'test'
+  ...
+# Subtest: ordinary and hypothetical profiles retain physical coordinate grids and declared units
+ok 161 - ordinary and hypothetical profiles retain physical coordinate grids and declared units
+  ---
+  duration_ms: 87.266
+  type: 'test'
+  ...
+# Subtest: exact mechanics inspectors use the mechanics field, preserve datasets and reject binary characteristic
+ok 162 - exact mechanics inspectors use the mechanics field, preserve datasets and reject binary characteristic
+  ---
+  duration_ms: 106.546
+  type: 'test'
+  ...
+# Subtest: primary equation reapplication transports raw exterior samples and preserves prior GF80 evidence
+ok 163 - primary equation reapplication transports raw exterior samples and preserves prior GF80 evidence
+  ---
+  duration_ms: 110.1778
+  type: 'test'
+  ...
+# Subtest: bad primary commands roll back raw data, codec and compatibility state
+ok 164 - bad primary commands roll back raw data, codec and compatibility state
+  ---
+  duration_ms: 147.7192
+  type: 'test'
+  ...
+# Subtest: raw dataset verification and export are inspectors with reproducible envelope hashes
+ok 165 - raw dataset verification and export are inspectors with reproducible envelope hashes
+  ---
+  duration_ms: 87.3065
+  type: 'test'
+  ...
+# Subtest: mechanics records restore exact raw data while command provenance stays inert
+ok 166 - mechanics records restore exact raw data while command provenance stays inert
+  ---
+  duration_ms: 74.0134
+  type: 'test'
+  ...
+# Subtest: v0.5 session round trip preserves raw mechanics and old normalized snapshot without executing history
+ok 167 - v0.5 session round trip preserves raw mechanics and old normalized snapshot without executing history
+  ---
+  duration_ms: 130.5399
+  type: 'test'
+  ...
+# Subtest: rehashed invalid mechanics datasets or record payloads cannot change session state
+ok 168 - rehashed invalid mechanics datasets or record payloads cannot change session state
+  ---
+  duration_ms: 198.2482
+  type: 'test'
+  ...
+# Subtest: historical sessions load their unchanged reference state alongside a default raw mechanics dataset
+ok 169 - historical sessions load their unchanged reference state alongside a default raw mechanics dataset
+  ---
+  duration_ms: 230.2446
+  type: 'test'
+  ...
+# Subtest: primary controls prepare raw or exact data explicitly, then transform and recover without changing reference state
+ok 170 - primary controls prepare raw or exact data explicitly, then transform and recover without changing reference state
+  ---
+  duration_ms: 73.5091
+  type: 'test'
+  ...
+# Subtest: primary mechanics presets insert inert commands and execute only when run is selected
+ok 171 - primary mechanics presets insert inert commands and execute only when run is selected
+  ---
+  duration_ms: 43.3189
+  type: 'test'
+  ...
+# Subtest: actual v0.5 mechanics example validates, reloads inertly and restores its mechanics record
+ok 172 - actual v0.5 mechanics example validates, reloads inertly and restores its mechanics record
+  ---
+  duration_ms: 126.8261
+  type: 'test'
+  ...
+# Subtest: stationary reference module is dependency-free in both CommonJS and a browser-like global context
+ok 173 - stationary reference module is dependency-free in both CommonJS and a browser-like global context
+  ---
+  duration_ms: 5.3769
+  type: 'test'
+  ...
+# Subtest: Schwarzschild limit has the exact horizon, area, surface gravity, entropy and irreducible mass
+ok 174 - Schwarzschild limit has the exact horizon, area, surface gravity, entropy and irreducible mass
+  ---
+  duration_ms: 1.1745
+  type: 'test'
+  ...
+# Subtest: Reissner-Nordstrom 3-4-5 reference preserves the charged mass relation
+ok 175 - Reissner-Nordstrom 3-4-5 reference preserves the charged mass relation
+  ---
+  duration_ms: 0.2992
+  type: 'test'
+  ...
+# Subtest: Kerr 3-4-5 reference has the rotational Smarr contribution with the correct factor two
+ok 176 - Kerr 3-4-5 reference has the rotational Smarr contribution with the correct factor two
+  ---
+  duration_ms: 0.2607
+  type: 'test'
+  ...
+# Subtest: generic charged Kerr horizon checks both independently assembled mass identities
+ok 177 - generic charged Kerr horizon checks both independently assembled mass identities
+  ---
+  duration_ms: 0.2642
+  type: 'test'
+  ...
+# Subtest: negative angular momentum and charge reverse orientation/potential without changing horizon geometry
+ok 178 - negative angular momentum and charge reverse orientation/potential without changing horizon geometry
+  ---
+  duration_ms: 0.7151
+  type: 'test'
+  ...
+# Subtest: extremal Kerr, RN and KN limits are explicit zero-temperature horizons, with no generic differential inferred
+ok 179 - extremal Kerr, RN and KN limits are explicit zero-temperature horizons, with no generic differential inferred
+  ---
+  duration_ms: 1.0406
+  type: 'test'
+  ...
+# Subtest: near-extremal positive discriminants remain positive and tiny inner horizons are retained
+ok 180 - near-extremal positive discriminants remain positive and tiny inner horizons are retained
+  ---
+  duration_ms: 0.3759
+  type: 'test'
+  ...
+# Subtest: horizon formulas obey independent geometrized dimensional scaling
+ok 181 - horizon formulas obey independent geometrized dimensional scaling
+  ---
+  duration_ms: 0.371
+  type: 'test'
+  ...
+# Subtest: Boyer-Lindquist metric matches independent completed-square expansion and general determinant elimination
+ok 182 - Boyer-Lindquist metric matches independent completed-square expansion and general determinant elimination
+  ---
+  duration_ms: 4.5267
+  type: 'test'
+  ...
+# Subtest: metric cross term has the negative orientation and twice the tensor component in ds squared
+ok 183 - metric cross term has the negative orientation and twice the tensor component in ds squared
+  ---
+  duration_ms: 0.4682
+  type: 'test'
+  ...
+# Subtest: Schwarzschild and RN metric limits have diagonal lapse and reciprocal radial coefficient
+ok 184 - Schwarzschild and RN metric limits have diagonal lapse and reciprocal radial coefficient
+  ---
+  duration_ms: 0.3537
+  type: 'test'
+  ...
+# Subtest: exterior ergoregion remains Lorentzian even when the stationary time basis vector becomes spacelike
+ok 185 - exterior ergoregion remains Lorentzian even when the stationary time basis vector becomes spacelike
+  ---
+  duration_ms: 0.2187
+  type: 'test'
+  ...
+# Subtest: differential first law agrees with independent central differences of area and angular momentum
+ok 186 - differential first law agrees with independent central differences of area and angular momentum
+  ---
+  duration_ms: 0.6748
+  type: 'test'
+  ...
+# Subtest: first law handles independent M/a/Q directions, negative orientations and a near-extremal tangent
+ok 187 - first law handles independent M/a/Q directions, negative orientations and a near-extremal tangent
+  ---
+  duration_ms: 0.3567
+  type: 'test'
+  ...
+# Subtest: SI Schwarzschild values agree with an independently evaluated 60-digit decimal reference
+ok 188 - SI Schwarzschild values agree with an independently evaluated 60-digit decimal reference
+  ---
+  duration_ms: 0.4518
+  type: 'test'
+  ...
+# Subtest: ideal radiation approximation matches Stefan-Boltzmann and the integrated inverse-square mass-loss model
+ok 189 - ideal radiation approximation matches Stefan-Boltzmann and the integrated inverse-square mass-loss model
+  ---
+  duration_ms: 0.4185
+  type: 'test'
+  ...
+# Subtest: strict input bounds reject naked horizons, nonnumeric coercions and nonfinite values without repair
+ok 190 - strict input bounds reject naked horizons, nonnumeric coercions and nonfinite values without repair
+  ---
+  duration_ms: 0.8115
+  type: 'test'
+  ...
+# Subtest: metric executable profile rejects horizon, interior, polar axes and numerical coordinate singularities
+ok 191 - metric executable profile rejects horizon, interior, polar axes and numerical coordinate singularities
+  ---
+  duration_ms: 0.4851
+  type: 'test'
+  ...
+# Subtest: horizon panel boots from the actual 49-entry data and keeps its preset inert
+ok 192 - horizon panel boots from the actual 49-entry data and keeps its preset inert
+  ---
+  duration_ms: 137.2256
+  type: 'test'
+  ...
+# Subtest: ordinary horizon, metric, SI and source inspectors preserve the active finite state
+ok 193 - ordinary horizon, metric, SI and source inspectors preserve the active finite state
+  ---
+  duration_ms: 100.3337
+  type: 'test'
+  ...
+# Subtest: logical GF4 map inspector keeps the active GF8 state and retains nonunitary output norm
+ok 194 - logical GF4 map inspector keeps the active GF8 state and retains nonunitary output norm
+  ---
+  duration_ms: 83.4301
+  type: 'test'
+  ...
+# Subtest: metric sample preparation keeps grid, units and scale; zero profiles preserve that state
+ok 195 - metric sample preparation keeps grid, units and scale; zero profiles preserve that state
+  ---
+  duration_ms: 90.8062
+  type: 'test'
+  ...
+# Subtest: scenario controls separate shared exterior observations from the optional toy passage probe
+ok 196 - scenario controls separate shared exterior observations from the optional toy passage probe
+  ---
+  duration_ms: 131.512
+  type: 'test'
+  ...
+# Subtest: failed commands and invalid control changes roll back preparation, state and scenario context
+ok 197 - failed commands and invalid control changes roll back preparation, state and scenario context
+  ---
+  duration_ms: 124.2204
+  type: 'test'
+  ...
+# Subtest: session round trip restores the hypothesis/probe and sample metadata while command history remains inert
+ok 198 - session round trip restores the hypothesis/probe and sample metadata while command history remains inert
+  ---
+  duration_ms: 212.7964
+  type: 'test'
+  ...
+# Subtest: rehashed invalid contexts and radial codecs reject before import changes state or records
+ok 199 - rehashed invalid contexts and radial codecs reject before import changes state or records
+  ---
+  duration_ms: 134.2253
+  type: 'test'
+  ...
+# Subtest: horizon verification and export retain the current model and declared evidence domains
+ok 200 - horizon verification and export retain the current model and declared evidence domains
+  ---
+  duration_ms: 672.0322
+  type: 'test'
+  ...
+# Subtest: UI model load preserves all prior ledger records and reference state while recording raw GF9 mechanics
+ok 201 - UI model load preserves all prior ledger records and reference state while recording raw GF9 mechanics
+  ---
+  duration_ms: 85.4892
+  type: 'test'
+  ...
+# Subtest: historical v0.3 and new horizon examples validate and reload without executing their provenance
+ok 202 - historical v0.3 and new horizon examples validate and reload without executing their provenance
+  ---
+  duration_ms: 188.3384
+  type: 'test'
+  ...
+# Subtest: universal horizon adapter loads without browser or package dependencies
+ok 203 - universal horizon adapter loads without browser or package dependencies
+  ---
+  duration_ms: 37.7733
+  type: 'test'
+  ...
+# Subtest: radial gtt profile retains independently calculated exterior samples, scale and units
+ok 204 - radial gtt profile retains independently calculated exterior samples, scale and units
+  ---
+  duration_ms: 7.9223
+  type: 'test'
+  ...
+# Subtest: radial frameOmega profile retains independently calculated exterior samples, scale and units
+ok 205 - radial frameOmega profile retains independently calculated exterior samples, scale and units
+  ---
+  duration_ms: 1.2147
+  type: 'test'
+  ...
+# Subtest: profile dimensional scaling preserves gtt but changes frameOmega and its retained scale inversely
+ok 206 - profile dimensional scaling preserves gtt but changes frameOmega and its retained scale inversely
+  ---
+  duration_ms: 11.7119
+  type: 'test'
+  ...
+# Subtest: signed rotation reverses the frame signal rather than converting spin to a finite-field coefficient
+ok 207 - signed rotation reverses the frame signal rather than converting spin to a finite-field coefficient
+  ---
+  duration_ms: 0.7113
+  type: 'test'
+  ...
+# Subtest: zero frame-dragging data retains an explicit zero signal without inventing a normalized state
+ok 208 - zero frame-dragging data retains an explicit zero signal without inventing a normalized state
+  ---
+  duration_ms: 0.839
+  type: 'test'
+  ...
+# Subtest: all registered fields transport real component samples without changing their ordinary Lorentzian domain
+ok 209 - all registered fields transport real component samples without changing their ordinary Lorentzian domain
+  ---
+  duration_ms: 3.3543
+  type: 'test'
+  ...
+# Subtest: hypothetical profiles retain toy-status codecs and distinguish zero passage data from a prepared amplitude
+ok 210 - hypothetical profiles retain toy-status codecs and distinguish zero passage data from a prepared amplitude
+  ---
+  duration_ms: 1.9976
+  type: 'test'
+  ...
+# Subtest: zero-cover toy branch has identical passage signals and Fourier encodings, with assumption metadata retained
+ok 211 - zero-cover toy branch has identical passage signals and Fourier encodings, with assumption metadata retained
+  ---
+  duration_ms: 1.72
+  type: 'test'
+  ...
+# Subtest: profile rejects nonphysical coordinates, unknown components, substituted fields and unbounded signal preparation
+ok 212 - profile rejects nonphysical coordinates, unknown components, substituted fields and unbounded signal preparation
+  ---
+  duration_ms: 3.5785
+  type: 'test'
+  ...
+# Subtest: finite Fourier transport cannot classify the hidden branch of identical declared exterior observations
+ok 213 - finite Fourier transport cannot classify the hidden branch of identical declared exterior observations
+  ---
+  duration_ms: 1.0327
+  type: 'test'
+  ...
+# Subtest: full reapplication saves complete source coverage and keeps metric tensors separate from finite amplitude operators
+ok 214 - full reapplication saves complete source coverage and keeps metric tensors separate from finite amplitude operators
+  ---
+  duration_ms: 188.6165
+  type: 'test'
+  ...
+# Subtest: rehashed radial preparation metadata cannot falsify its grid, units, family or scale
+ok 215 - rehashed radial preparation metadata cannot falsify its grid, units, family or scale
+  ---
+  duration_ms: 346.5039
+  type: 'test'
+  ...
+# Subtest: a zero frame-dragging profile cannot import as a positive-scale normalized preparation
+ok 216 - a zero frame-dragging profile cannot import as a positive-scale normalized preparation
+  ---
+  duration_ms: 105.4717
+  type: 'test'
+  ...
+# Subtest: rehashed hypothetical preparations cannot invent spin nodes, units, domain claims or a sealed passage state
+ok 217 - rehashed hypothetical preparations cannot invent spin nodes, units, domain claims or a sealed passage state
+  ---
+  duration_ms: 200.3801
+  type: 'test'
+  ...
+# Subtest: valid exterior and hypothetical preparations round-trip on every registered field, including large allowed radius scales
+ok 218 - valid exterior and hypothetical preparations round-trip on every registered field, including large allowed radius scales
+  ---
+  duration_ms: 3068.6844
+  type: 'test'
+  ...
+# Subtest: relative scale validation remains meaningful for extremely small nonzero frame samples
+ok 219 - relative scale validation remains meaningful for extremely small nonzero frame samples
+  ---
+  duration_ms: 83.1911
+  type: 'test'
+  ...
+# Subtest: preparation followed by unitary gates exports and imports the operated state without replaying provenance
+ok 220 - preparation followed by unitary gates exports and imports the operated state without replaying provenance
+  ---
+  duration_ms: 1166.0534
+  type: 'test'
+  ...
+# Subtest: scenario module has identical CommonJS and browser entry points
+ok 221 - scenario module has identical CommonJS and browser entry points
+  ---
+  duration_ms: 6.5702
+  type: 'test'
+  ...
+# Subtest: aperture critical equality is closed and opening is restricted to the upper side
+ok 222 - aperture critical equality is closed and opening is restricted to the upper side
+  ---
+  duration_ms: 1.1314
+  type: 'test'
+  ...
+# Subtest: integrated cover mass uses density times area rather than the density alone
+ok 223 - integrated cover mass uses density times area rather than the density alone
+  ---
+  duration_ms: 2.8616
+  type: 'test'
+  ...
+# Subtest: spin/critical control round trip closes at complementary decimal equality without a broad tolerance
+ok 224 - spin/critical control round trip closes at complementary decimal equality without a broad tolerance
+  ---
+  duration_ms: 0.6845
+  type: 'test'
+  ...
+# Subtest: seal threshold equality seals the Aggie branch while the lower side stays unsealed
+ok 225 - seal threshold equality seals the Aggie branch while the lower side stays unsealed
+  ---
+  duration_ms: 0.6856
+  type: 'test'
+  ...
+# Subtest: equal shared exterior observations leave every prior unchanged
+ok 226 - equal shared exterior observations leave every prior unchanged
+  ---
+  duration_ms: 1.2802
+  type: 'test'
+  ...
+# Subtest: a Fourier basis change cannot distinguish two identical observable encodings
+ok 227 - a Fourier basis change cannot distinguish two identical observable encodings
+  ---
+  duration_ms: 1.7341
+  type: 'test'
+  ...
+# Subtest: optional passage probe distinguishes only a declared branch difference and relaxes the all-tests premise
+ok 228 - optional passage probe distinguishes only a declared branch difference and relaxes the all-tests premise
+  ---
+  duration_ms: 0.3906
+  type: 'test'
+  ...
+# Subtest: sealed zero-signal profile has a zero transform but no normalized state
+ok 229 - sealed zero-signal profile has a zero transform but no normalized state
+  ---
+  duration_ms: 4.5338
+  type: 'test'
+  ...
+# Subtest: unsealed passage profiles match and coordinate order is an explicit real sample grid
+ok 230 - unsealed passage profiles match and coordinate order is an explicit real sample grid
+  ---
+  duration_ms: 1.287
+  type: 'test'
+  ...
+# Subtest: logical equivalence identity is GF4 bookkeeping with spin epsilon kept separate
+ok 231 - logical equivalence identity is GF4 bookkeeping with spin epsilon kept separate
+  ---
+  duration_ms: 4.164
+  type: 'test'
+  ...
+# Subtest: nonunitary I+epsilonMap*K retains the calculated output norm without renormalization
+ok 232 - nonunitary I+epsilonMap*K retains the calculated output norm without renormalization
+  ---
+  duration_ms: 1.9802
+  type: 'test'
+  ...
+# Subtest: malformed scalar parameters, exterior violations and direct aperture arguments are rejected
+ok 233 - malformed scalar parameters, exterior violations and direct aperture arguments are rejected
+  ---
+  duration_ms: 1.55
+  type: 'test'
+  ...
+# Subtest: dense-array limits, patch schemas and logical map dimensions are enforced
+ok 234 - dense-array limits, patch schemas and logical map dimensions are enforced
+  ---
+  duration_ms: 1.8766
+  type: 'test'
+  ...
+# Subtest: accessor-backed parameters, observations, patches, K, and state reject without reads or mutation
+ok 235 - accessor-backed parameters, observations, patches, K, and state reject without reads or mutation
+  ---
+  duration_ms: 1.9247
+  type: 'test'
+  ...
+# Subtest: hypothetical passage, formation, electromagnetism and timelessness remain qualified assumptions
+ok 236 - hypothetical passage, formation, electromagnetism and timelessness remain qualified assumptions
+  ---
+  duration_ms: 0.3231
+  type: 'test'
+  ...
+# Subtest: refined module loads in CommonJS and a dependency-free browser context
+ok 237 - refined module loads in CommonJS and a dependency-free browser context
+  ---
+  duration_ms: 5.746
+  type: 'test'
+  ...
+# Subtest: quadratic character matches the explicitly enumerated GF9 squares
+ok 238 - quadratic character matches the explicitly enumerated GF9 squares
+  ---
+  duration_ms: 2.908
+  type: 'test'
+  ...
+# Subtest: every GF9 displacement column matches an independent explicit ZX matrix
+ok 239 - every GF9 displacement column matches an independent explicit ZX matrix
+  ---
+  duration_ms: 42.5135
+  type: 'test'
+  ...
+# Subtest: GF9 displacement inverse and composition retain the required half-phase sign
+ok 240 - GF9 displacement inverse and composition retain the required half-phase sign
+  ---
+  duration_ms: 33.4079
+  type: 'test'
+  ...
+# Subtest: displacement traces distinguish the identity from all other phase-space points
+ok 241 - displacement traces distinguish the identity from all other phase-space points
+  ---
+  duration_ms: 15.9235
+  type: 'test'
+  ...
+# Subtest: all GF9 reflections match explicit Hermitian, unit-trace involutions
+ok 242 - all GF9 reflections match explicit Hermitian, unit-trace involutions
+  ---
+  duration_ms: 11.3336
+  type: 'test'
+  ...
+# Subtest: the reflection matrices form a trace-orthogonal operator basis
+ok 243 - the reflection matrices form a trace-orthogonal operator basis
+  ---
+  duration_ms: 12.5092
+  type: 'test'
+  ...
+# Subtest: basis-state Wigner grids are positive lines with zero base-2 mana
+ok 244 - basis-state Wigner grids are positive lines with zero base-2 mana
+  ---
+  duration_ms: 8.3317
+  type: 'test'
+  ...
+# Subtest: momentum eigenstates verify the momentum axis uses the inverse Fourier marginal
+ok 245 - momentum eigenstates verify the momentum axis uses the inverse Fourier marginal
+  ---
+  duration_ms: 2.1315
+  type: 'test'
+  ...
+# Subtest: a two-basis superposition has an independently known negative Wigner row
+ok 246 - a two-basis superposition has an independently known negative Wigner row
+  ---
+  duration_ms: 2.3468
+  type: 'test'
+  ...
+# Subtest: Wigner expectations, both marginals, and purity agree for a generic complex state
+ok 247 - Wigner expectations, both marginals, and purity agree for a generic complex state
+  ---
+  duration_ms: 5.9797
+  type: 'test'
+  ...
+# Subtest: displacements translate the Wigner grid by their field labels
+ok 248 - displacements translate the Wigner grid by their field labels
+  ---
+  duration_ms: 5.1407
+  type: 'test'
+  ...
+# Subtest: symplectic label maps preserve omega exactly when the field determinant is one
+ok 249 - symplectic label maps preserve omega exactly when the field determinant is one
+  ---
+  duration_ms: 0.9504
+  type: 'test'
+  ...
+# Subtest: invalid labels, characteristic two, and unnormalized Wigner inputs do not mutate states
+ok 250 - invalid labels, characteristic two, and unnormalized Wigner inputs do not mutate states
+  ---
+  duration_ms: 4.647
+  type: 'test'
+  ...
+# Subtest: exports one immutable API to CommonJS and browser global
+ok 251 - exports one immutable API to CommonJS and browser global
+  ---
+  duration_ms: 2.1127
+  type: 'test'
+  ...
+# Subtest: CG coefficients reproduce independent spin-half singlet and triplet states
+ok 252 - CG coefficients reproduce independent spin-half singlet and triplet states
+  ---
+  duration_ms: 3.7285
+  type: 'test'
+  ...
+# Subtest: CG matches the three published SymPy documentation examples
+ok 253 - CG matches the three published SymPy documentation examples
+  ---
+  duration_ms: 0.3586
+  type: 'test'
+  ...
+# Subtest: CG selection rules return zero while invalid numeric domains reject
+ok 254 - CG selection rules return zero while invalid numeric domains reject
+  ---
+  duration_ms: 1.4761
+  type: 'test'
+  ...
+# Subtest: CG highest weights and singlet phases hold throughout the bounded spin range
+ok 255 - CG highest weights and singlet phases hold throughout the bounded spin range
+  ---
+  duration_ms: 2.1653
+  type: 'test'
+  ...
+# Subtest: CG coupled bases are orthonormal and complete for integer and half-integer spins
+ok 256 - CG coupled bases are orthonormal and complete for integer and half-integer spins
+  ---
+  duration_ms: 10.2107
+  type: 'test'
+  ...
+# Subtest: CG agrees with an independent exact-rational Python DLMF 3j reference
+ok 257 - CG agrees with an independent exact-rational Python DLMF 3j reference
+  ---
+  duration_ms: 218.7445
+  type: 'test'
+  ...
+# Subtest: arithmetic delta uses exact signed integers and the canonical p-squared residue
+ok 258 - arithmetic delta uses exact signed integers and the canonical p-squared residue
+  ---
+  duration_ms: 1.558
+  type: 'test'
+  ...
+# Subtest: arithmetic delta is invariant under changing the p-squared representative
+ok 259 - arithmetic delta is invariant under changing the p-squared representative
+  ---
+  duration_ms: 3.1916
+  type: 'test'
+  ...
+# Subtest: Eq 319 arithmetic Leibniz identity holds over complete small residue rings
+ok 260 - Eq 319 arithmetic Leibniz identity holds over complete small residue rings
+  ---
+  duration_ms: 1.9046
+  type: 'test'
+  ...
+# Subtest: arithmetic delta is not additive and does not invent a Fermat quotient for nonunits
+ok 261 - arithmetic delta is not additive and does not invent a Fermat quotient for nonunits
+  ---
+  duration_ms: 0.7423
+  type: 'test'
+  ...
+# Subtest: Cayley diagonal evolution matches its exact rational complex phase
+ok 262 - Cayley diagonal evolution matches its exact rational complex phase
+  ---
+  duration_ms: 1.6085
+  type: 'test'
+  ...
+# Subtest: Cayley sigma-x and complex sigma-y implement the conventional forward-time sign
+ok 263 - Cayley sigma-x and complex sigma-y implement the conventional forward-time sign
+  ---
+  duration_ms: 0.7138
+  type: 'test'
+  ...
+# Subtest: Cayley inverse time restores an eight-component state without renormalization
+ok 264 - Cayley inverse time restores an eight-component state without renormalization
+  ---
+  duration_ms: 1.885
+  type: 'test'
+  ...
+# Subtest: Cayley rejects non-Hermitian, malformed, excessive and nonfinite inputs
+ok 265 - Cayley rejects non-Hermitian, malformed, excessive and nonfinite inputs
+  ---
+  duration_ms: 2.0607
+  type: 'test'
+  ...
+# Subtest: Cayley bounds the scaled matrix and rejects executable or sparse data
+ok 266 - Cayley bounds the scaled matrix and rejects executable or sparse data
+  ---
+  duration_ms: 0.7547
+  type: 'test'
+  ...
+1..266
+# tests 266
+# suites 0
+# pass 266
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5807.6745

@@ -1,0 +1,3493 @@
+{
+  "schema": "QUORUM-NATIVE-CORE-BATCH/2.0.1",
+  "count": 42,
+  "all_pass": 42,
+  "modules": [
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "25_media_export",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 2007.168,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 2004.796,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1118.706,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 2122.936,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.263086468,
+          "parallel_seconds": 0.008210991,
+          "speedup": 32.040769256719436,
+          "efficiency": 16.020384628359718,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "26_full_stack_ui",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1994.932,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 2146.188,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1255.435,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 2357.912,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.228173896,
+          "parallel_seconds": 0.014200588,
+          "speedup": 16.067918877725344,
+          "efficiency": 8.033959438862672,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "27_deepml_worker",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 2048.518,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 2151.763,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1297.471,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1607.049,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.187576906,
+          "parallel_seconds": 0.013425224,
+          "speedup": 13.971975886584834,
+          "efficiency": 6.985987943292417,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "28_safety_gate",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1369.76,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1805.767,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 936.325,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1541.539,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.299382999,
+          "parallel_seconds": 0.00918808,
+          "speedup": 32.58384765914097,
+          "efficiency": 16.291923829570486,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "29_archive_ledger",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1505.043,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1832.337,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1144.2,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1865.269,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.225657656,
+          "parallel_seconds": 0.00341264,
+          "speedup": 66.1240728585494,
+          "efficiency": 33.0620364292747,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "30_ja_adapter",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1366.76,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1436.826,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1574.776,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1622.736,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.186620113,
+          "parallel_seconds": 0.001830501,
+          "speedup": 101.95029284332541,
+          "efficiency": 50.97514642166271,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "31_vexxa",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1898.234,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1727.231,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1723.879,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 2392.399,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.301384353,
+          "parallel_seconds": 0.034739577,
+          "speedup": 8.67553318222614,
+          "efficiency": 4.33776659111307,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "32_orchestrator_ii",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1849.321,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1839.161,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1732.731,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1390.454,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.174596082,
+          "parallel_seconds": 0.002034094,
+          "speedup": 85.83481491022539,
+          "efficiency": 42.917407455112695,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "33_visual_feedback",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1440.107,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1905.36,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1588.726,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 2503.987,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.451312212,
+          "parallel_seconds": 0.014034766,
+          "speedup": 32.156732217694255,
+          "efficiency": 16.078366108847128,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "34_animation_vfx_workspace",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1341.083,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 2104.25,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1842.864,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 2112.664,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.299950943,
+          "parallel_seconds": 0.015969996,
+          "speedup": 18.782155173990027,
+          "efficiency": 9.391077586995014,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "35_app_designer",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1527.409,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1493.101,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1406.629,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1658.203,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.185949832,
+          "parallel_seconds": 0.007163704,
+          "speedup": 25.957218779558733,
+          "efficiency": 12.978609389779367,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "36_visual_correction_system",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1775.886,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 2092.326,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1457.574,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 2104.952,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.292704181,
+          "parallel_seconds": 0.018417618,
+          "speedup": 15.892618741468088,
+          "efficiency": 7.946309370734044,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "37_training_and_evaluation",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1594.912,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1600.122,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1596.247,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1899.491,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.203950246,
+          "parallel_seconds": 0.040976842,
+          "speedup": 4.977207516382058,
+          "efficiency": 2.488603758191029,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "38_preview_designer",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1806.074,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1842.26,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1698.078,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1400.792,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.158097585,
+          "parallel_seconds": 0.004774531,
+          "speedup": 33.11269421017478,
+          "efficiency": 16.55634710508739,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "39_core_studio",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1794.985,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1638.422,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1415.282,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1954.908,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.123653913,
+          "parallel_seconds": 0.001764983,
+          "speedup": 70.05954901548627,
+          "efficiency": 35.029774507743134,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "40_repository_context_engine",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1763.048,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1889.731,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1194.804,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 2244.945,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.205816855,
+          "parallel_seconds": 0.024174586,
+          "speedup": 8.513769584306427,
+          "efficiency": 4.256884792153214,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "41_knowledge_repository",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 2149.195,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 2197.381,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1378.393,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1470.831,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.271655118,
+          "parallel_seconds": 0.013310053,
+          "speedup": 20.409769818347076,
+          "efficiency": 10.204884909173538,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "42_transition_plane",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1907.91,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1609.425,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1357.113,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1604.774,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.197525412,
+          "parallel_seconds": 0.003619701,
+          "speedup": 54.569538202188525,
+          "efficiency": 27.284769101094263,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "43_release_plane",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1255.636,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1744.562,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1390.1,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1697.068,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.213271487,
+          "parallel_seconds": 0.005068953,
+          "speedup": 42.07407072032429,
+          "efficiency": 21.037035360162147,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "44_capability_and_security_plane",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1734.009,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1529.129,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1360.694,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 2180.554,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.257364671,
+          "parallel_seconds": 0.002389497,
+          "speedup": 107.7066307260482,
+          "efficiency": 53.8533153630241,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "45_localization_and_large_file_plane",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1850.514,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1530.413,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1212.792,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1663.84,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.219950493,
+          "parallel_seconds": 0.014515844,
+          "speedup": 15.152442599961807,
+          "efficiency": 7.5762212999809035,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "46_air_gap_certification_and_installer_plane",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1595.375,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 2020.611,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1315.766,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 2086.481,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.244781982,
+          "parallel_seconds": 0.012538275,
+          "speedup": 19.52277980822721,
+          "efficiency": 9.761389904113605,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "47_chatbot",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1340.447,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 2102.634,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1256.402,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 2261.576,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.211934041,
+          "parallel_seconds": 0.002225227,
+          "speedup": 95.24153760492749,
+          "efficiency": 47.62076880246374,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "48_answer_modes_and_specialized_roles",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1959.958,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 2295.229,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1533.568,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1800.015,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.141446591,
+          "parallel_seconds": 0.015058998,
+          "speedup": 9.392828858865643,
+          "efficiency": 4.696414429432822,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "49_action_cards",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1876.484,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 2198.89,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1398.058,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1600.176,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.158125225,
+          "parallel_seconds": 0.007756286,
+          "speedup": 20.386719236500564,
+          "efficiency": 10.193359618250282,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "50_diff_patch_and_review",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1944.291,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1460.074,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1422.94,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1719.489,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.186616132,
+          "parallel_seconds": 0.008290199,
+          "speedup": 22.510452644140386,
+          "efficiency": 11.255226322070193,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "51_repository_retrieval_and_memory",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1687.01,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 2282.944,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1866.856,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1490.987,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.236173311,
+          "parallel_seconds": 0.029799643,
+          "speedup": 7.925373837532215,
+          "efficiency": 3.9626869187661073,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "52_evaluation_and_content_defense",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1968.06,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1501.975,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1333.045,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1961.187,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.149561676,
+          "parallel_seconds": 0.007005453,
+          "speedup": 21.349322591986557,
+          "efficiency": 10.674661295993278,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "53_operations_plane",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1010.514,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1345.105,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1287.694,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1834.091,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.220783262,
+          "parallel_seconds": 0.038910966,
+          "speedup": 5.674062730799333,
+          "efficiency": 2.8370313653996666,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "54_local_model_provider_and_health",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 2020.745,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1902.232,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1539.348,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1699.917,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.175075078,
+          "parallel_seconds": 0.001645585,
+          "speedup": 106.39078382459734,
+          "efficiency": 53.19539191229867,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "55_capability_manifests_and_permissions",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1770.026,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1428.68,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1570.867,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1617.81,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.137270787,
+          "parallel_seconds": 0.009761462,
+          "speedup": 14.062523318740574,
+          "efficiency": 7.031261659370287,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "56_job_queue_workers_and_sandboxes",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1710.227,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1529.09,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1249.777,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1757.07,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.183859618,
+          "parallel_seconds": 0.013928933,
+          "speedup": 13.19983504838454,
+          "efficiency": 6.59991752419227,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "57_translation_build_test_and_evaluation_jobs",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1603.351,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1798.84,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1897.449,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1235.179,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.107331027,
+          "parallel_seconds": 0.001844928,
+          "speedup": 58.17626866739515,
+          "efficiency": 29.088134333697575,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "58_indexing_storage_resources_logs_and_recovery",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1708.073,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 2105.912,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1066.573,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1840.181,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.185081096,
+          "parallel_seconds": 0.013218815,
+          "speedup": 14.00133794141154,
+          "efficiency": 7.00066897070577,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "59_shell",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1534.742,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1498.626,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1099.067,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1579.357,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.246554392,
+          "parallel_seconds": 0.005023866,
+          "speedup": 49.076625849495194,
+          "efficiency": 24.538312924747597,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "60_worker",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 2081.38,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1770.464,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1187.801,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 1267.592,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.183333529,
+          "parallel_seconds": 0.011378444,
+          "speedup": 16.1123549933541,
+          "efficiency": 8.05617749667705,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "61_popup_runner",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1865.888,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 703.77,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 880.671,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 668.955,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.076382364,
+          "parallel_seconds": 0.008509845,
+          "speedup": 8.97576442344132,
+          "efficiency": 4.48788221172066,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "62_landon_integration_and_run_all",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1426.239,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 945.04,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 851.59,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 732.431,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.068232725,
+          "parallel_seconds": 0.001815874,
+          "speedup": 37.575693577858374,
+          "efficiency": 18.787846788929187,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "63_sandbox_and_offline_runtime",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1503.474,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 979.297,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 1015.207,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 599.831,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.037248579,
+          "parallel_seconds": 0.00194249,
+          "speedup": 19.175686361319748,
+          "efficiency": 9.587843180659874,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "64_training_desktop_and_android_workers",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1278.634,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 691.309,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 643.679,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 676.95,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.061164186,
+          "parallel_seconds": 0.00256749,
+          "speedup": 23.82256055525046,
+          "efficiency": 11.91128027762523,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "65_sandbox_engine",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1530.73,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 868.055,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 782.839,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 426.465,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.039109757,
+          "parallel_seconds": 0.001549274,
+          "speedup": 25.24392521916717,
+          "efficiency": 12.621962609583585,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    },
+    {
+      "schema": "QUORUM-MODULE-NATIVE-CORE/2.0.1",
+      "module": "66_terminal",
+      "scope": "native_lctl_core_reference_not_domain_behavior",
+      "protocol": {
+        "exit_code": 0,
+        "elapsed_ms": 1204.895,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "seed": 1,
+          "ebits_generated": 0,
+          "ebits_consumed": 0,
+          "ebits_remaining": 0,
+          "teleports": 0,
+          "remote_gates": 0,
+          "swaps": 0,
+          "feedback_ops": 0,
+          "ownership_model": "TRANSFER_NOT_CLONE",
+          "events": ""
+        },
+        "stderr": ""
+      },
+      "distributed": {
+        "exit_code": 0,
+        "elapsed_ms": 1010.638,
+        "output": {
+          "status": "PASS",
+          "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+          "physical_qpu": false,
+          "physical_distributed": false,
+          "quantum_boundary": "NOT_CROSSED",
+          "workers": 2,
+          "qubits": 1,
+          "amplitudes": 2,
+          "gates": 0,
+          "bytes_touched_estimate": 0,
+          "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "max_equivalence_error": 0.0,
+          "equivalence_pass": true
+        },
+        "stderr": ""
+      },
+      "replay": {
+        "exit_code": 0,
+        "elapsed_ms": 619.724,
+        "output": {
+          "status": "PASS",
+          "execution_class": "DETERMINISTIC_REPLAY",
+          "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+          "events_detected": 1
+        },
+        "stderr": ""
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "elapsed_ms": 566.206,
+        "output": {
+          "schema": "LCTL-BENCH/1.0",
+          "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+          "workers": 2,
+          "serial_seconds": 0.031751779,
+          "parallel_seconds": 0.00164345,
+          "speedup": 19.320197754723296,
+          "efficiency": 9.660098877361648,
+          "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+          "semantic_equivalence": true,
+          "warning": "simulator scaling is not QPU scaling"
+        },
+        "stderr": ""
+      },
+      "checks": {
+        "protocol_pass": true,
+        "distributed_pass": true,
+        "replay_pass": true,
+        "benchmark_equivalence_pass": true
+      },
+      "all_core_pass": true
+    }
+  ]
+}

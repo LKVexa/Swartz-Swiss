@@ -1,0 +1,111 @@
+{
+  "decision": "OPERATIONAL",
+  "package": "BR-420-10",
+  "requirements": [
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-10_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: spec_compiler_sync",
+      "requirement": "Synchronize BR_SPEC",
+      "requirement_id": "BR-420-10-R01",
+      "result": "PASS",
+      "sha256": "53689020dc925b3e523fd07fc19d4110b3133bde8ae16f50e876e4270f01dc57",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-10_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: header_opcode_sync",
+      "requirement": "Synchronize LCTL specification",
+      "requirement_id": "BR-420-10-R02",
+      "result": "PASS",
+      "sha256": "53689020dc925b3e523fd07fc19d4110b3133bde8ae16f50e876e4270f01dc57",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-10_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: runtime_opcode_version_sync",
+      "requirement": "Synchronize C header",
+      "requirement_id": "BR-420-10-R03",
+      "result": "PASS",
+      "sha256": "53689020dc925b3e523fd07fc19d4110b3133bde8ae16f50e876e4270f01dc57",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-10_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: independent_verifier_sync",
+      "requirement": "Synchronize opcode implementation",
+      "requirement_id": "BR-420-10-R04",
+      "result": "PASS",
+      "sha256": "53689020dc925b3e523fd07fc19d4110b3133bde8ae16f50e876e4270f01dc57",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-10_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: documentation_tests_sync",
+      "requirement": "Synchronize compiler tables",
+      "requirement_id": "BR-420-10-R05",
+      "result": "PASS",
+      "sha256": "53689020dc925b3e523fd07fc19d4110b3133bde8ae16f50e876e4270f01dc57",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-10_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: spec_compiler_sync",
+      "requirement": "Synchronize verifier tables",
+      "requirement_id": "BR-420-10-R06",
+      "result": "PASS",
+      "sha256": "53689020dc925b3e523fd07fc19d4110b3133bde8ae16f50e876e4270f01dc57",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-10_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: header_opcode_sync",
+      "requirement": "Synchronize documentation",
+      "requirement_id": "BR-420-10-R07",
+      "result": "PASS",
+      "sha256": "53689020dc925b3e523fd07fc19d4110b3133bde8ae16f50e876e4270f01dc57",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-10_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: runtime_opcode_version_sync",
+      "requirement": "Synchronize tests",
+      "requirement_id": "BR-420-10-R08",
+      "result": "PASS",
+      "sha256": "53689020dc925b3e523fd07fc19d4110b3133bde8ae16f50e876e4270f01dc57",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "title": "Specification synchronization"
+}

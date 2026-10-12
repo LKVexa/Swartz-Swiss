@@ -1,0 +1,110 @@
+{
+  "authority_sha256": "f786fba8a727de5491af4136b3ee539c560114ac156b7185de122f260be9e512",
+  "domain_output": {
+    "decision": {
+      "accepted": true,
+      "confidence": 0.269531,
+      "explanation": "Reference decision produced by Illuminator under deterministic offline profile.",
+      "route": "illuminator"
+    },
+    "input_type": "request/context",
+    "legacy_signals": [
+      "RENDER",
+      "PACKAGE"
+    ],
+    "module": "Illuminator",
+    "output_type": "decision/explanation",
+    "payload_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "plane": "intent_reasoning",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "b73c5357c9db81a6d1bfac19bd7302b9d261ca4ababb4b507953abb202461903",
+  "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "module": "Illuminator",
+  "module_id": 10,
+  "plane": "intent_reasoning",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "b5a51c2405e5d9f12ad6cd78b38f2575c6c21e53e47f48c29afb57545e4ccb0f",
+  "stage_count": 9,
+  "stages": [
+    {
+      "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "node": "N01",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "5e94e6f666d46896ad2c1961c26145697df7874c9b689a1428236ad30a211543",
+      "stage": "REQUEST"
+    },
+    {
+      "input_sha256": "5e94e6f666d46896ad2c1961c26145697df7874c9b689a1428236ad30a211543",
+      "node": "N02",
+      "operator": "RETRIEVE",
+      "output_sha256": "3e1469ae9953c5de19d49e0dd03d7699dbd6c95ddaa7135c12582c010d45fc90",
+      "retrieved_count": 0,
+      "stage": "CONTEXT"
+    },
+    {
+      "input_sha256": "3e1469ae9953c5de19d49e0dd03d7699dbd6c95ddaa7135c12582c010d45fc90",
+      "node": "N03",
+      "normalized_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "operator": "PARSE",
+      "output_sha256": "dd5fbbcd624dc4f8c60cee9626ff92b64097d9ffd34c34c923289a08c8051166",
+      "stage": "INTERPRET"
+    },
+    {
+      "decision": "REFERENCE_CONTINUE",
+      "input_sha256": "dd5fbbcd624dc4f8c60cee9626ff92b64097d9ffd34c34c923289a08c8051166",
+      "node": "N04",
+      "operator": "REASON",
+      "output_sha256": "ef97d4321a8797bf2185817d48e6e9c7c53fe297817e94423359f8eb68d54cf6",
+      "score": 0.504412,
+      "stage": "REASON"
+    },
+    {
+      "accepted": true,
+      "input_sha256": "ef97d4321a8797bf2185817d48e6e9c7c53fe297817e94423359f8eb68d54cf6",
+      "node": "N05",
+      "operator": "FILTER",
+      "output_sha256": "ffe7e4f1dcf12165008654ce5b4e607faca8ed0fb6d10c8a6b36a4b4438fdd58",
+      "stage": "FILTER"
+    },
+    {
+      "input_sha256": "ffe7e4f1dcf12165008654ce5b4e607faca8ed0fb6d10c8a6b36a4b4438fdd58",
+      "node": "N06",
+      "operator": "RANK",
+      "output_sha256": "11d14d4bfc8c550a200f5f940d4ef499a02d8aa78563c63e72362c5bb7d3bcd3",
+      "rank_score": 0.513725,
+      "stage": "RANK"
+    },
+    {
+      "input_sha256": "11d14d4bfc8c550a200f5f940d4ef499a02d8aa78563c63e72362c5bb7d3bcd3",
+      "node": "N07",
+      "operator": "VALIDATE",
+      "output_sha256": "b5367f2e76a9638eb1eacc9e65c74605dfd214e1bbf4da551d543231166462d7",
+      "stage": "VALIDATE",
+      "valid": true
+    },
+    {
+      "explanation": "Illuminator:EXPLAIN reference semantics completed.",
+      "input_sha256": "b5367f2e76a9638eb1eacc9e65c74605dfd214e1bbf4da551d543231166462d7",
+      "node": "N08",
+      "operator": "EXPLAIN",
+      "output_sha256": "a8b67afca075989a0d58eb78aed7ed103c367d979390ade86c3ed15a5fc3e93d",
+      "stage": "EXPLAIN"
+    },
+    {
+      "input_sha256": "a8b67afca075989a0d58eb78aed7ed103c367d979390ade86c3ed15a5fc3e93d",
+      "node": "N09",
+      "operator": "RECORD",
+      "output_sha256": "6e644662bcf672f17723136089586ccd73461eda6e9bb6c287c8f76562f0a1a2",
+      "receipt_sha256": "67740b5b794654813809789d5ac3ba5eb1ff1a2ed51ecb8847e1e3a4a85f56ad",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

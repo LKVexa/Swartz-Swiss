@@ -1,0 +1,39 @@
+ja source 0.3
+module suite31.vexxa.operator_control
+use Service
+policy explicit_network
+
+service VexxaOperatorControl {
+    message OperatorCommandRequest {
+        request_id: Text,
+        operator_id: Text,
+        command_id: Text,
+        action: Text,
+        target_binding_id: Text,
+        expected_state_hash: Text,
+        approval_receipt: Text
+    }
+    message OperatorCommandResponse {
+        authorization_status: Text,
+        command_status: Text,
+        resulting_state_hash: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_infrastructure_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint command(request: OperatorCommandRequest) -> Stream<OperatorCommandResponse>
+        auth capability vexxa.operator.command
+        deadline 30s
+        retry max 0
+        idempotency request.request_id
+    protocol OperatorCommandSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json VexxaOperatorControl.compatibility_report

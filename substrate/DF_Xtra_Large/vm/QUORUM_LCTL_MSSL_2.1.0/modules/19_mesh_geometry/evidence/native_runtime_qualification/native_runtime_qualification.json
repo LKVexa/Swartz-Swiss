@@ -1,0 +1,257 @@
+{
+  "module": "19_mesh_geometry",
+  "lctl": "modules/19_mesh_geometry/execution/module.lctl",
+  "protocol": {
+    "exit_code": 0,
+    "elapsed_ms": 688.015,
+    "output": {
+      "status": "PASS",
+      "execution_class": "DISTRIBUTED_PROTOCOL_EMULATION",
+      "physical_qpu": false,
+      "physical_distributed": false,
+      "quantum_boundary": "NOT_CROSSED",
+      "seed": 1,
+      "ebits_generated": 0,
+      "ebits_consumed": 0,
+      "ebits_remaining": 0,
+      "teleports": 0,
+      "remote_gates": 0,
+      "swaps": 0,
+      "feedback_ops": 0,
+      "ownership_model": "TRANSFER_NOT_CLONE",
+      "events": ""
+    },
+    "stderr": ""
+  },
+  "replay": {
+    "exit_code": 0,
+    "elapsed_ms": 577.901,
+    "output": {
+      "status": "PASS",
+      "execution_class": "DETERMINISTIC_REPLAY",
+      "trace_sha256": "3aafbbfb825495b9b89dfbddd78ccdd537a887067e14e2b9e49ad44b2efe829a",
+      "events_detected": 1
+    },
+    "stderr": ""
+  },
+  "distributed": {
+    "exit_code": 0,
+    "elapsed_ms": 813.433,
+    "output": {
+      "status": "PASS",
+      "execution_class": "CLASSICAL_DISTRIBUTED_STATEVECTOR_SIMULATION",
+      "physical_qpu": false,
+      "physical_distributed": false,
+      "quantum_boundary": "NOT_CROSSED",
+      "workers": 2,
+      "qubits": 1,
+      "amplitudes": 2,
+      "gates": 0,
+      "bytes_touched_estimate": 0,
+      "state_sha256": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+      "max_equivalence_error": 0.0,
+      "equivalence_pass": true
+    },
+    "stderr": ""
+  },
+  "benchmark": {
+    "exit_code": 0,
+    "elapsed_ms": 686.511,
+    "output": {
+      "schema": "LCTL-BENCH/1.0",
+      "execution_class": "CLASSICAL_DISTRIBUTED_SIMULATION_BENCHMARK",
+      "workers": 2,
+      "serial_seconds": 0.125549331,
+      "parallel_seconds": 0.002666994,
+      "speedup": 47.075220641666235,
+      "efficiency": 23.537610320833117,
+      "serial_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+      "parallel_hash": "41e57a811ac9776a5931d1ac2f1f354df344c042329b13e20b4b516db8b78410",
+      "semantic_equivalence": true,
+      "warning": "simulator scaling is not QPU scaling"
+    },
+    "stderr": ""
+  },
+  "error_algebra": {
+    "exit_code": 0,
+    "elapsed_ms": 833.29,
+    "output": {
+      "schema": "LCTL-ERROR-ALGEBRA/1.0",
+      "typed_rows": 0,
+      "additive_declared_bounds": 0.0,
+      "composition_assumption": "only directly compatible declared scalar bounds added; incompatible dimensions remain separate",
+      "unresolved": ""
+    },
+    "stderr": ""
+  },
+  "failures": {
+    "node_unavailable": {
+      "inject": {
+        "exit_code": 0,
+        "elapsed_ms": 645.757,
+        "output": {
+          "schema": "LCTL-FAILURE/1.0",
+          "scenario": "node_unavailable",
+          "seed": 1,
+          "detected": true,
+          "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+          "unknown_qstate_checkpoint_copy": false,
+          "event_hash": "0b427363787c22a0277f8c21ad37b9fcd62d746176cfba1d10f954a9c5d5ce13"
+        },
+        "stderr": ""
+      },
+      "recover": {
+        "exit_code": 0,
+        "elapsed_ms": 646.22,
+        "output": {
+          "schema": "LCTL-FAILURE/1.0",
+          "scenario": "node_unavailable",
+          "seed": 1,
+          "detected": true,
+          "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+          "unknown_qstate_checkpoint_copy": false,
+          "event_hash": "0b427363787c22a0277f8c21ad37b9fcd62d746176cfba1d10f954a9c5d5ce13"
+        },
+        "stderr": ""
+      }
+    },
+    "classical_link_timeout": {
+      "inject": {
+        "exit_code": 0,
+        "elapsed_ms": 574.429,
+        "output": {
+          "schema": "LCTL-FAILURE/1.0",
+          "scenario": "classical_link_timeout",
+          "seed": 1,
+          "detected": true,
+          "recovery": "REROUTE_SAFE",
+          "unknown_qstate_checkpoint_copy": false,
+          "event_hash": "2b697812a9fe8395534c7a72eacd2947664420a8bc7c4b78134ea6e0037a746d"
+        },
+        "stderr": ""
+      },
+      "recover": {
+        "exit_code": 0,
+        "elapsed_ms": 742.029,
+        "output": {
+          "schema": "LCTL-FAILURE/1.0",
+          "scenario": "classical_link_timeout",
+          "seed": 1,
+          "detected": true,
+          "recovery": "REROUTE_SAFE",
+          "unknown_qstate_checkpoint_copy": false,
+          "event_hash": "2b697812a9fe8395534c7a72eacd2947664420a8bc7c4b78134ea6e0037a746d"
+        },
+        "stderr": ""
+      }
+    },
+    "classical_packet_loss": {
+      "inject": {
+        "exit_code": 0,
+        "elapsed_ms": 957.806,
+        "output": {
+          "schema": "LCTL-FAILURE/1.0",
+          "scenario": "classical_packet_loss",
+          "seed": 1,
+          "detected": true,
+          "recovery": "REROUTE_SAFE",
+          "unknown_qstate_checkpoint_copy": false,
+          "event_hash": "90e84f683bf0f611f3de5d69252c445ea4971b01bec5a9eb8d106f0abe7ffa33"
+        },
+        "stderr": ""
+      },
+      "recover": {
+        "exit_code": 0,
+        "elapsed_ms": 933.482,
+        "output": {
+          "schema": "LCTL-FAILURE/1.0",
+          "scenario": "classical_packet_loss",
+          "seed": 1,
+          "detected": true,
+          "recovery": "REROUTE_SAFE",
+          "unknown_qstate_checkpoint_copy": false,
+          "event_hash": "90e84f683bf0f611f3de5d69252c445ea4971b01bec5a9eb8d106f0abe7ffa33"
+        },
+        "stderr": ""
+      }
+    },
+    "quantum_link_failure": {
+      "inject": {
+        "exit_code": 0,
+        "elapsed_ms": 704.383,
+        "output": {
+          "schema": "LCTL-FAILURE/1.0",
+          "scenario": "quantum_link_failure",
+          "seed": 1,
+          "detected": true,
+          "recovery": "REGENERATE_ENTANGLEMENT",
+          "unknown_qstate_checkpoint_copy": false,
+          "event_hash": "c0e2c6db1ed3f782bf83bab9d3bf9a8cf3845b46c09a05d1ce58129b2e888c6e"
+        },
+        "stderr": ""
+      },
+      "recover": {
+        "exit_code": 0,
+        "elapsed_ms": 766.297,
+        "output": {
+          "schema": "LCTL-FAILURE/1.0",
+          "scenario": "quantum_link_failure",
+          "seed": 1,
+          "detected": true,
+          "recovery": "REGENERATE_ENTANGLEMENT",
+          "unknown_qstate_checkpoint_copy": false,
+          "event_hash": "c0e2c6db1ed3f782bf83bab9d3bf9a8cf3845b46c09a05d1ce58129b2e888c6e"
+        },
+        "stderr": ""
+      }
+    },
+    "ebit_generation_failure": {
+      "inject": {
+        "exit_code": 0,
+        "elapsed_ms": 795.561,
+        "output": {
+          "schema": "LCTL-FAILURE/1.0",
+          "scenario": "ebit_generation_failure",
+          "seed": 1,
+          "detected": true,
+          "recovery": "REGENERATE_ENTANGLEMENT",
+          "unknown_qstate_checkpoint_copy": false,
+          "event_hash": "39454d9ab7827365db32cff4a1008b22763634b6102ec22b530382fbabfac33b"
+        },
+        "stderr": ""
+      },
+      "recover": {
+        "exit_code": 0,
+        "elapsed_ms": 746.403,
+        "output": {
+          "schema": "LCTL-FAILURE/1.0",
+          "scenario": "ebit_generation_failure",
+          "seed": 1,
+          "detected": true,
+          "recovery": "REGENERATE_ENTANGLEMENT",
+          "unknown_qstate_checkpoint_copy": false,
+          "event_hash": "39454d9ab7827365db32cff4a1008b22763634b6102ec22b530382fbabfac33b"
+        },
+        "stderr": ""
+      }
+    }
+  },
+  "physical_distributed": {
+    "exit_code": 1,
+    "elapsed_ms": 689.985,
+    "output": {
+      "raw": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+    },
+    "stderr": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+  },
+  "checks": {
+    "protocol_pass": true,
+    "distributed_pass": true,
+    "replay_pass": true,
+    "benchmark_equivalence_pass": true,
+    "failure_detection_pass": true,
+    "recovery_pass": true,
+    "physical_external_authority_gate_pass": true
+  },
+  "all_native_reference_checks_pass": true
+}

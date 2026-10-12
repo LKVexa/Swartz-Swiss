@@ -1,0 +1,33 @@
+{
+  "schema": "QUORUM-STATIC-LEGACY-SIGNAL-COMPARISON/2.0.1",
+  "module_id": 22,
+  "signals_declared": [
+    "pose_constant_folding",
+    "curve_compression_0.001",
+    "dead_channel_removal",
+    "blend_normalization",
+    "retarget_cache",
+    "ik_scheduling",
+    "state_minimization",
+    "OPTIMIZE",
+    "LOWER",
+    "PACKAGE",
+    "CERTIFY"
+  ],
+  "signals_matched": [
+    "pose_constant_folding",
+    "dead_channel_removal",
+    "blend_normalization",
+    "retarget_cache",
+    "ik_scheduling",
+    "state_minimization",
+    "OPTIMIZE",
+    "LOWER",
+    "PACKAGE",
+    "CERTIFY"
+  ],
+  "coverage": 0.9090909090909091,
+  "executable_legacy_runtime_available": false,
+  "L5_certification": false,
+  "claim_boundary": "Static lexical/semantic signal evidence is not executable differential qualification."
+}

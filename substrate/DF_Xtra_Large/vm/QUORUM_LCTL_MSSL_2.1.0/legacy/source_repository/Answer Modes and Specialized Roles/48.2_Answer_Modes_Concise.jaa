@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.answer_modes.concise
+use Agent
+policy no_network
+
+agent AnswerModeConcise {
+    identity "answer_mode_concise"
+    role "sophia-charlotte-landon-professor-podium-answer-mode"
+    goal emit_short_complete_evidence_bound_answer when confidence >= 0.93
+    memory session retention 1h
+    budget steps 35 tools 5
+    tool LANDONCollectEssentialEvidence(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAIdentifyCoreAnswer(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateConciseClaims(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorComposeConciseAnswer(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordConciseAnswer(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectEssentialEvidence
+        authorize SOPHIAIdentifyCoreAnswer
+        authorize CHARLOTTEValidateConciseClaims
+        authorize ProfessorComposeConciseAnswer
+        authorize PodiumRecordConciseAnswer
+        continue when policy_allows
+        execute LANDONCollectEssentialEvidence("selected_request_scope")
+        execute SOPHIAIdentifyCoreAnswer("essential_evidence")
+        execute CHARLOTTEValidateConciseClaims("candidate_core_answer")
+        execute ProfessorComposeConciseAnswer("validated_core_answer")
+        execute PodiumRecordConciseAnswer("concise_answer_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "AnswerModeConcise.mcrt"

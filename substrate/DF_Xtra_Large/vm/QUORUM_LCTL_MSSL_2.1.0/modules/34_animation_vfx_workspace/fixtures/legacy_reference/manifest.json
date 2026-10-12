@@ -1,0 +1,40 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 34,
+  "legacy_root": "legacy/source_repository/Animation VFX Workspace",
+  "legacy_sha256": "f4b69aef3639d32206f389e5d306c6c885648e710b832880c2bb36fb8e149767",
+  "files": [
+    {
+      "path": "34.1_Animation_VFX_Workspace_Animation.deepml",
+      "sha256": "b8589e3436cf72dc2bbbf025412ceb7d4cb1f899bc25559c43eeaf8df1b7ce00",
+      "bytes": 1503
+    },
+    {
+      "path": "34.2_Animation_VFX_Workspace_Effects.deepml",
+      "sha256": "a90ecfdce679399cad24a264118598c753c18c55cbe35ff3b96c2f5fc4d0f07e",
+      "bytes": 1522
+    },
+    {
+      "path": "34.3_Animation_VFX_Workspace_Compositing.deepml",
+      "sha256": "94096add9472e3f354b2225babc23efe12ac80674538f734d913853d5bf80147",
+      "bytes": 1487
+    },
+    {
+      "path": "34.4_Animation_VFX_Workspace_Inspection.deepml",
+      "sha256": "777fef0bafe531b3963e56896fc23aa48ace6d594fe7da67c2d229ede7eb64d2",
+      "bytes": 1508
+    },
+    {
+      "path": "34.5_Animation_VFX_Workspace_Iteration.deepml",
+      "sha256": "7546ab96393a9ab597a7ca45ca3b62f85d905fbe575d6575aa22aa92ea0cd4db",
+      "bytes": 1577
+    },
+    {
+      "path": "README.md",
+      "sha256": "0dc4f8d292f8bbc5bd354db1208bc837a187519a87df7f2f6b47d7c91d7aafd8",
+      "bytes": 13775
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

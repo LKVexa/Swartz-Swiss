@@ -1,0 +1,57 @@
+{
+  "package": "BR-460-05",
+  "record": "BR.PackageRequirements",
+  "requirements": [
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 (constant-pool vectors)",
+      "evidence_path": "evidence/BR-460-05_tests.log",
+      "exit_code": 0,
+      "notes": "Immutable zero/one and bounded constant-pool entries are shared/deduplicated.",
+      "requirement_id": "BR-460-05-R01",
+      "result": "PASS",
+      "sha256": "111c0989ebcd8ab5e48b8586b65f0aa47c04a36ef60dda5332d19e32164046e8",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 (constant-pool vectors)",
+      "evidence_path": "evidence/BR-460-05_tests.log",
+      "exit_code": 0,
+      "notes": "Immutable zero/one and bounded constant-pool entries are shared/deduplicated.",
+      "requirement_id": "BR-460-05-R02",
+      "result": "PASS",
+      "sha256": "111c0989ebcd8ab5e48b8586b65f0aa47c04a36ef60dda5332d19e32164046e8",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 (constant-pool vectors)",
+      "evidence_path": "evidence/BR-460-05_tests.log",
+      "exit_code": 0,
+      "notes": "Immutable zero/one and bounded constant-pool entries are shared/deduplicated.",
+      "requirement_id": "BR-460-05-R03",
+      "result": "PASS",
+      "sha256": "111c0989ebcd8ab5e48b8586b65f0aa47c04a36ef60dda5332d19e32164046e8",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 (constant-pool vectors)",
+      "evidence_path": "evidence/BR-460-05_tests.log",
+      "exit_code": 0,
+      "notes": "Immutable zero/one and bounded constant-pool entries are shared/deduplicated.",
+      "requirement_id": "BR-460-05-R04",
+      "result": "PASS",
+      "sha256": "111c0989ebcd8ab5e48b8586b65f0aa47c04a36ef60dda5332d19e32164046e8",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "status": "OPERATIONAL",
+  "title": "Constant pool",
+  "workflow": "docs/WORKFLOW_APPLIED_4.6.0/05_BR-460-05_constant_pool_PROMPT_AND_WORKFLOW.md"
+}

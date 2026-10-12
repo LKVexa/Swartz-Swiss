@@ -1,0 +1,12 @@
+LCTLC/1.2
+@unit id=bottle.rocket.boot version=4.3.0 language=columned-lctl/4.3 isa=BR/1.1 profile=native target=local-reference network=deny replay=deterministic-seeded state=sealed termination=halt br_image_version=10 br_request_caps=CONTROL|ARITH
+@defaults mode=WRAP width=WIDE region=MEM
+@frame id=FBOOT parent=ROOT module=bottle.rocket.boot
+ID│LANE│OP│OUT│CTRL│IN│ARG│META
+I1│exec│MOVI│R0│C0:CONTROL│_│imm=40│src=boot:1
+I2│exec│MOVI│R1│C0:CONTROL│_│imm=2│src=boot:2
+I3│exec│ADD│R2│C0:ARITH│R0›R1│mode=CHECKED│src=boot:3
+I4│exec│MOVI│R3│C0:CONTROL│_│imm=42│src=boot:4
+I5│exec│CMP│_│C0:ARITH│R2›R3│_│src=boot:5
+I6│exec│HALT│_│C0:CONTROL│_│_│src=boot:6
+@end

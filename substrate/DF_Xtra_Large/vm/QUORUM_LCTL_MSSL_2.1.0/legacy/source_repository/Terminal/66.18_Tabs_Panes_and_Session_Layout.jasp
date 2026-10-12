@@ -1,0 +1,38 @@
+profile ja.interface
+source_level 0.3
+
+subsuite Terminal.T_18 TabsPanesSessionLayout {
+    identity { suite = "66"; id = "T-18"; deterministic = true; autorun = false }
+
+    accept { terminal_run_id; session_layout_request; accessibility_profile; layout_limits }
+    emit TerminalLayoutModel
+
+    procedure open_bounded_layout(terminal_run_id) {
+        layout = normalize_layout(session_layout_request)
+        require layout.tabs <= layout_limits.max_tabs
+        require layout.panes <= layout_limits.max_panes
+        bind_every_pane_to_one_session_identity
+        isolate_pane_environment_and_authority
+        preserve_keyboard_and_screen_reader_order
+        return layout
+    }
+
+    procedure split(source_pane, requested_orientation) {
+        require within_layout_limits
+        new_pane = presentation_session_only
+        new_pane.inherits_no_execution_authority
+        require separate_contract_before_new_execution
+        return new_pane
+    }
+
+    procedure close(pane) {
+        preserve_sealed_evidence
+        cancel_or_detach_only_per_approved_policy
+        remove_presentation_surface
+    }
+
+    deny { shared_ambient_authority; invisible_running_job; unbounded_layout; evidence_loss_on_close }
+    evidence { layout_events; pane_session_map; focus_order; close_disposition }
+    tests { tabs; splits; authority_isolation; limits; keyboard_order; close_running_job }
+}
+

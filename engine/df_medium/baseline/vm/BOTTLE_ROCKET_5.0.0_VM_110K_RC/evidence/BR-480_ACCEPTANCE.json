@@ -1,0 +1,24 @@
+{
+  "blocked_requirements": 8,
+  "blocked_work_packages": 5,
+  "blockers": {
+    "BR-480-13-R04": "AArch64 runtime/cross-toolchain unavailable in this execution environment.",
+    "BR-480-13-R06": "Windows adapter runtime/toolchain unavailable in this execution environment.",
+    "BR-480-14-R01": "No second independent build machine is available to this execution.",
+    "BR-480-14-R02": "No second independent operator is available to this execution.",
+    "BR-480-15-R01": "Literal 72 elapsed hours have not occurred; accelerated cycles are not a substitute.",
+    "BR-480-17-R03": "Strict independent-machine/operator replay is not proven, although implementation-independent local replay passes.",
+    "BR-480-17-R04": "Literal 72-hour soak is incomplete.",
+    "BR-480-17-R05": "Requested AArch64 and Windows conformance evidence is incomplete."
+  },
+  "fuzz_cases": 44700,
+  "fuzz_threshold": 40000,
+  "gate": "BLOCKED",
+  "operational_requirements": 105,
+  "operational_work_packages": 12,
+  "record": "BOTTLE_ROCKET.BR480AcceptanceLedger",
+  "requirements": 113,
+  "unresolved_critical": 0,
+  "unresolved_high": 0,
+  "work_packages": 17
+}

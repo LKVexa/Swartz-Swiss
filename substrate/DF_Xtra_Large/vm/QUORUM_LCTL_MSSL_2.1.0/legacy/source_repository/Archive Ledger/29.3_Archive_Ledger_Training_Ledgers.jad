@@ -1,0 +1,62 @@
+ja source 0.3
+module suite29.archive_ledger.training_ledgers
+use Data
+policy no_network
+
+schema TrainingLedgerRecord {
+    id: Count primary
+    ledger_id: Text
+    training_run_id: Text
+    model_route: Text
+    dataset_version: Text
+    feature_set_hash: Text
+    parameter_hash: Text
+    metric_vector: Vector<f32>[16]
+    sample_count: Count
+    run_status: Text
+    payload_hash: Text
+    sophia_judgment: Text
+    charlotte_validation: Text
+    landon_status: Text
+    professor_explanation: Text?
+    podium_receipt: Text
+    recorded_at: Timestamp
+
+    # --- 8S coupling layer ---
+    relation_class: Text
+    eta_ind: F32
+    g5_latent_gap: F32
+    delta8_separation: F32
+    g3_projected_gap: F32
+    gJ_semantic_gap: F32
+    interaction_order: Count
+    r12_replay_id: Text
+}
+# Smithson 8S Coupled Mechanics v1.0 — data-source coupling header.
+# Local dimension is 5+3=8 where the S^3 fiber is noncollapsed; not the standard
+# sphere S^8 without a separate topological proof. Author: Russell Philip Smithson.
+coupling EightS_v1_0 {
+    framework      "Smithson 8S Coupled Mechanics v1.0"
+    base           "penteract field B^5 = [-1,1]^5"
+    object         "S^3 fiber F_i = { y in R^4 : ||y||_2 = r_i }"
+    fifth_axis     "elucidation coordinate t8"
+    support_layers { SOPHIA; CHARLOTTE; LANDON }
+    admission      eta_ind >= epsilon_ind and Delta_8S > epsilon_gain
+    execution      sparse_pairwise escalate_triadic_on { unresolved; contradiction; high_risk; certification_critical }
+    relation_order { UNRESOLVED; CONTRADICTION; HIGHER_ORDER; PROJECTION_ONLY; LATENT_5D_COUPLED; FIBER_STATE_RESONANT; SEMANTIC_ONLY; REINFORCING; NONE }
+    tolerances     { tol5 = 1e-7L; tol8 = 1e-7L; tol3 = 1e-5L; tolJ = declared }
+}
+
+dataset training_ledger
+    from dmk("archive_ledger_training_runs.dmk")
+    validate TrainingLedgerRecord
+    partition by training_run_id shards 4
+query sealed_training_runs {
+    from training_ledger
+    where podium_receipt != null
+    select id, ledger_id, training_run_id, model_route, dataset_version, feature_set_hash, parameter_hash, metric_vector, sample_count, run_status, payload_hash, sophia_judgment, charlotte_validation, landon_status, professor_explanation, podium_receipt, relation_class, eta_ind, g5_latent_gap, delta8_separation, g3_projected_gap, gJ_semantic_gap, interaction_order, r12_replay_id
+}
+lineage sealed_training_runs from training_ledger
+assert coupling.relation_order.preserved == true
+assert schema.valid == true
+emit json sealed_training_runs

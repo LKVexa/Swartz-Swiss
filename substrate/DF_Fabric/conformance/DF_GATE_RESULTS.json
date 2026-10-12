@@ -1,0 +1,657 @@
+{
+  "df_release": "DF-PA21.2-1.0.0",
+  "executed_at_utc": "2026-08-17T01:35:08.881468Z",
+  "gates": [
+    {
+      "detail": {
+        "reason": "SHA256SUMS.txt not present (pre-seal assembly run)"
+      },
+      "id": "G0.1",
+      "name": "container SHA256SUMS.txt verifies (every delivered byte)",
+      "seconds": 0.0,
+      "status": "SKIPPED"
+    },
+    {
+      "detail": {
+        "reason": "MANIFEST.json not present (pre-seal assembly run)"
+      },
+      "id": "G0.2",
+      "name": "MANIFEST.json inventory matches disk",
+      "seconds": 0.0,
+      "status": "SKIPPED"
+    },
+    {
+      "detail": {
+        "expected": "046a9930c61b1d5a8a98de87b65feb933f8c5979351289953ea72dead5e304a0",
+        "files": 21,
+        "found": "046a9930c61b1d5a8a98de87b65feb933f8c5979351289953ea72dead5e304a0"
+      },
+      "id": "G0.4",
+      "name": "core/pacore tree digest equals the pinned digest",
+      "seconds": 0.003,
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "corpus_records_validated": 14,
+        "not_yet_present_pre_seal": [
+          "MANIFEST.json"
+        ],
+        "validated": [
+          "fabric/NODES.json",
+          "conformance/DF_GATE_RESULTS.json",
+          "reports/DF_CAPABILITY_LEDGER.json",
+          "provenance/DF_PROVENANCE.json",
+          "authority/DF_SOURCE_AUTHORITY.json"
+        ],
+        "violations": {}
+      },
+      "id": "G2",
+      "name": "every JSON artifact validates against the schema shipped beside it",
+      "seconds": 0.002,
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "items": 18,
+        "unresolved": []
+      },
+      "id": "G3",
+      "name": "every evidence citation in the capability ledger resolves to a delivered path",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "returncode": 0,
+        "seconds": 0.562
+      },
+      "id": "G1",
+      "name": "reference core selfcheck -> SELFCHECK_PASS",
+      "seconds": 0.562,
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "digest_mismatch": [],
+        "missing": [],
+        "nodes": {
+          "N_LARGE": {
+            "present": true,
+            "root": "/home/claude/work/df/out/DF_Large/vm/BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE_61K",
+            "sums_match": true
+          },
+          "N_MEDIUM": {
+            "present": true,
+            "root": "/home/claude/work/df/out/DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC",
+            "sums_match": true
+          },
+          "N_SMALL": {
+            "present": true,
+            "root": "/home/claude/work/df/out/DF_Small/vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K",
+            "sums_match": true
+          },
+          "N_XLARGE": {
+            "present": true,
+            "root": "/home/claude/work/df/out/DF_Xtra_Large/vm/QUORUM_LCTL_MSSL_2.1.0",
+            "sums_match": true
+          }
+        },
+        "reason": null
+      },
+      "id": "F0",
+      "name": "the four node containers are present beside this container and match their pinned digests",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "bound": {
+          "N_LARGE": true,
+          "N_MEDIUM": true,
+          "N_SMALL": true,
+          "N_XLARGE": true
+        },
+        "reason": null
+      },
+      "id": "F1",
+      "name": "every present node binds (toolchain built) and attests",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "pinned": "8eac80fa8d72bd541c7036311c201ba46dcbf2a29e1173b555611813dc8b9968",
+        "rows": 34,
+        "seal": "8eac80fa8d72bd541c7036311c201ba46dcbf2a29e1173b555611813dc8b9968"
+      },
+      "id": "F2",
+      "name": "fabric/FABRIC.pal parses, verifies (lang.verify) and its seal equals the pinned FABRIC_SEAL.json",
+      "seconds": 0.002,
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "domains": [
+          "D_BR",
+          "D_QVM"
+        ],
+        "workers": [
+          "W_LARGE",
+          "W_SMALL",
+          "W_MEDIUM",
+          "W_XLARGE"
+        ]
+      },
+      "id": "F3",
+      "name": "the federation object model rebuilds from the node descriptors and equals fabric/FEDERATION.json (4 workers, 2 domains)",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "nodes_bound": [
+          "N_LARGE",
+          "N_MEDIUM",
+          "N_SMALL",
+          "N_XLARGE"
+        ],
+        "runs": {
+          "01_bell_pair.pal": {
+            "bsp_votes": {
+              "W_LARGE": true,
+              "W_MEDIUM": true,
+              "W_SMALL": true,
+              "W_XLARGE": true
+            },
+            "collective_rules": {
+              "allgather": "R5/recursive_doubling",
+              "allreduce_max": "R5/recursive_doubling",
+              "allreduce_min": "R5/recursive_doubling"
+            },
+            "event_log_hash": "e38b438e4d65a2069696201da9ca6e36c091beb7f6851d3b0ad988166ba2e181",
+            "events": 41,
+            "pipeline_chain": [
+              [
+                0,
+                "N_SMALL",
+                12
+              ]
+            ],
+            "pipeline_segments": 1,
+            "reference": 17360368901394384785,
+            "replay": "DETERMINISTIC_REPLAY_PASS",
+            "replica_witnesses": {
+              "N_LARGE": 17360368901394384785,
+              "N_MEDIUM": 17360368901394384785,
+              "N_SMALL": 17360368901394384785,
+              "N_XLARGE": 17360368901394384785
+            },
+            "rows": 12,
+            "verdict": "CROSS_NODE_DIFFERENTIAL_AGREEMENT",
+            "wall_s": 1.8234
+          },
+          "02_ghz3.pal": {
+            "bsp_votes": {
+              "W_LARGE": true,
+              "W_MEDIUM": true,
+              "W_SMALL": true,
+              "W_XLARGE": true
+            },
+            "collective_rules": {
+              "allgather": "R5/recursive_doubling",
+              "allreduce_max": "R5/recursive_doubling",
+              "allreduce_min": "R5/recursive_doubling"
+            },
+            "event_log_hash": "60c2fc771474cc2f718d024fd85e5688a21dba9c45099f540f4d6ebb7bf126dd",
+            "events": 41,
+            "pipeline_chain": [
+              [
+                0,
+                "N_SMALL",
+                15
+              ]
+            ],
+            "pipeline_segments": 1,
+            "reference": 6735235137199922533,
+            "replay": "DETERMINISTIC_REPLAY_PASS",
+            "replica_witnesses": {
+              "N_LARGE": 6735235137199922533,
+              "N_MEDIUM": 6735235137199922533,
+              "N_SMALL": 6735235137199922533,
+              "N_XLARGE": 6735235137199922533
+            },
+            "rows": 15,
+            "verdict": "CROSS_NODE_DIFFERENTIAL_AGREEMENT",
+            "wall_s": 1.8082
+          },
+          "03_two_lane_parallel.pal": {
+            "bsp_votes": {
+              "W_LARGE": true,
+              "W_MEDIUM": true,
+              "W_SMALL": true,
+              "W_XLARGE": true
+            },
+            "collective_rules": {
+              "allgather": "R5/recursive_doubling",
+              "allreduce_max": "R5/recursive_doubling",
+              "allreduce_min": "R5/recursive_doubling"
+            },
+            "event_log_hash": "0447332486fe8181a226644a7c4552c2ad39cb8d46374ad113e0a07eaba63e3d",
+            "events": 41,
+            "pipeline_chain": [
+              [
+                0,
+                "N_SMALL",
+                16
+              ]
+            ],
+            "pipeline_segments": 1,
+            "reference": 2035133056847448988,
+            "replay": "DETERMINISTIC_REPLAY_PASS",
+            "replica_witnesses": {
+              "N_LARGE": 2035133056847448988,
+              "N_MEDIUM": 2035133056847448988,
+              "N_SMALL": 2035133056847448988,
+              "N_XLARGE": 2035133056847448988
+            },
+            "rows": 16,
+            "verdict": "CROSS_NODE_DIFFERENTIAL_AGREEMENT",
+            "wall_s": 1.7895
+          },
+          "04_distributed_teleport.pal": {
+            "bsp_votes": {
+              "W_LARGE": true,
+              "W_MEDIUM": true,
+              "W_SMALL": true,
+              "W_XLARGE": true
+            },
+            "collective_rules": {
+              "allgather": "R5/recursive_doubling",
+              "allreduce_max": "R5/recursive_doubling",
+              "allreduce_min": "R5/recursive_doubling"
+            },
+            "event_log_hash": "6f77346541bb128203740a1763d7af4bb6b25de78398252403c767ec458b4147",
+            "events": 41,
+            "pipeline_chain": [
+              [
+                0,
+                "N_SMALL",
+                15
+              ]
+            ],
+            "pipeline_segments": 1,
+            "reference": 11114974373231215855,
+            "replay": "DETERMINISTIC_REPLAY_PASS",
+            "replica_witnesses": {
+              "N_LARGE": 11114974373231215855,
+              "N_MEDIUM": 11114974373231215855,
+              "N_SMALL": 11114974373231215855,
+              "N_XLARGE": 11114974373231215855
+            },
+            "rows": 15,
+            "verdict": "CROSS_NODE_DIFFERENTIAL_AGREEMENT",
+            "wall_s": 1.8038
+          },
+          "05_measurement_feedback.pal": {
+            "bsp_votes": {
+              "W_LARGE": true,
+              "W_MEDIUM": true,
+              "W_SMALL": true,
+              "W_XLARGE": true
+            },
+            "collective_rules": {
+              "allgather": "R5/recursive_doubling",
+              "allreduce_max": "R5/recursive_doubling",
+              "allreduce_min": "R5/recursive_doubling"
+            },
+            "event_log_hash": "7e2430872e11c53c61ff10f2be3e8ae5bf12103b427bd679240a150dd3624864",
+            "events": 41,
+            "pipeline_chain": [
+              [
+                0,
+                "N_SMALL",
+                14
+              ]
+            ],
+            "pipeline_segments": 1,
+            "reference": 1825703198280153005,
+            "replay": "DETERMINISTIC_REPLAY_PASS",
+            "replica_witnesses": {
+              "N_LARGE": 1825703198280153005,
+              "N_MEDIUM": 1825703198280153005,
+              "N_SMALL": 1825703198280153005,
+              "N_XLARGE": 1825703198280153005
+            },
+            "rows": 14,
+            "verdict": "CROSS_NODE_DIFFERENTIAL_AGREEMENT",
+            "wall_s": 1.8857
+          },
+          "06_noise_density.pal": {
+            "bsp_votes": {
+              "W_LARGE": true,
+              "W_MEDIUM": true,
+              "W_SMALL": true,
+              "W_XLARGE": true
+            },
+            "collective_rules": {
+              "allgather": "R5/recursive_doubling",
+              "allreduce_max": "R5/recursive_doubling",
+              "allreduce_min": "R5/recursive_doubling"
+            },
+            "event_log_hash": "d9441685e5be7ba7e36e580f94fc6fb2ad225e89b8ec1113dcd30d50cb3f24ef",
+            "events": 41,
+            "pipeline_chain": [
+              [
+                0,
+                "N_SMALL",
+                14
+              ]
+            ],
+            "pipeline_segments": 1,
+            "reference": 725229432034669365,
+            "replay": "DETERMINISTIC_REPLAY_PASS",
+            "replica_witnesses": {
+              "N_LARGE": 725229432034669365,
+              "N_MEDIUM": 725229432034669365,
+              "N_SMALL": 725229432034669365,
+              "N_XLARGE": 725229432034669365
+            },
+            "rows": 14,
+            "verdict": "CROSS_NODE_DIFFERENTIAL_AGREEMENT",
+            "wall_s": 1.8606
+          },
+          "FABRIC.pal": {
+            "bsp_votes": {
+              "W_LARGE": true,
+              "W_MEDIUM": true,
+              "W_SMALL": true,
+              "W_XLARGE": true
+            },
+            "collective_rules": {
+              "allgather": "R5/recursive_doubling",
+              "allreduce_max": "R5/recursive_doubling",
+              "allreduce_min": "R5/recursive_doubling"
+            },
+            "event_log_hash": "dc7a9382ed2e5cf3f7549cebee7fe7a00a384c77a2e6ae6435382ba68b08c5de",
+            "events": 41,
+            "pipeline_chain": [
+              [
+                0,
+                "N_SMALL",
+                34
+              ]
+            ],
+            "pipeline_segments": 1,
+            "reference": 9950524808862381976,
+            "replay": "DETERMINISTIC_REPLAY_PASS",
+            "replica_witnesses": {
+              "N_LARGE": 9950524808862381976,
+              "N_MEDIUM": 9950524808862381976,
+              "N_SMALL": 9950524808862381976,
+              "N_XLARGE": 9950524808862381976
+            },
+            "rows": 34,
+            "verdict": "CROSS_NODE_DIFFERENTIAL_AGREEMENT",
+            "wall_s": 1.9973
+          },
+          "df_long_chain_240.pal": {
+            "bsp_votes": {
+              "W_LARGE": true,
+              "W_MEDIUM": true,
+              "W_SMALL": true,
+              "W_XLARGE": true
+            },
+            "collective_rules": {
+              "allgather": "R5/recursive_doubling",
+              "allreduce_max": "R5/recursive_doubling",
+              "allreduce_min": "R5/recursive_doubling"
+            },
+            "event_log_hash": "da4b1f0549a1512a510a80267f1b72ee0a1728093bea6eaf8fcd8ced3d0378dc",
+            "events": 43,
+            "pipeline_chain": [
+              [
+                0,
+                "N_SMALL",
+                84
+              ],
+              [
+                1,
+                "N_MEDIUM",
+                84
+              ],
+              [
+                2,
+                "N_LARGE",
+                72
+              ]
+            ],
+            "pipeline_segments": 3,
+            "reference": 4102983261209585326,
+            "replay": "DETERMINISTIC_REPLAY_PASS",
+            "replica_witnesses": {
+              "N_LARGE": 4102983261209585326,
+              "N_MEDIUM": 4102983261209585326,
+              "N_SMALL": 4102983261209585326,
+              "N_XLARGE": 4102983261209585326
+            },
+            "rows": 240,
+            "verdict": "CROSS_NODE_DIFFERENTIAL_AGREEMENT",
+            "wall_s": 3.6948
+          }
+        }
+      },
+      "id": "F4",
+      "name": "replica + pipeline + BSP fabric programs on 8 bundles: cross-node differential agreement, replay PASS",
+      "seconds": 16.724,
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "identical_hash_across_deterministic_profiles": true,
+        "profiles": {
+          "multi_process_deterministic": {
+            "hashes": [
+              "e38b438e4d65a2069696201da9ca6e36c091beb7f6851d3b0ad988166ba2e181",
+              "e38b438e4d65a2069696201da9ca6e36c091beb7f6851d3b0ad988166ba2e181"
+            ],
+            "identical": true
+          },
+          "multi_process_throughput": {
+            "hash": "e38b438e4d65a2069696201da9ca6e36c091beb7f6851d3b0ad988166ba2e181",
+            "reproducibility": "NOT_CLAIMED (may_reorder=True; the log is complete but its hash is not asserted)",
+            "verdict": "CROSS_NODE_DIFFERENTIAL_AGREEMENT"
+          },
+          "multi_thread_deterministic": {
+            "hashes": [
+              "e38b438e4d65a2069696201da9ca6e36c091beb7f6851d3b0ad988166ba2e181",
+              "e38b438e4d65a2069696201da9ca6e36c091beb7f6851d3b0ad988166ba2e181"
+            ],
+            "identical": true
+          },
+          "single_process_deterministic": {
+            "hashes": [
+              "e38b438e4d65a2069696201da9ca6e36c091beb7f6851d3b0ad988166ba2e181",
+              "e38b438e4d65a2069696201da9ca6e36c091beb7f6851d3b0ad988166ba2e181"
+            ],
+            "identical": true
+          }
+        }
+      },
+      "id": "F5",
+      "name": "deterministic profiles reproduce the event-log hash exactly across two runs (single/thread/process); throughput profile runs, reproducibility not claimed",
+      "seconds": 12.7,
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "placements": {
+          "dynamic": {
+            "agree": true,
+            "chain": [
+              [
+                0,
+                "N_LARGE",
+                84
+              ],
+              [
+                1,
+                "N_MEDIUM",
+                84
+              ],
+              [
+                2,
+                "N_SMALL",
+                72
+              ]
+            ],
+            "distinct_nodes": 3,
+            "final": 4102983261209585326,
+            "reference": 4102983261209585326,
+            "segments": 3,
+            "tasks_per_worker": {
+              "W_LARGE": 1,
+              "W_MEDIUM": 1,
+              "W_SMALL": 1
+            }
+          },
+          "static": {
+            "agree": true,
+            "chain": [
+              [
+                0,
+                "N_SMALL",
+                84
+              ],
+              [
+                1,
+                "N_MEDIUM",
+                84
+              ],
+              [
+                2,
+                "N_LARGE",
+                72
+              ]
+            ],
+            "distinct_nodes": 3,
+            "final": 4102983261209585326,
+            "reference": 4102983261209585326,
+            "segments": 3,
+            "tasks_per_worker": {
+              "W_LARGE": 1,
+              "W_MEDIUM": 1,
+              "W_SMALL": 1
+            }
+          }
+        }
+      },
+      "id": "F6",
+      "name": "a 240-row bundle is executed as a chain of 84-row segments placed across distinct nodes (static and dynamic placement) and reaches the reference witness",
+      "seconds": 0.691,
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "finding": "images are not portable across lineages; the fabric therefore distributes sealed source rows and lowers per node",
+        "medium_image_on_large": {
+          "json": {
+            "R2": 0,
+            "status": 3,
+            "trap": 17
+          },
+          "rejected": true,
+          "returncode": 1
+        },
+        "medium_image_on_qvm": {
+          "rejected": true,
+          "returncode": 70,
+          "stderr_tail": "{\"status\": \"ERROR\", \"error\": \"UnicodeDecodeError\", \"detail\": \"'utf-8' codec can't decode byte 0xd0 in position 35: invalid continuation byte\"}"
+        }
+      },
+      "id": "F7",
+      "name": "negative: a 5.0.0 image is rejected by the 4.7.0 VM (trap 17 UNSUPPORTED_ABI) and by the QVM loader -- the fabric moves rows, not images",
+      "seconds": 0.11,
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "provenance": {
+          "backend": "none",
+          "distributed_state": "DISTRIBUTED_CLASSICAL_EMULATION",
+          "distributed_state_ceiling": "DISTRIBUTED_CLASSICAL_EMULATION",
+          "execution_class": "CLASSICAL_FABRIC_OF_LOCAL_VMS",
+          "host": {
+            "cpu_count": 2,
+            "platform": "Linux-6.18.5-fc-v20-x86_64-with-glibc2.39",
+            "python": "3.11.15"
+          },
+          "language": "PA-LCTL",
+          "network": "deny",
+          "parallel_state": "PARALLEL_EMULATION",
+          "physical_distributed": false,
+          "physical_parallel": false,
+          "physical_qpu": false,
+          "physical_release_outputs": {
+            "PHYSICAL_DISTRIBUTED_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY",
+            "PHYSICAL_PARALLEL_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY"
+          },
+          "profile": "multi_process_deterministic",
+          "quantum_boundary": "QUANTUM_BOUNDARY_NOT_CROSSED",
+          "target_verified": false
+        }
+      },
+      "id": "F8",
+      "name": "provenance ladders honest: distributed_state <= DISTRIBUTED_CLASSICAL_EMULATION, quantum boundary NOT_CROSSED, physical flags False, NETWORK=deny",
+      "seconds": 0.003,
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "medium_native_after_translation": 2599184133625559556,
+        "reference": 2599184133625559556,
+        "small_native": 2599184133625559556,
+        "translator_report": ""
+      },
+      "id": "F9",
+      "name": "dialect bridge: N_SMALL's MSSL witness program translated by tools/mssl_to_lctlc.py (PA-LCTL/MSSL_TO_LCTLC/1) runs on N_MEDIUM and yields the same witness",
+      "seconds": 0.145,
+      "status": "PASS"
+    }
+  ],
+  "host": {
+    "backend_policy": "none",
+    "cc": "/usr/bin/cc",
+    "cpu_count": 2,
+    "implementation": "CPython",
+    "java": "/usr/bin/java",
+    "machine": "x86_64",
+    "make": "/usr/bin/make",
+    "network_policy": "deny",
+    "platform": "Linux-6.18.5-fc-v20-x86_64-with-glibc2.39",
+    "python": "3.11.15"
+  },
+  "nodes_bound": [
+    "N_LARGE",
+    "N_MEDIUM",
+    "N_SMALL",
+    "N_XLARGE"
+  ],
+  "roots": {
+    "N_LARGE": "/home/claude/work/df/out/DF_Large/vm/BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE_61K",
+    "N_MEDIUM": "/home/claude/work/df/out/DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC",
+    "N_SMALL": "/home/claude/work/df/out/DF_Small/vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K",
+    "N_XLARGE": "/home/claude/work/df/out/DF_Xtra_Large/vm/QUORUM_LCTL_MSSL_2.1.0"
+  },
+  "rule": "PASS means every gate that could run passed; SKIPPED gates name the missing prerequisite and are not counted as passes",
+  "schema": "DF/GATE_RESULTS/1",
+  "subject": "DF_Fabric",
+  "totals": {
+    "failed": 0,
+    "passed": 14,
+    "run": 16,
+    "skipped": 2,
+    "wall_seconds": 30.947
+  },
+  "verdict": "PASS"
+}

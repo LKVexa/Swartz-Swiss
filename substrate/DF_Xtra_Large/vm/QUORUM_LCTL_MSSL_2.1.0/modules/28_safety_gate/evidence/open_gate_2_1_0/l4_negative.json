@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "920dd8e48160108efd92728802f434e3a71d471064407f1bd1850ce632bbd5cc",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Safety Gate",
+  "module_id": 28,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

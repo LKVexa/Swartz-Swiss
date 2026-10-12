@@ -1,0 +1,304 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 10,
+    "PARTIAL": 19,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Distance/invisibility never directly deletes gameplay-significant entities.",
+      "requirement_id": "RCPW-14-R01",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Every representation transition declares exact carried, summarized, and reconstructible state.",
+      "requirement_id": "RCPW-14-R02",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Compression is bounded and cannot erase unresolved causal obligations.",
+      "requirement_id": "RCPW-14-R03",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Restoration cannot create impossible time, position, ownership, or inventory state.",
+      "requirement_id": "RCPW-14-R04",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Transition failures are explicit and recoverable.",
+      "requirement_id": "RCPW-14-R05",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Endurance cycling shows no cumulative identity/state drift.",
+      "requirement_id": "RCPW-14-R06",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Representation transitions define a conservation vector for identity, time, position, ownership, health, inventory, and unresolved obligations.",
+      "requirement_id": "RCPW-14-R07",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Transition cancellation/reversal is transactional.",
+      "requirement_id": "RCPW-14-R08",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Abstract simulation never advances an entity beyond a canonical event barrier that requires higher fidelity.",
+      "requirement_id": "RCPW-14-R09",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Round-trip transition error budgets are quantified by entity class.",
+      "requirement_id": "RCPW-14-R10",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Every representation compression declares semantic fidelity classes so critical gameplay facts cannot be summarized into ambiguous state.",
+      "requirement_id": "RCPW-14-R11",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Abstract simulation respects canonical time and event barriers; it may not skip through unresolved interaction-critical events.",
+      "requirement_id": "RCPW-14-R12",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Time-warp or fast-forward modes have explicit transition semantics distinct from spatial folding.",
+      "requirement_id": "RCPW-14-R13",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Restored state carries provenance identifying which fields were exact, simulated, aggregated, or reconstructed.",
+      "requirement_id": "RCPW-14-R14",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "No-unload transitions have subsystem-specific conservation contracts for navigation progress, combat state, transport phase, economy obligations, ecology state, and narrative reservations.",
+      "requirement_id": "RCPW-14-R15",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Abstract state may use compressed representation, but unresolved exclusive ownership and event reservations remain exact.",
+      "requirement_id": "RCPW-14-R16",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Transition code supports versioned migration so representation formats may evolve without invalidating persistent identity.",
+      "requirement_id": "RCPW-14-R17",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Demotion may be rejected when required event barriers or dependencies make abstraction unsafe.",
+      "requirement_id": "RCPW-14-R18",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes randomized transition graphs, cancellation/reversal, save during transition, crash during transition, and replay after recovery.",
+      "requirement_id": "RCPW-14-R19",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Representation transitions may execute asynchronously, but source/target revisions and ownership tokens prevent stale transition completion from overwriting newer state.",
+      "requirement_id": "RCPW-14-R20",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Transition work is idempotent or compensatable so retries after failure cannot duplicate canonical consequences.",
+      "requirement_id": "RCPW-14-R21",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Cross-partition transitions carry exact unresolved obligations and event reservations before old ownership is released.",
+      "requirement_id": "RCPW-14-R22",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-14-R23.json",
+      "evidence_sha256": "dc132b9955a8cace1ff6682f1af9e133e6ee808ff18a985202f0a928ccdcaaed",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "Transition format versions are independently migratable and replay-compatible according to the compatibility matrix.",
+      "requirement_id": "RCPW-14-R23",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes duplicate/reordered completion messages, retries, cancellations, partition moves, and crash at each transition phase.",
+      "requirement_id": "RCPW-14-R24",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "No-unload semantics explicitly include archival representation: archival reduces retained detail but preserves canonical identity, topology, conserved state, causal proofs, and unresolved obligations.",
+      "requirement_id": "RCPW-14-R25",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Archival transitions declare irreversible losses, if any, and are prohibited from discarding information required for active quests, law, ownership, lineage, or deterministic recovery.",
+      "requirement_id": "RCPW-14-R26",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rehydration can refine statistically reconstructed presentation without pretending reconstructed microdetails were historically exact.",
+      "requirement_id": "RCPW-14-R27",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World-age advancement and time compression are separate operations from archival/folding and use explicit authority/event semantics.",
+      "requirement_id": "RCPW-14-R28",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes repeated active→abstract→archival→rehydrated cycles over multi-era simulation with semantic digest comparison.",
+      "requirement_id": "RCPW-14-R29",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "stage": 14,
+  "title": "No-Unload Representation Transitions"
+}

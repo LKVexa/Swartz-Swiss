@@ -1,0 +1,75 @@
+{
+  "electron_id": "vec1-29ca3e7d85dbd92896c59504",
+  "generation_id": 0,
+  "genesis_record": {
+    "created_utc": "2026-09-17T03:37:21.371852Z",
+    "genome_sha256": "b1d4d37092f1aa8c872c4820f131d2b8a4fc229866bc57cd03d18bc3c9779d3c"
+  },
+  "genome": {
+    "capabilities": [
+      "fabric.execute",
+      "state.snapshot",
+      "state.clone",
+      "evidence.read"
+    ],
+    "network": "deny",
+    "program": "programs/fabric_probe.pal",
+    "schema": "VEC/electron_genome/1",
+    "targets": [
+      "N_SMALL",
+      "N_MEDIUM",
+      "N_LARGE",
+      "N_XLARGE"
+    ],
+    "version": "0.1.0-candidate"
+  },
+  "hashes": {
+    "canonical_state_sha256": "e02a83d9197a31a10a3fa5f7d3a261279286116e3af9c9c3185e4324471ba749",
+    "capability_sha256": "e74d1c8b29416646f27c1e9fad1d92065b876707961d70281da143d7a5ae04a4",
+    "configuration_sha256": "95964508f80745fa3af6e69ea303764b050b76b711216704e535e0cc79e97c1a",
+    "genome_sha256": "b1d4d37092f1aa8c872c4820f131d2b8a4fc229866bc57cd03d18bc3c9779d3c"
+  },
+  "lineage": [
+    "vec1-29ca3e7d85dbd92896c59504"
+  ],
+  "parent_id": null,
+  "properties": {
+    "charge": -1,
+    "energy": 0,
+    "interaction_radius": "DF0_LOCAL",
+    "momentum_vector": [
+      0,
+      0,
+      0
+    ],
+    "orbital": "DF0_FABRIC",
+    "phase": 1,
+    "position_node_vector": [
+      "N_SMALL",
+      "N_MEDIUM",
+      "N_LARGE",
+      "N_XLARGE"
+    ],
+    "spin": "DOWN",
+    "state": "READY"
+  },
+  "runtime": {
+    "base_snapshot": "ec5963d84d2c33e980b91ffda67dab6a943b714d16dfe87afd689bb1268797e3",
+    "execution_status": "READY",
+    "instruction_counter": 34,
+    "last_receipt": "runtime/evidence/executions/vec1-29ca3e7d85dbd92896c59504-00000001.json",
+    "mailbox": [],
+    "outbound_queue": [],
+    "tick": 1
+  },
+  "schema": "VEC/ELECTRON_STATE/1",
+  "security": {
+    "filesystem": "package-runtime-only",
+    "host_calls": "DF-only",
+    "network": "deny",
+    "plugins": [],
+    "retired": false,
+    "suspended": false
+  },
+  "updated_utc": "2026-09-17T03:37:47.426238Z"
+}

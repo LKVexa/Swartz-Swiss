@@ -1,0 +1,58 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "eb2aecd4139c56347a6e36aac5f30a595efce551d7626bbdcc33daaa516b86f1",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (VERSION_MIGRATION, TRANSACTION_CONCURRENCY, SAVE_RECOVERY, MULTI_WORKER_CONFORMANCE) plus Stage 12 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "MULTI_WORKER_CONFORMANCE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "SAVE_RECOVERY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "TRANSACTION_CONCURRENCY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "VERSION_MIGRATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-08",
+    "GW-09",
+    "GW-37",
+    "GW-39",
+    "GW-54",
+    "GW-76"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T3_FABRIC",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Save qualification includes partial partition loss, incomplete replica, stale checkpoint fragment, remapping, migration, and repeated recovery.",
+  "requirement_id": "RCPW-12-R24",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 12,
+  "stage_title": "Save / Replay Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "VERSION_MIGRATION",
+    "TRANSACTION_CONCURRENCY",
+    "SAVE_RECOVERY",
+    "MULTI_WORKER_CONFORMANCE"
+  ],
+  "workflow_file": "12_SAVE_REPLAY_AUTHORITY/186_RCPW_12_R24_SAVE_QUALIFICATION_INCLUDES_PARTIAL_PARTITION_LOSS_INCOMPLETE_REPLICA_STALE_CHECKPOIN.md",
+  "workflow_tier": "T3_FABRIC"
+}

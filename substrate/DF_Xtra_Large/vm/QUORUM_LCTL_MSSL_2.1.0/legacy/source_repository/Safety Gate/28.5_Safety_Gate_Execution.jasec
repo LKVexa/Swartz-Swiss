@@ -1,0 +1,26 @@
+ja source 0.3
+module suite28.safety_gate.execution
+use Security
+policy no_network
+
+principal SafetyGateExecutionWorker
+role SafetyGateEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant process.evaluate:approved
+}
+resource ExecutionRequest classification restricted
+policy SafetyGateExecutionPolicy {
+    deny network.* by default
+    deny process.unknown.* by default
+    allow ExecutionRequest when principal.role == SafetyGateEnsemble
+    require human_approval for process.execute
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "SafetyGateExecutionPolicy.decision.mcrt"

@@ -1,0 +1,34 @@
+ja source 0.3
+module suite60.worker.packaging_worker
+use Operations
+policy explicit_network
+
+workspace PackagingWorker {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 8 memory 16GB
+    network disabled
+    secret packaging_worker_key reference "vault://suite60/packaging-worker"
+
+    service SOPHIA_packaging_context replicas 1
+    health_check SOPHIA_packaging_context every 10s
+    service CHARLOTTE_packaging_gate replicas 1
+    health_check CHARLOTTE_packaging_gate every 10s
+    service LANDON_packaging_executor replicas 1
+    health_check LANDON_packaging_executor every 10s
+    service Professor_packaging_report replicas 1
+    health_check Professor_packaging_report every 10s
+    service Podium_packaging_receipt replicas 1
+    health_check Podium_packaging_receipt every 10s
+    service packaging_worker replicas 1
+    health_check packaging_worker every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "worker_packaging.msslb"

@@ -1,0 +1,82 @@
+{
+  "package": "BR-450-02",
+  "record": "BR.PackageRequirements",
+  "requirements": [
+    {
+      "evidence": [
+        "evidence/BR-450-02_audit.md",
+        "evidence/BR-450-02_tests.log"
+      ],
+      "id": "BR-450-02-R01",
+      "status": "OPERATIONAL",
+      "text": "Maintain Slot A"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-02_audit.md",
+        "evidence/BR-450-02_tests.log"
+      ],
+      "id": "BR-450-02-R02",
+      "status": "OPERATIONAL",
+      "text": "Maintain Slot B"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-02_audit.md",
+        "evidence/BR-450-02_tests.log"
+      ],
+      "id": "BR-450-02-R03",
+      "status": "OPERATIONAL",
+      "text": "Track active slot"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-02_audit.md",
+        "evidence/BR-450-02_tests.log"
+      ],
+      "id": "BR-450-02-R04",
+      "status": "OPERATIONAL",
+      "text": "Track candidate slot"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-02_audit.md",
+        "evidence/BR-450-02_tests.log"
+      ],
+      "id": "BR-450-02-R05",
+      "status": "OPERATIONAL",
+      "text": "Track previous-good slot"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-02_audit.md",
+        "evidence/BR-450-02_tests.log"
+      ],
+      "id": "BR-450-02-R06",
+      "status": "OPERATIONAL",
+      "text": "Track slot generation"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-02_audit.md",
+        "evidence/BR-450-02_tests.log"
+      ],
+      "id": "BR-450-02-R07",
+      "status": "OPERATIONAL",
+      "text": "Track slot hash"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-02_audit.md",
+        "evidence/BR-450-02_tests.log"
+      ],
+      "id": "BR-450-02-R08",
+      "status": "OPERATIONAL",
+      "text": "Track slot signature status"
+    }
+  ],
+  "scope": "host-reference",
+  "status": "OPERATIONAL",
+  "title": "Dual-slot image store",
+  "workflow": "docs/WORKFLOW_APPLIED_4.5.0/02_BR-450-02_dual_slot_image_store_PROMPT_AND_WORKFLOW.md"
+}

@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.specialized_roles.operations_engineer
+use Agent
+policy no_network
+
+agent OperationsEngineer {
+    identity "operations_engineer"
+    role "sophia-charlotte-landon-professor-podium-specialist"
+    goal stage_recoverable_policy_valid_operations_change when confidence >= 0.97
+    memory session retention 1h
+    budget steps 75 tools 5
+    tool SOPHIAModelOperationsChange(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateOperationsPlan(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONStageApprovedOperations(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainOperationsChange(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordOperationsEvidence(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIAModelOperationsChange
+        authorize CHARLOTTEValidateOperationsPlan
+        authorize LANDONStageApprovedOperations
+        authorize ProfessorExplainOperationsChange
+        authorize PodiumRecordOperationsEvidence
+        continue when policy_allows
+        execute SOPHIAModelOperationsChange("selected_operations_scope")
+        execute CHARLOTTEValidateOperationsPlan("candidate_operations_plan")
+        execute LANDONStageApprovedOperations("validated_operations_plan")
+        execute ProfessorExplainOperationsChange("staged_operations_result")
+        execute PodiumRecordOperationsEvidence("operations_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "OperationsEngineer.mcrt"

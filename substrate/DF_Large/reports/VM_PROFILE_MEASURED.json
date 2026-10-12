@@ -1,0 +1,244 @@
+{
+  "bounds": {
+    "budget_trap": "BR_TRAP_BUDGET (trap 8)",
+    "heap_ceiling_bytes": 4194304,
+    "image_update_max_bytes": 51200,
+    "max_instructions_per_image": 256,
+    "mem_bytes": 4096,
+    "quotas": {
+      "device_buffer_bytes": 64,
+      "entropy_requests_per_run": 8,
+      "mailbox_depth": 1,
+      "storage_writes_per_run": 4,
+      "transfer_bytes_per_run": 1024
+    },
+    "scratch_ceiling_bytes": 262144,
+    "source_max_bytes": 65536,
+    "stack_depth_words": 256,
+    "step_bound_api": "br_vm_run(vm, max_steps)",
+    "step_bound_default": 4096,
+    "word_bits": 1048576
+  },
+  "bytes": 4241632,
+  "capabilities": {
+    "compile_source": true,
+    "deterministic_replay": true,
+    "device_abi": true,
+    "sign_images": true,
+    "step_bound": true,
+    "trust_chain": true
+  },
+  "capabilities_notes": {
+    "compile_source": "tools/lctl430.py (Python front end, br-lctlc/4.3.0) compiles .lctlc -> BRIM/1; contradicts the 'no compiler' premise",
+    "deterministic_replay": "br_hal_deterministic adapter: seeded PRNG entropy + counter clock; representation-independent results/traps/step-counts",
+    "device_abi": "Device ABI v1; 8 built-in device classes (1 console,2 block,3 monotonic,4 entropy,5 clock,6 mailbox,7 diagnostic) + optional 8 network / 9 wall-clock absent by default",
+    "sign_images": "brctl keygen / sign-image via OpenSSL Ed25519 (EVP); lctl430 compile --sign-private delegates to brctl",
+    "step_bound": "br_vm_run(vm, max_steps); brctl run hardcodes 4096 -> BR_TRAP_BUDGET (trap 8); plus per-run quotas 1024 xfer bytes/4 writes/8 entropy/1 mailbox/64B device buffer",
+    "trust_chain": "README 'BRTM/1' composite: immutable root -> BRTP/1 policy (352B) -> BRMF/1 manifest (216B) -> BRIM, Ed25519; BUT no CLI provisioning path is shipped, so production brctl refuses all images"
+  },
+  "container": "Large",
+  "dependencies": [
+    "C11 compiler (built here with GCC 13.3.0)",
+    "OpenSSL libcrypto (-lcrypto, EVP Ed25519 + SHA-256) for host CLI and trust",
+    "Python 3 (stdlib only) for the LCTL compiler, qualify and evidence tooling",
+    "POSIX for the file adapter",
+    "VM core (libbrvm_core.a) is freestanding C11 with NO libc I/O / OpenSSL (proven by make core-scan)"
+  ],
+  "deploy_brimg_count": 8,
+  "df_release": "DF-PA21.2-1.0.0",
+  "entry_points": {
+    "build": "make  (default target all: operational; also make brctl-dev to build the image runner)",
+    "run": ".build/brctl-dev run <img.brimg>   (production .build/brctl run/verify-image/run-signed exit 1: trust chain not provisionable)",
+    "verify": "make qualify  (+ make size, make sanitize); python3 tools/lctl430.py provenance | python3 tools/brim_verify.py IMG; sha256sum -c RELEASE_CONTENTS.sha256"
+  },
+  "file_count": 893,
+  "guest_languages": [
+    "Columned-LCTL (LCTLC/1.2, dialect columned-lctl/4.3)"
+  ],
+  "image_formats": [
+    "BRIM/1 (80-byte header + 16-byte instructions, optional 64-byte Ed25519 signature)",
+    "BRIR/1 (intermediate representation JSON)"
+  ],
+  "isa": {
+    "abi_version": 2,
+    "arithmetic_modes": [
+      "WRAP",
+      "CHECKED",
+      "SATURATE",
+      "TRAPPING"
+    ],
+    "canonical_traps": 14,
+    "capabilities": [
+      "CONTROL",
+      "ARITH",
+      "MEMORY",
+      "STACK",
+      "SERVICE",
+      "STATE",
+      "UPDATE",
+      "DIAG"
+    ],
+    "device_abi_version": 1,
+    "image_tag": "BRLCTL43",
+    "isa_major": 1,
+    "isa_marker": 21,
+    "isa_minor": 1,
+    "name": "BR/1.1",
+    "opcode_count": 41,
+    "opcodes": [
+      "NOP",
+      "MOVI",
+      "MOV",
+      "JMP",
+      "JZ",
+      "JNZ",
+      "HALT",
+      "ADD",
+      "SUB",
+      "MUL",
+      "DIVU",
+      "MODU",
+      "AND",
+      "OR",
+      "XOR",
+      "NOT",
+      "SHL",
+      "SHR",
+      "CMP",
+      "LOAD",
+      "STORE",
+      "PUSH",
+      "POP",
+      "SVC",
+      "NEG",
+      "BITTST",
+      "ASHR",
+      "ROL",
+      "ROR",
+      "LOADX",
+      "STOREX",
+      "BEQ",
+      "CALL",
+      "RET",
+      "JMPR",
+      "ENTER",
+      "LEAVE",
+      "TRAP",
+      "CAPQ",
+      "CHECKPOINT",
+      "YIELD"
+    ],
+    "registers": 16,
+    "service_count": 22,
+    "word_bits": 1048576,
+    "word_bytes": 131072
+  },
+  "manifest_entries": 892,
+  "measured_here": {
+    "build": {
+      "cmd": "make",
+      "note": "cold build+operational; -Werror clean; only -Wmisleading-indentation column-tracking NOTES from minified brvm.c",
+      "ok": true,
+      "seconds": 21
+    },
+    "cross_lineage_image_test": {
+      "conclusion": "5.0.0-lineage images are NOT runnable on the 4.7.0 node; the ABI-2 gate rejects ABI-1 images. Lineages are not binary compatible; only images compiled by this package's tools/lctl430.py run here.",
+      "images_tested": [
+        "prebuilt .build/a.brimg",
+        "fresh bradmin compile-lctlc of src/CORE.lctlc -> five.brimg"
+      ],
+      "inspect_on_4_7_0": "accepted (shared BRIM/1 container), reports version 9",
+      "native_5_0_0_run": "bradmin run -> status=2 trap=0 result=PASS (runs fine on its own VM)",
+      "producer": "5.0.0 toolchain bradmin (BOTTLE_ROCKET_5.0.0_VM_110K_RC)",
+      "producer_image_header": "BRIM magic shared; abi=1, isa_marker=20, opcodes=32, tag Q17-BRVM-ISA41, image_version=9",
+      "run_on_4_7_0": "{\"status\":3,\"trap\":17,\"R2\":0} exit 1  => REJECTED, trap 17 = BR_TRAP_UNSUPPORTED_ABI"
+    },
+    "example_run": {
+      "boot_image_run": ".build/brctl-dev run deploy/BOTTLE_ROCKET_SIM_CORE_4.7.0.brimg -> {\"status\":2,\"trap\":0,\"R2\":0}",
+      "cmd": ".build/brctl-dev run <custom ADD image producing R2>",
+      "production_refusal": ".build/brctl run deploy/BOTTLE_ROCKET_SIM_CORE_4.7.0.brimg -> {\"status\":0,\"trap\":0,\"R2\":0} exit 1 (never executes)",
+      "stdout_tail": "{\"status\":2,\"trap\":0,\"R2\":42}",
+      "step_bound_demo": ".build/brctl-dev run <budgeted infinite loop> -> {\"status\":3,\"trap\":8,\"R2\":2048} (BUDGET at 4096 steps)"
+    },
+    "gates": [
+      {
+        "cmd": "make operational",
+        "name": "operational",
+        "ok": true,
+        "summary": "exit 0; 12 suites all PASS (BR-410 18, BR-430 8, BR-440 23, BR-450 31, BR-460 13, BR-470 10, PROD 1, APDU-FUZZ 512, FILE 1, semantic 19, toolchain 2, static 14); 126 named PASS / 141 PASS tokens"
+      },
+      {
+        "cmd": "make brctl-dev",
+        "name": "brctl-dev",
+        "ok": true,
+        "summary": "exit 0 in 2s; image runner built"
+      },
+      {
+        "cmd": "make size",
+        "name": "size",
+        "ok": true,
+        "summary": "production_exec_source_bytes=60945 < 61000 (headroom 55)"
+      },
+      {
+        "cmd": "make sanitize",
+        "name": "sanitize",
+        "ok": true,
+        "summary": "exit 0 in 27s; ASan+UBSan; SANITIZER_470_PASS incl 512 fuzz"
+      },
+      {
+        "cmd": "make qualify",
+        "name": "qualify",
+        "ok": true,
+        "summary": "exit 0; work_packages 13/13, requirements 66/66, opcodes 41/41, traps 14/14, ledger_hash_mismatches 0, sanitizers PASS, status OPERATIONAL"
+      }
+    ],
+    "integrity": {
+      "bad": 0,
+      "cmd": "sha256sum -c RELEASE_CONTENTS.sha256",
+      "exit": 0,
+      "ok": 892
+    },
+    "toolchain": "GCC 13.3.0, OpenSSL 3.0.13, Python 3.11.15, make 4.3 (matches sealed reference)"
+  },
+  "note": "assembly-host profile; see VM_PROFILE_MEASURED.md",
+  "notes": [
+    "CONTRADICTS the 'no compiler/front end' premise: tools/lctl430.py IS a full Columned-LCTL -> BRIM/1 compiler+verifier (Python); the Make 'image' target uses it to build every deploy/*.brimg. What is absent is a C-native compiler; the 61KB budget counts only C sources + BOOT.lctlc, not the Python tooling.",
+    "Production .build/brctl refuses to run/verify ANY shipped image (raw load compiled out; BRTM/1 trust chain has no CLI provisioning path). Reference/fabric execution uses .build/brctl-dev (raw load enabled via -DBR_DEVELOPMENT=1).",
+    "The CLI surfaces only R2.low64; current 4.5/4.6/4.7 boot images write R0 so their R2 reads 0. Author programs must target R2 and declare/gate caps at index 0 (C0:CAP).",
+    "Cross-lineage: 5.0.0 images (ABI 1.0/ISA marker 20/32-op) are rejected here with BR_TRAP_UNSUPPORTED_ABI (trap 17); native 5.0.0 runs them. Confirms AUDIT_ERRATA F9 empirically.",
+    "Sources are minified (F10): src/brvm.c on multi-thousand-char lines; GCC emits -Wmisleading-indentation column-tracking NOTES (not errors); build is -Werror clean.",
+    "Evidence ledgers are toolchain-bound (F11) but reproduced here (ledger_hash_mismatches=0) because the sandbox matches the sealed reference GCC 13.3 / OpenSSL 3.0.13.",
+    "adapters/ are C HAL implementations (posix/file, memory, deterministic, baremetal, smartcard, windows); there is NO Python/FFI binding — drive the node by shelling out to lctl430.py (compile) + brctl-dev (run).",
+    "Audit 'make operational = 138 PASS' not printed verbatim; measured 126 named PASS checks / 141 PASS tokens across 12 green suites; authoritative qualify tallies 66/66 and 13/13 reproduced exactly."
+  ],
+  "package_name": "BOTTLE ROCKET 4.7.0 — COLUMNED LCTL Virtual Device, I/O & Service Architecture (61K)",
+  "programmatic_drive": {
+    "compile_cmd": "python3 tools/lctl430.py compile SRC.lctlc OUT.brimg --factory [--manifest M.json] [--brir-out B.json]",
+    "result_parse": "stdout is one JSON line {\"status\":u,\"trap\":u,\"R2\":u}; status==2 => HALTED(success), trap==0 => no trap; result = R2 field (= R2.low64, from br_vm_reg(vm,2)[0]). Programs must write R2 for a nonzero value (default boot images write R0 -> R2=0). All caps must be declared in @unit br_request_caps and referenced at capability index 0 (C0:CAP).",
+    "run_cmd": ".build/brctl-dev run OUT.brimg"
+  },
+  "runtime_contract": "BR/1.1 ISA (marker 21), ABI 2, Device ABI 1.0, LCTLC/1.2 source, BRIM/1 images; 16 wide registers of 1,048,576 bits; 256-word stack; 4096-byte MEM; 8-bit capability gating; 22 services; 14 canonical traps; deterministic wide-state; freestanding C11 core driven through a HAL",
+  "schema": "DF/VM_PROFILE/1",
+  "self_reported": {
+    "audit_errata": [
+      "F9 two divergent 4.7.0 lineages (this=BR/1.1/41-op/ABI2; other=ISA4.1/32-op/ABI1.0)",
+      "F10 minified C sources",
+      "F11 evidence ledgers toolchain-bound",
+      "F12 64/512 corpus negatives untestable by row-wrapping"
+    ],
+    "external_not_claimed": [
+      "actual external network transport/security qualification (network optional, absent by default)",
+      "physical SIM/UICC/eSIM device I/O and timing qualification",
+      "issuer key ceremony/certification",
+      "TPM/secure-element hardware qualification",
+      "native Windows OS execution certification",
+      "independent third-party certification"
+    ],
+    "production_cli_refuses_unprovisioned_images": true,
+    "scope": "host-reference",
+    "sealed_result": "13/13 BR-470 packages, 66/66 BR-470 requirements, 60,945-byte executable production-source boundary, 112-byte reference BRIM, zero evidence-ledger hash mismatches",
+    "status": "OPERATIONAL"
+  },
+  "version": "4.7.0",
+  "vm_name": "brvm (BOTTLE_ROCKET_SIM_CORE_4.7.0)"
+}

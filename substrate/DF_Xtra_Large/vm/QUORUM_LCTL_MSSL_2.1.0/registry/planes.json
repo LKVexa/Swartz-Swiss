@@ -1,0 +1,144 @@
+{
+  "schema": "QUORUM-PLANE-REGISTRY/1.0",
+  "count": 12,
+  "planes": [
+    {
+      "id": 1,
+      "name": "sense_context",
+      "suite_ids": [
+        1,
+        2,
+        3,
+        16,
+        17,
+        40,
+        41,
+        51
+      ]
+    },
+    {
+      "id": 2,
+      "name": "intent_reasoning",
+      "suite_ids": [
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        47,
+        48
+      ]
+    },
+    {
+      "id": 3,
+      "name": "data_evidence",
+      "suite_ids": [
+        8,
+        11,
+        12,
+        18,
+        29,
+        49
+      ]
+    },
+    {
+      "id": 4,
+      "name": "orchestration",
+      "suite_ids": [
+        15,
+        32,
+        56,
+        57,
+        60,
+        62
+      ]
+    },
+    {
+      "id": 5,
+      "name": "security_authorization",
+      "suite_ids": [
+        13,
+        28,
+        44,
+        52,
+        55,
+        63,
+        65
+      ]
+    },
+    {
+      "id": 6,
+      "name": "interfaces_services",
+      "suite_ids": [
+        14,
+        26,
+        35,
+        38,
+        39,
+        45,
+        61,
+        66
+      ]
+    },
+    {
+      "id": 7,
+      "name": "media_visual",
+      "suite_ids": [
+        19,
+        21,
+        22,
+        23,
+        24,
+        25,
+        33,
+        34,
+        36
+      ]
+    },
+    {
+      "id": 8,
+      "name": "model_compute",
+      "suite_ids": [
+        20,
+        27,
+        37,
+        54,
+        64
+      ]
+    },
+    {
+      "id": 9,
+      "name": "translation_interop",
+      "suite_ids": [
+        30,
+        31,
+        42
+      ]
+    },
+    {
+      "id": 10,
+      "name": "release_delivery",
+      "suite_ids": [
+        43,
+        46
+      ]
+    },
+    {
+      "id": 11,
+      "name": "operations_recovery",
+      "suite_ids": [
+        53,
+        58,
+        59
+      ]
+    },
+    {
+      "id": 12,
+      "name": "governance_control",
+      "suite_ids": [
+        50
+      ]
+    }
+  ]
+}

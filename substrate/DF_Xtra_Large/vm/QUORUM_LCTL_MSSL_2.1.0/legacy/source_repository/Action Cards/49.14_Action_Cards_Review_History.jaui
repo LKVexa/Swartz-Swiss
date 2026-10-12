@@ -1,0 +1,47 @@
+ja source 0.3
+module suite49.action_cards.review_history
+use Interface
+policy no_network
+
+interface ActionCardReviewHistory {
+    state selected_action: Text? = null
+    state validating_history: Flag = false
+    derived can_select_action = not validating_history
+    derived can_validate_history = selected_action != null and not validating_history
+    component LANDON_HistoryLoad {
+        label "Load canonical review history"
+        enabled bind can_validate_history
+        accessibility role button name "Load review history for selected action"
+        action load_review_history requires admin.action:approved
+    }
+    component SOPHIA_HistoryModel {
+        label "Interpret review sequence and decisions"
+        enabled bind can_validate_history
+        accessibility role button name "Interpret selected action review history"
+        action interpret_review_history requires admin.action:approved
+    }
+    component CHARLOTTE_HistoryGate {
+        label "Validate reviewer, order, hashes, approvals, and freshness"
+        enabled bind can_validate_history
+        accessibility role button name "Validate selected action review history"
+        action validate_review_history requires admin.action:approved
+    }
+    component Professor_HistoryGuide {
+        label "Explain review decisions and unresolved findings"
+        enabled bind can_select_action
+        accessibility role button name "Explain selected action review history"
+        action explain_review_history requires admin.action:approved
+    }
+    component Podium_HistoryEvidence {
+        label "Present immutable review and approval ledger"
+        enabled bind can_validate_history
+        accessibility role button name "View selected action review-history evidence"
+        action show_review_history_evidence requires admin.action:approved
+    }
+    component ReviewHistoryViewport {
+        embed portal.scene "action_card_review_history"
+        motion bind timeline.review_history
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface ActionCardReviewHistory

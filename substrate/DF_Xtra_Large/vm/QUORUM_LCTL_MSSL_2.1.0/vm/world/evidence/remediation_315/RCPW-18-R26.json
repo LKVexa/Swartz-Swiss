@@ -1,0 +1,44 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "268dab7d14d998f61f3481fec4ecea3dd25dc0713bcb574ce95a4e66c8b74766",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (RESOURCE_STRESS) plus Stage 18 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "RESOURCE_STRESS": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-04",
+    "GW-07",
+    "GW-35",
+    "GW-36",
+    "GW-50",
+    "GW-60",
+    "GW-78"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Autonomous world wells have strict budgets, expiration/escalation rules, and cannot monopolize simulation indefinitely.",
+  "requirement_id": "RCPW-18-R26",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 18,
+  "stage_title": "Multiple Reference Points / Authority Wells",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "RESOURCE_STRESS"
+  ],
+  "workflow_file": "18_MULTIPLE_REFERENCE_POINTS_AUTHORITY_WELLS/287_RCPW_18_R26_AUTONOMOUS_WORLD_WELLS_HAVE_STRICT_BUDGETS_EXPIRATION_ESCALATION_RULES_AND_CANNOT_MON.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

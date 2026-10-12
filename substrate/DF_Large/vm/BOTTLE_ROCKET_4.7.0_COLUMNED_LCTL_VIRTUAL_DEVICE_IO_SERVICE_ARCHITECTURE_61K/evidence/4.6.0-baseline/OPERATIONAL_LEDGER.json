@@ -1,0 +1,540 @@
+{
+  "operational": 59,
+  "record": "BR.OperationalLedger",
+  "release": "4.6.0",
+  "requirements": [
+    {
+      "evidence": "evidence/BR-460-01_tests.log",
+      "evidence_sha256": "107645b2bae83b3839cfdc9561aefa322b9c5020ee3eb6d6109425b7268b74ca",
+      "id": "BR-460-01-R01",
+      "package": "BR-460-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Support dense representation"
+    },
+    {
+      "evidence": "evidence/BR-460-01_tests.log",
+      "evidence_sha256": "107645b2bae83b3839cfdc9561aefa322b9c5020ee3eb6d6109425b7268b74ca",
+      "id": "BR-460-01-R02",
+      "package": "BR-460-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Support sparse representation"
+    },
+    {
+      "evidence": "evidence/BR-460-01_tests.log",
+      "evidence_sha256": "107645b2bae83b3839cfdc9561aefa322b9c5020ee3eb6d6109425b7268b74ca",
+      "id": "BR-460-01-R03",
+      "package": "BR-460-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Support small-value representation"
+    },
+    {
+      "evidence": "evidence/BR-460-01_tests.log",
+      "evidence_sha256": "107645b2bae83b3839cfdc9561aefa322b9c5020ee3eb6d6109425b7268b74ca",
+      "id": "BR-460-01-R04",
+      "package": "BR-460-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Use zero singleton"
+    },
+    {
+      "evidence": "evidence/BR-460-01_tests.log",
+      "evidence_sha256": "107645b2bae83b3839cfdc9561aefa322b9c5020ee3eb6d6109425b7268b74ca",
+      "id": "BR-460-01-R05",
+      "package": "BR-460-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Support copy-on-write representation"
+    },
+    {
+      "evidence": "evidence/BR-460-01_tests.log",
+      "evidence_sha256": "107645b2bae83b3839cfdc9561aefa322b9c5020ee3eb6d6109425b7268b74ca",
+      "id": "BR-460-01-R06",
+      "package": "BR-460-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Support immutable constant representation"
+    },
+    {
+      "evidence": "evidence/BR-460-02_tests.log",
+      "evidence_sha256": "6e9ed99da75399451672dec867c949f87ddb6c8f7fe49b32f5f355a5d3e5d782",
+      "id": "BR-460-02-R01",
+      "package": "BR-460-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Allocate limbs on demand"
+    },
+    {
+      "evidence": "evidence/BR-460-02_tests.log",
+      "evidence_sha256": "6e9ed99da75399451672dec867c949f87ddb6c8f7fe49b32f5f355a5d3e5d782",
+      "id": "BR-460-02-R02",
+      "package": "BR-460-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Avoid 128 KiB allocation for small integers"
+    },
+    {
+      "evidence": "evidence/BR-460-02_tests.log",
+      "evidence_sha256": "6e9ed99da75399451672dec867c949f87ddb6c8f7fe49b32f5f355a5d3e5d782",
+      "id": "BR-460-02-R03",
+      "package": "BR-460-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Grow representation as significant bits expand"
+    },
+    {
+      "evidence": "evidence/BR-460-02_tests.log",
+      "evidence_sha256": "6e9ed99da75399451672dec867c949f87ddb6c8f7fe49b32f5f355a5d3e5d782",
+      "id": "BR-460-02-R04",
+      "package": "BR-460-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Shrink after normalization where worthwhile"
+    },
+    {
+      "evidence": "evidence/BR-460-03_tests.log",
+      "evidence_sha256": "a6b01f61da199caeadaef5cf60736533c7544bb027b49b4407c4ff610096df00",
+      "id": "BR-460-03-R01",
+      "package": "BR-460-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Make registers hold word descriptors"
+    },
+    {
+      "evidence": "evidence/BR-460-03_tests.log",
+      "evidence_sha256": "a6b01f61da199caeadaef5cf60736533c7544bb027b49b4407c4ff610096df00",
+      "id": "BR-460-03-R02",
+      "package": "BR-460-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define reference-count or ownership model"
+    },
+    {
+      "evidence": "evidence/BR-460-03_tests.log",
+      "evidence_sha256": "a6b01f61da199caeadaef5cf60736533c7544bb027b49b4407c4ff610096df00",
+      "id": "BR-460-03-R03",
+      "package": "BR-460-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Use copy-on-write"
+    },
+    {
+      "evidence": "evidence/BR-460-03_tests.log",
+      "evidence_sha256": "a6b01f61da199caeadaef5cf60736533c7544bb027b49b4407c4ff610096df00",
+      "id": "BR-460-03-R04",
+      "package": "BR-460-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Zero-initialize without physical allocation"
+    },
+    {
+      "evidence": "evidence/BR-460-03_tests.log",
+      "evidence_sha256": "a6b01f61da199caeadaef5cf60736533c7544bb027b49b4407c4ff610096df00",
+      "id": "BR-460-03-R05",
+      "package": "BR-460-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Destroy deterministically"
+    },
+    {
+      "evidence": "evidence/BR-460-04_tests.log",
+      "evidence_sha256": "2f145d6dc199a2440344ccd63e99750e4a1f24c25aa193320cb5ffb52bc2575b",
+      "id": "BR-460-04-R01",
+      "package": "BR-460-04",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Make stack contain word handles/descriptors"
+    },
+    {
+      "evidence": "evidence/BR-460-04_tests.log",
+      "evidence_sha256": "2f145d6dc199a2440344ccd63e99750e4a1f24c25aa193320cb5ffb52bc2575b",
+      "id": "BR-460-04-R02",
+      "package": "BR-460-04",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Do not preallocate 256 complete megabit words"
+    },
+    {
+      "evidence": "evidence/BR-460-04_tests.log",
+      "evidence_sha256": "2f145d6dc199a2440344ccd63e99750e4a1f24c25aa193320cb5ffb52bc2575b",
+      "id": "BR-460-04-R03",
+      "package": "BR-460-04",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Allocate values as pushed"
+    },
+    {
+      "evidence": "evidence/BR-460-04_tests.log",
+      "evidence_sha256": "2f145d6dc199a2440344ccd63e99750e4a1f24c25aa193320cb5ffb52bc2575b",
+      "id": "BR-460-04-R04",
+      "package": "BR-460-04",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Reclaim on pop"
+    },
+    {
+      "evidence": "evidence/BR-460-04_tests.log",
+      "evidence_sha256": "2f145d6dc199a2440344ccd63e99750e4a1f24c25aa193320cb5ffb52bc2575b",
+      "id": "BR-460-04-R05",
+      "package": "BR-460-04",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Enforce byte quota and depth quota"
+    },
+    {
+      "evidence": "evidence/BR-460-05_tests.log",
+      "evidence_sha256": "111c0989ebcd8ab5e48b8586b65f0aa47c04a36ef60dda5332d19e32164046e8",
+      "id": "BR-460-05-R01",
+      "package": "BR-460-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Deduplicate constants"
+    },
+    {
+      "evidence": "evidence/BR-460-05_tests.log",
+      "evidence_sha256": "111c0989ebcd8ab5e48b8586b65f0aa47c04a36ef60dda5332d19e32164046e8",
+      "id": "BR-460-05-R02",
+      "package": "BR-460-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Make constants immutable"
+    },
+    {
+      "evidence": "evidence/BR-460-05_tests.log",
+      "evidence_sha256": "111c0989ebcd8ab5e48b8586b65f0aa47c04a36ef60dda5332d19e32164046e8",
+      "id": "BR-460-05-R03",
+      "package": "BR-460-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Share zero/one values"
+    },
+    {
+      "evidence": "evidence/BR-460-05_tests.log",
+      "evidence_sha256": "111c0989ebcd8ab5e48b8586b65f0aa47c04a36ef60dda5332d19e32164046e8",
+      "id": "BR-460-05-R04",
+      "package": "BR-460-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Precompute masks only where economical"
+    },
+    {
+      "evidence": "evidence/BR-460-06_tests.log",
+      "evidence_sha256": "097f778c857e30cb083d4808a335adb87a6c25febe1a823d67f410a45cd6bc8f",
+      "id": "BR-460-06-R01",
+      "package": "BR-460-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Reuse scratch words"
+    },
+    {
+      "evidence": "evidence/BR-460-06_tests.log",
+      "evidence_sha256": "097f778c857e30cb083d4808a335adb87a6c25febe1a823d67f410a45cd6bc8f",
+      "id": "BR-460-06-R02",
+      "package": "BR-460-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Use bounded arena"
+    },
+    {
+      "evidence": "evidence/BR-460-06_tests.log",
+      "evidence_sha256": "097f778c857e30cb083d4808a335adb87a6c25febe1a823d67f410a45cd6bc8f",
+      "id": "BR-460-06-R03",
+      "package": "BR-460-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Allocate deterministically"
+    },
+    {
+      "evidence": "evidence/BR-460-06_tests.log",
+      "evidence_sha256": "097f778c857e30cb083d4808a335adb87a6c25febe1a823d67f410a45cd6bc8f",
+      "id": "BR-460-06-R04",
+      "package": "BR-460-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Prevent arbitrary fragmentation"
+    },
+    {
+      "evidence": "evidence/BR-460-06_tests.log",
+      "evidence_sha256": "097f778c857e30cb083d4808a335adb87a6c25febe1a823d67f410a45cd6bc8f",
+      "id": "BR-460-06-R05",
+      "package": "BR-460-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Fail safely on exhaustion"
+    },
+    {
+      "evidence": "evidence/BR-460-07_tests.log",
+      "evidence_sha256": "088c330247194329bd0eb2ca79eefa05aaa5d54ef084ff126ce7c93e069cc982",
+      "id": "BR-460-07-R01",
+      "package": "BR-460-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Use limb-based add/sub"
+    },
+    {
+      "evidence": "evidence/BR-460-07_tests.log",
+      "evidence_sha256": "088c330247194329bd0eb2ca79eefa05aaa5d54ef084ff126ce7c93e069cc982",
+      "id": "BR-460-07-R02",
+      "package": "BR-460-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Choose multiplication strategy by operand size"
+    },
+    {
+      "evidence": "evidence/BR-460-07_tests.log",
+      "evidence_sha256": "088c330247194329bd0eb2ca79eefa05aaa5d54ef084ff126ce7c93e069cc982",
+      "id": "BR-460-07-R03",
+      "package": "BR-460-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Choose division strategy by operand size"
+    },
+    {
+      "evidence": "evidence/BR-460-07_tests.log",
+      "evidence_sha256": "088c330247194329bd0eb2ca79eefa05aaa5d54ef084ff126ce7c93e069cc982",
+      "id": "BR-460-07-R04",
+      "package": "BR-460-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Implement modular algorithms"
+    },
+    {
+      "evidence": "evidence/BR-460-07_tests.log",
+      "evidence_sha256": "088c330247194329bd0eb2ca79eefa05aaa5d54ef084ff126ce7c93e069cc982",
+      "id": "BR-460-07-R05",
+      "package": "BR-460-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Normalize after operation"
+    },
+    {
+      "evidence": "evidence/BR-460-07_tests.log",
+      "evidence_sha256": "088c330247194329bd0eb2ca79eefa05aaa5d54ef084ff126ce7c93e069cc982",
+      "id": "BR-460-07-R06",
+      "package": "BR-460-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Avoid processing unused upper limbs"
+    },
+    {
+      "evidence": "evidence/BR-460-08_tests.log",
+      "evidence_sha256": "9fa21453d07a4cd4e4ad49abae79d5ea7f2dfe7f3c514fb635b2ba9b7736384e",
+      "id": "BR-460-08-R01",
+      "package": "BR-460-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Set per-VM byte ceiling"
+    },
+    {
+      "evidence": "evidence/BR-460-08_tests.log",
+      "evidence_sha256": "9fa21453d07a4cd4e4ad49abae79d5ea7f2dfe7f3c514fb635b2ba9b7736384e",
+      "id": "BR-460-08-R02",
+      "package": "BR-460-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Set per-register maximum"
+    },
+    {
+      "evidence": "evidence/BR-460-08_tests.log",
+      "evidence_sha256": "9fa21453d07a4cd4e4ad49abae79d5ea7f2dfe7f3c514fb635b2ba9b7736384e",
+      "id": "BR-460-08-R03",
+      "package": "BR-460-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Set stack ceiling"
+    },
+    {
+      "evidence": "evidence/BR-460-08_tests.log",
+      "evidence_sha256": "9fa21453d07a4cd4e4ad49abae79d5ea7f2dfe7f3c514fb635b2ba9b7736384e",
+      "id": "BR-460-08-R04",
+      "package": "BR-460-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Set scratch ceiling"
+    },
+    {
+      "evidence": "evidence/BR-460-08_tests.log",
+      "evidence_sha256": "9fa21453d07a4cd4e4ad49abae79d5ea7f2dfe7f3c514fb635b2ba9b7736384e",
+      "id": "BR-460-08-R05",
+      "package": "BR-460-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Set image ceiling"
+    },
+    {
+      "evidence": "evidence/BR-460-08_tests.log",
+      "evidence_sha256": "9fa21453d07a4cd4e4ad49abae79d5ea7f2dfe7f3c514fb635b2ba9b7736384e",
+      "id": "BR-460-08-R06",
+      "package": "BR-460-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Set device-buffer ceiling"
+    },
+    {
+      "evidence": "evidence/BR-460-09_tests.log",
+      "evidence_sha256": "909149c59779e3d137135c0bed549378b7e9fdd782abb266d42193ca96848c3d",
+      "id": "BR-460-09-R01",
+      "package": "BR-460-09",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Trap out-of-memory"
+    },
+    {
+      "evidence": "evidence/BR-460-09_tests.log",
+      "evidence_sha256": "909149c59779e3d137135c0bed549378b7e9fdd782abb266d42193ca96848c3d",
+      "id": "BR-460-09-R02",
+      "package": "BR-460-09",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Trap word width exceeded"
+    },
+    {
+      "evidence": "evidence/BR-460-09_tests.log",
+      "evidence_sha256": "909149c59779e3d137135c0bed549378b7e9fdd782abb266d42193ca96848c3d",
+      "id": "BR-460-09-R03",
+      "package": "BR-460-09",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Trap stack quota exceeded"
+    },
+    {
+      "evidence": "evidence/BR-460-09_tests.log",
+      "evidence_sha256": "909149c59779e3d137135c0bed549378b7e9fdd782abb266d42193ca96848c3d",
+      "id": "BR-460-09-R04",
+      "package": "BR-460-09",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Trap scratch quota exceeded"
+    },
+    {
+      "evidence": "evidence/BR-460-10_tests.log",
+      "evidence_sha256": "5370fc1fc7206a42e6f2419979ba37492ad74f746b0b1902cb11c6c071920843",
+      "id": "BR-460-10-R01",
+      "package": "BR-460-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Implement small-integer fast path"
+    },
+    {
+      "evidence": "evidence/BR-460-10_tests.log",
+      "evidence_sha256": "5370fc1fc7206a42e6f2419979ba37492ad74f746b0b1902cb11c6c071920843",
+      "id": "BR-460-10-R02",
+      "package": "BR-460-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Implement zero fast path"
+    },
+    {
+      "evidence": "evidence/BR-460-10_tests.log",
+      "evidence_sha256": "5370fc1fc7206a42e6f2419979ba37492ad74f746b0b1902cb11c6c071920843",
+      "id": "BR-460-10-R03",
+      "package": "BR-460-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Implement one fast path"
+    },
+    {
+      "evidence": "evidence/BR-460-10_tests.log",
+      "evidence_sha256": "5370fc1fc7206a42e6f2419979ba37492ad74f746b0b1902cb11c6c071920843",
+      "id": "BR-460-10-R04",
+      "package": "BR-460-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Implement sparse high-bit fast path"
+    },
+    {
+      "evidence": "evidence/BR-460-10_tests.log",
+      "evidence_sha256": "5370fc1fc7206a42e6f2419979ba37492ad74f746b0b1902cb11c6c071920843",
+      "id": "BR-460-10-R05",
+      "package": "BR-460-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Use vectorized limbs only where portable"
+    },
+    {
+      "evidence": "evidence/BR-460-10_tests.log",
+      "evidence_sha256": "5370fc1fc7206a42e6f2419979ba37492ad74f746b0b1902cb11c6c071920843",
+      "id": "BR-460-10-R06",
+      "package": "BR-460-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Perform constant folding in toolchain"
+    },
+    {
+      "evidence": "evidence/BR-460-11_tests.log",
+      "evidence_sha256": "93d846ebc0a5052ad333f2ec14baa82b74d4ba875918eaf0c872c57407a66f56",
+      "id": "BR-460-11-R01",
+      "package": "BR-460-11",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Allocation strategy must not alter observable semantics"
+    },
+    {
+      "evidence": "evidence/BR-460-11_tests.log",
+      "evidence_sha256": "93d846ebc0a5052ad333f2ec14baa82b74d4ba875918eaf0c872c57407a66f56",
+      "id": "BR-460-11-R02",
+      "package": "BR-460-11",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Keep arithmetic results stable"
+    },
+    {
+      "evidence": "evidence/BR-460-11_tests.log",
+      "evidence_sha256": "93d846ebc0a5052ad333f2ec14baa82b74d4ba875918eaf0c872c57407a66f56",
+      "id": "BR-460-11-R03",
+      "package": "BR-460-11",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Keep trap behavior stable"
+    },
+    {
+      "evidence": "evidence/BR-460-11_tests.log",
+      "evidence_sha256": "93d846ebc0a5052ad333f2ec14baa82b74d4ba875918eaf0c872c57407a66f56",
+      "id": "BR-460-11-R04",
+      "package": "BR-460-11",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Keep instruction counts stable"
+    },
+    {
+      "evidence": "evidence/BR-460-12_tests.log",
+      "evidence_sha256": "f58c352bc3bbcf2e4aededc25e6b9f572ceaa48ff977a4d37007e7cbd34ecc8e",
+      "id": "BR-460-12-R01",
+      "package": "BR-460-12",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Simple workloads no longer require roughly 36 MB architectural allocation"
+    },
+    {
+      "evidence": "evidence/BR-460-12_tests.log",
+      "evidence_sha256": "f58c352bc3bbcf2e4aededc25e6b9f572ceaa48ff977a4d37007e7cbd34ecc8e",
+      "id": "BR-460-12-R02",
+      "package": "BR-460-12",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Maximum 1,048,576-bit words remain supported"
+    },
+    {
+      "evidence": "evidence/BR-460-12_tests.log",
+      "evidence_sha256": "f58c352bc3bbcf2e4aededc25e6b9f572ceaa48ff977a4d37007e7cbd34ecc8e",
+      "id": "BR-460-12-R03",
+      "package": "BR-460-12",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Memory limits enforced"
+    },
+    {
+      "evidence": "evidence/BR-460-12_tests.log",
+      "evidence_sha256": "f58c352bc3bbcf2e4aededc25e6b9f572ceaa48ff977a4d37007e7cbd34ecc8e",
+      "id": "BR-460-12-R04",
+      "package": "BR-460-12",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Performance improves without semantic changes"
+    }
+  ],
+  "status": "OPERATIONAL",
+  "total": 59
+}

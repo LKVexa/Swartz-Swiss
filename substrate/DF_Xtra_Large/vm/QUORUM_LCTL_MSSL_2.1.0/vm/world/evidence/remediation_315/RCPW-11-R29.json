@@ -1,0 +1,58 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "4114bbac853ca7e78b031a0ea194be58ac37f995bed8c99ad84b10f66c2fd2d9",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (TRANSACTION_CONCURRENCY, FOLD_PROPERTY, PRESENTATION_REGRESSION, AUTONOMOUS_HISTORY) plus Stage 11 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "AUTONOMOUS_HISTORY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "FOLD_PROPERTY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "PRESENTATION_REGRESSION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "TRANSACTION_CONCURRENCY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-16",
+    "GW-17",
+    "GW-31",
+    "GW-52",
+    "GW-63",
+    "GW-79"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T2_HIGH_FIDELITY",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Qualification compares pre/post-era visual state, expansion-horizon continuity, archive rehydration, and stale-cache rejection.",
+  "requirement_id": "RCPW-11-R29",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 11,
+  "stage_title": "Visibility / Rendering Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "TRANSACTION_CONCURRENCY",
+    "FOLD_PROPERTY",
+    "PRESENTATION_REGRESSION",
+    "AUTONOMOUS_HISTORY"
+  ],
+  "workflow_file": "11_VISIBILITY_RENDERING_AUTHORITY/174_RCPW_11_R29_QUALIFICATION_COMPARES_PRE_POST_ERA_VISUAL_STATE_EXPANSION_HORIZON_CONTINUITY_ARCHIVE.md",
+  "workflow_tier": "T2_HIGH_FIDELITY"
+}

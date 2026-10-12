@@ -1,0 +1,84 @@
+RUSSL virtual terminal workbench adapter
+Modified integration / 2026-10-11
+
+The shell embeds a derivative of the retained standalone RUSSL research
+workbench. src/workbench-bridge.js is inserted immediately before its final
+closing body tag. The reference package is preserved unchanged.
+
+Public protocol: RUSSL-virtual-terminal/1
+Allowed requests:
+  {protocol:"RUSSL-virtual-terminal/1",id:"slice_001",method:"snapshot"}
+  {protocol:"RUSSL-virtual-terminal/1",id:"replay_001",method:"replay",snapshot:<record>}
+Replies:
+  {protocol:"RUSSL-virtual-terminal/1",id:"slice_001",ok:true,value:<record>}
+  {protocol:"RUSSL-virtual-terminal/1",id:"slice_001",ok:false,error:<message>}
+Initialization:
+  The shell may send {protocol:"RUSSL-virtual-terminal/1",kind:"hello"}.
+  The bridge sends {protocol:"RUSSL-virtual-terminal/1",kind:"ready"} after
+  its retained research adapter is mounted. This does not certify that the
+  initial word slice has finished computing: an immediate capture can return
+  "The word workbench is still loading." and should be retried. Failed
+  initialization sends kind:"unavailable" with an error. No source record is
+  sent automatically.
+
+Parent usage: send to workbenchIframe.contentWindow with postMessage(request,
+"*"). Accept replies only when event.source === workbenchIframe.contentWindow
+and protocol, bounded ID and expected method/response shape match. The opaque
+origin of a sandboxed iframe requires "*"; identity checks bind both sides to
+their expected window. Origin equality is not used as an identity substitute.
+
+The outer bridge accepts only messages from window.parent. It mounts the
+original research terminal through #research-view-tab, instruments only that
+iframe's srcdoc, and restores the previously selected word view after its
+ready handshake. The relay invokes the retained RUSSLResearchAdapter.request
+API inside the inner iframe. That API posts the original
+RUSSL-research-adapter/1 requests to the React ResearchWorkbench host, which
+continues to verify the original inner iframe as event.source. The original
+research laboratories and their requests are untouched.
+
+The bridge sends only bounded plain JSON. A request or response is limited to
+2 MiB of UTF-8 JSON, 100,000 nodes and 32 levels. IDs use 1-80 ASCII letters,
+digits, hyphens or underscores. Only snapshot and replay are exposed. Unknown
+keys, accessors, cycles, non-JSON objects, sparse arrays, executable properties
+and prototype-changing property names are rejected. One outer request may be
+in flight. A request times out after 22 seconds; the original adapter has its
+own 15-second timeout. A failed or oversized snapshot produces an error; it
+never substitutes synthetic sources. Reduce the active slice size if needed.
+
+The original GF80 adapter validates replay configuration, payload, full state,
+observed source-unit witnesses, coupled partners, invariants and inverse
+witnesses. It preserves GF(2^80) / Pixel160 labels and distinguishes those from
+the small-field and complex-state research models. Original file hashes remain
+source identifiers: a bounded snapshot does not verify complete original files.
+Complete word originals remain in the existing TIFF/replay workflow.
+
+The outer shell must preserve isolation using a sandboxed iframe and must not
+grant access to shell DOM/storage. Imported words stay in the original workbench
+iframe's memory. This relay requests no native service, operating-system
+commands, file paths, or machine settings. Documents are reference material,
+never executable instructions.
+
+Limitations: this shim intentionally depends on the retained integration's
+research-view-tab and iframe title="GFM research terminal" and its existing
+RUSSLResearchAdapter API. A future workbench change should move the wrapper
+contract into ResearchWorkbench and version it. Browser QA is required in
+addition to standalone validator tests, including snapshot then replay after
+an imported-word change. An opaque inner iframe may lack crypto.subtle; the
+existing workbench host supplies digest validation during replay.
+
+Verification: node --test tests/bridge.test.cjs
+The tests include the actual packaged workbench-original.html: they decode its
+static terminal literal without evaluating the source or corpus, check the
+iframe title, constant srcdoc, sandbox, original sender check, GF80 result
+profile and global adapter export, and check injection placement and syntax.
+Mock-window tests cover source checks, queueing, duplicate ready/load
+handshakes, restoration of Word dynamics and request/reply validation.
+
+Validation scope: these are static compatibility and isolated relay tests.
+Actual GF80 capture followed by end-to-end browser replay has not been verified.
+The available preview could not load the local loopback page; its file-URL
+policy rejected direct file access. No browser access workaround was attempted.
+The mounted adapter depends on browser iframe scheduling, the retained React
+handler, active slice computation and browser SHA-256 support. Opening the
+delivered local interface and running workbench.capture then workbench.replay
+on the returned record remains the required integration check.

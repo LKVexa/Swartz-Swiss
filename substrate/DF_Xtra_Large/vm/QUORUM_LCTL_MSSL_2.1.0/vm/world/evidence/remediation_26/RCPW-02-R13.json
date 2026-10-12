@@ -1,0 +1,96 @@
+{
+  "evidence_sha256": "8d3444abd663d9c0533698d46580cf0bc32b533fe41ac33fe41c240931ea2ee9",
+  "exit_code": 0,
+  "observed_results": {
+    "all_z_preserved": true,
+    "coordinate_authority": {
+      "axes": {
+        "x": "east_west",
+        "y": "north_south",
+        "z": "elevation"
+      },
+      "folded_coordinates_are_derived": true,
+      "gravity_vector": [
+        0,
+        0,
+        -1
+      ],
+      "max": 9223372036854775807,
+      "min": -9223372036854775808,
+      "numeric": "signed_integer",
+      "reference_independent": true,
+      "resolution": 1,
+      "schema": "RCPW-CANONICAL-XYZ-I64/1",
+      "unit": "canonical_meter"
+    },
+    "gravity_vector": [
+      0,
+      0,
+      -1
+    ],
+    "vectors": [
+      {
+        "canonical": [
+          0,
+          0,
+          1000000000
+        ],
+        "canonical_z_preserved": true,
+        "folded": [
+          0,
+          0,
+          65531
+        ]
+      },
+      {
+        "canonical": [
+          1000000000,
+          0,
+          1000000000
+        ],
+        "canonical_z_preserved": true,
+        "folded": [
+          46338,
+          0,
+          46338
+        ]
+      },
+      {
+        "canonical": [
+          1000000000000,
+          1000000000000,
+          -1000000000
+        ],
+        "canonical_z_preserved": true,
+        "folded": [
+          46340,
+          46340,
+          -47
+        ]
+      },
+      {
+        "canonical": [
+          -1000000000000,
+          0,
+          123456789
+        ],
+        "canonical_z_preserved": true,
+        "folded": [
+          -65535,
+          0,
+          8
+        ]
+      }
+    ]
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "requirement_id": "RCPW-02-R13",
+  "result_sha256": "88ebf773376262448448c4926ef5399550c9b3b20ef45b2913c26b55db06280a",
+  "schema": "RCPW-26-GATE-EVIDENCE/1",
+  "status": "OPERATIONAL",
+  "test_command": "python vm/world/qualification/remediate_26.py",
+  "tool_versions": {
+    "python": "3.11.15",
+    "world_runtime": "7.0.0-applied-remediated-26"
+  }
+}

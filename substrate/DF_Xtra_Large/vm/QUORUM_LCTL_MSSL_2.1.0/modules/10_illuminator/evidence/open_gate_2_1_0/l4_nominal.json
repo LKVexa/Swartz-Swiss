@@ -1,0 +1,112 @@
+{
+  "authority_sha256": "f786fba8a727de5491af4136b3ee539c560114ac156b7185de122f260be9e512",
+  "domain_output": {
+    "decision": {
+      "accepted": true,
+      "confidence": 0.679688,
+      "explanation": "Reference decision produced by Illuminator under deterministic offline profile.",
+      "route": "illuminator"
+    },
+    "input_type": "request/context",
+    "legacy_signals": [
+      "RENDER",
+      "PACKAGE"
+    ],
+    "module": "Illuminator",
+    "output_type": "decision/explanation",
+    "payload_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+    "plane": "intent_reasoning",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "b73c5357c9db81a6d1bfac19bd7302b9d261ca4ababb4b507953abb202461903",
+  "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+  "module": "Illuminator",
+  "module_id": 10,
+  "plane": "intent_reasoning",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "2b02b28d90647c1aeed9f3a3a218ee9623543e83825e7eaf1c29cb6018f6785f",
+  "stage_count": 9,
+  "stages": [
+    {
+      "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "node": "N01",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "c703c0379979b77d5595cc4099817b7d64e805adf1f7c9caaa9bca446474ef8e",
+      "stage": "REQUEST"
+    },
+    {
+      "input_sha256": "c703c0379979b77d5595cc4099817b7d64e805adf1f7c9caaa9bca446474ef8e",
+      "node": "N02",
+      "operator": "RETRIEVE",
+      "output_sha256": "fd9b2385ea085ee61fac579f1ef27f1ee133a670b4031c2a3233cf5f6c9ea192",
+      "retrieved_count": 1,
+      "stage": "CONTEXT"
+    },
+    {
+      "input_sha256": "fd9b2385ea085ee61fac579f1ef27f1ee133a670b4031c2a3233cf5f6c9ea192",
+      "node": "N03",
+      "normalized_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "operator": "PARSE",
+      "output_sha256": "5654bf9132453c39f51b4b25ef3ce603149a110c1327c1d92a6d80ee8a1ba2bb",
+      "stage": "INTERPRET"
+    },
+    {
+      "decision": "REFERENCE_CONTINUE",
+      "input_sha256": "5654bf9132453c39f51b4b25ef3ce603149a110c1327c1d92a6d80ee8a1ba2bb",
+      "node": "N04",
+      "operator": "REASON",
+      "output_sha256": "e66afe81193e62530e331144f2771bbb13ab843205723b2593661980fa624675",
+      "score": 0.420098,
+      "stage": "REASON"
+    },
+    {
+      "accepted": true,
+      "input_sha256": "e66afe81193e62530e331144f2771bbb13ab843205723b2593661980fa624675",
+      "node": "N05",
+      "operator": "FILTER",
+      "output_sha256": "7559d5c863850856e82ffe011ab9a6f97819ee6223c4d1417be88a2f20fa0708",
+      "stage": "FILTER"
+    },
+    {
+      "input_sha256": "7559d5c863850856e82ffe011ab9a6f97819ee6223c4d1417be88a2f20fa0708",
+      "node": "N06",
+      "operator": "RANK",
+      "output_sha256": "57fa6998c4283a558469657de9ec596bcaf46b7272bd0d8c004947409d307c28",
+      "rank_score": 0.664706,
+      "stage": "RANK"
+    },
+    {
+      "input_sha256": "57fa6998c4283a558469657de9ec596bcaf46b7272bd0d8c004947409d307c28",
+      "node": "N07",
+      "operator": "VALIDATE",
+      "output_sha256": "8de8393b64c4bbe426fb9614b40f3e5dd332b262239372fc43c0e218707e0a63",
+      "stage": "VALIDATE",
+      "valid": true
+    },
+    {
+      "explanation": "Illuminator:EXPLAIN reference semantics completed.",
+      "input_sha256": "8de8393b64c4bbe426fb9614b40f3e5dd332b262239372fc43c0e218707e0a63",
+      "node": "N08",
+      "operator": "EXPLAIN",
+      "output_sha256": "3b12cb9b6e45bbd9a226504ee1500d1e96933beb461127c0110703bb672a3fd5",
+      "stage": "EXPLAIN"
+    },
+    {
+      "input_sha256": "3b12cb9b6e45bbd9a226504ee1500d1e96933beb461127c0110703bb672a3fd5",
+      "node": "N09",
+      "operator": "RECORD",
+      "output_sha256": "d4c87d6f0e717858b073a0665320d8f403f18edcbcb9431e09045ca0fef9e2b2",
+      "receipt_sha256": "1182e2ce34f0a5b343e56e84ee02157e34948e85966df5196ce5ada5bb3f521e",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

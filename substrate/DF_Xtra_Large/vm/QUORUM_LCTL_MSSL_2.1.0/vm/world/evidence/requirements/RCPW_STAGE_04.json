@@ -1,0 +1,305 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 12,
+    "PARTIAL": 17,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Every persistent entity class has a declared simulation representation ladder.",
+      "requirement_id": "RCPW-04-R01",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Promotion/demotion preserves identity, causal obligations, and gameplay-significant state.",
+      "requirement_id": "RCPW-04-R02",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Hysteresis prevents transition thrashing.",
+      "requirement_id": "RCPW-04-R03",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "LOD decisions combine distance with visibility, causality, narrative gravity, threat, and resource budgets.",
+      "requirement_id": "RCPW-04-R04",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Resource exhaustion degrades fidelity without silently erasing authoritative state.",
+      "requirement_id": "RCPW-04-R05",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "LOD decisions are replayable from recorded deterministic inputs.",
+      "requirement_id": "RCPW-04-R06",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "LOD scheduling has starvation bounds so causally important remote entities cannot be indefinitely deferred.",
+      "requirement_id": "RCPW-04-R07",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Update cadence changes preserve time integration and do not create energy/state jumps when promoted.",
+      "requirement_id": "RCPW-04-R08",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-04-R09.json",
+      "evidence_sha256": "0417481c1286b902e25385a94028ddfc2a6919b764b664ec4911ac43c1a31dee",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "Budget governor decisions are observable, replayable, and attributed to CPU/GPU/memory/I/O pressure.",
+      "requirement_id": "RCPW-04-R09",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Mass promotion storms are rate-limited without erasing unresolved authoritative obligations.",
+      "requirement_id": "RCPW-04-R10",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Cross-LOD simulation preserves event barriers: events requiring higher fidelity suspend, escalate, or resolve through an explicitly qualified abstract model.",
+      "requirement_id": "RCPW-04-R11",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Remote AI schedule, intent, movement, and social-state integration account for elapsed canonical time when update cadence changes.",
+      "requirement_id": "RCPW-04-R12",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Promotion debt is tracked so repeatedly deferred high-value entities receive bounded service without creating an uncontrolled promotion storm.",
+      "requirement_id": "RCPW-04-R13",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "LOD approximation error is measured per subsystem and incorporated into qualification rather than treated as visually acceptable by default.",
+      "requirement_id": "RCPW-04-R14",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Simulation LOD authority defines subsystem-specific fidelity contracts for AI, ecology, economy, weather, navigation, combat, transport, and narrative events.",
+      "requirement_id": "RCPW-04-R15",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Cross-subsystem LOD combinations are validated so incompatible fidelity pairs cannot create causally impossible results.",
+      "requirement_id": "RCPW-04-R16",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "LOD promotion scheduling reserves capacity for interaction-critical entities, event barriers, and recovery work before cosmetic/background promotions.",
+      "requirement_id": "RCPW-04-R17",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Approximation debt is accumulated and repaid when an entity or region returns to higher fidelity, with bounded reconciliation work.",
+      "requirement_id": "RCPW-04-R18",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "LOD telemetry records approximation class, error budget, deferred obligations, promotion debt, and last full-fidelity checkpoint.",
+      "requirement_id": "RCPW-04-R19",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Simulation LOD scheduling supports deterministic parallel work assignment while canonical commit order remains stable and replayable.",
+      "requirement_id": "RCPW-04-R20",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Subsystem LOD jobs declare read/write sets or equivalent conflict domains so unsafe parallel updates cannot silently race.",
+      "requirement_id": "RCPW-04-R21",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "LOD work stealing or dynamic scheduling may change execution placement but not canonical results in deterministic qualification profiles.",
+      "requirement_id": "RCPW-04-R22",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Approximation debt and promotion debt survive worker restart, checkpoint/recovery, and partition migration.",
+      "requirement_id": "RCPW-04-R23",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-04-R24.json",
+      "evidence_sha256": "abee15ffe81d840c8c2f917628757f717a9f1462116079bcd0f11805b8940fd0",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "LOD qualification compares single-worker and multi-worker canonical checkpoint digests for semantic equivalence.",
+      "requirement_id": "RCPW-04-R24",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Simulation LOD includes ultra-long-horizon demographic, institutional, ecological, economic, and infrastructure representations for generational world evolution.",
+      "requirement_id": "RCPW-04-R25",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-horizon abstraction cannot resolve events whose outcome depends on unknown player-local information or unresolved high-fidelity barriers.",
+      "requirement_id": "RCPW-04-R26",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "LOD models expose temporal validity windows so coarse long-horizon predictions are invalidated/recomputed when canonical shocks exceed assumptions.",
+      "requirement_id": "RCPW-04-R27",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Approximation debt includes historical uncertainty and is reduced through re-simulation or evidence-backed reconstruction when a region becomes relevant again.",
+      "requirement_id": "RCPW-04-R28",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification compares short-step and long-horizon simulations over selected reference regions to quantify drift and acceptable semantic error.",
+      "requirement_id": "RCPW-04-R29",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    }
+  ],
+  "stage": 4,
+  "title": "Simulation LOD Authority"
+}

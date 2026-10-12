@@ -1,0 +1,141 @@
+{
+  "evidence_sha256": "f127492bb5eae326de81e2d34672a90c884971a84e4c44d548d7ef326ebc7a8e",
+  "exit_code": 0,
+  "observed_results": {
+    "budgets": {
+      "cpu_100_tick_p95_ms": 1.7988399995374493,
+      "gpu": "NOT_APPLICABLE_REFERENCE_PROFILE",
+      "io_1mib_read_ms_ceiling": 5.0,
+      "io_1mib_write_ms_ceiling": 35.410623997449875,
+      "memory_rss_kb_ceiling": 44352,
+      "storage_save_bytes_ceiling": 1000000
+    },
+    "decisions": [
+      {
+        "action": "RESTORE_OR_HOLD",
+        "canonical_protected": true,
+        "degradation_level": 0,
+        "input": {
+          "cpu": 0,
+          "gpu": 0,
+          "io": 0,
+          "ledger_backlog": 0,
+          "materialization_backlog": 0,
+          "memory": 0,
+          "storage": 0
+        },
+        "version": "RCPW-GOVERNOR/1",
+        "violated": []
+      },
+      {
+        "action": "DROP_SPECULATIVE_PRESENTATION",
+        "canonical_protected": true,
+        "degradation_level": 1,
+        "input": {
+          "cpu": 90,
+          "gpu": 0,
+          "io": 0,
+          "ledger_backlog": 0,
+          "materialization_backlog": 0,
+          "memory": 0,
+          "storage": 0
+        },
+        "version": "RCPW-GOVERNOR/1",
+        "violated": [
+          "cpu"
+        ]
+      },
+      {
+        "action": "DROP_SPECULATIVE_PRESENTATION",
+        "canonical_protected": true,
+        "degradation_level": 1,
+        "input": {
+          "cpu": 0,
+          "gpu": 0,
+          "io": 90,
+          "ledger_backlog": 0,
+          "materialization_backlog": 0,
+          "memory": 95,
+          "storage": 0
+        },
+        "version": "RCPW-GOVERNOR/1",
+        "violated": [
+          "io",
+          "memory"
+        ]
+      },
+      {
+        "action": "PROTECT_CANONICAL_REDUCE_REMOTE_AND_PRESENTATION",
+        "canonical_protected": true,
+        "degradation_level": 3,
+        "input": {
+          "cpu": 0,
+          "gpu": 0,
+          "io": 0,
+          "ledger_backlog": 150,
+          "materialization_backlog": 0,
+          "memory": 0,
+          "storage": 95
+        },
+        "version": "RCPW-GOVERNOR/1",
+        "violated": [
+          "ledger_backlog",
+          "storage"
+        ]
+      },
+      {
+        "action": "RESTORE_OR_HOLD",
+        "canonical_protected": true,
+        "degradation_level": 0,
+        "input": {
+          "cpu": 20,
+          "gpu": 0,
+          "io": 0,
+          "ledger_backlog": 0,
+          "materialization_backlog": 0,
+          "memory": 20,
+          "storage": 0
+        },
+        "version": "RCPW-GOVERNOR/1",
+        "violated": []
+      }
+    ],
+    "governor_version": "RCPW-GOVERNOR/1",
+    "measurements": {
+      "cpu_100_tick_ms": [
+        0.4307139997763443,
+        0.37477800015039975,
+        0.3746880001926911,
+        0.44970999988436233,
+        0.3730489997906261,
+        0.4086939998160233,
+        0.37263200010784203,
+        0.3763269996852614
+      ],
+      "cpu_p95_ms": 0.44970999988436233,
+      "io_read_ms": 0.5318319999787491,
+      "io_write_ms": 4.426327999681234,
+      "rss_kb": 22176,
+      "save_bytes": 8288
+    },
+    "replayable": true,
+    "within_budget": {
+      "cpu": true,
+      "gpu": "NOT_APPLICABLE",
+      "io_read": true,
+      "io_write": true,
+      "memory": true,
+      "storage": true
+    }
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "requirement_id": "RCPW-20-R07",
+  "result_sha256": "d385585c5dbe2fb3046b8e7bf3e78e07599094d2e856c94d699371a6aedc7fc5",
+  "schema": "RCPW-26-GATE-EVIDENCE/1",
+  "status": "OPERATIONAL",
+  "test_command": "python vm/world/qualification/remediate_26.py",
+  "tool_versions": {
+    "python": "3.11.15",
+    "world_runtime": "7.0.0-applied-remediated-26"
+  }
+}

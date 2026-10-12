@@ -1,0 +1,48 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "795974d367a1090f225fab7a03baae0366f23799d94390eec4494e11c8fd43ff",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (FOLD_PROPERTY, ECONOMY_CONSERVATION) plus Stage 03 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "ECONOMY_CONSERVATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "FOLD_PROPERTY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-01",
+    "GW-16",
+    "GW-25",
+    "GW-43",
+    "GW-51",
+    "GW-63"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T2_HIGH_FIDELITY",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Roads, rivers, terrain, rail, navigation links, settlements, and long structures have declared fold semantics.",
+  "requirement_id": "RCPW-03-R05",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 3,
+  "stage_title": "Fold Geometry Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "FOLD_PROPERTY",
+    "ECONOMY_CONSERVATION"
+  ],
+  "workflow_file": "03_FOLD_GEOMETRY_AUTHORITY/033_RCPW_03_R05_ROADS_RIVERS_TERRAIN_RAIL_NAVIGATION_LINKS_SETTLEMENTS_AND_LONG_STRUCTURES_HAVE_DECLA.md",
+  "workflow_tier": "T2_HIGH_FIDELITY"
+}

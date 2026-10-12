@@ -1,0 +1,33 @@
+{
+  "schema": "QUORUM-PLANE-GRAPH/2.0",
+  "plane_id": 4,
+  "plane": "orchestration",
+  "modules": [
+    {
+      "module_id": 15,
+      "name": "Orchestrator"
+    },
+    {
+      "module_id": 32,
+      "name": "Orchestrator II"
+    },
+    {
+      "module_id": 56,
+      "name": "Job Queue Workers and Sandboxes"
+    },
+    {
+      "module_id": 57,
+      "name": "Translation Build Test and Evaluation Jobs"
+    },
+    {
+      "module_id": 60,
+      "name": "Worker"
+    },
+    {
+      "module_id": 62,
+      "name": "LANDON Integration and Run All"
+    }
+  ],
+  "integration": "independent module nodes with scenario-mediated orchestration",
+  "cycles": []
+}

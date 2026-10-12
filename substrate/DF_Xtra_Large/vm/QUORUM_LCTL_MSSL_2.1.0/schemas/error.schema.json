@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "quorum://schemas/error.schema.json",
+  "title": "error.schema.json",
+  "type": "object",
+  "required": [
+    "id",
+    "class",
+    "fail_closed",
+    "evidence"
+  ],
+  "additionalProperties": true
+}

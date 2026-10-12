@@ -1,0 +1,63 @@
+{
+  "abi": 2,
+  "atomic_requirements_operational": 117,
+  "atomic_requirements_total": 117,
+  "command_log_count": 26,
+  "completed_utc": "2026-08-11T04:23:29+00:00",
+  "decision": "OPERATIONAL",
+  "external_scope": [
+    "physical SIM/UICC/eSIM hardware and issuer qualification",
+    "native Windows OS execution qualification",
+    "third-party independent certification",
+    "external LCTL 1.6.1-RC1 verification when not supplied"
+  ],
+  "isa": "BR/1.1",
+  "opcodes": 41,
+  "record": "BR.Qualification",
+  "release": "BOTTLE ROCKET 4.3.0 COLUMNED LCTL \u2014 Production ISA/ABI Completion",
+  "reproducibility": {
+    "byte_identical": true
+  },
+  "services": 22,
+  "size": {
+    "brim_bytes": 176,
+    "brim_ceiling_bytes": 51200,
+    "brim_pass": true,
+    "brir_bytes": 1791,
+    "core_archive_bytes": 39964,
+    "host_brctl_bytes": 62256,
+    "production_source_boundary": "Makefile + src/** + adapters/** + spec/**",
+    "production_source_bytes": 60930,
+    "production_source_ceiling_lt_bytes": 61000,
+    "production_source_pass": true,
+    "provenance_bytes": 650,
+    "record": "BR.Size"
+  },
+  "started_utc": "2026-08-11T04:22:56+00:00",
+  "tests": {
+    "canonical_traps": 14,
+    "inherited": 18,
+    "isa_runtime_groups": 8,
+    "opcode_negative": 41,
+    "opcode_positive": 41,
+    "semantic": 19
+  },
+  "unresolved_critical_or_high_defects": [],
+  "work_packages": {
+    "BR-430-01": "OPERATIONAL",
+    "BR-430-02": "OPERATIONAL",
+    "BR-430-03": "OPERATIONAL",
+    "BR-430-04": "OPERATIONAL",
+    "BR-430-05": "OPERATIONAL",
+    "BR-430-06": "OPERATIONAL",
+    "BR-430-07": "OPERATIONAL",
+    "BR-430-08": "OPERATIONAL",
+    "BR-430-09": "OPERATIONAL",
+    "BR-430-10": "OPERATIONAL",
+    "BR-430-11": "OPERATIONAL",
+    "BR-430-12": "OPERATIONAL",
+    "BR-430-13": "OPERATIONAL",
+    "BR-430-14": "OPERATIONAL",
+    "BR-430-15": "OPERATIONAL"
+  }
+}

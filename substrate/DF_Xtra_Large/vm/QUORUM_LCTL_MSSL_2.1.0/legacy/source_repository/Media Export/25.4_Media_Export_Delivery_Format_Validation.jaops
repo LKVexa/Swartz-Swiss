@@ -1,0 +1,33 @@
+ja source 0.3
+module suite25.media_export.delivery_format_validation
+use Operations
+policy explicit_network
+
+workspace MediaExportDeliveryValidation {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 6 memory 12GB
+    network disabled
+    secret signing_key reference "vault://media-export/signing"
+    service SOPHIA_delivery_profile replicas 1
+    health_check SOPHIA_delivery_profile every 10s
+    service CHARLOTTE_delivery_gate replicas 1
+    health_check CHARLOTTE_delivery_gate every 10s
+    service LANDON_delivery_validator replicas 1
+    health_check LANDON_delivery_validator every 10s
+    service Professor_delivery_report replicas 1
+    health_check Professor_delivery_report every 10s
+    service Podium_delivery_receipt replicas 1
+    health_check Podium_delivery_receipt every 10s
+    service delivery_format_validator replicas 1
+    health_check delivery_format_validator every 5s
+    service delivery_manifest_emitter replicas 1
+    health_check delivery_manifest_emitter every 5s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == true
+emit package "media_export_delivery_format_validation.msslb"

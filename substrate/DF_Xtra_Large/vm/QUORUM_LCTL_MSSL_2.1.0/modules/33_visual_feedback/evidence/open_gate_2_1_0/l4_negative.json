@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "0155a78bfffcf6ad2232e08cc9ba1c5ba80b55940d1845f579dd1cef2a430a4f",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Visual Feedback",
+  "module_id": 33,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

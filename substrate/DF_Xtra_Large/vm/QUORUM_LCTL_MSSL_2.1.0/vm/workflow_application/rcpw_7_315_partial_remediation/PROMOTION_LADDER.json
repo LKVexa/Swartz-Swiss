@@ -1,0 +1,42 @@
+{
+  "T1_DIRECT_PROOF": {
+    "goal": "Promote locally implemented semantics by adding exact executable proof.",
+    "minimum_profile": "QP1 hosted reference, unless requirement states otherwise",
+    "mandatory": [
+      "direct requirement test",
+      "negative/boundary test",
+      "deterministic replay where stateful",
+      "full regression"
+    ]
+  },
+  "T2_HIGH_FIDELITY": {
+    "goal": "Raise hosted implementation fidelity and measurable behavior to the requirement's full local semantics.",
+    "minimum_profile": "QP1/WQ2+; may require WQ3/WQ4 for presentation/scale semantics",
+    "mandatory": [
+      "implementation extension",
+      "fidelity/error budget",
+      "stress/performance evidence",
+      "recovery/regression"
+    ]
+  },
+  "T3_FABRIC": {
+    "goal": "Demonstrate deterministic spawned-worker/partitioned behavior rather than only single-process simulation.",
+    "minimum_profile": "Hosted fabric worker profile plus deterministic conformance; QP2/QP3 only if native/production is actually shown",
+    "mandatory": [
+      "1/2/4-worker comparison",
+      "repartition/restart",
+      "transaction/ownership proof",
+      "save/replay digest equivalence"
+    ]
+  },
+  "T4_PRODUCTION_EXTERNAL": {
+    "goal": "Execute the actual production/hardware/independent environment named by the requirement.",
+    "minimum_profile": "QP3 or QP4 as applicable",
+    "mandatory": [
+      "declared target environment",
+      "observed run",
+      "independent/production evidence",
+      "risk/rollback"
+    ]
+  }
+}

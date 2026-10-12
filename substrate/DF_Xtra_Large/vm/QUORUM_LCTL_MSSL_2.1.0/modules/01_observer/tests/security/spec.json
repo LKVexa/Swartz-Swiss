@@ -1,0 +1,9 @@
+{
+  "module_id": 1,
+  "checks": [
+    "mssl_tamper_detection",
+    "default_network_deny",
+    "declared_capabilities_only",
+    "terminal_failure_closed"
+  ]
+}

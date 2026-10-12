@@ -1,0 +1,304 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 15,
+    "PARTIAL": 14,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Local individual and remote cohort/statistical ecology share one authoritative ecological state model.",
+      "requirement_id": "RCPW-07-R01",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Promotion/demotion between individuals and cohorts is mass/population consistent within declared tolerances.",
+      "requirement_id": "RCPW-07-R02",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Remote ecological interactions create durable consequences that can later materialize locally.",
+      "requirement_id": "RCPW-07-R03",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Weather, season, terrain, food, predation, disease, hunting, and human settlement can influence ecology through explicit couplings.",
+      "requirement_id": "RCPW-07-R04",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Random ecological resolutions are deterministic under recorded seeds.",
+      "requirement_id": "RCPW-07-R05",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-run population behavior is bounded and audited for artificial explosions/extinctions caused by LOD transitions.",
+      "requirement_id": "RCPW-07-R06",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecological time-step adaptation is bounded and conservation error is measured per species/resource system.",
+      "requirement_id": "RCPW-07-R07",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Remote stochastic outcomes expose reproducible seeds and probability models.",
+      "requirement_id": "RCPW-07-R08",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-07-R09.json",
+      "evidence_sha256": "04e75375f58cd2b843dc45ce0c987a72b27da2c1b7c668e9caa89137dae92f01",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "Spatial folding cannot collapse independent habitats into one ecological interaction domain.",
+      "requirement_id": "RCPW-07-R09",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rehydrated local ecology is statistically and causally consistent with its aggregate history.",
+      "requirement_id": "RCPW-07-R10",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Habitat connectivity is canonical and cannot be altered merely by visual fold distance; migration uses canonical route/topology cost.",
+      "requirement_id": "RCPW-07-R11",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecology couples to qualified weather, fire, water, season, day/night, vegetation, and human pressure state.",
+      "requirement_id": "RCPW-07-R12",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Local depletion and remote regeneration use one conserved resource model with declared approximation bounds.",
+      "requirement_id": "RCPW-07-R13",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rehydrated individual animals/plants inherit age, health, location, group, and causal history consistent with remote cohort evolution.",
+      "requirement_id": "RCPW-07-R14",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecology authority exposes habitat capacity, migration routes, resource flows, predation pressure, and human interference as canonical graph/state inputs rather than display-space approximations.",
+      "requirement_id": "RCPW-07-R15",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecological cohorts support deterministic split/merge operations when regions fold, unfold, divide, or materialize.",
+      "requirement_id": "RCPW-07-R16",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Remote ecology can suspend at event barriers requiring direct interaction rather than fabricating high-detail outcomes.",
+      "requirement_id": "RCPW-07-R17",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecological materialization selects individuals from cohort state without changing conserved population/resource totals beyond declared stochastic tolerance.",
+      "requirement_id": "RCPW-07-R18",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecology qualification includes long-soak biodiversity, resource depletion/recovery, seasonal migration, and repeated individual↔cohort cycling.",
+      "requirement_id": "RCPW-07-R19",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecological regions may execute on different workers/partitions while migration and shared-resource boundaries use canonical transfer events.",
+      "requirement_id": "RCPW-07-R20",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Cohort split/merge across partition boundaries is deterministic and conservation-audited.",
+      "requirement_id": "RCPW-07-R21",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecological worker restart resumes from checkpoint plus ledger without population duplication or lost resource debt.",
+      "requirement_id": "RCPW-07-R22",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Environment/ecology coupling across partitions uses explicit boundary state and canonical simulation time.",
+      "requirement_id": "RCPW-07-R23",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecology scale qualification compares partitioned and reference single-partition runs within declared stochastic/conservation tolerances.",
+      "requirement_id": "RCPW-07-R24",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecology supports long-term succession, habitat transformation, local extinction/reintroduction, resource regeneration, and climate/season coupling across world ages.",
+      "requirement_id": "RCPW-07-R25",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Species/cohort migration into newly synthesized regions uses canonical habitat/topology constraints and deterministic provenance.",
+      "requirement_id": "RCPW-07-R26",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecological inheritance tracks persistent habitat changes caused by settlement growth, infrastructure, fire, resource depletion, and restoration.",
+      "requirement_id": "RCPW-07-R27",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Archived ecological regions retain sufficient conserved state to rehydrate populations and causal environmental evidence after long absence.",
+      "requirement_id": "RCPW-07-R28",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes multi-era ecological succession, settlement expansion pressure, climate variation, region synthesis, archive, and later rehydration.",
+      "requirement_id": "RCPW-07-R29",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    }
+  ],
+  "stage": 7,
+  "title": "Ecology Authority"
+}

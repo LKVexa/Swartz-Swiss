@@ -1,0 +1,26 @@
+ja source 0.3
+module illuminator.findings
+use Interface
+policy no_network
+
+interface IlluminatorFindings {
+    state sophia_findings: Text? = null
+    state charlotte_context: Text? = null
+    state landon_runtime_evidence: Text? = null
+    state professor_review: Text? = null
+    state podium_summary: Text? = null
+    state running: Flag = false
+    derived can_render = sophia_findings != null and charlotte_context != null and landon_runtime_evidence != null and professor_review != null and podium_summary != null and not running
+    component FindingsButton {
+        label "Render certified findings"
+        enabled bind can_render
+        accessibility role button name "Render Illuminator findings"
+        action render_findings requires admin.action:approved
+    }
+    component FindingsViewport {
+        embed portal.scene "illuminator_findings_report"
+        motion bind timeline.main
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface IlluminatorFindings

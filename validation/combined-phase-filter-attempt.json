@@ -1,0 +1,28 @@
+{
+  "schema": "GFM-combined-phase-offline-regression/1",
+  "prepared": "2026-10-12T10:54:25.411Z",
+  "exitCode": null,
+  "passed": false,
+  "counts": {
+    "tests": 0,
+    "pass": 0,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "files": [
+    "GFM/experiments/phase/tests/phase-mhd.cjs",
+    "GFM/experiments/phase/tests/phase-view.test.cjs",
+    "GFM/experiments/phase/tests/phase-worker-parity.cjs",
+    "GFM/experiments/phase/tests/relativity.cjs",
+    "GFM/experiments/phase/tests/physics-service.cjs",
+    "GFM/experiments/phase/tests/backend-simulation.cjs",
+    "GFM/experiments/phase/tests/backend-provenance.cjs",
+    "GFM/experiments/phase/tests/observations.cjs",
+    "GFM/experiments/phase/tests/combined-relativity-worker.cjs",
+    "GFM/experiments/phase/tests/frontend.test.cjs"
+  ],
+  "filter": "Exclude HTTP/SSE integration because cross-process loopback is denied in this execution environment; those are not offline console acceptance evidence.",
+  "runtime": "v24.19.0",
+  "scope": "Actual unchanged scientific cores, browser/Node numerical parity, source provenance, observation failure retention, and renderer geometry submission. These checks do not prove live native GUI rendering or empirical phase/cover validity."
+}

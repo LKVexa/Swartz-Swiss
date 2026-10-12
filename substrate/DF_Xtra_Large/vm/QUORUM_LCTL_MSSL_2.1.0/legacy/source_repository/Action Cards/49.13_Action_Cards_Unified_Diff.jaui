@@ -1,0 +1,47 @@
+ja source 0.3
+module suite49.action_cards.unified_diff
+use Interface
+policy no_network
+
+interface ActionCardUnifiedDiff {
+    state selected_action: Text? = null
+    state validating_diff: Flag = false
+    derived can_select_action = not validating_diff
+    derived can_validate_diff = selected_action != null and not validating_diff
+    component SOPHIA_DiffModel {
+        label "Interpret baseline, target, and change intent"
+        enabled bind can_validate_diff
+        accessibility role button name "Interpret unified diff for selected action"
+        action interpret_unified_diff requires admin.action:approved
+    }
+    component CHARLOTTE_DiffGate {
+        label "Validate paths, hunks, context, hashes, and scope"
+        enabled bind can_validate_diff
+        accessibility role button name "Validate unified diff for selected action"
+        action validate_unified_diff requires admin.action:approved
+    }
+    component LANDON_DiffRender {
+        label "Render validated unified diff without applying it"
+        enabled bind can_validate_diff
+        accessibility role button name "Render selected action unified diff"
+        action render_unified_diff requires admin.action:approved
+    }
+    component Professor_DiffGuide {
+        label "Explain changed behavior and review focus"
+        enabled bind can_select_action
+        accessibility role button name "Explain selected action unified diff"
+        action explain_unified_diff requires admin.action:approved
+    }
+    component Podium_DiffEvidence {
+        label "View diff provenance and validation evidence"
+        enabled bind can_validate_diff
+        accessibility role button name "View selected action unified-diff evidence"
+        action show_unified_diff_evidence requires admin.action:approved
+    }
+    component UnifiedDiffViewport {
+        embed portal.scene "action_card_unified_diff"
+        motion bind timeline.diff_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface ActionCardUnifiedDiff

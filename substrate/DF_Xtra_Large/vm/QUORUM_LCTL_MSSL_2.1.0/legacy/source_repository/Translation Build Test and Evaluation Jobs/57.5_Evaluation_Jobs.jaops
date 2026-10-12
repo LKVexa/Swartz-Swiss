@@ -1,0 +1,34 @@
+ja source 0.3
+module suite57.translation_build_test_evaluation.evaluation_jobs
+use Operations
+policy explicit_network
+
+workspace EvaluationJobs {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 10 memory 20GB
+    network disabled
+    secret evaluation_key reference "vault://suite57/evaluation-jobs"
+
+    service SOPHIA_evaluation_context replicas 1
+    health_check SOPHIA_evaluation_context every 10s
+    service CHARLOTTE_evaluation_gate replicas 1
+    health_check CHARLOTTE_evaluation_gate every 10s
+    service LANDON_evaluation_controller replicas 1
+    health_check LANDON_evaluation_controller every 10s
+    service Professor_evaluation_report replicas 1
+    health_check Professor_evaluation_report every 10s
+    service Podium_evaluation_receipt replicas 1
+    health_check Podium_evaluation_receipt every 10s
+    service evaluation_job_worker replicas 1
+    health_check evaluation_job_worker every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "translation_build_test_evaluation_evaluation_jobs.msslb"

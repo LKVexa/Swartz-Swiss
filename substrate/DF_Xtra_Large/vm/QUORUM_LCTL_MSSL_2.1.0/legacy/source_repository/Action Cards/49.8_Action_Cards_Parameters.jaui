@@ -1,0 +1,47 @@
+ja source 0.3
+module suite49.action_cards.parameters
+use Interface
+policy no_network
+
+interface ActionCardParameters {
+    state selected_action: Text? = null
+    state validating_parameters: Flag = false
+    derived can_select_action = not validating_parameters
+    derived can_validate_parameters = selected_action != null and not validating_parameters
+    component SOPHIA_ParametersModel {
+        label "Interpret complete action parameter set"
+        enabled bind can_validate_parameters
+        accessibility role button name "Interpret complete parameters for selected action"
+        action interpret_action_parameters requires admin.action:approved
+    }
+    component CHARLOTTE_ParametersGate {
+        label "Validate parameter schema, types, bounds, and secrets"
+        enabled bind can_validate_parameters
+        accessibility role button name "Validate complete parameters for selected action"
+        action validate_action_parameters requires admin.action:approved
+    }
+    component LANDON_ParametersBind {
+        label "Bind canonical validated parameters"
+        enabled bind can_validate_parameters
+        accessibility role button name "Bind validated parameters to selected action card"
+        action bind_action_parameters requires admin.action:approved
+    }
+    component Professor_ParametersGuide {
+        label "Explain parameter values, defaults, and constraints"
+        enabled bind can_select_action
+        accessibility role button name "Explain complete selected action parameters"
+        action explain_action_parameters requires admin.action:approved
+    }
+    component Podium_ParametersEvidence {
+        label "View parameter provenance and validation"
+        enabled bind can_validate_parameters
+        accessibility role button name "View complete parameter evidence for selected action"
+        action show_action_parameter_evidence requires admin.action:approved
+    }
+    component ParametersViewport {
+        embed portal.scene "action_card_parameters"
+        motion bind timeline.parameters_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface ActionCardParameters

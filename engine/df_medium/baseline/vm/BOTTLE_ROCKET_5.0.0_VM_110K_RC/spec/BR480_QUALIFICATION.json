@@ -1,0 +1,21 @@
+{
+  "record": "BOTTLE_ROCKET.IndependentQualificationPolicy",
+  "release": "4.8.0",
+  "runtime_contract": "4.7.0-compatible",
+  "format_change": false,
+  "fuzz_maturity": {
+    "minimum_deterministic_cases": 40000,
+    "required_surfaces": ["LCTLC", "BRIR", "BRIM", "BRTM/signature", "APDU", "service/device ABI", "persistence", "corrupted image", "C loader/runtime"],
+    "required_crashes": 0,
+    "required_timeouts": 0,
+    "seeded_replay_required": true
+  },
+  "acceptance_requires": {
+    "zero_unresolved_critical": true,
+    "zero_unresolved_high": true,
+    "independent_machine_and_operator_replay": true,
+    "minimum_soak_hours": 72,
+    "cross_platform": ["x86-64 Linux GCC", "x86-64 Linux Clang", "AArch64", "Windows adapter if supported"]
+  },
+  "accelerated_soak_is_not_72_hour_substitute": true
+}

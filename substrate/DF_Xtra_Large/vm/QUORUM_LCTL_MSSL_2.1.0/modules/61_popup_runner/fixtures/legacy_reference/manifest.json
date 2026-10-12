@@ -1,0 +1,50 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 61,
+  "legacy_root": "legacy/source_repository/Popup Runner",
+  "legacy_sha256": "8bab1185260bde11b723dc38f14de952b10a1809c9687ae15b4fd28ff681eb27",
+  "files": [
+    {
+      "path": "61.1_Approved_Job_Selector.jaui",
+      "sha256": "3b5b62045241cc43330a50dac751bd267189aa8a88d5072626649df433415fdb",
+      "bytes": 1951
+    },
+    {
+      "path": "61.2_Job_Parameter_Form.jaui",
+      "sha256": "be3de652437d70330cb8bad1d2f0ffbbeec518c92cc43d75a33cac2942dfbfaa",
+      "bytes": 2086
+    },
+    {
+      "path": "61.3_Capability_and_Policy_Preview.jaui",
+      "sha256": "ba4cdaf07e830b2e8e00cfa9f9142933b1ae8a02008c7b630c2cb17811d81789",
+      "bytes": 2097
+    },
+    {
+      "path": "61.4_Launch_Confirmation.jaui",
+      "sha256": "8502b5ce1741b04c2a29e65f6db3828f5edd4e704da8a9d8304e04315eec4ae6",
+      "bytes": 2056
+    },
+    {
+      "path": "61.5_Live_Output_Console.jaui",
+      "sha256": "84fe0a9ec240b710ed7091e5c46b586ddf3770f4451703d8ee566bbbcf13bbc2",
+      "bytes": 1981
+    },
+    {
+      "path": "61.6_Status_and_Artifact_Summary.jaui",
+      "sha256": "84ed78c9502d8357dbf850eeae54925184c28756999db34964966589c457b701",
+      "bytes": 2067
+    },
+    {
+      "path": "61.7_Cancellation_and_Recovery.jaui",
+      "sha256": "8f705f70a78aa14fd356305a8f21faed8c82962207683b28541363d8d0c92e46",
+      "bytes": 2217
+    },
+    {
+      "path": "README.md",
+      "sha256": "2e8d656b8032cc2414887e54bb45ac564147be44e247b77edf740a127c4a7b38",
+      "bytes": 17798
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

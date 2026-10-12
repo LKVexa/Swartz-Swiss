@@ -1,0 +1,2 @@
+# Operational Guide
+Production operators should verify the release manifest and package hashes, build the production profile, verify BRTM/1 before execution, use only signed BRCT/1 recovery controls, keep network devices unregistered unless explicitly authorized, monitor bounded diagnostics, and retain previous-good transactional state. Raw BRIM execution and issuer signing are administrative/test functions and are not production commands.

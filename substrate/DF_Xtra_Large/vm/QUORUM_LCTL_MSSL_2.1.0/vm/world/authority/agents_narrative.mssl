@@ -1,0 +1,19 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.world.agents_narrative:7.0.0-applied-remediated-26",
+λ≡"quorum.rcpw.world.agents_narrative",
+ℛ≡{
+  "0001":"module(\"quorum.rcpw.world.agents_narrative\")",
+  "0002":"learn(\"agents\",literal(\"persistent goal/schedule/faction/inventory/health state\"))",
+  "0003":"learn(\"knowledge\",literal(\"observer-local facts are distinct from global canonical truth\"))",
+  "0004":"learn(\"succession\",literal(\"roles and entity identities are distinct\"))",
+  "0005":"learn(\"gravity\",literal(\"narrative gravity raises simulation fidelity without becoming canonical fact authority\"))",
+  "0006":"learn(\"wells\",literal(\"authority wells are versioned runtime priority structures\"))"
+},
+π≡[],δ≡6,τ≡0,
+μ≡{"learn.agents":"persistent goal/schedule/faction/inventory/health state","learn.knowledge":"observer-local facts are distinct from global canonical truth","learn.succession":"roles and entity identities are distinct","learn.gravity":"narrative gravity raises simulation fidelity without becoming canonical fact authority","learn.wells":"authority wells are versioned runtime priority structures"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"agents":"persistent goal/schedule/faction/inventory/health state","knowledge":"observer-local facts are distinct from global canonical truth","succession":"roles and entity identities are distinct","gravity":"narrative gravity raises simulation fidelity without becoming canonical fact authority","wells":"authority wells are versioned runtime priority structures"}},
+ν≡{}
+,κ≡"sha256:58d952e2a1ea5acc6389b4af87629f7636f73a9964a21b1157ba91473c4db040"
+}⇒⊤

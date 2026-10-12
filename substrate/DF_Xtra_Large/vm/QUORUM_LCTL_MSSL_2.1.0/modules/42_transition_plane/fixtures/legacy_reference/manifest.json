@@ -1,0 +1,45 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 42,
+  "legacy_root": "legacy/source_repository/Transition Plane",
+  "legacy_sha256": "e4473f23e84980e59d991b896883f896b58bf3c9021999c5a622298fb7c4f559",
+  "files": [
+    {
+      "path": "42.1_Translation_Plane_Language_Detection.ebnf",
+      "sha256": "fcdc95f377ae2d96fc2f8e9ccda7dcd9e2b747d618d058f991eaa1e06a1b996f",
+      "bytes": 2534
+    },
+    {
+      "path": "42.2_Translation_Plane_Parsing.ebnf",
+      "sha256": "d224ab669dead58cafc89ab42d5e1477727acc59317ce5fe54a88815a7deeb43",
+      "bytes": 2638
+    },
+    {
+      "path": "42.3_Translation_Plane_Intermediate_Representations.ebnf",
+      "sha256": "6ff602249716e2bd436df7e9e50b730a9de58c47eb98eebc74cb58341ebff926",
+      "bytes": 2810
+    },
+    {
+      "path": "42.4_Translation_Plane_Validation.ebnf",
+      "sha256": "06487e95bf7d2dc3ea01a66fe0305f11d127b0faf934d4c99b8158ca90847bf8",
+      "bytes": 2731
+    },
+    {
+      "path": "42.5_Translation_Plane_Testing.ebnf",
+      "sha256": "b3c81c46c07312a532f25db926534a60bc95758e100e5043278b197f6b6c8f31",
+      "bytes": 2784
+    },
+    {
+      "path": "42.6_Translation_Plane_Provenance.ebnf",
+      "sha256": "9fa8fbb40b5118d58d372e7a4a8692095f3a5aeb1c300ccb003b01d8550c7edd",
+      "bytes": 2864
+    },
+    {
+      "path": "README.md",
+      "sha256": "96a8d40d5a5c1cfe2360588fc264e81be4bbc0f6bfc3cce5409521f291c0f279",
+      "bytes": 22001
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

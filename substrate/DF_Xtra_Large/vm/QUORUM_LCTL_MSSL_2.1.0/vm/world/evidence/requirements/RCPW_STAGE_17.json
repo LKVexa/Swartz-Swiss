@@ -1,0 +1,304 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 16,
+    "PARTIAL": 13,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "F_P(W_C)=W_P has explicit domain, codomain, parameters, and reference authority.",
+      "requirement_id": "RCPW-17-R01",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Translation, rebasing, compactification, shell assignment, representation selection, and projection are separately testable.",
+      "requirement_id": "RCPW-17-R02",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Visible-domain components are continuous and bounded.",
+      "requirement_id": "RCPW-17-R03",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Lossy presentation components are explicitly identified and never treated as canonical inverse authority.",
+      "requirement_id": "RCPW-17-R04",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Changing reference points does not alter canonical world identity.",
+      "requirement_id": "RCPW-17-R05",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Singularities and unsupported domains are explicit and fail closed.",
+      "requirement_id": "RCPW-17-R06",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold operator parameter changes are versioned and recorded so replay uses the exact historical mapping.",
+      "requirement_id": "RCPW-17-R07",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Interaction targeting round-trips to one canonical entity or fails explicitly; ambiguous aliases are forbidden.",
+      "requirement_id": "RCPW-17-R08",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The near-field identity transform has measurable error bounds approaching numerical precision.",
+      "requirement_id": "RCPW-17-R09",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Operator composition order is fixed and verified; reordering operators requires a versioned migration.",
+      "requirement_id": "RCPW-17-R10",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The fold operator has machine-checkable algebraic/property tests for near-field identity, monotonic radial order, bounded projection, canonical target uniqueness, and deterministic re-reference.",
+      "requirement_id": "RCPW-17-R11",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold derivatives or equivalent local distortion measures are bounded per shell; violation triggers explicit fallback or safe mode.",
+      "requirement_id": "RCPW-17-R12",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Operator composition and parameter versions are written into replay evidence whenever they affect visible/reference state.",
+      "requirement_id": "RCPW-17-R13",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold failure handling can revert to a safe non-folded or reduced-scope projection without corrupting canonical state.",
+      "requirement_id": "RCPW-17-R14",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold-operator implementation exposes a canonical targeting service shared by interaction, navigation, audio landmarks, and debug tooling.",
+      "requirement_id": "RCPW-17-R15",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold policy is compiled/versioned as data so identical world-package plus fold-policy versions reproduce the same reference projection.",
+      "requirement_id": "RCPW-17-R16",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Operator fallback states are explicit: normal fold, conservative fold, widened near-field, reduced horizon, and safe non-folded local mode.",
+      "requirement_id": "RCPW-17-R17",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-17-R18.json",
+      "evidence_sha256": "da39105afceaa1681ba22e442152c89164bc0332cc7cd75f79eb8ea8b7324fc6",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "Operator performance is bounded with declared per-frame/per-tick cost independent from world canonical population size except through active representation sets.",
+      "requirement_id": "RCPW-17-R18",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes randomized reference paths, moving landmarks, topology changes, portal crossings, and extreme entity density near fold horizons.",
+      "requirement_id": "RCPW-17-R19",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold-operator policy is distributed as immutable versioned configuration so all workers evaluating one canonical epoch use the same operator version.",
+      "requirement_id": "RCPW-17-R20",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Parallel fold evaluation merges representation outputs deterministically for seam, landmark, horizon, and interaction-target decisions.",
+      "requirement_id": "RCPW-17-R21",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical targeting never depends on which worker produced the visible representation.",
+      "requirement_id": "RCPW-17-R22",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Safe-mode fold fallback is globally coordinated for the affected reference view and is replay-visible.",
+      "requirement_id": "RCPW-17-R23",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Operator qualification includes heterogeneous workload placement, worker restart, policy rollback, and deterministic seam reconstruction.",
+      "requirement_id": "RCPW-17-R24",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold operator exposes stable behavior under canonical world-extent growth; adding distant regions cannot perturb existing near-field projection beyond declared policy bounds.",
+      "requirement_id": "RCPW-17-R25",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Operator policy explicitly handles undefined frontier, generated frontier, archived world, active remote world, and local materialized world as distinct semantic classes.",
+      "requirement_id": "RCPW-17-R26",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold summaries at the horizon may aggregate regions but preserve deterministic canonical region membership and de-duplication.",
+      "requirement_id": "RCPW-17-R27",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Historical route/landmark changes update folded summaries transactionally at canonical event boundaries.",
+      "requirement_id": "RCPW-17-R28",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes incremental world growth, multiple historical eras, summary regeneration, policy upgrade/rollback, and deterministic replay.",
+      "requirement_id": "RCPW-17-R29",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "stage": 17,
+  "title": "QUORUM Fold Operator"
+}

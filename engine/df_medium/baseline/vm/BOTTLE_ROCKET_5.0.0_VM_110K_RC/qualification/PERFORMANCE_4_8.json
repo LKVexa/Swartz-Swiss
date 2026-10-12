@@ -1,0 +1,9 @@
+{
+  "baseline_4_7_median_ms": 2.9368714999999996,
+  "candidate_4_8_median_ms": 3.0925865,
+  "interpretation": "Reference-host process wall-clock only; 4.8 is a qualification overlay and no guest throughput claim is made.",
+  "latency_median_change_percent": 5.302070587698515,
+  "method": "cold_host_process_secure_run",
+  "timed_runs_per_version": 20,
+  "warmups_per_version": 5
+}

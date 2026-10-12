@@ -1,0 +1,19 @@
+# Mutable state and local verification/build outputs
+/workspace/
+/work/
+**/__pycache__/
+*.py[cod]
+*.tmp
+*.temp
+*.obj
+*.o
+*.pdb
+/.vs/
+/.idea/
+.DS_Store
+Thumbs.db
+# Release policy: generated and historical logs are excluded from publication.
+*.log
+*.log.*
+*_LOG.json
+logs/

@@ -1,0 +1,230 @@
+{
+  "authority_sha256": "aa5d55633499ee2d4d6c845479c323a2a1d0747c32f2a82e644b3dbe9be6f54e",
+  "domain_output": {
+    "input_type": "asset/scene/frame/timeline",
+    "legacy_signals": [
+      "SOPHIA",
+      "CHARLOTTE",
+      "LANDON",
+      "Professor",
+      "Podium",
+      "preference",
+      "AnimationComposite",
+      "EffectsComposite",
+      "FinalComposite",
+      "InspectionComposite",
+      "IterationComposite",
+      "node_fusion",
+      "dead_pass_removal",
+      "attribute_packing",
+      "shader_specialization",
+      "cache_scheduling",
+      "domain_tiling",
+      "render_graph_ordering",
+      "RENDER",
+      "CACHE",
+      "OPTIMIZE",
+      "LOWER",
+      "PACKAGE",
+      "CERTIFY"
+    ],
+    "module": "Animation VFX Workspace",
+    "output_type": "render_artifact/visual_evidence",
+    "payload_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+    "plane": "media_visual",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+    "render_artifact": {
+      "artifact_sha256": "e87550f123bbea5b611fb2fedd632d12aeb0a056a3c789fd8d0ce582228aa5d1",
+      "format": "PGM-P2-reference",
+      "height": 8,
+      "note": "deterministic reference render; not production media fidelity",
+      "pixels": [
+        173,
+        247,
+        78,
+        228,
+        38,
+        15,
+        166,
+        223,
+        78,
+        109,
+        58,
+        111,
+        21,
+        24,
+        21,
+        67,
+        252,
+        151,
+        12,
+        13,
+        39,
+        99,
+        170,
+        205,
+        187,
+        125,
+        159,
+        67,
+        125,
+        8,
+        14,
+        237,
+        173,
+        247,
+        78,
+        228,
+        38,
+        15,
+        166,
+        223,
+        78,
+        109,
+        58,
+        111,
+        21,
+        24,
+        21,
+        67,
+        252,
+        151,
+        12,
+        13,
+        39,
+        99,
+        170,
+        205,
+        187,
+        125,
+        159,
+        67,
+        125,
+        8,
+        14,
+        237
+      ],
+      "width": 8
+    }
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "b3d2f08b9e21a078a2d5b84fecefc3b8c46704a286740eda4c655c092bb2cbb0",
+  "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+  "module": "Animation VFX Workspace",
+  "module_id": 34,
+  "plane": "media_visual",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "bfd408148cbeff482844619d33b88bfbeda5110922e5d87cdaae97156249e8ba",
+  "stage_count": 9,
+  "stages": [
+    {
+      "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "node": "N01",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "01f113b5e9ab09320492655d2bb43cfec9fcaa832fd51a4cc57bd3aab9f7db34",
+      "stage": "SOURCE"
+    },
+    {
+      "input_sha256": "01f113b5e9ab09320492655d2bb43cfec9fcaa832fd51a4cc57bd3aab9f7db34",
+      "node": "N02",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "INSPECT",
+      "output_sha256": "967d6625dbe0d4b40813640810941b8d7919af54acd6dbfb3fa9004ea895d88d",
+      "stage": "INSPECT"
+    },
+    {
+      "artifact_descriptor": {
+        "sha256": "0cdc04c2018765091305b54d56a254ee034480b575da10f79e08394b9e78bbee",
+        "type": "state.scene_bind"
+      },
+      "input_sha256": "967d6625dbe0d4b40813640810941b8d7919af54acd6dbfb3fa9004ea895d88d",
+      "node": "N03",
+      "operator": "MATERIALIZE",
+      "output_sha256": "d0b70f479689c567d4edba7cd1ad9a79ff18df8396eb9fde59d08979afa197a7",
+      "stage": "SCENE_BIND"
+    },
+    {
+      "features": [
+        247,
+        99,
+        176,
+        13,
+        154,
+        233,
+        194,
+        220
+      ],
+      "input_sha256": "d0b70f479689c567d4edba7cd1ad9a79ff18df8396eb9fde59d08979afa197a7",
+      "node": "N04",
+      "operator": "TRANSFORM",
+      "output_sha256": "9732d905a6dfb17121bbe86c336d9b0d2e53c665359c5a502bba6c6efb9dc63b",
+      "stage": "TRANSFORM"
+    },
+    {
+      "input_sha256": "9732d905a6dfb17121bbe86c336d9b0d2e53c665359c5a502bba6c6efb9dc63b",
+      "node": "N05",
+      "operator": "RENDER",
+      "output_sha256": "2cd47bbe4bfb382d4834a72b90036da177e7f0ea5730efa2a3a6ed3e74eff067",
+      "reference_frame_sha256": "bd5fb1c823cd76fbee465bec6fff7779e35885fe15c584a42d06682a67398e3c",
+      "stage": "RENDER"
+    },
+    {
+      "features": [
+        183,
+        234,
+        227,
+        27,
+        109,
+        80,
+        112,
+        250
+      ],
+      "input_sha256": "2cd47bbe4bfb382d4834a72b90036da177e7f0ea5730efa2a3a6ed3e74eff067",
+      "node": "N06",
+      "operator": "TRANSFORM",
+      "output_sha256": "87b4290e9c767b2ca7fecbe47954c4c5d685ad575a8bdfc8fbafc41edc718fad",
+      "stage": "COMPOSITE"
+    },
+    {
+      "input_sha256": "87b4290e9c767b2ca7fecbe47954c4c5d685ad575a8bdfc8fbafc41edc718fad",
+      "node": "N07",
+      "operator": "VALIDATE",
+      "output_sha256": "42b83e41f434fe46bfe72eb29de5a714e9e535c7346a594af1952c0c7bbb7b14",
+      "stage": "VALIDATE",
+      "valid": true
+    },
+    {
+      "artifact_descriptor": {
+        "sha256": "ab1c0a79a2781115aad308c449abce1fb146d1907f5b090e3108f205b0143a79",
+        "type": "state.export"
+      },
+      "input_sha256": "42b83e41f434fe46bfe72eb29de5a714e9e535c7346a594af1952c0c7bbb7b14",
+      "node": "N08",
+      "operator": "MATERIALIZE",
+      "output_sha256": "cb9448700568579a5476c76945315e8e2f079fd6d680b4366b1b09df5bbd03bf",
+      "stage": "EXPORT"
+    },
+    {
+      "input_sha256": "cb9448700568579a5476c76945315e8e2f079fd6d680b4366b1b09df5bbd03bf",
+      "node": "N09",
+      "operator": "RECORD",
+      "output_sha256": "a43985fbe83fc797093a0a054f134e3ce040333e7790dadc0f786e76eb6345bc",
+      "receipt_sha256": "9b72acd2baa434632bf1522d26ba21f88ba57e6f897e23c1a3cf03c07de74ded",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

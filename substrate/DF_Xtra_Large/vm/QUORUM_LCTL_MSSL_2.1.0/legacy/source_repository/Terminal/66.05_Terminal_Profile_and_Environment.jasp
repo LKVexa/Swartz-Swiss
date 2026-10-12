@@ -1,0 +1,38 @@
+profile ja.operations
+source_level 0.3
+
+subsuite Terminal.T_05 TerminalProfileEnvironment {
+    identity { suite = "66"; id = "T-05"; deterministic = true; autorun = false }
+
+    accept { environment_profile; requested_variables[]; approved_toolchain_refs[] }
+    emit TerminalEnvironmentManifest
+
+    procedure compile_minimal(environment_profile) {
+        base = resolve_pinned_profile(environment_profile)
+        require base.approved
+        require base.toolchain_hashes_complete
+
+        env = empty_environment()
+        env.add(base.required_variables)
+        env.add(approved_requested_variables_only)
+        env.path = compose_from_approved_tool_roots(base)
+        env.locale = contract.locale
+        env.network_proxy = none_unless_policy_declared
+
+        redact_secrets_from_presentation(env)
+        seal_manifest(env)
+        return env
+    }
+
+    deny {
+        ambient_host_environment_inheritance
+        unpinned_executable_path
+        undeclared_variable
+        secret_in_display_manifest
+        profile_mutation_after_authorization
+    }
+
+    evidence { profile_ref; variable_names_not_secret_values; toolchain_hashes; environment_hash }
+    tests { minimal_environment; path_shadowing; secret_display; locale; deterministic_hash }
+}
+

@@ -1,0 +1,18 @@
+VB JA21 DF_Medium Browser 8.0.3 - search-result link repair
+
+Symptom: DF_MEDIUM - FETCH "(400) Bad Request" at
+  https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.google.com%2F&amp;rut=...
+Root cause: attr_get() in ja21_webengine.c copies attribute values without HTML character-reference decoding.
+
+Reproduction against shipped source (Linux gcc build, same C as the DLL):
+  'Google & co &#8212; <x> &#x41;&apos;' -> https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.google.com%2F&amp;rut=4a90
+  'n' -> https://html.duckduckgo.com/q?a=1&#38;b=2
+
+Staged patch, ASan+UBSan build:
+"Google & co — <x> A'" -> https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.google.com%2F&rut=4a90
+'n' -> https://html.duckduckgo.com/q?a=1&b=2
+'t' -> https://html.duckduckgo.com/t?x=1&
+selftest 0
+
+Presenter: JaLinkTarget.Resolve maps the failing URL to https://www.google.com/ (startup self-test).
+Not verified here: Windows Add-Type compile and live network fetch (no Windows/.NET or DuckDuckGo egress in the audit sandbox). Run "Verify JA21 Virtual Browser.cmd".

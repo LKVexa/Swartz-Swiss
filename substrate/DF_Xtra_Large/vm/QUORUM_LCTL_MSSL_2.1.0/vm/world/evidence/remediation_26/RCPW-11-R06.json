@@ -1,0 +1,84 @@
+{
+  "evidence_sha256": "503ff879bdadd78b28341a51a905776115dfc8027965fb82bb4a1887511ea9e4",
+  "exit_code": 0,
+  "observed_results": {
+    "fold_policy": "rational-c1/1",
+    "frame_hashes": [
+      "a5dc42bb359ebdfb1c710ea3082c0e2b908f69ea093f83cfb1cc9698047c375b",
+      "8f336dd5851331e863d027b1d87bd3c3cd41f6f52fe2120c5c07efc633c54575",
+      "308bc1afae01eb234f2f6fad04514eb0ae74071b4644293c5ee6f19a3a2f8b47",
+      "b575c2e977162416e2eb3c48293c08bde76b330109ea730468c54298cf5454b8",
+      "d707a8fca1f148ee32efcbd50e851d656bb990c8b008518971c3c1b96814e492",
+      "17cce51b001fe01c089e0cd416ba8bab2502fae5e816adbb2b8663d5a48eede9",
+      "e99dc5f2c077ff112db458c0e8efd3a61e8f61201adb81d4f128606793ae9ede"
+    ],
+    "frame_ms": {
+      "max": 0.365872,
+      "p50": 0.295582,
+      "p95": 0.365872,
+      "p99": 0.365872
+    },
+    "gpu": {
+      "reason": "Hosted diagnostic renderer has no GPU backend; canonical behavior is GPU-independent.",
+      "status": "NOT_APPLICABLE"
+    },
+    "renderer": "deterministic-svg-diagnostic/1",
+    "repeat_hashes": [
+      "a5dc42bb359ebdfb1c710ea3082c0e2b908f69ea093f83cfb1cc9698047c375b",
+      "8f336dd5851331e863d027b1d87bd3c3cd41f6f52fe2120c5c07efc633c54575",
+      "308bc1afae01eb234f2f6fad04514eb0ae74071b4644293c5ee6f19a3a2f8b47",
+      "b575c2e977162416e2eb3c48293c08bde76b330109ea730468c54298cf5454b8",
+      "d707a8fca1f148ee32efcbd50e851d656bb990c8b008518971c3c1b96814e492",
+      "17cce51b001fe01c089e0cd416ba8bab2502fae5e816adbb2b8663d5a48eede9",
+      "e99dc5f2c077ff112db458c0e8efd3a61e8f61201adb81d4f128606793ae9ede"
+    ],
+    "repeatable": true,
+    "trace": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        512,
+        0,
+        0
+      ],
+      [
+        2048,
+        100,
+        0
+      ],
+      [
+        10000,
+        500,
+        0
+      ],
+      [
+        80000,
+        1000,
+        0
+      ],
+      [
+        400000,
+        -5000,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "requirement_id": "RCPW-11-R06",
+  "result_sha256": "6c930b5fc40468b259021d348a53f8d8810fd2b5a0fbe68cff1a2e8e0bf637d0",
+  "schema": "RCPW-26-GATE-EVIDENCE/1",
+  "status": "OPERATIONAL",
+  "test_command": "python vm/world/qualification/remediate_26.py",
+  "tool_versions": {
+    "python": "3.11.15",
+    "world_runtime": "7.0.0-applied-remediated-26"
+  }
+}

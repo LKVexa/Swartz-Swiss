@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "quorum://schemas/output_contract.schema.json",
+  "title": "output_contract.schema.json",
+  "type": "object",
+  "required": [
+    "types",
+    "cardinality",
+    "guarantees",
+    "ownership",
+    "lifecycle"
+  ],
+  "additionalProperties": true
+}

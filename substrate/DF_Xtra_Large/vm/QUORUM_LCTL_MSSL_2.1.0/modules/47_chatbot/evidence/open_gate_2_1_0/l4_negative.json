@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "e327ab3b103bc3ff6ce667bac2eaa470c6866c51c231200f966bf7704c1f5f1b",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Chatbot",
+  "module_id": 47,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

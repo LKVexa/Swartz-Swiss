@@ -1,0 +1,1015 @@
+{
+  "schema": "QUORUM-SEMANTIC-GRAPH-REGISTRY/2.0",
+  "version": "2.0.0",
+  "count": 66,
+  "modules": [
+    {
+      "module_id": 1,
+      "name": "Observer",
+      "plane": "sense_context",
+      "graph_path": "modules/01_observer/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "PACKAGE",
+        "AUTHORIZE"
+      ]
+    },
+    {
+      "module_id": 2,
+      "name": "Anthology",
+      "plane": "sense_context",
+      "graph_path": "modules/02_anthology/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "PACKAGE",
+        "VALIDATE"
+      ]
+    },
+    {
+      "module_id": 3,
+      "name": "Atlas",
+      "plane": "sense_context",
+      "graph_path": "modules/03_atlas/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "PACKAGE",
+        "VALIDATE"
+      ]
+    },
+    {
+      "module_id": 4,
+      "name": "Compass",
+      "plane": "intent_reasoning",
+      "graph_path": "modules/04_compass/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "beta_reduction",
+        "rule_indexing",
+        "common_subexpression_elimination",
+        "tabling",
+        "proof_normalization",
+        "tail_call",
+        "OPTIMIZE",
+        "LOWER",
+        "PACKAGE",
+        "CERTIFY",
+        "VALIDATE",
+        "COMPARE"
+      ]
+    },
+    {
+      "module_id": 5,
+      "name": "Pencil",
+      "plane": "intent_reasoning",
+      "graph_path": "modules/05_pencil/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "beta_reduction",
+        "rule_indexing",
+        "common_subexpression_elimination",
+        "tabling",
+        "proof_normalization",
+        "tail_call",
+        "OPTIMIZE",
+        "LOWER",
+        "PACKAGE",
+        "CERTIFY",
+        "COMPARE"
+      ]
+    },
+    {
+      "module_id": 6,
+      "name": "Pencil Sharpener",
+      "plane": "intent_reasoning",
+      "graph_path": "modules/06_pencil_sharpener/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "LOWER",
+        "PACKAGE",
+        "CERTIFY",
+        "COMPILE"
+      ]
+    },
+    {
+      "module_id": 7,
+      "name": "Grinder",
+      "plane": "intent_reasoning",
+      "graph_path": "modules/07_grinder/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "SophiaBaseline",
+        "CharlottePropose",
+        "LandonImprove",
+        "ProfessorCompare",
+        "PodiumPromote",
+        "SophiaObjective",
+        "CharlotteSearch",
+        "LandonOptimize",
+        "ProfessorAudit",
+        "PodiumSelect",
+        "SophiaPreserve",
+        "CharlotteFactor",
+        "LandonReduce",
+        "ProfessorEquivalence",
+        "PodiumAdmit",
+        "SophiaEvaluate",
+        "CharlotteCompare",
+        "LandonReplay",
+        "ProfessorHashAudit",
+        "PodiumRepeatGate",
+        "SophiaStress",
+        "LandonBound",
+        "ProfessorRiskAudit",
+        "PodiumStressGate"
+      ]
+    },
+    {
+      "module_id": 8,
+      "name": "Tables",
+      "plane": "data_evidence",
+      "graph_path": "modules/08_tables/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "PACKAGE",
+        "VALIDATE"
+      ]
+    },
+    {
+      "module_id": 9,
+      "name": "Funnel",
+      "plane": "intent_reasoning",
+      "graph_path": "modules/09_funnel/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "VALIDATE"
+      ]
+    },
+    {
+      "module_id": 10,
+      "name": "Illuminator",
+      "plane": "intent_reasoning",
+      "graph_path": "modules/10_illuminator/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "RENDER",
+        "PACKAGE"
+      ]
+    },
+    {
+      "module_id": 11,
+      "name": "Cypher",
+      "plane": "data_evidence",
+      "graph_path": "modules/11_cypher/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "PACKAGE",
+        "AUTHORIZE"
+      ]
+    },
+    {
+      "module_id": 12,
+      "name": "Filing Cabinet",
+      "plane": "data_evidence",
+      "graph_path": "modules/12_filing_cabinet/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "PACKAGE",
+        "VALIDATE",
+        "INDEX"
+      ]
+    },
+    {
+      "module_id": 13,
+      "name": "Chair",
+      "plane": "security_authorization",
+      "graph_path": "modules/13_chair/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "PACKAGE",
+        "VALIDATE",
+        "EVALUATE",
+        "COMPILE"
+      ]
+    },
+    {
+      "module_id": 14,
+      "name": "Plug",
+      "plane": "interfaces_services",
+      "graph_path": "modules/14_plug/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "RENDER",
+        "TRANSLATE"
+      ]
+    },
+    {
+      "module_id": 15,
+      "name": "Orchestrator",
+      "plane": "orchestration",
+      "graph_path": "modules/15_orchestrator/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "AUTHORIZE"
+      ]
+    },
+    {
+      "module_id": 16,
+      "name": "Perceiver",
+      "plane": "sense_context",
+      "graph_path": "modules/16_perceiver/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "AUTHORIZE",
+        "RETRIEVE"
+      ]
+    },
+    {
+      "module_id": 17,
+      "name": "Asset Observer",
+      "plane": "sense_context",
+      "graph_path": "modules/17_asset_observer/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "fusion",
+        "VALIDATE",
+        "AUTHORIZE"
+      ]
+    },
+    {
+      "module_id": 18,
+      "name": "Feature Graph",
+      "plane": "data_evidence",
+      "graph_path": "modules/18_feature_graph/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "VALIDATE"
+      ]
+    },
+    {
+      "module_id": 19,
+      "name": "Mesh Geometry",
+      "plane": "media_visual",
+      "graph_path": "modules/19_mesh_geometry/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "sophia_classify_proxy",
+        "charlotte_validate_proxy",
+        "landon_stage_proxy",
+        "professor_explain_proxy",
+        "podium_certify_proxy",
+        "sophia_generate_depth",
+        "charlotte_rank_depth",
+        "landon_stage_depth",
+        "professor_explain_depth",
+        "podium_certify_depth",
+        "sophia_infer_topology",
+        "charlotte_validate_topology",
+        "landon_stage_topology",
+        "professor_explain_topology",
+        "podium_certify_topology",
+        "sophia_align_coordinates",
+        "charlotte_validate_camera",
+        "landon_transform_coordinates",
+        "professor_explain_camera",
+        "podium_certify_camera",
+        "sophia_propose_deformation",
+        "charlotte_validate_deformation",
+        "landon_step_deformation",
+        "professor_explain_deformation"
+      ]
+    },
+    {
+      "module_id": 20,
+      "name": "Equation Operator Bank",
+      "plane": "model_compute",
+      "graph_path": "modules/20_equation_operator_bank/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "Bank",
+        "banks",
+        "descriptors",
+        "candidates",
+        "identities",
+        "admission",
+        "identity",
+        "bank",
+        "CERTIFY",
+        "VALIDATE"
+      ]
+    },
+    {
+      "module_id": 21,
+      "name": "Scene Reconstruction",
+      "plane": "media_visual",
+      "graph_path": "modules/21_scene_reconstruction/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "stable_ids",
+        "topological_order",
+        "resource_deduplication",
+        "constant_transform",
+        "RENDER",
+        "OPTIMIZE",
+        "LOWER",
+        "PACKAGE",
+        "CERTIFY"
+      ]
+    },
+    {
+      "module_id": 22,
+      "name": "Motion Planner",
+      "plane": "media_visual",
+      "graph_path": "modules/22_motion_planner/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "pose_constant_folding",
+        "curve_compression_0.001",
+        "dead_channel_removal",
+        "blend_normalization",
+        "retarget_cache",
+        "ik_scheduling",
+        "state_minimization",
+        "OPTIMIZE",
+        "LOWER",
+        "PACKAGE",
+        "CERTIFY"
+      ]
+    },
+    {
+      "module_id": 23,
+      "name": "Temporal Animator",
+      "plane": "media_visual",
+      "graph_path": "modules/23_temporal_animator/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "pose_constant_folding",
+        "curve_compression_0.001",
+        "dead_channel_removal",
+        "blend_normalization",
+        "retarget_cache",
+        "ik_scheduling",
+        "state_minimization",
+        "OPTIMIZE",
+        "LOWER",
+        "PACKAGE",
+        "CERTIFY"
+      ]
+    },
+    {
+      "module_id": 24,
+      "name": "C# Renderer",
+      "plane": "media_visual",
+      "graph_path": "modules/24_csharp_renderer/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "CSharpSurfaceBridge",
+        "SOPHIA",
+        "CHARLOTTE",
+        "LANDON",
+        "Professor",
+        "Podium",
+        "Composite",
+        "FrameComposite",
+        "node_fusion",
+        "dead_pass_removal",
+        "attribute_packing",
+        "shader_specialization",
+        "cache_scheduling",
+        "domain_tiling",
+        "render_graph_ordering",
+        "RENDER",
+        "CACHE",
+        "OPTIMIZE",
+        "LOWER",
+        "PACKAGE",
+        "CERTIFY",
+        "COMPILE"
+      ]
+    },
+    {
+      "module_id": 25,
+      "name": "Media Export",
+      "plane": "media_visual",
+      "graph_path": "modules/25_media_export/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "CACHE",
+        "PACKAGE"
+      ]
+    },
+    {
+      "module_id": 26,
+      "name": "Full Stack UI",
+      "plane": "interfaces_services",
+      "graph_path": "modules/26_full_stack_ui/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "VALIDATE"
+      ]
+    },
+    {
+      "module_id": 27,
+      "name": "deepML Worker",
+      "plane": "model_compute",
+      "graph_path": "modules/27_deepml_worker/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "resolution",
+        "allowlist",
+        "set",
+        "implementations",
+        "overload",
+        "fusion",
+        "constant_folding",
+        "algebraic_simplification",
+        "operator_fusion",
+        "common_subexpression_elimination",
+        "memory_planning",
+        "device_partitioning",
+        "OPTIMIZE",
+        "LOWER",
+        "PACKAGE",
+        "CERTIFY"
+      ]
+    },
+    {
+      "module_id": 28,
+      "name": "Safety Gate",
+      "plane": "security_authorization",
+      "graph_path": "modules/28_safety_gate/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "PACKAGE",
+        "VALIDATE",
+        "EVALUATE"
+      ]
+    },
+    {
+      "module_id": 29,
+      "name": "Archive Ledger",
+      "plane": "data_evidence",
+      "graph_path": "modules/29_archive_ledger/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "VALIDATE"
+      ]
+    },
+    {
+      "module_id": 30,
+      "name": "JA Adapter",
+      "plane": "translation_interop",
+      "graph_path": "modules/30_ja_adapter/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "RENDER"
+      ]
+    },
+    {
+      "module_id": 31,
+      "name": "Vexxa",
+      "plane": "translation_interop",
+      "graph_path": "modules/31_vexxa/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "infrastructure",
+        "control",
+        "commands",
+        "actions",
+        "command",
+        "action",
+        "preference",
+        "VALIDATE",
+        "AUTHORIZE",
+        "RECOVER"
+      ]
+    },
+    {
+      "module_id": 32,
+      "name": "Orchestrator II",
+      "plane": "orchestration",
+      "graph_path": "modules/32_orchestrator_ii/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "explanations",
+        "RENDER",
+        "PACKAGE",
+        "CERTIFY",
+        "AUTHORIZE",
+        "TRAIN"
+      ]
+    },
+    {
+      "module_id": 33,
+      "name": "Visual Feedback",
+      "plane": "media_visual",
+      "graph_path": "modules/33_visual_feedback/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "implicated",
+        "VALIDATE",
+        "AUTHORIZE",
+        "COMPARE",
+        "TRAIN",
+        "EVALUATE"
+      ]
+    },
+    {
+      "module_id": 34,
+      "name": "Animation VFX Workspace",
+      "plane": "media_visual",
+      "graph_path": "modules/34_animation_vfx_workspace/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "SOPHIA",
+        "CHARLOTTE",
+        "LANDON",
+        "Professor",
+        "Podium",
+        "preference",
+        "AnimationComposite",
+        "EffectsComposite",
+        "FinalComposite",
+        "InspectionComposite",
+        "IterationComposite",
+        "node_fusion",
+        "dead_pass_removal",
+        "attribute_packing",
+        "shader_specialization",
+        "cache_scheduling",
+        "domain_tiling",
+        "render_graph_ordering",
+        "RENDER",
+        "CACHE",
+        "OPTIMIZE",
+        "LOWER",
+        "PACKAGE",
+        "CERTIFY"
+      ]
+    },
+    {
+      "module_id": 35,
+      "name": "App Designer",
+      "plane": "interfaces_services",
+      "graph_path": "modules/35_app_designer/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "PACKAGE",
+        "VALIDATE"
+      ]
+    },
+    {
+      "module_id": 36,
+      "name": "Visual Correction System",
+      "plane": "media_visual",
+      "graph_path": "modules/36_visual_correction_system/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "RENDER",
+        "CACHE",
+        "AUTHORIZE",
+        "TRAIN",
+        "EVALUATE"
+      ]
+    },
+    {
+      "module_id": 37,
+      "name": "Training and Evaluation",
+      "plane": "model_compute",
+      "graph_path": "modules/37_training_and_evaluation/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "LOWER",
+        "AUTHORIZE",
+        "TRAIN",
+        "EVALUATE"
+      ]
+    },
+    {
+      "module_id": 38,
+      "name": "Preview Designer",
+      "plane": "interfaces_services",
+      "graph_path": "modules/38_preview_designer/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "set",
+        "identities",
+        "PACKAGE",
+        "CERTIFY",
+        "VALIDATE",
+        "AUTHORIZE",
+        "INSTALL"
+      ]
+    },
+    {
+      "module_id": 39,
+      "name": "Core Studio",
+      "plane": "interfaces_services",
+      "graph_path": "modules/39_core_studio/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "RENDER",
+        "CACHE",
+        "PACKAGE",
+        "VALIDATE",
+        "INDEX",
+        "COMPARE"
+      ]
+    },
+    {
+      "module_id": 40,
+      "name": "Repository Context Engine",
+      "plane": "sense_context",
+      "graph_path": "modules/40_repository_context_engine/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "PACKAGE",
+        "VALIDATE",
+        "INDEX",
+        "COMPARE"
+      ]
+    },
+    {
+      "module_id": 41,
+      "name": "Knowledge Repository",
+      "plane": "sense_context",
+      "graph_path": "modules/41_knowledge_repository/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "RENDER",
+        "LOWER",
+        "PACKAGE",
+        "VALIDATE",
+        "INDEX",
+        "TRAIN"
+      ]
+    },
+    {
+      "module_id": 42,
+      "name": "Transition Plane",
+      "plane": "translation_interop",
+      "graph_path": "modules/42_transition_plane/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "LOWER",
+        "PACKAGE",
+        "CERTIFY",
+        "VALIDATE",
+        "AUTHORIZE",
+        "RECOVER",
+        "TRANSLATE",
+        "COMPARE"
+      ]
+    },
+    {
+      "module_id": 43,
+      "name": "Release Plane",
+      "plane": "release_delivery",
+      "graph_path": "modules/43_release_plane/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "CACHE",
+        "PACKAGE",
+        "VALIDATE",
+        "INSTALL"
+      ]
+    },
+    {
+      "module_id": 44,
+      "name": "Capability and Security Plane",
+      "plane": "security_authorization",
+      "graph_path": "modules/44_capability_and_security_plane/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "CACHE",
+        "CERTIFY",
+        "VALIDATE",
+        "EVALUATE"
+      ]
+    },
+    {
+      "module_id": 45,
+      "name": "Localization and Large File Plane",
+      "plane": "interfaces_services",
+      "graph_path": "modules/45_localization_and_large_file_plane/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "RENDER",
+        "CACHE",
+        "VALIDATE",
+        "INDEX"
+      ]
+    },
+    {
+      "module_id": 46,
+      "name": "Air Gap Certification and Installer Plane",
+      "plane": "release_delivery",
+      "graph_path": "modules/46_air_gap_certification_and_installer_plane/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "PACKAGE",
+        "VALIDATE",
+        "INDEX",
+        "INSTALL"
+      ]
+    },
+    {
+      "module_id": 47,
+      "name": "Chatbot",
+      "plane": "intent_reasoning",
+      "graph_path": "modules/47_chatbot/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "VALIDATE",
+        "AUTHORIZE"
+      ]
+    },
+    {
+      "module_id": 48,
+      "name": "Answer Modes and Specialized Roles",
+      "plane": "intent_reasoning",
+      "graph_path": "modules/48_answer_modes_and_specialized_roles/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "PACKAGE",
+        "AUTHORIZE",
+        "RECOVER",
+        "INDEX"
+      ]
+    },
+    {
+      "module_id": 49,
+      "name": "Action Cards",
+      "plane": "data_evidence",
+      "graph_path": "modules/49_action_cards/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "RENDER",
+        "PACKAGE",
+        "VALIDATE",
+        "EVALUATE"
+      ]
+    },
+    {
+      "module_id": 50,
+      "name": "Diff Patch and Review",
+      "plane": "governance_control",
+      "graph_path": "modules/50_diff_patch_and_review/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "PACKAGE",
+        "VALIDATE",
+        "AUTHORIZE",
+        "INDEX"
+      ]
+    },
+    {
+      "module_id": 51,
+      "name": "Repository Retrieval and Memory",
+      "plane": "sense_context",
+      "graph_path": "modules/51_repository_retrieval_and_memory/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "CACHE",
+        "VALIDATE",
+        "AUTHORIZE",
+        "INDEX",
+        "RETRIEVE",
+        "COMPARE",
+        "EVALUATE"
+      ]
+    },
+    {
+      "module_id": 52,
+      "name": "Evaluation and Content Defense",
+      "plane": "security_authorization",
+      "graph_path": "modules/52_evaluation_and_content_defense/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "LOWER",
+        "CERTIFY",
+        "VALIDATE",
+        "AUTHORIZE",
+        "RETRIEVE",
+        "EVALUATE"
+      ]
+    },
+    {
+      "module_id": 53,
+      "name": "Operations Plane",
+      "plane": "operations_recovery",
+      "graph_path": "modules/53_operations_plane/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "overrides",
+        "PACKAGE",
+        "VALIDATE"
+      ]
+    },
+    {
+      "module_id": 54,
+      "name": "Local Model Provider and Health",
+      "plane": "model_compute",
+      "graph_path": "modules/54_local_model_provider_and_health/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "action",
+        "CACHE",
+        "PACKAGE",
+        "VALIDATE",
+        "RECOVER"
+      ]
+    },
+    {
+      "module_id": 55,
+      "name": "Capability Manifests and Permissions",
+      "plane": "security_authorization",
+      "graph_path": "modules/55_capability_manifests_and_permissions/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "action",
+        "PACKAGE",
+        "VALIDATE",
+        "AUTHORIZE",
+        "COMPARE",
+        "EVALUATE"
+      ]
+    },
+    {
+      "module_id": 56,
+      "name": "Job Queue Workers and Sandboxes",
+      "plane": "orchestration",
+      "graph_path": "modules/56_job_queue_workers_and_sandboxes/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "action",
+        "PACKAGE",
+        "AUTHORIZE"
+      ]
+    },
+    {
+      "module_id": 57,
+      "name": "Translation Build Test and Evaluation Jobs",
+      "plane": "orchestration",
+      "graph_path": "modules/57_translation_build_test_and_evaluation_jobs/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "action",
+        "CACHE",
+        "PACKAGE",
+        "VALIDATE",
+        "AUTHORIZE",
+        "COMPILE"
+      ]
+    },
+    {
+      "module_id": 58,
+      "name": "Indexing Storage Resources Logs and Recovery",
+      "plane": "operations_recovery",
+      "graph_path": "modules/58_indexing_storage_resources_logs_and_recovery/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "escalation",
+        "action",
+        "PACKAGE",
+        "INDEX"
+      ]
+    },
+    {
+      "module_id": 59,
+      "name": "Shell",
+      "plane": "operations_recovery",
+      "graph_path": "modules/59_shell/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "intent",
+        "action",
+        "PACKAGE",
+        "VALIDATE",
+        "AUTHORIZE",
+        "EVALUATE"
+      ]
+    },
+    {
+      "module_id": 60,
+      "name": "Worker",
+      "plane": "orchestration",
+      "graph_path": "modules/60_worker/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "bank",
+        "action",
+        "RENDER",
+        "PACKAGE",
+        "AUTHORIZE"
+      ]
+    },
+    {
+      "module_id": 61,
+      "name": "Popup Runner",
+      "plane": "interfaces_services",
+      "graph_path": "modules/61_popup_runner/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "action",
+        "RENDER",
+        "CACHE",
+        "VALIDATE",
+        "COMPARE"
+      ]
+    },
+    {
+      "module_id": 62,
+      "name": "LANDON Integration and Run All",
+      "plane": "orchestration",
+      "graph_path": "modules/62_landon_integration_and_run_all/graph/graph_manifest.json",
+      "stage_count": 9,
+      "legacy_signals": [
+        "action",
+        "AUTHORIZE"
+      ]
+    },
+    {
+      "module_id": 63,
+      "name": "Sandbox and Offline Runtime",
+      "plane": "security_authorization",
+      "graph_path": "modules/63_sandbox_and_offline_runtime/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "bank",
+        "action",
+        "RENDER",
+        "CACHE",
+        "LOWER",
+        "PACKAGE",
+        "AUTHORIZE",
+        "INSTALL"
+      ]
+    },
+    {
+      "module_id": 64,
+      "name": "Training Desktop and Android Workers",
+      "plane": "model_compute",
+      "graph_path": "modules/64_training_desktop_and_android_workers/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "VALIDATE",
+        "AUTHORIZE",
+        "STORE",
+        "COMPARE",
+        "TRAIN",
+        "EVALUATE"
+      ]
+    },
+    {
+      "module_id": 65,
+      "name": "Sandbox Engine",
+      "plane": "security_authorization",
+      "graph_path": "modules/65_sandbox_engine/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "SOPHIA",
+        "CHARLOTTE",
+        "LANDON",
+        "Professor",
+        "Podium",
+        "Composite",
+        "constant_folding",
+        "algebraic_simplification",
+        "operator_fusion",
+        "common_subexpression_elimination",
+        "memory_planning",
+        "device_partitioning",
+        "stable_ids",
+        "topological_order",
+        "resource_deduplication",
+        "constant_transform",
+        "pose_constant_folding",
+        "curve_compression_0.001",
+        "dead_channel_removal",
+        "blend_normalization",
+        "retarget_cache",
+        "ik_scheduling",
+        "state_minimization",
+        "node_fusion"
+      ]
+    },
+    {
+      "module_id": 66,
+      "name": "Terminal",
+      "plane": "interfaces_services",
+      "graph_path": "modules/66_terminal/graph/graph_manifest.json",
+      "stage_count": 8,
+      "legacy_signals": [
+        "RENDER",
+        "PACKAGE",
+        "VALIDATE",
+        "AUTHORIZE",
+        "RECOVER",
+        "INDEX",
+        "STORE",
+        "EVALUATE",
+        "COMPILE"
+      ]
+    }
+  ]
+}

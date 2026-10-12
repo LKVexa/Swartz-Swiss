@@ -1,0 +1,41 @@
+{
+  "APDU-fuzz": "512/512",
+  "BR-410": "18/18",
+  "BR-440": "23/23",
+  "BR-450": "31/31",
+  "BR-460": "13/13",
+  "BR-470": "10/10",
+  "BR-470-file": "1/1",
+  "BR-470-production": "1/1",
+  "brim_bytes": 112,
+  "canonical_traps": "14/14",
+  "deterministic_builds": "PASS",
+  "external_not_claimed": [
+    "actual external network transport/security qualification (network remains optional and absent by default)",
+    "physical SIM/UICC/eSIM device I/O and timing qualification",
+    "issuer key ceremony/certification",
+    "TPM/secure-element hardware qualification",
+    "native Windows OS execution certification",
+    "independent third-party certification"
+  ],
+  "ledger_hash_mismatches": 0,
+  "opcode_negative": "41/41",
+  "opcode_positive": "41/41",
+  "performance_delta_percent": {
+    "arithmetic_ops_per_second_percent": 29.86661980018377,
+    "branch_ops_per_second_percent": -16.11510098495993,
+    "instructions_per_second_percent": -15.292969201437877,
+    "load_store_ops_per_second_percent": -24.59446432441281
+  },
+  "production_exec_source_bytes": 60945,
+  "record": "BR.Acceptance",
+  "release": "4.7.0",
+  "requirements": "66/66",
+  "sanitizers": "PASS",
+  "scope": "host-reference",
+  "semantic": "19/19",
+  "static": "14/14",
+  "status": "OPERATIONAL",
+  "toolchain": "2/2",
+  "work_packages": "13/13"
+}

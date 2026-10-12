@@ -1,0 +1,18 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.remediation.multi_worker_conformance:7.0.0-remediated-26",
+λ≡"quorum.rcpw.remediation.multi_worker_conformance",
+ℛ≡{
+  "0001":"learn(\"module\",literal(\"quorum.rcpw.remediation.multi_worker_conformance\"))",
+  "0002":"learn(\"profile\",literal(\"WP4_HOSTED_REFERENCE\"))",
+  "0003":"learn(\"parallel_rule\",literal(\"spawned workers may change execution placement but canonical results are coordinator-committed deterministically\"))",
+  "0004":"learn(\"equivalence_rule\",literal(\"1/2/4 worker layouts compare canonical state, semantic ledger, ownership, save and replay digests\"))",
+  "0005":"learn(\"production_boundary\",literal(\"hosted process conformance does not claim production distributed fabric\"))"
+},
+π≡[],δ≡5,τ≡0,
+μ≡{"learn.module":"quorum.rcpw.remediation.multi_worker_conformance","learn.profile":"WP4_HOSTED_REFERENCE","learn.parallel_rule":"spawned workers may change execution placement but canonical results are coordinator-committed deterministically","learn.equivalence_rule":"1/2/4 worker layouts compare canonical state, semantic ledger, ownership, save and replay digests","learn.production_boundary":"hosted process conformance does not claim production distributed fabric"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"learn.module":"quorum.rcpw.remediation.multi_worker_conformance","learn.profile":"WP4_HOSTED_REFERENCE","learn.parallel_rule":"spawned workers may change execution placement but canonical results are coordinator-committed deterministically","learn.equivalence_rule":"1/2/4 worker layouts compare canonical state, semantic ledger, ownership, save and replay digests","learn.production_boundary":"hosted process conformance does not claim production distributed fabric"}},
+ν≡{}
+,κ≡"sha256:84e92b92a93192d77dd48ecea359ed199a08580f42b895872f00259282ebb19d"
+}⇒⊤

@@ -1,0 +1,35 @@
+deepml motion 0.3
+module suite22.motion_planner.continuity
+policy deterministic
+policy no_network
+
+skeleton ContinuityPlanRig {
+  joint Root parent none bind transform(vec3(0,0,0), quat.identity)
+  joint Actor parent Root bind transform(vec3(0,0,0), quat.identity)
+}
+clip ContinuitySegmentA duration 2s interpolation cubic {
+  channel Actor.position key 0s vec3(0,0,0) key 1s vec3(1,0,0) key 2s vec3(2,0,0)
+  channel Actor.rotation key 0s quat.identity key 2s quat.axis_angle(y, 30deg)
+}
+clip ContinuitySegmentB duration 2s interpolation cubic {
+  channel Actor.position key 0s vec3(2,0,0) key 1s vec3(3,0,0) key 2s vec3(4,0,0)
+  channel Actor.rotation key 0s quat.axis_angle(y, 30deg) key 2s quat.axis_angle(y, 60deg)
+}
+state_machine ContinuityPlanState {
+  SegmentA -> SegmentB when segment_complete == true
+  SegmentB -> SegmentA when loop == true
+}
+root_motion from Root axes [x,z]
+motion_graph ContinuityPlanEvidence {
+  pose SOPHIA = constant_pose(ContinuityPlanRig)
+  pose CHARLOTTE = constant_pose(ContinuityPlanRig)
+  pose LANDON = constant_pose(ContinuityPlanRig)
+  pose Professor = constant_pose(ContinuityPlanRig)
+  pose Podium = constant_pose(ContinuityPlanRig)
+  curve ContinuityMetric = keys([0:0, 0.5:0, 1:0])
+  blend Ensemble weights [0.2,0.2,0.2,0.2,0.2]
+}
+optimize ContinuityPlanEvidence using [pose_constant_folding, curve_compression(0.001), dead_channel_removal, blend_normalization, retarget_cache, ik_scheduling, state_minimization]
+lower ContinuityPlanEvidence to DEEPML_MOTION_R12
+package motion ContinuityPlanRig as "motion_planner_continuity.msslb"
+certify motion ContinuityPlanRig profile strict

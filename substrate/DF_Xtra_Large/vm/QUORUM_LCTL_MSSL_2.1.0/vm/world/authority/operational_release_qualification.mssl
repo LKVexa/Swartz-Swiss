@@ -1,0 +1,18 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.world.operational_release_qualification:7.0.0-operational-reference-315",
+λ≡"quorum.rcpw.world.operational_release_qualification",
+ℛ≡{
+  "0001":"module(\"quorum.rcpw.world.operational_release_qualification\")",
+  "0002":"learn(\"profile\",literal(\"QP1/WQ3/AW3/WP4 hosted-reference evidence is distinct from QP3 production scale and QP4 external-party certification\"))",
+  "0003":"learn(\"golden\",literal(\"GW-01 through GW-80 are executable hosted-reference qualification scenarios\"))",
+  "0004":"learn(\"regression\",literal(\"base VM, world, blocker-remediation and operational-reference test suites must remain passing\"))",
+  "0005":"learn(\"evidence\",literal(\"every promoted requirement maps to a fresh hash-bound requirement-specific receipt\"))"
+},
+π≡[],δ≡5,τ≡0,
+μ≡{"learn.profile":"QP1/WQ3/AW3/WP4 hosted-reference evidence is distinct from QP3 production scale and QP4 external-party certification","learn.golden":"GW-01 through GW-80 are executable hosted-reference qualification scenarios","learn.regression":"base VM, world, blocker-remediation and operational-reference test suites must remain passing","learn.evidence":"every promoted requirement maps to a fresh hash-bound requirement-specific receipt"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"profile":"QP1/WQ3/AW3/WP4 hosted-reference evidence is distinct from QP3 production scale and QP4 external-party certification","golden":"GW-01 through GW-80 are executable hosted-reference qualification scenarios","regression":"base VM, world, blocker-remediation and operational-reference test suites must remain passing","evidence":"every promoted requirement maps to a fresh hash-bound requirement-specific receipt"}},
+ν≡{}
+,κ≡"sha256:32a06b95a090aaaaafb6609b77136f0497c6818ea58493cba4d3b01b14edbede"
+}⇒⊤

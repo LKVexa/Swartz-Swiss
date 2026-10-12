@@ -1,0 +1,101 @@
+{
+  "package": "JA21_Anthology_Individual_Scripts_Attached_Corpus",
+  "repository": "02. Anthology",
+  "language": "JA Data Language",
+  "profile_id": "ja.data",
+  "extension": ".jad",
+  "source_version": "ja source 0.3",
+  "generated_at_utc": "2026-07-22T19:52:33.485008+00:00",
+  "source_corpus": {
+    "filename": "JA_Data_Language_Coupling_Mechanics_Corpus.jsonl.gz",
+    "sha256": "587861f8ebb4d38470488e5c93b75c748ca2302c3f9038bfd26370b67868fb98",
+    "outer_records": 7,
+    "language_records": 10000
+  },
+  "scripts": {
+    "01_anthology_chronology.jad": {
+      "checks": {
+        "source_version": true,
+        "module_declared": true,
+        "data_profile_used": true,
+        "network_disabled": true,
+        "schema_declared": true,
+        "json_dataset_declared": true,
+        "schema_validation_declared": true,
+        "single_shard_primary_sequence": true,
+        "query_declared": true,
+        "lineage_declared": true,
+        "schema_assertion": true,
+        "json_emission": true,
+        "all_suite_fields_present": true
+      },
+      "passed": true,
+      "sha256": "1d5c00932779f6afe6551840ae09af0044e21cfc8d6fe664df50ff79e5ec3220",
+      "bytes": 1063
+    },
+    "02_anthology_immutable_provenance.jad": {
+      "checks": {
+        "source_version": true,
+        "module_declared": true,
+        "data_profile_used": true,
+        "network_disabled": true,
+        "schema_declared": true,
+        "json_dataset_declared": true,
+        "schema_validation_declared": true,
+        "single_shard_primary_sequence": true,
+        "query_declared": true,
+        "lineage_declared": true,
+        "schema_assertion": true,
+        "json_emission": true,
+        "all_suite_fields_present": true
+      },
+      "passed": true,
+      "sha256": "d845422fe917899d88b65eabac9d8cdc0f2ee2f22b97a51f86edbe50091aa60d",
+      "bytes": 1203
+    },
+    "03_anthology_prior_artifacts.jad": {
+      "checks": {
+        "source_version": true,
+        "module_declared": true,
+        "data_profile_used": true,
+        "network_disabled": true,
+        "schema_declared": true,
+        "json_dataset_declared": true,
+        "schema_validation_declared": true,
+        "single_shard_primary_sequence": true,
+        "query_declared": true,
+        "lineage_declared": true,
+        "schema_assertion": true,
+        "json_emission": true,
+        "all_suite_fields_present": true
+      },
+      "passed": true,
+      "sha256": "7be246ede78d566203d0a9261c1ee813d014e3247b4e8f8b179543215286793f",
+      "bytes": 1278
+    },
+    "04_anthology_ordered_experience_records.jad": {
+      "checks": {
+        "source_version": true,
+        "module_declared": true,
+        "data_profile_used": true,
+        "network_disabled": true,
+        "schema_declared": true,
+        "json_dataset_declared": true,
+        "schema_validation_declared": true,
+        "single_shard_primary_sequence": true,
+        "query_declared": true,
+        "lineage_declared": true,
+        "schema_assertion": true,
+        "json_emission": true,
+        "all_suite_fields_present": true
+      },
+      "passed": true,
+      "sha256": "c5708ade472b013f2608f2969df8ce296eacf0e2b70ad3487cf929350c6462a0",
+      "bytes": 1265
+    }
+  },
+  "runtime_execution": {
+    "performed": false,
+    "reason": "No production-certified JA Data Language compiler/runtime was included with the attachment."
+  }
+}

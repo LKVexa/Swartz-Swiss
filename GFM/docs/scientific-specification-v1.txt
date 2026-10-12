@@ -1,0 +1,234 @@
+GFM CYLINDRICAL PULSE SIMULATOR — SCIENTIFIC SPECIFICATION
+Independent equation and validation review, 2026-10-11
+
+1. WHAT THE TWO DISPLAYS MEAN
+
+The phase-texture cylinder and the electromagnetic pulse experiment are separate
+mathematical objects. The phase cylinder embeds the earlier periodic complex
+field on a cylindrical surface. The electromagnetic experiment evolves a new
+axisymmetric Maxwell field in a volume. No conversion of the earlier planar
+Ginzburg–Landau equations into volumetric Maxwell equations is claimed.
+
+For a planar periodic source field psi(x,y), the display mapping is
+theta = 2*pi*x/Lx, z = H*y/Ly,
+X = [R + a_display*|psi_interpolated|] cos(theta),
+Y = [R + a_display*|psi_interpolated|] sin(theta), Z = z.
+The radial displacement is a visual amplitude encoding, not physical matter
+displacement. Both radial displacement and phase color must use the same
+interpolated complex value. Interpolate Re(psi) and Im(psi) before deriving
+amplitude or phase; interpolating hue across the -pi/+pi seam is invalid.
+The cylinder surface is periodic around its circumference. The original y
+periodicity remains a source-field property; attaching caps does not create
+physical end conditions for that earlier model.
+
+2. NEW VOLUMETRIC ELECTROMAGNETIC MODEL
+
+Cylindrical coordinates (r,phi,z), with right-handed basis (e_r,e_phi,e_z),
+are used. The reduced model assumes d/dphi = 0 and keeps only
+E = E_phi e_phi and H = H_r e_r + H_z e_z.
+The real fields describe the m=0 axisymmetric polarization, not a linearly
+polarized plane wave. Rotating the r-z solution around the axis yields a
+three-dimensional axisymmetric field; azimuthal perturbations are excluded.
+
+In static, linear, isotropic material with epsilon > 0, mu > 0, sigma >= 0,
+the governing equations are
+
+epsilon * dE_phi/dt = dH_r/dz - dH_z/dr - sigma E_phi + F_phi,
+mu * dH_r/dt       = +dE_phi/dz,
+mu * dH_z/dt       = -(1/r) d(r E_phi)/dr.
+
+F_phi is an imposed source term in the Ampere equation; if expressed as an
+impressed current density J_ext, F_phi = -J_ext. It is not matter-created
+current. The passive conduction current is J_phi = sigma E_phi.
+B = mu H, D = epsilon E. E has units V/m, H A/m, B T, J A/m^2,
+epsilon F/m, mu H/m, sigma S/m, distance m and physical time s.
+
+This is a restricted electromagnetic material model. It does not solve
+magnetohydrodynamics, particle kinetics, fluid flow, relativistic gravity,
+plasma dispersion, nonlinear polarization, ionization, dielectric breakdown,
+material motion, deformation, radiation cooling, or a black-hole interior.
+The cylinder is a computational geometry, not a claim about spacetime shape.
+
+3. AXIS REGULARITY, MATERIAL, AND BOUNDARIES
+
+Smooth axisymmetric fields require E_phi = O(r), H_r = O(r), while H_z is
+finite and even in r. Thus E_phi and H_r vanish on the axis. In particular,
+lim[r->0] (1/r) d(r E_phi)/dr = 2*dE_phi/dr at r=0.
+Replacing the cylindrical curl by a Cartesian derivative loses this factor.
+
+The computational outer boundaries impose zero tangential electric field
+(perfect electric conductor, PEC). They reflect pulses. A finite damping
+layer may remove energy before a pulse reaches these boundaries; it is a
+sponge, not a perfectly matched layer (PML) and not guaranteed reflectionless.
+The axis is a regularity boundary, not a PEC wall.
+
+The material consists of a cylindrical shell, a far-end bottom and an
+optional receiving-end cover. If the outer shell radius is R_c and its
+thickness is w, the initially open cavity radius is R_i = R_c - w.
+The cover control C covers a fraction C of that initially open disk,
+leaving clear radius R_i*sqrt(1-C), 0 <= C <= 1. Boundary-cell material
+fractions use exact annular-volume intersections, with sigma_effective =
+fraction*sigma_material. This is a homogenized finite-cell approximation,
+not a conformal electromagnetic interface treatment.
+
+The intake aperture denotes a geometric opening in the generic absorbing
+material. Closing the cover changes the absorber mask; it does not imply
+that a black-hole horizon can be opened or covered. Constant conductivity
+is a coarse Ohmic absorption law and is not a measured model for aluminum,
+iron, an astrophysical plasma, or any named commercial can. A good metal
+reflects much of incident radiation and has a skin depth that can be much
+smaller than the mesh. Larger conductivity does not guarantee larger intake.
+
+4. ENERGY, INTAKE, AND HEATING
+
+The actual instantaneous Poynting vector is
+S_r = E_phi H_z, S_z = -E_phi H_r, S_phi = 0 [W/m^2].
+The configured source is at z=0.035 m, with the mouth at z=0.10 m; the
+receiving opening's outward normal is -e_z. Positive S_z is therefore
+intake into this cylinder. A mouth-up drawing uses display height L-z and
+does not reverse the physical source or Poynting vector. At any opening
+with the opposite outward normal +e_z, negative S_z would be intake.
+Signed net intake, inward positive-only throughput and reflected/outward
+throughput must be distinguished. Integrating instantaneous positive-only
+flux can count repeated recrossings; it is not absorptance.
+
+Field energy is U_EM = integral[(epsilon E_phi^2 + mu(H_r^2+H_z^2))/2] dV,
+with dV = 2*pi*r dr dz. Material heat is obtained from
+dQ_material/dt = integral[sigma_material E_phi^2] dV >= 0.
+The imposed source power is P_source = integral[F_phi E_phi] dV,
+which may be signed because the source can also extract field energy.
+The boundary/damping loss is kept in a distinct ledger Q_boundary.
+
+For insulated, stationary material with constant volumetric heat capacity
+C_v = rho_mass*c_p, local thermal rise is dT/dt = sigma_material E_phi^2/C_v.
+An electric cell with fraction f of matter has capacity f*C_v*cell_volume.
+The exported deposited density is per full electric-cell volume, so the
+material temperature diagnostic uses deltaT = deposited_density/(f*C_v)
+for f>0, and zero rise for empty cells. Summing f*C_v*deltaT*cell_volume
+therefore recovers the total material heating energy.
+This simple heating model does not include heat conduction or feedback of
+temperature on sigma, epsilon, mu or phase state.
+
+For PEC outer walls the closed-domain balance is
+U_EM(t) + Q_material(t) + Q_boundary(t)
+  = U_EM(0) + W_source(t) + numerical_residual(t).
+Boundary loss is artificial and must never be labeled material absorption.
+A balance residual measures numerical consistency; it does not validate
+the constitutive material law or astronomical interpretation.
+
+5. DISCRETIZATION UNDER REVIEW
+
+Electric samples occupy radial/axial cell centers. H_r occupies axial faces,
+and H_z radial faces including r=0. Electric-cell volume is exactly
+pi*(r_outer^2-r_inner^2)*dz. Magnetic components use their matching dual
+annular volumes and half-thickness end cells.
+
+The magnetic curl K uses finite-volume cylindrical circulation. The electric
+curl is its negative adjoint with respect to the volume/material weights.
+This pairing, rather than ordinary Cartesian averaging, gives the correct
+semidiscrete energy exchange. At the axis, the circulation stencil for the
+first H_z disk is -4*E_phi(first center)/dr, consistent with E_phi~r.
+
+Implicit midpoint time stepping uses midpoint fields for source work and
+Ohmic heating. For a converged linear solve, the discrete quadratic energy
+balance follows from multiplying both field updates by their midpoint
+values. A small ledger residual is expected up to linear-solve and floating
+point tolerances. Time step still needs refinement to resolve propagation,
+oscillation and absorption even though midpoint is not explicitly CFL-limited.
+In particular, midpoint is not L-stable: the isolated Ohmic decay factor
+approaches -1 for sigma*dt/epsilon >> 1. Stable fields and a closed energy
+ledger are insufficient if material relaxation is under-resolved. The chosen
+step must also resolve epsilon/sigma; any residual stiffness should be
+reported rather than disguised as physical attenuation. The implementation
+caps max(sigma_effective/epsilon + sponge_rate)*dt at 0.2 in addition to
+wave-propagation, carrier-period and envelope-resolution accuracy bounds.
+
+6. INDEPENDENT ANALYTIC CHECK
+
+In homogeneous lossless material, a PEC cylinder of radius R and length L
+admits the following smooth axisymmetric mode:
+alpha = j_(1,1)/R, beta = pi/L,
+omega = sqrt[(alpha^2+beta^2)/(epsilon*mu)],
+E_phi = A J1(alpha*r) sin(beta*z) cos(omega*t),
+H_r   = A beta/(mu*omega) J1(alpha*r) cos(beta*z) sin(omega*t),
+H_z   = -A alpha/(mu*omega) J0(alpha*r) sin(beta*z) sin(omega*t).
+Here j_(1,1)=3.8317059702075125 is the first positive zero of J1.
+These formulas were independently derived by substitution in the three
+curl equations, using dJ0(x)/dx=-J1(x) and d[x J1(x)]/dx=x J0(x).
+They enforce both axis regularity and zero tangential electric field at
+r=R,z=0,z=L. Error against this continuum solution must decrease as the
+mesh and time step are refined. Agreement checks signs, cylindrical geometry
+and propagation independently of the engine's bookkeeping.
+
+For a uniform conductivity sigma, the same spatial mode has
+gamma = sigma/epsilon, Omega = sqrt(omega^2-gamma^2/4),
+f(t) = exp(-gamma*t/2)[cos(Omega*t)-gamma*sin(Omega*t)/(2*Omega)],
+q(t) = exp(-gamma*t/2)*sin(Omega*t)/Omega.
+Replace the electric cos(omega*t) factor by f(t), and each magnetic
+sin(omega*t)/omega factor by q(t). This follows from
+f' = -gamma*f - omega^2*q, q'=f, f(0)=1,q(0)=0, and tests material damping
+against a separate continuum solution rather than the engine's energy ledger.
+
+Ohmic loss check: with a curl-free local electric degree of freedom and
+uniform sigma, exact decay is E(t)=E(0)*exp(-sigma*t/epsilon), and deposited
+heat equals the loss in epsilon*E^2/2. For the midpoint discretization the
+one-step decay factor is (1-sigma*dt/(2*epsilon))/(1+sigma*dt/(2*epsilon));
+the midpoint heat is exactly the quadratic energy decrease. A full-domain
+lossy-mode experiment must still include electric/magnetic energy exchange.
+
+7. VALIDATION CLAIMS AND FUTURE WORK
+
+Required verification includes zero-field invariance, nonnegative material
+heat, source/heat/boundary energy balance, analytic mode refinement,
+divergence-of-B preservation with a compatible cylindrical operator,
+finite/regular fields at the axis, SI normalization, and distinct source,
+intake and absorption diagnostics. Engine-to-render sampling must preserve
+the computed field values rather than animate invented pulse positions.
+
+Passing those checks verifies the implemented reduced equations and mapping
+at tested resolutions. It does not establish research accuracy for arbitrary
+parameters, full 3D dynamics, observational validation, black-hole/wormhole
+equivalence, material-specific prediction, or NASA endorsement.
+
+To progress beyond this demonstrator: demonstrate independent code agreement,
+publish systematic grid/time convergence, quantify sponge reflection, use
+validated dispersive constitutive parameters, resolve material skin depth,
+include additional azimuthal modes as needed, and compare a specified
+measured experiment with uncertainty before making prediction claims.
+
+INDEPENDENT CHECK RESULTS
+
+tests/independent-em-validation.cjs currently contains ten checks. The
+vacuum mode was evolved to omega*t=0.9 at 16x32,32x64,64x128 cells; its
+relative volume/material-weighted field L2 errors were 0.00341559,
+0.000856670,0.000214342. Uniform Ohmic sigma=0.01 S/m errors at the same
+resolutions were 0.00344990,0.000865258,0.000216490. Approximately fourfold
+error reduction per doubled resolution supports second-order convergence
+for these smooth test cases. It does not establish convergence at material
+interfaces, source discontinuities, unresolved skin depths or all settings.
+Additional checks independently integrate dual volumes, inspect axis-factor
+two, div(curl) cancellation, heat/temperature units, shell/cover volume,
+damping-resolution bounds, Poynting signs and zero-field invariance.
+
+AUTHORITATIVE REFERENCES (consulted 2026-10-11)
+
+[1] D. H. Staelin, MIT, Electromagnetics and Applications, 6.013 course notes.
+Sections 2.1, 2.5–2.7, 9.2.4–9.2.5 and Appendix C support Maxwell equations,
+Ohm's law, SI units, Poynting balance, conducting-material penetration and
+cylindrical differential operators. The component equations and analytic
+mode above are this project's explicit derivations from those equations.
+https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf
+
+[2] Meep developers, Cylindrical Coordinates tutorial, official documentation.
+Explains rotational-symmetry reduction, e^(i*m*phi) modes and why a linear
+polarization is not the m=0 mode. This project does not use the Meep solver.
+https://meep.readthedocs.io/en/latest/Python_Tutorials/Cylindrical_Coordinates/
+
+[3] NIST Digital Library of Mathematical Functions, section 10.6.
+Bessel recurrence and derivative identities used in the independent mode.
+https://dlmf.nist.gov/10.6
+
+[4] openEMS developers, Cylindrical FDTD, official documentation.
+Examples of cylindrical solver geometry and documented practical cautions;
+this project does not use or claim agreement with the openEMS solver.
+https://docs.openems.de/en/latest/concepts/cylindrical_fdtd.html

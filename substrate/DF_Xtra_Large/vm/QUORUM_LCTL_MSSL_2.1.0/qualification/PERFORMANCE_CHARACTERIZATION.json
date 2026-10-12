@@ -1,0 +1,11 @@
+{
+  "schema": "QUORUM-PERFORMANCE/2.0",
+  "scope": "LCTL-C canonical verification only",
+  "source_count": 133,
+  "verification_latency_ms": {
+    "min": 342.784,
+    "max": 2455.425,
+    "mean": 1798.997
+  },
+  "domain_runtime_performance": "BLOCKED_NOT_IMPLEMENTED"
+}

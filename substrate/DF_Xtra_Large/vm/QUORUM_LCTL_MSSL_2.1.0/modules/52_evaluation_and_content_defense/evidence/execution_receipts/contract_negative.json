@@ -1,0 +1,8 @@
+{
+  "schema": "QUORUM-CONTRACT-EXECUTION/2.0",
+  "module_id": 52,
+  "admitted": false,
+  "state": "FAILED_CLOSED",
+  "error": "INVALID_INPUT",
+  "stages": []
+}

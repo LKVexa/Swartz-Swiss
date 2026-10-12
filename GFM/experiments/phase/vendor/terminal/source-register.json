@@ -1,0 +1,134 @@
+{
+  "version": "0.5.1",
+  "prepared": "2026-10-11",
+  "sources": [
+    {
+      "path": "reference/RUSSL_Research_Workbench.zip",
+      "title": "RUSSL Research Workbench",
+      "role": "EXECUTABLE REFERENCE + EDITABLE SOURCE",
+      "scope": "Original source ZIP. GF80 mechanics, original research terminal, source corpus, and retained validation.",
+      "sha256": "23948ed41d93df6b28db41ac9d8fe31ff3cc19a8a5c2ecd9847db430f5d552a5",
+      "bytes": 18553995
+    },
+    {
+      "path": "reference/SpinDoctor-3.1.2-QUANTUM_TERMINAL.html",
+      "title": "SpinDoctor 3.1.2 quantum terminal",
+      "role": "INTERFACE REFERENCE",
+      "scope": "Original frontend retained for inspection. Its native backend is not connected in this foundation.",
+      "sha256": "f8c76a594bd7de371eb8c06414189bcc83991c63e239c4baf32bf8dff0614a31",
+      "bytes": 667930
+    },
+    {
+      "path": "reference/Galois Field Transform Mechanics.txt",
+      "title": "Galois Field Transform Mechanics",
+      "role": "CANDIDATE TEXT",
+      "scope": "Survey source. Rendered math is missing in this text export; use the supplied PDF for equations.",
+      "sha256": "45b0c90bde66786e732d176ac22781f5058779e8dcc75d305788233f3a15771a",
+      "bytes": 43498
+    },
+    {
+      "path": "reference/Galois Field Mechanics Equations.txt",
+      "title": "Galois Field Mechanics Equations",
+      "role": "CANDIDATE TEXT",
+      "scope": "Expanded candidate survey. Formula placeholders remain incomplete; unimplemented claims stay research material.",
+      "sha256": "000d1849c949ca34b982968e42ea04598c32ccdbf62c9d0d8074c3e440c5c11c",
+      "bytes": 26137
+    },
+    {
+      "path": "reference/galois_field_transform_mechanics.pdf",
+      "title": "Galois field transform mechanics PDF",
+      "role": "RECOVERED EQUATION SOURCE",
+      "scope": "Legible trace and Fourier equations. Later operator identities have sign issues described in the candidate review.",
+      "sha256": "2046247bc504171de09614e6d238ac648b94aac34733c6b7feb4de57ab00f39e",
+      "bytes": 294785
+    },
+    {
+      "path": "reference/Equation audit candidate.txt",
+      "title": "Equation audit / refinement candidate",
+      "role": "AUDITED CANDIDATE REPORT",
+      "scope": "Source narrative about a claimed 500-equation suite. Only supplied expressions and claims are audited; the full original suite was not supplied.",
+      "sha256": "068f68965b6157c88e9e881a48a6bfacfc040455cb957af17f613785ad0237f8",
+      "bytes": 14113
+    },
+    {
+      "path": "reference/image-equations/HQMFVPabcAArgH_.jpg",
+      "title": "Point-mass pendulum and small-angle frequency",
+      "role": "IMAGE EQUATION SOURCE",
+      "scope": "Ordinary real point-mass mechanics; g>0, l>0, m>0; angle in radians; unforced and undamped. Frequency and period use the small-angle linear model.",
+      "sha256": "2d6f9bbdc99ab37a2a27c7b5331a78242193a6865d852ce0bea2d51468129a32",
+      "bytes": 128056
+    },
+    {
+      "path": "reference/image-equations/HKIRhAvaYAEyfhj.jpg",
+      "title": "Three active right-handed axis rotations",
+      "role": "IMAGE EQUATION SOURCE",
+      "scope": "Ordinary real SO(3), active rotations of column vectors in a right-handed frame. Degree input is converted to radians before sine and cosine.",
+      "sha256": "ddc477a36328e1c33639898ddb4d03720fe0c314929a1e5b5f691520a8068b90",
+      "bytes": 63895
+    },
+    {
+      "path": "reference/image-equations/HJPJPQbaYAADLiP.jpg",
+      "title": "Zeta–gamma Mellin integral",
+      "role": "IMAGE EQUATION SOURCE",
+      "scope": "Ordinary complex s with Re(s)>1; real integration variable t>0 and t^(s-1)=exp((s-1)*log(t)).",
+      "sha256": "952aa0ef699a34ed455c523000d0bcaa28aaab334229f334534a6e637eef7912",
+      "bytes": 294305
+    },
+    {
+      "path": "reference/blackhole-specification/Black_Hole_Master_Equations.pdf",
+      "name": "Black_Hole_Master_Equations.pdf",
+      "bytes": 111534,
+      "sha256": "579b2f4e3833b0207e06359caa85447cdcc705a65b61aadeee7022b52394a6f4",
+      "role": "SUPPLIED EQUATION SOURCE",
+      "title": "Black_Hole_Master_Equations.pdf",
+      "scope": "Equations retained with separate domain and applicability audit."
+    },
+    {
+      "path": "reference/blackhole-specification/ETM.jpg",
+      "name": "ETM.jpg",
+      "bytes": 352662,
+      "sha256": "a74761c15e14904c821fd0875a09f819e3b692ae68fe3837dc3437d79a2b2c31",
+      "role": "SUPPLIED EQUATION SOURCE",
+      "title": "ETM.jpg",
+      "scope": "Equations retained with separate domain and applicability audit."
+    },
+    {
+      "path": "reference/blackhole-specification/eventHorizon.jpg",
+      "name": "eventHorizon.jpg",
+      "bytes": 469535,
+      "sha256": "7f2a9a28c525e6173eeeb48674fcd5c642c31986eaf94d6619dc00a474a555a5",
+      "role": "SUPPLIED EQUATION SOURCE",
+      "title": "eventHorizon.jpg",
+      "scope": "Equations retained with separate domain and applicability audit."
+    },
+    {
+      "path": "reference/blackhole-specification/aggie aperture.png",
+      "name": "aggie aperture.png",
+      "bytes": 232797,
+      "sha256": "9ebea738a8abd85273c0e9a164bcdfaf5daca446a3423307dc0c5e775527efd3",
+      "role": "SUPPLIED EQUATION SOURCE",
+      "title": "aggie aperture.png",
+      "scope": "Equations retained with separate domain and applicability audit."
+    },
+    {
+      "path": "reference/blackhole-specification/Screenshot 2026-10-11 053124.png",
+      "name": "Screenshot 2026-10-11 053124.png",
+      "bytes": 38556,
+      "sha256": "acdde0837646766c2af5e4a9eba3b16b95e9c865785acee73c7a702da2a545b6",
+      "role": "SUPPLIED EQUATION SOURCE",
+      "title": "Screenshot 2026-10-11 053124.png",
+      "scope": "Equations retained with separate domain and applicability audit."
+    },
+    {
+      "path": "reference/blackhole-specification/User_Simulation_Writeup.txt",
+      "name": "User_Simulation_Writeup.txt",
+      "bytes": 1787,
+      "sha256": "e633838bbc6a7dcf44254c88d971e3858014cc469074b3dafa846c4088453907",
+      "role": "USER HYPOTHESIS",
+      "title": "User_Simulation_Writeup.txt",
+      "scope": "User-proposed formation, cover and passage rules, preserved as inert reference data."
+    }
+  ]
+}
+
+

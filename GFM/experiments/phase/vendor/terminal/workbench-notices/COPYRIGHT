@@ -1,0 +1,23 @@
+RUSSL Zarr — COPYRIGHT
+SPDX-License-Identifier: GPL-3.0-only
+
+Copyright (C) 2026 LKVexa and contributors.
+
+This attribution covers original project contributions to RUSSL Zarr,
+including project-authored source code, documentation, specifications,
+schemas, synthetic fixtures and research commentary, to the extent of each
+contributor's rights. Individual contributors retain copyright in their
+respective contributions. See LICENSE for the GNU General Public License,
+version 3 only, and NOTICE for the scope of the project license.
+
+Independently authored research articles, source documents, historical
+archives, third-party code and other imported works remain copyright of
+their respective rights holders. Existing author credits, copyright notices
+and license terms are preserved. This file does not transfer those rights
+or assert that every imported work has been licensed under the GPL.
+
+The GNU General Public License text in LICENSE is:
+Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+
+The Free Software Foundation's copyright applies to the license text,
+not to the RUSSL Zarr project.

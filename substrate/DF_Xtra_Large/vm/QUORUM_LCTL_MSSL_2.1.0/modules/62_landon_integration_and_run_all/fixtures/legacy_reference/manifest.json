@@ -1,0 +1,35 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 62,
+  "legacy_root": "legacy/source_repository/LANDON Integration and Run All",
+  "legacy_sha256": "84ee13df45855d71ce8e0366534b4a3386f6c458f22a152a580916055af777bf",
+  "files": [
+    {
+      "path": "62.1_Approved_Execution_Integration.jaa",
+      "sha256": "77f1debd1bf8e6f12fd9107fadba683ad3cb6106bf449927c31c0a30cdfeae95",
+      "bytes": 1753
+    },
+    {
+      "path": "62.2_Run.jaa",
+      "sha256": "94505bfd019be00da700194152856629a12082543d7610fba494853542224a75",
+      "bytes": 1489
+    },
+    {
+      "path": "62.3_Run_All.jaa",
+      "sha256": "e38a640c4c3c6830bd4010e0ce6ec49f0576aeb769f5cb8f7dbc46c9b46f7a2c",
+      "bytes": 1478
+    },
+    {
+      "path": "62.4_Result_Reporting.jaa",
+      "sha256": "195154d32e6c5db5148511f60aa6ba40274e3c4fd21a8e94ad9055d2a0c27464",
+      "bytes": 1598
+    },
+    {
+      "path": "README.md",
+      "sha256": "c131cbbea0b7a4d389777968dba39d015faf8b9dcdade4bc40de1d7c5a08ef3d",
+      "bytes": 15390
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

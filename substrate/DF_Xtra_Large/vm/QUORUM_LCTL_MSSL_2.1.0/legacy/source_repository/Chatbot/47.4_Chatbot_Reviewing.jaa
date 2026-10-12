@@ -1,0 +1,35 @@
+ja source 0.3
+module suite47.chatbot.reviewing
+use Agent
+policy no_network
+
+agent ChatbotReviewing {
+    identity "chatbot_reviewing"
+    role "sophia-charlotte-landon-professor-podium-chatbot"
+    goal produce_prioritized_evidence_bound_project_review when confidence >= 0.94
+    memory session retention 1h
+    budget steps 55 tools 5
+    tool LANDONCollectReviewScope(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAInterpretReviewIntent(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEEvaluateProjectChanges(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainReviewFindings(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordReviewEvidence(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectReviewScope
+        authorize SOPHIAInterpretReviewIntent
+        authorize CHARLOTTEEvaluateProjectChanges
+        authorize ProfessorExplainReviewFindings
+        authorize PodiumRecordReviewEvidence
+        continue when policy_allows
+        execute LANDONCollectReviewScope("selected_project_changes")
+        execute SOPHIAInterpretReviewIntent("canonical_review_scope")
+        execute CHARLOTTEEvaluateProjectChanges("review_intent_and_evidence")
+        execute ProfessorExplainReviewFindings("prioritized_review_findings")
+        execute PodiumRecordReviewEvidence("review_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "ChatbotReviewing.mcrt"

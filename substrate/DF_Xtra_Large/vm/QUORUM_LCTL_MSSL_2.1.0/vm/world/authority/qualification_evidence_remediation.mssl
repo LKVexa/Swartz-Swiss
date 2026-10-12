@@ -1,0 +1,18 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.remediation.qualification_evidence:7.0.0-remediated-26",
+λ≡"quorum.rcpw.remediation.qualification_evidence",
+ℛ≡{
+  "0001":"learn(\"module\",literal(\"quorum.rcpw.remediation.qualification_evidence\"))",
+  "0002":"learn(\"classifier_rule\",literal(\"requirement status is keyed by requirement_id and fresh evidence, not prose keywords\"))",
+  "0003":"learn(\"profile\",literal(\"QP1/WQ2/AW1/WP4_HOSTED_REFERENCE\"))",
+  "0004":"learn(\"evidence_rule\",literal(\"each remediated gate emits command, exit code, observed result digest and evidence digest\"))",
+  "0005":"learn(\"promotion_rule\",literal(\"higher QP3/QP4 claims remain blocked without their own evidence\"))"
+},
+π≡[],δ≡5,τ≡0,
+μ≡{"learn.module":"quorum.rcpw.remediation.qualification_evidence","learn.classifier_rule":"requirement status is keyed by requirement_id and fresh evidence, not prose keywords","learn.profile":"QP1/WQ2/AW1/WP4_HOSTED_REFERENCE","learn.evidence_rule":"each remediated gate emits command, exit code, observed result digest and evidence digest","learn.promotion_rule":"higher QP3/QP4 claims remain blocked without their own evidence"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"learn.module":"quorum.rcpw.remediation.qualification_evidence","learn.classifier_rule":"requirement status is keyed by requirement_id and fresh evidence, not prose keywords","learn.profile":"QP1/WQ2/AW1/WP4_HOSTED_REFERENCE","learn.evidence_rule":"each remediated gate emits command, exit code, observed result digest and evidence digest","learn.promotion_rule":"higher QP3/QP4 claims remain blocked without their own evidence"}},
+ν≡{}
+,κ≡"sha256:e73508b2cca88e7c97be7ba172035bfbb62f52d916ce028f2e8d0e6b297a4fde"
+}⇒⊤

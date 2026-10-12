@@ -1,0 +1,18 @@
+{
+  "baseline_archive": "BOTTLE_ROCKET_4.8.0_COLUMNED_LCTL_INDEPENDENT_VERIFICATION_SECURITY_QUALIFICATION_110K_RELEASE.zip",
+  "baseline_gate": "make clean operational PASS",
+  "baseline_production_boundary_bytes": 107675,
+  "baseline_sha256": "7ec76dd70d6a008a5b527d3c47383d9fc5e9357b847b57aad408755986cffa44",
+  "host": "Linux 6.18.35 x86_64",
+  "inherited_external_blockers": [
+    "literal 72-hour soak",
+    "independent build machine/operator",
+    "AArch64",
+    "Windows"
+  ],
+  "inherited_strict_4_8_gate": "BLOCKED 105/113",
+  "production_ceiling_bytes": 110000,
+  "record": "BOTTLE_ROCKET.QualificationBaseline/4.9.0",
+  "workflow_archive": "10_4_9_0_release_candidate_operational_qualification.zip",
+  "workflow_sha256": "88781144bc39114ded2db67e2280dadc2a675172fe687370fac8343ea0ed4a7b"
+}

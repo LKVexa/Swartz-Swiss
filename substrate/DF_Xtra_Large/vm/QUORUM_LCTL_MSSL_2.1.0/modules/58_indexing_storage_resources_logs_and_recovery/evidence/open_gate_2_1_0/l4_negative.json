@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "3e44e80f98d65c8c4bad68f1d4563d240161d1eacdde9d7802222ce95cee7707",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Indexing Storage Resources Logs and Recovery",
+  "module_id": 58,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "QUORUM-FIXTURE/2.0",
+  "class": "edge",
+  "module_id": 2,
+  "plane": "sense_context",
+  "input_type": "repository/artifact/context",
+  "payload": {},
+  "expected_contract": {
+    "admitted": true,
+    "boundary": "minimal"
+  }
+}

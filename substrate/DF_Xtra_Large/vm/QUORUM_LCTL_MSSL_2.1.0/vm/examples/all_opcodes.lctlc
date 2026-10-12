@@ -1,0 +1,41 @@
+LCTLC/1.0
+@unit id=quorum.generic_project.vm.example.all_opcodes version=5.0.0 profile=native
+@defaults qspace=H basis=computational regime=exact assume=finite_dimension error=exact conf=1.0
+@frame id=F0000 parent=ROOT module=quorum.generic_project.vm.example.all_opcodes
+ID│LANE│OP│OUT│CTRL│IN│ARG│META
+D0001│alloc│Q│q│_│_│1│res="logical_qubits=1";p=lctl:1.2
+D0002│alloc│C│c│_│_│1│res="classical_bits=1";p=lctl:1.2
+V0001│vm│REG│_│_│_│vm.op=NOP│p=quorum:vm5
+V0002│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=10│p=quorum:vm5
+V0003│vm│REG│_│_│_│vm.op=MOVI;dst=R1;imm=3│p=quorum:vm5
+V0004│vm│REG│_│_│_│vm.op=MOV;dst=R2;a=R0│p=quorum:vm5
+V0005│vm│REG│_│_│_│vm.op=ADD;dst=R3;a=R0;b=R1;mode=exact│p=quorum:vm5
+V0006│vm│REG│_│_│_│vm.op=SUB;dst=R4;a=R0;b=R1;mode=exact│p=quorum:vm5
+V0007│vm│REG│_│_│_│vm.op=MUL;dst=R5;a=R0;b=R1;mode=exact│p=quorum:vm5
+V0008│vm│REG│_│_│_│vm.op=DIVU;dst=R6;a=R0;b=R1│p=quorum:vm5
+V0009│vm│REG│_│_│_│vm.op=MODU;dst=R7;a=R0;b=R1│p=quorum:vm5
+V0010│vm│REG│_│_│_│vm.op=AND;dst=R8;a=R0;b=R1│p=quorum:vm5
+V0011│vm│REG│_│_│_│vm.op=OR;dst=R9;a=R0;b=R1│p=quorum:vm5
+V0012│vm│REG│_│_│_│vm.op=XOR;dst=R10;a=R0;b=R1│p=quorum:vm5
+V0013│vm│REG│_│_│_│vm.op=NOT;dst=R11;a=R1│p=quorum:vm5
+V0014│vm│REG│_│_│_│vm.op=SHL;dst=R12;a=R1;imm=2│p=quorum:vm5
+V0015│vm│REG│_│_│_│vm.op=SHR;dst=R13;a=R0;imm=1│p=quorum:vm5
+V0016│vm│REG│_│_│_│vm.op=MOVI;dst=R14;imm=64│p=quorum:vm5
+V0017│vm│REG│_│_│_│vm.op=STORE;a=R14;b=R3;width=8│p=quorum:vm5
+V0018│vm│REG│_│_│_│vm.op=LOAD;dst=R15;a=R14;width=8│p=quorum:vm5
+V0019│vm│REG│_│_│_│vm.op=PUSH;a=R15│p=quorum:vm5
+V0020│vm│REG│_│_│_│vm.op=POP;dst=R0│p=quorum:vm5
+V0021│vm│REG│_│_│_│vm.op=CMP;a=R0;b=R3│p=quorum:vm5
+V0022│vm│REG│_│_│_│vm.op=MOVI;dst=R2;imm=0│p=quorum:vm5
+V0023│vm│REG│_│_│_│vm.op=JZ;a=R2;target=LJZ│p=quorum:vm5
+V0024│vm│REG│_│_│_│vm.op=NOP│p=quorum:vm5
+V0025│vm│REG│_│_│_│label=LJZ;vm.op=JNZ;a=R0;target=LJNZ│p=quorum:vm5
+V0026│vm│REG│_│_│_│vm.op=NOP│p=quorum:vm5
+V0027│vm│REG│_│_│_│label=LJNZ;vm.op=JMP;target=LJMP│p=quorum:vm5
+V0028│vm│REG│_│_│_│vm.op=NOP│p=quorum:vm5
+V0029│vm│REG│_│_│_│label=LJMP;vm.op=SVC;svc=2│p=quorum:vm5
+V0030│vm│REG│_│_│_│vm.op=SVC;svc=3│p=quorum:vm5
+V0031│vm│REG│_│_│_│vm.op=SVC;svc=1│p=quorum:vm5
+V0032│vm│REG│_│_│_│vm.op=HALT│p=quorum:vm5
+C9999│terminal│.│_│_│_│terminal=sealed_graph_end;justification=canonical_entry_sentinel│p=lctl:nop
+@end

@@ -1,0 +1,47 @@
+ja source 0.3
+module suite26.full_stack_ui.uploads
+use Interface
+policy no_network
+
+interface FullStackUploads {
+    state selected_upload: Text? = null
+    state uploading: Flag = false
+    derived can_select_upload = not uploading
+    derived can_submit_upload = selected_upload != null and not uploading
+    component SOPHIA_UploadProfile {
+        label "Choose upload source"
+        enabled bind can_select_upload
+        accessibility role button name "Choose an upload source"
+        action select_upload requires admin.action:approved
+    }
+    component CHARLOTTE_UploadGate {
+        label "Validate selected upload"
+        enabled bind can_submit_upload
+        accessibility role button name "Validate selected upload"
+        action validate_upload requires admin.action:approved
+    }
+    component LANDON_UploadCommit {
+        label "Commit validated upload"
+        enabled bind can_submit_upload
+        accessibility role button name "Commit validated upload"
+        action commit_upload requires admin.action:approved
+    }
+    component Professor_UploadGuide {
+        label "Explain upload requirements"
+        enabled bind can_select_upload
+        accessibility role button name "Explain upload requirements"
+        action explain_upload requires admin.action:approved
+    }
+    component Podium_UploadReceipt {
+        label "View upload receipt"
+        enabled bind can_submit_upload
+        accessibility role button name "View upload evidence receipt"
+        action show_upload_receipt requires admin.action:approved
+    }
+    component UploadEvidenceViewport {
+        embed portal.scene "upload_evidence"
+        motion bind timeline.upload_progress
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface FullStackUploads

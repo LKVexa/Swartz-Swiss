@@ -1,0 +1,328 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 14,
+    "PARTIAL": 17,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "All twelve core authorities plus shell/transition/penteract/multi-reference extensions have explicit ownership and message contracts.",
+      "requirement_id": "RCPW-20-R01",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Global invariant: distance changes representation, not existence.",
+      "requirement_id": "RCPW-20-R02",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Global invariant: canonical identity and coordinates survive folding/unfolding and reference changes.",
+      "requirement_id": "RCPW-20-R03",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Global invariant: folded entities retain history, causality, and future evolution.",
+      "requirement_id": "RCPW-20-R04",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Global invariant: rendering/optimization cannot silently mutate canonical truth.",
+      "requirement_id": "RCPW-20-R05",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Global invariant: no documentation-only, mock, placeholder, or self-declared PASS qualifies an operational gate.",
+      "requirement_id": "RCPW-20-R06",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-20-R07.json",
+      "evidence_sha256": "f127492bb5eae326de81e2d34672a90c884971a84e4c44d548d7ef326ebc7a8e",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "The integrated system has bounded CPU/GPU/memory/I/O/storage budgets and fail-safe degradation.",
+      "requirement_id": "RCPW-20-R07",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-20-R08.json",
+      "evidence_sha256": "791078f989b58e719634e86c0a9e1bceda578fcc50d2248f55fa4038138ceaee",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "End-to-end save/replay, crash recovery, deterministic replay, failure injection, and independent qualification are complete.",
+      "requirement_id": "RCPW-20-R08",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The integrated scheduler defines deterministic phase ordering for canonical mutation, remote simulation, folding, materialization, physics, rendering views, ledger commit, and checkpointing.",
+      "requirement_id": "RCPW-20-R09",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "A global resource governor protects canonical/persistence/ledger work before derived simulation and rendering quality.",
+      "requirement_id": "RCPW-20-R10",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-20-R11.json",
+      "evidence_sha256": "39645751bf04bf83c6228efafa47dd96ec1a0eec3dd89efa16338b7b77f016aa",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "A compatibility matrix distinguishes reference-model, hosted operational, native VM, production-scale, and independently qualified profiles.",
+      "requirement_id": "RCPW-20-R11",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Release promotion requires a reproducible build manifest, test corpus digest, evidence digest, unresolved-risk register, and rollback plan.",
+      "requirement_id": "RCPW-20-R12",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The integrated system has a deterministic boot/startup sequence that validates schemas, canonical snapshots, ledgers, fold configuration, runtime compatibility, and qualification profile before simulation begins.",
+      "requirement_id": "RCPW-20-R13",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Runtime health telemetry exposes canonical revision, scheduler phase, ledger lag, save/checkpoint age, LOD backlog, materialization backlog, shell pressure, fold distortion, and recovery status.",
+      "requirement_id": "RCPW-20-R14",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The final release gate executes the Golden World suite plus a content-scale worldbuilding scenario containing regions, settlements, interiors, ecology, economy, transport, weather, narrative wells, and persistent history.",
+      "requirement_id": "RCPW-20-R15",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Release promotion requires a rollback-tested package, risk disposition, reproducible build/test manifest, compatibility matrix, and explicit statement of which qualification profiles are actually OPERATIONAL.",
+      "requirement_id": "RCPW-20-R16",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The integrated architecture includes a deterministic world compiler that validates and emits canonical world metadata, dependency graphs, topology, content hashes, seeds, visibility/portal data, and runtime manifests.",
+      "requirement_id": "RCPW-20-R17",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The runtime kernel has a versioned service ABI defining canonical mutation, scheduler phases, ledger commit, LOD/fold planning, materialization, navigation, AI, environment, rendering views, save/replay, and diagnostics.",
+      "requirement_id": "RCPW-20-R18",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The final qualification executes a content-scale world containing wilderness, multiple settlements, interiors, transport networks, ecology, economy, law/reputation, weather, narrative events, persistent agents, and long-lived history under continuous folding.",
+      "requirement_id": "RCPW-20-R19",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-20-R20.json",
+      "evidence_sha256": "752972238b192df8b3e2407c26aae84f3e9c507e2d40d47da6c076c64b252142",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "The release includes a headless deterministic verifier capable of loading a world package/save, replaying Golden World traces, and emitting canonical checkpoint digests without full rendering.",
+      "requirement_id": "RCPW-20-R20",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The 5.0 promotion gate requires all mandatory QP/WQ gates, 40 Golden World scenarios, long-soak stability, rollback proof, world-package reproducibility, runtime ABI compatibility, and an explicit blocker ledger.",
+      "requirement_id": "RCPW-20-R21",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The integrated 6.0 architecture defines a sovereign world fabric that can run as one process or many deterministic workers without changing canonical world semantics.",
+      "requirement_id": "RCPW-20-R22",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The runtime includes deterministic partitioning/ownership, transactional cross-partition mutation, global ledger ordering, coherent checkpointing, worker recovery, and headless verification contracts.",
+      "requirement_id": "RCPW-20-R23",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The world compiler emits partitioning hints and content-density metadata as optimization inputs only; runtime may repartition without changing canonical identity/topology.",
+      "requirement_id": "RCPW-20-R24",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-20-R25.json",
+      "evidence_sha256": "787a6ed7e3f2c9a975f9e4444c82c856c17e0a7bc112ddb4cc7f20bd9d27ff28",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "The final release includes automated conformance suites that compare canonical outcomes across multiple worker counts/layouts and verify equivalent save/replay results.",
+      "requirement_id": "RCPW-20-R25",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The 6.0 promotion gate requires all mandatory QP/WQ gates, 60 Golden World scenarios, deterministic-parallel conformance, hot-patch/rollback qualification, re-partition recovery, long-soak/chaos evidence, and a complete unresolved-blocker ledger.",
+      "requirement_id": "RCPW-20-R26",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The integrated 7.0 architecture defines an Autonomous World Continuum that can expand, age, archive, rehydrate, and evolve institutions/ecology/civilization while preserving canonical causal authority.",
+      "requirement_id": "RCPW-20-R27",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The world compiler includes semantic world grammar, deterministic frontier synthesis, provenance, ontology/version validation, and compatibility with existing canonical world history.",
+      "requirement_id": "RCPW-20-R28",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The runtime includes knowledge-locality, generational agent/institution succession, settlement/infrastructure evolution, long-horizon world simulation, archival compaction, and causal rehydration services.",
+      "requirement_id": "RCPW-20-R29",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The final qualification compares autonomous long-horizon evolution across deterministic worker layouts and validates that world expansion does not perturb prior canonical history outside declared mutations.",
+      "requirement_id": "RCPW-20-R30",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The 7.0 promotion gate requires all mandatory QP/WQ gates, 80 Golden World scenarios, autonomous-world conformance, era/archive/rehydration qualification, knowledge-locality tests, multi-generation soak evidence, and an explicit blocker/risk ledger.",
+      "requirement_id": "RCPW-20-R31",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    }
+  ],
+  "stage": 20,
+  "title": "Core Architecture + System Invariants"
+}

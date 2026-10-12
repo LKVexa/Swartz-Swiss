@@ -1,0 +1,9 @@
+{
+  "product": "GFM Cylindrical Pulse Laboratory",
+  "version": "2.1.0",
+  "date": "2026-10-12",
+  "auditSHA256": "20caf09a0158c75508df92a65c469423e4c0e76838e8eb999b94d30c260bf455",
+  "auditFile": "docs/GFM-Review-Editable.txt",
+  "observationValidated": false,
+  "scope": "Local axisymmetric Maxwell, causal unmagnetized plasma current and stationary material response; audited spacetime reference calculations remain separate."
+}

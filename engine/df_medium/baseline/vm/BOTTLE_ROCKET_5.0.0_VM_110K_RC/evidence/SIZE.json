@@ -1,0 +1,11 @@
+{
+  "brim_bytes": 272,
+  "brim_ceiling_bytes": 51200,
+  "core61_ceiling_bytes": 61000,
+  "core61_stripped_bytes": 49072,
+  "note": "Core-61 is an isolated stripped freestanding execution-core metric; the complete runtime/authority source boundary is separately retained at 110,000 bytes.",
+  "production_runtime_and_authority_source_bytes": 107675,
+  "production_source_ceiling_bytes": 110000,
+  "record": "BOTTLE_ROCKET.SizeQualification/4.9.0",
+  "result": "PASS"
+}

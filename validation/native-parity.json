@@ -1,0 +1,234 @@
+{
+  "schema": "GFM-JA21-native-math-parity/1",
+  "passed": true,
+  "nativeSource": "Actual embedded WebView2 browser worker",
+  "referenceSource": "Original audited Node solver, identical covered-plasma advance schedule",
+  "timeSeconds": 2.0000000000000043e-9,
+  "fields": 37,
+  "samples": 113664,
+  "relativeTolerance": 1e-10,
+  "comparisons": [
+    {
+      "field": "EphiVPerM",
+      "samples": 3072,
+      "maxAbsoluteDifference": 4.989342272665453e-13,
+      "maxScaledDifference": 5.4734761814179094e-11
+    },
+    {
+      "field": "HrAPerM",
+      "samples": 3072,
+      "maxAbsoluteDifference": 2.42861286636753e-16,
+      "maxScaledDifference": 6.7409957624684274e-12
+    },
+    {
+      "field": "HzAPerM",
+      "samples": 3072,
+      "maxAbsoluteDifference": 1.061650767297806e-15,
+      "maxScaledDifference": 1.8123363883597535e-12
+    },
+    {
+      "field": "BrTesla",
+      "samples": 3072,
+      "maxAbsoluteDifference": 3.044024654195142e-22,
+      "maxScaledDifference": 6.740931142746524e-12
+    },
+    {
+      "field": "BzTesla",
+      "samples": 3072,
+      "maxAbsoluteDifference": 1.3301064249852685e-21,
+      "maxScaledDifference": 1.8123411510671312e-12
+    },
+    {
+      "field": "JphiAPerM2",
+      "samples": 3072,
+      "maxAbsoluteDifference": 4.3576253716537394e-15,
+      "maxScaledDifference": 8.200164696967554e-12
+    },
+    {
+      "field": "impressedJphiAPerM2",
+      "samples": 3072,
+      "maxAbsoluteDifference": 7.105427357601002e-15,
+      "maxScaledDifference": 3.608946356167856e-16
+    },
+    {
+      "field": "conductivitySPerM",
+      "samples": 3072,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "materialMask",
+      "samples": 3072,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "materialFillFraction",
+      "samples": 3072,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "temperatureK",
+      "samples": 3072,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "temperatureRiseK",
+      "samples": 3072,
+      "maxAbsoluteDifference": 2.208810534618833e-29,
+      "maxScaledDifference": 2.1877409915145882e-15
+    },
+    {
+      "field": "joulePowerDensityWPerM3",
+      "samples": 3072,
+      "maxAbsoluteDifference": 1.021405182655144e-13,
+      "maxScaledDifference": 1.640042875086288e-11
+    },
+    {
+      "field": "depositedEnergyDensityJPerM3",
+      "samples": 3072,
+      "maxAbsoluteDifference": 1.9852334701272664e-23,
+      "maxScaledDifference": 2.2940126979184243e-15
+    },
+    {
+      "field": "poyntingRadialWPerM2",
+      "samples": 3072,
+      "maxAbsoluteDifference": 5.88418203051333e-14,
+      "maxScaledDifference": 5.473663904526182e-11
+    },
+    {
+      "field": "poyntingAxialWPerM2",
+      "samples": 3072,
+      "maxAbsoluteDifference": 1.9539925233402755e-14,
+      "maxScaledDifference": 5.473937965403187e-11
+    },
+    {
+      "field": "coverJphiAPerM2",
+      "samples": 3072,
+      "maxAbsoluteDifference": 4.3576253716537394e-15,
+      "maxScaledDifference": 8.200164696967554e-12
+    },
+    {
+      "field": "plasmaJphiAPerM2",
+      "samples": 3072,
+      "maxAbsoluteDifference": 6.217248937900877e-15,
+      "maxScaledDifference": 4.996003503906016e-13
+    },
+    {
+      "field": "totalMaterialJphiAPerM2",
+      "samples": 3072,
+      "maxAbsoluteDifference": 6.217248937900877e-15,
+      "maxScaledDifference": 4.996003503906016e-13
+    },
+    {
+      "field": "plasmaFillFraction",
+      "samples": 3072,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "plasmaAlphaSI",
+      "samples": 3072,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "plasmaHeatCapacityJPerM3K",
+      "samples": 3072,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "plasmaTemperatureK",
+      "samples": 3072,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "plasmaTemperatureRiseK",
+      "samples": 3072,
+      "maxAbsoluteDifference": 1.3010426069826053e-18,
+      "maxScaledDifference": 1.635874330208958e-15
+    },
+    {
+      "field": "plasmaDriftEnergyDensityJPerM3",
+      "samples": 3072,
+      "maxAbsoluteDifference": 3.308722450212111e-24,
+      "maxScaledDifference": 9.992551196855695e-13
+    },
+    {
+      "field": "plasmaCollisionPowerDensityWPerM3",
+      "samples": 3072,
+      "maxAbsoluteDifference": 1.2878587085651816e-14,
+      "maxScaledDifference": 9.992657639897699e-13
+    },
+    {
+      "field": "plasmaCurrentWorkDensityWPerM3",
+      "samples": 3072,
+      "maxAbsoluteDifference": 3.9601655288379334e-13,
+      "maxScaledDifference": 5.4731572648822705e-11
+    },
+    {
+      "field": "plasmaCollisionDepositedEnergyDensityJPerM3",
+      "samples": 3072,
+      "maxAbsoluteDifference": 3.7223127564886245e-24,
+      "maxScaledDifference": 1.6951234890163277e-15
+    },
+    {
+      "field": "plasmaThermalEnergyDensityJPerM3",
+      "samples": 3072,
+      "maxAbsoluteDifference": 3.7223127564886245e-24,
+      "maxScaledDifference": 1.6951234890163277e-15
+    },
+    {
+      "field": "coverThermalEnergyDensityJPerM3",
+      "samples": 3072,
+      "maxAbsoluteDifference": 1.9852334701272664e-23,
+      "maxScaledDifference": 2.2940126979184243e-15
+    },
+    {
+      "field": "coverSpecificEnthalpyJPerKg",
+      "samples": 3072,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "coverLiquidFraction",
+      "samples": 3072,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "envelopeAmplitudeVPerM",
+      "samples": 3072,
+      "maxAbsoluteDifference": 3.552713678800501e-14,
+      "maxScaledDifference": 5.152437754704348e-15
+    },
+    {
+      "field": "envelopeRealVPerM",
+      "samples": 3072,
+      "maxAbsoluteDifference": 2.842170943040401e-14,
+      "maxScaledDifference": 3.29067742842106e-13
+    },
+    {
+      "field": "envelopeImagVPerM",
+      "samples": 3072,
+      "maxAbsoluteDifference": 2.842170943040401e-14,
+      "maxScaledDifference": 2.1068640693277767e-12
+    },
+    {
+      "field": "relativeCarrierPhaseRad",
+      "samples": 3072,
+      "maxAbsoluteDifference": 4.884981308350689e-15,
+      "maxScaledDifference": 9.503101018895597e-14
+    },
+    {
+      "field": "carrierPhaseValidMask",
+      "samples": 3072,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    }
+  ]
+}

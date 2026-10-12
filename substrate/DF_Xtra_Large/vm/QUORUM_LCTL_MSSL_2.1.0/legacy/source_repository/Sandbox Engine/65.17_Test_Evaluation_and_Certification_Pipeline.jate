@@ -1,0 +1,30 @@
+ja source 0.3
+module suite65.sandbox_engine.test_evaluation_certification_pipeline
+use Training
+policy no_network
+
+experiment SandboxTestEvaluationCertification {
+    model ref "models/sophia_charlotte_landon_professor_podium/test_evaluation_certification"
+    dataset ref "datasets/sandbox_engine/admitted_certification_fixtures" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 16 accumulate 4
+    precision mixed
+    seed 6517
+    checkpoint every 8 steps
+    evaluate {
+        metric positive_negative_boundary_coverage
+        metric security_regression_integrity
+        metric release_gate_completeness
+        metric certification_provenance
+        metric loss
+        require positive_negative_boundary_coverage >= 0.99
+        require security_regression_integrity >= 1.00
+        require release_gate_completeness >= 1.00
+        require certification_provenance >= 1.00
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "SandboxTestEvaluationCertification.lineage.mcrt"

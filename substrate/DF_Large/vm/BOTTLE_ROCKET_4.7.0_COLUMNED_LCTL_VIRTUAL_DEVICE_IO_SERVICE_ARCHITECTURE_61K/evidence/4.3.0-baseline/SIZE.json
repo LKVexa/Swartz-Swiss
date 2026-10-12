@@ -1,0 +1,14 @@
+{
+  "brim_bytes": 176,
+  "brim_ceiling_bytes": 51200,
+  "brim_pass": true,
+  "brir_bytes": 1791,
+  "core_archive_bytes": 39964,
+  "host_brctl_bytes": 62256,
+  "production_source_boundary": "Makefile + src/** + adapters/** + spec/**",
+  "production_source_bytes": 60930,
+  "production_source_ceiling_lt_bytes": 61000,
+  "production_source_pass": true,
+  "provenance_bytes": 650,
+  "record": "BR.Size"
+}

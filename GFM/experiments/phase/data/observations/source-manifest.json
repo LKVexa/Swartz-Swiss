@@ -1,0 +1,61 @@
+{
+  "schema": "GFM-EHT-observation-source/1",
+  "downloadedAt": "2026-10-11T15:47:38.806977+00:00",
+  "publisher": "Event Horizon Telescope Collaboration",
+  "repository": "eventhorizontelescope/2020-D03-01",
+  "commit": "0f6bc372e7503d552018c5c05f7ee72d34af5b41",
+  "release": "2020-D03-01",
+  "doi": "10.25739/daft-jz11",
+  "officialPortal": "https://eventhorizontelescope.org/for-astronomers/data",
+  "primaryPaper": "https://doi.org/10.3847/1538-4357/abac0d",
+  "files": [
+    {
+      "path": "source/README.md",
+      "url": "https://raw.githubusercontent.com/eventhorizontelescope/2020-D03-01/0f6bc372e7503d552018c5c05f7ee72d34af5b41/README.md",
+      "finalUrl": "https://raw.githubusercontent.com/eventhorizontelescope/2020-D03-01/0f6bc372e7503d552018c5c05f7ee72d34af5b41/README.md",
+      "bytes": 3415,
+      "sha256": "fcef2ebefc147ee0884ca3ad7c2e35308aa70808f4f783318feedd10b51b4c09",
+      "etag": "\"5d90375962adb37b40c35482ffac9d75f47e63b8d230885b09e4c9407a407267\""
+    },
+    {
+      "path": "source/LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/eventhorizontelescope/2020-D03-01/0f6bc372e7503d552018c5c05f7ee72d34af5b41/LICENSE.txt",
+      "finalUrl": "https://raw.githubusercontent.com/eventhorizontelescope/2020-D03-01/0f6bc372e7503d552018c5c05f7ee72d34af5b41/LICENSE.txt",
+      "bytes": 35356,
+      "sha256": "9725e2ef4127844b4cf21137a87e61830de0a04ad583ea6ba2229488b5012f1d",
+      "etag": "\"0b1b13a60dbad0b0837a59a70157819a709aaa9beaa747b6cf24c9de028e5fdb\""
+    },
+    {
+      "path": "source/INVENTORY.txt",
+      "url": "https://raw.githubusercontent.com/eventhorizontelescope/2020-D03-01/0f6bc372e7503d552018c5c05f7ee72d34af5b41/INVENTORY.txt",
+      "finalUrl": "https://raw.githubusercontent.com/eventhorizontelescope/2020-D03-01/0f6bc372e7503d552018c5c05f7ee72d34af5b41/INVENTORY.txt",
+      "bytes": 149,
+      "sha256": "4fe20fca69df1840cd9512761ffe02126c455a822161e1157bb81a5752100fbc",
+      "etag": "\"0c5bcd35f2d84d1986e19f49eae08aaed54efcf0af18f5a131c65d6de96c11db\""
+    },
+    {
+      "path": "source/dat/M87_EHT_2011_amp.dat",
+      "url": "https://raw.githubusercontent.com/eventhorizontelescope/2020-D03-01/0f6bc372e7503d552018c5c05f7ee72d34af5b41/dat/M87_EHT_2011_amp.dat",
+      "finalUrl": "https://raw.githubusercontent.com/eventhorizontelescope/2020-D03-01/0f6bc372e7503d552018c5c05f7ee72d34af5b41/dat/M87_EHT_2011_amp.dat",
+      "bytes": 18094,
+      "sha256": "38a4677a5e7b9a629982bdee675b48df921fdd2fb2b302cc9c3ca14a72341262",
+      "etag": "\"5e1b237e26b8774ce268fe444c276973bd7e8fd7df6ac12b3d2d3c7f04c85f2c\""
+    },
+    {
+      "path": "source/dat/M87_EHT_2012_amp.dat",
+      "url": "https://raw.githubusercontent.com/eventhorizontelescope/2020-D03-01/0f6bc372e7503d552018c5c05f7ee72d34af5b41/dat/M87_EHT_2012_amp.dat",
+      "finalUrl": "https://raw.githubusercontent.com/eventhorizontelescope/2020-D03-01/0f6bc372e7503d552018c5c05f7ee72d34af5b41/dat/M87_EHT_2012_amp.dat",
+      "bytes": 6114,
+      "sha256": "f8a672924a4ae355ebbdb68ab06423a17cf489cc7268fefbab410c8520e19521",
+      "etag": "\"0f305a33fcd9bd51b1a03afeaa0ae508631b7751f743f69438059f6dd8c3ced4\""
+    },
+    {
+      "path": "source/dat/M87_EHT_2013_amp.dat",
+      "url": "https://raw.githubusercontent.com/eventhorizontelescope/2020-D03-01/0f6bc372e7503d552018c5c05f7ee72d34af5b41/dat/M87_EHT_2013_amp.dat",
+      "finalUrl": "https://raw.githubusercontent.com/eventhorizontelescope/2020-D03-01/0f6bc372e7503d552018c5c05f7ee72d34af5b41/dat/M87_EHT_2013_amp.dat",
+      "bytes": 14795,
+      "sha256": "76b2e517f8f7caba58ea2676e77b2a49808e9f2e1cf7f212492a6ea86e53c3c1",
+      "etag": "\"2f1e88990ca12dfad19b7c33d8badec227e09ab4e27f419f0a588c64c24ee88f\""
+    }
+  ]
+}

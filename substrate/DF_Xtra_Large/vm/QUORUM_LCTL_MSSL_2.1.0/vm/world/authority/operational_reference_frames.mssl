@@ -1,0 +1,18 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.world.operational_reference_frames:7.0.0-operational-reference-315",
+λ≡"quorum.rcpw.world.operational_reference_frames",
+ℛ≡{
+  "0001":"module(\"quorum.rcpw.world.operational_reference_frames\")",
+  "0002":"learn(\"frames\",literal(\"typed canonical, reference, nested moving and presentation frames never silently mix\"))",
+  "0003":"learn(\"precision\",literal(\"canonical-reference round trips have declared numeric bounds and vertical semantics\"))",
+  "0004":"learn(\"fold\",literal(\"C2 compactification is derived presentation and preserves canonical topology and unique targeting\"))",
+  "0005":"learn(\"shells\",literal(\"S0-S8 shell and LOD decisions are deterministic, hysteretic and resource governed\"))"
+},
+π≡[],δ≡5,τ≡0,
+μ≡{"learn.frames":"typed canonical, reference, nested moving and presentation frames never silently mix","learn.precision":"canonical-reference round trips have declared numeric bounds and vertical semantics","learn.fold":"C2 compactification is derived presentation and preserves canonical topology and unique targeting","learn.shells":"S0-S8 shell and LOD decisions are deterministic, hysteretic and resource governed"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"frames":"typed canonical, reference, nested moving and presentation frames never silently mix","precision":"canonical-reference round trips have declared numeric bounds and vertical semantics","fold":"C2 compactification is derived presentation and preserves canonical topology and unique targeting","shells":"S0-S8 shell and LOD decisions are deterministic, hysteretic and resource governed"}},
+ν≡{}
+,κ≡"sha256:e98f9c5948f4446aec96af6a6d72f13a1bd853663517306d4dea689f9dfb88c8"
+}⇒⊤

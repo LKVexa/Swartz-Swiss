@@ -1,0 +1,12 @@
+{
+  "forbidden_patterns": {
+    "http.client": false,
+    "import requests": false,
+    "import socket": false,
+    "subprocess.Popen([\"curl\"": false,
+    "subprocess.Popen([\"wget\"": false,
+    "urllib.request": false
+  },
+  "network_device_implemented": false,
+  "status": "PASS"
+}

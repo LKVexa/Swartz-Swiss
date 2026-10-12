@@ -1,0 +1,110 @@
+{
+  "authority_sha256": "40140a71efdecdc680d7c342b77ae05e4d88bd00a421844ae6b1137f6a56a24a",
+  "domain_output": {
+    "input_type": "qualified_artifacts",
+    "legacy_signals": [
+      "PACKAGE",
+      "VALIDATE",
+      "INDEX",
+      "INSTALL"
+    ],
+    "module": "Air Gap Certification and Installer Plane",
+    "output_type": "release_package/release_receipt",
+    "payload_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+    "plane": "release_delivery",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+    "release_package": {
+      "network_required": false,
+      "package_manifest_sha256": "973fac3eff3c0eff11568fcc9b7231badf4728ca67edfa0e95a5e123b96fced8",
+      "qualified": true
+    }
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "09df7591bcd391de0e205c8f33c0f4efc7603faca51477ea6a0e06418467c94b",
+  "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+  "module": "Air Gap Certification and Installer Plane",
+  "module_id": 46,
+  "plane": "release_delivery",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "f245036e1f5797ddf33b7f9bfcca70814cb8409a92c448cd33ea7e9aa004ccda",
+  "stage_count": 8,
+  "stages": [
+    {
+      "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "node": "N01",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "6a6a8f472040509e41bdbe907a166775b99671adb3771d09589e03943330a071",
+      "stage": "INPUT"
+    },
+    {
+      "input_sha256": "6a6a8f472040509e41bdbe907a166775b99671adb3771d09589e03943330a071",
+      "node": "N02",
+      "operator": "VALIDATE",
+      "output_sha256": "09e91d1667f442dd6b20e9f759b1063170cdbef239fa9c6097bd0e71e4678c26",
+      "stage": "VERIFY",
+      "valid": true
+    },
+    {
+      "execution_token": "8436308b15cf848bf2c5d60e",
+      "input_sha256": "09e91d1667f442dd6b20e9f759b1063170cdbef239fa9c6097bd0e71e4678c26",
+      "node": "N03",
+      "operator": "EXECUTE",
+      "output_sha256": "039b8103c90587c22d3d46c69f9502fa89af4909a953a6f1206648ac949bdb35",
+      "stage": "BUILD"
+    },
+    {
+      "artifact_descriptor": {
+        "sha256": "aad8ea8a9148c778944385b0bf5dd1f9ef06d1fe8a91f1134d60fe451abd90d2",
+        "type": "state.package"
+      },
+      "input_sha256": "039b8103c90587c22d3d46c69f9502fa89af4909a953a6f1206648ac949bdb35",
+      "node": "N04",
+      "operator": "MATERIALIZE",
+      "output_sha256": "c240957b9aba77a2a081073a99a5097e6fcf5ec1c25a799ddcd5eb4fca55f26f",
+      "stage": "PACKAGE"
+    },
+    {
+      "input_sha256": "c240957b9aba77a2a081073a99a5097e6fcf5ec1c25a799ddcd5eb4fca55f26f",
+      "node": "N05",
+      "operator": "RECORD",
+      "output_sha256": "dbd2500b04b97600da771e38d2660a8f0f99033e3e6174995a36680c87197aae",
+      "receipt_sha256": "26ff3442fe3e6026279118159752b3d54d7ea419fcda337de218b11e20f72b43",
+      "stage": "HASH"
+    },
+    {
+      "certification": "REFERENCE_PROFILE_ONLY",
+      "input_sha256": "dbd2500b04b97600da771e38d2660a8f0f99033e3e6174995a36680c87197aae",
+      "node": "N06",
+      "operator": "CERTIFY",
+      "output_sha256": "b73f3afbb89cb525077704cfa1c2490bc4dcd4e7da6613d4d9b8854c1fc2de5b",
+      "stage": "CERTIFY"
+    },
+    {
+      "artifact_descriptor": {
+        "sha256": "fe34dcca3cb1f0fd06443d0bba3ee9b449a5293443658d433d8bd1290b8fb566",
+        "type": "state.release"
+      },
+      "input_sha256": "b73f3afbb89cb525077704cfa1c2490bc4dcd4e7da6613d4d9b8854c1fc2de5b",
+      "node": "N07",
+      "operator": "MATERIALIZE",
+      "output_sha256": "a49c40fa8e9b971e622986ed9d55f3ccbe950bc3472a93fcfef4e094cbb78b3f",
+      "stage": "RELEASE"
+    },
+    {
+      "input_sha256": "a49c40fa8e9b971e622986ed9d55f3ccbe950bc3472a93fcfef4e094cbb78b3f",
+      "node": "N08",
+      "operator": "RECORD",
+      "output_sha256": "34123abdba01c0538004a92aed0d17c0943516db4d7160ed6c917423f5296e20",
+      "receipt_sha256": "f2cb589f5abecc091a8c8a95502f0ad703462f9a97596e5bc2826853f256dca6",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

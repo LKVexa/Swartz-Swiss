@@ -1,0 +1,48 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "13d9a0a567bb7d58d79d758647baaec4e9f3372cf85862cb0c36dd96efdee144",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (LOD_TRANSITION, PRESENTATION_REGRESSION) plus Stage 11 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "LOD_TRANSITION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "PRESENTATION_REGRESSION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-16",
+    "GW-17",
+    "GW-31",
+    "GW-52",
+    "GW-63",
+    "GW-79"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T2_HIGH_FIDELITY",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Long-distance silhouettes, lighting, atmospheric effects, shadows/reflections, and audio landmarks have declared fidelity policies.",
+  "requirement_id": "RCPW-11-R05",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 11,
+  "stage_title": "Visibility / Rendering Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "LOD_TRANSITION",
+    "PRESENTATION_REGRESSION"
+  ],
+  "workflow_file": "11_VISIBILITY_RENDERING_AUTHORITY/153_RCPW_11_R05_LONG_DISTANCE_SILHOUETTES_LIGHTING_ATMOSPHERIC_EFFECTS_SHADOWS_REFLECTIONS_AND_AUDIO_.md",
+  "workflow_tier": "T2_HIGH_FIDELITY"
+}

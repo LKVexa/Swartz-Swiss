@@ -1,0 +1,52 @@
+profile ja.data
+source_level 0.3
+
+subsuite Terminal.T_16 ExitStatusResultCapture {
+    identity { suite = "66"; id = "T-16"; deterministic = true; autorun = false }
+
+    accept {
+        terminal_run_id
+        invocation_hash
+        hermit_cell_ref
+        worker_ref
+        started_at
+        finished_at
+        exit_code
+        stream_index_ref
+        resource_use
+        artifacts[]
+    }
+
+    emit TerminalResult
+
+    procedure seal(exit_code, timing, resource_use, artifacts) {
+        require exit_code.integer_or_declared_signal_state
+        require timing.monotonic_and_complete
+        require resource_use.within_or_marked_exceeded
+        inventory = hash_and_classify_artifacts(artifacts)
+
+        result = TerminalResult {
+            terminal_run_id
+            invocation_hash
+            cell_id
+            worker_id
+            started_at
+            finished_at
+            exit_code
+            stdout_ref
+            stderr_ref
+            control_event_ref
+            resource_use
+            artifacts = inventory
+            warnings
+            errors
+            terminal_state
+        }
+        return immutable(result)
+    }
+
+    deny { missing_exit_status; mutable_result; unhashed_artifact; success_from_display_only }
+    evidence { terminal_result; result_hash; artifact_inventory; terminal_state_reason }
+    tests { zero_exit; nonzero_exit; signal_exit; timeout; artifact_hashing; immutable_result }
+}
+

@@ -1,0 +1,19 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.world.source_authority:7.0.0-applied-remediated-26",
+λ≡"quorum.rcpw.world.source_authority",
+ℛ≡{
+  "0001":"module(\"quorum.rcpw.world.source_authority\")",
+  "0002":"learn(\"mssl\",literal(\"semantic contract authority\"))",
+  "0003":"learn(\"lctlc\",literal(\"editable executable QVM guest source uses eight-column LCTL-C\"))",
+  "0004":"learn(\"canonical_lctl\",literal(\"bundled LCTL 1.6.1-RC1 column-verify remains canonical syntax/verifier authority\"))",
+  "0005":"learn(\"host_runtime\",literal(\"Python standard-library host reference executes QVM world service ABI\"))",
+  "0006":"learn(\"corpora\",literal(\"Columned LCTL corpus, LCTL 1.6.1-RC1 package, and MSSL Writers Corpus guide syntax and claim boundaries\"))"
+},
+π≡[],δ≡6,τ≡0,
+μ≡{"learn.mssl":"semantic contract authority","learn.lctlc":"editable executable QVM guest source uses eight-column LCTL-C","learn.canonical_lctl":"bundled LCTL 1.6.1-RC1 column-verify remains canonical syntax/verifier authority","learn.host_runtime":"Python standard-library host reference executes QVM world service ABI","learn.corpora":"Columned LCTL corpus, LCTL 1.6.1-RC1 package, and MSSL Writers Corpus guide syntax and claim boundaries"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"mssl":"semantic contract authority","lctlc":"editable executable QVM guest source uses eight-column LCTL-C","canonical_lctl":"bundled LCTL 1.6.1-RC1 column-verify remains canonical syntax/verifier authority","host_runtime":"Python standard-library host reference executes QVM world service ABI","corpora":"Columned LCTL corpus, LCTL 1.6.1-RC1 package, and MSSL Writers Corpus guide syntax and claim boundaries"}},
+ν≡{}
+,κ≡"sha256:6a4f2485466604af2b0f823594c3204fe3d1f9f2bb42c308e271846818b53a7e"
+}⇒⊤

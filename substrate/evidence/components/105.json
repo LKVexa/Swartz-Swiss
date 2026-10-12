@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "105",
+  "title": "Execution Trace Viewer",
+  "source_file": "105_Execution_Trace_Viewer.md",
+  "source_sha256": "c44578e100bd9c904fe2b0a7228bda1f0fd554fc9d69335a3118ce51b93acceb",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "VEC_CONTROL+UI",
+  "integration_mechanism": "Observability plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

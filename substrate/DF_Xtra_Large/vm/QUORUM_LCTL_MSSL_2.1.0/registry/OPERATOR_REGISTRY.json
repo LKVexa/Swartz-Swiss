@@ -1,0 +1,121 @@
+{
+  "schema": "QUORUM-OPERATOR-REGISTRY/2.0",
+  "version": "2.0.0",
+  "operators": [
+    {
+      "id": "OBSERVE",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "INSPECT",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "PARSE",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "NORMALIZE",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "TRANSFORM",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "REASON",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "CLASSIFY",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "FILTER",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "RANK",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "ROUTE",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "AUTHORIZE",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "VALIDATE",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "EXECUTE",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "MATERIALIZE",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "RENDER",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "STORE",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "RETRIEVE",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "COMPARE",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "EXPLAIN",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "RECORD",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "CHECKPOINT",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "RECOVER",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    },
+    {
+      "id": "CERTIFY",
+      "determinism": "contract-defined",
+      "evidence_required": true
+    }
+  ]
+}

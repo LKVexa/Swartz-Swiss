@@ -1,0 +1,15 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum:generic_project:plane:translation_interop:2.0.0",
+λ≡"quorum.generic_project.plane.translation_interop",
+ℛ≡{"0001":"module(\"quorum.generic_project.plane.translation_interop\")","0002":"learn(\"plane_id\",literal(\"9\"))","0003":"learn(\"plane_name\",literal(\"\\\"translation_interop\\\"\"))","0004":"learn(\"version\",literal(\"\\\"2.0.0\\\"\"))","0005":"learn(\"suite_ids\",literal(\"[30,31,42]\"))","0006":"learn(\"stage_profile\",literal(\"[\\\"SOURCE\\\",\\\"PARSE\\\",\\\"NORMALIZE\\\",\\\"TRANSLATE\\\",\\\"CANONICALIZE\\\",\\\"VALIDATE\\\",\\\"PACKAGE\\\",\\\"EVIDENCE\\\"]\"))","0007":"learn(\"semantic_boundary\",literal(\"\\\"MSSL defines admitted semantics and claims.\\\"\"))","0008":"learn(\"execution_boundary\",literal(\"\\\"Columned LCTL graph rows lower to canonical LCTL before execution authority.\\\"\"))","0009":"learn(\"qualification_boundary\",literal(\"\\\"Plane integration topology is verified; domain behavior requires module-specific runtimes.\\\"\"))"},
+π≡[],
+δ≡9,
+τ≡0,
+μ≡{"learn.plane_id":9,"learn.plane_name":"translation_interop","learn.version":"2.0.0","learn.suite_ids":[30,31,42],"learn.stage_profile":["SOURCE","PARSE","NORMALIZE","TRANSLATE","CANONICALIZE","VALIDATE","PACKAGE","EVIDENCE"],"learn.semantic_boundary":"MSSL defines admitted semantics and claims.","learn.execution_boundary":"Columned LCTL graph rows lower to canonical LCTL before execution authority.","learn.qualification_boundary":"Plane integration topology is verified; domain behavior requires module-specific runtimes."},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},
+χ≡[],
+η≡{"events":[],"state":{"plane_id":9,"plane_name":"translation_interop","version":"2.0.0","suite_ids":[30,31,42],"stage_profile":["SOURCE","PARSE","NORMALIZE","TRANSLATE","CANONICALIZE","VALIDATE","PACKAGE","EVIDENCE"],"semantic_boundary":"MSSL defines admitted semantics and claims.","execution_boundary":"Columned LCTL graph rows lower to canonical LCTL before execution authority.","qualification_boundary":"Plane integration topology is verified; domain behavior requires module-specific runtimes."}},
+ν≡{}
+,κ≡"sha256:9ed84ad96998f4baa3e59f7e3a704dd999c46556e8dd5e06b16d270939353396"
+}⇒⊤

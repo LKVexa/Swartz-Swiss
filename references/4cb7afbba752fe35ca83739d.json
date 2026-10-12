@@ -1,0 +1,112 @@
+{
+  "decision": "OPERATIONAL",
+  "dependency": "BR-410-04",
+  "package": "BR-410-05",
+  "requirements": [
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Use explicit VM instance",
+      "requirement_id": "BR-410-05-R01",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Eliminate hidden global VM",
+      "requirement_id": "BR-410-05-R02",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Support multiple independent instances",
+      "requirement_id": "BR-410-05-R03",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Isolate instances",
+      "requirement_id": "BR-410-05-R04",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Use per-instance storage context",
+      "requirement_id": "BR-410-05-R05",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Use per-instance device table",
+      "requirement_id": "BR-410-05-R06",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Use per-instance capabilities",
+      "requirement_id": "BR-410-05-R07",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Use per-instance counters",
+      "requirement_id": "BR-410-05-R08",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "title": "Execution context"
+}

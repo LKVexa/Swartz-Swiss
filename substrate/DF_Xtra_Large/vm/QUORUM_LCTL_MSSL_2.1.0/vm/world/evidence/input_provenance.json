@@ -1,0 +1,11 @@
+{
+  "guidance": "MSSL semantic contract style and Columned LCTL eight-column/canonical-verifier authority were used; corpora were not copied as runtime code.",
+  "inputs": {
+    "columned_lctl_corpus": "COLUMNED_LCTL_CORPUS_1.0.0.zip",
+    "lctl_language": "LCTL_1.6.1_RC1_COLUMNED_HYPERFEDERATED_EXECUTION_LANGUAGE.zip",
+    "mssl_corpus": "MSSL_WRITERS_CORPUS_1.0.0 (1).zip",
+    "workflow_series": "QUORUM_RC_PW_PROMPT_WORKFLOW_SERIES_7.0.0.zip"
+  },
+  "workflow_catalog_sha256": "467575a5e77595a941b7226027ff738bca21391a88ef4e46089af4005d012318",
+  "workflow_requirements": 582
+}

@@ -1,0 +1,46 @@
+ja source 0.3
+module suite26.full_stack_ui.dashboards
+use Interface
+policy no_network
+
+interface FullStackDashboards {
+    state selected_dashboard: Text? = null
+    state refreshing: Flag = false
+    derived can_refresh = selected_dashboard != null and not refreshing
+    component SOPHIA_DashboardModel {
+        label "Interpret dashboard metrics"
+        enabled bind can_refresh
+        accessibility role button name "Interpret selected dashboard metrics"
+        action interpret_dashboard requires admin.action:approved
+    }
+    component CHARLOTTE_DashboardGate {
+        label "Validate dashboard data"
+        enabled bind can_refresh
+        accessibility role button name "Validate selected dashboard data"
+        action validate_dashboard requires admin.action:approved
+    }
+    component LANDON_DashboardRefresh {
+        label "Refresh dashboard"
+        enabled bind can_refresh
+        accessibility role button name "Refresh selected dashboard"
+        action refresh_dashboard requires admin.action:approved
+    }
+    component Professor_DashboardGuide {
+        label "Explain dashboard"
+        enabled bind can_refresh
+        accessibility role button name "Explain selected dashboard"
+        action explain_dashboard requires admin.action:approved
+    }
+    component Podium_DashboardEvidence {
+        label "View dashboard evidence"
+        enabled bind can_refresh
+        accessibility role button name "View dashboard evidence"
+        action show_dashboard_evidence requires admin.action:approved
+    }
+    component DashboardViewport {
+        embed portal.scene "full_stack_dashboard"
+        motion bind timeline.dashboard_refresh
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface FullStackDashboards

@@ -1,0 +1,8 @@
+{
+  "schema": "QUORUM-PLACEHOLDER-LEDGER/2.0",
+  "module_count": 66,
+  "nop_only_modules": 0,
+  "justified_terminal_nop_modules": 66,
+  "hardcoded_runtime_pass_paths": 0,
+  "remaining_domain_runtime_gap": "Native domain effects are not implemented. Terminal NOP is retained solely as a canonical entry/end sentinel after meaningful REGION/DEPENDENCY graph rows."
+}

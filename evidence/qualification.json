@@ -1,0 +1,28 @@
+{
+  "format": "vb-ja21-mirror-qualification/1",
+  "product": "VB JA21 Mirror Browser",
+  "version": "7.0.0",
+  "package_tests": {
+    "total": 29,
+    "passed": 29,
+    "failed": 0
+  },
+  "df_small_native_verify": {
+    "total": 18,
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0,
+    "log": "evidence/dfsmall-7.0.0-native-verify.txt"
+  },
+  "static_boundaries": {
+    "electron_absent": true,
+    "node_absent": true,
+    "chromium_absent": true,
+    "edge_webview2_absent": true,
+    "mshtml_webbrowser_absent": true,
+    "ja_browser_source_ir_sealed": true,
+    "ja_renderer_source_ir_sealed": true
+  },
+  "live_windows_qualification": "pending; run Verify then Start on target Windows host",
+  "compatibility": "bounded native JA Mirror HTML/CSS profile; arbitrary site JavaScript is isolated/not executed"
+}

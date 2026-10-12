@@ -1,0 +1,35 @@
+{
+  "schema": "GFM-performance-benchmark/1",
+  "generatedAt": "2026-10-12T10:56:44.369Z",
+  "targetSeconds": 1e-9,
+  "advanceSeconds": 4e-11,
+  "physicsParity": "exact JSON representation of all audited snapshot quantities",
+  "sourceEngineSHA256": "93d1463b46a2bb6eaeb6c347f97c2a43101d811d0d6aa5d95d3a3b587f6a5b0a",
+  "baseline": {
+    "label": "preserved fixed60ms controller",
+    "wallMs": 4358.9852,
+    "controllerCallbackWallMs": 2614.9683,
+    "requestedIdleMs": 1500,
+    "callbacks": 25,
+    "streamFrames": 25,
+    "physicalSeconds": 1.0000000000000042e-9,
+    "observedPhysicsNanosecondsPerWallSecond": 0.22941119414674868,
+    "stepCount": 425,
+    "relativeEnergyBalanceResidual": 6.096367651492192e-14
+  },
+  "adaptive": {
+    "label": "bounded maximum-throughput controller",
+    "wallMs": 2938.6195,
+    "controllerCallbackWallMs": 2745.935800000001,
+    "requestedIdleMs": 0,
+    "callbacks": 25,
+    "streamFrames": 25,
+    "physicalSeconds": 1.0000000000000042e-9,
+    "observedPhysicsNanosecondsPerWallSecond": 0.34029584299702775,
+    "stepCount": 425,
+    "relativeEnergyBalanceResidual": 6.096367651492192e-14
+  },
+  "wallClockSpeedup": 1.4833445432455614,
+  "nativeRenderedFPS": null,
+  "interpretation": "Measured solver/controller wall time on this host for the same1ns physical experiment. No general speed guarantee or browser/GPU FPS result. Camera redraw and latest-frame bounds are tested independently. Real-display FPS is measured onscreen through GFM_PERFORMANCE.render.framesPerSecond."
+}

@@ -1,0 +1,27 @@
+ja source 0.3
+module suite52.evaluation_content_defense.answer_quality_evaluation
+use Security
+policy no_network
+
+principal AnswerQualityEvaluationWorker
+role EvaluationDefenseEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant answer.evaluate:approved
+}
+resource AnswerQualityCandidate classification restricted
+policy AnswerQualityEvaluationPolicy {
+    deny network.* by default
+    deny process.* by default
+    deny AnswerQualityCandidate when principal.role != EvaluationDefenseEnsemble
+    allow AnswerQualityCandidate when principal.role == EvaluationDefenseEnsemble
+    require human_approval for evaluation.certify
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "AnswerQualityEvaluationPolicy.decision.mcrt"

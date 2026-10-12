@@ -1,0 +1,48 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "08b600bf8e95ff42238c337599c9187d8e64c8bfa57f1f7b3992b97998c2b788",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (LOD_TRANSITION, CAUSAL_REPLAY) plus Stage 14 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "CAUSAL_REPLAY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "LOD_TRANSITION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-18",
+    "GW-32",
+    "GW-44",
+    "GW-73",
+    "GW-74",
+    "GW-75"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Demotion may be rejected when required event barriers or dependencies make abstraction unsafe.",
+  "requirement_id": "RCPW-14-R18",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 14,
+  "stage_title": "No-Unload Representation Transitions",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "LOD_TRANSITION",
+    "CAUSAL_REPLAY"
+  ],
+  "workflow_file": "14_NO_UNLOAD_REPRESENTATION_TRANSITIONS/214_RCPW_14_R18_DEMOTION_MAY_BE_REJECTED_WHEN_REQUIRED_EVENT_BARRIERS_OR_DEPENDENCIES_MAKE_ABSTRACTIO.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

@@ -1,0 +1,88 @@
+RUSSL — HORIZON GFM REAPPLICATION REPORT / RELEASE 0.4.0
+Prepared 2026-10-11
+
+RESULT
+Integrated the black-hole PDF, three diagrams, tensor-map screenshot and preserved user write-up into the local terminal. The register contains all 23 numbered PDF equations, 22 image formula groups and four narrative qualifications: 49 findings. The prior 20 stored findings and three earlier image families remain available.
+Source expressions, corrected formulas, domains and dispositions stay separate. Checked stationary references are computed in their ordinary domain. Selected exterior scalar samples and hypothetical aperture/passage profiles pass through the declared trace-character Fourier encoding.
+The final GF9 state is the selected Kerr exterior gtt radial signal followed by D(3,4) and R(3,4). This finite signal demonstration is not a spacetime isometry or a formation simulation.
+
+RUN OR RELOAD
+Open index.html and select Aperture & aggie. Apply & compare evaluates the selected hypothetical case and observation protocol. Load GFM signal recomputes the report, prepares its GF9 signal and adds a ledger record while retaining the existing ledger.
+Evidence & ledger can import examples/Horizon-Simulation-session.json. The example contains the default hypothetical parameters, exterior-only protocol, three state records and the complete report. Import replaces the active session only after validation; historical command text remains inert.
+
+DEFAULT CASE
+Shared exterior: M=1, a=0.99, Q=0; r+=1.14106735979666, area=28.6781506783063, kappa=0.0618137740009483, OmegaH=0.433804363739061 in geometrized units.
+Toy alphaCritical=0.8; aperture radius=0.589071648962559 in toy length units. Gaseous passage=1; aggie passage=0. These values follow assumed rules, not standard relativity.
+The identical exterior observations leave the posterior equal to the prior. With equal priors, best possible classification accuracy is 50%. Their Fourier encodings also agree. The optional toy passage test distinguishes the assumed bits, thereby changing the all-tests-indistinguishable premise.
+Final signal norm squared=1; Wigner mana base2=1.00135105257932. Wigner cells are quasiprobabilities. Original signal scale and radial sample coordinates remain in preparation metadata.
+
+EQUIVALENCE MAP
+The supplied T=I4+epsilonMap K is implemented as a logical operator over four family labels indexed by GF4. It is transported through F4 T F4^dagger. epsilonMap is separate from epsilonSpin. The default identity does not resolve unknown knowledge-gap entries. Explicit nonunitary maps retain their actual output norm and leave the active state unchanged.
+
+APPLICABILITY
+pdf-01 | refined | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-02 | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-03 | refined | reference-only | No executable physical law or PDE solver is inferred from this source.
+pdf-04 | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-05 | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-06 | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-07 | refined | reference-only | No executable physical law or PDE solver is inferred from this source.
+pdf-08 | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-09 | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-10 | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-11 | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-12 | refined | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-13 | refined | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-14 | refined | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-15 | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-16 | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-17 | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-18 | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-19 | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-20 | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+pdf-21 | refined | reference-only | No executable physical law or PDE solver is inferred from this source.
+pdf-22 | refined | reference-only | No executable physical law or PDE solver is inferred from this source.
+pdf-23 | refined | reference-only | No executable physical law or PDE solver is inferred from this source.
+narrative-third-law | refined | reference-only | No executable physical law or PDE solver is inferred from this source.
+narrative-greybody-lifetime | refined | reference-only | No executable physical law or PDE solver is inferred from this source.
+narrative-no-hair | refined | reference-only | No executable physical law or PDE solver is inferred from this source.
+narrative-cosmic-censorship | reference-only | reference-only | No executable physical law or PDE solver is inferred from this source.
+image-etm-map | reference-only | reference-only | No executable physical law or PDE solver is inferred from this source.
+image-etm-schwarzschild | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+image-etm-rn | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+image-etm-kerr-fragment | reference-only | reference-only | No executable physical law or PDE solver is inferred from this source.
+image-etm-kn-fragment | reference-only | reference-only | No executable physical law or PDE solver is inferred from this source.
+image-etm-er-label | refined | reference-only | No executable physical law or PDE solver is inferred from this source.
+image-etm-charged-throat | reference-only | reference-only | No executable physical law or PDE solver is inferred from this source.
+image-etm-rotating-throat | reference-only | reference-only | No executable physical law or PDE solver is inferred from this source.
+image-etm-charged-rotating-throat | reference-only | reference-only | No executable physical law or PDE solver is inferred from this source.
+image-event-spin | toy-assumption | hypothetical-rule-evaluated | An assumed simulation rule, not established relativity.
+image-event-map-fragment | reference-only | reference-only | No executable physical law or PDE solver is inferred from this source.
+image-event-spin-sector | refined | reference-only | No executable physical law or PDE solver is inferred from this source.
+image-event-metric-fragment | reference-only | reference-only | No executable physical law or PDE solver is inferred from this source.
+image-event-functions | verified | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+image-event-frame-dragging | refined | reference-calculated | Related ordinary-domain reference quantities are calculated and checked. This does not execute a theorem, mode equation or formation process; only explicit exterior scalar samples enter the finite transform.
+image-aperture-spin-identity | toy-assumption | hypothetical-rule-evaluated | An assumed simulation rule, not established relativity.
+image-aperture-radius | toy-assumption | hypothetical-rule-evaluated | An assumed simulation rule, not established relativity.
+image-aperture-cover | toy-assumption | hypothetical-rule-evaluated | An assumed simulation rule, not established relativity.
+image-aperture-passage | toy-assumption | hypothetical-rule-evaluated | An assumed simulation rule, not established relativity.
+image-aperture-master-law | toy-assumption | hypothetical-rule-evaluated | An assumed simulation rule, not established relativity.
+image-aperture-branches | toy-assumption | hypothetical-rule-evaluated | An assumed simulation rule, not established relativity.
+image-tensor-map | toy-assumption | logical-map-transformed | Complex operator on four logical family labels in GF4. This is not a rank-(1,1) spacetime tensor, diffeomorphism, isometry, or proof of metric equivalence. Nonunitary outputs retain their computed norm; no implicit renormalization.
+
+VERIFICATION
+232 project tests passed; 1661 independent Python assertions passed. Maximum independent scaled numeric error=3.67e-12, acceptance tolerance=1e-10.
+The independent check reconstructs metric components/determinants, charged mass and Smarr identities, numerical first law, SI references, polynomial finite fields, Fourier amplitudes, the default logical map and all 81 final Wigner cells. It also verifies source bytes and the saved session/record envelopes. Example timings are deterministic zeros, not performance measurements.
+
+LIMITS
+The gaseous/igneous formation distinction, spin-supported aperture and aggie passage law are explicitly hypothetical. A usual event horizon is a causal boundary. Extreme spin does not establish timeless solid material. Observational equivalence alone does not establish high spin or global metric equivalence.
+The electromagnetic zap claim lacks a field/current model, particle trajectory and interaction law. No injury rate or landing rule is fabricated. Teukolsky/mode equations remain references; full field equations are not solved. Hawking power/lifetime estimates are labelled ideal approximations. The original full 500-equation suite was not supplied.
+Live browser rendering, actual download interaction and live GF80 iframe transport remain unverified. The command and DOM fixtures do not substitute for those checks.
+
+FILES
+docs/Horizon_Simulation_Specification.txt — declared rules, boundary conventions and preserved original write-up
+docs/Horizon_Equation_Audit.txt — source-by-source math, corrections and primary references
+horizon-equations.json — all formulas and scoped adapters
+horizon-reapplication.json — numeric report, sources, applicability and specification
+examples/Horizon-Simulation-session.json — reloadable case and model
+validation/tests-v0.4.txt and horizon-independent-validation.txt — actual verification evidence

@@ -1,0 +1,45 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 50,
+  "legacy_root": "legacy/source_repository/Diff Patch and Review",
+  "legacy_sha256": "a67bc5380e1cc7cb4942ed581afedb25512cf63fad993b7599666afc432fe7db",
+  "files": [
+    {
+      "path": "50.1_Diff_Patch_and_Review_Bounded_Diff_Production.ja",
+      "sha256": "bf9c88e11e9017d0980992ad8931709629546263e00950ebd3ad0a7bd59b0609",
+      "bytes": 1458
+    },
+    {
+      "path": "50.2_Diff_Patch_and_Review_Bounded_Patch_Construction.ja",
+      "sha256": "a8004ff75017a232226596daeda16b228812ceabeae4e378af49ddedf9cc9bc5",
+      "bytes": 1496
+    },
+    {
+      "path": "50.3_Diff_Patch_and_Review_Diff_Review.ja",
+      "sha256": "4d2f7841b5bb9c1a889fc49c2d58f509e06d6ba99d81cdaf7812b0c11666e9f3",
+      "bytes": 1480
+    },
+    {
+      "path": "50.4_Diff_Patch_and_Review_Patch_Review.ja",
+      "sha256": "7aa347b0edc52ead3024c111a4b262b8da45efa0512f913bff6d6cec5b279eb6",
+      "bytes": 1484
+    },
+    {
+      "path": "50.5_Diff_Patch_and_Review_Human_Approval.ja",
+      "sha256": "1ad95b7f6ec4d4f7c2e4616af486fb3a76f594e55bc83f86dc4cffac7dc94182",
+      "bytes": 1539
+    },
+    {
+      "path": "50.6_Diff_Patch_and_Review_Repository_Confinement.ja",
+      "sha256": "5ef17200a0ce3dc8f6b1656577f4de8ae5ced026bfab1393dc73f27d13e52578",
+      "bytes": 1669
+    },
+    {
+      "path": "README.md",
+      "sha256": "21eb7c112051bc6277b9850172c4c71f93ef8fe6c3bffaab496b320e51831ebe",
+      "bytes": 14945
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

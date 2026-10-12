@@ -1,0 +1,35 @@
+ja source 0.3
+module suite47.chatbot.debugging
+use Agent
+policy no_network
+
+agent ChatbotDebugging {
+    identity "chatbot_debugging"
+    role "sophia-charlotte-landon-professor-podium-chatbot"
+    goal identify_reproducible_evidence_backed_root_cause when confidence >= 0.95
+    memory session retention 1h
+    budget steps 60 tools 5
+    tool LANDONCollectFailureEvidence(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAFormDebugHypotheses(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEReproduceAndValidateCause(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainRootCause(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordDebugEvidence(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectFailureEvidence
+        authorize SOPHIAFormDebugHypotheses
+        authorize CHARLOTTEReproduceAndValidateCause
+        authorize ProfessorExplainRootCause
+        authorize PodiumRecordDebugEvidence
+        continue when policy_allows
+        execute LANDONCollectFailureEvidence("selected_failure_scope")
+        execute SOPHIAFormDebugHypotheses("canonical_failure_evidence")
+        execute CHARLOTTEReproduceAndValidateCause("ranked_debug_hypotheses")
+        execute ProfessorExplainRootCause("validated_root_cause")
+        execute PodiumRecordDebugEvidence("debugging_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "ChatbotDebugging.mcrt"

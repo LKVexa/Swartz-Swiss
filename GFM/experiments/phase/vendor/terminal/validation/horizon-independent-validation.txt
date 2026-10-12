@@ -1,0 +1,49 @@
+INDEPENDENT HORIZON VALIDATION — RUSSL 0.4.0
+
+Status: PASS
+Packet: horizon-reapplication.json
+Packet byte SHA-256: d2f984234deed7347754dbc9b14daa0af4aacdb171461971fd7865173682f6c3
+Session byte SHA-256: edea14d4cfe466afa50b1a1f8ef2e73ec7162872b87e4b7607f38d4b5012ecd7
+horizon-reapplication.json SHA-256: d2f984234deed7347754dbc9b14daa0af4aacdb171461971fd7865173682f6c3
+Horizon-Simulation-session.json SHA-256: edea14d4cfe466afa50b1a1f8ef2e73ec7162872b87e4b7607f38d4b5012ecd7
+Session canonical data SHA-256: 9a15f1551c7df3d86b13f0c4b247fdb24c8f1ea1774b5fee6f966d814985a413
+Assertions evaluated: 1661
+Maximum scaled numeric comparison error: 3.6669569254408507e-12
+Maximum scaled error: 3.6669569254408507e-12
+Numerical acceptance tolerance: 1e-10
+
+Method: Python standard library only; no production JavaScript module is imported, called or executed.
+Polynomial finite fields, positive trace characters, matrix products, Fourier inverse and Wigner expectations are independently calculated.
+GR metric uses compact quadratic coframes; determinant uses general pivoted elimination.
+First-law differentials use independent five-point numerical directional differentiation.
+SI checks use fixed constants and relative comparisons even for tiny radiation power and huge lifetime.
+Canonical envelope verification independently reproduces sorted UTF-16 keys, JSON strings and ECMAScript number formatting.
+
+PASS — Byte provenance, canonical SHA envelopes and session packet equality (46 assertions)
+Five equation sources and user writeup bytes match; session and all three record canonical hashes match.
+PASS — Complete source coverage and scoped dispositions (403 assertions)
+Complete 49/23 and prior 20/3 coverage. Dispositions: {'reference-calculated': 22, 'reference-only': 19, 'hypothetical-rule-evaluated': 7, 'logical-map-transformed': 1}. No PDE or unsupported physical claim marked executed.
+PASS — Independent KN/RN/Schwarzschild geometry and metric determinants (224 assertions)
+Schwarzschild, Kerr and charged KN scalars; RN and four metric tensors/determinants agree with independently expanded quadratic line elements.
+PASS — Independent numerical directional first law (10 assertions)
+Independent five-point derivative gives dA=1.05089429650462, dJ=0.00400000000011502; RHS=0.0100000000000539, dM=0.01.
+PASS — SI values and explicitly ideal blackbody estimates (14 assertions)
+Solar reference radius=2953.33938207 m, T=6.17007382859e-08 K; ideal power=9.00761377874e-29 W and formal lifetime=6.61347075989e+74 s. Relative checks include tiny and huge quantities.
+PASS — Toy assumptions, thresholds and observation inference (29 assertions)
+Saved aperture=0.589071648962559, gaseous/aggie passage=1/0. Exterior posterior remains prior; the optional toy passage probe is distinguishable. Equality checks validate the declared rules, not unsaved production executions.
+PASS — GF9 radial/toy signal Fourier, scale and inverse (477 assertions)
+All 9 radial metric samples and all 3 toy families independently regenerated, including nested samples, L2 scales, positive GF9 Fourier and inverse recovery. Zero aggie passage has no prepared state.
+PASS — Logical map and GF4 trace Fourier identity (133 assertions)
+Default supplied logical map is bookkeeping I4; independent polynomial GF4 trace Fourier conjugation, input/output and inverse agree. This is not a metric equivalence.
+PASS — Final D/R state, Wigner and recorded session states (306 assertions)
+All 9 final amplitudes, 81 Wigner cells, marginals, purity and mana2=1.00135105257932 agree; active session and three research-record states verified.
+PASS — Reported result status (19 assertions)
+Reported aggregate checks are consistent with the independently validated saved quantities.
+
+Scope: this saved default experiment, its source byte identities and recorded numeric states.
+This does not certify a global wormhole/black-hole equivalence, physical traversal, an electromagnetic zap
+mechanism, timeless material, a Teukolsky solution, full Hawking spectrum/lifetime, the unavailable
+500-equation suite, continuum convergence, live browser rendering, downloads or iframe behavior.
+Toy equality-boundary calculations check the declared conventions; they do not call unsaved production configurations.
+The transformed radial/toy profiles are chosen finite complex signal encodings with retained scale.
+Repeat the script after regenerated packets; hashes in this report identify the files actually checked.

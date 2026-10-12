@@ -1,0 +1,9 @@
+{
+  "approx_instructions_per_second": 30359.405726169483,
+  "deterministic_state_hash": true,
+  "elapsed_ns": 197632327,
+  "instructions_per_run": 12,
+  "iterations": 500,
+  "mean_run_ns": 395264.654,
+  "scope": "single Linux host Python reference runtime; not cross-platform performance certification"
+}

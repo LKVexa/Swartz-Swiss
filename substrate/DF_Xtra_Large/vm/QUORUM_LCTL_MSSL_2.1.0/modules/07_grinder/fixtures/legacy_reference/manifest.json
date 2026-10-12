@@ -1,0 +1,40 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 7,
+  "legacy_root": "legacy/source_repository/Grinder",
+  "legacy_sha256": "528ed741285b2d4bd3af26acce4406d0c45d84c61b6249b104317b69bd4254e1",
+  "files": [
+    {
+      "path": "07_grinder_candidate_improvement.deepml",
+      "sha256": "a63495846949caac705102cd0eb04a61a756db341aec8831fcad3127cd5853a3",
+      "bytes": 1544
+    },
+    {
+      "path": "07_grinder_optimization.deepml",
+      "sha256": "f50ee9cbefb604c29b001f298acc3c47f3d1459fd6453386d37b4367d1461e5b",
+      "bytes": 1379
+    },
+    {
+      "path": "07_grinder_reduction.deepml",
+      "sha256": "7059f4a16e65dfe0e928b8bb9fddc87a40bac6bb5bf3103d763e4e2796e63442",
+      "bytes": 1363
+    },
+    {
+      "path": "07_grinder_repeated_evaluation.deepml",
+      "sha256": "9995017a8898b7904fdbc5a14f2a8d5238af7ddbcb2cfc4b48d172b8a9c88236",
+      "bytes": 1528
+    },
+    {
+      "path": "07_grinder_stress_analysis.deepml",
+      "sha256": "73b3179b70c77eea32fcd9ea6975f288adaa087cd010ab2371ca6400ae29f59f",
+      "bytes": 1641
+    },
+    {
+      "path": "README.md",
+      "sha256": "90431582f9506f6cf9b3de3e8e9ad644c47d89062a7bf55388c6dce25476ac33",
+      "bytes": 1908
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

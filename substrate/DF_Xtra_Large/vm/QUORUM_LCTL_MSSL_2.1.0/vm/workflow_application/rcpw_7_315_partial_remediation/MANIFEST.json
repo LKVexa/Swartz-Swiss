@@ -1,0 +1,25 @@
+{
+  "package": "QUORUM_RCPW_7_315_PARTIALS_TO_OPERATIONAL_PROMPT_WORKFLOW",
+  "version": "1.0.0",
+  "source_candidate": "QUORUM_GENERIC_PROJECT_LCTL_MSSL_VIRTUAL_MACHINE_5.0.0_CANDIDATE_RCPW_7.0.0_26_BLOCKERS_REMEDIATED.zip",
+  "starting_counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 267,
+    "PARTIAL": 315,
+    "REGRESSED": 0
+  },
+  "partial_requirements": 315,
+  "individual_requirement_workflows": 315,
+  "stage_master_workflows": 20,
+  "blocker_counts": {
+    "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.": 140,
+    "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.": 175
+  },
+  "promotion_tier_counts": {
+    "T2_HIGH_FIDELITY": 104,
+    "T1_DIRECT_PROOF": 157,
+    "T4_PRODUCTION_EXTERNAL": 3,
+    "T3_FABRIC": 51
+  },
+  "generated_utc": "2026-08-11T06:38:36.295630+00:00"
+}

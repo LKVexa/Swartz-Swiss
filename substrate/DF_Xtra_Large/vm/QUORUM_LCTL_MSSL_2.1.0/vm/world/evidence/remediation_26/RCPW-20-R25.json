@@ -1,0 +1,42 @@
+{
+  "evidence_sha256": "787a6ed7e3f2c9a975f9e4444c82c856c17e0a7bc112ddb4cc7f20bd9d27ff28",
+  "exit_code": 0,
+  "observed_results": {
+    "layouts": [
+      {
+        "ledger_equal": true,
+        "ownership_digest": "9408849053de031b15612e04c67519348acb484d26f46d7b9c1b6d967035eb8b",
+        "save_reload_equal": true,
+        "semantic_ledger_digest": "26395bb0e879ed51a30d0d19f54e97a11e0752ac71776ae64a0b0dc71f8ecb53",
+        "state_digest": "4406938243a6cdc7c44fb4ea400c60e2c17425323c0c48a0bf89928ba418c063",
+        "worker_count": 1
+      },
+      {
+        "ledger_equal": true,
+        "ownership_digest": "9408849053de031b15612e04c67519348acb484d26f46d7b9c1b6d967035eb8b",
+        "save_reload_equal": true,
+        "semantic_ledger_digest": "26395bb0e879ed51a30d0d19f54e97a11e0752ac71776ae64a0b0dc71f8ecb53",
+        "state_digest": "4406938243a6cdc7c44fb4ea400c60e2c17425323c0c48a0bf89928ba418c063",
+        "worker_count": 2
+      },
+      {
+        "ledger_equal": true,
+        "ownership_digest": "9408849053de031b15612e04c67519348acb484d26f46d7b9c1b6d967035eb8b",
+        "save_reload_equal": true,
+        "semantic_ledger_digest": "26395bb0e879ed51a30d0d19f54e97a11e0752ac71776ae64a0b0dc71f8ecb53",
+        "state_digest": "4406938243a6cdc7c44fb4ea400c60e2c17425323c0c48a0bf89928ba418c063",
+        "worker_count": 4
+      }
+    ]
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "requirement_id": "RCPW-20-R25",
+  "result_sha256": "a075fc97760f97f22ebd37aee3e09ff0d115bab3ec486b571fd889a072da1924",
+  "schema": "RCPW-26-GATE-EVIDENCE/1",
+  "status": "OPERATIONAL",
+  "test_command": "python vm/world/qualification/remediate_26.py",
+  "tool_versions": {
+    "python": "3.11.15",
+    "world_runtime": "7.0.0-applied-remediated-26"
+  }
+}

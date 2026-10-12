@@ -1,0 +1,18 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.remediation.resource_governor:7.0.0-remediated-26",
+λ≡"quorum.rcpw.remediation.resource_governor",
+ℛ≡{
+  "0001":"learn(\"module\",literal(\"quorum.rcpw.remediation.resource_governor\"))",
+  "0002":"learn(\"version\",literal(\"RCPW-GOVERNOR/1\"))",
+  "0003":"learn(\"priority_rule\",literal(\"canonical integrity and persistence outrank remote fidelity and presentation\"))",
+  "0004":"learn(\"replay_rule\",literal(\"governor decisions derive deterministically from versioned pressure snapshots\"))",
+  "0005":"learn(\"gpu_rule\",literal(\"GPU is NOT_APPLICABLE for headless hosted reference profile; no fake PASS\"))"
+},
+π≡[],δ≡5,τ≡0,
+μ≡{"learn.module":"quorum.rcpw.remediation.resource_governor","learn.version":"RCPW-GOVERNOR/1","learn.priority_rule":"canonical integrity and persistence outrank remote fidelity and presentation","learn.replay_rule":"governor decisions derive deterministically from versioned pressure snapshots","learn.gpu_rule":"GPU is NOT_APPLICABLE for headless hosted reference profile; no fake PASS"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"learn.module":"quorum.rcpw.remediation.resource_governor","learn.version":"RCPW-GOVERNOR/1","learn.priority_rule":"canonical integrity and persistence outrank remote fidelity and presentation","learn.replay_rule":"governor decisions derive deterministically from versioned pressure snapshots","learn.gpu_rule":"GPU is NOT_APPLICABLE for headless hosted reference profile; no fake PASS"}},
+ν≡{}
+,κ≡"sha256:d4daeecc13316240b24636969a46cdca0c18cb5e78a0a7701af976dbf0293fd4"
+}⇒⊤

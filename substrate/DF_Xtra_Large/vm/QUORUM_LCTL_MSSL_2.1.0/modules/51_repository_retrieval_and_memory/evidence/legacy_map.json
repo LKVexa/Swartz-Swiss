@@ -1,0 +1,74 @@
+{
+  "suite_id": 51,
+  "suite_name": "Repository Retrieval and Memory",
+  "plane": "sense_context",
+  "legacy_sha256": "253983207c24acedcec44dc7305164cefe5f3387e2c539920f46524e8af6dda4",
+  "legacy_root": "legacy/source_repository/Repository Retrieval and Memory",
+  "files": [
+    {
+      "path": "51.1_Repository_Retrieval_and_Memory_Exact_Local_Evidence_Retrieval.jad",
+      "sha256": "17bdf56c970cd819b779940a8aed4605048647e1129225d723b84e579273472e",
+      "bytes": 2652
+    },
+    {
+      "path": "51.2_Repository_Retrieval_and_Memory_Repository_Retrieval.jad",
+      "sha256": "49382a7459bc25f2e9111ae3c38d073d60a657a41d467e30cfd6c9822b31864f",
+      "bytes": 2654
+    },
+    {
+      "path": "51.3_Repository_Retrieval_and_Memory_Governed_Memory_Retrieval.jad",
+      "sha256": "f87e2b156901970b864c0488278592b9b12431ae59a829065d772ce859bcb4e2",
+      "bytes": 2793
+    },
+    {
+      "path": "51.4_Repository_Retrieval_and_Memory_Evidence_Authority_Resolution.jad",
+      "sha256": "4eef93c700efef97465848c7295c90f9e3c3aa87c93d896779161bf3be46338d",
+      "bytes": 2838
+    },
+    {
+      "path": "51.5_Repository_Retrieval_and_Memory_Freshness_and_Provenance.jad",
+      "sha256": "91bd724a6beced38b3e6d081e10096aee7ecc0529adc43d712d0bc2db32e25f0",
+      "bytes": 2895
+    },
+    {
+      "path": "51.6_Repository_Retrieval_and_Memory_Memory_Promotion_and_Retention.jad",
+      "sha256": "a118bf4a5bdef3a4b673936fcfe4406d4f3c33242b1ab51b2cc8f4119fc6e3f2",
+      "bytes": 2974
+    },
+    {
+      "path": "README.md",
+      "sha256": "ea02544b6438bfb088da683aadf91641798c0899160309c6a4b29a4f86760b57",
+      "bytes": 16190
+    },
+    {
+      "path": "evidence_authority_records.dmk",
+      "sha256": "fda40d643b66846afc9b4a38ab3426cac42b34f2a18888a9e4fec89f5adfdc5c",
+      "bytes": 2968
+    },
+    {
+      "path": "exact_local_evidence_records.dmk",
+      "sha256": "137c6491fe7f9065651abbf6c643bdf60ebfbb999d512e9e7bcceca8d5d41750",
+      "bytes": 2866
+    },
+    {
+      "path": "governed_memory_retrieval_records.dmk",
+      "sha256": "0d29fac1c9a5a23d35fc0575d578ade4726a061015d9159a0cbf9ca62f64cbe6",
+      "bytes": 2947
+    },
+    {
+      "path": "memory_promotion_retention_records.dmk",
+      "sha256": "4824ef0445e63b9496861b58d0dbb250a2b772d034ef9bd6e2ea32a5ba3cd5f2",
+      "bytes": 3052
+    },
+    {
+      "path": "repository_retrieval_records.dmk",
+      "sha256": "4f0d1dc43ddea6efc17b803dd35d658c5685823cf4497b164ec734212011c4dc",
+      "bytes": 2865
+    },
+    {
+      "path": "retrieval_freshness_provenance_records.dmk",
+      "sha256": "4d3da6f7a2b9a15fc7db733ac88c51c12e82e1dc3eccf43ce0a055440db26f8a",
+      "bytes": 3008
+    }
+  ]
+}

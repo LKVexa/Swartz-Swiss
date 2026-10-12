@@ -1,0 +1,26 @@
+{
+  "baseline_release": "4.1.0 retained evidence",
+  "note": "4.2 changes the build/source authority. Runtime hot path is materially the 4.1 core; microbenchmark variance is recorded, not used to waive correctness.",
+  "performance": {
+    "arithmetic_ops_per_second": {
+      "baseline": 79125.056,
+      "current": 81192.864,
+      "percent": 2.61
+    },
+    "branch_ops_per_second": {
+      "baseline": 65408724.042,
+      "current": 68426840.214,
+      "percent": 4.61
+    },
+    "instructions_per_second": {
+      "baseline": 137295966.663,
+      "current": 133798958.354,
+      "percent": -2.55
+    },
+    "load_store_ops_per_second": {
+      "baseline": 804847.511,
+      "current": 821314.921,
+      "percent": 2.05
+    }
+  }
+}

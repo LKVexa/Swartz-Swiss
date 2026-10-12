@@ -1,0 +1,304 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 15,
+    "PARTIAL": 14,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Save state is canonical authority plus ledger/checkpoint metadata, not transient reference/render state.",
+      "requirement_id": "RCPW-12-R01",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Save commits are transactional and torn writes recover safely.",
+      "requirement_id": "RCPW-12-R02",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Deterministic inputs/seeds sufficient for authoritative replay are preserved.",
+      "requirement_id": "RCPW-12-R03",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Incremental checkpoints bound recovery time for large worlds.",
+      "requirement_id": "RCPW-12-R04",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Schema migrations are explicit and test backward/forward compatibility policy.",
+      "requirement_id": "RCPW-12-R05",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-12-R06.json",
+      "evidence_sha256": "cec2480f96c87a961a2101cee23e7bfd3d3f2cda75f1e9deb17dabb62f0a29d7",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "Independent replay verifies identity, coordinates, world state, and causal obligations after load.",
+      "requirement_id": "RCPW-12-R06",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Save containers support authenticated integrity metadata or equivalent corruption-evident checks.",
+      "requirement_id": "RCPW-12-R07",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Load verifies dependency/schema compatibility before mutating live canonical state.",
+      "requirement_id": "RCPW-12-R08",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Crash recovery is idempotent across repeated recovery attempts.",
+      "requirement_id": "RCPW-12-R09",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Replay produces canonical state digests at fixed checkpoints for bisecting divergence.",
+      "requirement_id": "RCPW-12-R10",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Save/replay supports named branches or equivalent non-destructive checkpoints for deterministic investigation and regression bisecting.",
+      "requirement_id": "RCPW-12-R11",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Replay tools can seek to canonical checkpoints and verify state digests without requiring full real-time rendering.",
+      "requirement_id": "RCPW-12-R12",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Cross-build replay compatibility is versioned, and incompatible deterministic domains are rejected rather than silently approximated.",
+      "requirement_id": "RCPW-12-R13",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Recovery objectives declare maximum acceptable data loss, recovery time, and checkpoint age for each qualification profile.",
+      "requirement_id": "RCPW-12-R14",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Save/replay persists world-package version/hash, compiler version, runtime ABI version, scheduler version, fold-policy version, schema versions, and deterministic-random stream metadata.",
+      "requirement_id": "RCPW-12-R15",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Save compatibility is validated against a machine-readable migration matrix before canonical state is touched.",
+      "requirement_id": "RCPW-12-R16",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Incremental checkpoints identify dirty canonical partitions and prove cross-partition consistency at the checkpoint barrier.",
+      "requirement_id": "RCPW-12-R17",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Replay can execute in headless verification mode to validate canonical digests without materializing full presentation state.",
+      "requirement_id": "RCPW-12-R18",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-soak qualification repeatedly checkpoints, crashes, recovers, migrates, and replays while measuring recovery time and storage growth.",
+      "requirement_id": "RCPW-12-R19",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Save/checkpoint authority captures a globally coherent cut across partitions using an explicit barrier, snapshot algorithm, or transactional equivalent.",
+      "requirement_id": "RCPW-12-R20",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Checkpoint metadata records partition membership/ownership so recovery can remap partitions without changing canonical semantics.",
+      "requirement_id": "RCPW-12-R21",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Concurrent checkpoint and content-patch activation are serialized or coordinated by a declared compatibility protocol.",
+      "requirement_id": "RCPW-12-R22",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Headless replay can recover a multi-partition save into a different worker layout and reproduce canonical checkpoint digests.",
+      "requirement_id": "RCPW-12-R23",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Save qualification includes partial partition loss, incomplete replica, stale checkpoint fragment, remapping, migration, and repeated recovery.",
+      "requirement_id": "RCPW-12-R24",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Save/replay captures world-age/era, expansion epochs, ontology versions, generation provenance, archive catalog versions, and historical-compaction versions.",
+      "requirement_id": "RCPW-12-R25",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Old saves may load into an expanded world only through an explicit compatibility policy that preserves their canonical historical cut and deterministic continuation rules.",
+      "requirement_id": "RCPW-12-R26",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Archive/rehydration state is checkpointed so loading cannot accidentally regenerate a historically evolved region from its original seed alone.",
+      "requirement_id": "RCPW-12-R27",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Replay can verify long-horizon world evolution by canonical semantic checkpoints even when detailed historical telemetry has been compacted.",
+      "requirement_id": "RCPW-12-R28",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes ancient-save migration, world expansion after save, archival restoration, generational state, and headless multi-era replay.",
+      "requirement_id": "RCPW-12-R29",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    }
+  ],
+  "stage": 12,
+  "title": "Save / Replay Authority"
+}

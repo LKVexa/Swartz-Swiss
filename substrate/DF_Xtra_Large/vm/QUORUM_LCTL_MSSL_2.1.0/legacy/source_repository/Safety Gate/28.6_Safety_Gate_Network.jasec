@@ -1,0 +1,26 @@
+ja source 0.3
+module suite28.safety_gate.network
+use Security
+policy no_network
+
+principal SafetyGateNetworkWorker
+role SafetyGateEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant network.evaluate:approved
+}
+resource NetworkRequest classification restricted
+policy SafetyGateNetworkPolicy {
+    deny network.* by default
+    allow NetworkRequest when principal.role == SafetyGateEnsemble
+    allow network.connect when principal.role == SafetyGateEnsemble
+    require human_approval for network.connect
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "SafetyGateNetworkPolicy.decision.mcrt"

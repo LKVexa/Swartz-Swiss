@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "444ba798915e24b335f7a2409ecf36ab55a32c0c1ea6e6c74f79aba6cd1cb3bd",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Full Stack UI",
+  "module_id": 26,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

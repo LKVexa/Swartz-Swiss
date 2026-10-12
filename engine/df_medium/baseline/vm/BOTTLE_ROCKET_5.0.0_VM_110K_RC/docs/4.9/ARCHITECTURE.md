@@ -1,0 +1,2 @@
+# BOTTLE ROCKET 4.9.0 Architecture
+4.9.0 freezes the 4.7 runtime contract and layers release qualification over it. Source authority flows LCTLC/1.1 → BRIR/1.1 → BRIM/1+BRPV/1 → BRTM/1 secure authorization → VM execution. The VM is a freestanding core behind a HAL; trust, host adaptation, compiler, and independent verifier remain separately measurable components. Production execution is secure-only, networking is absent by default, persistence is transactional, and all host I/O crosses the capability-gated Device ABI.

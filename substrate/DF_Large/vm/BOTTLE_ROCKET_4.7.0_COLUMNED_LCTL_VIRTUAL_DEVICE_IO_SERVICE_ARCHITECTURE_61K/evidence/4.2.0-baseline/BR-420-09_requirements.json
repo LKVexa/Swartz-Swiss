@@ -1,0 +1,98 @@
+{
+  "decision": "OPERATIONAL",
+  "package": "BR-420-09",
+  "requirements": [
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-09_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: source_to_binary_provenance_manifest",
+      "requirement": "Embed source hash in manifest",
+      "requirement_id": "BR-420-09-R01",
+      "result": "PASS",
+      "sha256": "7b25eee20864b24527a76d720a97a56a4817d7fd044701dc9fd9a37eab5b1bb8",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-09_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: source_hash_embedded_header_prefix",
+      "requirement": "Record BRIR hash",
+      "requirement_id": "BR-420-09-R02",
+      "result": "PASS",
+      "sha256": "7b25eee20864b24527a76d720a97a56a4817d7fd044701dc9fd9a37eab5b1bb8",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-09_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: source_to_binary_provenance_manifest",
+      "requirement": "Record BRIM hash",
+      "requirement_id": "BR-420-09-R03",
+      "result": "PASS",
+      "sha256": "7b25eee20864b24527a76d720a97a56a4817d7fd044701dc9fd9a37eab5b1bb8",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-09_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: source_hash_embedded_header_prefix",
+      "requirement": "Record verifier version",
+      "requirement_id": "BR-420-09-R04",
+      "result": "PASS",
+      "sha256": "7b25eee20864b24527a76d720a97a56a4817d7fd044701dc9fd9a37eab5b1bb8",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-09_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: source_to_binary_provenance_manifest",
+      "requirement": "Record compiler version",
+      "requirement_id": "BR-420-09-R05",
+      "result": "PASS",
+      "sha256": "7b25eee20864b24527a76d720a97a56a4817d7fd044701dc9fd9a37eab5b1bb8",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-09_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: source_hash_embedded_header_prefix",
+      "requirement": "Record language version",
+      "requirement_id": "BR-420-09-R06",
+      "result": "PASS",
+      "sha256": "7b25eee20864b24527a76d720a97a56a4817d7fd044701dc9fd9a37eab5b1bb8",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-09_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: source_to_binary_provenance_manifest",
+      "requirement": "Record ISA version",
+      "requirement_id": "BR-420-09-R07",
+      "result": "PASS",
+      "sha256": "7b25eee20864b24527a76d720a97a56a4817d7fd044701dc9fd9a37eab5b1bb8",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "title": "Source-to-binary provenance"
+}

@@ -1,0 +1,29 @@
+{
+  "suite_id": 59,
+  "suite_name": "Shell",
+  "plane": "operations_recovery",
+  "legacy_sha256": "ae6a00263505cf3fc9f07f0890973b415ac53736bfaae5c88d1ff56398b42cb2",
+  "legacy_root": "legacy/source_repository/Shell",
+  "files": [
+    {
+      "path": "59.1_Approved_Commands.jaops",
+      "sha256": "558d2856b063d1829d33cc5e0ad8d9ead03c4d80cf1b0c0b1fb0c301e8df929d",
+      "bytes": 1088
+    },
+    {
+      "path": "59.2_Command_Policy.jaops",
+      "sha256": "2eb485573acf8cf36504e70f880e1750c6e2b54fdfb8bfcfbe5c8c988daa9346",
+      "bytes": 1062
+    },
+    {
+      "path": "59.3_Output_Streaming.jaops",
+      "sha256": "8e8824fb8493d17dcad768ddf37a711e4833c223a399a929669af54c0c605c9f",
+      "bytes": 1068
+    },
+    {
+      "path": "README.md",
+      "sha256": "a9bfcb2527072f8f5e4dbe401548cb90e380b9a53e160750162b4e475c6b0e6f",
+      "bytes": 16147
+    }
+  ]
+}

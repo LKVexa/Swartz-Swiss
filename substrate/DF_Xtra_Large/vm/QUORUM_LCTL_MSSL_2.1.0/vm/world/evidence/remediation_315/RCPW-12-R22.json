@@ -1,0 +1,58 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "03f2b21a56f7aadfca24d98871b46f599a87adb7a6a3c78bfef149266663bd29",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (VERSION_MIGRATION, TRANSACTION_CONCURRENCY, REFERENCE_PRECISION, SAVE_RECOVERY) plus Stage 12 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "REFERENCE_PRECISION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "SAVE_RECOVERY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "TRANSACTION_CONCURRENCY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "VERSION_MIGRATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-08",
+    "GW-09",
+    "GW-37",
+    "GW-39",
+    "GW-54",
+    "GW-76"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Concurrent checkpoint and content-patch activation are serialized or coordinated by a declared compatibility protocol.",
+  "requirement_id": "RCPW-12-R22",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 12,
+  "stage_title": "Save / Replay Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "VERSION_MIGRATION",
+    "TRANSACTION_CONCURRENCY",
+    "REFERENCE_PRECISION",
+    "SAVE_RECOVERY"
+  ],
+  "workflow_file": "12_SAVE_REPLAY_AUTHORITY/184_RCPW_12_R22_CONCURRENT_CHECKPOINT_AND_CONTENT_PATCH_ACTIVATION_ARE_SERIALIZED_OR_COORDINATED_BY_A.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

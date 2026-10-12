@@ -1,0 +1,25 @@
+{
+  "atomic_requirements": 97,
+  "atomic_requirements_operational": 97,
+  "brim_pass": true,
+  "compiler_and_independent_verifier_agree": true,
+  "decision": "OPERATIONAL",
+  "deterministic_clean_build": true,
+  "every_generated_production_brim_native_lctl_tagged": true,
+  "external_not_claimed": [
+    "physical SIM/UICC/eSIM hardware and issuer qualification",
+    "native Windows OS execution qualification",
+    "third-party independent certification",
+    "external LCTL 1.6.1-RC1 JAR verification when no JAR is supplied"
+  ],
+  "hidden_semantic_assembler_removed": true,
+  "inherited_core_tests": 18,
+  "invalid_programs_fail_before_image": true,
+  "legacy_hidden_semantic_carrier_rejected": true,
+  "production_source_pass": true,
+  "record": "BR.Acceptance",
+  "release": "4.2.0",
+  "scope": "host-reference native COLUMNED LCTL semantic authority + inherited 4.1 production execution boundary",
+  "semantic_tests": 53,
+  "work_packages": 12
+}

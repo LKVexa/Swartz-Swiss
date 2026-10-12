@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.specialized_roles.security_reviewer
+use Agent
+policy no_network
+
+agent SecurityReviewer {
+    identity "security_reviewer"
+    role "sophia-charlotte-landon-professor-podium-specialist"
+    goal produce_prioritized_evidence_backed_security_review when confidence >= 0.97
+    memory session retention 1h
+    budget steps 70 tools 5
+    tool LANDONCollectSecurityEvidence(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAModelThreatsAndAssets(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateSecurityFindings(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainSecurityFindings(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordSecurityReview(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectSecurityEvidence
+        authorize SOPHIAModelThreatsAndAssets
+        authorize CHARLOTTEValidateSecurityFindings
+        authorize ProfessorExplainSecurityFindings
+        authorize PodiumRecordSecurityReview
+        continue when policy_allows
+        execute LANDONCollectSecurityEvidence("selected_security_scope")
+        execute SOPHIAModelThreatsAndAssets("security_evidence")
+        execute CHARLOTTEValidateSecurityFindings("candidate_threat_model")
+        execute ProfessorExplainSecurityFindings("validated_security_findings")
+        execute PodiumRecordSecurityReview("security_review_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "SecurityReviewer.mcrt"

@@ -1,0 +1,35 @@
+{
+  "evidence_sha256": "cec2480f96c87a961a2101cee23e7bfd3d3f2cda75f1e9deb17dabb62f0a29d7",
+  "exit_code": 0,
+  "observed_results": {
+    "corrupt_exit_code": 2,
+    "corrupt_rejected": true,
+    "digest_equal": true,
+    "isolated_exit_code": 0,
+    "ledger_equal": true,
+    "producer_ledger_head": "b3e5df0bdb004b943d1c19b85b80748d97a6db3634f98289744e5f5e6d6ed40a",
+    "producer_state_sha256": "9ff174ca39dc0b504ed60b9bd9238ba47712b17021655a0da6c59cd6b32e76a7",
+    "receipt": {
+      "entities": 7,
+      "ledger_head": "b3e5df0bdb004b943d1c19b85b80748d97a6db3634f98289744e5f5e6d6ed40a",
+      "regions": 4,
+      "renderer_created": false,
+      "schema": "RCPW-HEADLESS-VERIFY/1",
+      "semantic_ledger_sha256": "7ab616cb20f074bbbe4af4aa49d9c8d6aefd8ef8eab942603714cca9a2e3e13e",
+      "state_sha256": "9ff174ca39dc0b504ed60b9bd9238ba47712b17021655a0da6c59cd6b32e76a7",
+      "status": "PASS",
+      "tick": 30,
+      "unresolved_obligations": 0
+    }
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "requirement_id": "RCPW-12-R06",
+  "result_sha256": "4f22555f1ea7dd7144cef3c1cf8c43575810a756f293e2b66555246e7c6f1371",
+  "schema": "RCPW-26-GATE-EVIDENCE/1",
+  "status": "OPERATIONAL",
+  "test_command": "python vm/world/qualification/remediate_26.py",
+  "tool_versions": {
+    "python": "3.11.15",
+    "world_runtime": "7.0.0-applied-remediated-26"
+  }
+}

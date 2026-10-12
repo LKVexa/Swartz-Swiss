@@ -1,0 +1,30 @@
+ja source 0.3
+module suite36.visual_correction.corrective_render_passes
+use Training
+policy no_network
+
+experiment VisualCorrectionCorrectiveRenderPasses {
+    model ref "models/sophia_charlotte_landon_professor_podium/corrective_render_passes"
+    dataset ref "datasets/visual_correction/render_pass_cases" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 32 accumulate 2
+    precision mixed
+    seed 3604
+    checkpoint every 16 steps
+    evaluate {
+        metric render_correction_gain
+        metric render_regression_safety
+        metric pass_budget_compliance
+        metric deterministic_replay
+        metric loss
+        require render_correction_gain >= 0.90
+        require render_regression_safety >= 0.99
+        require pass_budget_compliance >= 1.00
+        require deterministic_replay >= 1.00
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "VisualCorrectionCorrectiveRenderPasses.lineage.mcrt"

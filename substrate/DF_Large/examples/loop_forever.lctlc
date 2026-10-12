@@ -1,0 +1,10 @@
+LCTLC/1.2
+@unit id=df.example.loop version=4.3.0 language=columned-lctl/4.3 isa=BR/1.1 br_image_version=10 br_request_caps=CONTROL|ARITH termination=budgeted
+@defaults mode=WRAP width=WIDE
+ID│LANE│OP│OUT│CTRL│IN│ARG│META
+W00001│exec│MOVI│R0│C0:CONTROL│_│imm=1│_
+W00002│exec│MOVI│R1│C0:CONTROL│_│imm=2│_
+W00003│exec│CMP│_│C0:ARITH│R0›R1│_│_
+W00004│exec│JNZ│_│C0:CONTROL│_│target=@W00003│_
+W00005│exec│HALT│_│C0:CONTROL│_│_│_
+@end

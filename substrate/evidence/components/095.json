@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "095",
+  "title": "Electron Affinity Map",
+  "source_file": "095_Electron_Affinity_Map.md",
+  "source_sha256": "4ddb85cd7ca885c70834d4d92607a75b8e5dc6d82f0d9324a9b2e7a9ee7846d2",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "N_XLARGE+DF0",
+  "integration_mechanism": "QAM integration plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

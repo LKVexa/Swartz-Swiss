@@ -1,0 +1,21 @@
+ja source 0.3
+module cypher.hashes
+use Security
+policy no_network
+
+principal SOPHIA_CHARLOTTE_LANDON_Professor_Podium_HashWorker
+role CypherHashWorker {
+    grant artifact.hash:approved
+    grant provenance.read:approved
+}
+resource ContentHashArtifact classification restricted
+policy CypherHashPolicy {
+    deny network.* by default
+    allow ContentHashArtifact when principal.role == CypherHashWorker
+    require human_approval for artifact.hash
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == true
+emit mcrt "CypherHashPolicy.decision.mcrt"

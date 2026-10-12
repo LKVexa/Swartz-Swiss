@@ -1,0 +1,21 @@
+LCTLC/1.0
+@unit id=quorum.generic_project.vm.core version=5.0.0 profile=native
+@defaults qspace=H basis=computational regime=exact assume=finite_dimension error=exact conf=1.0
+@frame id=F0000 parent=ROOT module=quorum.generic_project.vm.core
+ID│LANE│OP│OUT│CTRL│IN│ARG│META
+D0001│alloc│Q│q│_│_│1│res="logical_qubits=1";p=lctl:1.2
+D0002│alloc│C│c│_│_│1│res="classical_bits=1";p=lctl:1.2
+V0001│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=65│p=quorum:vm5
+V0002│vm│REG│_│_│_│vm.op=SVC;svc=1│p=quorum:vm5
+V0003│vm│REG│_│_│_│vm.op=MOVI;dst=R1;imm=7│p=quorum:vm5
+V0004│vm│REG│_│_│_│vm.op=MOVI;dst=R2;imm=5│p=quorum:vm5
+V0005│vm│REG│_│_│_│vm.op=ADD;dst=R3;a=R1;b=R2;mode=exact│p=quorum:vm5
+V0006│vm│REG│_│_│_│vm.op=PUSH;a=R3│p=quorum:vm5
+V0007│vm│REG│_│_│_│vm.op=POP;dst=R4│p=quorum:vm5
+V0008│vm│REG│_│_│_│vm.op=MOVI;dst=R5;imm=0│p=quorum:vm5
+V0009│vm│REG│_│_│_│vm.op=STORE;a=R5;b=R4;width=8│p=quorum:vm5
+V0010│vm│REG│_│_│_│vm.op=LOAD;dst=R6;a=R5;width=8│p=quorum:vm5
+V0011│vm│REG│_│_│_│vm.op=CMP;a=R6;b=R4│p=quorum:vm5
+V0012│vm│REG│_│_│_│vm.op=HALT│p=quorum:vm5
+C9999│terminal│.│_│_│_│terminal=sealed_graph_end;justification=canonical_entry_sentinel│p=lctl:nop
+@end

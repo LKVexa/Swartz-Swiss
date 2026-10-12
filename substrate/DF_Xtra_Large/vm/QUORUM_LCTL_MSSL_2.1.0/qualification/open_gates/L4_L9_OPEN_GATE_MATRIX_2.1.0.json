@@ -1,0 +1,4907 @@
+{
+  "definition_of_open": "Gate has an executable evidence path and is no longer prevented solely by sequential ladder coupling. OPEN does not mean production certification.",
+  "module_count": 66,
+  "modules": [
+    {
+      "directory": "01_observer",
+      "evidence_dir": "modules/01_observer/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 9,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Observer",
+      "module_id": 1,
+      "nominal_result_sha256": "081e0c7bdacd74b13587ec65b1daed3f351484b3ba8b6e47c1189e16bc35577b",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.847697,
+        "median_ms": 0.726796,
+        "min_ms": 0.669097,
+        "p95_ms": 0.800015,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "sense_context"
+    },
+    {
+      "directory": "02_anthology",
+      "evidence_dir": "modules/02_anthology/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": false,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 7,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 5,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 5,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Anthology",
+      "module_id": 2,
+      "nominal_result_sha256": "e6b0e158068def53ff6c583ed4408889a3cd285b2a60e65700a0c0e245f6a787",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 1.108057,
+        "median_ms": 0.776783,
+        "min_ms": 0.680378,
+        "p95_ms": 0.958221,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "sense_context"
+    },
+    {
+      "directory": "03_atlas",
+      "evidence_dir": "modules/03_atlas/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": false,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 9,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 5,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 5,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Atlas",
+      "module_id": 3,
+      "nominal_result_sha256": "46a1d1caeaeb068b50bfb88cbde4165a9d6e016a091ab6b1b15f7f2038464b25",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 1.990521,
+        "median_ms": 0.7144,
+        "min_ms": 0.67488,
+        "p95_ms": 0.789813,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "sense_context"
+    },
+    {
+      "directory": "04_compass",
+      "evidence_dir": "modules/04_compass/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": false,
+          "tests": false
+        },
+        "legacy_files_parsed": 8,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 4,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 4,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Compass",
+      "module_id": 4,
+      "nominal_result_sha256": "a05f73673bef3e98c07680cd241614cd38f2b13e7567ed463b924052e341c673",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.763224,
+        "median_ms": 0.677502,
+        "min_ms": 0.657393,
+        "p95_ms": 0.739794,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "intent_reasoning"
+    },
+    {
+      "directory": "05_pencil",
+      "evidence_dir": "modules/05_pencil/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": false,
+          "tests": true
+        },
+        "legacy_files_parsed": 8,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 5,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 5,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Pencil",
+      "module_id": 5,
+      "nominal_result_sha256": "4c90af28e6cd3505fba25b61180830cbd6ef0f4f7255af0e2a7fe1a97f7a4d9e",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.848056,
+        "median_ms": 0.697763,
+        "min_ms": 0.659299,
+        "p95_ms": 0.834077,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "intent_reasoning"
+    },
+    {
+      "directory": "06_pencil_sharpener",
+      "evidence_dir": "modules/06_pencil_sharpener/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": false,
+          "tests": false
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 4,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 4,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Pencil Sharpener",
+      "module_id": 6,
+      "nominal_result_sha256": "22af41a57f966c9a60be090eaf3568303ac17c64acda511bdc5b60cf12cf547d",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.915591,
+        "median_ms": 0.671515,
+        "min_ms": 0.653243,
+        "p95_ms": 0.754202,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "intent_reasoning"
+    },
+    {
+      "directory": "07_grinder",
+      "evidence_dir": "modules/07_grinder/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": false,
+          "tests": false
+        },
+        "legacy_files_parsed": 6,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 4,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 4,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Grinder",
+      "module_id": 7,
+      "nominal_result_sha256": "7273c8fd7c290cbae656157010dce3f787d67c1e6f49f0f9d4c0f39c463ed76c",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.882944,
+        "median_ms": 0.733772,
+        "min_ms": 0.692672,
+        "p95_ms": 0.867673,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "intent_reasoning"
+    },
+    {
+      "directory": "08_tables",
+      "evidence_dir": "modules/08_tables/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": false,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 7,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 5,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 5,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Tables",
+      "module_id": 8,
+      "nominal_result_sha256": "5f3790330c8c5b98dc219390db4983862483b5bf029ab9039e9cb372583b566f",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.836705,
+        "median_ms": 0.696662,
+        "min_ms": 0.65362,
+        "p95_ms": 0.812332,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "data_evidence"
+    },
+    {
+      "directory": "09_funnel",
+      "evidence_dir": "modules/09_funnel/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": false,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 2,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 5,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 5,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Funnel",
+      "module_id": 9,
+      "nominal_result_sha256": "b805ec14940761cfacabf0462a73973b0cf66cbbf0c6bd2a6c0d068ea738c6cf",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.751205,
+        "median_ms": 0.673367,
+        "min_ms": 0.656552,
+        "p95_ms": 0.729985,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "intent_reasoning"
+    },
+    {
+      "directory": "10_illuminator",
+      "evidence_dir": "modules/10_illuminator/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": false,
+          "policy": true,
+          "state": true,
+          "tests": false
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 4,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 4,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Illuminator",
+      "module_id": 10,
+      "nominal_result_sha256": "2b02b28d90647c1aeed9f3a3a218ee9623543e83825e7eaf1c29cb6018f6785f",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.767719,
+        "median_ms": 0.669466,
+        "min_ms": 0.64153,
+        "p95_ms": 0.707224,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "intent_reasoning"
+    },
+    {
+      "directory": "11_cypher",
+      "evidence_dir": "modules/11_cypher/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": false,
+          "identity": true,
+          "policy": true,
+          "state": false,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 4,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 4,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Cypher",
+      "module_id": 11,
+      "nominal_result_sha256": "71036fc3de3a0a5fef90142f89605115ecd8e749303b499db2e0bf8d60d659f2",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 1.241796,
+        "median_ms": 0.733064,
+        "min_ms": 0.673735,
+        "p95_ms": 1.066775,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "data_evidence"
+    },
+    {
+      "directory": "12_filing_cabinet",
+      "evidence_dir": "modules/12_filing_cabinet/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": false,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 7,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 5,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 5,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Filing Cabinet",
+      "module_id": 12,
+      "nominal_result_sha256": "7c0f52f24c0b39b0f813d878fd9ab159ffe23bd8491e7f2e5baa85a8db21537f",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.965377,
+        "median_ms": 0.69878,
+        "min_ms": 0.645697,
+        "p95_ms": 0.794705,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "data_evidence"
+    },
+    {
+      "directory": "13_chair",
+      "evidence_dir": "modules/13_chair/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": false,
+          "tests": false
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 4,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 4,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Chair",
+      "module_id": 13,
+      "nominal_result_sha256": "52aeafb1ee11804a433f84e74092a0146189ffa0ab0fcb3c5272435fc1096de7",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.959094,
+        "median_ms": 0.73651,
+        "min_ms": 0.64685,
+        "p95_ms": 0.896602,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "security_authorization"
+    },
+    {
+      "directory": "14_plug",
+      "evidence_dir": "modules/14_plug/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 7,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Plug",
+      "module_id": 14,
+      "nominal_result_sha256": "5a087c1923423b44194e231f2a334d675e1d09f7cb7ff57c0ca908c0528d8a07",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.925584,
+        "median_ms": 0.650014,
+        "min_ms": 0.630688,
+        "p95_ms": 0.788767,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "interfaces_services"
+    },
+    {
+      "directory": "15_orchestrator",
+      "evidence_dir": "modules/15_orchestrator/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 6,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Orchestrator",
+      "module_id": 15,
+      "nominal_result_sha256": "31eb76de4b61576301068845c333fd669cb641a38f8688111e8bb325f5af93dd",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 1.062416,
+        "median_ms": 0.785386,
+        "min_ms": 0.709197,
+        "p95_ms": 1.0145,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "orchestration"
+    },
+    {
+      "directory": "16_perceiver",
+      "evidence_dir": "modules/16_perceiver/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 7,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Perceiver",
+      "module_id": 16,
+      "nominal_result_sha256": "530011dbb40a750f93bef71c7dcba0e6b61118c82f2f1011d90861e0ed53b2fe",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 1.615594,
+        "median_ms": 0.837009,
+        "min_ms": 0.676007,
+        "p95_ms": 1.182803,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "sense_context"
+    },
+    {
+      "directory": "17_asset_observer",
+      "evidence_dir": "modules/17_asset_observer/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 7,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Asset Observer",
+      "module_id": 17,
+      "nominal_result_sha256": "ad3865895aafabced393d60c9be6d74a45f2add190f94bb30669304738944928",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.99076,
+        "median_ms": 0.704824,
+        "min_ms": 0.676722,
+        "p95_ms": 0.892287,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "sense_context"
+    },
+    {
+      "directory": "18_feature_graph",
+      "evidence_dir": "modules/18_feature_graph/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": false,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 7,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 5,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 5,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Feature Graph",
+      "module_id": 18,
+      "nominal_result_sha256": "94b56efe6d57a70c48e67a7774ed1e5fa64ed6222d6dbdb0142d1485099a8f80",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.901546,
+        "median_ms": 0.750868,
+        "min_ms": 0.658281,
+        "p95_ms": 0.893398,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "data_evidence"
+    },
+    {
+      "directory": "19_mesh_geometry",
+      "evidence_dir": "modules/19_mesh_geometry/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": false,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 6,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 5,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 5,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Mesh Geometry",
+      "module_id": 19,
+      "nominal_result_sha256": "c1703c704479a73404c623a635600f88787d25295c7690f988931ec1ab292e54",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.829224,
+        "median_ms": 0.760776,
+        "min_ms": 0.737657,
+        "p95_ms": 0.827331,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "media_visual"
+    },
+    {
+      "directory": "20_equation_operator_bank",
+      "evidence_dir": "modules/20_equation_operator_bank/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 6,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Equation Operator Bank",
+      "module_id": 20,
+      "nominal_result_sha256": "b2834e96a956cdd7b8c8cc5a5cbd4ebc39656bf948907c4ef335af19c4fc3e77",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.754957,
+        "median_ms": 0.692507,
+        "min_ms": 0.666071,
+        "p95_ms": 0.752734,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "model_compute"
+    },
+    {
+      "directory": "21_scene_reconstruction",
+      "evidence_dir": "modules/21_scene_reconstruction/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": false,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 5,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 5,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Scene Reconstruction",
+      "module_id": 21,
+      "nominal_result_sha256": "ee7b8d39363235ca2c1cc1797adab590bd0185f52c9f08214c8e246e3db022bb",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 1.033104,
+        "median_ms": 0.747043,
+        "min_ms": 0.699071,
+        "p95_ms": 0.987445,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "media_visual"
+    },
+    {
+      "directory": "22_motion_planner",
+      "evidence_dir": "modules/22_motion_planner/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 6,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Motion Planner",
+      "module_id": 22,
+      "nominal_result_sha256": "fc4e1b48693dab2e4e5d0fd5145f14dbd7c8e1d970d515392be452c350275d32",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.807332,
+        "median_ms": 0.72436,
+        "min_ms": 0.700283,
+        "p95_ms": 0.782906,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "media_visual"
+    },
+    {
+      "directory": "23_temporal_animator",
+      "evidence_dir": "modules/23_temporal_animator/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 4,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Temporal Animator",
+      "module_id": 23,
+      "nominal_result_sha256": "7de22dd8f8a81f3a70e9d4976361c8276a626300c278d82b423908bdfbf8aa46",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.863732,
+        "median_ms": 0.724771,
+        "min_ms": 0.698125,
+        "p95_ms": 0.841093,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "media_visual"
+    },
+    {
+      "directory": "24_csharp_renderer",
+      "evidence_dir": "modules/24_csharp_renderer/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "PASS",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 4,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "C# Renderer",
+      "module_id": 24,
+      "nominal_result_sha256": "8b703d227b1c4d1b384dfa30d0bd8ecc0b7150fa5033ad31632e7a1919806e83",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.913188,
+        "median_ms": 0.782056,
+        "min_ms": 0.743828,
+        "p95_ms": 0.881466,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "media_visual"
+    },
+    {
+      "directory": "25_media_export",
+      "evidence_dir": "modules/25_media_export/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Media Export",
+      "module_id": 25,
+      "nominal_result_sha256": "35e06d927f2751e6b21a4c2456d6d48e8227068989fc43bbdb39a5f60cdfbecd",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.779456,
+        "median_ms": 0.715922,
+        "min_ms": 0.68084,
+        "p95_ms": 0.771061,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "media_visual"
+    },
+    {
+      "directory": "26_full_stack_ui",
+      "evidence_dir": "modules/26_full_stack_ui/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Full Stack UI",
+      "module_id": 26,
+      "nominal_result_sha256": "42466ec592505af6a7e75e226385656041c22e9988594850ffe545c7098c8e9e",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.991412,
+        "median_ms": 0.714991,
+        "min_ms": 0.635821,
+        "p95_ms": 0.981713,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "interfaces_services"
+    },
+    {
+      "directory": "27_deepml_worker",
+      "evidence_dir": "modules/27_deepml_worker/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 5,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "deepML Worker",
+      "module_id": 27,
+      "nominal_result_sha256": "91634a4ec643845e60ab3e1902bdcca860fa29343759ed6052e3851a25e35ec5",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.916885,
+        "median_ms": 0.713275,
+        "min_ms": 0.675865,
+        "p95_ms": 0.816694,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "model_compute"
+    },
+    {
+      "directory": "28_safety_gate",
+      "evidence_dir": "modules/28_safety_gate/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Safety Gate",
+      "module_id": 28,
+      "nominal_result_sha256": "3a6b723a1dc92e930f2a3ebd0904369b02137798f4a74a337cd7c487c679c1b1",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.740295,
+        "median_ms": 0.640467,
+        "min_ms": 0.631039,
+        "p95_ms": 0.718675,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "security_authorization"
+    },
+    {
+      "directory": "29_archive_ledger",
+      "evidence_dir": "modules/29_archive_ledger/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 7,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Archive Ledger",
+      "module_id": 29,
+      "nominal_result_sha256": "a58aa2c0da5bd84eff929e52ed6bb69efb6f638a83422ad9b7a502baf8f8531a",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.737594,
+        "median_ms": 0.675194,
+        "min_ms": 0.65583,
+        "p95_ms": 0.725067,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "data_evidence"
+    },
+    {
+      "directory": "30_ja_adapter",
+      "evidence_dir": "modules/30_ja_adapter/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 7,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "JA Adapter",
+      "module_id": 30,
+      "nominal_result_sha256": "9c9e2d16d495ed7d6b84f571ca972d38b61109e938b4c323151e47d9e36f93cd",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 3.78501,
+        "median_ms": 0.711485,
+        "min_ms": 0.64563,
+        "p95_ms": 1.025533,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "translation_interop"
+    },
+    {
+      "directory": "31_vexxa",
+      "evidence_dir": "modules/31_vexxa/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 7,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Vexxa",
+      "module_id": 31,
+      "nominal_result_sha256": "4a0c3dd8281f5efb7099414fe105cc0e69be42dc1094e4a9bc982f107bcf1911",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 2.406551,
+        "median_ms": 0.728922,
+        "min_ms": 0.657201,
+        "p95_ms": 0.887714,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "translation_interop"
+    },
+    {
+      "directory": "32_orchestrator_ii",
+      "evidence_dir": "modules/32_orchestrator_ii/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 6,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Orchestrator II",
+      "module_id": 32,
+      "nominal_result_sha256": "e5d0aea183e107219549df270fd08881f620602632a8785b146968d1f8c17774",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 1.315641,
+        "median_ms": 0.895285,
+        "min_ms": 0.721726,
+        "p95_ms": 1.039237,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "orchestration"
+    },
+    {
+      "directory": "33_visual_feedback",
+      "evidence_dir": "modules/33_visual_feedback/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Visual Feedback",
+      "module_id": 33,
+      "nominal_result_sha256": "81acddaf9152d390aaf87efa086b7f1c25528d09d01961738f776e6f227e78d4",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.979605,
+        "median_ms": 0.741165,
+        "min_ms": 0.680939,
+        "p95_ms": 0.872671,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "media_visual"
+    },
+    {
+      "directory": "34_animation_vfx_workspace",
+      "evidence_dir": "modules/34_animation_vfx_workspace/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 6,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Animation VFX Workspace",
+      "module_id": 34,
+      "nominal_result_sha256": "bfd408148cbeff482844619d33b88bfbeda5110922e5d87cdaae97156249e8ba",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.90086,
+        "median_ms": 0.750276,
+        "min_ms": 0.714081,
+        "p95_ms": 0.815897,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "media_visual"
+    },
+    {
+      "directory": "35_app_designer",
+      "evidence_dir": "modules/35_app_designer/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "App Designer",
+      "module_id": 35,
+      "nominal_result_sha256": "7f7c9a5dccee69f00339813437b2d0bf7d387874607b98378ae04d3597c21104",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.96167,
+        "median_ms": 0.704442,
+        "min_ms": 0.635375,
+        "p95_ms": 0.816067,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "interfaces_services"
+    },
+    {
+      "directory": "36_visual_correction_system",
+      "evidence_dir": "modules/36_visual_correction_system/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Visual Correction System",
+      "module_id": 36,
+      "nominal_result_sha256": "ebb03b50741f1d44f72ef728b98344806e3934d931f049b89499b3302ff3b10c",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.802105,
+        "median_ms": 0.71005,
+        "min_ms": 0.685367,
+        "p95_ms": 0.792945,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "media_visual"
+    },
+    {
+      "directory": "37_training_and_evaluation",
+      "evidence_dir": "modules/37_training_and_evaluation/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Training and Evaluation",
+      "module_id": 37,
+      "nominal_result_sha256": "b2a5548d6c3a990edc3b44a90ad9c49a4f2d717bc9189bd79931994b2b213970",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.936159,
+        "median_ms": 0.703431,
+        "min_ms": 0.653581,
+        "p95_ms": 0.870484,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "model_compute"
+    },
+    {
+      "directory": "38_preview_designer",
+      "evidence_dir": "modules/38_preview_designer/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Preview Designer",
+      "module_id": 38,
+      "nominal_result_sha256": "493d00d2db3f8e6b4431bb01202f0ce52685986d61510beb64c1c3f56902ba50",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.775051,
+        "median_ms": 0.647331,
+        "min_ms": 0.635307,
+        "p95_ms": 0.715865,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "interfaces_services"
+    },
+    {
+      "directory": "39_core_studio",
+      "evidence_dir": "modules/39_core_studio/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Core Studio",
+      "module_id": 39,
+      "nominal_result_sha256": "4ee7d011fa0760ba0ac8e5a1e1023767d3ecd439c05d76c1caa18fe7a4871434",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 1.260086,
+        "median_ms": 0.694179,
+        "min_ms": 0.644087,
+        "p95_ms": 0.906825,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "interfaces_services"
+    },
+    {
+      "directory": "40_repository_context_engine",
+      "evidence_dir": "modules/40_repository_context_engine/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 7,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Repository Context Engine",
+      "module_id": 40,
+      "nominal_result_sha256": "206a61237606bb860865f077a0fb6074b878834ad8cb10b744c588852feb8eeb",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.890775,
+        "median_ms": 0.722604,
+        "min_ms": 0.674838,
+        "p95_ms": 0.838617,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "sense_context"
+    },
+    {
+      "directory": "41_knowledge_repository",
+      "evidence_dir": "modules/41_knowledge_repository/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 11,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Knowledge Repository",
+      "module_id": 41,
+      "nominal_result_sha256": "dcd078d05f85e9ff9ac92990ed2f02914e10ad92d879aabb249dfcda8754f50b",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.792118,
+        "median_ms": 0.708634,
+        "min_ms": 0.683043,
+        "p95_ms": 0.752292,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "sense_context"
+    },
+    {
+      "directory": "42_transition_plane",
+      "evidence_dir": "modules/42_transition_plane/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Transition Plane",
+      "module_id": 42,
+      "nominal_result_sha256": "a4e9edac430f8bba7a5d0934e20f650685fad68ac1e0717a2f2d0e3a5842195e",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.918693,
+        "median_ms": 0.689377,
+        "min_ms": 0.651448,
+        "p95_ms": 0.83661,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "translation_interop"
+    },
+    {
+      "directory": "43_release_plane",
+      "evidence_dir": "modules/43_release_plane/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Release Plane",
+      "module_id": 43,
+      "nominal_result_sha256": "11e6727926087623f3ba878d9d53e468ddac5eaab3e5ee07114f92c0425d6b0e",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.756277,
+        "median_ms": 0.66732,
+        "min_ms": 0.64012,
+        "p95_ms": 0.746635,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "release_delivery"
+    },
+    {
+      "directory": "44_capability_and_security_plane",
+      "evidence_dir": "modules/44_capability_and_security_plane/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Capability and Security Plane",
+      "module_id": 44,
+      "nominal_result_sha256": "3e10e894bceed8aba5b9759ca322ec8fcdb261c409b9405cfc9773b7ce5dbf42",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.853417,
+        "median_ms": 0.670623,
+        "min_ms": 0.632191,
+        "p95_ms": 0.802355,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "security_authorization"
+    },
+    {
+      "directory": "45_localization_and_large_file_plane",
+      "evidence_dir": "modules/45_localization_and_large_file_plane/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Localization and Large File Plane",
+      "module_id": 45,
+      "nominal_result_sha256": "83e07e913161334625845558c7004528c288a4fa9e9e2e63f29dd8c3518c7f38",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.727654,
+        "median_ms": 0.663633,
+        "min_ms": 0.63918,
+        "p95_ms": 0.701434,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "interfaces_services"
+    },
+    {
+      "directory": "46_air_gap_certification_and_installer_plane",
+      "evidence_dir": "modules/46_air_gap_certification_and_installer_plane/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Air Gap Certification and Installer Plane",
+      "module_id": 46,
+      "nominal_result_sha256": "f245036e1f5797ddf33b7f9bfcca70814cb8409a92c448cd33ea7e9aa004ccda",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.955508,
+        "median_ms": 0.720457,
+        "min_ms": 0.650767,
+        "p95_ms": 0.803467,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "release_delivery"
+    },
+    {
+      "directory": "47_chatbot",
+      "evidence_dir": "modules/47_chatbot/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 7,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Chatbot",
+      "module_id": 47,
+      "nominal_result_sha256": "5e074550b3309f9cf4728713c25d3b74b3bd1c3da00191fc67dd7661e35932cd",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.768377,
+        "median_ms": 0.667464,
+        "min_ms": 0.643197,
+        "p95_ms": 0.719918,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "intent_reasoning"
+    },
+    {
+      "directory": "48_answer_modes_and_specialized_roles",
+      "evidence_dir": "modules/48_answer_modes_and_specialized_roles/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 24,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Answer Modes and Specialized Roles",
+      "module_id": 48,
+      "nominal_result_sha256": "46b3edeefb16dcd6b1b91ce53d1851d45449de6a81551f3ffcbf985cef6b3d65",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.823113,
+        "median_ms": 0.684818,
+        "min_ms": 0.65163,
+        "p95_ms": 0.720039,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "intent_reasoning"
+    },
+    {
+      "directory": "49_action_cards",
+      "evidence_dir": "modules/49_action_cards/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Action Cards",
+      "module_id": 49,
+      "nominal_result_sha256": "8841056e2ff0da2556e6b085f2858712e811fa28225850b3a6c87bae1625d419",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.77098,
+        "median_ms": 0.68884,
+        "min_ms": 0.661346,
+        "p95_ms": 0.740222,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "data_evidence"
+    },
+    {
+      "directory": "50_diff_patch_and_review",
+      "evidence_dir": "modules/50_diff_patch_and_review/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Diff Patch and Review",
+      "module_id": 50,
+      "nominal_result_sha256": "6de860b6b058120fb03c0ecab074213095ca5bc948f53d7b921f029de78d4934",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.771597,
+        "median_ms": 0.677683,
+        "min_ms": 0.655111,
+        "p95_ms": 0.707995,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "governance_control"
+    },
+    {
+      "directory": "51_repository_retrieval_and_memory",
+      "evidence_dir": "modules/51_repository_retrieval_and_memory/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 7,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Repository Retrieval and Memory",
+      "module_id": 51,
+      "nominal_result_sha256": "03475a6677315d480bd2063730bb95dc2cac61231fd0dbe15f514fa2200f12bb",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 3.731345,
+        "median_ms": 0.845454,
+        "min_ms": 0.711966,
+        "p95_ms": 0.933611,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "sense_context"
+    },
+    {
+      "directory": "52_evaluation_and_content_defense",
+      "evidence_dir": "modules/52_evaluation_and_content_defense/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Evaluation and Content Defense",
+      "module_id": 52,
+      "nominal_result_sha256": "0b2c9308161b14dc8ba97f55203a28ba1f3be3fcb56fb4cad56c643c96a8906e",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.83799,
+        "median_ms": 0.661695,
+        "min_ms": 0.636972,
+        "p95_ms": 0.809828,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "security_authorization"
+    },
+    {
+      "directory": "53_operations_plane",
+      "evidence_dir": "modules/53_operations_plane/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Operations Plane",
+      "module_id": 53,
+      "nominal_result_sha256": "c89448e5229065be2f1bb36e52467202764c02aa57095aad5719d95e5a374939",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 1.031421,
+        "median_ms": 0.647373,
+        "min_ms": 0.621253,
+        "p95_ms": 0.851056,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "operations_recovery"
+    },
+    {
+      "directory": "54_local_model_provider_and_health",
+      "evidence_dir": "modules/54_local_model_provider_and_health/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 9,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Local Model Provider and Health",
+      "module_id": 54,
+      "nominal_result_sha256": "350a69a6a117be14aec8f189762ccd81ab874f01eec73717d5af89dd0ad74639",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.835271,
+        "median_ms": 0.694753,
+        "min_ms": 0.658783,
+        "p95_ms": 0.786444,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "model_compute"
+    },
+    {
+      "directory": "55_capability_manifests_and_permissions",
+      "evidence_dir": "modules/55_capability_manifests_and_permissions/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Capability Manifests and Permissions",
+      "module_id": 55,
+      "nominal_result_sha256": "4117edb709f8ff884cb26345623304749029d2e26dc6a7f46e67ec145c1f131d",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.693177,
+        "median_ms": 0.647077,
+        "min_ms": 0.630636,
+        "p95_ms": 0.685657,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "security_authorization"
+    },
+    {
+      "directory": "56_job_queue_workers_and_sandboxes",
+      "evidence_dir": "modules/56_job_queue_workers_and_sandboxes/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Job Queue Workers and Sandboxes",
+      "module_id": 56,
+      "nominal_result_sha256": "019af644515eaad8a842dd7d2300653e59d8f913dbf3088728841bd38d199b39",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.820791,
+        "median_ms": 0.726808,
+        "min_ms": 0.709955,
+        "p95_ms": 0.813964,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "orchestration"
+    },
+    {
+      "directory": "57_translation_build_test_and_evaluation_jobs",
+      "evidence_dir": "modules/57_translation_build_test_and_evaluation_jobs/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Translation Build Test and Evaluation Jobs",
+      "module_id": 57,
+      "nominal_result_sha256": "51666bfe84da795c924047bb3d4363fde6d145900a33ffb17986bfc1c7d25a57",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.934749,
+        "median_ms": 0.768396,
+        "min_ms": 0.726005,
+        "p95_ms": 0.863456,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "orchestration"
+    },
+    {
+      "directory": "58_indexing_storage_resources_logs_and_recovery",
+      "evidence_dir": "modules/58_indexing_storage_resources_logs_and_recovery/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Indexing Storage Resources Logs and Recovery",
+      "module_id": 58,
+      "nominal_result_sha256": "f9be4aaf1a7bfa5d1798d10d9d5cbe13aeb9b4901d8c639a7dfac3782985a8c6",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.847875,
+        "median_ms": 0.681714,
+        "min_ms": 0.655723,
+        "p95_ms": 0.806797,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "operations_recovery"
+    },
+    {
+      "directory": "59_shell",
+      "evidence_dir": "modules/59_shell/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Shell",
+      "module_id": 59,
+      "nominal_result_sha256": "7d5f874ff4f504d326ce1a1ef1e82a92dea3843c503d4be7a4754d37468803d0",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.7512,
+        "median_ms": 0.652845,
+        "min_ms": 0.626518,
+        "p95_ms": 0.691743,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "operations_recovery"
+    },
+    {
+      "directory": "60_worker",
+      "evidence_dir": "modules/60_worker/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Worker",
+      "module_id": 60,
+      "nominal_result_sha256": "cc3b725670a7c9aeaa936e1e12ebb7d66645ab885da631b115767aaae4698082",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 1.203265,
+        "median_ms": 0.738457,
+        "min_ms": 0.706785,
+        "p95_ms": 0.898751,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "orchestration"
+    },
+    {
+      "directory": "61_popup_runner",
+      "evidence_dir": "modules/61_popup_runner/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Popup Runner",
+      "module_id": 61,
+      "nominal_result_sha256": "defb8b74102f521cb3a5ca5dc30f4b8d69aac4b54c5aff62d756720ad2a3461d",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.928958,
+        "median_ms": 0.673611,
+        "min_ms": 0.651784,
+        "p95_ms": 0.732671,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "interfaces_services"
+    },
+    {
+      "directory": "62_landon_integration_and_run_all",
+      "evidence_dir": "modules/62_landon_integration_and_run_all/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 5,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "LANDON Integration and Run All",
+      "module_id": 62,
+      "nominal_result_sha256": "cb127f637928fe39f6bedd570af5dc98cadc39997a30280728bcccbc19300682",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 2.000791,
+        "median_ms": 0.903728,
+        "min_ms": 0.711503,
+        "p95_ms": 1.28344,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "orchestration"
+    },
+    {
+      "directory": "63_sandbox_and_offline_runtime",
+      "evidence_dir": "modules/63_sandbox_and_offline_runtime/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Sandbox and Offline Runtime",
+      "module_id": 63,
+      "nominal_result_sha256": "2e8db82c94e265f8653ffa1e60977429e80f50ac1171e7b2d4801ba3ba38e5bd",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 1.385976,
+        "median_ms": 0.693411,
+        "min_ms": 0.64729,
+        "p95_ms": 1.21491,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "security_authorization"
+    },
+    {
+      "directory": "64_training_desktop_and_android_workers",
+      "evidence_dir": "modules/64_training_desktop_and_android_workers/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 1,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Training Desktop and Android Workers",
+      "module_id": 64,
+      "nominal_result_sha256": "e1520473fea875684964703c2a1b44ff33c4a15a11f069ac121eed575a6bbe76",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 0.934106,
+        "median_ms": 0.748438,
+        "min_ms": 0.666789,
+        "p95_ms": 0.861148,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "model_compute"
+    },
+    {
+      "directory": "65_sandbox_engine",
+      "evidence_dir": "modules/65_sandbox_engine/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 16,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Sandbox Engine",
+      "module_id": 65,
+      "nominal_result_sha256": "646c0d9854f55218297c2f4650b811bd6f4d31a81f6fec852c67db85594fd991",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 1.083366,
+        "median_ms": 0.763618,
+        "min_ms": 0.676084,
+        "p95_ms": 0.898341,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "security_authorization"
+    },
+    {
+      "directory": "66_terminal",
+      "evidence_dir": "modules/66_terminal/evidence/open_gate_2_1_0",
+      "gates": {
+        "L4": {
+          "availability": "OPEN",
+          "production_domain_certification": "NOT_CLAIMED",
+          "reference_profile": "PASS"
+        },
+        "L5": {
+          "availability": "OPEN",
+          "executable_legacy_runtime_profile": "UNAVAILABLE",
+          "source_differential_profile": "PASS"
+        },
+        "L6": {
+          "availability": "OPEN",
+          "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+          "reference_domain_replay": "PASS"
+        },
+        "L7": {
+          "availability": "OPEN",
+          "default_network_deny": "PASS",
+          "reference_security": "PASS"
+        },
+        "L8": {
+          "availability": "OPEN",
+          "production_domain_performance": "NOT_CLAIMED",
+          "reference_performance": "PASS"
+        }
+      },
+      "legacy_source_differential": {
+        "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+        "legacy_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "legacy_files_parsed": 31,
+        "legacy_runtime_available": false,
+        "mapped_category_count": 6,
+        "new_categories": {
+          "evidence": true,
+          "execution": true,
+          "identity": true,
+          "policy": true,
+          "state": true,
+          "tests": true
+        },
+        "observed_category_count": 6,
+        "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+        "static_mapping_coverage": 1.0,
+        "status": "PASS"
+      },
+      "module": "Terminal",
+      "module_id": 66,
+      "nominal_result_sha256": "a8fc0c9a10d5f862119afdae3dfa2e3a324820006d70d5f9b2b76f1779c2d199",
+      "performance": {
+        "deterministic_result_hash": true,
+        "iterations": 12,
+        "max_ms": 1.127074,
+        "median_ms": 0.718421,
+        "min_ms": 0.658008,
+        "p95_ms": 0.830498,
+        "schema": "QUORUM-REFERENCE-PERFORMANCE/2.1",
+        "scope": "local reference domain runtime; not production-domain performance"
+      },
+      "plane": "interfaces_services"
+    }
+  ],
+  "repository_gates": {
+    "L4": {
+      "availability": "OPEN",
+      "certification_scope": "REFERENCE_DOMAIN_FIXTURE_TESTED",
+      "reference_profile": "PASS"
+    },
+    "L5": {
+      "availability": "OPEN",
+      "runtime_differential_profile": "UNAVAILABLE_NO_LEGACY_EXECUTABLE",
+      "source_differential_profile": "PASS"
+    },
+    "L6": {
+      "availability": "OPEN",
+      "native_lctl_replay": "PASS_EVIDENCED_IN_2.0.1",
+      "reference_domain_replay": "PASS"
+    },
+    "L7": {
+      "availability": "OPEN",
+      "native_failure_recovery": "PASS_EVIDENCED_IN_2.0.1",
+      "reference_security": "PASS"
+    },
+    "L8": {
+      "availability": "OPEN",
+      "native_lctl_benchmark": "PASS_EVIDENCED_IN_2.0.1",
+      "production_domain_performance": "NOT_CLAIMED",
+      "reference_performance": "PASS"
+    },
+    "L9": {
+      "availability": "OPEN",
+      "distributed_simulator_profile": "PASS_BASED_ON_2.0.1_NATIVE_EVIDENCE",
+      "local_reference_operational_profile": "PASS",
+      "physical_distributed_profile": "CONDITIONAL_EXTERNAL_AUTHORITY",
+      "production_domain_operational_certification": "NOT_CLAIMED"
+    }
+  },
+  "scenarios": [
+    {
+      "chain": [
+        {
+          "module": "Orchestrator",
+          "plane": "orchestration",
+          "result_sha256": "f68ab410015021472df21af05eb7e2e18ab72f062c345b1016c510f8baa2bb97",
+          "status": "PASS"
+        },
+        {
+          "module": "Operations Plane",
+          "plane": "operations_recovery",
+          "result_sha256": "50395ced0922fe2b9be0899cce21df2373937c2a86f6ed9c442657d6bba38aa9",
+          "status": "PASS"
+        },
+        {
+          "module": "Diff Patch and Review",
+          "plane": "governance_control",
+          "result_sha256": "3bebd0303378f52e34958ca1e6f7c641d6719bba88f3d8c76fed85ac2c4b96f5",
+          "status": "PASS"
+        }
+      ],
+      "exact_replay": true,
+      "plane_chain": [
+        "orchestration",
+        "operations_recovery",
+        "governance_control"
+      ],
+      "scenario": "failure_recovery",
+      "scope": "local/offline reference operational profile",
+      "status": "PASS"
+    },
+    {
+      "chain": [
+        {
+          "module": "Observer",
+          "plane": "sense_context",
+          "result_sha256": "1ca87aeaa91d34b129e3094221bc325d398a552948ef8db798100195bb5619ce",
+          "status": "PASS"
+        },
+        {
+          "module": "Equation Operator Bank",
+          "plane": "model_compute",
+          "result_sha256": "b3249bdd10ca7ca8d3f8f0d491a64ec0a32ec3f0d3e71e2489d61bd8588553f6",
+          "status": "PASS"
+        },
+        {
+          "module": "Mesh Geometry",
+          "plane": "media_visual",
+          "result_sha256": "23f9a095158259d60740d55e9047a24a16ec2609d3bd456e451475613561e937",
+          "status": "PASS"
+        },
+        {
+          "module": "Release Plane",
+          "plane": "release_delivery",
+          "result_sha256": "99938fa22e328bc3131e4ae3feb16e43bbfedaf4f702757f5d59e4520af537ee",
+          "status": "PASS"
+        }
+      ],
+      "exact_replay": true,
+      "plane_chain": [
+        "sense_context",
+        "model_compute",
+        "media_visual",
+        "release_delivery"
+      ],
+      "scenario": "media",
+      "scope": "local/offline reference operational profile",
+      "status": "PASS"
+    },
+    {
+      "chain": [
+        {
+          "module": "Observer",
+          "plane": "sense_context",
+          "result_sha256": "e1866e805ec1e41ee7a362a09fcbbeb2fbaa4f1d61d6439a503d04f4993f697c",
+          "status": "PASS"
+        },
+        {
+          "module": "Compass",
+          "plane": "intent_reasoning",
+          "result_sha256": "523e40194d7d54ca1de249c77a3fe19cac4459be895345aa0032bab4082663ab",
+          "status": "PASS"
+        },
+        {
+          "module": "Orchestrator",
+          "plane": "orchestration",
+          "result_sha256": "7bdd9b19e3087b9f230dfa9cf6cb378e9199e9b6f7151608801f856a4f4250a3",
+          "status": "PASS"
+        },
+        {
+          "module": "Diff Patch and Review",
+          "plane": "governance_control",
+          "result_sha256": "7def1915bed4c2169e19814d30dfc55c1996ec761eaa0f7f8168b6a7c7d42e6c",
+          "status": "PASS"
+        }
+      ],
+      "exact_replay": true,
+      "plane_chain": [
+        "sense_context",
+        "intent_reasoning",
+        "orchestration",
+        "governance_control"
+      ],
+      "scenario": "repository_intelligence",
+      "scope": "local/offline reference operational profile",
+      "status": "PASS"
+    },
+    {
+      "chain": [
+        {
+          "module": "Plug",
+          "plane": "interfaces_services",
+          "result_sha256": "b1ab0dcf64957289981b828e243604b60b0453681a54add7b51946c4eff32aca",
+          "status": "PASS"
+        },
+        {
+          "module": "Chair",
+          "plane": "security_authorization",
+          "result_sha256": "50cd501def7962a29de84051d9687b84c4b1ed723afbaab79aaa476a3a393e73",
+          "status": "PASS"
+        },
+        {
+          "module": "Orchestrator",
+          "plane": "orchestration",
+          "result_sha256": "4fc0738d369a165fd64cb68e163884b52b11e9c00d3fba674f0534b5ef923602",
+          "status": "PASS"
+        },
+        {
+          "module": "Operations Plane",
+          "plane": "operations_recovery",
+          "result_sha256": "9f88e251c8bc3e69f144f20daf3bb2c9b4b9de1c5115cbec532b1abd3a4602b3",
+          "status": "PASS"
+        }
+      ],
+      "exact_replay": true,
+      "plane_chain": [
+        "interfaces_services",
+        "security_authorization",
+        "orchestration",
+        "operations_recovery"
+      ],
+      "scenario": "secure_execution",
+      "scope": "local/offline reference operational profile",
+      "status": "PASS"
+    },
+    {
+      "chain": [
+        {
+          "module": "JA Adapter",
+          "plane": "translation_interop",
+          "result_sha256": "0add33ed0b7b6a4750586367bc7543a2a86412b217692a0d8a3ac956c4293552",
+          "status": "PASS"
+        },
+        {
+          "module": "Orchestrator",
+          "plane": "orchestration",
+          "result_sha256": "60f166c2f4474b78bdbffe5cdc942bfb4a4a1cf7e2a28a458b063b17f82d082f",
+          "status": "PASS"
+        },
+        {
+          "module": "Release Plane",
+          "plane": "release_delivery",
+          "result_sha256": "c46f05361a501a5c41ede6f4ea3a24e6764ecf42aa671b750e52e5bb8cf47827",
+          "status": "PASS"
+        }
+      ],
+      "exact_replay": true,
+      "plane_chain": [
+        "translation_interop",
+        "orchestration",
+        "release_delivery"
+      ],
+      "scenario": "translation_build",
+      "scope": "local/offline reference operational profile",
+      "status": "PASS"
+    }
+  ],
+  "schema": "QUORUM-L4-L9-OPEN-GATE-MATRIX/2.1",
+  "version": "2.1.0"
+}

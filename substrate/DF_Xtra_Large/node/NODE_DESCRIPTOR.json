@@ -1,0 +1,122 @@
+{
+  "adapter": {
+    "abi": "PA-LCTL/TARGET_ADAPTER/1",
+    "class": "XLargeNodeAdapter",
+    "module": "adapter/dfabric/nodes.py",
+    "native_gate_set": [],
+    "version": "1.0.0"
+  },
+  "backend_policy": "none",
+  "bounds": {
+    "cli_step_budget": 1000000,
+    "instruction_ceiling": 65535,
+    "instructions_per_row": 3,
+    "max_rows_per_lowering": 21843,
+    "prologue_epilogue": 4,
+    "qubits": 0,
+    "ram_per_live_vm_bytes_measured": 60000000,
+    "segmentation": "a bundle longer than max_rows_per_lowering is executed as a chain of segments; each segment starts from the previous accumulator",
+    "shots": 1
+  },
+  "capabilities": [
+    "classical",
+    "row_sequence_witness",
+    "quorum_vm",
+    "lctlc/1.0"
+  ],
+  "container": "DF_Xtra_Large",
+  "df_release": "DF-PA21.2-1.0.0",
+  "domain_id": "D_QVM",
+  "execution_label": "CLASSICAL_HOSTED_VM_BOUNDED_EXECUTION",
+  "failure_domain": "FD_XLARGE",
+  "feature_classes": {
+    "CX": "UNSUPPORTED",
+    "ENTANGLE_LINK": "UNSUPPORTED",
+    "H": "UNSUPPORTED",
+    "MEASURE": "UNSUPPORTED",
+    "PREP0": "UNSUPPORTED",
+    "TELEPORT": "UNSUPPORTED",
+    "bounded_termination": "SUPPORTED",
+    "classical_face_execution": "UNSUPPORTED",
+    "compile_from_source": "SUPPORTED",
+    "declared_step_budget": "SUPPORTED",
+    "deterministic_replay": "SUPPORTED",
+    "external_column_verifier_jvm": "SUPPORTED_WITH_LIMITS",
+    "image_signing": "SUPPORTED",
+    "independent_image_verification": "UNSUPPORTED",
+    "integer_arithmetic": "SUPPORTED",
+    "quantum_face_execution": "UNSUPPORTED",
+    "row_sequence_witness": "SUPPORTED_WITH_LIMITS",
+    "segmented_row_sequence_witness": "SUPPORTED",
+    "signature_checked_execution": "SUPPORTED",
+    "state_hash_trace": "SUPPORTED",
+    "trust_store_rollback_floor": "SUPPORTED",
+    "wide_word_arithmetic_1048576": "SUPPORTED"
+  },
+  "federation_id": "DF0",
+  "group_id": "G_QVM1",
+  "network_policy": "deny",
+  "node_id": "N_XLARGE",
+  "physical": {
+    "PHYSICAL_DISTRIBUTED_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY",
+    "PHYSICAL_PARALLEL_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY",
+    "physical_distributed": false,
+    "physical_parallel": false,
+    "physical_qpu": false,
+    "quantum_boundary": "QUANTUM_BOUNDARY_NOT_CROSSED"
+  },
+  "requirements": [
+    "Python 3.10+",
+    "Java 21 runtime (bundled LCTL 1.6.1-RC1 column verifier; without it compile runs with --skip-lctl-verify and the result says so)",
+    "cryptography (optional; pure-Python Ed25519 fallback ships)",
+    "POSIX sh"
+  ],
+  "resource_limits": {
+    "bandwidth_bytes_per_tick": 1000000.0,
+    "cpu_slots": 1,
+    "ebit_budget": 0,
+    "memory_bytes": 60000000,
+    "qpu_slots": 0
+  },
+  "schema": "DF/NODE_DESCRIPTOR/1",
+  "self_reported": {
+    "blockers": [
+      "physical distributed L9 subprofile CONDITIONAL_EXTERNAL_AUTHORITY (authenticated external adapter authority and physical receipts)",
+      "production-domain fidelity and executable legacy-runtime equivalence not claimed (B001-B003)",
+      "QVM production 5.0.0 gate PARTIAL: not self-hosted/native, key custody unaudited, no cross-platform, no 72-hour soak, no independent rebuild/replay",
+      "world QP3/QP4/WQ4/AW4/production fabric BLOCKED"
+    ],
+    "source": "README_START_HERE.md, CLAIM_BOUNDARY.md, vm/evidence/QUALIFICATION_REPORT.md, vm/world/spec/WORLD_CLAIM_BOUNDARY.md"
+  },
+  "target_id": "quorum-vm-5.0.0-candidate-local",
+  "trust_domain": "LOCAL_TRUSTED",
+  "vm": {
+    "guest_dialect": "LCTLC/1.0 (COLUMNED LCTL QVM Profile 1; vm-lane REG rows)",
+    "guest_ext": ".lctlc",
+    "image_format": "QBRIM 2 (canonical JSON payload + Ed25519 signature; key_id trust store; rollback floor)",
+    "isa": {
+      "arith_modes": [
+        "modular",
+        "checked",
+        "saturating",
+        "exact"
+      ],
+      "image_version": "QBRIM 2",
+      "memory_bytes": 4096,
+      "name": "QVM ISA 1 / ABI 2 (semantic world ABI 3)",
+      "opcodes": 24,
+      "registers": 16,
+      "services": "0-3 legacy + 16-47 world",
+      "stack_words": 256,
+      "word_bits": 1048576
+    },
+    "lineage": "QUORUM_VM",
+    "name": "QUORUM Generic VM 5.0.0-candidate (hosted Python reference VM, ISA 1 / ABI 2) inside the QUORUM LCTL/MSSL L4-L9 Open 2.1.0 candidate",
+    "package_dir": "QUORUM_LCTL_MSSL_2.1.0",
+    "payload_tree_sha256": "128c79d4e4ba6550d324267002814927163ba03099e910f8e0737fcec0779a9c",
+    "result_register": "R0",
+    "runtime_contract": "QVM ISA 1 (24 opcodes) / ABI 2; PC + 16 registers up to 1,048,576 bits; 4096-byte memory; 256-word stack; QBRIM 2 signed images; step budget default 1,000,000; program <= 65,535 instructions",
+    "source_zip_sha256": "cea7cb3704c24e89cc95470b721faaf38aa54ac597530a50e5a9ee0700e8d4ca"
+  },
+  "worker_id": "W_XLARGE"
+}

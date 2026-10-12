@@ -1,0 +1,71 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "e7bb133122f0c519976b861ef5c1cd8fe5078039c51eaf2b405c6c88ab3ca7c8",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (VERSION_MIGRATION, REFERENCE_PRECISION, CAUSAL_REPLAY, NARRATIVE_KNOWLEDGE, RESOURCE_STRESS, MATHEMATICAL_VALIDATION, AUTONOMOUS_HISTORY) plus Stage 16 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "AUTONOMOUS_HISTORY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "CAUSAL_REPLAY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "MATHEMATICAL_VALIDATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "NARRATIVE_KNOWLEDGE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "REFERENCE_PRECISION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "RESOURCE_STRESS": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "VERSION_MIGRATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-16",
+    "GW-41",
+    "GW-77",
+    "GW-80"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Penteract extended-state schema may encode world-age/history relevance only through explicitly typed components or adapters, never by overloading canonical spatial coordinates.",
+  "requirement_id": "RCPW-16-R25",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 16,
+  "stage_title": "Penteract World Coordinate Model",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "VERSION_MIGRATION",
+    "REFERENCE_PRECISION",
+    "CAUSAL_REPLAY",
+    "NARRATIVE_KNOWLEDGE",
+    "RESOURCE_STRESS",
+    "MATHEMATICAL_VALIDATION",
+    "AUTONOMOUS_HISTORY"
+  ],
+  "workflow_file": "16_PENTERACT_WORLD_COORDINATE_MODEL/257_RCPW_16_R25_PENTERACT_EXTENDED_STATE_SCHEMA_MAY_ENCODE_WORLD_AGE_HISTORY_RELEVANCE_ONLY_THROUGH_E.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

@@ -1,0 +1,47 @@
+ja source 0.3
+module suite49.action_cards.preconditions
+use Interface
+policy no_network
+
+interface ActionCardPreconditions {
+    state selected_action: Text? = null
+    state validating_preconditions: Flag = false
+    derived can_select_action = not validating_preconditions
+    derived can_validate_preconditions = selected_action != null and not validating_preconditions
+    component SOPHIA_PreconditionModel {
+        label "Interpret action preconditions and dependencies"
+        enabled bind can_validate_preconditions
+        accessibility role button name "Interpret preconditions for selected action"
+        action interpret_action_preconditions requires admin.action:approved
+    }
+    component CHARLOTTE_PreconditionGate {
+        label "Validate required state, freshness, policy, and approvals"
+        enabled bind can_validate_preconditions
+        accessibility role button name "Validate preconditions for selected action"
+        action validate_action_preconditions requires admin.action:approved
+    }
+    component LANDON_PreconditionBind {
+        label "Bind canonical precondition status"
+        enabled bind can_validate_preconditions
+        accessibility role button name "Bind preconditions to selected action card"
+        action bind_action_preconditions requires admin.action:approved
+    }
+    component Professor_PreconditionGuide {
+        label "Explain satisfied, failed, and unresolved preconditions"
+        enabled bind can_select_action
+        accessibility role button name "Explain selected action preconditions"
+        action explain_action_preconditions requires admin.action:approved
+    }
+    component Podium_PreconditionEvidence {
+        label "View precondition evidence and freshness"
+        enabled bind can_validate_preconditions
+        accessibility role button name "View selected action precondition evidence"
+        action show_precondition_evidence requires admin.action:approved
+    }
+    component PreconditionsViewport {
+        embed portal.scene "action_card_preconditions"
+        motion bind timeline.precondition_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface ActionCardPreconditions

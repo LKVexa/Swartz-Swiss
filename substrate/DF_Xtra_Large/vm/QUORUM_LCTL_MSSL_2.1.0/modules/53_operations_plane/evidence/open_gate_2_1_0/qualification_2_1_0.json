@@ -1,0 +1,42 @@
+{
+  "gate_availability": {
+    "L4": "OPEN",
+    "L5": "OPEN",
+    "L6": "OPEN",
+    "L7": "OPEN",
+    "L8": "OPEN"
+  },
+  "module": "Operations Plane",
+  "module_id": 53,
+  "plane": "operations_recovery",
+  "production_certification_claimed": false,
+  "profile_results": {
+    "L4": {
+      "availability": "OPEN",
+      "production_domain_certification": "NOT_CLAIMED",
+      "reference_profile": "PASS"
+    },
+    "L5": {
+      "availability": "OPEN",
+      "executable_legacy_runtime_profile": "UNAVAILABLE",
+      "source_differential_profile": "PASS"
+    },
+    "L6": {
+      "availability": "OPEN",
+      "native_lctl_replay": "EVIDENCE_UNRESOLVED",
+      "reference_domain_replay": "PASS"
+    },
+    "L7": {
+      "availability": "OPEN",
+      "default_network_deny": "PASS",
+      "reference_security": "PASS"
+    },
+    "L8": {
+      "availability": "OPEN",
+      "production_domain_performance": "NOT_CLAIMED",
+      "reference_performance": "PASS"
+    }
+  },
+  "schema": "QUORUM-MODULE-OPEN-GATE-QUALIFICATION/2.1",
+  "strongest_open_profile": "L8_REFERENCE_PERFORMANCE"
+}

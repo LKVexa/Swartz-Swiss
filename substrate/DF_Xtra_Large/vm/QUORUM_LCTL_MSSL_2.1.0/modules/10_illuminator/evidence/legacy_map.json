@@ -1,0 +1,34 @@
+{
+  "suite_id": 10,
+  "suite_name": "Illuminator",
+  "plane": "intent_reasoning",
+  "legacy_sha256": "e24244dcd431c5aaa104b08599131c57bdefcf35e06f85590bd982885421a2b1",
+  "legacy_root": "legacy/source_repository/Illuminator",
+  "files": [
+    {
+      "path": "10_illuminator_assumptions.jaui",
+      "sha256": "ea40f04d04ff74b6cec21d09d11768e17e72e6945851c87a6bdb9d584f023916",
+      "bytes": 1066
+    },
+    {
+      "path": "10_illuminator_diagnostics.jaui",
+      "sha256": "3bbab57fc5faedad735260f739263570631edb08a114eb5f5c30dbb6a4476065",
+      "bytes": 1146
+    },
+    {
+      "path": "10_illuminator_findings.jaui",
+      "sha256": "9801f229e53f5a34677c6454ce11ae2280990a1d012796820a1dde7ea6cb17e2",
+      "bytes": 997
+    },
+    {
+      "path": "10_illuminator_reports.jaui",
+      "sha256": "59115647009ef66bb673db86e9fd9074065c2ddffd82b2867f9e16043f0cd389",
+      "bytes": 1039
+    },
+    {
+      "path": "README.md",
+      "sha256": "19c830ba1d5b47e2889c3965e2a9c485d28a01469c2eaff3cb7b0ee44e549c63",
+      "bytes": 1870
+    }
+  ]
+}

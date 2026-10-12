@@ -1,0 +1,303 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 17,
+    "PARTIAL": 12,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Gameplay-significant entities are not deleted because of distance or invisibility.",
+      "requirement_id": "RCPW-05-R01",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Identity, ownership, health, inventory, relationships, goals, schedule, and causal obligations survive abstraction.",
+      "requirement_id": "RCPW-05-R02",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Creation, destruction, death, consumption, transfer, and retirement are explicit world events rather than streaming side effects.",
+      "requirement_id": "RCPW-05-R03",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Parent/child and container/member relationships remain referentially valid through every representation transition.",
+      "requirement_id": "RCPW-05-R04",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rehydration cannot duplicate or fork an entity.",
+      "requirement_id": "RCPW-05-R05",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-run persistence is verifiable across save/load, crash recovery, and repeated folding.",
+      "requirement_id": "RCPW-05-R06",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Persistent identities survive region migration, schema migration, save migration, and authority-well transfer.",
+      "requirement_id": "RCPW-05-R07",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Tombstones prevent resurrection from stale caches, stale saves, or delayed remote messages.",
+      "requirement_id": "RCPW-05-R08",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ownership transfers use compare-and-swap or equivalent transactional guards against double ownership.",
+      "requirement_id": "RCPW-05-R09",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Entity histories remain queryable after retirement/destruction according to retention policy.",
+      "requirement_id": "RCPW-05-R10",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Entity persistence includes freshness/revision semantics so stale abstract copies cannot overwrite newer canonical state.",
+      "requirement_id": "RCPW-05-R11",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Region/shell migration is identity-neutral and does not create ownership duplication when an entity crosses world partitions.",
+      "requirement_id": "RCPW-05-R12",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Persistent state distinguishes exact, aggregated, reconstructed, inferred, and unknown fields with provenance.",
+      "requirement_id": "RCPW-05-R13",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Selective persistence policies are explicit for debris, tracks, corpses, temporary props, transient crowds, and other high-volume world evidence.",
+      "requirement_id": "RCPW-05-R14",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Entity persistence supports deterministic spawn provenance, including authored identity, generated seed lineage, parent template, and creation event.",
+      "requirement_id": "RCPW-05-R15",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Persistent entities expose capability/ownership tokens or equivalent guards for mutation by AI, combat, inventory, transport, and mission systems.",
+      "requirement_id": "RCPW-05-R16",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Cross-region migration preserves canonical route progress and does not teleport entities due solely to fold compression.",
+      "requirement_id": "RCPW-05-R17",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Entity reconstruction validates required assets/components and degrades to an explicit non-interactive placeholder only when canonical identity remains intact.",
+      "requirement_id": "RCPW-05-R18",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Persistence qualification includes high-volume churn of temporary evidence/entities without leaking memory, identities, tombstones, or ledger references.",
+      "requirement_id": "RCPW-05-R19",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Persistent entity ownership is transferable across partitions only through versioned lease/token or transactional ownership handoff.",
+      "requirement_id": "RCPW-05-R20",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Entity references crossing partitions use stable canonical IDs and never rely on process-local pointers as authority.",
+      "requirement_id": "RCPW-05-R21",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Worker failure cannot orphan canonical ownership; recovery deterministically re-establishes authoritative ownership from committed state.",
+      "requirement_id": "RCPW-05-R22",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "High-volume transient evidence uses bounded retention/compaction without reusing canonical identities in a way that breaks historical references.",
+      "requirement_id": "RCPW-05-R23",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Persistence qualification includes forced worker loss during migration, ownership transfer, materialization, save, and ledger commit.",
+      "requirement_id": "RCPW-05-R24",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Persistent entities may participate in birth/creation, aging, succession, inheritance, retirement, death/destruction, and legacy relationships with explicit causal provenance.",
+      "requirement_id": "RCPW-05-R25",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Entity lineage and role succession are distinct: a shopkeeper, sheriff, leader, household head, or organization role persists semantically even when the occupying entity changes.",
+      "requirement_id": "RCPW-05-R26",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Persistent identity never gets recycled after archival/death in a way that could collide with historical references.",
+      "requirement_id": "RCPW-05-R27",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Agent knowledge/memory is stored separately from omniscient canonical truth and may be incomplete, stale, false, or inferred according to explicit provenance.",
+      "requirement_id": "RCPW-05-R28",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-duration persistence qualification covers multiple generations/role successions, archival cycles, save migrations, and rehydration without identity collision.",
+      "requirement_id": "RCPW-05-R29",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "stage": 5,
+  "title": "Entity Persistence Authority"
+}

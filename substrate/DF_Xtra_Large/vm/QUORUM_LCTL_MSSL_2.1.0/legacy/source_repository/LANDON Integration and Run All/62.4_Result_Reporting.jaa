@@ -1,0 +1,35 @@
+ja source 0.3
+module suite62.landon_integration.result_reporting
+use Agent
+policy no_network
+
+agent LANDONResultReporting {
+    identity "landon_result_reporting"
+    role "sophia-charlotte-landon-professor-podium-orchestrator"
+    goal publish_evidence_backed_run_results when confidence >= 0.95
+    memory session retention 2h
+    budget steps 50 tools 5
+    tool LANDONCollectRunResults(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAAlignResultMeaning(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateResultEvidence(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainResultSet(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumPublishResultReport(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectRunResults
+        authorize SOPHIAAlignResultMeaning
+        authorize CHARLOTTEValidateResultEvidence
+        authorize ProfessorExplainResultSet
+        authorize PodiumPublishResultReport
+        continue when policy_allows
+        execute LANDONCollectRunResults("run_receipts_and_artifacts")
+        execute SOPHIAAlignResultMeaning("canonical_job_result_order")
+        execute CHARLOTTEValidateResultEvidence("aligned_result_set")
+        execute ProfessorExplainResultSet("validated_result_set")
+        execute PodiumPublishResultReport("result_report_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "LANDONResultReporting.mcrt"

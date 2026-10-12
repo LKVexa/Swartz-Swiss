@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "082",
+  "title": "Checkpoint Coordinator",
+  "source_file": "082_Checkpoint_Coordinator.md",
+  "source_sha256": "e39f434afc2a50d104ccde0aeaa2dcc0980428660fd4e28521e683c631c0b2af",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "DF0",
+  "integration_mechanism": "DF_Fabric",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

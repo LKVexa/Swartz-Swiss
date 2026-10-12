@@ -1,0 +1,38 @@
+deepml core 0.3
+module suite17.asset_observer.ui_assets
+policy deterministic
+policy no_network
+policy no_execute_unknown_code
+policy stable_ids
+policy preserve_provenance
+
+module LANDON {
+  fn inspect(x: f32[batch,elements,features]) -> f32[batch,elements,features] = identity(x)
+}
+module SOPHIA {
+  fn interpret(x: f32[batch,elements,features]) -> f32[batch,elements,features] = layer_norm(x)
+}
+module CHARLOTTE {
+  fn validate(x: f32[batch,elements,features]) -> f32[batch,elements,features] = identity(x)
+}
+module Professor {
+  fn explain(x: f32[batch,elements,features]) -> f32[batch,elements,features] = identity(x)
+}
+module Podium {
+  fn record(x: f32[batch,elements,features]) -> f32[batch,elements,features] = identity(x)
+}
+
+graph AssetObserverUIAssets train_infer {
+  source = input("approved_ui_asset_tensor")
+  source_shape = shape(source)
+  inspected = LANDON.inspect(source)
+  interpreted = SOPHIA.interpret(inspected)
+  validated = CHARLOTTE.validate(interpreted)
+  explanation = Professor.explain(validated)
+  evidence = Podium.record(explanation)
+  scene_state = bind ja.portal.scene::SceneState(evidence)
+  timeline_state = bind mcrt.portal.timeline::TimelineState(evidence)
+}
+checkpoint "asset_observer_ui_assets" every 1 steps
+infer AssetObserverUIAssets -> evidence
+

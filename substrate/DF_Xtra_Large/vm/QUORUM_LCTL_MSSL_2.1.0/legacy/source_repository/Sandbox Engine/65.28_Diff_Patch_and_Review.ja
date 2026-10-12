@@ -1,0 +1,14 @@
+ja source 0.3
+module suite65.sandbox_engine.diff_patch_review
+use Core
+policy no_network
+
+record SandboxDiffReviewPlan { id: Count, run_id: Text, repository_root: Text, baseline_hash: Text, target_hash: Text, path_scope: Text, unified_diff_hash: Text, impact: Text, risk: Text, rollback_ref: Text, approval_state: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_sandbox_diff_review(item: SandboxDiffReviewPlan) -> Result<SandboxDiffReviewPlan, Text> effects { pure } {
+    let normalized_scope: Text = item.path_scope
+    return Ok(SandboxDiffReviewPlan { id: item.id, run_id: item.run_id, repository_root: item.repository_root, baseline_hash: item.baseline_hash, target_hash: item.target_hash, path_scope: normalized_scope, unified_diff_hash: item.unified_diff_hash, impact: item.impact, risk: item.risk, rollback_ref: item.rollback_ref, approval_state: item.approval_state, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: SandboxDiffReviewPlan = SandboxDiffReviewPlan { id: 6528, run_id: "required_run_id", repository_root: "selected_work_repository", baseline_hash: "required_sha256_baseline", target_hash: "required_sha256_target", path_scope: "approved_relative_paths_only", unified_diff_hash: "required_diff_hash", impact: "bounded_declared_effects", risk: "review_required", rollback_ref: "verified_checkpoint", approval_state: "required_before_application", sophia: "interpret_change_evidence", charlotte: "inspect_diff_and_outputs", landon: "govern_review_and_integration", professor: "explain_action_card_and_diff", podium: "record_review_receipt" }
+let result = prepare_sandbox_diff_review(sample)
+assert result.is_ok == true
+emit json result

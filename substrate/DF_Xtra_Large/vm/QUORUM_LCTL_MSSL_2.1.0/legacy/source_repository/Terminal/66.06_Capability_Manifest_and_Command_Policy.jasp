@@ -1,0 +1,41 @@
+profile ja.security_policy
+source_level 0.3
+
+subsuite Terminal.T_06 CapabilityManifestCommandPolicy {
+    identity { suite = "66"; id = "T-06"; deterministic = true; autorun = false }
+
+    integrate {
+        Suite_13_Chair
+        Suite_55_Capability_Manifests_and_Permissions
+        Suite_59_Shell
+        Suite_65_SE_06_Capability_Manifest
+    }
+
+    accept { command_argv[]; parsed_command_ast; requested_capability_refs[]; command_policy_ref }
+    emit TerminalCapabilityManifest
+
+    procedure compile_minimum(command_argv, requested_capability_refs) {
+        policy = resolve_pinned_command_policy(command_policy_ref)
+        executable = resolve_exact_executable(command_argv[0], policy)
+        arguments = validate_argument_template(command_argv[1..], policy)
+        operations = derive_operations(parsed_command_ast)
+        capabilities = least_privilege_cover(operations, requested_capability_refs)
+
+        require executable.hash in policy.approved_executable_hashes
+        require arguments.valid
+        require capabilities.no_expansion
+        return seal(executable, arguments, operations, capabilities, policy.hash)
+    }
+
+    deny {
+        unrestricted_shell
+        undeclared_executable
+        undeclared_argument_shape
+        capability_expansion_after_authorization
+        confused_deputy_route
+    }
+
+    evidence { executable_identity; argument_policy_findings; capability_manifest; policy_hash }
+    tests { allowlisted_command; denied_command; argument_injection; minimum_capabilities }
+}
+

@@ -1,0 +1,321 @@
+{
+  "schema": "GFM-Aperture-Aggie-frame/1",
+  "runId": "95d0aec3-525c-41dd-8a2a-c36ec6116dde",
+  "sequence": 0,
+  "elapsed": 0,
+  "running": false,
+  "parameters": {
+    "spin": 0.99,
+    "coverLoad": 2,
+    "alphaCritical": 0.8,
+    "r0": 1,
+    "sealThreshold": 1
+  },
+  "exterior": {
+    "M": 1,
+    "a": 0.99,
+    "Q": 0,
+    "J": 0.99,
+    "rPlus": 1.141067359796659,
+    "rMinus": 0.858932640203341,
+    "discriminant": 0.01990000000000002,
+    "extremal": false,
+    "regime": "nonextremal outer horizon",
+    "area": 28.67815067830628,
+    "omegaH": 0.4338043637390611,
+    "kappa": 0.06181377400094831,
+    "phiH": 0,
+    "temperature": 0.009837967683416209,
+    "entropy": 7.16953766957657,
+    "irreducibleMass": 0.7553367989832943,
+    "smarr": {
+      "lhs": 1,
+      "rhs": 1,
+      "residual": 0,
+      "relativeResidual": 0,
+      "passed": true,
+      "tolerance": 1e-10
+    },
+    "massRelation": {
+      "lhs": 1,
+      "rhs": 1,
+      "residual": 0,
+      "relativeResidual": 0,
+      "passed": true,
+      "tolerance": 1e-10
+    },
+    "checks": {
+      "smarr": {
+        "residual": 0,
+        "passed": true
+      },
+      "chargedMassRelation": {
+        "residual": 0,
+        "passed": true
+      }
+    },
+    "passed": true,
+    "tolerance": 1e-10,
+    "units": {
+      "convention": "Geometrized natural units G=c=hbar=kB=1",
+      "M": "geometrized mass length",
+      "a": "J/M, a signed geometrized length",
+      "Q": "geometrized charge length, not SI coulombs",
+      "radius": "length",
+      "area": "length squared",
+      "omegaH": "inverse length",
+      "kappa": "inverse length",
+      "temperature": "natural temperature",
+      "entropy": "dimensionless",
+      "phiH": "geometrized electric potential"
+    },
+    "firstLawAvailable": true,
+    "limitScope": "The differential first law applies to variations within the nonextremal stationary family.",
+    "domain": "Asymptotically flat stationary Einstein-Maxwell Kerr-Newman black hole",
+    "scope": "Algebraic horizon data and semiclassical temperature/entropy in declared units. No trajectory, collapse, radiation spectrum, or Teukolsky perturbation PDE is solved.",
+    "references": [
+      {
+        "title": "Adamo and Newman, The Kerr-Newman metric: A Review",
+        "url": "https://arxiv.org/abs/1410.6626",
+        "scope": "Boyer-Lindquist metric, horizon roots, area and first law; convert the source +--- signature to -+++."
+      },
+      {
+        "title": "Hawking, Particle creation by black holes (1975)",
+        "url": "https://doi.org/10.1007/BF02345020",
+        "scope": "Semiclassical horizon temperature."
+      },
+      {
+        "title": "NIST 2022 CODATA constants",
+        "url": "https://physics.nist.gov/cuu/pdf/all.pdf",
+        "scope": "SI constants and the Stefan-Boltzmann constant definition."
+      }
+    ]
+  },
+  "branches": {
+    "gaseous": {
+      "id": "gaseous",
+      "formation": "gaseous-only (assumption)",
+      "integratedCoverLoad": 0,
+      "cover": 0,
+      "apertureRadius": 0.5890716489625588,
+      "geometricOpen": true,
+      "passage": 1,
+      "status": "toy-assumption"
+    },
+    "aggie": {
+      "id": "aggie",
+      "formation": "solid-accretion cover (assumption)",
+      "integratedCoverLoad": 2,
+      "cover": 1,
+      "apertureRadius": 0.5890716489625588,
+      "geometricOpen": true,
+      "passage": 0,
+      "status": "toy-assumption"
+    }
+  },
+  "observation": {
+    "identical": true,
+    "comparison": "Exact equality of declared deterministic observable vectors; no noise likelihood model is supplied.",
+    "priorGaseous": 0.5,
+    "posteriorGaseous": 0.5,
+    "optimalAccuracy": 0.5,
+    "conclusion": "Unidentifiable from these observations. The posterior equals the prior.",
+    "scope": "Accuracy concerns this deterministic toy observation protocol, not an astrophysical detector. Hidden formation/cover labels are excluded from the observation vectors."
+  },
+  "gfm": {
+    "field": "gf9",
+    "nodes": [
+      0,
+      0.125,
+      0.25,
+      0.375,
+      0.5,
+      0.625,
+      0.75,
+      0.875,
+      1
+    ],
+    "raw": [
+      {
+        "re": 0,
+        "im": 0
+      },
+      {
+        "re": 0,
+        "im": 0
+      },
+      {
+        "re": 0,
+        "im": 0
+      },
+      {
+        "re": 0,
+        "im": 0
+      },
+      {
+        "re": 0,
+        "im": 0
+      },
+      {
+        "re": 0,
+        "im": 0
+      },
+      {
+        "re": 0,
+        "im": 0
+      },
+      {
+        "re": 0.40506991082165195,
+        "im": 0
+      },
+      {
+        "re": 0.6,
+        "im": 0
+      }
+    ],
+    "coefficients": [
+      {
+        "re": 0.3350233036072173,
+        "im": 0
+      },
+      {
+        "re": -0.16751165180360866,
+        "im": 0.05627146973013848
+      },
+      {
+        "re": -0.16751165180360866,
+        "im": -0.05627146973013848
+      },
+      {
+        "re": -0.16751165180360866,
+        "im": -0.29013869178363694
+      },
+      {
+        "re": 0.13248834819639133,
+        "im": 0.11693361102674922
+      },
+      {
+        "re": 0.035023303607217324,
+        "im": 0.1732050807568877
+      },
+      {
+        "re": -0.16751165180360866,
+        "im": 0.29013869178363694
+      },
+      {
+        "re": 0.035023303607217324,
+        "im": -0.1732050807568877
+      },
+      {
+        "re": 0.13248834819639133,
+        "im": -0.11693361102674922
+      }
+    ],
+    "recovered": [
+      {
+        "re": -2.7755575615628914e-17,
+        "im": 0
+      },
+      {
+        "re": 2.0816681711721685e-17,
+        "im": 0
+      },
+      {
+        "re": -2.7755575615628914e-17,
+        "im": -2.7755575615628914e-17
+      },
+      {
+        "re": -1.3877787807814457e-17,
+        "im": 0
+      },
+      {
+        "re": 5.551115123125783e-17,
+        "im": 0
+      },
+      {
+        "re": -1.3877787807814457e-17,
+        "im": 0
+      },
+      {
+        "re": 5.551115123125783e-17,
+        "im": 0
+      },
+      {
+        "re": 0.405069910821652,
+        "im": 0
+      },
+      {
+        "re": 0.6,
+        "im": 0
+      }
+    ],
+    "checks": {
+      "normPreservation": {
+        "residual": 1.53359526903957e-16,
+        "absoluteResidual": 1.1102230246251565e-16,
+        "passed": true
+      },
+      "energyPreservation": {
+        "residual": 4.440892098500626e-16,
+        "inputEnergy": 0.524081632653061,
+        "outputEnergy": 0.5240816326530611,
+        "energyUnderflow": false,
+        "passed": true
+      },
+      "inverseRecovery": {
+        "residual": 7.66797634519785e-17,
+        "absoluteResidual": 5.551115123125783e-17,
+        "passed": true
+      }
+    },
+    "passed": true,
+    "maxRecoveryError": 5.551115123125783e-17,
+    "kernel": {
+      "kind": "complex-trace-character",
+      "formula": "exp(+2pi i Tr(kx)/p)/sqrt(q)",
+      "normalization": "kernel 1/sqrt(q); no dataset normalization",
+      "p": 3,
+      "q": 9
+    },
+    "coordinate": "alpha=a/M",
+    "units": "toy length",
+    "scope": "Raw GF9 trace-character transform of nine aperture-law samples over a/M in [0,1], in polynomial integer-label order. This is a spin-parameter sweep, not a spatial grid or time trajectory. No dataset normalization."
+  },
+  "equations": {
+    "aperture": "r_A=r0*sqrt(1-(alphaCritical/spin)^2) for spin>alphaCritical; otherwise 0",
+    "cover": "C=1 when coverLoad>=sealThreshold; otherwise 0",
+    "passage": "P=(1-C)*(r_A>0 ? 1 : 0)",
+    "exterior": "Kerr-Newman reference with M=1, a=spin, Q=0"
+  },
+  "thresholdConventions": {
+    "aperture": "Open only for alpha > alphaCritical; equality is closed. Θ_positive(0)=0.",
+    "cover": "Sealed for load >= sealThreshold; equality is sealed. Θ_seal(0)=1."
+  },
+  "motion": {
+    "phase": 0,
+    "scope": "Illustrative 3D geometry, animation and particle motion; no spacetime geodesic, plasma, formation, Maxwell or traversability solver."
+  },
+  "experiment": null,
+  "scopes": {
+    "model": "Declared hypothetical aperture and cover rules. The gaseous and aggie branches share M=1, Q=0 and a/M=spin; hidden cover labels are not inferred from exterior observations.",
+    "geometry": "Illustrative 3D geometry, animation and particle motion; no spacetime geodesic, plasma, formation, Maxwell or traversability solver.",
+    "gfm": "Raw GF9 trace-character transform of nine aperture-law samples over a/M in [0,1], in polynomial integer-label order. This is a spin-parameter sweep, not a spatial grid or time trajectory. No dataset normalization.",
+    "clock": "Elapsed seconds are an illustration clock. Demo changes are a scripted parameter experiment, not inferred physical dynamics.",
+    "units": "M=1 and Q=0 in geometrized exterior reference units; apertureRadius and r0 use toy length; coverLoad and sealThreshold share an assumed mass unit."
+  },
+  "history": [
+    {
+      "time": 0,
+      "spin": 0.99,
+      "coverLoad": 2,
+      "apertureRadius": 0.5890716489625588,
+      "gaseousPassage": 1,
+      "aggiePassage": 0
+    }
+  ],
+  "recording": {
+    "retainedFrames": 1,
+    "droppedFrames": 0,
+    "maximumFrames": 1800
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "0c829402b1300dbba1da3b5a6ee64152d54bd220ad27d61ec225603fd3f151a3",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (CAUSAL_REPLAY, MATERIALIZATION_READINESS) plus Stage 19 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "CAUSAL_REPLAY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "MATERIALIZATION_READINESS": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-08",
+    "GW-39",
+    "GW-54",
+    "GW-70",
+    "GW-73",
+    "GW-74",
+    "GW-76"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Materialized historical evidence links back to the exact or aggregate causal records that justify its presence.",
+  "requirement_id": "RCPW-19-R14",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 19,
+  "stage_title": "World-State Ledger",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "CAUSAL_REPLAY",
+    "MATERIALIZATION_READINESS"
+  ],
+  "workflow_file": "19_WORLD_STATE_LEDGER/295_RCPW_19_R14_MATERIALIZED_HISTORICAL_EVIDENCE_LINKS_BACK_TO_THE_EXACT_OR_AGGREGATE_CAUSAL_RECORDS_.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

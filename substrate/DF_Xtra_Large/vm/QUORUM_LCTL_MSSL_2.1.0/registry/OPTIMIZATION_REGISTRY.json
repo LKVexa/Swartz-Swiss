@@ -1,0 +1,222 @@
+{
+  "schema": "QUORUM-OPTIMIZATION-REGISTRY/2.0",
+  "passes": [
+    {
+      "id": "dead_node_elimination",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "unreachable_stage_elimination",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "dependency_pruning",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "edge_reduction",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "graph_simplification",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "graph_scheduling",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "constant_propagation",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "invariant_hoisting",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "operator_fusion",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "redundant_validation_elimination",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "common_subexpression_reuse",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "state_packing",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "transient_state_elimination",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "checkpoint_minimization",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "cache_optimization",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "state_locality",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "parallel_lane_scheduling",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "operation_batching",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "dependency_coalescing",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "bounded_concurrency",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "deterministic_ordering",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "capability_minimization",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "privilege_lifetime_reduction",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "artifact_deduplication",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "manifest_deduplication",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "hash_reuse",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "content_addressable_storage",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "lctl_row_compaction",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "canonical_ordering",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "dead_lane_removal",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    },
+    {
+      "id": "unnecessary_allocation_elimination",
+      "status": "DECLARED",
+      "requires_equivalence": true,
+      "may_broaden_capability": false,
+      "may_erase_evidence": false
+    }
+  ]
+}

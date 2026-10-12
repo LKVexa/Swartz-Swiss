@@ -1,0 +1,34 @@
+{
+  "suite_id": 27,
+  "suite_name": "deepML Worker",
+  "plane": "model_compute",
+  "legacy_sha256": "c437e30d722cb61937683f1c79fd3f3f55a1e75db14526b5b308f2f988f62e67",
+  "legacy_root": "legacy/source_repository/deepML Worker",
+  "files": [
+    {
+      "path": "27.1_DeepML_Worker_Sandboxed_Inference.deepml",
+      "sha256": "5d689d2771ed3f9f21856ee8275d121bc3d1da1830871f8abfca731287c36e61",
+      "bytes": 899
+    },
+    {
+      "path": "27.2_DeepML_Worker_Feature_Extraction.deepml",
+      "sha256": "e302d38323b8d558f4a8faeb5cd79fdfdacc396d53ecd24f14b8565814a1b832",
+      "bytes": 934
+    },
+    {
+      "path": "27.3_DeepML_Worker_Reconstruction_Proposals.deepml",
+      "sha256": "737f10c240594af7008d3b5279c5386ea656ac1bd0149d2bb1cedb96426ec0a5",
+      "bytes": 976
+    },
+    {
+      "path": "27.4_DeepML_Worker_Model_Routing.deepml",
+      "sha256": "7147035c3e2fd560310f2c55470203f9ade3c371cd0fd3452166a6174f17efb0",
+      "bytes": 860
+    },
+    {
+      "path": "README.md",
+      "sha256": "52bfd15dd5de91b75e4ec090de0dd49c7ea908ac1bd7531573961bcbce071ec8",
+      "bytes": 10966
+    }
+  ]
+}

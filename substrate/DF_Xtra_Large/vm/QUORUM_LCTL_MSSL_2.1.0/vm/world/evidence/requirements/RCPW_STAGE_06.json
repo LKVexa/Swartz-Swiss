@@ -1,0 +1,303 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 16,
+    "PARTIAL": 13,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Durable world mutations emit causally linked events with deterministic IDs.",
+      "requirement_id": "RCPW-06-R01",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Events record time, actor/entity, canonical location, cause, pre-state/post-state references, authority level, seed, and dependencies.",
+      "requirement_id": "RCPW-06-R02",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Replay from a trusted snapshot produces equivalent authoritative world state.",
+      "requirement_id": "RCPW-06-R03",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Conflicting concurrent mutations are detected and resolved by an explicit policy.",
+      "requirement_id": "RCPW-06-R04",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ledger integrity is hash-bound and partial/corrupt tails fail closed.",
+      "requirement_id": "RCPW-06-R05",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ephemeral telemetry is separated from durable causal history.",
+      "requirement_id": "RCPW-06-R06",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ledger ordering semantics are explicit for same-tick and cross-thread events.",
+      "requirement_id": "RCPW-06-R07",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Hash-chain or equivalent tamper-evidence covers segment boundaries, snapshots, and replay cut points.",
+      "requirement_id": "RCPW-06-R08",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Compaction/aggregation cannot sever causal parents required by live unresolved obligations.",
+      "requirement_id": "RCPW-06-R09",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ledger replay divergence emits a minimal deterministic counterexample rather than a generic failure.",
+      "requirement_id": "RCPW-06-R10",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Causal graphs detect or explicitly model cycles and prevent accidental recursive event amplification.",
+      "requirement_id": "RCPW-06-R11",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Durable events are idempotent under replay and repeated recovery.",
+      "requirement_id": "RCPW-06-R12",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ledger compaction preserves unresolved causes, obligations, ownership transfers, and historical evidence needed for later materialization.",
+      "requirement_id": "RCPW-06-R13",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Debugging can produce a minimal causal slice showing why a selected entity or region reached its current authoritative state.",
+      "requirement_id": "RCPW-06-R14",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Causal ledger events use stable event-class schemas with forward-compatible unknown-field handling and explicit rejection of incompatible semantics.",
+      "requirement_id": "RCPW-06-R15",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ledger commit is coordinated with canonical-state commit so no durable event claims a mutation that failed to commit.",
+      "requirement_id": "RCPW-06-R16",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Remote abstract resolutions record the model/version and fidelity class that produced the outcome.",
+      "requirement_id": "RCPW-06-R17",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ledger retention can preserve compact causal proofs for long-lived world consequences after detailed telemetry is discarded.",
+      "requirement_id": "RCPW-06-R18",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Causal-debug tooling can bisect replay divergence to the first canonical revision/event at which state digests differ.",
+      "requirement_id": "RCPW-06-R19",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Causal ledger supports partition-local staging with deterministic global commit/merge semantics for causally interacting events.",
+      "requirement_id": "RCPW-06-R20",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Event sequence/causal ordering remains reconstructible even when simulation work executes concurrently.",
+      "requirement_id": "RCPW-06-R21",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ledger replication or redundant persistence, where configured, uses explicit quorum/commit semantics and never treats an uncommitted replica as canonical.",
+      "requirement_id": "RCPW-06-R22",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ledger compaction preserves cross-partition causal links and migration provenance.",
+      "requirement_id": "RCPW-06-R23",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Replay verification can reproduce a global causal cut from multiple partition segments and detect missing or duplicated commits.",
+      "requirement_id": "RCPW-06-R24",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Causal ledger supports era-spanning causal summaries that preserve proof chains for long-lived institutions, ownership, reputation, settlement change, and inherited obligations.",
+      "requirement_id": "RCPW-06-R25",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Historical compaction records uncertainty and aggregation class rather than presenting compressed history as exact event detail.",
+      "requirement_id": "RCPW-06-R26",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Counterfactual/debug branches are isolated from canonical history and cannot leak mutations into the authoritative timeline.",
+      "requirement_id": "RCPW-06-R27",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Causal queries can identify both direct causes and historically inherited causes across generational/organizational succession.",
+      "requirement_id": "RCPW-06-R28",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification reconstructs present-day world facts from old checkpoints plus compacted multi-era ledger segments and verifies semantic digests.",
+      "requirement_id": "RCPW-06-R29",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "stage": 6,
+  "title": "Causal Ledger Authority"
+}

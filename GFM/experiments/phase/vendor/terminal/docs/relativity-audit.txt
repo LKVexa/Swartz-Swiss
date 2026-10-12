@@ -1,0 +1,176 @@
+Independent relativity and dynamics audit
+2026-10-11
+
+Scope and evidence
+------------------
+Source: Please audit, parse, and refine these equations.txt (14,113 bytes).
+SHA-256: 068f68965b6157c88e9e881a48a6bfacfc040455cb957af17f613785ad0237f8
+This is a report about an asserted 500-equation suite, not the suite itself.
+Only the displayed formulas and claims can be audited. Equation numbers are
+source labels, not evidence that missing definitions or sectors were inspected.
+This review covers (437), (438), (370), the displayed Cayley rule, and global
+substrate claims. It does not certify 500 equations or a divergence-free theory.
+
+Disposition
+-----------
+437: REJECT as a transmission probability; retain a diagnostic counterexample.
+438: UNRESOLVED over finite fields; retain the qualified continuum matching
+     identity as reference, not an executable modular relativistic solver.
+370: REJECT the asserted equality; UNRESOLVED without its operator definitions.
+Cayley: RETAIN a corrected, explicitly complex Hermitian numerical integrator;
+        REJECT exact exponential evolution and unconditional finite-field norm.
+Global 500-audited / divergence-free claims: UNVERIFIED, not findings.
+
+Equation (437): branch, sign, band, and limiting behavior
+--------------------------------------------------------
+The report defines r1=k1/(E+mc^2), r2=k2/(E-V0+mc^2), with both k values
+given by the nonnegative principal arccos branch. If V0>E+mc^2, the second
+denominator is negative. Thus r2<0 for a propagating nonzero k2, contrary to
+the report's r2>0 assertion. At V0=E+mc^2 the expression is singular (0/0).
+
+Direct counterexample, in units hbar=c=m=a=1:
+E=2, V0=4 gives k1=k2=arccos(-1/2)=2*pi/3, r1=k/3, r2=-k.
+The claimed T=4*r1*r2/(r1+r2)^2 evaluates exactly to -3.
+Both arccos arguments are valid and the asserted Klein threshold is met.
+A negative value cannot be a positive transmission probability.
+
+The proposed dispersion itself requires, for each region energy epsilon,
+  0 <= epsilon^2-m^2*c^4 <= 4*hbar^2*c^2/a^2
+for real k. At fixed a>0 it has an upper band cutoff, so taking V0 to infinity
+does not remain within its real propagating domain. In the same units, E=2,
+V0=5 already gives arccos(-3), outside the real domain. The principal positive
+k on a negative-energy branch also has negative group velocity for 0<ka<pi:
+  v_group = (hbar*c^2/(a*epsilon))*sin(ka).
+A right-going boundary condition requires choosing the outgoing current branch.
+
+Qualified replacement: solve a declared Dirac Hamiltonian and match its spinors;
+define T=current_transmitted/current_incident and verify current conservation.
+The report provides neither a lattice Dirac Hamiltonian nor its discrete current,
+so substituting its lattice k into a continuum impedance is not justified.
+
+For reference only, the continuum two-component Hamiltonian
+H=c*sigma_x*p + mc^2*sigma_z + V I admits a simple matching calculation.
+Set M=mc^2, E>M, epsilon2=E-V0<-M, p1=sqrt(E^2-M^2)/c, and choose
+p2=-sqrt(epsilon2^2-M^2)/c for the right-going negative-energy branch.
+Let s1=c*p1/(E+M)>0 and s2=c*p2/(epsilon2+M)>0. Matching spinors (1,s)
+gives T=4*s1*s2/(s1+s2)^2 and R=(s1-s2)^2/(s1+s2)^2, hence R+T=1.
+As V0 increases in this continuum model, s2 tends to 1 and
+T tends to 4*s1/(1+s1)^2, not generally 1. E=2,M=1 gives 0.9282032303.
+Unity requires additional limits such as M=0. These are continuum current
+ratios, not a lattice/finite-field result or a quantum-field pair-production
+probability. Primary source [A], section 2, equations (3)-(6), independently
+documents the outgoing branch, current ratio, and non-unit infinite-step limit.
+
+Equation (438): domain and matching convention
+----------------------------------------------
+The quotient is a valid continuum scalar radial matching identity if the
+exterior radial function is defined as
+  f_l(r)=A*(j_l(kr)*cos(delta)-n_l(kr)*sin(delta)),
+gamma=f_l'(R)/f_l(R), R>0, k>0, and primes on j_l,n_l mean derivatives of
+their argument. Then differentiating and eliminating A gives
+  tan(delta)=(k*j_l'(kR)-gamma*j_l(kR)) /
+             (k*n_l'(kR)-gamma*n_l(kR)).
+Both gamma and k have units of inverse length. Use atan2(numerator,denominator)
+modulo pi to handle tangent poles. If f_l(R)=0, the logarithmic derivative
+itself needs a nonsingular alternative. If the interior variable is the reduced
+radial wave u=r*f, its logarithmic derivative differs by 1/R. A Dirac partial
+wave also requires its coupled spinor components and angular conventions.
+
+The report instead combines a backward lattice difference for gamma with
+ordinary exterior derivatives and claims j_l,n_l,tan over GF(p). No field
+construction, recurrence, branch convention, involution, lattice exterior
+solution, or phase interpretation is supplied. Standard spherical Bessel
+functions in [B] are functions of a complex variable; their analytic series
+do not automatically reduce modulo p. For example, the series for
+j_0(z)=sin(z)/z contains (2n+1)! denominators that vanish modulo p once
+2n+1>=p. A finite-field analogue may be defined by additional choices, but
+none are stated here. Do not execute the proposed modular expression.
+
+Equation (370): incompatible normalizations
+-------------------------------------------
+The two stated expressions would imply the unstated identity
+Jz=j*I - j*Hosc/((j+1/2)*hbar*omega). It is not implied by an SU(2)
+commutator. Units of Jz (dimensionless versus angular momentum) and definitions
+of X,P,Hosc must be supplied before any equality is accepted; j=0 is excluded.
+
+For example, under the explicit convention Hosc=hbar*omega*((j+1/2)*I-Jz),
+with dimensionless Jz, the report's right side is i*hbar*Jz/(j+1/2), not
+i*hbar*Jz/j. For j=1, Jz eigenvalue 1, Hosc/(hbar*omega)=1/2, the left
+coefficient is 1 and the right coefficient is 2/3. Keeping the stated /j
+normalization under this declared convention would instead give
+  [X,P]=i*hbar*((1+1/(2j))*I-Hosc/(j*hbar*omega)).
+This is conditional algebra, not a recovered definition of the missing suite.
+
+The primary 't Hooft convention [C], page 6, equations (3.5)-(3.6), is different:
+H0=omega*(L3+j), x=L2/sqrt(j), p=L1/sqrt(j), hbar=1. It yields
+[x,p]=-i*L3/j=i*(I-H0/(omega*j)), with ground energy zero. Neither changing
+the energy offset nor interchanging the spin axes can be omitted from a repair.
+
+At finite complex dimension d, Tr([X,P])=0, whereas Tr(i*hbar*I)=i*hbar*d.
+Thus the exact canonical identity cannot hold globally in a finite complex
+matrix model. A low-energy limit may recover expectations or matrix elements
+on a specified sequence of states; it is not equality on the whole finite
+space. A claimed O(1/L) correction also needs a fixed-energy scaling, not
+merely the statement that energy is small relative to j*hbar*omega.
+
+Cayley propagation: corrected sign and qualifications
+-----------------------------------------------------
+For i*hbar*dpsi/dt=H*psi, finite Hermitian complex H, real dt, hbar>0, let
+A=dt*H/(2*hbar). The forward rule is
+  (I+i*A)*psi_next=(I-i*A)*psi_now,
+  U_C=(I+i*A)^(-1)*(I-i*A).
+This is the Cayley/Crank-Nicolson approximation in [D], equations (8)-(14).
+The report reverses the signs while comparing to exp(-iH*dt), so its rule
+approximates backward evolution (unless another time/sign convention is declared).
+
+Because A is Hermitian, I+i*A has no zero complex eigenvalue and U_C is unitary
+in exact arithmetic. Numerical output must still report solve/roundoff residuals.
+For scalar theta=E*dt/hbar, U_C=exp(-2i*atan(theta/2)), rather than exp(-i*theta).
+At theta=2, U_C=-i while the exact exponential is -0.4161468365-0.9092974268i.
+The local error is O(dt^3) and global error O(dt^2) for a fixed smooth problem.
+Large-step norm stability does not imply accurate phases. For time-dependent H,
+use a declared midpoint or other justified scheme; freezing H at the left endpoint
+does not generically retain second-order accuracy. Hermitian boundary conditions
+and domains are required; absorbers/non-Hermitian H change norm conservation.
+
+A finite-field Cayley identity needs odd characteristic, an explicit involution,
+an adjoint and an invertible denominator; it preserves a Hermitian form rather
+than establishing a positive real Born norm. In GF(9)=GF(3)[i]/(i^2+1), with
+conjugation i->-i, the Hermitian matrix
+  H=[[0,1+i],[1-i,0]]
+satisfies H^2=-I. At A=H, det(I+iH)=1-i^2*(1+i)*(1-i)=0 in GF(3), so the
+denominator is singular. Also the nonzero vector v=(1,1+i) has v^dagger*v=0.
+This is a concrete obstruction to unconditional invertibility and positive norm.
+
+Global substrate and execution boundaries
+-----------------------------------------
+Finite sets remove infinite sums only in a specified finite calculation; they
+do not prove a continuum physical theory divergence-free. Q_p and adelic models
+are infinite substrates. Finite-field division excludes zero and does not ensure
+matrix invertibility, ordered probabilities, ordinary derivatives or valid limits.
+Permutation evolution is unitary over complex amplitudes when the map is bijective,
+but it does not by itself establish a universal microscopic deterministic theory.
+No numerical results, full-suite proofs or reproducible sector tests are provided.
+
+Admit the corrected Cayley rule as a local complex numerical demonstration with
+declared Hamiltonian and precision. Keep the rejected Klein formula as a visible
+diagnostic counterexample, and keep modular partial waves and unspecified spin
+normalizations unresolved. Do not label proposed source formulas as executed or
+the full report as an audited 500-equation library.
+
+Primary references (consulted 2026-10-11)
+---------------------------------------
+[A] H. Nakazato and M. Ochiai, Unstable vacuum and fermion total reflection by
+    the Klein step, PTEP 2022, 073B02, section 2, equations (3)-(6).
+    https://academic.oup.com/ptep/article/2022/7/073B02/6607511
+[B] NIST Digital Library of Mathematical Functions, spherical Bessel definitions,
+    derivatives and power series:
+    https://dlmf.nist.gov/10.47
+    https://dlmf.nist.gov/10.51
+    https://dlmf.nist.gov/10.53
+[C] G. 't Hooft, Deterministic quantum mechanics: the mathematical equations,
+    arXiv:2005.06374v2, section 3, equations (3.5)-(3.6).
+    https://arxiv.org/pdf/2005.06374
+[D] A. Kumar, An Accurate Pentadiagonal Matrix Solution for the Time-Dependent
+    Schrodinger Equation, arXiv:2205.13467v4, section 2, equations (8)-(14).
+    https://arxiv.org/pdf/2205.13467

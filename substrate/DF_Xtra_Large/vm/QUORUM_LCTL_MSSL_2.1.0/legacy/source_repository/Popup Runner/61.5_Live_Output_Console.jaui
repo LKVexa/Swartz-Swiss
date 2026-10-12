@@ -1,0 +1,47 @@
+ja source 0.3
+module suite61.popup_runner.live_output_console
+use Interface
+policy no_network
+
+interface PopupRunnerLiveOutputConsole {
+    state active_job: Text? = null
+    state stream_connected: Flag = false
+    derived has_active_job = active_job != null
+    derived can_view_output = active_job != null and stream_connected
+    component SOPHIA_OutputContext {
+        label "Interpret live job output"
+        enabled bind can_view_output
+        accessibility role button name "Interpret selected job live output"
+        action interpret_job_output requires popup.job.output:approved
+    }
+    component CHARLOTTE_OutputGate {
+        label "Validate output order, bounds, encoding, and redaction"
+        enabled bind can_view_output
+        accessibility role button name "Validate live job output stream"
+        action validate_job_output requires popup.job.output:approved
+    }
+    component LANDON_OutputStream {
+        label "Show stdout, stderr, diagnostics, and progress"
+        enabled bind can_view_output
+        accessibility role button name "Show bounded live output channels"
+        action show_job_output requires popup.job.output:approved
+    }
+    component Professor_OutputGuide {
+        label "Explain output, warnings, and truncation"
+        enabled bind has_active_job
+        accessibility role button name "Explain selected job output and warnings"
+        action explain_job_output requires popup.job.output:approved
+    }
+    component Podium_OutputEvidence {
+        label "View stream and event evidence"
+        enabled bind has_active_job
+        accessibility role button name "View selected job output evidence"
+        action show_output_evidence requires popup.job.output:approved
+    }
+    component LiveOutputViewport {
+        embed portal.scene "popup_runner_live_output_console"
+        motion bind timeline.output_stream
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface PopupRunnerLiveOutputConsole

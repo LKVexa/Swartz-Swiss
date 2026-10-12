@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "478ef7cb81d608fdfe0934171c1a9b3aa9c752a601055ec8b3af0e0cab92ae31",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Chair",
+  "module_id": 13,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

@@ -1,0 +1,14 @@
+ja source 0.3
+module suite39.core_studio.code_editor
+use Core
+policy no_network
+
+record CodeEditorPlan { id: Count, scope: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_code_editor_plan(item: CodeEditorPlan) -> Result<CodeEditorPlan, Text> effects { pure } {
+    let normalized: Text = item.scope
+    return Ok(CodeEditorPlan { id: item.id, scope: normalized, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: CodeEditorPlan = CodeEditorPlan { id: 3909, scope: "source_code_editor_plan", sophia: "interpret_code_intent", charlotte: "validate_syntax_and_policy", landon: "stage_approved_edit", professor: "explain_code_change", podium: "publish_edit_receipt" }
+let result = prepare_code_editor_plan(sample)
+assert result.is_ok == true
+emit json result

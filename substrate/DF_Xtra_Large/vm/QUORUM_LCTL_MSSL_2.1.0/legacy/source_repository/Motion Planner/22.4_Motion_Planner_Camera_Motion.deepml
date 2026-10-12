@@ -1,0 +1,28 @@
+deepml motion 0.3
+module suite22.motion_planner.camera_motion
+policy deterministic
+policy no_network
+
+skeleton CameraMotionRig {
+  joint CameraRoot parent none bind transform(vec3(0,0,0), quat.identity)
+  joint MainCamera parent CameraRoot bind transform(vec3(0,1.5,5), quat.identity)
+  joint CameraTarget parent CameraRoot bind transform(vec3(0,1,0), quat.identity)
+}
+pose CameraStart for CameraMotionRig { CameraRoot.rotation = quat.identity MainCamera.rotation = quat.identity }
+clip CameraMotionClip duration 6s interpolation cubic {
+  channel MainCamera.position key 0s vec3(0,1.5,5) key 3s vec3(3,2,3) key 6s vec3(0,1.5,1)
+  channel MainCamera.rotation key 0s quat.identity key 3s quat.axis_angle(y, -45deg) key 6s quat.axis_angle(y, 180deg)
+}
+synchronize CameraMotionClip with scene.MainCamera and timeline.CameraMotionSequence
+motion_graph CameraMotionEvidence {
+  pose SOPHIA = constant_pose(CameraMotionRig)
+  pose CHARLOTTE = constant_pose(CameraMotionRig)
+  pose LANDON = constant_pose(CameraMotionRig)
+  pose Professor = constant_pose(CameraMotionRig)
+  pose Podium = constant_pose(CameraMotionRig)
+  blend Ensemble weights [0.2,0.2,0.2,0.2,0.2]
+}
+optimize CameraMotionEvidence using [pose_constant_folding, curve_compression(0.001), dead_channel_removal, blend_normalization, retarget_cache, ik_scheduling, state_minimization]
+lower CameraMotionEvidence to DEEPML_MOTION_R12
+package motion CameraMotionRig as "motion_planner_camera_motion.msslb"
+certify motion CameraMotionRig profile strict

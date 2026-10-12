@@ -1,0 +1,26 @@
+deepml motion 0.3
+module suite22.motion_planner.transforms
+policy deterministic
+policy no_network
+
+skeleton TransformPlanRig {
+  joint Root parent none bind transform(vec3(0,0,0), quat.identity)
+  joint Actor parent Root bind transform(vec3(0,0,0), quat.identity)
+}
+pose TransformStart for TransformPlanRig { Root.rotation = quat.identity Actor.rotation = quat.identity }
+clip TransformPlanClip duration 4s interpolation cubic {
+  channel Actor.position key 0s vec3(0,0,0) key 2s vec3(2,0,1) key 4s vec3(4,0,0)
+  channel Actor.rotation key 0s quat.identity key 2s quat.axis_angle(y, 45deg) key 4s quat.identity
+}
+motion_graph TransformPlanEvidence {
+  pose SOPHIA = constant_pose(TransformPlanRig)
+  pose CHARLOTTE = constant_pose(TransformPlanRig)
+  pose LANDON = constant_pose(TransformPlanRig)
+  pose Professor = constant_pose(TransformPlanRig)
+  pose Podium = constant_pose(TransformPlanRig)
+  blend Ensemble weights [0.2,0.2,0.2,0.2,0.2]
+}
+optimize TransformPlanEvidence using [pose_constant_folding, curve_compression(0.001), dead_channel_removal, blend_normalization, retarget_cache, ik_scheduling, state_minimization]
+lower TransformPlanEvidence to DEEPML_MOTION_R12
+package motion TransformPlanRig as "motion_planner_transforms.msslb"
+certify motion TransformPlanRig profile strict

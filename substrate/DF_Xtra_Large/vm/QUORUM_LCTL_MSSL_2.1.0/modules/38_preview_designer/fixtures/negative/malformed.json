@@ -1,0 +1,12 @@
+{
+  "schema": "QUORUM-FIXTURE/2.0",
+  "class": "negative",
+  "module_id": 38,
+  "plane": "interfaces_services",
+  "payload": null,
+  "expected_contract": {
+    "admitted": false,
+    "error": "INVALID_INPUT",
+    "final_state": "FAILED_CLOSED"
+  }
+}

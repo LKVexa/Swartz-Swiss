@@ -1,0 +1,30 @@
+ja source 0.3
+module suite36.visual_correction.corrective_interaction_passes
+use Training
+policy no_network
+
+experiment VisualCorrectionCorrectiveInteractionPasses {
+    model ref "models/sophia_charlotte_landon_professor_podium/corrective_interaction_passes"
+    dataset ref "datasets/visual_correction/interaction_pass_cases" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 32 accumulate 2
+    precision mixed
+    seed 3605
+    checkpoint every 16 steps
+    evaluate {
+        metric interaction_correction_gain
+        metric state_transition_safety
+        metric accessibility_preservation
+        metric pass_budget_compliance
+        metric loss
+        require interaction_correction_gain >= 0.90
+        require state_transition_safety >= 0.99
+        require accessibility_preservation >= 1.00
+        require pass_budget_compliance >= 1.00
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "VisualCorrectionCorrectiveInteractionPasses.lineage.mcrt"

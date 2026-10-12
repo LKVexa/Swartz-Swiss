@@ -1,0 +1,54 @@
+{
+  "suite_id": 54,
+  "suite_name": "Local Model Provider and Health",
+  "plane": "model_compute",
+  "legacy_sha256": "740984d5a67d9c5f3b60b4a0391c63b2e8bdf756a279cdc0ec93448cd033db78",
+  "legacy_root": "legacy/source_repository/Local Model Provider and Health",
+  "files": [
+    {
+      "path": "54.1_Approved_Local_Providers.jasp",
+      "sha256": "132e7d1f558cc60d1c50c580c629f85f669ed8475805d41b32a848776aca2ae6",
+      "bytes": 1259
+    },
+    {
+      "path": "54.2_Provider_Routing.jasp",
+      "sha256": "d0c661de45b66c6f70c31cb37d2ba41669067ff47d041f55dcbed8199aa2b077",
+      "bytes": 1286
+    },
+    {
+      "path": "54.3_Provider_Lifecycle.jasp",
+      "sha256": "6d7cc7109e58c6e3c670d419d5e77efbaea72e0c45cc931f88f688c17cbd86e2",
+      "bytes": 1274
+    },
+    {
+      "path": "54.4_Provider_Readiness.jasp",
+      "sha256": "32f6eb4c44115a9a55c66361fa40c53f0d73a4492bb6e6d61896f4dba89404f8",
+      "bytes": 1271
+    },
+    {
+      "path": "54.5_Provider_Health.jasp",
+      "sha256": "5340efc8a056c8ff8abc80695e87df1f08bf2f1187974c6fd9f07c90a42a17d6",
+      "bytes": 1287
+    },
+    {
+      "path": "54.6_Local_Model_Provider_Contract.jasp",
+      "sha256": "6d490e0974ffd94785ba26d8d21d289d9153820f0f50946707e79ab734378fec",
+      "bytes": 1362
+    },
+    {
+      "path": "54.7_Model_Provider_Dashboard.jasp",
+      "sha256": "63d9d56e16ae1505d12be49864413226239be7f425713505dcfa0db440359db5",
+      "bytes": 1346
+    },
+    {
+      "path": "54.8_Model_Lifecycle_and_Health.jasp",
+      "sha256": "81436165e854c7cbef7b89649bd14605e5fb5dedc2c3a17412a6c3a7b2cdba0c",
+      "bytes": 1455
+    },
+    {
+      "path": "README.md",
+      "sha256": "30e8ac05bc1164d9bdf6e65fac46098b5a33c91a66e21c463e014bc4c61f02a0",
+      "bytes": 17395
+    }
+  ]
+}

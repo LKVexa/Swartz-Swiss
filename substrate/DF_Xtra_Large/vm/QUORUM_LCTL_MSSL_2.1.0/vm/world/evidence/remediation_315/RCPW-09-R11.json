@@ -1,0 +1,48 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "5f5a685538b79eefc906e4aaa99626a4bdfe6140ad9dbe36372a05f680c30b17",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (CAUSAL_REPLAY, NARRATIVE_KNOWLEDGE) plus Stage 09 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "CAUSAL_REPLAY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "NARRATIVE_KNOWLEDGE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-04",
+    "GW-12",
+    "GW-35",
+    "GW-68",
+    "GW-69",
+    "GW-70"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Narrative gravity integrates with an event-orchestration authority that distinguishes authored beats, systemic events, optional encounters, and emergent consequences.",
+  "requirement_id": "RCPW-09-R11",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 9,
+  "stage_title": "Narrative Gravity Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "CAUSAL_REPLAY",
+    "NARRATIVE_KNOWLEDGE"
+  ],
+  "workflow_file": "09_NARRATIVE_GRAVITY_AUTHORITY/119_RCPW_09_R11_NARRATIVE_GRAVITY_INTEGRATES_WITH_AN_EVENT_ORCHESTRATION_AUTHORITY_THAT_DISTINGUISHES.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

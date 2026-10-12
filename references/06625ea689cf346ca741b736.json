@@ -1,0 +1,86 @@
+{
+  "decision": "OPERATIONAL",
+  "dependency": "BR-410-06",
+  "package": "BR-410-07",
+  "requirements": [
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Implement POSIX adapter",
+      "requirement_id": "BR-410-07-R01",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope. Native Windows OS deployment is not claimed; the Windows adapter portable contract is compiled and exercised on this qualification host.",
+      "requirement": "Implement Windows adapter",
+      "requirement_id": "BR-410-07-R02",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Implement bare-metal test adapter",
+      "requirement_id": "BR-410-07-R03",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Implement deterministic test adapter",
+      "requirement_id": "BR-410-07-R04",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Implement in-memory storage adapter",
+      "requirement_id": "BR-410-07-R05",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Implement simulated smart-card adapter",
+      "requirement_id": "BR-410-07-R06",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "title": "Host adapters"
+}

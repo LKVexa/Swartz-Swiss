@@ -1,0 +1,35 @@
+ja source 0.3
+module suite32.orchestrator_ii.validation
+use Agent
+policy no_network
+
+agent OrchestratorIIValidation {
+    identity "orchestrator_ii_validation"
+    role "sophia-charlotte-landon-professor-podium-orchestrator"
+    goal certify_or_block_pipeline_artifacts when confidence >= 0.95
+    memory session retention 1h
+    budget steps 55 tools 5
+    tool LANDONCollectValidationEvidence(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAClassifyValidationFindings(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTECertifyValidation(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainValidation(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordValidation(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectValidationEvidence
+        authorize SOPHIAClassifyValidationFindings
+        authorize CHARLOTTECertifyValidation
+        authorize ProfessorExplainValidation
+        authorize PodiumRecordValidation
+        continue when policy_allows
+        execute LANDONCollectValidationEvidence("pipeline_artifacts")
+        execute SOPHIAClassifyValidationFindings("canonical_validation_evidence")
+        execute CHARLOTTECertifyValidation("classified_findings")
+        execute ProfessorExplainValidation("certification_or_block")
+        execute PodiumRecordValidation("validation_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "OrchestratorIIValidation.mcrt"

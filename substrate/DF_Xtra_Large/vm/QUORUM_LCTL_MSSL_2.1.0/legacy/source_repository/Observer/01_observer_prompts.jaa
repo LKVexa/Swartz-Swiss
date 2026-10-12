@@ -1,0 +1,38 @@
+ja source 0.3
+module repository.observer.prompts
+use Agent
+policy no_network
+
+agent ObserverPrompts {
+    identity "observer.prompts.v1"
+    role "audited-prompt-observer"
+    goal prompts_observed when confidence >= 0.90
+    memory session retention 24h
+    budget steps 48 tools 6
+    tool ReadPromptRepository(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIA_AnalyzePrompts(input: Path) -> Report requires model.infer:approved
+    tool CHARLOTTE_ValidatePrompts(input: Path) -> Report requires policy.verify:approved
+    tool LANDON_RoutePromptRecords(input: Path) -> Report requires ledger.append:approved
+    tool PROFESSOR_ExplainPromptFindings(input: Path) -> Report requires model.infer:approved
+    tool PODIUM_PublishPromptEvidence(input: Path) -> Report requires ledger.append:approved
+    plan Main {
+        observe workspace
+        authorize ReadPromptRepository
+        authorize SOPHIA_AnalyzePrompts
+        authorize CHARLOTTE_ValidatePrompts
+        authorize LANDON_RoutePromptRecords
+        authorize PROFESSOR_ExplainPromptFindings
+        authorize PODIUM_PublishPromptEvidence
+        continue when policy_allows
+        execute ReadPromptRepository("repository/01_observer/prompts")
+        execute SOPHIA_AnalyzePrompts("repository/01_observer/prompts")
+        execute CHARLOTTE_ValidatePrompts("repository/01_observer/prompts")
+        execute LANDON_RoutePromptRecords("repository/01_observer/prompts")
+        execute PROFESSOR_ExplainPromptFindings("repository/01_observer/prompts")
+        execute PODIUM_PublishPromptEvidence("repository/01_observer/prompts")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "observer_prompts.mcrt"

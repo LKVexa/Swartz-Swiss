@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "182efc990901c3477a263359e9fe3c5604122ca47bf4026687fa3d60463d8f14",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Feature Graph",
+  "module_id": 18,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

@@ -1,0 +1,145 @@
+{
+  "schema": "gfm.audit-independent-review.v1",
+  "reviewedAtUTC": "2026-10-11T20:12:59.577Z",
+  "project": "GFM Cylindrical Pulse Simulator",
+  "status": "pass-with-declared-model-limits",
+  "filesSHA256": {
+    "backend/cylinder-em.cjs": "93d1463b46a2bb6eaeb6c347f97c2a43101d811d0d6aa5d95d3a3b587f6a5b0a",
+    "backend/material-physics.cjs": "8eb018cd1e47ec39e445ecd4de83f375925fd7a41df287fb6d5f69dbf0ad80bf",
+    "backend/phase-history.cjs": "3ab831e499089ba147401da3ca9feffe25f2af1f2c6f6561663d6b1953ab9b42",
+    "backend/gr-reference.cjs": "5132b958016456ee8ec007045fa204affc5337d051285a34394af2ba903cd8cd",
+    "data/audit-findings.json": "62ac706a06f900cea6534c2342626e30883278555d28804844291826d920dde7",
+    "tests/gr-reference.test.cjs": "1077c9c32467edf4c2407b616fca7ef0d02786c99f96812d9db46788c76be9a0",
+    "tests/plasma-mode-validation.cjs": "fef3f8b662073b962fb81054010406cdee06b0e3e2c57963b9e7eacf1ab4d9e6",
+    "tests/audit-physics.test.cjs": "344befa40628da2312d23ee9f4451b46ae201bce616b36cd4294eb0bfce1c108"
+  },
+  "tests": {
+    "independentGRReferences": {
+      "file": "tests/gr-reference.test.cjs",
+      "tests": 18,
+      "passed": 18
+    },
+    "independentPulseReferences": {
+      "file": "tests/plasma-mode-validation.cjs",
+      "tests": 3,
+      "passed": 3
+    },
+    "combinedFocusedRun": {
+      "tests": 38,
+      "passed": 38,
+      "failed": 0,
+      "includesEngineAgentTests": 17
+    }
+  },
+  "independentContinuumMode": {
+    "polarization": "axisymmetric TE_phi",
+    "geometry": "closed PEC vacuum cylinder, uniformly filled frozen-density collisionless plasma",
+    "electronDensityPerM3": 100000000000000000,
+    "radialCells": [
+      16,
+      32,
+      64
+    ],
+    "axialCells": [
+      32,
+      64,
+      128
+    ],
+    "analyticFrequencyRadPerS": "sqrt(c0^2*((3.8317059702075125/R)^2+(pi/L)^2)+ne e^2/(me epsilon0))",
+    "time": "0.17 mode periods",
+    "componentRelativeL2Errors": [
+      {
+        "E": 0.0053193409930243655,
+        "J": 0.00035030009633065196,
+        "Hr": 0.0007514124061685615,
+        "Hz": 0.003743689250757064
+      },
+      {
+        "E": 0.0013356148014443793,
+        "J": 0.00008729023552088818,
+        "Hr": 0.0001876715854911597,
+        "Hz": 0.0009383496088138351
+      },
+      {
+        "E": 0.0003460866379541022,
+        "J": 0.000025383798237987944,
+        "Hr": 0.00005048258833450742,
+        "Hz": 0.00023814650223525664
+      }
+    ],
+    "energyRelativeResidualBound": 1e-11,
+    "interpretation": "All four components converge by greater than a factor of three for each doubled grid; finest component errors are below 0.001. This is a continuum mode benchmark, not a default-geometry pulse-interface convergence certificate."
+  },
+  "independentDrudeTransient": {
+    "forcing": "E=cos(omega t), J(0)=0",
+    "alpha": 4,
+    "nu": 0.7,
+    "omega": 1.3,
+    "T": 5,
+    "stepCounts": [
+      100,
+      200,
+      400
+    ],
+    "absoluteCurrentErrors": [
+      0.00016373792244128715,
+      0.00004094823561673344,
+      0.00001023791822452047
+    ],
+    "energyPartitionAbsoluteResidualBound": 1e-12,
+    "interpretation": "Second-order temporal convergence; electrical work partitions into drift kinetic storage and nonnegative collision heat."
+  },
+  "independentEnvelope": {
+    "carrierHz": 2000000000,
+    "cycles": 2,
+    "samplesPerCycle": 64,
+    "peakAmplitudeExpectedVPerM": 3,
+    "relativePhaseExpectedRad": 0.4,
+    "amplitudeAndPhaseAbsoluteErrorBound": 1e-12,
+    "groupDelaySeconds": 5e-10,
+    "zeroFieldPhaseMasked": true
+  },
+  "issuesResolved": [
+    {
+      "issue": "Thermal contact lost tiny differences after adding a common absolute base temperature.",
+      "resolution": "Contact computes differences from retained increments and tests the implicit transfer.",
+      "verifiedTransferJPerM3": 3.7499999999999996e-21,
+      "analyticTransferJPerM3": 3.75e-21
+    },
+    {
+      "issue": "A initialized finite plasma current reported zero maximum drift speed before a step.",
+      "resolution": "setFields initializes the historical maximum from the supplied current.",
+      "verifiedDriftMPerS": 62.415090744607625,
+      "analyticDriftMPerS": 62.415090744607625
+    },
+    {
+      "issue": "Hann 0.72/window value could be mistaken for full bandwidth.",
+      "resolution": "Metadata explicitly labels one-sided 3 dB half-width and full width 1.44/window."
+    },
+    {
+      "issue": "At a mushy boundary, an absolute temperature could erase the tiny liquid-fraction change.",
+      "resolution": "The constitutive helper preserves liquidFractionChange from the retained temperature increment; cp*dT+L*df equals deposited specific energy under the declared synthetic enthalpy law."
+    }
+  ],
+  "readReview": {
+    "drudeElimination": "Correct midpoint alpha/epsilon0 contribution and impressed-source sign.",
+    "plasmaEnergy": "J^2/(2 alpha) stores drift; nu J_mid^2/alpha dt heats the thermal store.",
+    "thermalEnergy": "Sensible and latent cover heat use a single enthalpy store; contact adds equal/opposite energy. Deposition is not added again to total stored energy.",
+    "geometry": "Fixed cover geometry is independent of melt fraction. Material and plasma volume fractions, currents and energy densities use declared full-cell normalization.",
+    "phase": "Derived from real E history with exp(+i omega t) demodulation, peak amplitude convention, finite-window group delay and low-amplitude/reference masks.",
+    "grScope": "Corrected GR references are separate from electromagnetic evolution and do not establish event horizons, metric identity or spacetime passage."
+  },
+  "limitations": [
+    "Frozen density and stationary ions; cold unmagnetized isotropic Drude current, not fluid/kinetic plasma dynamics.",
+    "Declared single-temperature plasma capacity assumes local electron/ion thermal equilibration; collision frequency is prescribed.",
+    "Synthetic cover cp, conductivity, latent heat and temperature interval; no measured material or astrophysical calibration.",
+    "Conductivity is frozen per substep and contact is first order; nonlinear thermal/contact convergence requires separate benchmarks.",
+    "Axisymmetry removes general azimuthal dynamics and the other polarization; 3D view is rotational reconstruction.",
+    "PEC outer boundaries plus an artificial electric sponge are not open radiative boundaries or a PML.",
+    "The mouth flux is signed net flux through the full inner-radius plane; reflected and incident components are not separated.",
+    "Finite-window phase of broadband or reflected/standing fields is a filter-dependent local timing diagnostic, not trajectory, topology or quantum coherence.",
+    "Benchmark checks are not observational black-hole validation, full numerical relativity, or NASA certification."
+  ],
+  "observationalValidation": false,
+  "fullGRDynamics": false
+}

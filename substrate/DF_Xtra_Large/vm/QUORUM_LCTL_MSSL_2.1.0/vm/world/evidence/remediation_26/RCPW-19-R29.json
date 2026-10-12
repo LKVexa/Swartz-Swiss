@@ -1,0 +1,213 @@
+{
+  "evidence_sha256": "ef25fc967e32d233d86006ef5d7e6b3d31938f915e7cd79df91f283ba879fdbc",
+  "exit_code": 0,
+  "observed_results": {
+    "archive_bytes": {
+      "compressed": 1337,
+      "raw": 6075
+    },
+    "baseline": {
+      "entity_events": [
+        [
+          "entity:10",
+          1
+        ],
+        [
+          "entity:11",
+          1
+        ],
+        [
+          "entity:8",
+          1
+        ],
+        [
+          "entity:9",
+          1
+        ]
+      ],
+      "events": 15,
+      "kinds": [
+        [
+          "ADVANCE",
+          4
+        ],
+        [
+          "ENTITY_CREATE",
+          4
+        ],
+        [
+          "ROLE_SUCCESSION",
+          4
+        ],
+        [
+          "WORLD_EXPANSION",
+          2
+        ],
+        [
+          "WORLD_INIT",
+          1
+        ]
+      ],
+      "region_events": [
+        [
+          "region:3",
+          4
+        ],
+        [
+          "region:4",
+          1
+        ],
+        [
+          "region:5",
+          1
+        ]
+      ],
+      "role_events": [
+        [
+          "role:sheriff:eastvale",
+          4
+        ]
+      ],
+      "semantic_digest": "fed098530a0ae4e063aeee253b266eb4f09a106878d6a442c98886a0b783a92c"
+    },
+    "clean_room": true,
+    "old_history_after_expansion": {
+      "entity_events": [
+        [
+          "entity:10",
+          1
+        ],
+        [
+          "entity:11",
+          1
+        ],
+        [
+          "entity:8",
+          1
+        ],
+        [
+          "entity:9",
+          1
+        ]
+      ],
+      "events": 15,
+      "kinds": [
+        [
+          "ADVANCE",
+          4
+        ],
+        [
+          "ENTITY_CREATE",
+          4
+        ],
+        [
+          "ROLE_SUCCESSION",
+          4
+        ],
+        [
+          "WORLD_EXPANSION",
+          2
+        ],
+        [
+          "WORLD_INIT",
+          1
+        ]
+      ],
+      "region_events": [
+        [
+          "region:3",
+          4
+        ],
+        [
+          "region:4",
+          1
+        ],
+        [
+          "region:5",
+          1
+        ]
+      ],
+      "role_events": [
+        [
+          "role:sheriff:eastvale",
+          4
+        ]
+      ],
+      "semantic_digest": "fed098530a0ae4e063aeee253b266eb4f09a106878d6a442c98886a0b783a92c"
+    },
+    "post_compaction": {
+      "entity_events": [
+        [
+          "entity:10",
+          1
+        ],
+        [
+          "entity:11",
+          1
+        ],
+        [
+          "entity:8",
+          1
+        ],
+        [
+          "entity:9",
+          1
+        ]
+      ],
+      "events": 15,
+      "kinds": [
+        [
+          "ADVANCE",
+          4
+        ],
+        [
+          "ENTITY_CREATE",
+          4
+        ],
+        [
+          "ROLE_SUCCESSION",
+          4
+        ],
+        [
+          "WORLD_EXPANSION",
+          2
+        ],
+        [
+          "WORLD_INIT",
+          1
+        ]
+      ],
+      "region_events": [
+        [
+          "region:3",
+          4
+        ],
+        [
+          "region:4",
+          1
+        ],
+        [
+          "region:5",
+          1
+        ]
+      ],
+      "role_events": [
+        [
+          "role:sheriff:eastvale",
+          4
+        ]
+      ],
+      "semantic_digest": "fed098530a0ae4e063aeee253b266eb4f09a106878d6a442c98886a0b783a92c"
+    }
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "requirement_id": "RCPW-19-R29",
+  "result_sha256": "9ef7b13bcca318df05ae206c74c36337e67d1a5fe010166d5912bf6deef3e70a",
+  "schema": "RCPW-26-GATE-EVIDENCE/1",
+  "status": "OPERATIONAL",
+  "test_command": "python vm/world/qualification/remediate_26.py",
+  "tool_versions": {
+    "python": "3.11.15",
+    "world_runtime": "7.0.0-applied-remediated-26"
+  }
+}

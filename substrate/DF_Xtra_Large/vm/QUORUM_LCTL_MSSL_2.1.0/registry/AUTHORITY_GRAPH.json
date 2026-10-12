@@ -1,0 +1,12 @@
+{
+  "schema": "QUORUM-AUTHORITY-GRAPH/2.0",
+  "order": [
+    "MSSL semantic authority",
+    "typed graph",
+    "Columned LCTL source",
+    "canonical LCTL",
+    "verification evidence",
+    "qualification claim"
+  ],
+  "legacy": "reference_evidence_only"
+}

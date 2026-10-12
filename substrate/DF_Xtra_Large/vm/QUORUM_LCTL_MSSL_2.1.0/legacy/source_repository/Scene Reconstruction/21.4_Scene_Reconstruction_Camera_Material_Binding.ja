@@ -1,0 +1,34 @@
+ja portal.scene 0.3
+module suite21.scene_reconstruction.camera_material_binding
+policy no_execute_unknown_code
+policy no_network
+
+scene SceneReconstructionCameraMaterialBinding {
+  resource ReconstructedMesh: Mesh = "geometry/reconstructed_scene.mesh"
+  material ReconstructedMaterial { shader: "portal/pbr" metallic: 0.1 roughness: 0.4 }
+  entity CameraRig {
+    component Transform3D {
+      position: vec3(0m, 1.5m, 5m)
+      rotation: quat.identity
+      scale: vec3(1, 1, 1)
+    }
+    component Tag { value: "camera.rig.canonical" }
+  }
+  entity MainCamera parent CameraRig {
+    component Camera { projection: perspective(60deg) near_clip: 0.1m far_clip: 1000m priority: 0 }
+  }
+  entity MaterialBoundGeometry {
+    component Transform3D { position: vec3(0m, 0m, 0m) }
+    component MeshRenderer { mesh: ReconstructedMesh material: ReconstructedMaterial }
+  }
+  entity SOPHIA_CameraInterpretation parent CameraRig { component Tag { value: "sophia.camera.interpretation" } }
+  entity CHARLOTTE_CameraValidation parent CameraRig { component Tag { value: "charlotte.camera.validation" } }
+  entity LANDON_MaterialBinding parent MaterialBoundGeometry { component Tag { value: "landon.material.binding" } }
+  entity Professor_RenderExplanation parent CameraRig { component Tag { value: "professor.render.explanation" } }
+  entity Podium_CameraMaterialReceipt parent CameraRig { component Tag { value: "podium.camera_material.receipt" } }
+}
+serialize SceneReconstructionCameraMaterialBinding using canonical_scene_v1
+snapshot SceneReconstructionCameraMaterialBinding as "scene_reconstruction_camera_material_binding.snapshot"
+optimize scene SceneReconstructionCameraMaterialBinding using [stable_ids, topological_order, resource_deduplication, constant_transform]
+lower SceneReconstructionCameraMaterialBinding to PORTAL_SCENE_R12
+trace SceneReconstructionCameraMaterialBinding to "scene_reconstruction_camera_material_binding.mcrt"

@@ -1,0 +1,37 @@
+{
+  "schema": "QUORUM-PLANE-GRAPH/2.0",
+  "plane_id": 5,
+  "plane": "security_authorization",
+  "modules": [
+    {
+      "module_id": 13,
+      "name": "Chair"
+    },
+    {
+      "module_id": 28,
+      "name": "Safety Gate"
+    },
+    {
+      "module_id": 44,
+      "name": "Capability and Security Plane"
+    },
+    {
+      "module_id": 52,
+      "name": "Evaluation and Content Defense"
+    },
+    {
+      "module_id": 55,
+      "name": "Capability Manifests and Permissions"
+    },
+    {
+      "module_id": 63,
+      "name": "Sandbox and Offline Runtime"
+    },
+    {
+      "module_id": 65,
+      "name": "Sandbox Engine"
+    }
+  ],
+  "integration": "independent module nodes with scenario-mediated orchestration",
+  "cycles": []
+}

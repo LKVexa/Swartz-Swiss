@@ -1,0 +1,72 @@
+{
+  "atomic_requirements_operational": 85,
+  "atomic_requirements_total": 85,
+  "command_log_count": 33,
+  "completed_utc": "2026-08-11T03:29:23+00:00",
+  "decision": "OPERATIONAL",
+  "external_nonblocking_scope": [
+    "native Windows OS execution qualification (portable Windows adapter source contract is compiled/tested on this host)",
+    "physical SIM/UICC/eSIM issuer and hardware qualification",
+    "independent third-party LCTL 1.6.1-RC1 verifier unless LCTL_JAR is supplied"
+  ],
+  "release": "BOTTLE_ROCKET 4.1.0 COLUMNED LCTL \u2014 Production Execution Boundary",
+  "reproducibility": {
+    "brim_direct_hash_A": "7d1cbe7b4f8f11b64fff3b6eb53e947d14dfd1194c4889e553b42bbfdaf9e17d",
+    "brim_direct_hash_B": "7d1cbe7b4f8f11b64fff3b6eb53e947d14dfd1194c4889e553b42bbfdaf9e17d",
+    "brim_direct_identical": true,
+    "build_A": {
+      "artifacts": {
+        ".build/br_tests": "e0db0e91bd649a98bf9fcadc6cde8b4e9819af7f84e3644cc244ec177be79222",
+        ".build/brctl": "3853f5747da47add5636d05e151a47542c729d9c0fdd0c19ea0b1f88c3449eec",
+        ".build/libbrvm_core.a": "0e9a81d2431e9fd7e81708b427e887937d47c2c1ecb1ab55e13dfa5c3d49dd9c",
+        "deploy/BOTTLE_ROCKET_SIM_CORE_4.1.0.brimg": "7d1cbe7b4f8f11b64fff3b6eb53e947d14dfd1194c4889e553b42bbfdaf9e17d"
+      },
+      "label": "clean-A"
+    },
+    "build_B": {
+      "artifacts": {
+        ".build/br_tests": "e0db0e91bd649a98bf9fcadc6cde8b4e9819af7f84e3644cc244ec177be79222",
+        ".build/brctl": "3853f5747da47add5636d05e151a47542c729d9c0fdd0c19ea0b1f88c3449eec",
+        ".build/libbrvm_core.a": "0e9a81d2431e9fd7e81708b427e887937d47c2c1ecb1ab55e13dfa5c3d49dd9c",
+        "deploy/BOTTLE_ROCKET_SIM_CORE_4.1.0.brimg": "7d1cbe7b4f8f11b64fff3b6eb53e947d14dfd1194c4889e553b42bbfdaf9e17d"
+      },
+      "label": "clean-B"
+    },
+    "byte_identical": true,
+    "deterministic_source_archives_identical": true
+  },
+  "scope": "host-reference production execution boundary and portable adapter source contracts",
+  "size": {
+    "brim_bytes": 176,
+    "brim_ceiling_bytes": 51200,
+    "brim_pass": true,
+    "core_archive_bytes": 33958,
+    "host_brctl_bytes": 62848,
+    "packed_source_zip_bytes": 86531,
+    "packed_source_zip_sha256": "908ec8ce58805d9f165f327546699d26f4578b1a9ea02c9aba05c25af67456a1",
+    "production_source_boundary": "Makefile + src/** + adapters/** + spec/**; host CLI, tests, tools, evidence and deploy artifacts excluded as development/qualification surfaces",
+    "production_source_bytes": 60820,
+    "production_source_ceiling_lt_bytes": 61000,
+    "production_source_pass": true,
+    "source_repository_bytes": 220555
+  },
+  "started_utc": "2026-08-11T03:29:05+00:00",
+  "tests": {
+    "failures": 0,
+    "result": "PASS",
+    "suite": "BR-410",
+    "tests": 18
+  },
+  "unresolved_critical_or_high_defects": [],
+  "work_packages": {
+    "BR-410-01": "OPERATIONAL",
+    "BR-410-02": "OPERATIONAL",
+    "BR-410-03": "OPERATIONAL",
+    "BR-410-04": "OPERATIONAL",
+    "BR-410-05": "OPERATIONAL",
+    "BR-410-06": "OPERATIONAL",
+    "BR-410-07": "OPERATIONAL",
+    "BR-410-08": "OPERATIONAL",
+    "BR-410-09": "OPERATIONAL"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 18,
+  "legacy_root": "legacy/source_repository/Feature Graph",
+  "legacy_sha256": "d64cd1de998690bc08b26312fe66a82628de40a2018030917c4991f086b8fe32",
+  "files": [
+    {
+      "path": "18.1_Feature_Graph_Regions.jad",
+      "sha256": "fabc9027e337565bf4ba7e6c64c1aa103cfc8cd8e2969f3f76221480e41059b1",
+      "bytes": 2173
+    },
+    {
+      "path": "18.2_Feature_Graph_Contours.jad",
+      "sha256": "86d37499e28507e38724cb60cd700d9cff33e80fa2ef24d2b4a8557939347004",
+      "bytes": 2282
+    },
+    {
+      "path": "18.3_Feature_Graph_Landmarks.jad",
+      "sha256": "5402e4b3e4dc71907f0ab4fc4b080437246a963d4824d0df162497d0926e9838",
+      "bytes": 2267
+    },
+    {
+      "path": "18.4_Feature_Graph_Layers.jad",
+      "sha256": "34d0b837e216fed95f7fdd243f738a86346e3d20a0b21f60e83072547fb515f4",
+      "bytes": 2263
+    },
+    {
+      "path": "18.5_Feature_Graph_Materials.jad",
+      "sha256": "fa1d54ff802dc885ef86e8c73edecb56161de09afef70d83e1bda9bf0950baa9",
+      "bytes": 2324
+    },
+    {
+      "path": "18.6_Feature_Graph_Relations.jad",
+      "sha256": "ca44997fa8ff1b3a1860104a3e3756a203fc2828cfcecb93818abb9cc287ef51",
+      "bytes": 2298
+    },
+    {
+      "path": "README.md",
+      "sha256": "9e4fe770cb5d9d9792952812115b8bfb221c629d1c6f6d7158e934338808e987",
+      "bytes": 8385
+    },
+    {
+      "path": "feature_graph_contours.dmk",
+      "sha256": "a3e932e787daa072979cd18f9dbd26815035352d014f32ec52df2032a12dca29",
+      "bytes": 2638
+    },
+    {
+      "path": "feature_graph_landmarks.dmk",
+      "sha256": "2d7255e02b42d9f6df38d1d84f5d9bb8f86453781bf11b600e132086daac521e",
+      "bytes": 2634
+    },
+    {
+      "path": "feature_graph_layers.dmk",
+      "sha256": "c0d7c0a9bab33fade27f26dbcfc50a5f1074e1faef75f8c6ddeec4f775a59393",
+      "bytes": 2628
+    },
+    {
+      "path": "feature_graph_materials.dmk",
+      "sha256": "f8b97ed8b85b2090f4b4370a3ccbff155fe65857e75300c50608e1b527cda476",
+      "bytes": 2666
+    },
+    {
+      "path": "feature_graph_regions.dmk",
+      "sha256": "a10ef4a3ba13eb8ac47587df44547390954239dabaea3a9fed088290027502e0",
+      "bytes": 2582
+    },
+    {
+      "path": "feature_graph_relations.dmk",
+      "sha256": "5cc1b9b70cbc70d62bfe6466dfaf1349bc726a80a82e5faac5cf57f02639784e",
+      "bytes": 2648
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

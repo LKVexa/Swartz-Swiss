@@ -1,0 +1,188 @@
+{
+  "schema": "QUORUM-MODULE-GRAPH/2.0",
+  "graph_id": "G19",
+  "module_id": 19,
+  "module": "Mesh Geometry",
+  "plane": "media_visual",
+  "version": "2.0.0",
+  "entry": "N01",
+  "exit": "N09",
+  "nodes": [
+    {
+      "id": "N01",
+      "stage": "SOURCE",
+      "operator": "OBSERVE",
+      "input": "asset/scene/frame/timeline",
+      "output": "state.source",
+      "precondition": "admitted",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N02",
+      "stage": "INSPECT",
+      "operator": "INSPECT",
+      "input": "N01.output",
+      "output": "state.inspect",
+      "precondition": "N01.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N03",
+      "stage": "SCENE_BIND",
+      "operator": "MATERIALIZE",
+      "input": "N02.output",
+      "output": "state.scene_bind",
+      "precondition": "N02.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N04",
+      "stage": "TRANSFORM",
+      "operator": "TRANSFORM",
+      "input": "N03.output",
+      "output": "state.transform",
+      "precondition": "N03.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N05",
+      "stage": "RENDER",
+      "operator": "RENDER",
+      "input": "N04.output",
+      "output": "state.render",
+      "precondition": "N04.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N06",
+      "stage": "COMPOSITE",
+      "operator": "TRANSFORM",
+      "input": "N05.output",
+      "output": "state.composite",
+      "precondition": "N05.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N07",
+      "stage": "VALIDATE",
+      "operator": "VALIDATE",
+      "input": "N06.output",
+      "output": "state.validate",
+      "precondition": "N06.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N08",
+      "stage": "EXPORT",
+      "operator": "MATERIALIZE",
+      "input": "N07.output",
+      "output": "state.export",
+      "precondition": "N07.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N09",
+      "stage": "EVIDENCE",
+      "operator": "RECORD",
+      "input": "N08.output",
+      "output": "render_artifact/visual_evidence",
+      "precondition": "N08.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E01",
+      "from": "N01",
+      "to": "N02",
+      "kind": "control+data"
+    },
+    {
+      "id": "E02",
+      "from": "N02",
+      "to": "N03",
+      "kind": "control+data"
+    },
+    {
+      "id": "E03",
+      "from": "N03",
+      "to": "N04",
+      "kind": "control+data"
+    },
+    {
+      "id": "E04",
+      "from": "N04",
+      "to": "N05",
+      "kind": "control+data"
+    },
+    {
+      "id": "E05",
+      "from": "N05",
+      "to": "N06",
+      "kind": "control+data"
+    },
+    {
+      "id": "E06",
+      "from": "N06",
+      "to": "N07",
+      "kind": "control+data"
+    },
+    {
+      "id": "E07",
+      "from": "N07",
+      "to": "N08",
+      "kind": "control+data"
+    },
+    {
+      "id": "E08",
+      "from": "N08",
+      "to": "N09",
+      "kind": "control+data"
+    }
+  ],
+  "legacy_signals": [
+    "sophia_classify_proxy",
+    "charlotte_validate_proxy",
+    "landon_stage_proxy",
+    "professor_explain_proxy",
+    "podium_certify_proxy",
+    "sophia_generate_depth",
+    "charlotte_rank_depth",
+    "landon_stage_depth",
+    "professor_explain_depth",
+    "podium_certify_depth",
+    "sophia_infer_topology",
+    "charlotte_validate_topology",
+    "landon_stage_topology",
+    "professor_explain_topology",
+    "podium_certify_topology",
+    "sophia_align_coordinates",
+    "charlotte_validate_camera",
+    "landon_transform_coordinates",
+    "professor_explain_camera",
+    "podium_certify_camera",
+    "sophia_propose_deformation",
+    "charlotte_validate_deformation",
+    "landon_step_deformation",
+    "professor_explain_deformation"
+  ],
+  "deterministic_order": true
+}

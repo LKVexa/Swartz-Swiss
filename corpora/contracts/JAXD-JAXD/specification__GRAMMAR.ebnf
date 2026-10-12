@@ -1,0 +1,95 @@
+(* JA Experience Design Language 0.1 — provisional EBNF *)
+program             = header, module_decl, { use_decl | policy_decl }, experience_decl ;
+header              = "ja", "experience.design", version, terminator ;
+module_decl         = "module", qualified_id, terminator ;
+use_decl            = "use", qualified_id, terminator ;
+policy_decl         = "policy", qualified_id, [ argument_list ], terminator ;
+experience_decl     = "experience", identifier, [ "version", string ], block ;
+block               = "{", { statement }, "}" ;
+statement           = metadata_decl | tokens_decl | theme_decl | resource_decl
+                    | component_decl | screen_decl | journey_decl | target_decl
+                    | motion_decl | effect_decl | content_decl | evidence_decl
+                    | emit_decl | assert_stmt | policy_decl ;
+metadata_decl       = "metadata", object, terminator ;
+tokens_decl         = "tokens", identifier, [ "inherits", qualified_id ], "{", { token_decl }, "}" ;
+token_decl          = token_kind, qualified_id, "=", expression, terminator ;
+token_kind          = "color" | "length" | "radius" | "duration" | "easing"
+                    | "typography" | "shadow" | "opacity" | "border" | "icon"
+                    | "zindex" | "breakpoint" | "grid" | "motion" | "effect" | "content" ;
+theme_decl          = "theme", identifier, [ "inherits", qualified_id ], "{", { theme_stmt }, "}" ;
+theme_stmt          = map_stmt | mode_decl | contrast_stmt | token_decl ;
+map_stmt            = "map", qualified_id, "<-", qualified_id, terminator ;
+mode_decl           = "mode", identifier, block ;
+contrast_stmt       = "minimum_contrast", identifier, number, terminator ;
+resource_decl       = "resource", identifier, ":", qualified_id, [ "from", string ], block ;
+component_decl      = "component", identifier, [ "variant", identifier ], "{", { component_stmt }, "}" ;
+component_stmt      = property_decl | slot_decl | state_decl | derived_decl | layout_decl
+                    | style_decl | accessibility_decl | interaction_decl | responsive_decl
+                    | motion_use | validation_decl | content_use | component_decl | place_stmt ;
+property_decl       = "property", identifier, ":", type_ref, [ "=", expression ], terminator ;
+slot_decl           = "slot", identifier, ":", type_ref, terminator ;
+state_decl          = [ "shared" ], "state", identifier, ":", type_ref, [ "=", expression ], terminator ;
+derived_decl        = "derived", identifier, "=", expression, terminator ;
+layout_decl         = "layout", layout_kind, [ layout_arguments ], [ block ], terminator ;
+layout_kind         = "stack" | "grid" | "flow" | "overlay" | "dock" | "absolute" | "constraint" | "virtual_list" ;
+layout_arguments    = { identifier, expression } ;
+style_decl          = "style", block ;
+style_stmt          = qualified_id, expression, terminator | "on", state_name, block ;
+state_name          = "idle" | "hover" | "focus" | "active" | "selected" | "disabled" | "busy" | "success" | "warning" | "error" ;
+accessibility_decl  = "accessibility", "{", { accessibility_stmt }, "}" ;
+accessibility_stmt  = "role", identifier, terminator | "name", ( string | "bind", qualified_id ), terminator
+                    | "description", ( string | "bind", qualified_id ), terminator
+                    | "keyboard", identifier, array, terminator | "focus", identifier, terminator
+                    | "announce", identifier, terminator | "landmark", identifier, terminator ;
+interaction_decl    = "interaction", identifier, "{", { interaction_stmt }, "}" ;
+interaction_stmt    = "when", expression, terminator | "action", qualified_id, [ argument_list ], "requires", qualified_id, terminator
+                    | "feedback", identifier, [ "within", duration ], terminator
+                    | "confirm", expression, terminator | "cancel", qualified_id, terminator
+                    | "recover", identifier, expression, terminator ;
+responsive_decl     = "responsive", "{", { responsive_stmt }, "}" ;
+responsive_stmt     = "at", qualified_id, block | "input", identifier, block ;
+motion_decl         = "motion", identifier, "{", { motion_stmt }, "}" ;
+motion_stmt         = identifier, expression, terminator | "from", block | "to", block | "reduced", block ;
+motion_use          = "motion", qualified_id, [ "using", qualified_id ], "reduced", expression, terminator ;
+effect_decl         = "effect", identifier, "{", { style_stmt | motion_stmt }, "}" ;
+validation_decl     = "validation", block ;
+content_decl        = "content", qualified_id, "{", { identifier, string, terminator | "fallback", identifier, terminator }, "}" ;
+content_use         = "text", ( string | "bind", qualified_id | "key", qualified_id ), terminator ;
+screen_decl         = "screen", identifier, [ "target", array ], "{", { screen_stmt }, "}" ;
+screen_stmt         = region_decl | place_stmt | layout_decl | responsive_decl | accessibility_decl ;
+region_decl         = "region", identifier, [ "role", identifier ], block ;
+place_stmt          = "place", qualified_id, "in", qualified_id, [ "with", object ], terminator ;
+journey_decl        = "journey", identifier, "{", { journey_stmt }, "}" ;
+journey_stmt        = "actor", qualified_id, terminator | "goal", string, terminator | "start", qualified_id, terminator
+                    | step_decl | "measure", qualified_id, [ "target", comparison ], terminator ;
+step_decl           = "step", identifier, "{", { step_stmt }, "}" ;
+step_stmt           = "require", qualified_id, terminator | "decision", identifier, "from", expression, terminator
+                    | "success", qualified_id, terminator | "failure", qualified_id, terminator
+                    | "cancel", qualified_id, terminator | "recover", identifier, "with", expression, terminator
+                    | "progress", identifier, terminator | "confirm", identifier, terminator ;
+target_decl         = "target", identifier, [ "architecture", identifier ], block ;
+evidence_decl       = "evidence", "{", { "emit", qualified_id, terminator }, "}" ;
+emit_decl           = "emit", qualified_id, string, [ "for", qualified_id ], terminator ;
+assert_stmt         = "assert", expression, terminator ;
+type_ref            = qualified_id, [ "<", type_ref, { ",", type_ref }, ">" ], [ "?" ] ;
+argument_list       = "(", [ expression, { ",", expression } ], ")" ;
+comparison          = comparison_op, expression ;
+comparison_op       = "<" | ">" | "<=" | ">=" | "==" | "!=" ;
+expression          = primary, { operator, primary } ;
+primary             = qualified_id | string | number | duration | length | boolean | array | object | call | "(", expression, ")" ;
+call                = qualified_id, argument_list ;
+array               = "[", [ expression, { ",", expression } ], "]" ;
+object              = "{", [ identifier, ":", expression, { ",", identifier, ":", expression } ], "}" ;
+operator            = "==" | "!=" | "<" | ">" | "<=" | ">=" | "and" | "or" | "+" | "-" | "*" | "/" | "<-" ;
+qualified_id        = identifier, { ".", identifier } ;
+identifier          = letter, { letter | digit | "_" | "-" } ;
+version             = digit, { digit | "." | "-" | letter } ;
+number              = [ "-" ], digit, { digit }, [ ".", digit, { digit } ] ;
+duration            = number, ( "ms" | "s" | "min" ) ;
+length              = number, ( "px" | "dp" | "sp" | "rem" | "em" | "%" | "vw" | "vh" | "fr" ) ;
+boolean             = "true" | "false" ;
+string              = '"', { character }, '"' ;
+terminator          = [ ";" ] ;
+letter              = ? Unicode letter ? ;
+digit               = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
+character           = ? any Unicode scalar except unescaped quote/newline ? ;

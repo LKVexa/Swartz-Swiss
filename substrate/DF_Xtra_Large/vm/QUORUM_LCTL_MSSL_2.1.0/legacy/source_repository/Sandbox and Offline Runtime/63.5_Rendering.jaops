@@ -1,0 +1,34 @@
+ja source 0.3
+module suite63.sandbox_offline_runtime.rendering
+use Operations
+policy explicit_network
+
+workspace SandboxOfflineRendering {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 12 memory 24GB
+    network disabled
+    secret rendering_runtime_key reference "vault://suite63/rendering-runtime"
+
+    service SOPHIA_rendering_context replicas 1
+    health_check SOPHIA_rendering_context every 10s
+    service CHARLOTTE_rendering_gate replicas 1
+    health_check CHARLOTTE_rendering_gate every 10s
+    service LANDON_rendering_runtime replicas 1
+    health_check LANDON_rendering_runtime every 10s
+    service Professor_rendering_report replicas 1
+    health_check Professor_rendering_report every 10s
+    service Podium_rendering_receipt replicas 1
+    health_check Podium_rendering_receipt every 10s
+    service offline_rendering_runtime_worker replicas 1
+    health_check offline_rendering_runtime_worker every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "sandbox_offline_runtime_rendering.msslb"

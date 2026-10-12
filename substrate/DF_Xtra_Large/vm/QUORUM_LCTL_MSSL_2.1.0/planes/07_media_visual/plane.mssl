@@ -1,0 +1,15 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum:generic_project:plane:media_visual:2.0.0",
+λ≡"quorum.generic_project.plane.media_visual",
+ℛ≡{"0001":"module(\"quorum.generic_project.plane.media_visual\")","0002":"learn(\"plane_id\",literal(\"7\"))","0003":"learn(\"plane_name\",literal(\"\\\"media_visual\\\"\"))","0004":"learn(\"version\",literal(\"\\\"2.0.0\\\"\"))","0005":"learn(\"suite_ids\",literal(\"[19,21,22,23,24,25,33,34,36]\"))","0006":"learn(\"stage_profile\",literal(\"[\\\"SOURCE\\\",\\\"INSPECT\\\",\\\"SCENE_BIND\\\",\\\"TRANSFORM\\\",\\\"RENDER\\\",\\\"COMPOSITE\\\",\\\"VALIDATE\\\",\\\"EXPORT\\\",\\\"EVIDENCE\\\"]\"))","0007":"learn(\"semantic_boundary\",literal(\"\\\"MSSL defines admitted semantics and claims.\\\"\"))","0008":"learn(\"execution_boundary\",literal(\"\\\"Columned LCTL graph rows lower to canonical LCTL before execution authority.\\\"\"))","0009":"learn(\"qualification_boundary\",literal(\"\\\"Plane integration topology is verified; domain behavior requires module-specific runtimes.\\\"\"))"},
+π≡[],
+δ≡9,
+τ≡0,
+μ≡{"learn.plane_id":7,"learn.plane_name":"media_visual","learn.version":"2.0.0","learn.suite_ids":[19,21,22,23,24,25,33,34,36],"learn.stage_profile":["SOURCE","INSPECT","SCENE_BIND","TRANSFORM","RENDER","COMPOSITE","VALIDATE","EXPORT","EVIDENCE"],"learn.semantic_boundary":"MSSL defines admitted semantics and claims.","learn.execution_boundary":"Columned LCTL graph rows lower to canonical LCTL before execution authority.","learn.qualification_boundary":"Plane integration topology is verified; domain behavior requires module-specific runtimes."},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},
+χ≡[],
+η≡{"events":[],"state":{"plane_id":7,"plane_name":"media_visual","version":"2.0.0","suite_ids":[19,21,22,23,24,25,33,34,36],"stage_profile":["SOURCE","INSPECT","SCENE_BIND","TRANSFORM","RENDER","COMPOSITE","VALIDATE","EXPORT","EVIDENCE"],"semantic_boundary":"MSSL defines admitted semantics and claims.","execution_boundary":"Columned LCTL graph rows lower to canonical LCTL before execution authority.","qualification_boundary":"Plane integration topology is verified; domain behavior requires module-specific runtimes."}},
+ν≡{}
+,κ≡"sha256:e21ee5b48fed0a9400da94c15af277678564595ffaff4f6469494ed85c616ca2"
+}⇒⊤

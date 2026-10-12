@@ -1,0 +1,21 @@
+ja source 0.3
+module cypher.audit_provenance
+use Security
+policy no_network
+
+principal SOPHIA_CHARLOTTE_LANDON_Professor_Podium_AuditWorker
+role CypherAuditWorker {
+    grant artifact.audit:approved
+    grant provenance.read:approved
+}
+resource AuditProvenanceArtifact classification restricted
+policy CypherAuditPolicy {
+    deny network.* by default
+    allow AuditProvenanceArtifact when principal.role == CypherAuditWorker
+    require human_approval for artifact.audit
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == true
+emit mcrt "CypherAuditPolicy.decision.mcrt"

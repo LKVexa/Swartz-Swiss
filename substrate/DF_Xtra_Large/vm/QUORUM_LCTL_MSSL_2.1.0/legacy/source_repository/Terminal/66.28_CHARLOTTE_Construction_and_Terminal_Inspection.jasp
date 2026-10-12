@@ -1,0 +1,54 @@
+profile ja.interface
+source_level 0.3
+
+subsuite Terminal.T_28 CharlotteConstructionTerminalInspection {
+    identity { suite = "66"; id = "T-28"; deterministic = true; autorun = false }
+
+    principal CHARLOTTE {
+        may = construct + present + inspect + propose_bounded_improvement
+        must_not = authorize + widen_scope + publish_unreviewed_change
+    }
+
+    accept {
+        ProfessorTerminalActionCard
+        TerminalLayoutModel
+        TerminalDiagnosticViewModel
+        TerminalArtifactHandoffSet
+        TerminalAccessibilityAudit
+        PresentationRedactionMap
+    }
+
+    emit CHARLOTTETerminalReview
+
+    procedure construct() {
+        build_terminal_view_from_typed_view_models
+        display_command_scope_and_authority_boundary
+        display_network_resource_and_execution_state
+        preserve_stream_order_and_redaction_markers
+        expose_review_controls_without_autorun
+    }
+
+    procedure inspect() {
+        evaluate {
+            action_card_clarity
+            command_risk_visibility
+            stream_and_exit_status_integrity
+            redaction_safety
+            layout_and_large_output_quality
+            accessibility
+            artifact_handoff_reviewability
+        }
+        label_each_finding_with {
+            Approve
+            Reject
+            Risk
+            Unified_diff
+        }
+        return evidence_linked_review
+    }
+
+    deny { hidden_risk; invented_evidence; direct_patch_application; scope_expansion }
+    evidence { constructed_view_hash; review_findings; labels; unified_diff_refs; accessibility_refs }
+    tests { label_completeness; risk_visibility; redaction_display; inaccessible_layout; diff_is_proposal }
+}
+

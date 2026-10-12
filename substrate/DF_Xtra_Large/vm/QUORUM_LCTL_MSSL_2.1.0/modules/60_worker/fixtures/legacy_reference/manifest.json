@@ -1,0 +1,45 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 60,
+  "legacy_root": "legacy/source_repository/Worker",
+  "legacy_sha256": "b7c88a77e44a7a137c51f4d9d8cf6b6958f3e81990344d683ac291cc642a1a89",
+  "files": [
+    {
+      "path": "60.1_Approved_Repository_Jobs_and_Reports.jaops",
+      "sha256": "9fb9a4cf5cec42f64efdfa01e41a60bc0f8e491589a58b7d3a0aabbbd937bebc",
+      "bytes": 1101
+    },
+    {
+      "path": "60.2_Build_Worker.jaops",
+      "sha256": "16f8680a022a6c40c03711b00354a4fbae6117b2af20e7f7a51037ae7c63a155",
+      "bytes": 1023
+    },
+    {
+      "path": "60.3_Test_Worker.jaops",
+      "sha256": "97d0983ebea54048baad880d8e51694cf8db453cb705a661acb06866ed32aba6",
+      "bytes": 1005
+    },
+    {
+      "path": "60.4_Translation_Worker.jaops",
+      "sha256": "fd9aab64458992bb623f78bd522d457881a12dcae87768c5de04910e1c469380",
+      "bytes": 1124
+    },
+    {
+      "path": "60.5_Rendering_Worker.jaops",
+      "sha256": "18e5048cbf6ee31afb682d9db811e07d3b91930ea4934406779c1f1fe412be01",
+      "bytes": 1091
+    },
+    {
+      "path": "60.6_Packaging_Worker.jaops",
+      "sha256": "80926c0023c9287d68463394352dac7a05b8020aa98875a74c72627e4d024b63",
+      "bytes": 1090
+    },
+    {
+      "path": "README.md",
+      "sha256": "e75bf03620a49e3578f46b5fbb96c72a2ea279404d61b9196335cf6be99c1175",
+      "bytes": 17457
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

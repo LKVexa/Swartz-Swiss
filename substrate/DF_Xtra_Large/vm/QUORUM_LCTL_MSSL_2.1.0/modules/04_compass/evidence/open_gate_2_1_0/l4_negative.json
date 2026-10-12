@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "5b93d653b7ec42f8058c4ae65614279e9d6a8e1626487da51e3010fec37b28c7",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Compass",
+  "module_id": 4,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

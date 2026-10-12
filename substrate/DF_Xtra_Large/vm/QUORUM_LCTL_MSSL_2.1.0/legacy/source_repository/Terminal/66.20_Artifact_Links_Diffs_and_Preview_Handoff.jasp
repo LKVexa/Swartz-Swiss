@@ -1,0 +1,38 @@
+profile ja.core_application
+source_level 0.3
+
+subsuite Terminal.T_20 ArtifactLinksDiffsPreviewHandoff {
+    identity { suite = "66"; id = "T-20"; deterministic = true; autorun = false }
+
+    integrate {
+        Suite_38_Preview_Designer
+        Suite_49_Action_Cards
+        Suite_50_Diff_Patch_and_Review
+        Suite_61_Popup_Runner
+    }
+
+    accept { TerminalResult; artifact_inventory[]; output_contract; release_policy }
+    emit TerminalArtifactHandoffSet
+
+    procedure prepare_reviewable_handoffs(artifacts) {
+        for artifact in artifacts {
+            require artifact.hash.present
+            require artifact.path within declared_output_roots
+            classify(artifact)
+            if artifact.is_patch { produce_bounded_unified_diff }
+            if artifact.is_previewable { create_read_only_preview_ref }
+            if artifact.is_job_contract { create_popup_runner_proposal_only }
+        }
+        return seal_handoff_set
+    }
+
+    procedure release_only_approved_handoffs(LANDON_review) {
+        require LANDON_review == APPROVED
+        require every_handoff_hash_matches
+        route_by_release_policy
+    }
+
+    deny { auto_apply_patch; direct_publish; unhashed_handoff; preview_as_authority }
+    evidence { artifact_links; diff_refs; preview_refs; popup_proposals; release_record }
+    tests { artifact_link; diff; preview; popup_proposal; rejected_review; hash_mismatch }
+}

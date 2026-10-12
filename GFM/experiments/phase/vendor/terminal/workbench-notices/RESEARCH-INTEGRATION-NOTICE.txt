@@ -1,0 +1,13 @@
+RUSSL Research Workbench — local modified integration, 2026-10-11
+
+This derivative combines the existing RUSSL raw-word workbench with the
+supplied GFM Research Terminal. New research integration components retain
+GPL-3.0-only attribution and the terminal's project/source notices.
+The original terminal source package and earlier workbench deliverables remain
+unchanged. Vendor engine 1.1.0-russl identifies repaired numerical boundaries.
+
+The project license text, COPYRIGHT, NOTICE and THIRD-PARTY-NOTICES companions
+are preserved under vendor/gfm-research-terminal/dist and embedded in the
+terminal's readable notice/license dialogs. Third-party source material retains
+its original rights and recorded scope. Local integration is not a public
+distribution permission grant, external certification or physical validation.

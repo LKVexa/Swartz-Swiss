@@ -1,0 +1,60 @@
+{
+  "evidence_sha256": "dc132b9955a8cace1ff6682f1af9e133e6ee808ff18a985202f0a928ccdcaaed",
+  "exit_code": 0,
+  "observed_results": {
+    "unsupported_rejected": true,
+    "v1": {
+      "entity": "3",
+      "from": "ABSTRACT",
+      "health": 88,
+      "inventory": {
+        "food": 2
+      },
+      "obligations": [
+        "trade:1"
+      ],
+      "owner": "canonical",
+      "pos": [
+        500,
+        100,
+        0
+      ],
+      "tick": 50,
+      "to": "INTERACTIVE",
+      "version": 1
+    },
+    "v2": {
+      "canonical_tick": 50,
+      "conservation": {
+        "canonical_pos": [
+          500,
+          100,
+          0
+        ],
+        "health": 88,
+        "inventory": {
+          "food": 2
+        },
+        "obligations": [
+          "trade:1"
+        ],
+        "ownership": "canonical"
+      },
+      "entity_id": "3",
+      "schema": "RCPW-REPRESENTATION-TRANSITION/2",
+      "source": "ABSTRACT",
+      "target": "INTERACTIVE",
+      "version": 2
+    }
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "requirement_id": "RCPW-14-R23",
+  "result_sha256": "23ec9fc3500add6d5a6065096ba3421931dda19718101e24ef10053bc69aba26",
+  "schema": "RCPW-26-GATE-EVIDENCE/1",
+  "status": "OPERATIONAL",
+  "test_command": "python vm/world/qualification/remediate_26.py",
+  "tool_versions": {
+    "python": "3.11.15",
+    "world_runtime": "7.0.0-applied-remediated-26"
+  }
+}

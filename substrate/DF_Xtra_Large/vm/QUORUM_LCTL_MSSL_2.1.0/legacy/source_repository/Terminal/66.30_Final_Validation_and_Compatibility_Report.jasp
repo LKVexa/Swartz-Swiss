@@ -1,0 +1,70 @@
+profile ja.data
+source_level 0.3
+
+subsuite Terminal.T_30 FinalValidationCompatibilityReport {
+    identity { suite = "66"; id = "T-30"; deterministic = true; autorun = false }
+
+    accept {
+        NormalizedTerminalContract
+        PodiumTerminalAuthorization
+        hermit_cell_attestation
+        TerminalResult
+        SOPHIATerminalEvaluation
+        CHARLOTTETerminalReview
+        LANDONTerminalReviewDecision
+        TerminalEvidenceManifest
+    }
+
+    emit TerminalCompatibilityReport as json
+
+    procedure validate_and_emit_json(contract, authorization, attestation, result, sophia, charlotte) {
+        validation = run {
+            positive
+            negative
+            boundary
+            security
+            regression
+            accessibility
+            air_gap
+            release
+        }
+
+        report = TerminalCompatibilityReport {
+            report_version = "1.0"
+            suite_id = "66"
+            terminal_run_id = contract.terminal_run_id
+            contract_hash = contract.contract_hash
+            context_snapshot_hash
+            command_ast_hash
+            invocation_hash = result.invocation_hash
+            capability_manifest_hash
+            environment_manifest_hash
+            network_policy
+            authorization_summary
+            cell_attestation_summary
+            worker_and_toolchain_identities
+            stream_merkle_root
+            exit_code = result.exit_code
+            terminal_state = result.terminal_state
+            resource_summary
+            artifact_hashes = result.artifact_hashes
+            validation_summary = validation
+            security_summary
+            accessibility_summary
+            SOPHIA_evaluation_summary = sophia.summary
+            CHARLOTTE_review_summary = charlotte.summary
+            LANDON_review_summary
+            rollback_or_integration_summary
+            evidence_manifest_hash
+            publication_eligibility
+            unresolved_risks
+        }
+
+        require report validates_against "schemas/terminal-compatibility-report.schema.json"
+        return canonical_json(report)
+    }
+
+    deny { schema_invalid_report; missing_required_gate; false_publication_eligibility }
+    evidence { test_results; schema_validation; report_hash; unresolved_risks }
+    tests { passing_report; failed_gate; missing_hash; unresolved_risk; canonical_json }
+}

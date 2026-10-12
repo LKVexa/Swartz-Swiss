@@ -1,0 +1,33 @@
+{
+  "negative_assembler": {
+    "ambiguous_duplicate": true,
+    "bad_immediate": true,
+    "malformed_columns": true,
+    "missing_mode": true,
+    "unknown_br_field": true,
+    "unsupported_version": true
+  },
+  "negative_strict": {
+    "ambiguous_duplicate": true,
+    "bad_immediate": true,
+    "bad_order": true,
+    "malformed_columns": true,
+    "missing_mode": true,
+    "unknown_br_field": true,
+    "unsupported_version": true
+  },
+  "positive": [
+    {
+      "br_rows": 6,
+      "file": "src/BOOT.lctlc",
+      "rows": 7,
+      "sha256": "ed046c2bd74d344c391951cdcb0059b93a0dc3e2acdbb9c39ad1798c47041f5a"
+    },
+    {
+      "br_rows": 0,
+      "file": "src/CORE.lctlc",
+      "rows": 14,
+      "sha256": "167fb08ba099d662bbed10d6d9d2e774858888ef3ffdea415bd74fadcf25afa3"
+    }
+  ]
+}

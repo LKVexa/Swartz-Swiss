@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.answer_modes.architect
+use Agent
+policy no_network
+
+agent AnswerModeArchitect {
+    identity "answer_mode_architect"
+    role "sophia-charlotte-landon-professor-podium-answer-mode"
+    goal emit_constraint_valid_architecture_answer when confidence >= 0.94
+    memory session retention 1h
+    budget steps 60 tools 5
+    tool LANDONCollectArchitectureContext(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAModelArchitectureAnswer(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateArchitectureAnswer(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainArchitecture(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordArchitectureAnswer(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectArchitectureContext
+        authorize SOPHIAModelArchitectureAnswer
+        authorize CHARLOTTEValidateArchitectureAnswer
+        authorize ProfessorExplainArchitecture
+        authorize PodiumRecordArchitectureAnswer
+        continue when policy_allows
+        execute LANDONCollectArchitectureContext("selected_system_scope")
+        execute SOPHIAModelArchitectureAnswer("system_constraints")
+        execute CHARLOTTEValidateArchitectureAnswer("candidate_architecture")
+        execute ProfessorExplainArchitecture("validated_architecture")
+        execute PodiumRecordArchitectureAnswer("architecture_answer_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "AnswerModeArchitect.mcrt"

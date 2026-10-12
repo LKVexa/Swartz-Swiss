@@ -1,0 +1,35 @@
+LCTL/1.3
+BUNDLE¦ID¦VERSION¦PROFILE¦ENTRY¦FRAMES¦TARGET¦BACKEND¦NETWORK¦REPLAY¦PRECISION¦ERROR_BUDGET¦RESOURCE_CEILING¦ADMISSION¦STATE¦PROOF
+(bundle ¦ quorum.generic_project.module.50.diff_patch_and_review ¦ 2.0.0 ¦ lctl.quantum.parallel.distributed.native ¦ F0000:C9999 ¦ 1 ¦ local-reference ¦ none ¦ deny ¦ deterministic-seeded ¦ f64 ¦ 0.05 ¦ q<=12;distributed=logical;physical=false ¦ q1-q6 ¦ sealed ¦ lctl-column:1.0)
+QFRAME/1.0 BEGIN F0000
+ID¦PARENT¦MODULE¦QSPACE¦TICK¦PREV¦REGISTERS¦BASIS¦STATE_REGIME¦NOISE_REGIME¦APPROX_REGIME¦HARDWARE¦CONF¦ERROR¦ADMIT¦PROOF
+(F0000 ¦ ROOT ¦ quorum.generic_project.module.50.diff_patch_and_review ¦ H ¦ 0 ¦ _ ¦ declared ¦ computational ¦ pure_or_mixed ¦ explicit ¦ typed ¦ local-reference ¦ 1.0 ¦ tracked ¦ observe ¦ lctl-column:1.0)
+QTUPLE/1.0
+ROW¦FACE¦LANE¦QSPACE¦OP¦OUT¦CTRL¦A¦B¦PARAM¦TYPE¦BASIS¦REGIME¦ASSUME¦ERROR¦RESOURCE¦CONF¦PROOF
+(D0001 ¦ DECL ¦ alloc ¦ H ¦ QREG ¦ q ¦ _ ¦ _ ¦ _ ¦ 1 ¦ qreg[1] ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ logical_qubits=1 ¦ 1.0 ¦ lctl:1.2)
+(D0002 ¦ DECL ¦ alloc ¦ H ¦ CREG ¦ c ¦ _ ¦ _ ¦ _ ¦ 1 ¦ bit[1] ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ classical_bits=1 ¦ 1.0 ¦ lctl:1.2)
+(S0001 ¦ PARALLEL ¦ semantic ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ node=N01;stage=CHANGE;operator=INSPECT;plane=governance_control ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(S0002 ¦ PARALLEL ¦ semantic ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ node=N02;stage=INSPECT;operator=INSPECT;plane=governance_control ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0001 ¦ PARALLEL ¦ control ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=N01;to=N02;kind=control_data ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(S0003 ¦ PARALLEL ¦ semantic ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ node=N03;stage=DIFF;operator=COMPARE;plane=governance_control ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0002 ¦ PARALLEL ¦ control ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=N02;to=N03;kind=control_data ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(S0004 ¦ PARALLEL ¦ semantic ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ node=N04;stage=REVIEW;operator=INSPECT;plane=governance_control ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0003 ¦ PARALLEL ¦ control ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=N03;to=N04;kind=control_data ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(S0005 ¦ PARALLEL ¦ semantic ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ node=N05;stage=AUTHORIZE;operator=AUTHORIZE;plane=governance_control ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0004 ¦ PARALLEL ¦ control ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=N04;to=N05;kind=control_data ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(S0006 ¦ PARALLEL ¦ semantic ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ node=N06;stage=APPLY;operator=EXECUTE;plane=governance_control ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0005 ¦ PARALLEL ¦ control ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=N05;to=N06;kind=control_data ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(S0007 ¦ PARALLEL ¦ semantic ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ node=N07;stage=VERIFY;operator=VALIDATE;plane=governance_control ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0006 ¦ PARALLEL ¦ control ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=N06;to=N07;kind=control_data ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(S0008 ¦ PARALLEL ¦ semantic ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ node=N08;stage=RECORD;operator=RECORD;plane=governance_control ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0007 ¦ PARALLEL ¦ control ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=N07;to=N08;kind=control_data ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(S0009 ¦ PARALLEL ¦ semantic ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ node=N09;stage=EVIDENCE;operator=RECORD;plane=governance_control ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0008 ¦ PARALLEL ¦ control ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=N08;to=N09;kind=control_data ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(P9001 ¦ PARALLEL ¦ security ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ default=deny;network=deny;caps=evidence.write,patch.propose,repository.read ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:security2)
+(V9001 ¦ PARALLEL ¦ evidence ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ receipt=required;replay=contract;legacy_sha256=a67bc5380e1cc7cb ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:evidence2)
+(C9999 ¦ CODE ¦ terminal ¦ H ¦ NOP ¦ _ ¦ _ ¦ _ ¦ _ ¦ terminal=sealed_graph_end;justification=canonical_entry_sentinel ¦ operator ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ lctl:nop)
+END QTUPLE
+END QFRAME
+@frame sha256:e2266f1a3347a766674ac8c1dafc01fcb40b18236db75854331d6a27c27fe5bb
+END LCTL
+@bundle sha256:c9459f3b373fbe1dcf9767f45a7d30679d1d5f888cff813a3180f9ad606ce35e

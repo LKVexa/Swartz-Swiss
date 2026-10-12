@@ -1,0 +1,31 @@
+ja source 0.3
+module suite46.air_gap_certification_installer_plane.one_click_setup
+use Operations
+policy explicit_network
+
+workspace OneClickSetup {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 6 memory 12GB
+    network disabled
+    secret setup_system_key reference "vault://suite46/one-click-setup"
+    service SOPHIA_setup_profile replicas 1
+    health_check SOPHIA_setup_profile every 10s
+    service CHARLOTTE_setup_gate replicas 1
+    health_check CHARLOTTE_setup_gate every 10s
+    service LANDON_setup_coordinator replicas 1
+    health_check LANDON_setup_coordinator every 10s
+    service Professor_setup_guide replicas 1
+    health_check Professor_setup_guide every 10s
+    service Podium_setup_evidence replicas 1
+    health_check Podium_setup_evidence every 10s
+    service one_click_setup_worker replicas 1
+    health_check one_click_setup_worker every 5s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == true
+emit package "one_click_setup.msslb"

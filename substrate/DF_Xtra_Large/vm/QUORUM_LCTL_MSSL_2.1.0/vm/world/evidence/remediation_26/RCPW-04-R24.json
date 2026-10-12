@@ -1,0 +1,24 @@
+{
+  "evidence_sha256": "abee15ffe81d840c8c2f917628757f717a9f1462116079bcd0f11805b8940fd0",
+  "exit_code": 0,
+  "observed_results": {
+    "multi": {
+      "canonical_state_digest": "5dafd216a28006a90b73b5037aa6a6801fbe49545ced0b552ce7b74961a242fb",
+      "decision_digest": "60d9f03b4e421866758bcca056c0a922a9c0cfd6795f3fc1f1508bc60e5c50b4"
+    },
+    "single": {
+      "canonical_state_digest": "5dafd216a28006a90b73b5037aa6a6801fbe49545ced0b552ce7b74961a242fb",
+      "decision_digest": "60d9f03b4e421866758bcca056c0a922a9c0cfd6795f3fc1f1508bc60e5c50b4"
+    }
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "requirement_id": "RCPW-04-R24",
+  "result_sha256": "7874e7cfd828b29d316b4e57cbf7e2aa945d6dad56f22285b626def75e0cf856",
+  "schema": "RCPW-26-GATE-EVIDENCE/1",
+  "status": "OPERATIONAL",
+  "test_command": "python vm/world/qualification/remediate_26.py",
+  "tool_versions": {
+    "python": "3.11.15",
+    "world_runtime": "7.0.0-applied-remediated-26"
+  }
+}

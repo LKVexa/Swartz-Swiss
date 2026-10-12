@@ -1,0 +1,11 @@
+{
+  "module_id": 23,
+  "checks": [
+    "nominal_contract_admission",
+    "negative_contract_denial",
+    "stage_order",
+    "final_state"
+  ],
+  "scope": "contract_reference_executor_only",
+  "domain_behavior": "BLOCKED_NOT_IMPLEMENTED"
+}

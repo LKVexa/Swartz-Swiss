@@ -1,0 +1,13 @@
+{
+  "schema": "QUORUM-PLANE-GRAPH/2.0",
+  "plane_id": 12,
+  "plane": "governance_control",
+  "modules": [
+    {
+      "module_id": 50,
+      "name": "Diff Patch and Review"
+    }
+  ],
+  "integration": "independent module nodes with scenario-mediated orchestration",
+  "cycles": []
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 6,
+  "legacy_root": "legacy/source_repository/Pencil Sharpener",
+  "legacy_sha256": "9328878a3aa58a676eb9c39cf722208469923d2d8f9162c9aeb79c4ee0ce277c",
+  "files": [
+    {
+      "path": "06_pencil_sharpener_clarity.ja",
+      "sha256": "65bc56e0ee9a9f37b7c0ebb1109973ebbc4dfdb41f1630e974b77a23eb53a1d9",
+      "bytes": 1288
+    },
+    {
+      "path": "06_pencil_sharpener_compactness.ja",
+      "sha256": "39ef0dae10c2672f473eda7234c60f2d0285133a8049c95043c28b8de590bb61",
+      "bytes": 1587
+    },
+    {
+      "path": "06_pencil_sharpener_compile_readiness.ja",
+      "sha256": "3a5053abd9c6d1c66acc9fba95562617652947f9a1396c994ffbf15d231f0fc7",
+      "bytes": 1451
+    },
+    {
+      "path": "06_pencil_sharpener_consistency.ja",
+      "sha256": "4c6e4d3143c2433fdec164d117539222ed5dbd8e93121eace4d9f2f3c435e09a",
+      "bytes": 1537
+    },
+    {
+      "path": "06_pencil_sharpener_correctness.ja",
+      "sha256": "8893adf50f890f6a24e589db2acf2642d688d21b706794cea66bd8f1e0cecaf7",
+      "bytes": 1338
+    },
+    {
+      "path": "README.md",
+      "sha256": "d9595a9379068fa01b9c343d0dea1132c009772837fc319533627cb95655233e",
+      "bytes": 1891
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

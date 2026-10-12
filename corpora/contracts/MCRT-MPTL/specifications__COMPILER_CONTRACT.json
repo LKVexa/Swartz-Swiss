@@ -1,0 +1,29 @@
+{
+  "language": "mcrt.portal.timeline",
+  "version": "0.3",
+  "suite_version": "1.0.0",
+  "deterministic": true,
+  "network_default": "denied",
+  "stages": [
+    "lex",
+    "parse",
+    "AST",
+    "name_resolution",
+    "type_check",
+    "semantic_validation",
+    "safety_gate",
+    "normalization",
+    "optimization",
+    "R12_lowering",
+    "MCRT_emission"
+  ],
+  "required_receipts": [
+    "source_hash",
+    "semantic_hash",
+    "typed_ast_identity",
+    "optimization_equivalence",
+    "r12_identity",
+    "mcrt_identity"
+  ],
+  "native_execution_claimed": false
+}

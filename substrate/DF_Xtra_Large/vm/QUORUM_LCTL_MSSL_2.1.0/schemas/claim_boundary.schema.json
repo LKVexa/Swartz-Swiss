@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "quorum://schemas/claim_boundary.schema.json",
+  "title": "claim_boundary.schema.json",
+  "type": "object",
+  "required": [
+    "maturity",
+    "proven",
+    "not_proven",
+    "blocked"
+  ],
+  "additionalProperties": true
+}

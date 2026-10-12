@@ -1,0 +1,47 @@
+ja source 0.3
+module suite61.popup_runner.status_and_artifact_summary
+use Interface
+policy no_network
+
+interface PopupRunnerStatusArtifactSummary {
+    state selected_job: Text? = null
+    state loading_summary: Flag = false
+    derived has_selected_job = selected_job != null
+    derived can_view_summary = selected_job != null and not loading_summary
+    component SOPHIA_ResultModel {
+        label "Interpret job status, exit, effects, and artifacts"
+        enabled bind can_view_summary
+        accessibility role button name "Interpret selected job result and artifacts"
+        action interpret_job_result requires popup.job.result:approved
+    }
+    component CHARLOTTE_ResultGate {
+        label "Validate status, exit code, artifacts, and acceptance"
+        enabled bind can_view_summary
+        accessibility role button name "Validate selected job result summary"
+        action validate_job_result requires popup.job.result:approved
+    }
+    component LANDON_ResultProjection {
+        label "Show status and artifact summary"
+        enabled bind can_view_summary
+        accessibility role button name "Show selected job status and artifacts"
+        action show_job_result requires popup.job.result:approved
+    }
+    component Professor_ResultGuide {
+        label "Explain result, diagnostics, and next steps"
+        enabled bind has_selected_job
+        accessibility role button name "Explain selected job result and next steps"
+        action explain_job_result requires popup.job.result:approved
+    }
+    component Podium_ResultEvidence {
+        label "View terminal receipt and provenance"
+        enabled bind can_view_summary
+        accessibility role button name "View selected job terminal evidence"
+        action show_result_evidence requires popup.job.result:approved
+    }
+    component StatusArtifactViewport {
+        embed portal.scene "popup_runner_status_artifact_summary"
+        motion bind timeline.result_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface PopupRunnerStatusArtifactSummary

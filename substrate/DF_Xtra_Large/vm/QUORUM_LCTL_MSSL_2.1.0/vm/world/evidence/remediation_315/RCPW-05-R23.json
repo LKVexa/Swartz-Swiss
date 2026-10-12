@@ -1,0 +1,50 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "3bd89b319fa3ac782f126b399ac89f95dda83b27b1ff9452cd874301a27dde81",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (REFERENCE_PRECISION, IDENTITY_PERSISTENCE, CAUSAL_REPLAY) plus Stage 05 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "CAUSAL_REPLAY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "IDENTITY_PERSISTENCE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "REFERENCE_PRECISION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-15",
+    "GW-27",
+    "GW-66"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "High-volume transient evidence uses bounded retention/compaction without reusing canonical identities in a way that breaks historical references.",
+  "requirement_id": "RCPW-05-R23",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 5,
+  "stage_title": "Entity Persistence Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "REFERENCE_PRECISION",
+    "IDENTITY_PERSISTENCE",
+    "CAUSAL_REPLAY"
+  ],
+  "workflow_file": "05_ENTITY_PERSISTENCE_AUTHORITY/066_RCPW_05_R23_HIGH_VOLUME_TRANSIENT_EVIDENCE_USES_BOUNDED_RETENTION_COMPACTION_WITHOUT_REUSING_CANO.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

@@ -1,0 +1,139 @@
+{
+  "authority_sha256": "c30f4738a6d4c1c3189f7984abb39d58aa5f904d1ae2e2d76d4a513d93a9df69",
+  "domain_output": {
+    "authorization_decision": {
+      "decision": "ALLOW_REFERENCE_LOCAL",
+      "network": "DENY",
+      "reason": "fixture admitted under sealed local profile",
+      "side_effects": "REFERENCE_ONLY"
+    },
+    "input_type": "request/policy_context",
+    "legacy_signals": [
+      "SOPHIA",
+      "CHARLOTTE",
+      "LANDON",
+      "Professor",
+      "Podium",
+      "Composite",
+      "constant_folding",
+      "algebraic_simplification",
+      "operator_fusion",
+      "common_subexpression_elimination",
+      "memory_planning",
+      "device_partitioning",
+      "stable_ids",
+      "topological_order",
+      "resource_deduplication",
+      "constant_transform",
+      "pose_constant_folding",
+      "curve_compression_0.001",
+      "dead_channel_removal",
+      "blend_normalization",
+      "retarget_cache",
+      "ik_scheduling",
+      "state_minimization",
+      "node_fusion"
+    ],
+    "module": "Sandbox Engine",
+    "output_type": "authorization_decision/evidence",
+    "payload_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "plane": "security_authorization",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "979f2d816e9e2d109b90aa929997f313434f6a138338bf6ef5ce95de3cb86015",
+  "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "module": "Sandbox Engine",
+  "module_id": 65,
+  "plane": "security_authorization",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "4666e8185bc7629ee83ae985e58be4bc931b173b45221bb9d22e746a3720453a",
+  "stage_count": 8,
+  "stages": [
+    {
+      "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "node": "N01",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "5e94e6f666d46896ad2c1961c26145697df7874c9b689a1428236ad30a211543",
+      "stage": "REQUEST"
+    },
+    {
+      "input_sha256": "5e94e6f666d46896ad2c1961c26145697df7874c9b689a1428236ad30a211543",
+      "node": "N02",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "INSPECT",
+      "output_sha256": "0d7e5fc45eed42a27adf88bbe86bd8931b155693d0d5ade6139234264dee5640",
+      "stage": "INSPECT"
+    },
+    {
+      "input_sha256": "0d7e5fc45eed42a27adf88bbe86bd8931b155693d0d5ade6139234264dee5640",
+      "node": "N03",
+      "operator": "VALIDATE",
+      "output_sha256": "d9a6206cb493c355417248db078edf2fd7517b3ebdfd3f7f0678efdc572ee0ce",
+      "stage": "POLICY_EVALUATE",
+      "valid": true
+    },
+    {
+      "authorized": true,
+      "capabilities": [
+        "evidence.write",
+        "policy.evaluate",
+        "process.execute"
+      ],
+      "input_sha256": "d9a6206cb493c355417248db078edf2fd7517b3ebdfd3f7f0678efdc572ee0ce",
+      "network": "DENY",
+      "node": "N04",
+      "operator": "AUTHORIZE",
+      "output_sha256": "5f0e3d5b7b9ae018701d709a770990d13fa5496a5bb9d022821c48bd28489fe8",
+      "stage": "CAPABILITY_CHECK"
+    },
+    {
+      "authorized": true,
+      "capabilities": [
+        "evidence.write",
+        "policy.evaluate",
+        "process.execute"
+      ],
+      "input_sha256": "5f0e3d5b7b9ae018701d709a770990d13fa5496a5bb9d022821c48bd28489fe8",
+      "network": "DENY",
+      "node": "N05",
+      "operator": "AUTHORIZE",
+      "output_sha256": "17de279fceac3ffbc2a151c56a44194572c79f9b44a94392945bd19479bc60d1",
+      "stage": "AUTHORIZE"
+    },
+    {
+      "execution_token": "72b53e57f89f662504a4878c",
+      "input_sha256": "17de279fceac3ffbc2a151c56a44194572c79f9b44a94392945bd19479bc60d1",
+      "node": "N06",
+      "operator": "EXECUTE",
+      "output_sha256": "deefb9c4e909aa8c016904163eb48cbde6e358193f9cd271f46d078672d962d9",
+      "stage": "ENFORCE"
+    },
+    {
+      "input_sha256": "deefb9c4e909aa8c016904163eb48cbde6e358193f9cd271f46d078672d962d9",
+      "node": "N07",
+      "operator": "RECORD",
+      "output_sha256": "f0b5f297a40e4527499a8dfa7a78a881d4eb8e74c21acd16afaf505262c4b7eb",
+      "receipt_sha256": "23cf03707cab832a5e1c3b1b76632e472ec29e18df33499f2d50df696bf5b562",
+      "stage": "RECORD"
+    },
+    {
+      "input_sha256": "f0b5f297a40e4527499a8dfa7a78a881d4eb8e74c21acd16afaf505262c4b7eb",
+      "node": "N08",
+      "operator": "RECORD",
+      "output_sha256": "83e2e545020d9b2d1b514c9f31a5854499192cedf54aa729b0f5f10c43655136",
+      "receipt_sha256": "550d32409ee006c4129570102b0306b015e66338908524e6657e6012dcc87d53",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

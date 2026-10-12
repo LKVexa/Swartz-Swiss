@@ -1,0 +1,37 @@
+INDEPENDENT GFM VALIDATION — RUSSL 0.3.0
+
+Status: PASS
+Packet: gfm-reapplication.json
+Packet SHA-256: d516e6ddc14b2cbb1a5df1445472a5d0a3563c680e9b1400c0325133b5db1e61
+Assertions evaluated: 2201
+Maximum scaled numeric comparison error: 3.7769343896586552e-13
+Numerical acceptance tolerance: 1e-10
+
+Method: Python standard library only; no production JavaScript module calls.
+Fields are independently reconstructed from the declared polynomials.
+
+PASS — Source provenance and complete applicability coverage (74 assertions)
+20 unique stored IDs, 3 image families, 15 source statements; original-byte hashes match.
+PASS — Pendulum samples, positive Fourier, scale and small-angle references (145 assertions)
+omega=3.13209195267317, T=2.00606668071065; exact sine samples and scale recover.
+PASS — Real rotation and GF3 complex covariance (262 assertions)
+All pictured Rx, Ry and Rz at 232.75 degrees: positive GF3 Fourier conjugation, transformed input and inverse recovery agree.
+PASS — Zeta(2) independent integral and finite sampled profile (114 assertions)
+Saved s=2 only: adaptive integral=1.64493406684882, pi^2/6=1.644934066848226. Other s are not certified by this packet check.
+PASS — Exact GF9 coordinate analogues (49 assertions)
+GF9 closed-form Verlet trajectory, inverse and orbit (2 states); rational rotation and quadratic form agree exactly.
+PASS — Stored equation adapters (1300 assertions)
+All implemented stored adapters independently checked; rejected/unresolved entries remain inert.
+PASS — Final displacement/reflection state and Wigner grid (256 assertions)
+All 9 amplitudes and 81 Wigner cells checked; negative-Fourier marginal; mana2=1.26198379751257.
+PASS — Reported complete status (1 assertions)
+
+
+Scope: the saved default experiment and its concrete adapters. The integral
+check independently certifies saved s=2 against pi^2/6 and adaptive numerical
+quadrature; it does not certify all s=2..8 from this single packet. Fourier
+round trips certify the selected finite representation, not a continuum
+identity over a finite field, new physics, the unavailable 500-equation
+suite, native hardware, live browser rendering, downloads or iframe behavior.
+The sampled signals retain normalization scale and sampling metadata.
+Reference-only entries remain visible and are checked for nonexecution.

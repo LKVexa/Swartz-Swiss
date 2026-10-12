@@ -1,0 +1,58 @@
+{
+  "schema": "QUORUM-CONTRACT-EXECUTION/2.0",
+  "module_id": 14,
+  "admitted": true,
+  "state": "COMPLETED",
+  "error": null,
+  "stages": [
+    {
+      "node": "N01",
+      "operator": "OBSERVE",
+      "input_hash": "19222f28489fb480e9339baf382333d2dc4006b80f8ddc8bb854614d91931129",
+      "output_hash": "0eed16e1482a05b382591a418cc60e46d6ed282eee26999e87a6ea5e5ab04a22"
+    },
+    {
+      "node": "N02",
+      "operator": "PARSE",
+      "input_hash": "0eed16e1482a05b382591a418cc60e46d6ed282eee26999e87a6ea5e5ab04a22",
+      "output_hash": "28c50ca689d3d9fd6ac66eb4a8d843e10437787a7d012a1c76a8453e0a708171"
+    },
+    {
+      "node": "N03",
+      "operator": "VALIDATE",
+      "input_hash": "28c50ca689d3d9fd6ac66eb4a8d843e10437787a7d012a1c76a8453e0a708171",
+      "output_hash": "cb5efc6432404d448b5a1d84df278d591d8355ede6b7f3c9f5caef78d5b21d42"
+    },
+    {
+      "node": "N04",
+      "operator": "ROUTE",
+      "input_hash": "cb5efc6432404d448b5a1d84df278d591d8355ede6b7f3c9f5caef78d5b21d42",
+      "output_hash": "a5e125fc9d9962fbc9f8209a18bb97bcf58e1b0b233577eddf47642e24ebd3c3"
+    },
+    {
+      "node": "N05",
+      "operator": "TRANSFORM",
+      "input_hash": "a5e125fc9d9962fbc9f8209a18bb97bcf58e1b0b233577eddf47642e24ebd3c3",
+      "output_hash": "9ea7d2e4c1a4b206ef0223235337ad5517310b6411a419db36f596fbc5714957"
+    },
+    {
+      "node": "N06",
+      "operator": "MATERIALIZE",
+      "input_hash": "9ea7d2e4c1a4b206ef0223235337ad5517310b6411a419db36f596fbc5714957",
+      "output_hash": "5e362ebd5461cd0bf07cc40fe7866f8c825fd7cc873c68a10011f4f22c203443"
+    },
+    {
+      "node": "N07",
+      "operator": "RECORD",
+      "input_hash": "5e362ebd5461cd0bf07cc40fe7866f8c825fd7cc873c68a10011f4f22c203443",
+      "output_hash": "5ab487aa5141f0f444d53247e52f531c56d0084542c1e1f83e82a1ca2a059196"
+    },
+    {
+      "node": "N08",
+      "operator": "RECORD",
+      "input_hash": "5ab487aa5141f0f444d53247e52f531c56d0084542c1e1f83e82a1ca2a059196",
+      "output_hash": "0230e9d3ee2dc796f0a5e62d931d6450683dd95936386c6a673f694d7ce4b503"
+    }
+  ],
+  "output_hash": "0230e9d3ee2dc796f0a5e62d931d6450683dd95936386c6a673f694d7ce4b503"
+}

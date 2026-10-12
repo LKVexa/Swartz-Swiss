@@ -1,0 +1,111 @@
+{
+  "decision": "OPERATIONAL",
+  "package": "BR-420-07",
+  "requirements": [
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-07_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: brir_canonical_opcode_operands_types_immediates",
+      "requirement": "Canonicalize opcode",
+      "requirement_id": "BR-420-07-R01",
+      "result": "PASS",
+      "sha256": "0cdf82317972995512b9536f5156f18bc8ee3973782b5e972a4f3617e3bbbeae",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-07_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: brir_explicit_capability_provenance",
+      "requirement": "Canonicalize operands",
+      "requirement_id": "BR-420-07-R02",
+      "result": "PASS",
+      "sha256": "0cdf82317972995512b9536f5156f18bc8ee3973782b5e972a4f3617e3bbbeae",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-07_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: brir_explicit_cfg_edges",
+      "requirement": "Canonicalize types",
+      "requirement_id": "BR-420-07-R03",
+      "result": "PASS",
+      "sha256": "0cdf82317972995512b9536f5156f18bc8ee3973782b5e972a4f3617e3bbbeae",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-07_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: brir_deterministic_serialization",
+      "requirement": "Normalize immediates",
+      "requirement_id": "BR-420-07-R04",
+      "result": "PASS",
+      "sha256": "0cdf82317972995512b9536f5156f18bc8ee3973782b5e972a4f3617e3bbbeae",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-07_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: brir_safe_optimization",
+      "requirement": "Make control-flow edges explicit",
+      "requirement_id": "BR-420-07-R05",
+      "result": "PASS",
+      "sha256": "0cdf82317972995512b9536f5156f18bc8ee3973782b5e972a4f3617e3bbbeae",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-07_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: brir_canonical_opcode_operands_types_immediates",
+      "requirement": "Make capability dependencies explicit",
+      "requirement_id": "BR-420-07-R06",
+      "result": "PASS",
+      "sha256": "0cdf82317972995512b9536f5156f18bc8ee3973782b5e972a4f3617e3bbbeae",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-07_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: brir_explicit_capability_provenance",
+      "requirement": "Preserve source-location provenance",
+      "requirement_id": "BR-420-07-R07",
+      "result": "PASS",
+      "sha256": "0cdf82317972995512b9536f5156f18bc8ee3973782b5e972a4f3617e3bbbeae",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-07_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: brir_explicit_cfg_edges",
+      "requirement": "Serialize deterministically",
+      "requirement_id": "BR-420-07-R08",
+      "result": "PASS",
+      "sha256": "0cdf82317972995512b9536f5156f18bc8ee3973782b5e972a4f3617e3bbbeae",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "title": "BRIR intermediate representation"
+}

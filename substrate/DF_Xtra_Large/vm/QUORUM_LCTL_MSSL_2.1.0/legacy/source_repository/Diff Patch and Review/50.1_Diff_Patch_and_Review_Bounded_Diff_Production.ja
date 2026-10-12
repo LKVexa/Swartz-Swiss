@@ -1,0 +1,14 @@
+ja source 0.3
+module suite50.diff_patch_review.bounded_diff_production
+use Core
+policy no_network
+
+record BoundedDiffPlan { id: Count, repository_root: Text, baseline_hash: Text, target_hash: Text, path_scope: Text, limit_profile: Text, approval_state: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_bounded_diff(item: BoundedDiffPlan) -> Result<BoundedDiffPlan, Text> effects { pure } {
+    let normalized: Text = item.path_scope
+    return Ok(BoundedDiffPlan { id: item.id, repository_root: item.repository_root, baseline_hash: item.baseline_hash, target_hash: item.target_hash, path_scope: normalized, limit_profile: item.limit_profile, approval_state: item.approval_state, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: BoundedDiffPlan = BoundedDiffPlan { id: 5001, repository_root: "selected_work_repository", baseline_hash: "required_sha256_baseline", target_hash: "required_sha256_target", path_scope: "approved_relative_paths_only", limit_profile: "bounded_files_hunks_and_bytes", approval_state: "required_before_application", sophia: "interpret_change_intent", charlotte: "validate_scope_hashes_and_limits", landon: "produce_read_only_unified_diff", professor: "explain_changed_behavior", podium: "publish_diff_receipt" }
+let result = prepare_bounded_diff(sample)
+assert result.is_ok == true
+emit json result

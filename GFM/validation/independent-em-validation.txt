@@ -1,0 +1,20 @@
+BESSEL_REFINEMENT [{"nr":16,"nz":32,"relativeL2":0.003415591488126046,"timeSeconds":4.6463161012226075e-11,"dtMaxSeconds":5.270497789333074e-12},{"nr":32,"nz":64,"relativeL2":0.0008566704929507945,"timeSeconds":4.6463161012226075e-11,"dtMaxSeconds":2.635248894666537e-12},{"nr":64,"nz":128,"relativeL2":0.00021434245009786492,"timeSeconds":4.6463161012226075e-11,"dtMaxSeconds":1.3176244473332686e-12}]
+OHMIC_REFINEMENT [{"nr":16,"nz":32,"relativeL2":0.003449903587434694,"timeSeconds":4.6463161012226075e-11,"dtMaxSeconds":5.270497789333074e-12},{"nr":32,"nz":64,"relativeL2":0.0008652582795626995,"timeSeconds":4.6463161012226075e-11,"dtMaxSeconds":2.635248894666537e-12},{"nr":64,"nz":128,"relativeL2":0.0002164900045915403,"timeSeconds":4.6463161012226075e-11,"dtMaxSeconds":1.3176244473332686e-12}]
+✔ independent continuum Bessel mode converges under space/time refinement (559.3541ms)
+✔ uniform Ohmic matter matches the independently derived damped continuum mode (451.7082ms)
+✔ independently derived electric and magnetic dual volumes each integrate the cylinder (2.0603ms)
+✔ regular Ephi=a*r has the cylindrical factor-two axial magnetic curl (1.2823ms)
+✔ independent dual-annulus divergence of the discrete magnetic curl is zero (1.4749ms)
+✔ Joule heat and diagnostic temperature use local SI heat density and midpoint E (7.8068ms)
+✔ hollow shell, bottom, and partial cover have the independently calculated material volume (8.7174ms)
+✔ conductive relaxation is resolved rather than merely numerically stable (10.2107ms)
+✔ exported Poynting and current vectors have the right SI signs and constitutive factors (2.4611ms)
+✔ zero source and zero initial fields remain exactly zero, with no invented energy (12.3572ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1264.2265

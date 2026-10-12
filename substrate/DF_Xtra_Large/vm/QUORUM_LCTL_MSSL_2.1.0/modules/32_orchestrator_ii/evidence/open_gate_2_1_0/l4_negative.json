@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "25a5134387de8dd23a3b15edd770577c08ae1fd5407d5c340e4eb79e80df4ec0",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Orchestrator II",
+  "module_id": 32,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

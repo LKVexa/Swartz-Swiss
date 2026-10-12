@@ -1,0 +1,40 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 20,
+  "legacy_root": "legacy/source_repository/Equation Operator Bank",
+  "legacy_sha256": "9900c290f8d2de1c03a57d3458386a0f31cf3c94fbeaa62ef2da06c070a90828",
+  "files": [
+    {
+      "path": "20.1_Equation_Operator_Bank_Mathematical_Operators.dmk",
+      "sha256": "333895aec8f9eb1461b6e8b0dabdbba975529dc2ce76d3145b1e8f90098a069d",
+      "bytes": 522
+    },
+    {
+      "path": "20.2_Equation_Operator_Bank_MSSL_Operators.dmk",
+      "sha256": "3b3d897c8dc5c8072b75825d8ae3a97017418fbb8cd07c88cbb79e70b2cd2f85",
+      "bytes": 498
+    },
+    {
+      "path": "20.3_Equation_Operator_Bank_MSSLB_Operators.dmk",
+      "sha256": "51c825d5c908e0264701a3e1d0dbdcbe0cc3eba7211929eb95263fd440b165e9",
+      "bytes": 501
+    },
+    {
+      "path": "20.4_Equation_Operator_Bank_MCRT_Operators.dmk",
+      "sha256": "64bf8328d4d932e695c113984776124a78dc02ef8476bedc6b6feecf15707934",
+      "bytes": 498
+    },
+    {
+      "path": "20.5_Equation_Operator_Bank_Rendering_Operators.dmk",
+      "sha256": "5d299a0a6b8293403865bba8c28366536725a45677db9fa6ee9fbda07fd8032d",
+      "bytes": 515
+    },
+    {
+      "path": "README.md",
+      "sha256": "e1a1fd17cdd6e55f7ddb357d27372cb6b8abe30389d7d74dec2af73ba3f43979",
+      "bytes": 10104
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

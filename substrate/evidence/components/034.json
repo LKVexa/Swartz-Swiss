@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "034",
+  "title": "Peer Address Resolver",
+  "source_file": "034_Peer_Address_Resolver.md",
+  "source_sha256": "2f3d6335220a95007c625e46da019e0fa683729c982171fa4053b175555f35f9",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "DF0+N_LARGE",
+  "integration_mechanism": "Fabric interaction plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

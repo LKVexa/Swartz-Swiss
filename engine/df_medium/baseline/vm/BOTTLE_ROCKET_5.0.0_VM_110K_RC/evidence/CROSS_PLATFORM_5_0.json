@@ -1,0 +1,80 @@
+{
+  "aarch64_toolchain_runtime_available": false,
+  "host": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "machine": "x86_64",
+  "record": "BOTTLE_ROCKET.CrossPlatformQualification/5.0.0",
+  "requirements": {
+    "BR-480-13-R01": "OPERATIONAL",
+    "BR-480-13-R02": "OPERATIONAL",
+    "BR-480-13-R03": "OPERATIONAL",
+    "BR-480-13-R04": "BLOCKED",
+    "BR-480-13-R05": "OPERATIONAL",
+    "BR-480-13-R06": "BLOCKED",
+    "BR-480-13-R07": "OPERATIONAL",
+    "BR-480-14-R01": "BLOCKED_NO_INDEPENDENT_MACHINE",
+    "BR-480-14-R02": "BLOCKED_NO_INDEPENDENT_OPERATOR",
+    "BR-480-14-R03": "OPERATIONAL",
+    "BR-480-14-R04": "OPERATIONAL",
+    "BR-480-14-R05": "OPERATIONAL"
+  },
+  "rows": [
+    {
+      "arch": "x86_64",
+      "brim_matches_baseline": true,
+      "brim_sha256": "7cfd6d6c08c7114078477488814adb5365bc14731e2d6b65c15c66df67750bc9",
+      "compiler": "gcc",
+      "conformance": "PASS",
+      "opt": 0,
+      "os": "Linux"
+    },
+    {
+      "arch": "x86_64",
+      "brim_matches_baseline": true,
+      "brim_sha256": "7cfd6d6c08c7114078477488814adb5365bc14731e2d6b65c15c66df67750bc9",
+      "compiler": "gcc",
+      "conformance": "PASS",
+      "opt": 2,
+      "os": "Linux"
+    },
+    {
+      "arch": "x86_64",
+      "brim_matches_baseline": true,
+      "brim_sha256": "7cfd6d6c08c7114078477488814adb5365bc14731e2d6b65c15c66df67750bc9",
+      "compiler": "gcc",
+      "conformance": "PASS",
+      "opt": 3,
+      "os": "Linux"
+    },
+    {
+      "arch": "x86_64",
+      "brim_matches_baseline": true,
+      "brim_sha256": "7cfd6d6c08c7114078477488814adb5365bc14731e2d6b65c15c66df67750bc9",
+      "compiler": "clang",
+      "conformance": "PASS",
+      "opt": 0,
+      "os": "Linux"
+    },
+    {
+      "arch": "x86_64",
+      "brim_matches_baseline": true,
+      "brim_sha256": "7cfd6d6c08c7114078477488814adb5365bc14731e2d6b65c15c66df67750bc9",
+      "compiler": "clang",
+      "conformance": "PASS",
+      "opt": 2,
+      "os": "Linux"
+    },
+    {
+      "arch": "x86_64",
+      "brim_matches_baseline": true,
+      "brim_sha256": "7cfd6d6c08c7114078477488814adb5365bc14731e2d6b65c15c66df67750bc9",
+      "compiler": "clang",
+      "conformance": "PASS",
+      "opt": 3,
+      "os": "Linux"
+    }
+  ],
+  "same_brim_all_available_builds": true,
+  "same_conformance_output_all_available_builds": true,
+  "suite": "BR-480_CROSS_PLATFORM_REPRO",
+  "windows_cross_runtime_available": false
+}

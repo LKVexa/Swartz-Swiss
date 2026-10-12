@@ -1,0 +1,32 @@
+{
+  "schema": "QUORUM-STATIC-LEGACY-SIGNAL-COMPARISON/2.0.1",
+  "module_id": 31,
+  "signals_declared": [
+    "infrastructure",
+    "control",
+    "commands",
+    "actions",
+    "command",
+    "action",
+    "preference",
+    "VALIDATE",
+    "AUTHORIZE",
+    "RECOVER"
+  ],
+  "signals_matched": [
+    "infrastructure",
+    "control",
+    "commands",
+    "actions",
+    "command",
+    "action",
+    "preference",
+    "VALIDATE",
+    "AUTHORIZE",
+    "RECOVER"
+  ],
+  "coverage": 1.0,
+  "executable_legacy_runtime_available": false,
+  "L5_certification": false,
+  "claim_boundary": "Static lexical/semantic signal evidence is not executable differential qualification."
+}

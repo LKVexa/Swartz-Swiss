@@ -1,0 +1,141 @@
+{
+  "authority_sha256": "ca7ec6839f2f7f678ac43b8ae4654ecbf71373a75fc8fe97ca17271c277adc53",
+  "domain_output": {
+    "input_type": "repository/artifact/context",
+    "legacy_signals": [
+      "AUTHORIZE",
+      "RETRIEVE"
+    ],
+    "module": "Perceiver",
+    "normalized_context": {
+      "context_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "feature_vector": [
+        0.6784313725490196,
+        0.9686274509803922,
+        0.3058823529411765,
+        0.8941176470588236,
+        0.14901960784313725,
+        0.058823529411764705,
+        0.6509803921568628,
+        0.8745098039215686
+      ],
+      "keys": [
+        "example"
+      ]
+    },
+    "output_type": "normalized_context/evidence",
+    "payload_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+    "plane": "sense_context",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "cb2e5c58d54db9f970a07fcda370e6285de4b9463c0da5614f0b3de39e491f8f",
+  "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+  "module": "Perceiver",
+  "module_id": 16,
+  "plane": "sense_context",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "530011dbb40a750f93bef71c7dcba0e6b61118c82f2f1011d90861e0ed53b2fe",
+  "stage_count": 9,
+  "stages": [
+    {
+      "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "node": "N01",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "01f113b5e9ab09320492655d2bb43cfec9fcaa832fd51a4cc57bd3aab9f7db34",
+      "stage": "SOURCE"
+    },
+    {
+      "input_sha256": "01f113b5e9ab09320492655d2bb43cfec9fcaa832fd51a4cc57bd3aab9f7db34",
+      "node": "N02",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "INSPECT",
+      "output_sha256": "967d6625dbe0d4b40813640810941b8d7919af54acd6dbfb3fa9004ea895d88d",
+      "stage": "INSPECT"
+    },
+    {
+      "input_sha256": "967d6625dbe0d4b40813640810941b8d7919af54acd6dbfb3fa9004ea895d88d",
+      "node": "N03",
+      "normalized_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "operator": "NORMALIZE",
+      "output_sha256": "880035dad08c29f6171cdb87591fe138712899b030432a038fe1e255d4e5168f",
+      "stage": "NORMALIZE"
+    },
+    {
+      "features": [
+        4,
+        115,
+        142,
+        138,
+        48,
+        50,
+        246,
+        106
+      ],
+      "input_sha256": "880035dad08c29f6171cdb87591fe138712899b030432a038fe1e255d4e5168f",
+      "node": "N04",
+      "operator": "TRANSFORM",
+      "output_sha256": "14ec129fab0ba7447ac275ad9845e9f4df547ddc385fc3b9949dfd22474056ed",
+      "stage": "EXTRACT"
+    },
+    {
+      "index_keys": [
+        "example"
+      ],
+      "input_sha256": "14ec129fab0ba7447ac275ad9845e9f4df547ddc385fc3b9949dfd22474056ed",
+      "node": "N05",
+      "operator": "STORE",
+      "output_sha256": "f19913a03babc6543c3c8db3c27f218d6735186078e4150876598df61a51c627",
+      "stage": "INDEX"
+    },
+    {
+      "input_sha256": "f19913a03babc6543c3c8db3c27f218d6735186078e4150876598df61a51c627",
+      "node": "N06",
+      "operator": "VALIDATE",
+      "output_sha256": "8e4dd2532ae16bf1cfe74787700d27da3ed65b8ec682e9d2cc4d65e27c359c07",
+      "stage": "VALIDATE",
+      "valid": true
+    },
+    {
+      "input_sha256": "8e4dd2532ae16bf1cfe74787700d27da3ed65b8ec682e9d2cc4d65e27c359c07",
+      "node": "N07",
+      "operator": "RECORD",
+      "output_sha256": "647c786509ef2eb294151e87261d1ea73b27e735e1999ca5f1fc3cbc970a51f0",
+      "receipt_sha256": "1bbb2bb33a25f0e22820c15b32d8d52883f97c8a6ec676722eb581bbf738df8a",
+      "stage": "RECORD"
+    },
+    {
+      "artifact_descriptor": {
+        "sha256": "6157c33fbaa9cfd39f37f1e8224b7a9d6bbae85fba5a43d1c80d9c26a04b7101",
+        "type": "state.bind"
+      },
+      "input_sha256": "647c786509ef2eb294151e87261d1ea73b27e735e1999ca5f1fc3cbc970a51f0",
+      "node": "N08",
+      "operator": "MATERIALIZE",
+      "output_sha256": "af1625176e168fc196a22760457713c44b94802e033a26f87a2bce0d266c869c",
+      "stage": "BIND"
+    },
+    {
+      "input_sha256": "af1625176e168fc196a22760457713c44b94802e033a26f87a2bce0d266c869c",
+      "node": "N09",
+      "operator": "RECORD",
+      "output_sha256": "89e142905e80fc4b9bd230352b8a23778d1de67629dba555e85d993d4bd429df",
+      "receipt_sha256": "9640b174c59bb1f614cd06a8e08fbc3f59b87ddcf1dd49de7f15a2eb64ee501f",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

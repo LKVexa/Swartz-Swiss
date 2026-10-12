@@ -1,0 +1,753 @@
+{
+  "language": "ja.portal.scene",
+  "operators": [
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.animation_binding",
+      "normalized": "declare_or_compose_animation_binding",
+      "omega": "OMEGA_JPSL_ANIMATION_BINDING",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "animation_binding"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.audio",
+      "normalized": "declare_or_compose_audio",
+      "omega": "OMEGA_JPSL_AUDIO",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "audio"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.basic_event",
+      "normalized": "declare_or_compose_basic_event",
+      "omega": "OMEGA_JPSL_BASIC_EVENT",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "basic_event"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.camera",
+      "normalized": "declare_or_compose_camera",
+      "omega": "OMEGA_JPSL_CAMERA",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "camera"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.cinematic_scene_state",
+      "normalized": "declare_or_compose_cinematic_scene_state",
+      "omega": "OMEGA_JPSL_CINEMATIC_SCENE_STATE",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "cinematic_scene_state"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.component",
+      "normalized": "declare_or_compose_component",
+      "omega": "OMEGA_JPSL_COMPONENT",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "component"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.conditional_event",
+      "normalized": "declare_or_compose_conditional_event",
+      "omega": "OMEGA_JPSL_CONDITIONAL_EVENT",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "conditional_event"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.constant_transform",
+      "normalized": "declare_or_compose_constant_transform",
+      "omega": "OMEGA_JPSL_CONSTANT_TRANSFORM",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "constant_transform"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.cross_scene_reference",
+      "normalized": "declare_or_compose_cross_scene_reference",
+      "omega": "OMEGA_JPSL_CROSS_SCENE_REFERENCE",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "cross_scene_reference"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.deterministic_mutation",
+      "normalized": "declare_or_compose_deterministic_mutation",
+      "omega": "OMEGA_JPSL_DETERMINISTIC_MUTATION",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "deterministic_mutation"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.duplicate_id",
+      "normalized": "declare_or_compose_duplicate_id",
+      "omega": "OMEGA_JPSL_DUPLICATE_ID",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "duplicate_id"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.entity",
+      "normalized": "declare_or_compose_entity",
+      "omega": "OMEGA_JPSL_ENTITY",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "entity"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.event_handler",
+      "normalized": "declare_or_compose_event_handler",
+      "omega": "OMEGA_JPSL_EVENT_HANDLER",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "event_handler"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.forbidden_network_effect",
+      "normalized": "declare_or_compose_forbidden_network_effect",
+      "omega": "OMEGA_JPSL_FORBIDDEN_NETWORK_EFFECT",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "forbidden_network_effect"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.graph_normalization",
+      "normalized": "declare_or_compose_graph_normalization",
+      "omega": "OMEGA_JPSL_GRAPH_NORMALIZATION",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "graph_normalization"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.header_module",
+      "normalized": "declare_or_compose_header_module",
+      "omega": "OMEGA_JPSL_HEADER_MODULE",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "header_module"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.hierarchy",
+      "normalized": "declare_or_compose_hierarchy",
+      "omega": "OMEGA_JPSL_HIERARCHY",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "hierarchy"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.interactive_scene",
+      "normalized": "declare_or_compose_interactive_scene",
+      "omega": "OMEGA_JPSL_INTERACTIVE_SCENE",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "interactive_scene"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.invalid_component_type",
+      "normalized": "certify_invalid_component_type",
+      "omega": "OMEGA_JPSL_INVALID_COMPONENT_TYPE",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "invalid_component_type"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.lighting",
+      "normalized": "declare_or_compose_lighting",
+      "omega": "OMEGA_JPSL_LIGHTING",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "lighting"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.material",
+      "normalized": "declare_or_compose_material",
+      "omega": "OMEGA_JPSL_MATERIAL",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "material"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.multiplayer_schema",
+      "normalized": "declare_or_compose_multiplayer_schema",
+      "omega": "OMEGA_JPSL_MULTIPLAYER_SCHEMA",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "multiplayer_schema"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.offline_network_schema",
+      "normalized": "declare_or_compose_offline_network_schema",
+      "omega": "OMEGA_JPSL_OFFLINE_NETWORK_SCHEMA",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "offline_network_schema"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.parent_cycle",
+      "normalized": "certify_parent_cycle",
+      "omega": "OMEGA_JPSL_PARENT_CYCLE",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "parent_cycle"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.physics",
+      "normalized": "declare_or_compose_physics",
+      "omega": "OMEGA_JPSL_PHYSICS",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "physics"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.physics_contradiction",
+      "normalized": "declare_or_compose_physics_contradiction",
+      "omega": "OMEGA_JPSL_PHYSICS_CONTRADICTION",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "physics_contradiction"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.portal",
+      "normalized": "declare_or_compose_portal",
+      "omega": "OMEGA_JPSL_PORTAL",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "portal"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.portal_environment",
+      "normalized": "declare_or_compose_portal_environment",
+      "omega": "OMEGA_JPSL_PORTAL_ENVIRONMENT",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "portal_environment"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.prefab",
+      "normalized": "declare_or_compose_prefab",
+      "omega": "OMEGA_JPSL_PREFAB",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "prefab"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.projection_error",
+      "normalized": "declare_or_compose_projection_error",
+      "omega": "OMEGA_JPSL_PROJECTION_ERROR",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "projection_error"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.r12_mcrt_lowering",
+      "normalized": "declare_or_compose_r12_mcrt_lowering",
+      "omega": "OMEGA_JPSL_R12_MCRT_LOWERING",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "r12_mcrt_lowering"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.replay_divergence",
+      "normalized": "certify_replay_divergence",
+      "omega": "OMEGA_JPSL_REPLAY_DIVERGENCE",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "replay_divergence"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.resource",
+      "normalized": "declare_or_compose_resource",
+      "omega": "OMEGA_JPSL_RESOURCE",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "resource"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.resource_deduplication",
+      "normalized": "declare_or_compose_resource_deduplication",
+      "omega": "OMEGA_JPSL_RESOURCE_DEDUPLICATION",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "resource_deduplication"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.resource_graph",
+      "normalized": "declare_or_compose_resource_graph",
+      "omega": "OMEGA_JPSL_RESOURCE_GRAPH",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "resource_graph"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.save_load_package",
+      "normalized": "declare_or_compose_save_load_package",
+      "omega": "OMEGA_JPSL_SAVE_LOAD_PACKAGE",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "save_load_package"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.scene_declaration",
+      "normalized": "declare_or_compose_scene_declaration",
+      "omega": "OMEGA_JPSL_SCENE_DECLARATION",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "scene_declaration"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.serialization_layout",
+      "normalized": "declare_or_compose_serialization_layout",
+      "omega": "OMEGA_JPSL_SERIALIZATION_LAYOUT",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "serialization_layout"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.serialization_plan",
+      "normalized": "declare_or_compose_serialization_plan",
+      "omega": "OMEGA_JPSL_SERIALIZATION_PLAN",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "serialization_plan"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.snapshot",
+      "normalized": "declare_or_compose_snapshot",
+      "omega": "OMEGA_JPSL_SNAPSHOT",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "snapshot"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.stable_ids",
+      "normalized": "declare_or_compose_stable_ids",
+      "omega": "OMEGA_JPSL_STABLE_IDS",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "stable_ids"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.system",
+      "normalized": "declare_or_compose_system",
+      "omega": "OMEGA_JPSL_SYSTEM",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "system"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.terrain",
+      "normalized": "declare_or_compose_terrain",
+      "omega": "OMEGA_JPSL_TERRAIN",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "terrain"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.terrain_physics_ui",
+      "normalized": "declare_or_compose_terrain_physics_ui",
+      "omega": "OMEGA_JPSL_TERRAIN_PHYSICS_UI",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "terrain_physics_ui"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.topological_order",
+      "normalized": "declare_or_compose_topological_order",
+      "omega": "OMEGA_JPSL_TOPOLOGICAL_ORDER",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "topological_order"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.transform3d",
+      "normalized": "declare_or_compose_transform3d",
+      "omega": "OMEGA_JPSL_TRANSFORM3D",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "transform3d"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.ui",
+      "normalized": "declare_or_compose_ui",
+      "omega": "OMEGA_JPSL_UI",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "ui"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.unresolved_resource",
+      "normalized": "declare_or_compose_unresolved_resource",
+      "omega": "OMEGA_JPSL_UNRESOLVED_RESOURCE",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "unresolved_resource"
+    },
+    {
+      "effects": "domain-specific; see examples",
+      "id": "ja.portal.scene.operator.vector_literal",
+      "normalized": "declare_or_compose_vector_literal",
+      "omega": "OMEGA_JPSL_VECTOR_LITERAL",
+      "policy_requirements": [
+        "no_network",
+        "no_execute_unknown_code",
+        "stable_ids",
+        "preserve_provenance"
+      ],
+      "surface": "vector_literal"
+    }
+  ],
+  "_coupling_mechanics": {
+    "framework": "Smithson 8S Coupled Mechanics v1.0",
+    "status": "Proposed generative and computational law; not an established physical law, not the standard sphere S^8 without separate topological proof, and not evidence of physical quantum entanglement.",
+    "author": "Russell Philip Smithson",
+    "analytical_support_layers": [
+      "SOPHIA",
+      "CHARLOTTE",
+      "LANDON"
+    ],
+    "canonical_terms": {
+      "object": "S^3 fiber",
+      "base": "five-dimensional penteract field B^5=[-1,1]^5",
+      "hidden_center": "latent five-dimensional center",
+      "fifth_coordinate": "elucidation coordinate t8 with declared independent semantic or mechanical meaning",
+      "visible_center": "projected center",
+      "pairwise_interaction": "sparse geometric-semantic classical coupling",
+      "higher_order_interaction": "selective triadic coupling",
+      "visual_overlap": "projected three-dimensional overlap",
+      "total_space": "locally eight-dimensional noncollapsed penteract-S^3 hyperfiber system"
+    },
+    "equations": {
+      "coordinate_extension": "C5=[C4|e]",
+      "independent_residual": "e_perp=(I-C4*C4^+)e",
+      "independence_score": "eta_ind=||e_perp||_2^2/(||e||_2^2+epsilon)",
+      "driver": "q(tau)=sin^2(pi*tau/T)",
+      "candidate_site": "c_n=ell*n, n in Z^5, ||n||_1<=M",
+      "shell_multiplicity": "A_5(m)=sum_{j=1}^{min(5,m)} 2^j*C(5,j)*C(m-1,j-1); A_5(0)=1",
+      "coupling_weight": "W_ij=A_ij*exp(-((c_i-c_j)^T G5 (c_i-c_j))/(2 sigma_c^2)-d_J(i,j)^2/(2 sigma_J^2))",
+      "phase_dynamics": "dtheta_i/dtau=omega_i+K2*sum_j W_ij*sin(theta_j-theta_i)+K3*sum_{j,k} H_ijk*sin(theta_j+theta_k-2theta_i)",
+      "activation_score": "h_i=beta(Mq+1/2-d_i)+a_E E_i+a_u u_i-a_chi chi_i-a_zeta zeta_i+J2*sum_j W_ij(2p_j-1)+J3*sum_{j,k} H_ijk(2p_j-1)(2p_k-1)",
+      "activation": "p_i=sigma(h_i)=1/(1+exp(-h_i))",
+      "smooth_boundary": "B_5,infinity(c_i)=prod_{a=4}^{8} b(c_{i,a})",
+      "effective_support": "s_i=p_i*kappa_i*(1-chi_i)*(1-zeta_i)*v(omega_i)",
+      "radius": "r_i=r_max*B_5,infinity(c_i)^alpha*s_i^(1/3)",
+      "fiber": "F_i=S^3_{r_i}={y in R^4: ||y||_2=r_i}",
+      "fiber_volume": "Vol(S^3_{r_i})=2*pi^2*r_max^3*B_5,infinity(c_i)^(3alpha)*s_i",
+      "total_space": "X8(tau)={(c,y) in [-1,1]^5 x R^4: ||y||_2=R(c,tau)}",
+      "full_projection": "x_i^(3)(u,tau)=[Pi5(tau)|Psi4(tau)]*[c_i;r_i*u], u in S^3",
+      "latent_5d_gap": "g5_ij=sqrt((c_i-c_j)^T G5 (c_i-c_j))-(lambda_i+lambda_j)",
+      "product_state_separation": "delta8_ij=sqrt((c_i-c_j)^T G5 (c_i-c_j)+(r_i-r_j)^2)",
+      "projected_gap": "g3_ij=||Pi5*c_i-Pi5*c_j||_2-(rhat_i+rhat_j)",
+      "semantic_gap": "gJ_ij=d_J(J_i,J_j)-theta_J",
+      "efficacy_gain": "Delta_8S=Score(M8)-Score(M7)",
+      "admission_gate": "Admit(8S) iff eta_ind>=epsilon_ind and Delta_8S>epsilon_gain"
+    },
+    "relation_test": {
+      "inputs": [
+        "g5_ij",
+        "delta8_ij",
+        "g3_ij",
+        "gJ_ij",
+        "K_ij",
+        "Sigma_ij"
+      ],
+      "classification_order": [
+        "UNRESOLVED when an uncertainty interval crosses a declared tolerance or required evidence/provenance is missing",
+        "CONTRADICTION when K_ij>=theta_K",
+        "HIGHER_ORDER when a triadic term changes the pairwise result",
+        "PROJECTION_ONLY when g5_ij>tol5 and g3_ij<=tol3",
+        "LATENT_5D_COUPLED when g5_ij<-tol5",
+        "FIBER_STATE_RESONANT when delta8_ij<=tol8 and phase coherence is within tolerance",
+        "SEMANTIC_ONLY when latent and projected gaps are positive but gJ_ij<=tolJ",
+        "REINFORCING when semantics, phase, and provenance support the same result",
+        "NONE otherwise"
+      ],
+      "scale": "L=max(ell,r_max,lambda_i,lambda_j,||c_i-c_j||_G5)",
+      "tol5": "1e-7 L unless a stricter profile is declared",
+      "tol8": "1e-7 L unless a stricter profile is declared",
+      "tol3": "1e-5 L unless a stricter rendering profile is declared",
+      "tolJ": "declared semantic-distance tolerance",
+      "observability": "A single 3x5 base projection has nullspace dimension at least two; stacked views require rank 5 for unique linear center reconstruction."
+    },
+    "r12_profile": {
+      "identity_schema": "8S law version and penteract profile",
+      "latent_geometry": "c_i, G5, shell, fifth-coordinate meaning",
+      "activation_support": "p_i, kappa_i, chi_i, zeta_i, s_i",
+      "phase_coupling": "theta_i, W_ij, H_ijk, interaction order",
+      "projection_tests": "g5, delta8, g3, gJ, projection version, tolerance profile",
+      "certification": "eta_ind, Delta_8S, relation class, limitations",
+      "fold_invariant": "document-level folding must preserve contradiction, uncertainty, provenance, projection version, and the interaction order that changed the result"
+    },
+    "execution_policy": {
+      "default": "sparse pairwise neighborhoods",
+      "escalation": "activate triadic terms only in unresolved, contradictory, high-risk, or certification-critical clusters",
+      "complexity_target": "O(Nk) pairwise sparse execution with selective higher-order escalation rather than unrestricted O(N^3) triads"
+    },
+    "validation_gate": {
+      "compare_models": "fit M7 and M8 to the same data and evaluate held-out results",
+      "required_tests": [
+        "nonredundancy",
+        "interpretability",
+        "predictive or certifying gain",
+        "cost-benefit",
+        "projection identifiability",
+        "R12 replay invariants"
+      ],
+      "replay_requirements": {
+        "independence_score_difference": "<=1e-8",
+        "center_radius_phase_difference": "<=1e-7 L with wrapped phase <=1e-6 radians",
+        "relation_class_and_tuple_hash": "identical",
+        "interaction_order": "identical"
+      }
+    },
+    "example": "When g5>tol5 and g3<=tol3, record PROJECTION_ONLY; preserve delta8, gJ, uncertainty, projection version, and interaction order independently.",
+    "annotations": [
+      "The fifth coordinate is admitted only when it contains a material residual outside span(C4), has declared meaning, and improves held-out efficacy after compute and energy costs.",
+      "A five-dimensional base plus an S^3 fiber gives local noncollapsed dimension 8, but does not by itself prove the total space is the standard sphere S^8.",
+      "Increasing latent dimension is distinct from adding higher-order coupling: H_ijk is required for genuine triadic mechanics.",
+      "Additional numerical data required: C4, proposed coordinate e, G5, W, optional H, evidence fields, phase initial conditions, projection family, apparent radii or meshes, semantic metric, tolerances, provenance, and replay identifier."
+    ]
+  }
+}

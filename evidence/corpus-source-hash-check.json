@@ -1,0 +1,122 @@
+[
+  {
+    "archive": "JA21-DeepML-Animation-VFX-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "b9d0b6bc49e4099a97899c786d38ff0060fc621a4afb18e16e58ecfe8552429e",
+    "actual_sha256": "b9d0b6bc49e4099a97899c786d38ff0060fc621a4afb18e16e58ecfe8552429e",
+    "match": true
+  },
+  {
+    "archive": "JA21-DeepML-Core-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "46caa6096ab70f14931353ca56c04ee2469022fb3eed626ee01b8662dbc44cc9",
+    "actual_sha256": "46caa6096ab70f14931353ca56c04ee2469022fb3eed626ee01b8662dbc44cc9",
+    "match": true
+  },
+  {
+    "archive": "JA21-DeepML-Kernel-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "a6e7b0e2418e4dbc7ca66514f5df8e83a16935aff02ce4a0a3f557db8f3ff1c1",
+    "actual_sha256": "a6e7b0e2418e4dbc7ca66514f5df8e83a16935aff02ce4a0a3f557db8f3ff1c1",
+    "match": true
+  },
+  {
+    "archive": "JA21-DeepML-Logic-Functional-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "ae85b50928e2942dc88bcac1932ac20525af5e4f7013ab6e78ec9a0c22312f9d",
+    "actual_sha256": "ae85b50928e2942dc88bcac1932ac20525af5e4f7013ab6e78ec9a0c22312f9d",
+    "match": true
+  },
+  {
+    "archive": "JA21-DeepML-Motion-Animation-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "a14639c4c87b81e1174c4205ad6435a6e6a95f7e79254e8b6997b10c2122f517",
+    "actual_sha256": "a14639c4c87b81e1174c4205ad6435a6e6a95f7e79254e8b6997b10c2122f517",
+    "match": true
+  },
+  {
+    "archive": "JA21-DeepML-Specialized-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "6d32c3c72dff37def3e0c7fd359a23e2e230d36f2b615809f7e89bc94bec5fcc",
+    "actual_sha256": "6d32c3c72dff37def3e0c7fd359a23e2e230d36f2b615809f7e89bc94bec5fcc",
+    "match": true
+  },
+  {
+    "archive": "JA21-JA-Agent-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "b6941a03799d6509db2a37b36d74de461e98d83f359fa74670b188be2f96b7f2",
+    "actual_sha256": "b6941a03799d6509db2a37b36d74de461e98d83f359fa74670b188be2f96b7f2",
+    "match": true
+  },
+  {
+    "archive": "JA21-JA-Certifier-Grammar-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "1e88a0fa8a93db91a5e936913012b3e9a29bcbff45c62e5f35696ed0052054ab",
+    "actual_sha256": "1e88a0fa8a93db91a5e936913012b3e9a29bcbff45c62e5f35696ed0052054ab",
+    "match": true
+  },
+  {
+    "archive": "JA21-JA-Core-Application-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "14e28b51ec3bf807be6ade400dea89e1a68b89679b55e53b3566afef11192cc2",
+    "actual_sha256": "14e28b51ec3bf807be6ade400dea89e1a68b89679b55e53b3566afef11192cc2",
+    "match": true
+  },
+  {
+    "archive": "JA21-JA-Data-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "5e72fa078b9a0b230dc01efd2a59434e5aa429c8e9e0fb6b3b6c230fa87fa431",
+    "actual_sha256": "5e72fa078b9a0b230dc01efd2a59434e5aa429c8e9e0fb6b3b6c230fa87fa431",
+    "match": true
+  },
+  {
+    "archive": "JA21-JA-Interface-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "342fa3afb33b8b8e00045acb2c95811eec8496b2b0c70114de210c31522d978a",
+    "actual_sha256": "342fa3afb33b8b8e00045acb2c95811eec8496b2b0c70114de210c31522d978a",
+    "match": true
+  },
+  {
+    "archive": "JA21-JA-Operations-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "1f103193b9141d44ba5b93032bbec49d7180b8372d8f4ac0f4e785c3ab7a591b",
+    "actual_sha256": "1f103193b9141d44ba5b93032bbec49d7180b8372d8f4ac0f4e785c3ab7a591b",
+    "match": true
+  },
+  {
+    "archive": "JA21-JA-Portal-Scene-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "cf3a399813b38d4c00ed9c5c643c8aae85228c74a4d1a0178ef75aebbf1b0212",
+    "actual_sha256": "cf3a399813b38d4c00ed9c5c643c8aae85228c74a4d1a0178ef75aebbf1b0212",
+    "match": true
+  },
+  {
+    "archive": "JA21-JA-Programming-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "aa1c780e4b1cd3f7fe856cc80fdbbb210529904de3258eb06edd64faaf346efa",
+    "actual_sha256": "aa1c780e4b1cd3f7fe856cc80fdbbb210529904de3258eb06edd64faaf346efa",
+    "match": true
+  },
+  {
+    "archive": "JA21-JA-Security-Policy-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "8ccaccd58ee29681e860805c9ddbd476521be616b5863a5178019054dd242f30",
+    "actual_sha256": "8ccaccd58ee29681e860805c9ddbd476521be616b5863a5178019054dd242f30",
+    "match": true
+  },
+  {
+    "archive": "JA21-JA-Service-and-Protocol-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "a29639245b9fd11639622abfe179f7b690093ff44aa4b102fb8e73de14a9f375",
+    "actual_sha256": "a29639245b9fd11639622abfe179f7b690093ff44aa4b102fb8e73de14a9f375",
+    "match": true
+  },
+  {
+    "archive": "JA21-JA-Test-Simulation-and-Proof-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "08b45edd34d9f125eb20d2600d6d39bcbaf81675bfa4fbab67f0d5ff155227c6",
+    "actual_sha256": "08b45edd34d9f125eb20d2600d6d39bcbaf81675bfa4fbab67f0d5ff155227c6",
+    "match": true
+  },
+  {
+    "archive": "JA21-JA-Training-and-Evaluation-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "26f9f78ac3f44fb376157b9a3faf6cff0f31777151d455a9f8451b06ac599d2d",
+    "actual_sha256": "26f9f78ac3f44fb376157b9a3faf6cff0f31777151d455a9f8451b06ac599d2d",
+    "match": true
+  },
+  {
+    "archive": "JA21-JAXD-UI-UX-Experience-Design-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "f308a1558be1e5c264093168885c918897d9accad514e1801bf9f554a0d2edbe",
+    "actual_sha256": "f308a1558be1e5c264093168885c918897d9accad514e1801bf9f554a0d2edbe",
+    "match": true
+  },
+  {
+    "archive": "JA21-MCRT-Portal-Timeline-Language-Suite-1.0.0-main(1).zip",
+    "expected_sha256": "18397c5e458fc7b17a67025edec2d798395c62feef7de56635a2d6bdb18d186b",
+    "actual_sha256": "18397c5e458fc7b17a67025edec2d798395c62feef7de56635a2d6bdb18d186b",
+    "match": true
+  }
+]

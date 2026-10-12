@@ -1,0 +1,25 @@
+{
+  "evidence_sha256": "14974f3cc2b5c7e7f7f98bc1c1d0abbf50fb849d122ffd6f6dc4ed663dfa0325",
+  "exit_code": 0,
+  "observed_results": {
+    "ids": [
+      "W0001",
+      "W0002",
+      "W0003"
+    ],
+    "partition_independent_ids": true,
+    "runtime_winner": "W0002",
+    "service_version": "RCPW-AUTHORITY-WELL-ARBITER/1",
+    "service_winner": "W0002"
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "requirement_id": "RCPW-18-R20",
+  "result_sha256": "0a878540a18079fc147e30b7fe80dee52b2643ef52689b737ce764575df7159c",
+  "schema": "RCPW-26-GATE-EVIDENCE/1",
+  "status": "OPERATIONAL",
+  "test_command": "python vm/world/qualification/remediate_26.py",
+  "tool_versions": {
+    "python": "3.11.15",
+    "world_runtime": "7.0.0-applied-remediated-26"
+  }
+}

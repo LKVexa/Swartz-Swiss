@@ -1,0 +1,31 @@
+ja source 0.3
+module suite43.release_plane.build_jobs
+use Operations
+policy explicit_network
+
+workspace ReleasePlaneBuildJobs {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 8 memory 16GB
+    network disabled
+    secret signing_key reference "vault://release-plane/signing"
+    service SOPHIA_build_job_profile replicas 1
+    health_check SOPHIA_build_job_profile every 10s
+    service CHARLOTTE_build_job_gate replicas 1
+    health_check CHARLOTTE_build_job_gate every 10s
+    service LANDON_build_job_worker replicas 1
+    health_check LANDON_build_job_worker every 10s
+    service Professor_build_job_report replicas 1
+    health_check Professor_build_job_report every 10s
+    service Podium_build_job_receipt replicas 1
+    health_check Podium_build_job_receipt every 10s
+    service deterministic_build_worker replicas 1
+    health_check deterministic_build_worker every 5s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == true
+emit package "release_plane_build_jobs.msslb"

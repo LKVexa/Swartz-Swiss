@@ -1,0 +1,47 @@
+ja source 0.3
+module suite61.popup_runner.job_parameter_form
+use Interface
+policy no_network
+
+interface PopupRunnerJobParameterForm {
+    state selected_job: Text? = null
+    state validating_parameters: Flag = false
+    derived has_selected_job = selected_job != null
+    derived can_edit_parameters = selected_job != null and not validating_parameters
+    component SOPHIA_ParameterModel {
+        label "Interpret approved job parameters"
+        enabled bind can_edit_parameters
+        accessibility role button name "Interpret parameters for selected approved job"
+        action interpret_job_parameters requires popup.job.parameters:approved
+    }
+    component CHARLOTTE_ParameterGate {
+        label "Validate parameter types, bounds, paths, and secrets"
+        enabled bind can_edit_parameters
+        accessibility role button name "Validate selected job parameters"
+        action validate_job_parameters requires popup.job.parameters:approved
+    }
+    component LANDON_ParameterBinding {
+        label "Bind canonical parameters"
+        enabled bind can_edit_parameters
+        accessibility role button name "Bind validated parameters to selected job"
+        action bind_job_parameters requires popup.job.parameters:approved
+    }
+    component Professor_ParameterGuide {
+        label "Explain fields, defaults, and constraints"
+        enabled bind has_selected_job
+        accessibility role button name "Explain selected job parameter form"
+        action explain_job_parameters requires popup.job.parameters:approved
+    }
+    component Podium_ParameterEvidence {
+        label "View parameter provenance"
+        enabled bind can_edit_parameters
+        accessibility role button name "View job parameter validation evidence"
+        action show_parameter_evidence requires popup.job.parameters:approved
+    }
+    component JobParameterViewport {
+        embed portal.scene "popup_runner_job_parameter_form"
+        motion bind timeline.parameter_validation
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface PopupRunnerJobParameterForm

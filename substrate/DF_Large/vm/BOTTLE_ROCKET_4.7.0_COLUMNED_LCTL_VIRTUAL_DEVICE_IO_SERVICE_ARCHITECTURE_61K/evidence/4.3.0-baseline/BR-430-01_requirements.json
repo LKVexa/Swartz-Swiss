@@ -1,0 +1,85 @@
+{
+  "decision": "OPERATIONAL",
+  "package": "BR-430-01",
+  "requirements": [
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-01_tests.log",
+      "exit_code": 0,
+      "notes": "spec+semantic+independent image checks",
+      "requirement": "Define major ISA version",
+      "requirement_id": "BR-430-01-R01",
+      "result": "PASS",
+      "sha256": "45c837d25d9e5963ae9cda72c43398e1585cf7cd422f99208356bb869a0f84ea",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-01_tests.log",
+      "exit_code": 0,
+      "notes": "spec+semantic+independent image checks",
+      "requirement": "Define minor ISA version",
+      "requirement_id": "BR-430-01-R02",
+      "result": "PASS",
+      "sha256": "45c837d25d9e5963ae9cda72c43398e1585cf7cd422f99208356bb869a0f84ea",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-01_tests.log",
+      "exit_code": 0,
+      "notes": "spec+semantic+independent image checks",
+      "requirement": "Define compatibility rules",
+      "requirement_id": "BR-430-01-R03",
+      "result": "PASS",
+      "sha256": "45c837d25d9e5963ae9cda72c43398e1585cf7cd422f99208356bb869a0f84ea",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-01_tests.log",
+      "exit_code": 0,
+      "notes": "spec+semantic+independent image checks",
+      "requirement": "Define deprecated opcode rules",
+      "requirement_id": "BR-430-01-R04",
+      "result": "PASS",
+      "sha256": "45c837d25d9e5963ae9cda72c43398e1585cf7cd422f99208356bb869a0f84ea",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-01_tests.log",
+      "exit_code": 0,
+      "notes": "spec+semantic+independent image checks",
+      "requirement": "Define extension mechanism",
+      "requirement_id": "BR-430-01-R05",
+      "result": "PASS",
+      "sha256": "45c837d25d9e5963ae9cda72c43398e1585cf7cd422f99208356bb869a0f84ea",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-01_tests.log",
+      "exit_code": 0,
+      "notes": "spec+semantic+independent image checks",
+      "requirement": "Define feature flags",
+      "requirement_id": "BR-430-01-R06",
+      "result": "PASS",
+      "sha256": "45c837d25d9e5963ae9cda72c43398e1585cf7cd422f99208356bb869a0f84ea",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "title": "ISA versioning"
+}

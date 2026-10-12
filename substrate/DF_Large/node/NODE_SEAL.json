@@ -1,0 +1,12 @@
+{
+  "bundle": "node/NODE.pal",
+  "differential_agreement": true,
+  "native_witness": 2793363104939358755,
+  "node_id": "N_LARGE",
+  "reference_witness": 2793363104939358755,
+  "rows": 18,
+  "schema": "DF/NODE_SEAL/1",
+  "seal": "dd8fe72b4d979d5c1bcffdef5ea68ef9d8e0e17c2fa18fe5352961d45b187838",
+  "verify_ok": true,
+  "warnings": []
+}

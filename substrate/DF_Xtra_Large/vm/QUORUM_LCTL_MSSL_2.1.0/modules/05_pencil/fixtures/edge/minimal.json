@@ -1,0 +1,12 @@
+{
+  "schema": "QUORUM-FIXTURE/2.0",
+  "class": "edge",
+  "module_id": 5,
+  "plane": "intent_reasoning",
+  "input_type": "request/context",
+  "payload": {},
+  "expected_contract": {
+    "admitted": true,
+    "boundary": "minimal"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "suite_id": 58,
+  "suite_name": "Indexing Storage Resources Logs and Recovery",
+  "plane": "operations_recovery",
+  "legacy_sha256": "89571b70eb9c3b7d27d5e11258af1ea46b1fe7bfa27632dbd320f6b867311690",
+  "legacy_root": "legacy/source_repository/Indexing Storage Resources Logs and Recovery",
+  "files": [
+    {
+      "path": "58.10_Resource_Dashboard.jaops",
+      "sha256": "65817ed984705857d4ad201482183dd5db7dd52e9a501ea27fbf2aa8b847662a",
+      "bytes": 1171
+    },
+    {
+      "path": "58.11_Resource_Usage_Monitor.jaops",
+      "sha256": "31f54ab84a4c5e0dd5e653653b75b4b1dfb77b4252b6502df9a23119b59ac74e",
+      "bytes": 1128
+    },
+    {
+      "path": "58.12_Logs_Service.jaops",
+      "sha256": "1706c6e6e40f324c116dbf5f16aab3029e032d8740feee359f48a5c0d019a5c8",
+      "bytes": 1149
+    },
+    {
+      "path": "58.13_Learning_Event_Recording.jaops",
+      "sha256": "fe8f64cdec40907c6d051bc25f06414a28d43d43fb46a911a39ad6a0053d05b8",
+      "bytes": 1171
+    },
+    {
+      "path": "58.1_Repository_Indexing.jaops",
+      "sha256": "538919f60311cf29ccd18771d42bd61b18fbfaf757afba9fdf3f2b46b4f10687",
+      "bytes": 1124
+    },
+    {
+      "path": "58.2_Storage.jaops",
+      "sha256": "1c45053570b0d540d3a3553b66f5c377ebf963c32802c650f17ca1ad8e5341ea",
+      "bytes": 1085
+    },
+    {
+      "path": "58.3_Resource_Monitoring.jaops",
+      "sha256": "cb5519033f0aa17bf021eddc4df6ee1845818db3d6e76bc36a3b3f5952cf5f48",
+      "bytes": 1165
+    },
+    {
+      "path": "58.4_Diagnostics.jaops",
+      "sha256": "2c2633250cdde77a6b46f567d98fd96e72c7a168f249a1275d6f62d5164e62c4",
+      "bytes": 1142
+    },
+    {
+      "path": "58.5_Logs.jaops",
+      "sha256": "a12c1970fcda165837bb47cd9a496e90c6e4066677d0d81b5839b436ab0509d9",
+      "bytes": 1043
+    },
+    {
+      "path": "58.6_Retries.jaops",
+      "sha256": "de19bf7f55fda02bd9f3b3e168783a239d1be9df62129a9ef6e7efba91c39048",
+      "bytes": 1060
+    },
+    {
+      "path": "58.7_Failure_Handling.jaops",
+      "sha256": "0c69eda48b62a9653bba47ee283a1ead892fe76924ae266d5cbbb1e1e0a69f78",
+      "bytes": 1138
+    },
+    {
+      "path": "58.8_Repository_Indexing_Service.jaops",
+      "sha256": "4f79db25f14a0ba8106147f485a5f30f16670315dcd47ccad208f1cf3ba48c57",
+      "bytes": 1244
+    },
+    {
+      "path": "58.9_Storage_Manager.jaops",
+      "sha256": "8c9dd4cbbada93586ad387d3c5d5e5067862d6f831b01f362a24c691d8ccd9f8",
+      "bytes": 1200
+    },
+    {
+      "path": "README.md",
+      "sha256": "20356aa42cddc1d6a4baf2d0616cc09ec32e60b400adccfe4fadef250b386582",
+      "bytes": 20837
+    }
+  ]
+}

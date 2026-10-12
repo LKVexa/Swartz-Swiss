@@ -1,0 +1,36 @@
+{
+  "schema": "GFM-Aperture-Aggie-verification/1",
+  "prepared": "2026-10-11",
+  "version": "1.0.0",
+  "tests": {
+    "passed": 13,
+    "failed": 0,
+    "transcript": "validation/tests.txt",
+    "sha256": "7f48edfc8d396a768875f90f0ee30b7b3a0a830cd8a5c69afa83140c6b293f40",
+    "scope": "Real local HTTP/SSE, calculation rules, bounded recordings, source preservation, isolated DOM client interaction with real HTTP/SSE, and finite schematic renderer geometry using a mocked graphics interface."
+  },
+  "independentValidation": {
+    "passed": true,
+    "snapshotsChecked": 235,
+    "gf9BasisRoundTrips": 9,
+    "evidence": "validation/independent-results.json",
+    "sha256": "b142ff0adda763b66c2a836fb72a2c38f1ededd61fc08ff5f0d124d798b715f4",
+    "maximumCoefficientError": 4.002966042486721e-16,
+    "maximumRecoveredError": 2.2215299868541707e-16
+  },
+  "preservedEngine": "RUSSL GFM Terminal 0.5.1, unchanged computation modules and complete original terminal in vendor/terminal",
+  "modelScope": "Declared aperture/cover hypothesis with shared stationary Kerr exterior. GF9 samples are a spin sweep, not spatial or time coordinates. Motion and shapes are illustrative.",
+  "browserVerification": {
+    "status": "blocked",
+    "liveBrowserRenderingVerified": false,
+    "gpuRenderingVerified": false,
+    "reason": "Automatic approval review rejected opening a new browser tab under the earlier preview/workaround restriction. No alternate browser or indirect opening was attempted after rejection.",
+    "serviceLimit": "Real HTTP/SSE tests in one process pass. Cross-process localhost readiness probes timed out in the managed environment. The local launcher is provided for execution on the user host."
+  },
+  "example": {
+    "recording": "examples/two-branch-example.json",
+    "csv": "examples/two-branch-history.csv",
+    "defaultRadius": 0.5890716489625588,
+    "scriptedExperimentSeconds": 12
+  }
+}

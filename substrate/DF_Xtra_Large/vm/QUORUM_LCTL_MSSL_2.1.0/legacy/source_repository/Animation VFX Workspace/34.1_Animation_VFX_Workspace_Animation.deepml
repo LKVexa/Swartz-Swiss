@@ -1,0 +1,25 @@
+deepml vfx 0.3
+module suite34.animation_vfx_workspace.animation
+policy deterministic
+policy no_network
+
+effect AnimationWorkspaceAnimation {
+  procedural operator SOPHIA(scene_state, timeline_state) differentiable
+  procedural operator CHARLOTTE(scene_state, timeline_state) differentiable
+  procedural operator LANDON(scene_state, timeline_state) differentiable
+  procedural operator Professor(scene_state, timeline_state) differentiable
+  procedural operator Podium(scene_state, timeline_state) differentiable
+  cache AnimationWorkspaceCache interval 0s..10s step 1/60s hash sha256("suite34:animation:v1")
+  bind scene AnimationWorkspaceScene
+  bind timeline AnimationWorkspaceTimeline
+  shader function AnimationWorkspaceShade(x: vec3) -> color
+  render_target AnimationWorkspaceColor format rgba16f
+  render_graph { SOPHIA -> CHARLOTTE -> LANDON -> Professor -> Podium -> AnimationComposite }
+  composite multipass [SceneColor, MotionVectors, SceneDepth, AnimationGuides]
+}
+render AnimationWorkspaceAnimation camera scene.MainCamera to AnimationWorkspaceColor;
+cache AnimationWorkspaceAnimation to cache.AnimationWorkspaceAnimation;
+optimize AnimationWorkspaceAnimation using [node_fusion, dead_pass_removal, attribute_packing, shader_specialization, cache_scheduling, domain_tiling, render_graph_ordering]
+lower AnimationWorkspaceAnimation to DEEPML_VFX_R12
+package vfx AnimationWorkspaceAnimation as "animation_vfx_workspace_animation.msslb"
+certify vfx AnimationWorkspaceAnimation profile strict

@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.specialized_roles.technical_coordinator
+use Agent
+policy no_network
+
+agent TechnicalCoordinator {
+    identity "technical_coordinator"
+    role "sophia-charlotte-landon-professor-podium-coordinator"
+    goal coordinate_dependency_valid_technical_work when confidence >= 0.95
+    memory session retention 1h
+    budget steps 60 tools 5
+    tool LANDONInventoryTechnicalContext(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIABuildTechnicalDispatch(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateTechnicalDispatch(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainTechnicalDispatch(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordTechnicalDispatch(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONInventoryTechnicalContext
+        authorize SOPHIABuildTechnicalDispatch
+        authorize CHARLOTTEValidateTechnicalDispatch
+        authorize ProfessorExplainTechnicalDispatch
+        authorize PodiumRecordTechnicalDispatch
+        continue when policy_allows
+        execute LANDONInventoryTechnicalContext("selected_technical_scope")
+        execute SOPHIABuildTechnicalDispatch("technical_inventory")
+        execute CHARLOTTEValidateTechnicalDispatch("candidate_dispatch")
+        execute ProfessorExplainTechnicalDispatch("validated_dispatch")
+        execute PodiumRecordTechnicalDispatch("technical_dispatch_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "TechnicalCoordinator.mcrt"

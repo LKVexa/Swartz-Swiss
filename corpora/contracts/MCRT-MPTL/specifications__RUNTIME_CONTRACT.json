@@ -1,0 +1,17 @@
+{
+  "runtime": "JA21 MCRT Portal Timeline Runtime Profile",
+  "deterministic": true,
+  "network_access": "denied unless explicitly authorized",
+  "responsibilities": [
+    "rational clock advancement",
+    "track scheduling",
+    "sync barrier evaluation",
+    "branch resolution",
+    "portal transition dispatch",
+    "checkpoint capture",
+    "replay verification",
+    "MCRT receipt emission"
+  ],
+  "failure_policy": "fail closed on invalid time, unresolved binding, deadlock, missing checkpoint, or replay hash mismatch",
+  "native_runtime_included": false
+}

@@ -1,0 +1,112 @@
+{
+  "authority_sha256": "71448969e640c2e84d06191964a542a43ee007bc1b4e6abb40242946801afc26",
+  "domain_output": {
+    "input_type": "model_input/state",
+    "legacy_signals": [
+      "action",
+      "CACHE",
+      "PACKAGE",
+      "VALIDATE",
+      "RECOVER"
+    ],
+    "model_output": {
+      "checkpoint_sha256": "40a7ca5af6ddaae71c36965cd9292096caf2ab6a22f4df275177e54544a356cd",
+      "evaluation_score": 0.42451,
+      "vector": [
+        -0.466667,
+        -0.85098,
+        -0.129412,
+        0.278431,
+        -0.333333,
+        0.403922,
+        -0.192157,
+        0.082353
+      ]
+    },
+    "module": "Local Model Provider and Health",
+    "output_type": "model_output/evaluation_receipt",
+    "payload_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "plane": "model_compute",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "1cdc8350ec866526cfb6747fba6f4ef5cd7ca2e9f6fa3ad80e75b2284ce02691",
+  "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "module": "Local Model Provider and Health",
+  "module_id": 54,
+  "plane": "model_compute",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "1bf5f4a5ded23c400caad77e19178e1c47598e0fa02a0343c6ec5e40ed8011b4",
+  "stage_count": 8,
+  "stages": [
+    {
+      "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "node": "N01",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "93777932b9910dd65838b9b71d2ab3ddff2c00759e767d8c00b1fb35dea9042f",
+      "stage": "INPUT"
+    },
+    {
+      "input_sha256": "93777932b9910dd65838b9b71d2ab3ddff2c00759e767d8c00b1fb35dea9042f",
+      "node": "N02",
+      "operator": "VALIDATE",
+      "output_sha256": "b620f654f138f3d02b93bebdd776b46b1eb3600471f6e15adad0e7de2f3e8c5a",
+      "stage": "VALIDATE",
+      "valid": true
+    },
+    {
+      "input_sha256": "b620f654f138f3d02b93bebdd776b46b1eb3600471f6e15adad0e7de2f3e8c5a",
+      "node": "N03",
+      "normalized_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "operator": "NORMALIZE",
+      "output_sha256": "d8a5d1ee647063d44560aaecf04c3267a591e8b8fc369a5aca715f1755db7084",
+      "stage": "NORMALIZE"
+    },
+    {
+      "execution_token": "15484797eb763112e47a2fcc",
+      "input_sha256": "d8a5d1ee647063d44560aaecf04c3267a591e8b8fc369a5aca715f1755db7084",
+      "node": "N04",
+      "operator": "EXECUTE",
+      "output_sha256": "02932c609385f0eac0f74731a21a8c92c113587e2ed448ad4b857a9c6b07b47b",
+      "stage": "COMPUTE"
+    },
+    {
+      "comparison": "SELF_CONSISTENT",
+      "input_sha256": "02932c609385f0eac0f74731a21a8c92c113587e2ed448ad4b857a9c6b07b47b",
+      "node": "N05",
+      "operator": "COMPARE",
+      "output_sha256": "67e91557f1b9e03ba4bba42f743f81310460bb72e9109a0db1fa19b6c0942a2e",
+      "stage": "EVALUATE"
+    },
+    {
+      "checkpoint_sha256": "1ee17d61da1467688a3f29d3fac83d7e1bea09a022a6a062de83aaa136199634",
+      "input_sha256": "67e91557f1b9e03ba4bba42f743f81310460bb72e9109a0db1fa19b6c0942a2e",
+      "node": "N06",
+      "operator": "CHECKPOINT",
+      "output_sha256": "f9975f40fc44a03aa906bd7aedd676e0e52766ed347f94389c654d82693729e2",
+      "stage": "CHECKPOINT"
+    },
+    {
+      "input_sha256": "f9975f40fc44a03aa906bd7aedd676e0e52766ed347f94389c654d82693729e2",
+      "node": "N07",
+      "operator": "RECORD",
+      "output_sha256": "f4759ef68dff82c0fa8b40f1d747c8c4515dd1d5e8bbeacf9db0d2d429e48b21",
+      "receipt_sha256": "e6cb574fd1701f48b21aee9bcafaba18cedeffc79bc93bc14ba9790bd36b1f58",
+      "stage": "RECORD"
+    },
+    {
+      "input_sha256": "f4759ef68dff82c0fa8b40f1d747c8c4515dd1d5e8bbeacf9db0d2d429e48b21",
+      "node": "N08",
+      "operator": "RECORD",
+      "output_sha256": "642f78cc23ba7246800667a302a02da224bc5d70f89c5142fbff0b8acd4cf8ed",
+      "receipt_sha256": "54a6b2712eafb8bd863cf425d91d2980b0b3acfcd11074ecfb14aae83bf1a9ad",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

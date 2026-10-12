@@ -1,0 +1,27 @@
+LCTLC/1.0
+@unit id=quorum.generic_project.vm.rcpw.world_demo version=7.0.0 profile=native entry=F0000:V0001 target=hosted-reference error_budget=0 resource_ceiling=world=bounded;network=denied proof=quorum:rcpw7
+@defaults qspace=H basis=computational regime=exact assume=finite_dimension error=exact conf=1.0
+@frame id=F0000 parent=ROOT module=quorum.generic_project.vm.rcpw.world_demo proof=quorum:rcpw7
+ID│LANE│OP│OUT│CTRL│IN│ARG│META
+D0001│alloc│Q│q│_│_│1│res="logical_qubits=1";p=lctl:1.2
+D0002│alloc│C│c│_│_│1│res="classical_bits=1";p=lctl:1.2
+V0001│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=7│t=world_seed;p=quorum:rcpw7
+V0002│vm│REG│_│_│_│vm.op=SVC;svc=16│t=world_init;p=quorum:rcpw7
+V0003│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=20│t=canonical_ticks;p=quorum:rcpw7
+V0004│vm│REG│_│_│_│vm.op=SVC;svc=17│t=world_advance;p=quorum:rcpw7
+V0005│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=5000│t=reference_x;p=quorum:rcpw7
+V0006│vm│REG│_│_│_│vm.op=MOVI;dst=R1;imm=0│t=reference_y;p=quorum:rcpw7
+V0007│vm│REG│_│_│_│vm.op=MOVI;dst=R2;imm=0│t=reference_z;p=quorum:rcpw7
+V0008│vm│REG│_│_│_│vm.op=SVC;svc=18│t=reference_move;p=quorum:rcpw7
+V0009│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=4│t=entity_id;p=quorum:rcpw7
+V0010│vm│REG│_│_│_│vm.op=SVC;svc=20│t=folded_entity_view;p=quorum:rcpw7
+V0011│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=1│t=anchor_region;p=quorum:rcpw7
+V0012│vm│REG│_│_│_│vm.op=SVC;svc=21│t=frontier_expand;p=quorum:rcpw7
+V0013│vm│REG│_│_│_│vm.op=MOV;dst=R6;a=R0│t=save_region_id;p=quorum:rcpw7
+V0014│vm│REG│_│_│_│vm.op=SVC;svc=22│t=region_archive;p=quorum:rcpw7
+V0015│vm│REG│_│_│_│vm.op=MOV;dst=R0;a=R6│t=restore_region_id;p=quorum:rcpw7
+V0016│vm│REG│_│_│_│vm.op=SVC;svc=23│t=region_rehydrate;p=quorum:rcpw7
+V0017│vm│REG│_│_│_│vm.op=SVC;svc=26│t=world_invariants;p=quorum:rcpw7
+V0018│vm│REG│_│_│_│vm.op=HALT│t=halt;p=quorum:rcpw7
+C9999│terminal│.│_│_│_│terminal=sealed_graph_end;justification=canonical_entry_sentinel│p=lctl:nop
+@end

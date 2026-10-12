@@ -1,0 +1,7 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),{spawnSync}=require('node:child_process');
+const root=path.resolve(__dirname,'..'),files=['tests/phase-mhd.cjs','tests/phase-view.test.cjs','tests/phase-worker-parity.cjs','tests/relativity.cjs','tests/observations.cjs','tests/backend-simulation.cjs','tests/backend-provenance.cjs','tests/offline-console.cjs','tests/combined-relativity-worker.cjs'];
+const result=spawnSync(process.execPath,['--test',...files],{cwd:root,encoding:'utf8',maxBuffer:4*1024*1024}),log=(result.stdout||'')+(result.stderr||'');
+const count=key=>Number(log.match(new RegExp('(?:^|\\n).*?'+key+' (\\d+)(?:\\r?\\n|$)'))?.[1]??NaN);
+const report={schema:'GFM-phase-offline-pipeline-verification/1',date:new Date().toISOString(),exitCode:result.status,tests:count('tests'),passed:count('pass'),failed:count('fail'),skipped:count('skipped'),files,scope:'Original numerical cores, observation holdout, actual Kerr source, browser worker numeric parity, bounded publication/latest cache, stale ACK and pause safety, explicit toy clock, Node phase-service ACK compatibility. No HTTP/native/GPU test claim.'};
+fs.writeFileSync(path.join(root,'validation/offline-pipeline-tests.txt'),log);fs.writeFileSync(path.join(root,'validation/offline-pipeline-tests.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));process.exitCode=result.status??1;

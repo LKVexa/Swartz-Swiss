@@ -1,0 +1,13 @@
+ja certifier 0.3
+module starter.hello_certifier
+policy no_execute_unknown_code
+policy no_network
+
+grammar HelloGrammar {
+  token WORD = letter, { letter } ;
+  token SPACE = " " ;
+  production greeting = "hello", SPACE, WORD ;
+  start greeting ;
+}
+
+certify grammar HelloGrammar profile basic

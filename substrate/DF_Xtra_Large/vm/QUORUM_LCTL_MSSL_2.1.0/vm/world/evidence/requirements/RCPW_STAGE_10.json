@@ -1,0 +1,305 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 13,
+    "PARTIAL": 16,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization restores local embodiment from authoritative state without duplicate ownership.",
+      "requirement_id": "RCPW-10-R01",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Visibility/interaction deadlines drive prewarm priority.",
+      "requirement_id": "RCPW-10-R02",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fast traversal and teleportation have explicit staging/fallback behavior.",
+      "requirement_id": "RCPW-10-R03",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "State unavailable by deadline degrades presentation safely rather than fabricating authoritative truth.",
+      "requirement_id": "RCPW-10-R04",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization latency and hitch budgets are measured.",
+      "requirement_id": "RCPW-10-R05",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Dematerialization preserves all authoritative state required for future reconstruction.",
+      "requirement_id": "RCPW-10-R06",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization has explicit readiness levels separating visually present, physically valid, AI-ready, and interactable.",
+      "requirement_id": "RCPW-10-R07",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Interaction is gated until authoritative collision, ownership, and gameplay state are valid.",
+      "requirement_id": "RCPW-10-R08",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Prewarm cancellation releases resources without losing canonical state or leaving orphan handles.",
+      "requirement_id": "RCPW-10-R09",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization storms have admission control and deterministic priority ordering.",
+      "requirement_id": "RCPW-10-R10",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization supports exterior/interior/portal transitions, including prewarming of destination geometry, navigation, physics, audio, and interaction state.",
+      "requirement_id": "RCPW-10-R11",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Animation pose, ragdoll/physics warm-start, vehicle suspension, and moving-platform state reconstruct without a visible first-frame discontinuity.",
+      "requirement_id": "RCPW-10-R12",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Navigation and collision readiness are mandatory before an entity becomes interactable.",
+      "requirement_id": "RCPW-10-R13",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialized entities retain provenance linking their visible state to canonical state, abstract simulation steps, and ledger events.",
+      "requirement_id": "RCPW-10-R14",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization is driven by an explicit dependency graph covering geometry, collision, navigation, AI, animation, audio, inventory, interaction, and event bindings.",
+      "requirement_id": "RCPW-10-R15",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Partial readiness is machine-readable and interaction is permitted only when the required dependency subset is authoritative and ready.",
+      "requirement_id": "RCPW-10-R16",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization supports deterministic warm-start of moving actors/vehicles from canonical route phase, velocity, animation, and physics state.",
+      "requirement_id": "RCPW-10-R17",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Cancellation and eviction release derived resources in dependency-safe order while preserving canonical state and unresolved obligations.",
+      "requirement_id": "RCPW-10-R18",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Content-scale qualification measures p50/p95/p99 materialization latency, backlog recovery time, memory burst, I/O burst, and missed interaction deadlines.",
+      "requirement_id": "RCPW-10-R19",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization dependencies can be fetched/constructed asynchronously, but canonical readiness gates remain deterministic and revision-checked.",
+      "requirement_id": "RCPW-10-R20",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization queues are partition-aware and support migration/cancellation without duplicate embodiment.",
+      "requirement_id": "RCPW-10-R21",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Derived asset streaming failure cannot cause canonical entity deletion or ownership transfer.",
+      "requirement_id": "RCPW-10-R22",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-10-R23.json",
+      "evidence_sha256": "79a07a9e89e84b855942de341730099c9da17c4c97cebde9104624420e2d59d4",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "Hot-reloaded presentation assets are versioned separately from canonical semantic state and can roll back independently.",
+      "requirement_id": "RCPW-10-R23",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-10-R24.json",
+      "evidence_sha256": "bbe0ea578be39f595e9bbb60e2181f79decaa0e72f056c13fc72f2b8fa9cb7e5",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "Materialization qualification includes concurrent dense-region hydration across multiple workers/storage tiers with deterministic interaction readiness.",
+      "requirement_id": "RCPW-10-R24",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization can reconstruct temporally evolved settlements, infrastructure, agents, ecology, weather context, and visible historical evidence from long-horizon canonical state.",
+      "requirement_id": "RCPW-10-R25",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rehydration distinguishes exact retained details from statistically reconstructed presentation and exposes provenance for debugging/qualification.",
+      "requirement_id": "RCPW-10-R26",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization of archived regions uses staged semantic rehydration before high-cost assets and cannot fabricate canonical identities absent from the archived state.",
+      "requirement_id": "RCPW-10-R27",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World-expansion materialization validates synthesized content package, topology, dependencies, and seed provenance before interaction is enabled.",
+      "requirement_id": "RCPW-10-R28",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes first-entry into newly synthesized regions, return after decades-equivalent simulation, ruined/rebuilt settlements, succession, and high-density historical evidence.",
+      "requirement_id": "RCPW-10-R29",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "stage": 10,
+  "title": "Materialization Authority"
+}

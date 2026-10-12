@@ -1,0 +1,53 @@
+AUDIT APPLICATION / GR REFERENCE CALCULATORS
+
+The attached editable review and its source PDF are preserved. The registry
+data/audit-findings.json contains all 38 audit items A01-A38 with their source
+pages, dispositions, explanation, retained or corrected expressions, primary
+references and SHA-256 provenance. Expressions inherited from the audit use its
+c=1 convention unless an explicitly labeled SI correction is provided.
+
+Executable general-relativistic calculations are isolated in
+backend/gr-reference.cjs. They do not change the cylinder geometry or the live
+Maxwell/plasma/material evolution. API reference examples are independent
+geometries and local data, not a single matched solution. No result establishes
+a global event horizon, a traversable spacetime passage, or metric equivalence.
+
+Available calculators and POST names:
+  morrisThorne: static spherical energy density, radial pressure, radial NEC,
+    strict b_prime<1 throat condition with declared regular redshift limit.
+  misnerSharpDoubleNull: invariant spherical mass and normalized expansions,
+    with u,v length coordinates; a marginal sphere is not an event horizon.
+  classifyFutureOuter: local signs for future-directed null normals; outer
+    requires L_minus(theta_plus)<0. Causal character is supplied, not inferred.
+  thinShell: two untrapped static spherical exterior charts, opposite radial
+    normal signs, surface density/pressure, proper-time curvature, algebraic
+    potential and no-flux energy-rate reference. f_plus,f_minus must be >0.
+  thinShellPotential: corrected asymmetric potential and explicit unsquared
+    positive-root branch test. It is not a trajectory or stability solver.
+  kerrReference: stationary uncharged Kerr spin, radii and horizon angular
+    velocity of the specified solution. It does not classify the EM cylinder.
+
+SI conventions:
+  G=6.67430e-11 m^3 kg^-1 s^-2; c=299792458 m/s exact.
+  rho_E and p_r: J/m^3 and Pa; c^4/(8 pi G) in Einstein components.
+  sigma_E: J/m^2; shell pressure: N/m. Both use a c^4 prefactor.
+  Shell tau is seconds: beta=sqrt((adot/c)^2+f), acceleration term addot/c^2.
+  Potential equation is (adot/c)^2+V=0; V is dimensionless.
+  Kerr chi=cJ/(G M^2), a_K=chi GM/c^2. Shell radius a is a different variable.
+  All physical inputs must be finite numbers; unknown keys and unit/name
+  aliases are rejected. Boolean declarations must be actual booleans.
+
+Independent checks in tests/gr-reference.test.cjs include the analytic Ellis
+throat, a nontrivial redshift NEC, flat double-null mass, null-coordinate
+rescaling, the outer/inner sign distinction, flat and Schwarzschild shell
+limits, numerical shell conservation, asymmetric moving-shell potential,
+spurious squared branches, SI length scaling, Kerr analytic radii, and source
+hashes. They specifically reject the source's incorrect NEC, pressure and
+extra-radius potential formulas. This is equation verification, not black-hole
+observational validation or a full GR numerical-relativity calculation.
+
+Unestablished arithmetic-to-stress, metric-identity, topology-change, and
+aperture-through-spin rules remain provenance records rather than executable
+physical couplings. Ordinary Maxwell and positive-density plasma/solid heating
+do not provide the NEC-violating support required by the classical strict
+spherical wormhole reference.

@@ -1,0 +1,40 @@
+ja portal.scene 0.3
+module suite21.scene_reconstruction.layer_assembly
+policy no_execute_unknown_code
+policy no_network
+
+scene SceneReconstructionLayerAssembly {
+  entity LayerRoot {
+    component Transform3D {
+      position: vec3(0m, 0m, 0m)
+      rotation: quat.identity
+      scale: vec3(1, 1, 1)
+    }
+    component Tag { value: "layers.root.canonical" }
+  }
+  entity SOPHIA_SourceLayer parent LayerRoot {
+    component Transform3D { position: vec3(0m, 0m, 0m) }
+    component Tag { value: "layer.000.sophia.source" }
+  }
+  entity CHARLOTTE_ValidationLayer parent LayerRoot {
+    component Transform3D { position: vec3(0m, 0m, 0m) }
+    component Tag { value: "layer.100.charlotte.validation" }
+  }
+  entity LANDON_GeometryLayer parent LayerRoot {
+    component Transform3D { position: vec3(0m, 0m, 0m) }
+    component Tag { value: "layer.200.landon.geometry" }
+  }
+  entity Professor_ExplanationLayer parent LayerRoot {
+    component Transform3D { position: vec3(0m, 0m, 0m) }
+    component Tag { value: "layer.900.professor.explanation" }
+  }
+  entity Podium_ReceiptLayer parent LayerRoot {
+    component Transform3D { position: vec3(0m, 0m, 0m) }
+    component Tag { value: "layer.999.podium.receipt" }
+  }
+}
+serialize SceneReconstructionLayerAssembly using canonical_scene_v1
+snapshot SceneReconstructionLayerAssembly as "scene_reconstruction_layer_assembly.snapshot"
+optimize scene SceneReconstructionLayerAssembly using [stable_ids, topological_order, resource_deduplication, constant_transform]
+lower SceneReconstructionLayerAssembly to PORTAL_SCENE_R12
+trace SceneReconstructionLayerAssembly to "scene_reconstruction_layer_assembly.mcrt"

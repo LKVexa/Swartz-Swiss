@@ -1,0 +1,43 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "31b06f3680fd7c9ef6d154f097384b3b20d5fa2ad71a38a47abf5e8b8b87f93d",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (FOLD_PROPERTY) plus Stage 17 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "FOLD_PROPERTY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-01",
+    "GW-16",
+    "GW-25",
+    "GW-43",
+    "GW-51",
+    "GW-63"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Visible-domain components are continuous and bounded.",
+  "requirement_id": "RCPW-17-R03",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 17,
+  "stage_title": "QUORUM Fold Operator",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "FOLD_PROPERTY"
+  ],
+  "workflow_file": "17_QUORUM_FOLD_OPERATOR/262_RCPW_17_R03_VISIBLE_DOMAIN_COMPONENTS_ARE_CONTINUOUS_AND_BOUNDED.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "QUORUM-FIXTURE/2.0",
+  "class": "edge",
+  "module_id": 56,
+  "plane": "orchestration",
+  "input_type": "intent/dependency_set",
+  "payload": {},
+  "expected_contract": {
+    "admitted": true,
+    "boundary": "minimal"
+  }
+}

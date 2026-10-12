@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "78cab4230e69b9aea52bdb12b8de1343e56d4761e6d518fcb090b51b8ce6017d",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Release Plane",
+  "module_id": 43,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

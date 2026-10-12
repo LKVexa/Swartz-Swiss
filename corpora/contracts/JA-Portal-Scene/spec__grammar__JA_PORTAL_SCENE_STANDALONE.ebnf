@@ -1,0 +1,21 @@
+(* Provisional standalone profile; original grammar is preserved separately. *)
+program       = header, module, policy*, declaration+, emission* ;
+header        = "ja", "portal.scene", version ;
+module        = "module", qualified_name ;
+policy        = "policy", identifier ;
+declaration   = scene | resource | prefab | system | event_decl | snapshot | assertion | certification ;
+scene         = "scene", identifier, "{", scene_member*, "}" ;
+scene_member  = entity | event_decl | system | portal | component ;
+entity        = "entity", identifier, ("parent", identifier)?, "{", component*, "}" ;
+component     = "component", qualified_name, "{", property*, "}" ;
+property      = identifier, ":", expression ;
+resource      = "resource", identifier, "{", property*, "}" ;
+prefab        = "prefab", identifier, "{", scene_member*, "}" ;
+system        = "system", identifier, "{", statement*, "}" ;
+event_decl    = "event", identifier, "{", property*, "}" ;
+portal        = "portal", identifier, "{", property*, "}" ;
+snapshot      = "snapshot", identifier, "as", string ;
+assertion     = "assert", expression ;
+certification = "certify", "scene", identifier, "using", identifier ;
+emission      = "emit", identifier, string ;
+expression    = literal | identifier | call | member | list | map ;

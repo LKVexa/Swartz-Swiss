@@ -1,0 +1,72 @@
+{
+  "execution_scope": "deterministic local/offline reference semantics consuming module fixtures and emitting typed reference-domain outputs",
+  "input_type": "intent/dependency_set",
+  "module": "Worker",
+  "module_id": 60,
+  "non_claims": [
+    "not production domain fidelity",
+    "not executable legacy-runtime equivalence",
+    "not physical distributed authority"
+  ],
+  "operators": [
+    {
+      "node": "N01",
+      "operator": "INSPECT",
+      "stage": "INTENT"
+    },
+    {
+      "node": "N02",
+      "operator": "REASON",
+      "stage": "PLAN"
+    },
+    {
+      "node": "N03",
+      "operator": "RETRIEVE",
+      "stage": "DEPENDENCY_RESOLVE"
+    },
+    {
+      "node": "N04",
+      "operator": "AUTHORIZE",
+      "stage": "CAPABILITY_CHECK"
+    },
+    {
+      "node": "N05",
+      "operator": "ROUTE",
+      "stage": "SCHEDULE"
+    },
+    {
+      "node": "N06",
+      "operator": "EXECUTE",
+      "stage": "EXECUTE"
+    },
+    {
+      "node": "N07",
+      "operator": "INSPECT",
+      "stage": "MONITOR"
+    },
+    {
+      "node": "N08",
+      "operator": "TRANSFORM",
+      "stage": "AGGREGATE"
+    },
+    {
+      "node": "N09",
+      "operator": "RECORD",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "output_type": "execution_plan/aggregate_receipt",
+  "plane": "orchestration",
+  "policy": {
+    "capabilities": [
+      "evidence.write",
+      "module.invoke",
+      "process.execute"
+    ],
+    "default": "deny",
+    "network": "deny"
+  },
+  "runner": "qualification/open_gate_runtime.py",
+  "schema": "QUORUM-REFERENCE-DOMAIN-PROFILE/2.1",
+  "version": "2.1.0"
+}

@@ -1,0 +1,1064 @@
+{
+  "AUTONOMOUS_HISTORY": {
+    "archive": {
+      "archived": true,
+      "summary": {
+        "digest": "a6d504713f30ebac97dae87f8b8e514d57a108f8572d743a5c933f585a4ccdcd",
+        "ecology": {
+          "deer": 220,
+          "forage": 1400,
+          "wolves": 18
+        },
+        "era": "ERA_1",
+        "exact_entity_ids": [
+          "4",
+          "5"
+        ],
+        "history_proof": {
+          "aggregate": {
+            "ADVANCE": 1,
+            "ECONOMIC_TRANSITION": 2,
+            "ENTITY_CREATE": 2,
+            "KNOWLEDGE_UPDATE": 1,
+            "PROOF": 1,
+            "WORLD_INIT": 1
+          },
+          "digest": "5f237446e0fd1a0011415c97bb5ffde02fecf93762f6c81d124b9495a8272abd",
+          "exact": [
+            {
+              "cause": [
+                "E00000001"
+              ],
+              "diagnostic": {
+                "partition": "P0",
+                "runtime": "7.0.0-applied-remediated-26",
+                "worker": "main"
+              },
+              "era": "ERA_0",
+              "event_hash": "12e3f9c100c9feeaa197110d08ad2e010d111670a67680b2b78976a3cb41d40f",
+              "event_id": "E00000002",
+              "kind": "TX_COMMIT",
+              "payload": {
+                "runtime_revision": 2,
+                "txid": "good"
+              },
+              "prev_hash": "6c858d69ceedbeb35e522fd854df7926a88a1dd43a4d925d653689bb9e70aa9e",
+              "tick": 0
+            },
+            {
+              "cause": [
+                "E00000003"
+              ],
+              "diagnostic": {
+                "partition": "P0",
+                "runtime": "7.0.0-applied-remediated-26",
+                "worker": "main"
+              },
+              "era": "ERA_0",
+              "event_hash": "4f403ed27722151d7cc1a0d164e63ea502c297bdd011b55ec4f7908b9f25b382",
+              "event_id": "E00000004",
+              "kind": "ENTITY_RETIRE",
+              "payload": {
+                "entity": "8",
+                "reason": "retired"
+              },
+              "prev_hash": "05681765ff4512862d47cb4ea29cf911b8c5183bfe9dd761c0a4fc92367ff1eb",
+              "tick": 0
+            },
+            {
+              "cause": [
+                "E00000009"
+              ],
+              "diagnostic": {
+                "partition": "P0",
+                "runtime": "7.0.0-applied-remediated-26",
+                "worker": "main"
+              },
+              "era": "ERA_0",
+              "event_hash": "a921b4f21096f51ca7608956199b493261c2d0fa181690b218e6dc0c58c80a7b",
+              "event_id": "E00000010",
+              "kind": "WORLD_EXPANSION",
+              "payload": {
+                "anchor": "1",
+                "biome": "desert",
+                "center": [
+                  29946,
+                  3999,
+                  0
+                ],
+                "region": "4",
+                "seed": 11883239924513354946
+              },
+              "prev_hash": "6a8faa0860f416fc1e94eb5d19945767d3bd09eea07951821f781a1d0e72a380",
+              "tick": 5
+            },
+            {
+              "cause": [
+                "E00000011"
+              ],
+              "diagnostic": {
+                "partition": "P0",
+                "runtime": "7.0.0-applied-remediated-26",
+                "worker": "main"
+              },
+              "era": "ERA_1",
+              "event_hash": "3f04591a50b35d3ee8315ee13ce2668490bf46ab783164972a69da6ec08d6938",
+              "event_id": "E00000012",
+              "kind": "ROLE_SUCCESSION",
+              "payload": {
+                "new": "9",
+                "old": "7",
+                "role": "sheriff:eastvale"
+              },
+              "prev_hash": "b11b896f2c57b15da07a0ec05cf2add1f5372fa64a1e73682b1b5be7e5761f1b",
+              "tick": 5
+            }
+          ],
+          "proof_boundary": {
+            "aggregate_kinds": [
+              "ADVANCE",
+              "ECONOMIC_TRANSITION",
+              "ENTITY_CREATE",
+              "KNOWLEDGE_UPDATE",
+              "PROOF",
+              "WORLD_INIT"
+            ],
+            "exact_kinds": [
+              "ENTITY_RETIRE",
+              "ROLE_SUCCESSION",
+              "TX_COMMIT",
+              "WORLD_EXPANSION"
+            ],
+            "unavailable": []
+          },
+          "schema": "RCPW-ARCHIVE/3",
+          "source_head": "3f04591a50b35d3ee8315ee13ce2668490bf46ab783164972a69da6ec08d6938"
+        },
+        "institutional": {},
+        "proof_class": "EXACT_PLUS_AGGREGATED",
+        "region": "2",
+        "schema": "RCPW-ARCHIVE/3",
+        "semantic_digest": "1648b5a528b8d82883070b48c1c49efed175a78629fb0ca3c88a45a240b038b1",
+        "tick": 5
+      }
+    },
+    "expansion": {
+      "admitted": true,
+      "preexisting_unrelated_unchanged": true,
+      "provenance": {
+        "anchor": "1",
+        "class": "GENERATED",
+        "generator": "semantic-frontier/1",
+        "seed": 11883239924513354946
+      },
+      "region": "4",
+      "validation": {
+        "errors": [],
+        "grammar_version": "world-grammar/2",
+        "pass": true
+      }
+    },
+    "generation": {
+      "created": [
+        "9"
+      ],
+      "era": "ERA_1",
+      "role": "9",
+      "world_age_days": 9125,
+      "years": 25
+    },
+    "long_horizon": {
+      "coarse": 987,
+      "days": 30,
+      "drift": 0,
+      "error_budget": 1,
+      "fine": 987,
+      "pass": true
+    },
+    "pass": true,
+    "pre_generation_digest": "5370d436d42d5befa4acfafb622b3d88ca50233c5e167e5f91a0660279b6ccc4",
+    "rehydrate": {
+      "after_digest": "1648b5a528b8d82883070b48c1c49efed175a78629fb0ca3c88a45a240b038b1",
+      "before_digest": "1648b5a528b8d82883070b48c1c49efed175a78629fb0ca3c88a45a240b038b1",
+      "exact_vs_reconstructed": {
+        "entity_ids": "exact",
+        "microdetail": "reconstructed"
+      },
+      "provenance": "archive/rehydration",
+      "region": "2"
+    }
+  },
+  "CAUSAL_REPLAY": {
+    "archive_digest": "d3e9ec430c34931c02c1046e993890dd169926524f5fdb3e21209bf6ca4a868c",
+    "ledger_head": "1bf11dda69d0a65e577884907e9fbcf74cfbef58ba3a607aa6d6c4dd49220063",
+    "pass": true,
+    "slice_events": 5
+  },
+  "DIRECT_EXECUTABLE_PROOF": {
+    "canonical": "65f43ff6249777bd704c505603b5a1df9e689506723c9118f226ca1c488863fc",
+    "pass": true
+  },
+  "ECOLOGY_CONSERVATION": {
+    "isolation": {
+      "after": {
+        "4": {
+          "deer": 87,
+          "forage": 1332,
+          "wolves": 9
+        },
+        "5": {
+          "deer": 148,
+          "forage": 1324,
+          "wolves": 2
+        }
+      },
+      "before": {
+        "4": {
+          "deer": 89,
+          "forage": 1312,
+          "wolves": 9
+        },
+        "5": {
+          "deer": 149,
+          "forage": 1314,
+          "wolves": 2
+        }
+      },
+      "canonical_ecological_adjacency": false,
+      "folded_close": true,
+      "independent_region_records": true,
+      "pass": true,
+      "regions": [
+        "4",
+        "5"
+      ]
+    },
+    "pass": true,
+    "reference": {
+      "conserved": true,
+      "digest": "78e22cbc12dba2c6343e82e7e9483c1cb82f2715343d493f8fbeb89de35802b9",
+      "equal": true
+    },
+    "split_merge": {
+      "before": 220,
+      "conserved": true,
+      "merged": 220,
+      "split": [
+        110,
+        110
+      ]
+    }
+  },
+  "ECONOMY_CONSERVATION": {
+    "nominal": {
+      "after": {
+        "consumption": 18,
+        "food": 806,
+        "labor": 24,
+        "law": 70,
+        "money": 12000,
+        "morale": 66,
+        "population": 240,
+        "production": 24,
+        "region": "3",
+        "storage": 50
+      },
+      "before": {
+        "consumption": 18,
+        "food": 800,
+        "law": 70,
+        "money": 12000,
+        "morale": 66,
+        "population": 240,
+        "production": 24,
+        "region": "3"
+      },
+      "journal": {
+        "balanced": true,
+        "consumed": 18,
+        "food_after": 806,
+        "food_before": 800,
+        "produced": 24,
+        "settlement": "eastvale",
+        "tick": 0
+      },
+      "labor": 24,
+      "market": {
+        "backorders": 0,
+        "demand_food": 20,
+        "price_food": 3,
+        "substitute": "forage"
+      },
+      "transport_open": true
+    },
+    "pass": true,
+    "relationships": {
+      "households": {
+        "HH1": {
+          "home": "interior:eastvale-store",
+          "members": [
+            "3",
+            "7"
+          ],
+          "money": 150,
+          "region": "3"
+        }
+      },
+      "logistics": {
+        "delivery:1": {
+          "cargo": "food",
+          "eta": 100,
+          "qty": 20,
+          "route": "route:heart-east",
+          "status": "blocked"
+        }
+      },
+      "production_sites": {
+        "PS1": {
+          "input": "raw_food",
+          "output": "food",
+          "rate": 5,
+          "region": "3",
+          "storage": 50
+        }
+      },
+      "workplaces": {
+        "WORK1": {
+          "kind": "merchant",
+          "production_site": "PS1",
+          "region": "3",
+          "workers": [
+            "3"
+          ]
+        }
+      }
+    },
+    "shock": {
+      "after": {
+        "consumption": 18,
+        "food": 807,
+        "labor": 24,
+        "law": 70,
+        "money": 12000,
+        "morale": 66,
+        "population": 240,
+        "production": 24,
+        "region": "3",
+        "storage": 50
+      },
+      "before": {
+        "consumption": 18,
+        "food": 806,
+        "labor": 24,
+        "law": 70,
+        "money": 12000,
+        "morale": 66,
+        "population": 240,
+        "production": 24,
+        "region": "3",
+        "storage": 50
+      },
+      "journal": {
+        "balanced": true,
+        "consumed": 18,
+        "food_after": 807,
+        "food_before": 806,
+        "produced": 19,
+        "settlement": "eastvale",
+        "tick": 0
+      },
+      "labor": 24,
+      "market": {
+        "backorders": 0,
+        "demand_food": 20,
+        "price_food": 2,
+        "substitute": "forage"
+      },
+      "transport_open": false
+    }
+  },
+  "FOLD_PROPERTY": {
+    "artifacts": {
+      "duplicate_landmarks": [],
+      "horizon_inversion": false,
+      "pass": true,
+      "scale_discontinuity": false,
+      "topology_leaks": []
+    },
+    "pass": true,
+    "properties": {
+      "bounded": true,
+      "c1": true,
+      "c2_boundary": true,
+      "monotonic": true,
+      "samples": [
+        [
+          0,
+          0.0
+        ],
+        [
+          512,
+          512.0
+        ],
+        [
+          1022,
+          1022.0
+        ],
+        [
+          1023,
+          1023.0
+        ],
+        [
+          1024,
+          1024.0
+        ],
+        [
+          1025,
+          1025.0
+        ],
+        [
+          1026,
+          1026.0
+        ],
+        [
+          2048,
+          2047.9986349269407
+        ],
+        [
+          655360,
+          65515.405038906
+        ]
+      ]
+    }
+  },
+  "IDENTITY_PERSISTENCE": {
+    "entity": "8",
+    "pass": true,
+    "retained": {
+      "alive": false,
+      "faction": "neutral",
+      "goal": "idle",
+      "health": 100,
+      "id": "8",
+      "inventory": {},
+      "kind": "companion",
+      "lineage": {
+        "generation": 0,
+        "parent": "1"
+      },
+      "narrative_gravity": 0,
+      "persistent": true,
+      "pos": [
+        10,
+        0,
+        0
+      ],
+      "provenance": {
+        "class": "AUTHORED_DEMO",
+        "created_tick": 0
+      },
+      "region": "1",
+      "retired_reason": "retired",
+      "retired_tick": 0,
+      "revision": 1,
+      "schedule": "default",
+      "velocity": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "LOD_TRANSITION": {
+    "contracts": {
+      "ai": {
+        "0": "identity",
+        "1": "schedule",
+        "2": "goal",
+        "3": "route",
+        "4": "kinematic",
+        "5": "behavior",
+        "6": "animation",
+        "7": "interaction",
+        "8": "reference"
+      },
+      "combat": {
+        "0": "obligation",
+        "1": "aggregate",
+        "2": "strategic",
+        "3": "encounter",
+        "4": "kinematic",
+        "5": "physical",
+        "6": "visual",
+        "7": "interactive",
+        "8": "reference"
+      },
+      "ecology": {
+        "0": "conserved",
+        "1": "cohort",
+        "2": "territory",
+        "3": "migration",
+        "4": "kinematic",
+        "5": "local",
+        "6": "visible",
+        "7": "interactive",
+        "8": "reference"
+      },
+      "economy": {
+        "0": "ledger",
+        "1": "aggregate",
+        "2": "strategic",
+        "3": "logistics",
+        "4": "delivery",
+        "5": "merchant",
+        "6": "visible",
+        "7": "trade",
+        "8": "reference"
+      },
+      "narrative": {
+        "0": "hook",
+        "1": "obligation",
+        "2": "priority",
+        "3": "event",
+        "4": "agent",
+        "5": "local",
+        "6": "visible",
+        "7": "interactive",
+        "8": "reference"
+      },
+      "navigation": {
+        "0": "destination",
+        "1": "route",
+        "2": "segment",
+        "3": "nav",
+        "4": "kinematic",
+        "5": "collision",
+        "6": "visible",
+        "7": "interactive",
+        "8": "reference"
+      },
+      "transport": {
+        "0": "route_phase",
+        "1": "schedule",
+        "2": "strategic",
+        "3": "segment",
+        "4": "kinematic",
+        "5": "physical",
+        "6": "visual",
+        "7": "boardable",
+        "8": "reference"
+      },
+      "weather": {
+        "0": "regional",
+        "1": "front",
+        "2": "cell",
+        "3": "route",
+        "4": "local",
+        "5": "physical",
+        "6": "visible",
+        "7": "interactive",
+        "8": "reference"
+      }
+    },
+    "lod": {
+      "approximation_debt": 1,
+      "last_change": 0,
+      "lod": 6,
+      "promotion_debt": 1,
+      "valid_until": 10
+    },
+    "pass": true,
+    "transition": {
+      "cancelled": false,
+      "conserved": true,
+      "record": {
+        "conservation": {
+          "health": 100,
+          "inventory": {
+            "coin": 100,
+            "food": 25
+          },
+          "obligations": [],
+          "ownership": "P0",
+          "pos": [
+            500,
+            100,
+            0
+          ]
+        },
+        "entity_id": "3",
+        "revision": 1,
+        "schema": "RCPW-TRANSITION/3",
+        "source": 6,
+        "target": 2,
+        "tick": 0,
+        "version": 3
+      }
+    }
+  },
+  "MATERIALIZATION_READINESS": {
+    "dense": {
+      "all_interaction_ready": true,
+      "duplicate_tasks": false,
+      "elapsed_ms": 159.35829399950308,
+      "entities": 60,
+      "readiness_digest": "c4221a270970b93b9df1e767c21279d365e9c06f5ee2eca4409c624fb9646dbc",
+      "tasks": 300,
+      "worker_count": 2
+    },
+    "pass": true,
+    "warm": {
+      "animation_phase": 5,
+      "deterministic": true,
+      "entity": "6",
+      "physics": {
+        "pose": [
+          10050,
+          5000,
+          0
+        ],
+        "velocity": [
+          10,
+          0,
+          0
+        ]
+      },
+      "route_phase": 0,
+      "velocity": [
+        10,
+        0,
+        0
+      ]
+    }
+  },
+  "MATHEMATICAL_VALIDATION": {
+    "adapter": {
+      "8S": {
+        "confidence": 50,
+        "mapping_version": "RCPW-8S-MAP/1",
+        "normative": false,
+        "status": "EXPERIMENTAL_DIAGNOSTIC"
+      }
+    },
+    "pass": true,
+    "reduction": 1.0,
+    "state": {
+      "kappa": 0,
+      "lambda": 3,
+      "mapping_version": "RCPW-8S-MAP/1",
+      "rho": 19500,
+      "schema": "RCPW-PENTERACT/3",
+      "sigma": 100,
+      "tau": 5,
+      "x": 500,
+      "y": 100,
+      "z": 0
+    }
+  },
+  "MULTI_WORKER_CONFORMANCE": {
+    "layouts": [
+      {
+        "canonical": "719773079f48247f965d8cf2ef2fd639144c91040491878ea5b2ccc789c29d60",
+        "fold_digest": "d946f7eb758c4e89b2d1076fc411f7d7b9baec50c5aac799469e36373e963067",
+        "ledger": "55b90b170beeab47a99776dc306eddd998ff89e374641f1393cf93eaecfc4b4a",
+        "lod_digest": "a3810fa2f8684b286fb3c78188c164a7021a0c29f5cc5c907159b9d0aaf3a95c",
+        "workers": 1
+      },
+      {
+        "canonical": "719773079f48247f965d8cf2ef2fd639144c91040491878ea5b2ccc789c29d60",
+        "fold_digest": "d946f7eb758c4e89b2d1076fc411f7d7b9baec50c5aac799469e36373e963067",
+        "ledger": "55b90b170beeab47a99776dc306eddd998ff89e374641f1393cf93eaecfc4b4a",
+        "lod_digest": "a3810fa2f8684b286fb3c78188c164a7021a0c29f5cc5c907159b9d0aaf3a95c",
+        "workers": 2
+      },
+      {
+        "canonical": "719773079f48247f965d8cf2ef2fd639144c91040491878ea5b2ccc789c29d60",
+        "fold_digest": "d946f7eb758c4e89b2d1076fc411f7d7b9baec50c5aac799469e36373e963067",
+        "ledger": "55b90b170beeab47a99776dc306eddd998ff89e374641f1393cf93eaecfc4b4a",
+        "lod_digest": "a3810fa2f8684b286fb3c78188c164a7021a0c29f5cc5c907159b9d0aaf3a95c",
+        "workers": 4
+      }
+    ],
+    "pass": true
+  },
+  "NARRATIVE_KNOWLEDGE": {
+    "knowledge": {
+      "canonical_hidden": true,
+      "known": {
+        "fact.delayed": {
+          "confidence": 80,
+          "learned_tick": 5,
+          "source": "communicated",
+          "value": true
+        }
+      },
+      "observer": "7"
+    },
+    "pass": true,
+    "reservation": {
+      "candidate": {
+        "actor": "3",
+        "created": 0,
+        "event_id": "high",
+        "expires": 100,
+        "owner": "P0",
+        "priority": 90,
+        "resolved": false
+      },
+      "winner": "high"
+    }
+  },
+  "PRESENTATION_REGRESSION": {
+    "canonical_invariant": true,
+    "pass": true,
+    "view_digest": "160cb9e30c3b3ad7ab3d117a63490c37767ebbdba1baafe571e93873c6d89379",
+    "visual": {
+      "fold_policy": "rational-c1/1",
+      "frame_hashes": [
+        "b3235faed0b4dde3ba6be68f9039985fb8391b3f213ec4567fb4c662276f9b87",
+        "c6d95bddc3fbc728b02de421e315966c5ed5f66748a0f1cf82f544659199dfea",
+        "fcf64f77f0d93b41839032326f4d1a802b5a12c4ce38c2f82483e50b2bc398e6",
+        "20706375291e10b03d8eecc0b75b47c75f238be89cf2a64f933436c42fbea5cd",
+        "672e262c312cb5f90a3230c005704453d249d172f042395c28542a9610ab09dc",
+        "1cdf0eb962d662dbd2da0ff672320dcf0efe8e3b6462a8bacbf383c2ef1d4180",
+        "7543f38cc1585b50b268d4bec84832ccc811301a649f3201f8b60577a7b9f79a"
+      ],
+      "frame_ms": {
+        "max": 0.420937,
+        "p50": 0.225804,
+        "p95": 0.420937,
+        "p99": 0.420937
+      },
+      "gpu": {
+        "reason": "Hosted diagnostic renderer has no GPU backend; canonical behavior is GPU-independent.",
+        "status": "NOT_APPLICABLE"
+      },
+      "renderer": "deterministic-svg-diagnostic/1",
+      "repeat_hashes": [
+        "b3235faed0b4dde3ba6be68f9039985fb8391b3f213ec4567fb4c662276f9b87",
+        "c6d95bddc3fbc728b02de421e315966c5ed5f66748a0f1cf82f544659199dfea",
+        "fcf64f77f0d93b41839032326f4d1a802b5a12c4ce38c2f82483e50b2bc398e6",
+        "20706375291e10b03d8eecc0b75b47c75f238be89cf2a64f933436c42fbea5cd",
+        "672e262c312cb5f90a3230c005704453d249d172f042395c28542a9610ab09dc",
+        "1cdf0eb962d662dbd2da0ff672320dcf0efe8e3b6462a8bacbf383c2ef1d4180",
+        "7543f38cc1585b50b268d4bec84832ccc811301a649f3201f8b60577a7b9f79a"
+      ],
+      "repeatable": true,
+      "trace": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          512,
+          0,
+          0
+        ],
+        [
+          2048,
+          100,
+          0
+        ],
+        [
+          10000,
+          500,
+          0
+        ],
+        [
+          80000,
+          1000,
+          0
+        ],
+        [
+          400000,
+          -5000,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  },
+  "REFERENCE_PRECISION": {
+    "max_error": 0.0,
+    "pass": true,
+    "trace": {
+      "cause": "rebase",
+      "epoch": 2,
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "invalidations": {
+        "audio_spatial": 1,
+        "interaction_targets": 1,
+        "navigation_cache": 1,
+        "physics_broadphase": 1,
+        "render_history": 1
+      },
+      "tick": 0,
+      "to": [
+        5000,
+        -3000,
+        100
+      ],
+      "velocity": [
+        25,
+        0,
+        0
+      ]
+    }
+  },
+  "RESOURCE_STRESS": {
+    "actions": [
+      {
+        "action": "RESTORE_OR_HOLD",
+        "canonical_protected": true,
+        "level": 0,
+        "pressure": {
+          "cpu": 0,
+          "gpu": 0,
+          "io": 0,
+          "ledger_backlog": 0,
+          "materialization_backlog": 0,
+          "memory": 0,
+          "storage": 0
+        },
+        "tick": 5
+      },
+      {
+        "action": "DROP_COSMETIC_SPECULATION",
+        "canonical_protected": true,
+        "level": 1,
+        "pressure": {
+          "cpu": 75,
+          "gpu": 0,
+          "io": 25,
+          "ledger_backlog": 0,
+          "materialization_backlog": 75,
+          "memory": 37,
+          "storage": 0
+        },
+        "tick": 5
+      },
+      {
+        "action": "REDUCE_REMOTE_FIDELITY",
+        "canonical_protected": true,
+        "level": 2,
+        "pressure": {
+          "cpu": 100,
+          "gpu": 0,
+          "io": 33,
+          "ledger_backlog": 0,
+          "materialization_backlog": 100,
+          "memory": 50,
+          "storage": 0
+        },
+        "tick": 5
+      },
+      {
+        "action": "PROTECT_CANONICAL_LEDGER_CHECKPOINT",
+        "canonical_protected": true,
+        "level": 3,
+        "pressure": {
+          "cpu": 160,
+          "gpu": 0,
+          "io": 53,
+          "ledger_backlog": 0,
+          "materialization_backlog": 160,
+          "memory": 80,
+          "storage": 0
+        },
+        "tick": 5
+      },
+      {
+        "action": "RESTORE_OR_HOLD",
+        "canonical_protected": true,
+        "level": 0,
+        "pressure": {
+          "cpu": 20,
+          "gpu": 0,
+          "io": 6,
+          "ledger_backlog": 0,
+          "materialization_backlog": 20,
+          "memory": 10,
+          "storage": 0
+        },
+        "tick": 5
+      }
+    ],
+    "fold_scaling": {
+      "bounded_by_active_set": true,
+      "evaluated_entities_each_run": 32,
+      "p50_ratio_max_min": 1.247664225637188,
+      "rows": [
+        {
+          "active_set": 32,
+          "canonical_population": 100,
+          "p50_ms": 0.08054399950196967,
+          "p95_ms": 2.536017999773321
+        },
+        {
+          "active_set": 32,
+          "canonical_population": 1000,
+          "p50_ms": 0.08626599992567208,
+          "p95_ms": 3.9401240001097904
+        },
+        {
+          "active_set": 32,
+          "canonical_population": 5000,
+          "p50_ms": 0.06914200002938742,
+          "p95_ms": 0.12982900079805404
+        }
+      ]
+    },
+    "pass": true
+  },
+  "SAVE_RECOVERY": {
+    "checkpoint": {
+      "digest": "aee254f224c7a4fe68a36f2998fda2f18f0b3b32dd346bc1bb0ae697a49ee037",
+      "dirty_partitions": [
+        "P0"
+      ],
+      "ledger_head": "6a8faa0860f416fc1e94eb5d19945767d3bd09eea07951821f781a1d0e72a380",
+      "partition_owner": {
+        "1": "P0",
+        "2": "P0",
+        "3": "P0"
+      },
+      "revisions": {
+        "content": 1,
+        "runtime": 3,
+        "schema": 2,
+        "simulation_epoch": 0
+      },
+      "schema": "RCPW-CHECKPOINT/2",
+      "state_digest": "be7949d21d4ebc31d300abbcfff93e8a3db29efbc2fee60c0066fbf97251282c",
+      "tick": 5
+    },
+    "pass": true
+  },
+  "SCALE_SOAK": {
+    "pass": true,
+    "soak": {
+      "autonomous_days": 730,
+      "elapsed_seconds": 0.19698953599981905,
+      "end_digest": "2ffaf76fdafb786c21bc2f68deaf13d477e1ee73bd0a526cf1249d7bd5d83bed",
+      "era": "ERA_3",
+      "generation_years": 30,
+      "growth_bytes": 399,
+      "invariants": [],
+      "ledger_ok": true,
+      "pass": true,
+      "profile": "HOSTED_REFERENCE_SOAK/1",
+      "serialized_bytes_max": 13111,
+      "serialized_bytes_min": 12712,
+      "start_digest": "b186ec72bca4900325388846ed2ec9841e1cbdea17ecd7425105b3f6771b27a3",
+      "successor": "8",
+      "ticks": 12000
+    }
+  },
+  "TRANSACTION_CONCURRENCY": {
+    "pass": true,
+    "recovery": [
+      {
+        "action": "ROLLBACK_MUTATION",
+        "txid": "power"
+      }
+    ],
+    "transactions": [
+      {
+        "after": "6cb0fee9a0af94b10d295947c45d1355e2a1e2e24a668bb3d25c3dc30a4775fc",
+        "before": "65f43ff6249777bd704c505603b5a1df9e689506723c9118f226ca1c488863fc",
+        "expected": 1,
+        "phase": "COMMIT",
+        "txid": "good"
+      }
+    ]
+  },
+  "TRAVERSAL_PORTAL": {
+    "invalidations": {
+      "audio_spatial": 2,
+      "interaction_targets": 2,
+      "navigation_cache": 2,
+      "physics_broadphase": 2,
+      "render_history": 2
+    },
+    "pass": true,
+    "plan": {
+      "bounded_speculation": true,
+      "camera_lead": 100,
+      "canonical_distance": 22000,
+      "milestones": [
+        {
+          "eta": 0,
+          "node": "1",
+          "priority": "HIGH"
+        },
+        {
+          "eta": 110,
+          "node": "3",
+          "priority": "HIGH"
+        }
+      ],
+      "route": "rail:east",
+      "speed": 200,
+      "teleport": false
+    }
+  },
+  "VERSION_MIGRATION": {
+    "compatibility": {
+      "archive": [
+        2,
+        3
+      ],
+      "fold_policy": [
+        "rational-c1/1",
+        "c2-compactification/2"
+      ],
+      "runtime_abi": [
+        2,
+        3
+      ],
+      "save_schema": [
+        "QVM-RCPW-SAVE/1",
+        "QVM-RCPW-SAVE/2"
+      ],
+      "transition": [
+        2,
+        3
+      ],
+      "world_schema": [
+        "QVM-RCPW-WORLD/1",
+        "QVM-RCPW-WORLD/2"
+      ]
+    },
+    "pass": true,
+    "transition": {
+      "conservation": {
+        "health": 100,
+        "inventory": {
+          "food": 2
+        },
+        "obligations": [],
+        "ownership": "canonical",
+        "pos": [
+          1,
+          2,
+          3
+        ]
+      },
+      "entity_id": "3",
+      "schema": "RCPW-TRANSITION/3",
+      "source": 7,
+      "target": 2,
+      "tick": 1,
+      "version": 3
+    }
+  }
+}

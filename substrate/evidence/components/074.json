@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "074",
+  "title": "Replica Manager",
+  "source_file": "074_Replica_Manager.md",
+  "source_sha256": "e3bc05904f04348819d9211fc8d373800560e70b6d83cf9d357d22e7ecd0b991",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "DF0",
+  "integration_mechanism": "DF_Fabric",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

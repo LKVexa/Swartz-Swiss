@@ -1,0 +1,46 @@
+{
+  "profiles": {
+    "QP0": {
+      "mandatory": [
+        "semantic-contracts",
+        "deterministic-fixtures"
+      ],
+      "name": "REFERENCE_MODEL"
+    },
+    "QP1": {
+      "mandatory": [
+        "world-tests",
+        "headless-verify",
+        "resource-evidence",
+        "clean-room-replay"
+      ],
+      "name": "HOSTED_OPERATIONAL"
+    },
+    "QP2": {
+      "mandatory": [
+        "canonical-lctl",
+        "native-world-primitives"
+      ],
+      "name": "NATIVE_VM_AUTHORITY",
+      "status_hint": "PARTIAL"
+    },
+    "QP3": {
+      "mandatory": [
+        "production-renderer-physics-ai",
+        "content-scale-soak",
+        "target-hardware"
+      ],
+      "name": "PRODUCTION_SCALE",
+      "status_hint": "BLOCKED"
+    },
+    "QP4": {
+      "mandatory": [
+        "external-party-rebuild-replay"
+      ],
+      "name": "INDEPENDENTLY_QUALIFIED",
+      "status_hint": "BLOCKED"
+    }
+  },
+  "rule": "lower-profile evidence never promotes a higher profile",
+  "schema": "RCPW-QUALIFICATION-COMPATIBILITY/1"
+}

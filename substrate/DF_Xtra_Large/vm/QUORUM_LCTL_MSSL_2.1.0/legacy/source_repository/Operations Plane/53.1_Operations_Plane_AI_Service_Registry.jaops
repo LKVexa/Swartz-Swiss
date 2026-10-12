@@ -1,0 +1,34 @@
+ja source 0.3
+module suite53.operations_plane.ai_service_registry
+use Operations
+policy explicit_network
+
+workspace OperationsPlaneAIServiceRegistry {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 6 memory 12GB
+    network disabled
+    secret registry_key reference "vault://suite53/ai-service-registry"
+
+    service SOPHIA_registry_context replicas 1
+    health_check SOPHIA_registry_context every 10s
+    service CHARLOTTE_registry_gate replicas 1
+    health_check CHARLOTTE_registry_gate every 10s
+    service LANDON_service_registry replicas 1
+    health_check LANDON_service_registry every 10s
+    service Professor_registry_report replicas 1
+    health_check Professor_registry_report every 10s
+    service Podium_registry_receipt replicas 1
+    health_check Podium_registry_receipt every 10s
+    service ai_service_registry_worker replicas 1
+    health_check ai_service_registry_worker every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "operations_plane_ai_service_registry.msslb"

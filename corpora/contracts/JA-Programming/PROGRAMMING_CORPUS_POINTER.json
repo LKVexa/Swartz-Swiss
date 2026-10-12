@@ -1,0 +1,9 @@
+{
+  "format": "ja21-programming-corpus-pointer/1",
+  "source_archive": "JA21-JA-Programming-Language-Suite-1.0.0-main(1).zip",
+  "source_archive_sha256": "aa1c780e4b1cd3f7fe856cc80fdbbb210529904de3258eb06edd64faaf346efa",
+  "member": "JA_Language_Coupling_Mechanics_Corpus.jsonl.gz",
+  "compressed_member_bytes": 9036609,
+  "full_corpus_bundled": false,
+  "reason": "The programming suite is a large coupling-mechanics corpus rather than a compiler/runtime contract. Its exact supplied archive is locked by SHA-256; the application does not need to redistribute the full training corpus at runtime."
+}

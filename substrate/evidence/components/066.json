@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "066",
+  "title": "Large LCTLC Backend",
+  "source_file": "066_Large_LCTLC_Backend.md",
+  "source_sha256": "0435b3a48b77cda47fd4e6cf94324291df67d82d5afcc3f2bef4c374b8dd4018",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "N_LARGE",
+  "integration_mechanism": "LCTLC/1.2 lowering",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

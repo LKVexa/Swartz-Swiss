@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "quorum://schemas/module_semantic.schema.json",
+  "title": "module_semantic.schema.json",
+  "type": "object",
+  "required": [
+    "module_id",
+    "canonical_name",
+    "version",
+    "plane",
+    "purpose",
+    "maturity",
+    "claim_boundary"
+  ],
+  "additionalProperties": true
+}

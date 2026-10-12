@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "quorum://schemas/repository_semantic.schema.json",
+  "title": "repository_semantic.schema.json",
+  "type": "object",
+  "required": [
+    "repository_id",
+    "version",
+    "planes",
+    "modules",
+    "authority_chain"
+  ],
+  "additionalProperties": true
+}

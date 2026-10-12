@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "6a070afbae23628799bb3e715a0836ae754aa2f796f2d6eda7144c4553455f6c",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Diff Patch and Review",
+  "module_id": 50,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

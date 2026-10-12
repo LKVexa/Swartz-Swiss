@@ -1,0 +1,157 @@
+{
+  "schema": "QUORUM-MODULE-GRAPH/2.0",
+  "graph_id": "G20",
+  "module_id": 20,
+  "module": "Equation Operator Bank",
+  "plane": "model_compute",
+  "version": "2.0.0",
+  "entry": "N01",
+  "exit": "N08",
+  "nodes": [
+    {
+      "id": "N01",
+      "stage": "INPUT",
+      "operator": "OBSERVE",
+      "input": "model_input/state",
+      "output": "state.input",
+      "precondition": "admitted",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N02",
+      "stage": "VALIDATE",
+      "operator": "VALIDATE",
+      "input": "N01.output",
+      "output": "state.validate",
+      "precondition": "N01.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N03",
+      "stage": "NORMALIZE",
+      "operator": "NORMALIZE",
+      "input": "N02.output",
+      "output": "state.normalize",
+      "precondition": "N02.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N04",
+      "stage": "COMPUTE",
+      "operator": "EXECUTE",
+      "input": "N03.output",
+      "output": "state.compute",
+      "precondition": "N03.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N05",
+      "stage": "EVALUATE",
+      "operator": "COMPARE",
+      "input": "N04.output",
+      "output": "state.evaluate",
+      "precondition": "N04.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N06",
+      "stage": "CHECKPOINT",
+      "operator": "CHECKPOINT",
+      "input": "N05.output",
+      "output": "state.checkpoint",
+      "precondition": "N05.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N07",
+      "stage": "RECORD",
+      "operator": "RECORD",
+      "input": "N06.output",
+      "output": "state.record",
+      "precondition": "N06.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N08",
+      "stage": "EVIDENCE",
+      "operator": "RECORD",
+      "input": "N07.output",
+      "output": "model_output/evaluation_receipt",
+      "precondition": "N07.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E01",
+      "from": "N01",
+      "to": "N02",
+      "kind": "control+data"
+    },
+    {
+      "id": "E02",
+      "from": "N02",
+      "to": "N03",
+      "kind": "control+data"
+    },
+    {
+      "id": "E03",
+      "from": "N03",
+      "to": "N04",
+      "kind": "control+data"
+    },
+    {
+      "id": "E04",
+      "from": "N04",
+      "to": "N05",
+      "kind": "control+data"
+    },
+    {
+      "id": "E05",
+      "from": "N05",
+      "to": "N06",
+      "kind": "control+data"
+    },
+    {
+      "id": "E06",
+      "from": "N06",
+      "to": "N07",
+      "kind": "control+data"
+    },
+    {
+      "id": "E07",
+      "from": "N07",
+      "to": "N08",
+      "kind": "control+data"
+    }
+  ],
+  "legacy_signals": [
+    "Bank",
+    "banks",
+    "descriptors",
+    "candidates",
+    "identities",
+    "admission",
+    "identity",
+    "bank",
+    "CERTIFY",
+    "VALIDATE"
+  ],
+  "deterministic_order": true
+}

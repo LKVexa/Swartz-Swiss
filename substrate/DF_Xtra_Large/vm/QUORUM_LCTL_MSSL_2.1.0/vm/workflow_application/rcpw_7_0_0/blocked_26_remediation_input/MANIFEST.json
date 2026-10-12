@@ -1,0 +1,14 @@
+{
+  "package": "QUORUM_RCPW_7_26_BLOCKED_GATES_REMEDIATION_PROMPT_WORKFLOW",
+  "version": "1.0.0",
+  "source_vm": "QUORUM_GENERIC_PROJECT_LCTL_MSSL_VIRTUAL_MACHINE_5.0.0_CANDIDATE_RCPW_7.0.0_APPLIED.zip",
+  "source_workflow": "QUORUM_RC_PW_PROMPT_WORKFLOW_SERIES_7.0.0.zip",
+  "blocked_gate_count": 26,
+  "individual_gate_workflows": 26,
+  "root_cause_counts": {
+    "classifier_false_block_and_direct_proof_gap": 13,
+    "missing_executable_capability_or_measurement": 8,
+    "independent_reproduction_evidence": 5
+  },
+  "generated_utc": "2026-08-11T06:14:22.178024+00:00"
+}

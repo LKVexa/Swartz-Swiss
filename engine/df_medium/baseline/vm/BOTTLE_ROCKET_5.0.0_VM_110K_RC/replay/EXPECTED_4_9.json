@@ -1,0 +1,16 @@
+{
+  "binary_sha256": "f9384284811f4091285aa7296b3fed6da14fcf4a315ab8be94bdcf22af69cffb",
+  "brim_bytes": 272,
+  "brim_sha256": "7cfd6d6c08c7114078477488814adb5365bc14731e2d6b65c15c66df67750bc9",
+  "compiler_sha256": "06250841f3827e03dab473f83a73442660afa45b99cc7f8ec88c332f7e1769db",
+  "core61_stripped_bytes": 48264,
+  "evidence_sha256": "bc1f5c2e44f44e028122f3b5173da7f900035e9d88adf195625ac053fe091dc3",
+  "production_runtime_and_authority_source_bytes": 107675,
+  "record": "BOTTLE_ROCKET.ReplayExpected/4.9.0",
+  "secure_result": "R2.low64=42",
+  "source_sha256": "73eed69ec2444936ebb9f226be1b8e510d814c3506f65d3ef2f338be04e9ac3d",
+  "specification_sha256": "b1c538d56c5c69159b9903549d5b9ae408f88d4d60bc31818d5f20f8802d2cbf",
+  "strict_independence_required": true,
+  "test_suite_sha256": "ffddbe5a61ce53469abb198d80195525241ab7221997ccab13504720db8c5435",
+  "verifier_sha256": "0c7b0badd569ea9b18669ab0a786bdd39253c82fbce403064437f87aad3986d3"
+}

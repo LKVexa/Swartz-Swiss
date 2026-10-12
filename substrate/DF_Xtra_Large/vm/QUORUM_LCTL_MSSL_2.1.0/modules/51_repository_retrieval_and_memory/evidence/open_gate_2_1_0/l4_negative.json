@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "4ce6d6061ed88f9c5c5412ab607bc9f14693ace652de2fb0e8f7b0bda1a29ccc",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Repository Retrieval and Memory",
+  "module_id": 51,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

@@ -1,0 +1,27 @@
+ja source 0.3
+module suite65.sandbox_engine.authorization_approval_gate
+use Security
+policy no_network
+
+principal SandboxAuthorizationGate
+role SandboxAuthorizationEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant sandbox.authorization.evaluate:approved
+}
+resource SandboxActionCard classification restricted
+policy SandboxAuthorizationPolicy {
+    deny network.* by default
+    deny process.* by default
+    deny SandboxActionCard when principal.role != SandboxAuthorizationEnsemble
+    allow SandboxActionCard when principal.role == SandboxAuthorizationEnsemble
+    require human_approval for sandbox.run.authorize
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "SandboxAuthorizationPolicy.decision.mcrt"

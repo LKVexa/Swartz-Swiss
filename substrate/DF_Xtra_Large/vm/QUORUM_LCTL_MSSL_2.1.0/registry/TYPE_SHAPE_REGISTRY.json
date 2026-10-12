@@ -1,0 +1,131 @@
+{
+  "schema": "QUORUM-TYPE-SHAPE-REGISTRY/2.0",
+  "version": "2.0.0",
+  "types": [
+    {
+      "id": "scalar",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "vector",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "matrix",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "tensor",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "record",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "document",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "source_unit",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "ast",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "table",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "graph",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "tree",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "artifact",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "repository",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "image",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "frame",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "scene",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "timeline",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "event",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "request",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "response",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "capability",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "policy_decision",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "evidence_receipt",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "checkpoint",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    },
+    {
+      "id": "release_package",
+      "serialization": "canonical-json-or-native",
+      "validation": "required"
+    }
+  ]
+}

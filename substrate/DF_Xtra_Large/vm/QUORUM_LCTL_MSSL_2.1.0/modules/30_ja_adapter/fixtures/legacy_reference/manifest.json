@@ -1,0 +1,45 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 30,
+  "legacy_root": "legacy/source_repository/JA Adapter",
+  "legacy_sha256": "18b5e68f08f1df8bb4dc9257cfdca47472a6e6943116239a0399107b78fbbe64",
+  "files": [
+    {
+      "path": "30.1_JA_Adapter_Record_Intake.jasp",
+      "sha256": "5a0d34a2fe5fd8a84cc88c37c0b3339b41420576ad573b3e52b73bfc1ee490ca",
+      "bytes": 1013
+    },
+    {
+      "path": "30.2_JA_Adapter_Record_Parser.jasp",
+      "sha256": "42e35a91d2451b154f69dedf4cfb05293d1045fbb847b1ed1c16fb9d7bf4bd04",
+      "bytes": 1037
+    },
+    {
+      "path": "30.3_JA_Adapter_Record_Normalizer.jasp",
+      "sha256": "a506c47382defed98599b59c86502ef16bfa3b29318c505a0018edab96e01597",
+      "bytes": 1059
+    },
+    {
+      "path": "30.4_JA_Adapter_Reconstruction_Emitter.jasp",
+      "sha256": "42eef9f15b489ecea592d6a94f83ca6e30a98ca4fddea5ef3c369709b69896e8",
+      "bytes": 1166
+    },
+    {
+      "path": "30.5_JA_Adapter_Rendering_Emitter.jasp",
+      "sha256": "0d4d7c83f75d891ef0543df247f65a02a853478fd862ae506fd3400c5d95fb17",
+      "bytes": 1109
+    },
+    {
+      "path": "30.6_JA_Adapter_Storage_Emitter.jasp",
+      "sha256": "e2750a731059f936a515a9746643ba391195d0174f4a2dff730ca1feef8ffec8",
+      "bytes": 1086
+    },
+    {
+      "path": "README.md",
+      "sha256": "bd8ee1be1159fc76046fc175f2621dfef175285e059af04fc2f56508936f0781",
+      "bytes": 12537
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

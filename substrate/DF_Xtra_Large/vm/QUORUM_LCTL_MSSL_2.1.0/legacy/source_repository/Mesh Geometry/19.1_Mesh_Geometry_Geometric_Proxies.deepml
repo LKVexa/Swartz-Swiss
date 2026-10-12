@@ -1,0 +1,33 @@
+deepml specialized 0.3
+module suite19.mesh_geometry.geometric_proxies
+policy deterministic
+policy no_network
+
+domain graphics {
+  unit Meter = base("length")
+  unit MeshIndex = base("mesh_index")
+  schema GeometricProxyEvidence { asset: Hash sophia: Hash charlotte: Hash landon: Hash professor: Hash podium: Hash timestamp: Time provenance: Hash }
+  tensor proxy_vertices: f64<Meter>[4096,3]
+  tensor proxy_normals: f64<Dimensionless>[4096,3]
+  tensor proxy_faces: f64<MeshIndex>[8192,3]
+  tensor proxy_confidence: f64<Dimensionless>[4096,1]
+  operator sophia_classify_proxy(x) -> Tensor pure deterministic
+  operator charlotte_validate_proxy(x) -> Tensor pure deterministic
+  operator landon_stage_proxy(x) -> Tensor pure deterministic
+  operator professor_explain_proxy(x) -> Tensor pure deterministic
+  operator podium_certify_proxy(x) -> Tensor pure deterministic
+  calibration ProxyCalibration { method: bounded_least_squares tolerance: 1e-6 }
+  constraint ProxyBounds { min: -100000 max: 100000 }
+  validate proxy_vertices with [sophia_classify_proxy, charlotte_validate_proxy, landon_stage_proxy, professor_explain_proxy, podium_certify_proxy, ProxyCalibration, ProxyBounds]
+  validate proxy_normals with [charlotte_validate_proxy, ProxyBounds]
+  validate proxy_faces with [charlotte_validate_proxy, ProxyBounds]
+  graph GeometricProxyGraph {
+    classified = sophia_classify_proxy(proxy_vertices)
+    validated = charlotte_validate_proxy(classified)
+    staged = landon_stage_proxy(validated)
+    explained = professor_explain_proxy(staged)
+    receipt = podium_certify_proxy(explained)
+  }
+  optimize GeometricProxyGraph using [unit_propagation, dimensional_simplification, op_specialization, sparse_planning, calibration_folding, target_lowering]
+  lower GeometricProxyGraph to DEEPML_SPECIALIZED_R12
+}

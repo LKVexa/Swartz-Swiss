@@ -1,0 +1,14 @@
+ja source 0.3
+module suite39.core_studio.visual_app_designer
+use Core
+policy no_network
+
+record VisualAppDesignerPlan { id: Count, scope: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_visual_app_designer_plan(item: VisualAppDesignerPlan) -> Result<VisualAppDesignerPlan, Text> effects { pure } {
+    let normalized: Text = item.scope
+    return Ok(VisualAppDesignerPlan { id: item.id, scope: normalized, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: VisualAppDesignerPlan = VisualAppDesignerPlan { id: 3911, scope: "visual_application_design_plan", sophia: "interpret_design_intent", charlotte: "validate_design_contract", landon: "stage_design_artifact", professor: "explain_design_behavior", podium: "publish_design_receipt" }
+let result = prepare_visual_app_designer_plan(sample)
+assert result.is_ok == true
+emit json result

@@ -1,0 +1,44 @@
+{
+  "suite_id": 47,
+  "suite_name": "Chatbot",
+  "plane": "intent_reasoning",
+  "legacy_sha256": "5e6acfa98dcfabb95021ef0dd45f85f4c6d398432e09276513f56525c0ac9b10",
+  "legacy_root": "legacy/source_repository/Chatbot",
+  "files": [
+    {
+      "path": "47.1_Chatbot_Explaining.jaa",
+      "sha256": "68b74dd3250afc66f4015ab36b4b287d6471704ba13a294411adcefafb2d302d",
+      "bytes": 1621
+    },
+    {
+      "path": "47.2_Chatbot_Planning.jaa",
+      "sha256": "2e6cc6e6b2d34ef4ff9b2cde9af8312ca9c2f3050b1137d8397d0aced8fbee7e",
+      "bytes": 1563
+    },
+    {
+      "path": "47.3_Chatbot_Debugging.jaa",
+      "sha256": "7ec5772ac14f4bfea1089821a9296bd81db1da64ea43188fe0c8cb71ce4faef2",
+      "bytes": 1596
+    },
+    {
+      "path": "47.4_Chatbot_Reviewing.jaa",
+      "sha256": "7810e0904a77b3446a58108e8ba0c87d69f5ee5a94a5e0aad0c1c175b9cd845e",
+      "bytes": 1605
+    },
+    {
+      "path": "47.5_Chatbot_Refactoring.jaa",
+      "sha256": "1b9762415d7138b9bb278ee584732954581bc00bc9ded949c1ee5271377b4ab4",
+      "bytes": 1591
+    },
+    {
+      "path": "47.6_Chatbot_Documenting_Projects.jaa",
+      "sha256": "a252d8263b32eee919d7bdead0505a5f9a87356a25d450ded70841cce149a0b4",
+      "bytes": 1744
+    },
+    {
+      "path": "README.md",
+      "sha256": "9573dd0585069fa26140fee6574a6b7f527f35eb6c5ccc493648f600c09ce53d",
+      "bytes": 13930
+    }
+  ]
+}

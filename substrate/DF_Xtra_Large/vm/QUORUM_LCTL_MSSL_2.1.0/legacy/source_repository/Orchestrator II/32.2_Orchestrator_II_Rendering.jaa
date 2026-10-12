@@ -1,0 +1,35 @@
+ja source 0.3
+module suite32.orchestrator_ii.rendering
+use Agent
+policy no_network
+
+agent OrchestratorIIRendering {
+    identity "orchestrator_ii_rendering"
+    role "sophia-charlotte-landon-professor-podium-orchestrator"
+    goal render_certified_frame_states when confidence >= 0.95
+    memory session retention 1h
+    budget steps 60 tools 5
+    tool SOPHIAPlanRendering(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEGateRendering(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONRenderFrameStates(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainRendering(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordRendering(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIAPlanRendering
+        authorize CHARLOTTEGateRendering
+        authorize LANDONRenderFrameStates
+        authorize ProfessorExplainRendering
+        authorize PodiumRecordRendering
+        continue when policy_allows
+        execute SOPHIAPlanRendering("certified_reconstruction")
+        execute CHARLOTTEGateRendering("candidate_render_plan")
+        execute LANDONRenderFrameStates("approved_render_plan")
+        execute ProfessorExplainRendering("render_results")
+        execute PodiumRecordRendering("rendering_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "OrchestratorIIRendering.mcrt"

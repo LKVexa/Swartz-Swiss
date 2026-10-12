@@ -1,0 +1,22 @@
+{
+  "archive_sha256": "c639e2d1f896fb4c2e4ce91615cf746fa830da50be672401253e7be49c32660c",
+  "brim_bytes": 176,
+  "production_source_bytes": 60937,
+  "record": "BR.Baseline",
+  "release": "4.2.0",
+  "retained_4_2_qualification_performance": {
+    "arithmetic_ops_per_second": 81192.864,
+    "branch_mean_ns": 14.614,
+    "branch_ops_per_second": 68426840.214,
+    "instructions_per_second": 133798958.354,
+    "load_store_mean_ns": 1217.56,
+    "load_store_ops_per_second": 821314.921,
+    "record": "BOTTLE_ROCKET.PerformanceBaseline"
+  },
+  "same_host_prechange_performance": {
+    "arithmetic_ops_per_second": 72197.99,
+    "branch_ops_per_second": 62977543.832,
+    "instructions_per_second": 95174332.92,
+    "load_store_ops_per_second": 749073.695
+  }
+}

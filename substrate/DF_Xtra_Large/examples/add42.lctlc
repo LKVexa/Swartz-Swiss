@@ -1,0 +1,13 @@
+LCTLC/1.0
+@unit id=df.example.add42 version=1.0.0 profile=native program_version=1
+@defaults qspace=H basis=computational regime=exact assume=finite_dimension error=exact conf=1.0
+@frame id=F0000 parent=ROOT module=df.example.add42
+ID│LANE│OP│OUT│CTRL│IN│ARG│META
+D0001│alloc│Q│q│_│_│1│res="logical_qubits=1";p=lctl:1.2
+D0002│alloc│C│c│_│_│1│res="classical_bits=1";p=lctl:1.2
+V0001│vm│REG│_│_│_│vm.op=MOVI;dst=R1;imm=40│p=quorum:vm5
+V0002│vm│REG│_│_│_│vm.op=MOVI;dst=R2;imm=2│p=quorum:vm5
+V0003│vm│REG│_│_│_│vm.op=ADD;dst=R0;a=R1;b=R2;mode=exact│p=quorum:vm5
+V0004│vm│REG│_│_│_│vm.op=HALT│p=quorum:vm5
+C9999│terminal│.│_│_│_│terminal=sealed_graph_end;justification=canonical_entry_sentinel│p=lctl:nop
+@end

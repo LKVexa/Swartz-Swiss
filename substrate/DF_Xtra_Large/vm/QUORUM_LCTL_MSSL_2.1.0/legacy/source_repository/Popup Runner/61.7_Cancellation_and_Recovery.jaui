@@ -1,0 +1,48 @@
+ja source 0.3
+module suite61.popup_runner.cancellation_and_recovery
+use Interface
+policy no_network
+
+interface PopupRunnerCancellationAndRecovery {
+    state active_job: Text? = null
+    state cancellation_pending: Flag = false
+    state recovery_required: Flag = false
+    derived can_request_cancel = active_job != null and not cancellation_pending
+    derived can_review_recovery = active_job != null and recovery_required
+    component SOPHIA_RecoveryContext {
+        label "Interpret cancellation and recovery state"
+        enabled bind can_request_cancel
+        accessibility role button name "Interpret active job cancellation and recovery state"
+        action interpret_recovery_state requires popup.job.recovery:approved
+    }
+    component CHARLOTTE_RecoveryGate {
+        label "Validate cancellation scope and recovery preconditions"
+        enabled bind can_request_cancel
+        accessibility role button name "Validate active job cancellation and recovery"
+        action validate_recovery_action requires popup.job.recovery:approved
+    }
+    component LANDON_CancelRecovery {
+        label "Request bounded cancellation or recovery"
+        enabled bind can_request_cancel
+        accessibility role button name "Request approved cancellation or recovery"
+        action request_job_recovery requires popup.job.recovery:approved
+    }
+    component Professor_RecoveryGuide {
+        label "Explain effects, cleanup, retry, and rollback"
+        enabled bind can_review_recovery
+        accessibility role button name "Explain selected job recovery options"
+        action explain_job_recovery requires popup.job.recovery:approved
+    }
+    component Podium_RecoveryEvidence {
+        label "View cancellation and recovery receipts"
+        enabled bind can_review_recovery
+        accessibility role button name "View selected job recovery evidence"
+        action show_recovery_evidence requires popup.job.recovery:approved
+    }
+    component CancellationRecoveryViewport {
+        embed portal.scene "popup_runner_cancellation_recovery"
+        motion bind timeline.recovery_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface PopupRunnerCancellationAndRecovery

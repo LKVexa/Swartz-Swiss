@@ -1,0 +1,35 @@
+ja source 0.3
+module suite32.orchestrator_ii.learning_records
+use Agent
+policy no_network
+
+agent OrchestratorIILearningRecords {
+    identity "orchestrator_ii_learning_records"
+    role "sophia-charlotte-landon-professor-podium-orchestrator"
+    goal publish_replayable_learning_records when confidence >= 0.95
+    memory session retention 1h
+    budget steps 50 tools 5
+    tool LANDONStageLearningEvidence(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIADeriveLearningRecords(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateLearningRecords(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainLearningRecords(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumPublishLearningRecords(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONStageLearningEvidence
+        authorize SOPHIADeriveLearningRecords
+        authorize CHARLOTTEValidateLearningRecords
+        authorize ProfessorExplainLearningRecords
+        authorize PodiumPublishLearningRecords
+        continue when policy_allows
+        execute LANDONStageLearningEvidence("certified_pipeline_evidence")
+        execute SOPHIADeriveLearningRecords("canonical_learning_inputs")
+        execute CHARLOTTEValidateLearningRecords("candidate_learning_records")
+        execute ProfessorExplainLearningRecords("validated_learning_records")
+        execute PodiumPublishLearningRecords("learning_record_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "OrchestratorIILearningRecords.mcrt"

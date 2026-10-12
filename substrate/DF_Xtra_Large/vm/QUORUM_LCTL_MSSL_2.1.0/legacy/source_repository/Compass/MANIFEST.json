@@ -1,0 +1,127 @@
+{
+  "package": "JA21_Compass_DeepML_Logic_Individual_Scripts",
+  "repository": "04. Compass",
+  "language": "Logic Functional Language (DeepML)",
+  "language_id": "deepml.logic",
+  "version": "0.3",
+  "extension": ".deepml",
+  "source_declaration": "deepml logic 0.3",
+  "generated_at_utc": "2026-07-22T20:02:38.951433+00:00",
+  "source_corpus": {
+    "filename": "DeepML_Logic_Functional_Language_Coupling_Mechanics_Corpus.jsonl.gz",
+    "sha256": "4470d579e165ad09847ce153dac61af1bfdd1587b1bb0cb247459ad1501bfcab",
+    "outer_bundle_records": 102,
+    "parsed_examples": 10000
+  },
+  "scripts": {
+    "01_compass_direction.deepml": {
+      "checks": {
+        "source_declaration": true,
+        "module_declared": true,
+        "pure_by_default": true,
+        "network_disabled": true,
+        "knowledge_base_declared": true,
+        "logic_rule_present": true,
+        "inference_or_query_present": true,
+        "proof_carrying_certification": true,
+        "r12_lowering": true,
+        "all_suite_assignments": true,
+        "brace_balance": true,
+        "bracket_balance": true,
+        "parenthesis_balance": true,
+        "all_required_tokens": true
+      },
+      "passed": true,
+      "bytes": 2048,
+      "sha256": "a7eabbe6283619bd0a9cdefa2d35d26a5a1e4e7a55240fd7725d1a9cc8967993"
+    },
+    "02_compass_priorities.deepml": {
+      "checks": {
+        "source_declaration": true,
+        "module_declared": true,
+        "pure_by_default": true,
+        "network_disabled": true,
+        "knowledge_base_declared": true,
+        "logic_rule_present": true,
+        "inference_or_query_present": true,
+        "proof_carrying_certification": true,
+        "r12_lowering": true,
+        "all_suite_assignments": true,
+        "brace_balance": true,
+        "bracket_balance": true,
+        "parenthesis_balance": true,
+        "all_required_tokens": true
+      },
+      "passed": true,
+      "bytes": 2164,
+      "sha256": "95e20f08b917bf28e285739a3cc176717b676dfdc03c9126cf83f028e60e0c7f"
+    },
+    "03_compass_policies.deepml": {
+      "checks": {
+        "source_declaration": true,
+        "module_declared": true,
+        "pure_by_default": true,
+        "network_disabled": true,
+        "knowledge_base_declared": true,
+        "logic_rule_present": true,
+        "inference_or_query_present": true,
+        "proof_carrying_certification": true,
+        "r12_lowering": true,
+        "all_suite_assignments": true,
+        "brace_balance": true,
+        "bracket_balance": true,
+        "parenthesis_balance": true,
+        "all_required_tokens": true
+      },
+      "passed": true,
+      "bytes": 2487,
+      "sha256": "054ee28958e694bf65c16b7495ed547763e8514bd6f699a4d6cb0ed47003d675"
+    },
+    "04_compass_feasibility_paths.deepml": {
+      "checks": {
+        "source_declaration": true,
+        "module_declared": true,
+        "pure_by_default": true,
+        "network_disabled": true,
+        "knowledge_base_declared": true,
+        "logic_rule_present": true,
+        "inference_or_query_present": true,
+        "proof_carrying_certification": true,
+        "r12_lowering": true,
+        "all_suite_assignments": true,
+        "brace_balance": true,
+        "bracket_balance": true,
+        "parenthesis_balance": true,
+        "all_required_tokens": true
+      },
+      "passed": true,
+      "bytes": 2421,
+      "sha256": "0d392d2da4263f4b1590035cf84a212f09ac97e596dde4a416e64972d84084e3"
+    },
+    "05_compass_routing_objectives.deepml": {
+      "checks": {
+        "source_declaration": true,
+        "module_declared": true,
+        "pure_by_default": true,
+        "network_disabled": true,
+        "knowledge_base_declared": true,
+        "logic_rule_present": true,
+        "inference_or_query_present": true,
+        "proof_carrying_certification": true,
+        "r12_lowering": true,
+        "all_suite_assignments": true,
+        "brace_balance": true,
+        "bracket_balance": true,
+        "parenthesis_balance": true,
+        "all_required_tokens": true
+      },
+      "passed": true,
+      "bytes": 2317,
+      "sha256": "30e06c51fb5f6eb145b3cf924f949a96d4633cdf258eebaac15769b20afb304d"
+    }
+  },
+  "runtime_execution": {
+    "performed": false,
+    "reason": "No production-certified DeepML Logic Functional Language compiler/runtime was included with the attachment."
+  }
+}

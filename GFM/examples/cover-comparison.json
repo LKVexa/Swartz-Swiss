@@ -1,0 +1,59 @@
+{
+  "schema": "GFM-cover-comparison/1",
+  "engineSHA256": "da72a233a0c860e5621f4976d681c1a742497056fda73edda17d1a3ee7b2601f",
+  "scope": "Matched 50 advances of 40 ps; only cover fraction differs. Generic finite-volume Ohmic matter, not a horizon or measured metal.",
+  "open": {
+    "coverFraction": 0,
+    "timeSeconds": 1.999999999999981e-9,
+    "diagnostics": {
+      "electricEnergyJ": 1.2015557605283933e-11,
+      "magneticEnergyJ": 6.939167612476417e-12,
+      "fieldEnergyJ": 1.895472521776035e-11,
+      "materialHeatJ": 4.2529399940585465e-12,
+      "spongeLossJ": 7.1757244793425134e-12,
+      "sourceWorkJ": 3.038338969116314e-11,
+      "initialEnergyJ": 0,
+      "energyBalanceResidualJ": -1.725447058997331e-24,
+      "relativeEnergyBalanceResidual": 5.678915606638746e-14,
+      "maxEphiVPerM": 103.26080886217896,
+      "maxBTesla": 2.682895251412222e-7,
+      "maxTemperatureK": 293.15,
+      "maxTemperatureRiseK": 2.424814867128308e-14,
+      "maxDiscreteDivBTeslaPerM": 3.3874178871100113e-19,
+      "relativeDiscreteDivB": 2.365341488327235e-15,
+      "dtMaxSeconds": 2.635248894666537e-12,
+      "maxDampingStepRatio": 0.017226668618219584,
+      "maximumSolverRelativeResidual": 1.9631539070551627e-13,
+      "maximumSolverIterations": 8,
+      "sourceCurrentAtCenterAPerM2": -7.879480900970302,
+      "boundaryEnergyFluxJ": 0
+    }
+  },
+  "covered": {
+    "coverFraction": 1,
+    "timeSeconds": 1.999999999999981e-9,
+    "diagnostics": {
+      "electricEnergyJ": 1.1444748028752117e-11,
+      "magneticEnergyJ": 6.550161281544011e-12,
+      "fieldEnergyJ": 1.7994909310296128e-11,
+      "materialHeatJ": 4.881399091422082e-12,
+      "spongeLossJ": 6.989895846257421e-12,
+      "sourceWorkJ": 2.9866204247976995e-11,
+      "initialEnergyJ": 0,
+      "energyBalanceResidualJ": -1.3635555410053816e-24,
+      "relativeEnergyBalanceResidual": 4.565546829064302e-14,
+      "maxEphiVPerM": 101.46715848288193,
+      "maxBTesla": 2.673534858824906e-7,
+      "maxTemperatureK": 293.15000000000003,
+      "maxTemperatureRiseK": 3.002190506652349e-14,
+      "maxDiscreteDivBTeslaPerM": 2.4052341175361033e-19,
+      "relativeDiscreteDivB": 1.6855999751990103e-15,
+      "dtMaxSeconds": 2.635248894666537e-12,
+      "maxDampingStepRatio": 0.017226668618219584,
+      "maximumSolverRelativeResidual": 1.9631539070551627e-13,
+      "maximumSolverIterations": 8,
+      "sourceCurrentAtCenterAPerM2": -7.879480900970302,
+      "boundaryEnergyFluxJ": 0
+    }
+  }
+}

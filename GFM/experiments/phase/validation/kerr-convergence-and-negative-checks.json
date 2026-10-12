@@ -1,0 +1,115 @@
+{
+  "schema": "GFM-Kerr-evidence-audit/1",
+  "passed": true,
+  "source": {
+    "path": "backend/relativity.cjs",
+    "sha256": "94facda381ccf78ed204114d7e02929c99e513c898e343a76712feb576607f77"
+  },
+  "inputs": {
+    "path": "D:\\Codex\\2026-10-11\\pl\\GFM_Research_Simulator\\validation\\independent-relativity-cases.json",
+    "sha256": "599e0ece69aedbf3fd64b9fdc2561fe732f85d56571f0a0e0beec6c673c19d8f"
+  },
+  "checkerSha256": "1d0ab1070e560b88c126ac85ee7424cf2b5930112f40cb6665af959a9253392d",
+  "auditSha256": "48fd415bb417517b746dd1c828142939b4ff34e1829228a75e46d1bf8632b0f5",
+  "convergence": {
+    "observable": "Tail-corrected complete equatorial Schwarzschild b=6 scattering angle",
+    "independentQuadratureRadians": 1.7193883102301681,
+    "angleTargetRadians": 1e-06,
+    "rows": [
+      {
+        "tolerance": 1e-05,
+        "internalTolerance": 2e-09,
+        "outcome": "escaped",
+        "acceptedSteps": 59,
+        "rejectedSteps": 6,
+        "deflectionRadians": 1.7193883097567255,
+        "absoluteIndependentAngleError": 4.734426184427321e-10,
+        "previousRefinementAngleDifference": null,
+        "endpointRadius": 20,
+        "endpointPhi": 4.2523338938074655
+      },
+      {
+        "tolerance": 1e-07,
+        "internalTolerance": 2e-09,
+        "outcome": "escaped",
+        "acceptedSteps": 59,
+        "rejectedSteps": 6,
+        "deflectionRadians": 1.7193883097567255,
+        "absoluteIndependentAngleError": 4.734426184427321e-10,
+        "previousRefinementAngleDifference": 0.0,
+        "endpointRadius": 20,
+        "endpointPhi": 4.2523338938074655
+      },
+      {
+        "tolerance": 1e-09,
+        "internalTolerance": 2.0000000000000002e-11,
+        "outcome": "escaped",
+        "acceptedSteps": 147,
+        "rejectedSteps": 2,
+        "deflectionRadians": 1.7193883102286325,
+        "absoluteIndependentAngleError": 1.5356604876615165e-12,
+        "previousRefinementAngleDifference": 4.719069579550705e-10,
+        "endpointRadius": 19.999999999999996,
+        "endpointPhi": 4.2523338942793725
+      },
+      {
+        "tolerance": 1e-11,
+        "internalTolerance": 1.9999999999999998e-13,
+        "outcome": "escaped",
+        "acceptedSteps": 369,
+        "rejectedSteps": 2,
+        "deflectionRadians": 1.719388310230162,
+        "absoluteIndependentAngleError": 6.217248937900877e-15,
+        "previousRefinementAngleDifference": 1.5294432387236157e-12,
+        "endpointRadius": 20,
+        "endpointPhi": 4.252333894280902
+      }
+    ],
+    "passed": true,
+    "scope": "This observable and case only. Plateau at loose tolerances follows the internal-tolerance cap; no global trajectory error bound is claimed."
+  },
+  "negativeChecks": [
+    {
+      "name": "altered-coordinate",
+      "rejected": true,
+      "reason": "ray point 1: Display coordinate x differs from independent reference"
+    },
+    {
+      "name": "altered-radial-velocity",
+      "rejected": true,
+      "reason": "ray point 1: Reported radial residual differs from independent reference"
+    },
+    {
+      "name": "false-capture-on-separatrix",
+      "rejected": true,
+      "reason": "Ambiguous separatrix was labeled resolved"
+    },
+    {
+      "name": "deleted-integration-limit",
+      "rejected": true,
+      "reason": "'maxMino'"
+    },
+    {
+      "name": "wrong-explicit-input",
+      "rejected": true,
+      "reason": "Exported input differs for maxMino"
+    },
+    {
+      "name": "falsified-deflection",
+      "rejected": true,
+      "reason": "Schwarzschild bending differs from independent full quadrature"
+    },
+    {
+      "name": "nonfinite-coordinate",
+      "rejected": true,
+      "reason": "ray point 1: phi must be finite numeric data"
+    },
+    {
+      "name": "wrong-source-hash",
+      "rejected": true,
+      "reason": "Output source hash differs from current solver"
+    }
+  ],
+  "negativeChecksPassed": 8,
+  "scope": "Checker credibility and case-specific numerical refinement, not empirical validation."
+}

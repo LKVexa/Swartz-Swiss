@@ -1,0 +1,213 @@
+{
+  "authority_sha256": "95b4c082269454a0a7f1a593ea190e9ceb76dc6dcbed32cfeaf21d59519771a5",
+  "domain_output": {
+    "input_type": "asset/scene/frame/timeline",
+    "legacy_signals": [
+      "pose_constant_folding",
+      "curve_compression_0.001",
+      "dead_channel_removal",
+      "blend_normalization",
+      "retarget_cache",
+      "ik_scheduling",
+      "state_minimization",
+      "OPTIMIZE",
+      "LOWER",
+      "PACKAGE",
+      "CERTIFY"
+    ],
+    "module": "Temporal Animator",
+    "output_type": "render_artifact/visual_evidence",
+    "payload_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "plane": "media_visual",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+    "render_artifact": {
+      "artifact_sha256": "687d516f4263c9b5db71080483efea55c421c0ca0c6340d31a41b9f2960c90cf",
+      "format": "PGM-P2-reference",
+      "height": 8,
+      "note": "deterministic reference render; not production media fidelity",
+      "pixels": [
+        68,
+        19,
+        111,
+        163,
+        85,
+        179,
+        103,
+        138,
+        17,
+        70,
+        173,
+        22,
+        247,
+        232,
+        100,
+        158,
+        148,
+        251,
+        79,
+        194,
+        31,
+        231,
+        126,
+        131,
+        16,
+        192,
+        96,
+        246,
+        28,
+        170,
+        255,
+        138,
+        68,
+        19,
+        111,
+        163,
+        85,
+        179,
+        103,
+        138,
+        17,
+        70,
+        173,
+        22,
+        247,
+        232,
+        100,
+        158,
+        148,
+        251,
+        79,
+        194,
+        31,
+        231,
+        126,
+        131,
+        16,
+        192,
+        96,
+        246,
+        28,
+        170,
+        255,
+        138
+      ],
+      "width": 8
+    }
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "8892a669e994d7e6b20e4be2a1343b3c5957a7b923d6792f7f6f6adbc5df4b72",
+  "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "module": "Temporal Animator",
+  "module_id": 23,
+  "plane": "media_visual",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "a7f395bf8ef29e02c3175a43ebdfc513705a4386079605391f110512c2877010",
+  "stage_count": 9,
+  "stages": [
+    {
+      "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "node": "N01",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "2fd30537a4e8679ecba4b61de6e2a5c349a6b3156fabcecc7f33bb7ab8a8a6e1",
+      "stage": "SOURCE"
+    },
+    {
+      "input_sha256": "2fd30537a4e8679ecba4b61de6e2a5c349a6b3156fabcecc7f33bb7ab8a8a6e1",
+      "node": "N02",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "INSPECT",
+      "output_sha256": "28a6100f7ba95833bbc15969a8db057211c161ca0ebdbe0ae027134a59073099",
+      "stage": "INSPECT"
+    },
+    {
+      "artifact_descriptor": {
+        "sha256": "9dc5919265b71ae572a33d4df3c5038caa36d0e5e4f180b0d8c786c8e5603a43",
+        "type": "state.scene_bind"
+      },
+      "input_sha256": "28a6100f7ba95833bbc15969a8db057211c161ca0ebdbe0ae027134a59073099",
+      "node": "N03",
+      "operator": "MATERIALIZE",
+      "output_sha256": "84088c1c262439de0a0e2780ac316053a5aeeb6d0358735399ed75fd9325ad6a",
+      "stage": "SCENE_BIND"
+    },
+    {
+      "features": [
+        210,
+        2,
+        3,
+        42,
+        161,
+        132,
+        243,
+        170
+      ],
+      "input_sha256": "84088c1c262439de0a0e2780ac316053a5aeeb6d0358735399ed75fd9325ad6a",
+      "node": "N04",
+      "operator": "TRANSFORM",
+      "output_sha256": "064d99914a735bf9553f053492c28697bbdfa567238303be6ac16553041af94c",
+      "stage": "TRANSFORM"
+    },
+    {
+      "input_sha256": "064d99914a735bf9553f053492c28697bbdfa567238303be6ac16553041af94c",
+      "node": "N05",
+      "operator": "RENDER",
+      "output_sha256": "8460d06676ccb94c16c7b43d1fb20864b116f1491e653a24f3afae9ef2917db7",
+      "reference_frame_sha256": "49f51f590e4b40f5bfcaba01e04a6a0c4951c5856683f62152143afd57192db8",
+      "stage": "RENDER"
+    },
+    {
+      "features": [
+        66,
+        157,
+        250,
+        155,
+        183,
+        104,
+        132,
+        6
+      ],
+      "input_sha256": "8460d06676ccb94c16c7b43d1fb20864b116f1491e653a24f3afae9ef2917db7",
+      "node": "N06",
+      "operator": "TRANSFORM",
+      "output_sha256": "68e2b36b770728b06ac7b3863e11d7ec3aec18af4b34fa876f4b9fddd33d9910",
+      "stage": "COMPOSITE"
+    },
+    {
+      "input_sha256": "68e2b36b770728b06ac7b3863e11d7ec3aec18af4b34fa876f4b9fddd33d9910",
+      "node": "N07",
+      "operator": "VALIDATE",
+      "output_sha256": "0237f7d07f80beddc360d6c9c9f7b667cce64ec347e97555d329eeb6565b0cda",
+      "stage": "VALIDATE",
+      "valid": true
+    },
+    {
+      "artifact_descriptor": {
+        "sha256": "067bc970057cfb3a964748eed3767f0229980ce1452e2e27f9f3e6800d810db0",
+        "type": "state.export"
+      },
+      "input_sha256": "0237f7d07f80beddc360d6c9c9f7b667cce64ec347e97555d329eeb6565b0cda",
+      "node": "N08",
+      "operator": "MATERIALIZE",
+      "output_sha256": "1a9d473304ec85a37e2b38eaa6f725b4994c90493c8302916da396b01924a06a",
+      "stage": "EXPORT"
+    },
+    {
+      "input_sha256": "1a9d473304ec85a37e2b38eaa6f725b4994c90493c8302916da396b01924a06a",
+      "node": "N09",
+      "operator": "RECORD",
+      "output_sha256": "167a80ef2bd909f82390e9d4e31ef5ef2e1407deff5b6bdc697a05bbf179311d",
+      "receipt_sha256": "5c4460b1aec5cd19515e2981dc3ba04305282d9f137ed51ca2df2a5b2d13f9d0",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

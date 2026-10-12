@@ -1,0 +1,35 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 64,
+  "legacy_root": "legacy/source_repository/Training Desktop and Android Workers",
+  "legacy_sha256": "c4025a9eb77ba2406cbb900458aa5ff0a4170fbbca94b497967cbe6b66521a22",
+  "files": [
+    {
+      "path": "64.1_Training_Worker.jate",
+      "sha256": "11eb032b2fed1eedf66f04acfa9c9cedd0e9d5f733ce63e55e0b1356d4352b98",
+      "bytes": 1123
+    },
+    {
+      "path": "64.2_Desktop_Module.jate",
+      "sha256": "d35fb79d719e780ef41e46b5a5c42f9ad17d0c1b607d43906da71e669ac0e96a",
+      "bytes": 1100
+    },
+    {
+      "path": "64.3_Android_Module.jate",
+      "sha256": "22c1351504196f11fccc69c18c3f2cc7a6edee2076eea13005063d276263c8df",
+      "bytes": 1152
+    },
+    {
+      "path": "64.4_Knowledge_Repository.jate",
+      "sha256": "4364e2dc67cabb9a3bf5bdc2bcca0f73dae45c32b99d7c7c75fdfd38ec9db048",
+      "bytes": 1174
+    },
+    {
+      "path": "README.md",
+      "sha256": "96ff051ee07e6005a63e4c45e7f4fc5a12151769e8486ba30cd0bef7d7d128b3",
+      "bytes": 24357
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

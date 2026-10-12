@@ -1,0 +1,59 @@
+{
+  "suite_id": 44,
+  "suite_name": "Capability and Security Plane",
+  "plane": "security_authorization",
+  "legacy_sha256": "bc71448e2821a8749225a8af66e6e266d2da68a410ec0feec6374d9b4210e5bb",
+  "legacy_root": "legacy/source_repository/Capability and Security Plane",
+  "files": [
+    {
+      "path": "44.1_Capability_and_Security_Plane_Capability_Manifests.jasec",
+      "sha256": "317e00b2c84aba10631ccd56d74a8eaca99da6da62fb3505ff8884bc5f769ddb",
+      "bytes": 901
+    },
+    {
+      "path": "44.2_Capability_and_Security_Plane_Permissions.jasec",
+      "sha256": "87ba5f3e7c3d003471cc5d0e57995bf5e1be539de41d674d02ed4881b274c903",
+      "bytes": 854
+    },
+    {
+      "path": "44.3_Capability_and_Security_Plane_Trust_Boundaries.jasec",
+      "sha256": "b4af41751875920ada421b40a20a7c637e5264d673691ae619f6fcaf6fcdaffb",
+      "bytes": 881
+    },
+    {
+      "path": "44.4_Capability_and_Security_Plane_Approvals.jasec",
+      "sha256": "48016772ce71e44b8381d3a4331af2d20aecd18067486d46fef6160f36622d40",
+      "bytes": 835
+    },
+    {
+      "path": "44.5_Capability_and_Security_Plane_Policy_Enforcement.jasec",
+      "sha256": "42355030d396d44b9a9f9ce85678f2c1ef7f9dd1718a172c5f339d5de57cee49",
+      "bytes": 879
+    },
+    {
+      "path": "44.6_Capability_and_Security_Plane_Capability_Plane.jasec",
+      "sha256": "8d3891b0ddd7f538844976d2be9d861c52dc53dac2802c53c7b111420bdc817c",
+      "bytes": 900
+    },
+    {
+      "path": "44.7_Capability_and_Security_Plane_Security.jasec",
+      "sha256": "4dcd5a5392410fbb062f57e542e7dae74d57fe69e2351d4b01a723aec51fb710",
+      "bytes": 842
+    },
+    {
+      "path": "44.8_Capability_and_Security_Plane_Trust_Plane.jasec",
+      "sha256": "a38270a34d73473e36df3bc2bbfb3664edd549d16cca6579f9dd8555cec486f4",
+      "bytes": 857
+    },
+    {
+      "path": "44.9_Capability_and_Security_Plane_Evaluation_Suite.jasec",
+      "sha256": "7c8eece65b14711ddea144e3fe0b20addc357205150755cc2c3499e4a4480892",
+      "bytes": 913
+    },
+    {
+      "path": "README.md",
+      "sha256": "011e195d6f7ef040d0d4c7897fa728cf5666d6733b25c69d5f551531b68b0840",
+      "bytes": 13918
+    }
+  ]
+}

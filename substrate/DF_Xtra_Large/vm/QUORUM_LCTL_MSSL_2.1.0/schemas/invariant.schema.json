@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "quorum://schemas/invariant.schema.json",
+  "title": "invariant.schema.json",
+  "type": "object",
+  "required": [
+    "semantic",
+    "security",
+    "data",
+    "state",
+    "execution",
+    "ordering",
+    "provenance",
+    "replay"
+  ],
+  "additionalProperties": true
+}

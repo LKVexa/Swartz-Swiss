@@ -1,0 +1,36 @@
+ja source 0.3
+module suite16.perceiver.long_term_memory
+use Agent
+policy no_network
+
+agent PerceiverLongTermMemory {
+    identity "perceiver_long_term_memory"
+    role "sophia-charlotte-landon-professor-podium-perceiver"
+    goal maintain_certified_durable_memory when confidence >= 0.95
+    memory session retention 1h
+    budget steps 50 tools 5
+    tool LANDONStageCanonicalMemories(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAAbstractKnowledge(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTECertifyLongMemory(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainLongMemory(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordLongMemory(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONStageCanonicalMemories
+        authorize SOPHIAAbstractKnowledge
+        authorize CHARLOTTECertifyLongMemory
+        authorize ProfessorExplainLongMemory
+        authorize PodiumRecordLongMemory
+        continue when policy_allows
+        execute LANDONStageCanonicalMemories("approved_medium_term_records")
+        execute SOPHIAAbstractKnowledge("canonical_memory_candidates")
+        execute CHARLOTTECertifyLongMemory("abstracted_knowledge")
+        execute ProfessorExplainLongMemory("certified_long_term_memory")
+        execute PodiumRecordLongMemory("long_term_memory_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "PerceiverLongTermMemory.mcrt"
+

@@ -1,0 +1,10 @@
+{
+  "ar": "GNU ar (GNU Binutils for Ubuntu) 2.42",
+  "cc": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "machine": "x86_64",
+  "openssl": "OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)",
+  "platform": "Linux-6.18.5-fc-v20-x86_64-with-glibc2.39",
+  "python": "3.11.15",
+  "record": "BR.Toolchain",
+  "release": "4.7.0"
+}

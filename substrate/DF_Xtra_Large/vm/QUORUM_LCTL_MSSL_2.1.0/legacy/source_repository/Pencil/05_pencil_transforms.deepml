@@ -1,0 +1,53 @@
+deepml logic 0.3
+module repository.pencil.transforms
+policy pure_by_default
+policy no_network
+
+type TransformStatus = Proposed | Feasible | Certified | Rejected
+
+theorem identity_transform(x) : x == x
+proof identity_transform { simplify qed }
+
+knowledge_base PencilTransforms {
+  fact suite_assignment("SOPHIA", "semantic_judgment")
+  fact suite_assignment("CHARLOTTE", "structural_validation")
+  fact suite_assignment("LANDON", "repository_integration")
+  fact suite_assignment("PROFESSOR", "reviewable_explanation")
+  fact suite_assignment("PODIUM", "job_and_evidence_queue")
+  fact transform_edge("artifact_source_001", "artifact_normalized_001")
+  fact transform_edge("artifact_normalized_001", "artifact_rewrite_001")
+  fact transform_allowed("artifact_source_001", "artifact_normalized_001")
+  fact transform_allowed("artifact_normalized_001", "artifact_rewrite_001")
+  fact transform_provenance_ready("artifact_source_001", "artifact_normalized_001")
+  fact transform_provenance_ready("artifact_normalized_001", "artifact_rewrite_001")
+  fact transform_semantics_ready("artifact_source_001", "artifact_normalized_001")
+  fact transform_semantics_ready("artifact_normalized_001", "artifact_rewrite_001")
+
+  rule valid_transform_edge(A, B) :-
+    transform_edge(A, B),
+    transform_allowed(A, B),
+    transform_provenance_ready(A, B),
+    transform_semantics_ready(A, B)
+
+  rule transform_path(A, B) :-
+    valid_transform_edge(A, B)
+
+  rule transform_path(A, C) :-
+    valid_transform_edge(A, B),
+    transform_path(B, C)
+
+  rule certified_transform_path(A, B) :-
+    transform_path(A, B),
+    sophia_approved_path(A, B),
+    charlotte_validated_path(A, B),
+    landon_integrated_path(A, B),
+    professor_explained_path(A, B),
+    podium_evidence_complete_path(A, B)
+}
+
+query transform_path("artifact_source_001", Target) strategy tabled
+plan PencilTransformPlan goal transform_certified actions [inspect, normalize, transform, compare, certify]
+transform PencilTransformRuleSet with proof { preserve semantics using theorem identity_transform }
+certify logic PencilTransforms using proof_carrying
+optimize module using [tail_call, rule_indexing, common_subexpression_elimination, tabling, proof_normalization]
+lower module to DEEPML_LOGIC_R12

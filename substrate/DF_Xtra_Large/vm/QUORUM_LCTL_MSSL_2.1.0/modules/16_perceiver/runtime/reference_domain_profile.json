@@ -1,0 +1,71 @@
+{
+  "execution_scope": "deterministic local/offline reference semantics consuming module fixtures and emitting typed reference-domain outputs",
+  "input_type": "repository/artifact/context",
+  "module": "Perceiver",
+  "module_id": 16,
+  "non_claims": [
+    "not production domain fidelity",
+    "not executable legacy-runtime equivalence",
+    "not physical distributed authority"
+  ],
+  "operators": [
+    {
+      "node": "N01",
+      "operator": "OBSERVE",
+      "stage": "SOURCE"
+    },
+    {
+      "node": "N02",
+      "operator": "INSPECT",
+      "stage": "INSPECT"
+    },
+    {
+      "node": "N03",
+      "operator": "NORMALIZE",
+      "stage": "NORMALIZE"
+    },
+    {
+      "node": "N04",
+      "operator": "TRANSFORM",
+      "stage": "EXTRACT"
+    },
+    {
+      "node": "N05",
+      "operator": "STORE",
+      "stage": "INDEX"
+    },
+    {
+      "node": "N06",
+      "operator": "VALIDATE",
+      "stage": "VALIDATE"
+    },
+    {
+      "node": "N07",
+      "operator": "RECORD",
+      "stage": "RECORD"
+    },
+    {
+      "node": "N08",
+      "operator": "MATERIALIZE",
+      "stage": "BIND"
+    },
+    {
+      "node": "N09",
+      "operator": "RECORD",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "output_type": "normalized_context/evidence",
+  "plane": "sense_context",
+  "policy": {
+    "capabilities": [
+      "evidence.write",
+      "repository.read"
+    ],
+    "default": "deny",
+    "network": "deny"
+  },
+  "runner": "qualification/open_gate_runtime.py",
+  "schema": "QUORUM-REFERENCE-DOMAIN-PROFILE/2.1",
+  "version": "2.1.0"
+}

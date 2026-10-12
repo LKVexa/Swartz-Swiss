@@ -1,0 +1,98 @@
+{
+  "decision": "OPERATIONAL",
+  "package": "BR-420-05",
+  "requirements": [
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-05_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: cfg_construct_validate_branches",
+      "requirement": "Construct CFG",
+      "requirement_id": "BR-420-05-R01",
+      "result": "PASS",
+      "sha256": "da196c0ee16219c35769a4d0c24e717e4a48e6981a8157c0d3c6dc9b89a72498",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-05_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: cfg_loop_budget_policy",
+      "requirement": "Validate branches",
+      "requirement_id": "BR-420-05-R02",
+      "result": "PASS",
+      "sha256": "da196c0ee16219c35769a4d0c24e717e4a48e6981a8157c0d3c6dc9b89a72498",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-05_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: cfg_reject_unbounded_loop_policy",
+      "requirement": "Validate loops",
+      "requirement_id": "BR-420-05-R03",
+      "result": "PASS",
+      "sha256": "da196c0ee16219c35769a4d0c24e717e4a48e6981a8157c0d3c6dc9b89a72498",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-05_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: cfg_call_validation_reject_unsupported",
+      "requirement": "Validate calls",
+      "requirement_id": "BR-420-05-R04",
+      "result": "PASS",
+      "sha256": "da196c0ee16219c35769a4d0c24e717e4a48e6981a8157c0d3c6dc9b89a72498",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-05_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: cfg_return_validation_reject_unsupported",
+      "requirement": "Validate return edges",
+      "requirement_id": "BR-420-05-R05",
+      "result": "PASS",
+      "sha256": "da196c0ee16219c35769a4d0c24e717e4a48e6981a8157c0d3c6dc9b89a72498",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-05_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: cfg_construct_validate_branches",
+      "requirement": "Prevent branch into malformed instruction regions",
+      "requirement_id": "BR-420-05-R06",
+      "result": "PASS",
+      "sha256": "da196c0ee16219c35769a4d0c24e717e4a48e6981a8157c0d3c6dc9b89a72498",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-05_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: cfg_loop_budget_policy",
+      "requirement": "Validate termination/yield policy",
+      "requirement_id": "BR-420-05-R07",
+      "result": "PASS",
+      "sha256": "da196c0ee16219c35769a4d0c24e717e4a48e6981a8157c0d3c6dc9b89a72498",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "title": "Control-flow verification"
+}

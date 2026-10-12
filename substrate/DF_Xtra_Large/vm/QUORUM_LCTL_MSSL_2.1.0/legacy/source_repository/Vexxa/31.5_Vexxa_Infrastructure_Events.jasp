@@ -1,0 +1,38 @@
+ja source 0.3
+module suite31.vexxa.infrastructure_events
+use Service
+policy explicit_network
+
+service VexxaInfrastructureEvents {
+    message InfrastructureEventRequest {
+        request_id: Text,
+        event_id: Text,
+        binding_id: Text,
+        event_kind: Text,
+        event_sequence: Text,
+        causal_parent: Text,
+        payload_hash: Text
+    }
+    message InfrastructureEventResponse {
+        admitted_sequence: Text,
+        event_status: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_infrastructure_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint relay(request: InfrastructureEventRequest) -> Stream<InfrastructureEventResponse>
+        auth capability vexxa.event.relay
+        deadline 15s
+        retry max 2
+        idempotency request.request_id
+    protocol InfrastructureEventSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json VexxaInfrastructureEvents.compatibility_report

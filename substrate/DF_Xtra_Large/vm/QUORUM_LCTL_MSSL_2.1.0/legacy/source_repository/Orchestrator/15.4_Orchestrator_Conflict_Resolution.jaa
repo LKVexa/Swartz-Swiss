@@ -1,0 +1,36 @@
+ja source 0.3
+module suite15.orchestrator.conflict_resolution
+use Agent
+policy no_network
+
+agent OrchestratorConflictResolution {
+    identity "orchestrator_conflict_resolution"
+    role "sophia-charlotte-landon-professor-podium-orchestrator"
+    goal resolve_or_escalate_conflicts when confidence >= 0.95
+    memory session retention 1h
+    budget steps 50 tools 5
+    tool LANDONStageConflicts(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAClassifyConflicts(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEApplyPrecedence(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainResolution(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordResolution(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONStageConflicts
+        authorize SOPHIAClassifyConflicts
+        authorize CHARLOTTEApplyPrecedence
+        authorize ProfessorExplainResolution
+        authorize PodiumRecordResolution
+        continue when policy_allows
+        execute LANDONStageConflicts("fan_in_conflicts")
+        execute SOPHIAClassifyConflicts("staged_conflicts")
+        execute CHARLOTTEApplyPrecedence("classified_conflicts")
+        execute ProfessorExplainResolution("resolution_or_escalation")
+        execute PodiumRecordResolution("conflict_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "OrchestratorConflictResolution.mcrt"
+

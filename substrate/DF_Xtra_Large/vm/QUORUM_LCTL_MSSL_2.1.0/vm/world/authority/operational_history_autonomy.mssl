@@ -1,0 +1,18 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.world.operational_history_autonomy:7.0.0-operational-reference-315",
+λ≡"quorum.rcpw.world.operational_history_autonomy",
+ℛ≡{
+  "0001":"module(\"quorum.rcpw.world.operational_history_autonomy\")",
+  "0002":"learn(\"ledger\",literal(\"durable causal events support replay, compaction, reconstruction and precision/provenance classes\"))",
+  "0003":"learn(\"archive\",literal(\"archival compaction retains canonical identities, obligations, conserved state and causal proof boundaries\"))",
+  "0004":"learn(\"frontier\",literal(\"semantic grammar and deterministic provenance gate new canonical world admission\"))",
+  "0005":"learn(\"autonomy\",literal(\"world-age, generations, settlement evolution, ecology and knowledge evolve without rewriting established history\"))"
+},
+π≡[],δ≡5,τ≡0,
+μ≡{"learn.ledger":"durable causal events support replay, compaction, reconstruction and precision/provenance classes","learn.archive":"archival compaction retains canonical identities, obligations, conserved state and causal proof boundaries","learn.frontier":"semantic grammar and deterministic provenance gate new canonical world admission","learn.autonomy":"world-age, generations, settlement evolution, ecology and knowledge evolve without rewriting established history"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"ledger":"durable causal events support replay, compaction, reconstruction and precision/provenance classes","archive":"archival compaction retains canonical identities, obligations, conserved state and causal proof boundaries","frontier":"semantic grammar and deterministic provenance gate new canonical world admission","autonomy":"world-age, generations, settlement evolution, ecology and knowledge evolve without rewriting established history"}},
+ν≡{}
+,κ≡"sha256:5687adb48b62f318a73050f186802c208fd214db785718bc47f6406546c82cf0"
+}⇒⊤

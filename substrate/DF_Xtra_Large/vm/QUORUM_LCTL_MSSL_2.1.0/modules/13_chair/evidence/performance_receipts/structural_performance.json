@@ -1,0 +1,10 @@
+{
+  "schema": "QUORUM-STRUCTURAL-PERFORMANCE/2.0",
+  "module_id": 13,
+  "scope": "LCTL verifier + artifact structure only",
+  "verification_latency_ms": 1891.553,
+  "graph_depth": 8,
+  "lctlc_bytes": 2776,
+  "canonical_lctl_bytes": 5440,
+  "domain_performance": "BLOCKED_NOT_IMPLEMENTED"
+}

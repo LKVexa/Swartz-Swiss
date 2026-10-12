@@ -1,0 +1,47 @@
+ja source 0.3
+module suite38.preview_designer.animation
+use Interface
+policy no_network
+
+interface PreviewDesignerAnimation {
+    state selected_animation: Text? = null
+    state playing_animation_preview: Flag = false
+    derived can_select_animation = not playing_animation_preview
+    derived can_play_animation_preview = selected_animation != null and not playing_animation_preview
+    component SOPHIA_AnimationPreviewModel {
+        label "Interpret animation preview"
+        enabled bind can_play_animation_preview
+        accessibility role button name "Interpret selected animation preview"
+        action interpret_animation_preview requires admin.action:approved
+    }
+    component CHARLOTTE_AnimationPreviewGate {
+        label "Validate animation review readiness"
+        enabled bind can_play_animation_preview
+        accessibility role button name "Validate selected animation review readiness"
+        action validate_animation_preview requires admin.action:approved
+    }
+    component LANDON_AnimationPreviewPlay {
+        label "Play animation preview"
+        enabled bind can_play_animation_preview
+        accessibility role button name "Play selected deterministic animation preview"
+        action play_animation_preview requires admin.action:approved
+    }
+    component Professor_AnimationPreviewGuide {
+        label "Explain animation preview"
+        enabled bind can_select_animation
+        accessibility role button name "Explain animation timing continuity and limitations"
+        action explain_animation_preview requires admin.action:approved
+    }
+    component Podium_AnimationPreviewEvidence {
+        label "View animation preview evidence"
+        enabled bind can_play_animation_preview
+        accessibility role button name "View animation preview validation evidence"
+        action show_animation_preview_evidence requires admin.action:approved
+    }
+    component AnimationReviewViewport {
+        embed portal.scene "preview_designer_animation"
+        motion bind timeline.animation_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface PreviewDesignerAnimation

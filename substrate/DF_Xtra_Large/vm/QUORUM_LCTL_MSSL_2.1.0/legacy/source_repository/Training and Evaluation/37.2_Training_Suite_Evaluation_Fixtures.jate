@@ -1,0 +1,30 @@
+ja source 0.3
+module suite37.training_suite.evaluation_fixtures
+use Training
+policy no_network
+
+experiment TrainingSuiteEvaluationFixtures {
+    model ref "models/sophia_charlotte_landon_professor_podium/evaluation_fixtures"
+    dataset ref "datasets/training_suite/evaluation_fixtures" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 20 accumulate 2
+    precision mixed
+    seed 3702
+    checkpoint every 10 steps
+    evaluate {
+        metric fixture_reproducibility
+        metric oracle_agreement
+        metric edge_case_coverage
+        metric protected_baseline_coverage
+        metric loss
+        require fixture_reproducibility >= 0.99
+        require oracle_agreement >= 0.97
+        require edge_case_coverage >= 0.95
+        require protected_baseline_coverage >= 0.99
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "TrainingSuiteEvaluationFixtures.lineage.mcrt"

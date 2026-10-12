@@ -1,0 +1,10 @@
+{
+  "brim_bytes": 272,
+  "brim_ceiling": 51200,
+  "debug_executable_bytes": 692872,
+  "production_boundary_ceiling": 110000,
+  "production_runtime_and_authority_source_bytes": 107675,
+  "record": "BOTTLE_ROCKET.SizeQualification/5.0.0",
+  "result": "PASS",
+  "stripped_executable_bytes": 113200
+}

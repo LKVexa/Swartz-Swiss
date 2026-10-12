@@ -1,0 +1,31 @@
+ja source 0.3
+module suite46.air_gap_certification_installer_plane.multilingual_setup
+use Operations
+policy explicit_network
+
+workspace MultilingualSetup {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 4 memory 8GB
+    network disabled
+    secret locale_key reference "vault://suite46/multilingual-setup"
+    service SOPHIA_locale_context replicas 1
+    health_check SOPHIA_locale_context every 10s
+    service CHARLOTTE_locale_gate replicas 1
+    health_check CHARLOTTE_locale_gate every 10s
+    service LANDON_locale_setup replicas 1
+    health_check LANDON_locale_setup every 10s
+    service Professor_locale_guide replicas 1
+    health_check Professor_locale_guide every 10s
+    service Podium_locale_receipt replicas 1
+    health_check Podium_locale_receipt every 10s
+    service multilingual_setup_worker replicas 1
+    health_check multilingual_setup_worker every 5s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == true
+emit package "multilingual_setup.msslb"

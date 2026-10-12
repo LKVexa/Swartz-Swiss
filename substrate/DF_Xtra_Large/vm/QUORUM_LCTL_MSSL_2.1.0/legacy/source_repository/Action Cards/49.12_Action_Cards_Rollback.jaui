@@ -1,0 +1,47 @@
+ja source 0.3
+module suite49.action_cards.rollback
+use Interface
+policy no_network
+
+interface ActionCardRollback {
+    state selected_action: Text? = null
+    state validating_rollback: Flag = false
+    derived can_select_action = not validating_rollback
+    derived can_validate_rollback = selected_action != null and not validating_rollback
+    component SOPHIA_RollbackPlan {
+        label "Model complete rollback and recovery plan"
+        enabled bind can_validate_rollback
+        accessibility role button name "Model complete rollback for selected action"
+        action model_action_rollback requires admin.action:approved
+    }
+    component CHARLOTTE_RollbackValidation {
+        label "Validate snapshots, inverse steps, tests, and limits"
+        enabled bind can_validate_rollback
+        accessibility role button name "Validate complete rollback for selected action"
+        action validate_action_rollback requires admin.action:approved
+    }
+    component LANDON_RollbackPanel {
+        label "Bind validated rollback plan"
+        enabled bind can_validate_rollback
+        accessibility role button name "Bind complete rollback plan to selected action card"
+        action bind_action_rollback requires admin.action:approved
+    }
+    component Professor_RollbackExplanation {
+        label "Explain recovery order and irreversible boundaries"
+        enabled bind can_select_action
+        accessibility role button name "Explain complete selected action rollback"
+        action explain_action_rollback requires admin.action:approved
+    }
+    component Podium_RollbackReceipt {
+        label "View rollback test and provenance evidence"
+        enabled bind can_validate_rollback
+        accessibility role button name "View complete selected action rollback evidence"
+        action show_action_rollback_evidence requires admin.action:approved
+    }
+    component RollbackViewport {
+        embed portal.scene "action_card_rollback"
+        motion bind timeline.full_rollback_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface ActionCardRollback

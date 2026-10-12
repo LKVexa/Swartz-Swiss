@@ -1,0 +1,30 @@
+ja source 0.3
+module suite37.training_suite.learning_promotion
+use Training
+policy no_network
+
+experiment TrainingSuiteLearningPromotion {
+    model ref "models/sophia_charlotte_landon_professor_podium/learning_promotion"
+    dataset ref "datasets/training_suite/learning_promotion_candidates" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 16 accumulate 4
+    precision mixed
+    seed 3704
+    checkpoint every 8 steps
+    evaluate {
+        metric held_out_candidate_gain
+        metric regression_safety
+        metric promotion_reproducibility
+        metric provenance_completeness
+        metric loss
+        require held_out_candidate_gain >= 0.02
+        require regression_safety >= 0.99
+        require promotion_reproducibility >= 0.99
+        require provenance_completeness >= 1.00
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "TrainingSuiteLearningPromotion.lineage.mcrt"

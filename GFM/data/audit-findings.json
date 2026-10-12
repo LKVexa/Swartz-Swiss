@@ -1,0 +1,1650 @@
+{
+  "schema": "gfm.audit-registry.v1",
+  "source": {
+    "originalPdf": {
+      "path": "C:\\Users\\russe\\Downloads\\please help me elucidate the equations in this ar....pdf",
+      "sha256": "564bbb26531acb9ee26dd51247c70531d4b53c69069630a0b94e2f6c756b9848",
+      "pages": 9,
+      "coverage": "All nine pages extracted and visually checked, including the circuit schematic, raw TeX and summary table continuing onto page 9."
+    },
+    "reviewJson": {
+      "path": "D:/Codex/GFM-Phase-Coupling-Study/source-audit.json",
+      "sha256": "446efe5e83ffc4d639410adfdda58630a8f742aa80911228100dfb8cd7dad7c4"
+    },
+    "editableReview": {
+      "path": "C:/Users/russe/Downloads/GFM-Review-Editable.txt",
+      "sha256": "20caf09a0158c75508df92a65c469423e4c0e76838e8eb999b94d30c260bf455"
+    },
+    "auditStatusAtCreation": "Review and proposed equations only. Original attachment and simulator preserved; no model incorporation."
+  },
+  "summary": {
+    "total": 38,
+    "dispositions": {
+      "retained": 7,
+      "corrected": 15,
+      "conditional": 11,
+      "unestablished": 4,
+      "summary": 1
+    },
+    "referenceCalculatorItems": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "A13",
+      "A14"
+    ],
+    "physicalEvolutionCoupling": false,
+    "unestablishedEquationsExecuted": false,
+    "observationalValidation": false,
+    "interpretation": "All 38 audit findings are preserved. Corrected GR references are available separately. Retaining an expression does not imply physical applicability to the cylindrical EM study volume."
+  },
+  "items": [
+    {
+      "id": "A01",
+      "sourcePage": 1,
+      "pages": [
+        1
+      ],
+      "title": "metric and regular redshift (p1)",
+      "disposition": "retained",
+      "dispositionTags": [
+        "RETAIN"
+      ],
+      "originalAuditHeading": "A01 - RETAIN: metric and regular redshift (p1)",
+      "explanation": "Phi finite prevents a lapse zero in this static chart. Add two connected branches, regularity, asymptotic/boundary conditions, and traveler-specific tidal constraints. The radial chart degenerates at the throat; use proper distance there.",
+      "equation": "ds^2=-e^{2\\Phi(r)}dt^2+\\frac{dr^2}{1-b(r)/r}+r^2d\\Omega_2^2\nd\\Omega_2^2=d\\vartheta^2+\\sin^2\\vartheta\\,d\\varphi^2",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "ds^2=-e^{2\\Phi(r)}dt^2+\\frac{dr^2}{1-b(r)/r}+r^2d\\Omega_2^2",
+        "d\\Omega_2^2=d\\vartheta^2+\\sin^2\\vartheta\\,d\\varphi^2"
+      ],
+      "scope": "Executable SI reference diagnostic; not coupled to the live EM/plasma/material field equations.",
+      "application": "reference-calculator",
+      "calculators": [
+        "morrisThorne"
+      ],
+      "references": [
+        {
+          "id": "A1",
+          "title": "Morris and Thorne (1988), Wormholes in spacetime and their use for interstellar travel",
+          "url": "https://doi.org/10.1119/1.15620"
+        },
+        {
+          "id": "A2",
+          "title": "Hayward, Dynamic wormholes",
+          "url": "https://arxiv.org/abs/gr-qc/9805019"
+        }
+      ],
+      "correctedEquation": "ds^2=-exp(2 Phi)c^2 dt^2+dr^2/(1-b/r)+r^2 dOmega^2; finite nonzero lapse and connected branch geometry required.",
+      "correctedEquationUnits": "SI"
+    },
+    {
+      "id": "A02",
+      "sourcePage": 1,
+      "pages": [
+        1
+      ],
+      "title": "strict throat and flare-out (p1)",
+      "disposition": "corrected",
+      "dispositionTags": [
+        "CORRECT"
+      ],
+      "originalAuditHeading": "A02 - CORRECT: strict throat and flare-out (p1)",
+      "explanation": "The printed b'(r0)<=1 includes a degenerate case. Strict flare-out requires b'(r0)<1, with b(r0)=r0 and 1-b/r>0 off the throat in the exterior. The raw-TeX embedding formula is correct where the embedding is real; an embedding picture alone is not the spacetime solution.",
+      "equation": "b(r_0)=r_0,\\qquad b'(r_0)<1\n\\frac{d^2r}{dz_{\\rm emb}^2}=\\frac{b-rb'}{2b^2}>0",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "b(r_0)=r_0,\\qquad b'(r_0)<1",
+        "\\frac{d^2r}{dz_{\\rm emb}^2}=\\frac{b-rb'}{2b^2}>0"
+      ],
+      "scope": "Executable SI reference diagnostic; not coupled to the live EM/plasma/material field equations.",
+      "application": "reference-calculator",
+      "calculators": [
+        "morrisThorne"
+      ],
+      "references": [
+        {
+          "id": "A1",
+          "title": "Morris and Thorne (1988), Wormholes in spacetime and their use for interstellar travel",
+          "url": "https://doi.org/10.1119/1.15620"
+        },
+        {
+          "id": "A2",
+          "title": "Hayward, Dynamic wormholes",
+          "url": "https://arxiv.org/abs/gr-qc/9805019"
+        }
+      ],
+      "correctedEquation": "b(r0)=r0; b_prime(r0)<1; (d^2 r/dz_embedding^2)=(b-r b_prime)/(2 b^2)>0.",
+      "correctedEquationUnits": "SI"
+    },
+    {
+      "id": "A03",
+      "sourcePage": 1,
+      "pages": [
+        1
+      ],
+      "title": "general radial NEC (p1)",
+      "disposition": "corrected",
+      "dispositionTags": [
+        "CORRECT"
+      ],
+      "originalAuditHeading": "A03 - CORRECT: general radial NEC (p1)",
+      "explanation": "The printed general expression is inconsistent with its own throat result. For the orthonormal radial null direction, the correct Einstein-equation components and sum are below. The throat limit assumes the redshift derivative is sufficiently regular. Here rho is energy density; using mass density requires rho c^2 in the sum.",
+      "equation": "\\rho=\\frac{b'}{8\\pi G r^2},\\qquad p_r=\\frac{-b/r^3+2(1-b/r)\\Phi'/r}{8\\pi G}\n\\rho+p_r=\\frac{b'/r^2-b/r^3+2(1-b/r)\\Phi'/r}{8\\pi G}\n(\\rho+p_r)_{r_0}=\\frac{b'(r_0)-1}{8\\pi G r_0^2}<0",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "\\rho=\\frac{b'}{8\\pi G r^2},\\qquad p_r=\\frac{-b/r^3+2(1-b/r)\\Phi'/r}{8\\pi G}",
+        "\\rho+p_r=\\frac{b'/r^2-b/r^3+2(1-b/r)\\Phi'/r}{8\\pi G}",
+        "(\\rho+p_r)_{r_0}=\\frac{b'(r_0)-1}{8\\pi G r_0^2}<0"
+      ],
+      "scope": "Executable SI reference diagnostic; not coupled to the live EM/plasma/material field equations.",
+      "application": "reference-calculator",
+      "calculators": [
+        "morrisThorne"
+      ],
+      "references": [
+        {
+          "id": "A1",
+          "title": "Morris and Thorne (1988), Wormholes in spacetime and their use for interstellar travel",
+          "url": "https://doi.org/10.1119/1.15620"
+        },
+        {
+          "id": "A2",
+          "title": "Hayward, Dynamic wormholes",
+          "url": "https://arxiv.org/abs/gr-qc/9805019"
+        }
+      ],
+      "correctedEquation": "rho_E=c^4 b_prime/(8 pi G r^2); p_r=c^4[-b/r^3+2(1-b/r)Phi_prime/r]/(8 pi G); rho_E+p_r=c^4[(b_prime-b/r)/r^2+2(1-b/r)Phi_prime/r]/(8 pi G). At a regular strict throat: c^4(b_prime-1)/(8 pi G r0^2)<0.",
+      "correctedEquationUnits": "SI"
+    },
+    {
+      "id": "A04",
+      "sourcePage": 1,
+      "pages": [
+        1
+      ],
+      "title": "null vector and NEC conclusion (p1)",
+      "disposition": "retained",
+      "dispositionTags": [
+        "RETAIN"
+      ],
+      "originalAuditHeading": "A04 - RETAIN with throat-chart care: null vector and NEC conclusion (p1)",
+      "explanation": "The coordinate vector k=e^(-Phi) partial_t+sqrt(1-b/r) partial_r is null off the throat and represents unit orthonormal time/radial components. Its radial coordinate coefficient vanishes at the throat because that chart is singular. Evaluate the physical limit in proper radial distance. Strict classical spherical flare-out violates the radial NEC; ordinary positive-energy gas is not supplied as the supporting source.",
+      "equation": "No complete standalone equation is supplied for this audit item.",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [],
+      "scope": "Executable SI reference diagnostic; not coupled to the live EM/plasma/material field equations.",
+      "application": "reference-calculator",
+      "calculators": [
+        "morrisThorne"
+      ],
+      "references": [
+        {
+          "id": "A1",
+          "title": "Morris and Thorne (1988), Wormholes in spacetime and their use for interstellar travel",
+          "url": "https://doi.org/10.1119/1.15620"
+        },
+        {
+          "id": "A2",
+          "title": "Hayward, Dynamic wormholes",
+          "url": "https://arxiv.org/abs/gr-qc/9805019"
+        }
+      ],
+      "correctedEquation": "For t in seconds, k=(exp(-Phi)/c)partial_t+sqrt(1-b/r)partial_r, evaluated off the throat or by proper-distance limit.",
+      "correctedEquationUnits": "SI"
+    },
+    {
+      "id": "A05",
+      "sourcePage": 2,
+      "pages": [
+        2
+      ],
+      "title": "time-dependent diagonal and double-null metrics",
+      "disposition": "conditional",
+      "dispositionTags": [
+        "CONDITIONAL"
+      ],
+      "originalAuditHeading": "A05 - CONDITIONAL: time-dependent diagonal and double-null metrics",
+      "explanation": "Phi(t,r), b(t,r) is a restricted polar/areal gauge, not an arbitrary collapse solution or a horizon-regular chart. The second displayed metric is a double-null ansatz, not itself a Painleve-Gullstrand or Vaidya metric. Use areal radius R(u,v) and solve its Einstein/matter equations.",
+      "equation": "ds^2=-2e^{2f(u,v)}du\\,dv+R(u,v)^2d\\Omega_2^2",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "ds^2=-2e^{2f(u,v)}du\\,dv+R(u,v)^2d\\Omega_2^2"
+      ],
+      "scope": "Executable SI reference diagnostic; not coupled to the live EM/plasma/material field equations.",
+      "application": "reference-calculator",
+      "calculators": [
+        "misnerSharpDoubleNull"
+      ],
+      "references": [
+        {
+          "id": "A2",
+          "title": "Hayward, Dynamic wormholes",
+          "url": "https://arxiv.org/abs/gr-qc/9805019"
+        },
+        {
+          "id": "A3",
+          "title": "Hochberg and Visser, The null energy condition in dynamic wormholes",
+          "url": "https://arxiv.org/abs/gr-qc/9802048"
+        },
+        {
+          "id": "A4",
+          "title": "Gao, Jafferis and Wall, Traversable Wormholes via a Double Trace Deformation",
+          "url": "https://arxiv.org/abs/1608.05687"
+        },
+        {
+          "id": "A19",
+          "title": "Hayward, Gravitational Energy in Spherical Symmetry (Misner-Sharp mass)",
+          "url": "https://arxiv.org/abs/gr-qc/9408002"
+        },
+        {
+          "id": "A20",
+          "title": "Hayward, General laws of black-hole dynamics (outer trapping definition)",
+          "url": "https://arxiv.org/abs/gr-qc/9303006"
+        }
+      ],
+      "correctedEquation": "ds^2=-2 exp(2f)du dv+R^2 dOmega^2; u,v in meters.",
+      "correctedEquationUnits": "SI"
+    },
+    {
+      "id": "A06",
+      "sourcePage": 2,
+      "pages": [
+        2
+      ],
+      "title": "Misner-Sharp mass and marginal spheres",
+      "disposition": "retained",
+      "dispositionTags": [
+        "RETAIN"
+      ],
+      "originalAuditHeading": "A06 - RETAIN with scope: Misner-Sharp mass and marginal spheres",
+      "explanation": "The invariant spherical mass relation is correct with c=1. In the diagonal areal gauge b=2Gm follows, but it is not universal outside that gauge. A marginal sphere satisfies R=2Gm; a static wormhole throat does too. The equality alone therefore does not classify a black hole.",
+      "equation": "1-\\frac{2Gm}{R}=g^{ab}\\nabla_aR\\nabla_bR\n1-2Gm/R=-2e^{-2f}(\\partial_uR)(\\partial_vR)\n\\theta_\\pm=\\frac{2}{R}\\ell_\\pm^a\\nabla_aR",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "1-\\frac{2Gm}{R}=g^{ab}\\nabla_aR\\nabla_bR",
+        "1-2Gm/R=-2e^{-2f}(\\partial_uR)(\\partial_vR)",
+        "\\theta_\\pm=\\frac{2}{R}\\ell_\\pm^a\\nabla_aR"
+      ],
+      "scope": "Executable SI reference diagnostic; not coupled to the live EM/plasma/material field equations.",
+      "application": "reference-calculator",
+      "calculators": [
+        "misnerSharpDoubleNull"
+      ],
+      "references": [
+        {
+          "id": "A2",
+          "title": "Hayward, Dynamic wormholes",
+          "url": "https://arxiv.org/abs/gr-qc/9805019"
+        },
+        {
+          "id": "A3",
+          "title": "Hochberg and Visser, The null energy condition in dynamic wormholes",
+          "url": "https://arxiv.org/abs/gr-qc/9802048"
+        },
+        {
+          "id": "A4",
+          "title": "Gao, Jafferis and Wall, Traversable Wormholes via a Double Trace Deformation",
+          "url": "https://arxiv.org/abs/1608.05687"
+        },
+        {
+          "id": "A19",
+          "title": "Hayward, Gravitational Energy in Spherical Symmetry (Misner-Sharp mass)",
+          "url": "https://arxiv.org/abs/gr-qc/9408002"
+        },
+        {
+          "id": "A20",
+          "title": "Hayward, General laws of black-hole dynamics (outer trapping definition)",
+          "url": "https://arxiv.org/abs/gr-qc/9303006"
+        }
+      ],
+      "correctedEquation": "1-2G M_MS/(c^2 R)=-2 exp(-2f) R_u R_v. l_u=exp(-f)partial_u, l_v=exp(-f)partial_v, l_u dot l_v=-1; theta_u,v=2 exp(-f)R_u,v/R.",
+      "correctedEquationUnits": "SI"
+    },
+    {
+      "id": "A07",
+      "sourcePage": 2,
+      "pages": [
+        2
+      ],
+      "title": "outer condition and wormhole flare-out",
+      "disposition": "corrected",
+      "dispositionTags": [
+        "CORRECT"
+      ],
+      "originalAuditHeading": "A07 - CORRECT: outer condition and wormhole flare-out",
+      "explanation": "For future null normals l+ and l-, a future OUTER trapping horizon needs all three signs below. The report omits the outer sign. Its L_- theta_+>0 is the INNER sign, not Hayward's outer wormhole criterion. Hayward's dynamic wormhole horizon is timelike and outer. A same-congruence null flare-out test instead uses d theta_+/d lambda_+>0 at theta_+=0, with separate normalization and congruence assumptions. The printed partial_t b+... has no defined equation.",
+      "equation": "\\theta_+=0,\\qquad\\theta_-<0,\\qquad\\mathcal L_-\\theta_+<0",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "\\theta_+=0,\\qquad\\theta_-<0,\\qquad\\mathcal L_-\\theta_+<0"
+      ],
+      "scope": "Executable SI reference diagnostic; not coupled to the live EM/plasma/material field equations.",
+      "application": "reference-calculator",
+      "calculators": [
+        "classifyFutureOuter"
+      ],
+      "references": [
+        {
+          "id": "A2",
+          "title": "Hayward, Dynamic wormholes",
+          "url": "https://arxiv.org/abs/gr-qc/9805019"
+        },
+        {
+          "id": "A3",
+          "title": "Hochberg and Visser, The null energy condition in dynamic wormholes",
+          "url": "https://arxiv.org/abs/gr-qc/9802048"
+        },
+        {
+          "id": "A4",
+          "title": "Gao, Jafferis and Wall, Traversable Wormholes via a Double Trace Deformation",
+          "url": "https://arxiv.org/abs/1608.05687"
+        },
+        {
+          "id": "A19",
+          "title": "Hayward, Gravitational Energy in Spherical Symmetry (Misner-Sharp mass)",
+          "url": "https://arxiv.org/abs/gr-qc/9408002"
+        },
+        {
+          "id": "A20",
+          "title": "Hayward, General laws of black-hole dynamics (outer trapping definition)",
+          "url": "https://arxiv.org/abs/gr-qc/9303006"
+        }
+      ],
+      "correctedEquation": "theta_plus=0; theta_minus<0; L_minus(theta_plus)<0 for a future outer local trapping horizon, with future-directed normals. Same-congruence flare-out is a different derivative.",
+      "correctedEquationUnits": "SI"
+    },
+    {
+      "id": "A08",
+      "sourcePage": 2,
+      "pages": [
+        2
+      ],
+      "title": "positive matter and GJW shift",
+      "disposition": "unestablished",
+      "dispositionTags": [
+        "UNESTABLISHED"
+      ],
+      "originalAuditHeading": "A08 - UNESTABLISHED as written: positive matter and GJW shift",
+      "explanation": "A tensor inequality Delta T_mu nu>0 is not defined; use specified null contractions or an energy condition. A spherical ansatz cannot describe a Kerr transition. The printed Delta v=-8piG integral exp(2f) T_uu is not a universal shift law: background dimension, radius, gauge and null-coordinate normalization matter. Gao-Jafferis-Wall derive a negative averaged null-energy effect for a specified interacting two-boundary AdS/BTZ setup. Retain that framework-specific possibility, not a pulse-operated astrophysical opening rule. In the original Kruskal convention, Delta V is obtained by integrating the metric perturbation h_UU and relating that integral to null stress with background-dependent factors; the report supplies neither.",
+      "equation": "No complete standalone equation is supplied for this audit item.",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A2",
+          "title": "Hayward, Dynamic wormholes",
+          "url": "https://arxiv.org/abs/gr-qc/9805019"
+        },
+        {
+          "id": "A3",
+          "title": "Hochberg and Visser, The null energy condition in dynamic wormholes",
+          "url": "https://arxiv.org/abs/gr-qc/9802048"
+        },
+        {
+          "id": "A4",
+          "title": "Gao, Jafferis and Wall, Traversable Wormholes via a Double Trace Deformation",
+          "url": "https://arxiv.org/abs/1608.05687"
+        },
+        {
+          "id": "A19",
+          "title": "Hayward, Gravitational Energy in Spherical Symmetry (Misner-Sharp mass)",
+          "url": "https://arxiv.org/abs/gr-qc/9408002"
+        },
+        {
+          "id": "A20",
+          "title": "Hayward, General laws of black-hole dynamics (outer trapping definition)",
+          "url": "https://arxiv.org/abs/gr-qc/9303006"
+        }
+      ]
+    },
+    {
+      "id": "A09",
+      "sourcePage": 2,
+      "pages": [
+        2
+      ],
+      "title": "event horizon versus local horizon",
+      "disposition": "corrected",
+      "dispositionTags": [
+        "CORRECT"
+      ],
+      "originalAuditHeading": "A09 - CORRECT: event horizon versus local horizon",
+      "explanation": "A local marginal/trapping surface is a useful numerical diagnostic. An event horizon is a global causal boundary. The assertion 'traversability is zero' needs the chosen endpoints and global spacetime; it cannot follow solely from R=2Gm.",
+      "equation": "No complete standalone equation is supplied for this audit item.",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [],
+      "scope": "Executable SI reference diagnostic; not coupled to the live EM/plasma/material field equations.",
+      "application": "reference-calculator",
+      "calculators": [
+        "misnerSharpDoubleNull",
+        "classifyFutureOuter",
+        "kerrReference"
+      ],
+      "references": [
+        {
+          "id": "A2",
+          "title": "Hayward, Dynamic wormholes",
+          "url": "https://arxiv.org/abs/gr-qc/9805019"
+        },
+        {
+          "id": "A3",
+          "title": "Hochberg and Visser, The null energy condition in dynamic wormholes",
+          "url": "https://arxiv.org/abs/gr-qc/9802048"
+        },
+        {
+          "id": "A4",
+          "title": "Gao, Jafferis and Wall, Traversable Wormholes via a Double Trace Deformation",
+          "url": "https://arxiv.org/abs/1608.05687"
+        },
+        {
+          "id": "A19",
+          "title": "Hayward, Gravitational Energy in Spherical Symmetry (Misner-Sharp mass)",
+          "url": "https://arxiv.org/abs/gr-qc/9408002"
+        },
+        {
+          "id": "A20",
+          "title": "Hayward, General laws of black-hole dynamics (outer trapping definition)",
+          "url": "https://arxiv.org/abs/gr-qc/9303006"
+        }
+      ],
+      "correctedEquation": "B=M\\J^-(I+); H_event=boundary(B), relative to the chosen asymptotically flat exterior. Local marginal surfaces are not sufficient to identify H_event.",
+      "correctedEquationUnits": "SI"
+    },
+    {
+      "id": "A10",
+      "sourcePage": 2,
+      "pages": [
+        2,
+        3
+      ],
+      "title": "induced metric and Israel relation (pp2-3)",
+      "disposition": "retained",
+      "dispositionTags": [
+        "RETAIN"
+      ],
+      "originalAuditHeading": "A10 - RETAIN: induced metric and Israel relation (pp2-3)",
+      "explanation": "The induced metric -d tau^2+a(tau)^2 dOmega2^2 and S^i_j=diag(-sigma,p,p) are correct. Choose one normal convention and use it consistently in the jump.",
+      "equation": "[K^i{}_j]-\\delta^i{}_j[K]=-8\\pi G S^i{}_j",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "[K^i{}_j]-\\delta^i{}_j[K]=-8\\pi G S^i{}_j"
+      ],
+      "scope": "Executable SI reference diagnostic; not coupled to the live EM/plasma/material field equations.",
+      "application": "reference-calculator",
+      "calculators": [
+        "thinShell"
+      ],
+      "references": [
+        {
+          "id": "A5",
+          "title": "Poisson and Visser, Thin-shell wormholes: Linearization stability",
+          "url": "https://arxiv.org/abs/gr-qc/9506083"
+        }
+      ],
+      "correctedEquation": "[K^i_j]-delta^i_j[K]=-(8 pi G/c^4)S^i_j; S^i_j=diag(-sigma_E,p_s,p_s).",
+      "correctedEquationUnits": "SI"
+    },
+    {
+      "id": "A11",
+      "sourcePage": 3,
+      "pages": [
+        3
+      ],
+      "title": "normal orientations and exterior function (p3)",
+      "disposition": "corrected",
+      "dispositionTags": [
+        "CORRECT"
+      ],
+      "originalAuditHeading": "A11 - CORRECT: normal orientations and exterior function (p3)",
+      "explanation": "For the two-exterior wormhole orientation, the displayed positive expressions need opposite orientation signs to produce the stated density sum. The general spherical exterior f=1-2GM/r-Lambda r^2/3+q^2/r^2 is meaningful when q is geometric charge length. It cannot mix an SI electric charge Q with that coefficient; q^2=G Q_SI^2/(4pi epsilon0 c^4). Different redshift functions or time-dependent exteriors need more general expressions.",
+      "equation": "K^\\vartheta{}_{\\vartheta,\\pm}=\\pm\\frac{\\beta_\\pm}{a},\\qquad K^\\tau{}_{\\tau,\\pm}=\\pm\\frac{\\ddot a+f'_\\pm/2}{\\beta_\\pm}",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "K^\\vartheta{}_{\\vartheta,\\pm}=\\pm\\frac{\\beta_\\pm}{a},\\qquad K^\\tau{}_{\\tau,\\pm}=\\pm\\frac{\\ddot a+f'_\\pm/2}{\\beta_\\pm}"
+      ],
+      "scope": "Executable SI reference diagnostic; not coupled to the live EM/plasma/material field equations.",
+      "application": "reference-calculator",
+      "calculators": [
+        "thinShell"
+      ],
+      "references": [
+        {
+          "id": "A5",
+          "title": "Poisson and Visser, Thin-shell wormholes: Linearization stability",
+          "url": "https://arxiv.org/abs/gr-qc/9506083"
+        }
+      ],
+      "correctedEquation": "beta_plus,minus=sqrt((da/dtau/c)^2+f_plus,minus); K_thetaTheta,plus,minus=+/-beta_plus,minus/a; K_tauTau,plus,minus=+/-(d^2a/dtau^2/c^2+f_prime_plus,minus/2)/beta_plus,minus. q_geom^2=G Q_SI^2/(4 pi epsilon0 c^4).",
+      "correctedEquationUnits": "SI"
+    },
+    {
+      "id": "A12",
+      "sourcePage": 3,
+      "pages": [
+        3
+      ],
+      "title": "RETAIN density; CORRECT pressure (p3)",
+      "disposition": "corrected",
+      "dispositionTags": [
+        "RETAIN",
+        "CORRECT"
+      ],
+      "originalAuditHeading": "A12 - RETAIN density; CORRECT pressure (p3)",
+      "explanation": "The source density is correct for that orientation. Pressure has two errors: remove the prefactor's extra 1/a on the acceleration terms and replace +sigma/2 with -sigma/2. The corrected pressure agrees with the static Schwarzschild limit and shell conservation.",
+      "equation": "\\sigma=-\\frac{\\beta_++\\beta_-}{4\\pi G a}\np=\\frac{1}{8\\pi G}\\left(\\frac{\\ddot a+f'_+/2}{\\beta_+}+\\frac{\\ddot a+f'_-/2}{\\beta_-}\\right)-\\frac{\\sigma}{2}",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "\\sigma=-\\frac{\\beta_++\\beta_-}{4\\pi G a}",
+        "p=\\frac{1}{8\\pi G}\\left(\\frac{\\ddot a+f'_+/2}{\\beta_+}+\\frac{\\ddot a+f'_-/2}{\\beta_-}\\right)-\\frac{\\sigma}{2}"
+      ],
+      "scope": "Executable SI reference diagnostic; not coupled to the live EM/plasma/material field equations.",
+      "application": "reference-calculator",
+      "calculators": [
+        "thinShell"
+      ],
+      "references": [
+        {
+          "id": "A5",
+          "title": "Poisson and Visser, Thin-shell wormholes: Linearization stability",
+          "url": "https://arxiv.org/abs/gr-qc/9506083"
+        }
+      ],
+      "correctedEquation": "sigma_E=-c^4(beta_plus+beta_minus)/(4 pi G a); p_s=c^4[(addot/c^2+f_prime_plus/2)/beta_plus+(addot/c^2+f_prime_minus/2)/beta_minus]/(8 pi G)-sigma_E/2.",
+      "correctedEquationUnits": "SI"
+    },
+    {
+      "id": "A13",
+      "sourcePage": 3,
+      "pages": [
+        3
+      ],
+      "title": "effective potential (p3)",
+      "disposition": "corrected",
+      "dispositionTags": [
+        "CORRECT"
+      ],
+      "originalAuditHeading": "A13 - CORRECT: effective potential (p3)",
+      "explanation": "The printed asymmetric denominator contains a^2; it must contain a before squaring. The density is a surface energy, so the source term otherwise has incompatible dimensions. Squaring the junction equation can introduce unwanted branches: retain the original density relation, signs and real square roots.",
+      "equation": "\\dot a^2+V(a)=0\nV=\\frac{f_++f_-}{2}-\\left(\\frac{f_+-f_-}{8\\pi G\\sigma a}\\right)^2-4\\pi^2G^2\\sigma^2a^2",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "\\dot a^2+V(a)=0",
+        "V=\\frac{f_++f_-}{2}-\\left(\\frac{f_+-f_-}{8\\pi G\\sigma a}\\right)^2-4\\pi^2G^2\\sigma^2a^2"
+      ],
+      "scope": "Executable SI reference diagnostic; not coupled to the live EM/plasma/material field equations.",
+      "application": "reference-calculator",
+      "calculators": [
+        "thinShell",
+        "thinShellPotential"
+      ],
+      "references": [
+        {
+          "id": "A5",
+          "title": "Poisson and Visser, Thin-shell wormholes: Linearization stability",
+          "url": "https://arxiv.org/abs/gr-qc/9506083"
+        }
+      ],
+      "correctedEquation": "(adot/c)^2+V=0; V=(f_plus+f_minus)/2-[c^4(f_plus-f_minus)/(8 pi G sigma_E a)]^2-4 pi^2 G^2 sigma_E^2 a^2/c^8. Retain the original negative-density positive-root branch.",
+      "correctedEquationUnits": "SI"
+    },
+    {
+      "id": "A14",
+      "sourcePage": 4,
+      "pages": [
+        4
+      ],
+      "title": "equilibrium, stability and collapse",
+      "disposition": "corrected",
+      "dispositionTags": [
+        "CORRECT"
+      ],
+      "originalAuditHeading": "A14 - CORRECT: equilibrium, stability and collapse",
+      "explanation": "Add V'(a0)=0 to V(a0)=0 and V''(a0)>0 for linear radial stability, plus an equation of state and flux conservation specifying sigma(a). Linear stability is not proof of a finite-amplitude bounce. Crossing a root of a static exterior f does not by itself construct an event horizon or validate continuation of the two-exterior wormhole chart.",
+      "equation": "\\frac{d}{d\\tau}(\\sigma A)+p\\frac{dA}{d\\tau}=0,\\qquad A=4\\pi a^2\\quad(\\mathrm{no\\ shell\\ flux})\nV(a_0)=V'(a_0)=0,\\qquad V''(a_0)>0",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "\\frac{d}{d\\tau}(\\sigma A)+p\\frac{dA}{d\\tau}=0,\\qquad A=4\\pi a^2\\quad(\\mathrm{no\\ shell\\ flux})",
+        "V(a_0)=V'(a_0)=0,\\qquad V''(a_0)>0"
+      ],
+      "scope": "Executable SI reference diagnostic; not coupled to the live EM/plasma/material field equations.",
+      "application": "reference-calculator",
+      "calculators": [
+        "thinShell",
+        "thinShellPotential"
+      ],
+      "references": [
+        {
+          "id": "A5",
+          "title": "Poisson and Visser, Thin-shell wormholes: Linearization stability",
+          "url": "https://arxiv.org/abs/gr-qc/9506083"
+        },
+        {
+          "id": "A6",
+          "title": "Dordevic, Molina and Juricic (2026), Wormhole Geometry from a Magnetic Vortex",
+          "url": "https://arxiv.org/html/2608.12285v1"
+        }
+      ],
+      "correctedEquation": "d(sigma_E A)/dtau+p_s dA/dtau=0 when shell flux is zero; A=4 pi a^2. Equilibrium requires V=V_prime=0; linear radial stability needs V_second>0 plus EOS/flux closure.",
+      "correctedEquationUnits": "SI"
+    },
+    {
+      "id": "A15",
+      "sourcePage": 4,
+      "pages": [
+        4
+      ],
+      "title": "RETAIN geometry; CONDITIONAL microscopic scale",
+      "disposition": "conditional",
+      "dispositionTags": [
+        "RETAIN",
+        "CONDITIONAL"
+      ],
+      "originalAuditHeading": "A15 - RETAIN geometry; CONDITIONAL microscopic scale",
+      "explanation": "The planar unit magnetization m=(cos(n phi),sin(n phi)) has integer winding outside a core. Its spatial Ellis form and change r=sqrt(rho^2+lambda_E^2) are algebraically correct. This is a 2+1-dimensional effective geometry, not a complete four-dimensional Einstein solution. The expression lambda_E proportional to hbar |n|/sqrt(2 m_e J_H) has length units but lacks its coefficient and exchange convention.",
+      "equation": "ds_{\\rm eff}^2=-dt^2+d\\rho^2+(\\rho^2+\\lambda_E^2)d\\varphi^2\nds_{\\rm eff}^2=-dt^2+\\frac{dr^2}{1-\\lambda_E^2/r^2}+r^2d\\varphi^2,\\qquad b(r)=\\lambda_E^2/r",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "ds_{\\rm eff}^2=-dt^2+d\\rho^2+(\\rho^2+\\lambda_E^2)d\\varphi^2",
+        "ds_{\\rm eff}^2=-dt^2+\\frac{dr^2}{1-\\lambda_E^2/r^2}+r^2d\\varphi^2,\\qquad b(r)=\\lambda_E^2/r"
+      ],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A5",
+          "title": "Poisson and Visser, Thin-shell wormholes: Linearization stability",
+          "url": "https://arxiv.org/abs/gr-qc/9506083"
+        },
+        {
+          "id": "A6",
+          "title": "Dordevic, Molina and Juricic (2026), Wormhole Geometry from a Magnetic Vortex",
+          "url": "https://arxiv.org/html/2608.12285v1"
+        }
+      ]
+    },
+    {
+      "id": "A16",
+      "sourcePage": 4,
+      "pages": [
+        4
+      ],
+      "title": "Traceable source with a restricted physical meaning",
+      "disposition": "conditional",
+      "dispositionTags": [
+        "CONDITIONAL"
+      ],
+      "originalAuditHeading": "A16 - Traceable source with a restricted physical meaning",
+      "explanation": "The August 2026 preprint by Dordevic, Molina and Juricic derives a_q=|q| hbar/(2 sqrt(m J)) under its Hund-exchange convention. It explicitly describes the exterior geometry sampled by an electron with a microscopic core cutoff. The report supplies no derivation that turns this electron analogue into a real spacetime bridge or plasma aperture. The microscopic result is theoretical, not black-hole observational validation.",
+      "equation": "No complete standalone equation is supplied for this audit item.",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A5",
+          "title": "Poisson and Visser, Thin-shell wormholes: Linearization stability",
+          "url": "https://arxiv.org/abs/gr-qc/9506083"
+        },
+        {
+          "id": "A6",
+          "title": "Dordevic, Molina and Juricic (2026), Wormhole Geometry from a Magnetic Vortex",
+          "url": "https://arxiv.org/html/2608.12285v1"
+        }
+      ]
+    },
+    {
+      "id": "A17",
+      "sourcePage": 4,
+      "pages": [
+        4
+      ],
+      "title": "LLGS (p4)",
+      "disposition": "conditional",
+      "dispositionTags": [
+        "CONDITIONAL"
+      ],
+      "originalAuditHeading": "A17 - CONDITIONAL: LLGS (p4)",
+      "explanation": "The LLGS structure is recognizable for a unit magnetization vector. Specify gyromagnetic convention (H in A/m needs the appropriate mu0 factor), effective field from an energy functional, nonnegative damping, and the explicit current-driven torque perpendicular to m. None of those inputs appears in the report. LLGS describes magnetization dynamics; it does not automatically evolve an Einstein metric. Generic cross-product LLGS needs a three-component unit vector; a constrained planar angle model must be derived separately.",
+      "equation": "\\partial_t\\mathbf m=-\\gamma\\mathbf m\\times\\mathbf H_{\\rm eff}+\\alpha_G\\mathbf m\\times\\partial_t\\mathbf m+\\mathbf T_{\\rm STT}",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "\\partial_t\\mathbf m=-\\gamma\\mathbf m\\times\\mathbf H_{\\rm eff}+\\alpha_G\\mathbf m\\times\\partial_t\\mathbf m+\\mathbf T_{\\rm STT}"
+      ],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A5",
+          "title": "Poisson and Visser, Thin-shell wormholes: Linearization stability",
+          "url": "https://arxiv.org/abs/gr-qc/9506083"
+        },
+        {
+          "id": "A6",
+          "title": "Dordevic, Molina and Juricic (2026), Wormhole Geometry from a Magnetic Vortex",
+          "url": "https://arxiv.org/html/2608.12285v1"
+        }
+      ]
+    },
+    {
+      "id": "A18",
+      "sourcePage": 4,
+      "pages": [
+        4
+      ],
+      "title": "Berry connection and effective field (p4)",
+      "disposition": "conditional",
+      "dispositionTags": [
+        "CONDITIONAL"
+      ],
+      "originalAuditHeading": "A18 - CONDITIONAL: Berry connection and effective field (p4)",
+      "explanation": "A_mu=-i hbar <psi|partial_mu psi> is a permissible connection convention for normalized states; it carries action-based units, not automatically volts or tesla. F_0i=partial_t A_i-partial_i A_0 follows that convention. Physical effective electric fields need an effective charge, projection onto a specified band, and consistent temporal/spatial signs. Only gauge-invariant curvature/closed-loop phase is observable. It is not the Maxwell pulse field unless a coupling dictionary is derived. With t in seconds and x in meters, this F_0i has force units; divide by the signed effective charge to obtain V/m. A rigidly precessing planar texture has zero local Berry curvature away from its singular core because its temporal and spatial derivatives are parallel.",
+      "equation": "No complete standalone equation is supplied for this audit item.",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A6",
+          "title": "Dordevic, Molina and Juricic (2026), Wormhole Geometry from a Magnetic Vortex",
+          "url": "https://arxiv.org/html/2608.12285v1"
+        },
+        {
+          "id": "A7",
+          "title": "OOMMF developers, Oxs_Evolver documentation (LLG and field conventions)",
+          "url": "https://math.nist.gov/oommf/doc/userguide21a0/userguide/Evolvers.html"
+        },
+        {
+          "id": "A21",
+          "title": "Visser, Acoustic black holes: horizons, ergospheres and Hawking radiation",
+          "url": "https://arxiv.org/abs/gr-qc/9712010"
+        }
+      ]
+    },
+    {
+      "id": "A19",
+      "sourcePage": 5,
+      "pages": [
+        5
+      ],
+      "title": "rotating-coordinate metric (p5)",
+      "disposition": "corrected",
+      "dispositionTags": [
+        "CORRECT"
+      ],
+      "originalAuditHeading": "A19 - CORRECT: rotating-coordinate metric (p5)",
+      "explanation": "The displayed metric factorizes as below. For constant Omega and constant lambda it is obtained by phi'=phi-Omega t. The cross term therefore can be a coordinate effect. In this metric g^tt=-1, the block determinant stays negative, and radial null curves with dphi=Omega dt have drho/dt=+/-1. A g_tt sign change marks the rotating coordinate light cylinder, not an event horizon or proof of Kerr frame dragging.",
+      "equation": "F=\\rho^2+\\lambda_E^2,\\qquad ds^2=-dt^2+d\\rho^2+F(d\\varphi-\\Omega dt)^2\ng_{tt}=-1+F\\Omega^2,\\quad g_{t\\varphi}=-F\\Omega,\\quad\\det(g_{t\\varphi\\ block})=-F\ng^{tt}=-1\\quad(F>0)",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "F=\\rho^2+\\lambda_E^2,\\qquad ds^2=-dt^2+d\\rho^2+F(d\\varphi-\\Omega dt)^2",
+        "g_{tt}=-1+F\\Omega^2,\\quad g_{t\\varphi}=-F\\Omega,\\quad\\det(g_{t\\varphi\\ block})=-F",
+        "g^{tt}=-1\\quad(F>0)"
+      ],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A6",
+          "title": "Dordevic, Molina and Juricic (2026), Wormhole Geometry from a Magnetic Vortex",
+          "url": "https://arxiv.org/html/2608.12285v1"
+        },
+        {
+          "id": "A7",
+          "title": "OOMMF developers, Oxs_Evolver documentation (LLG and field conventions)",
+          "url": "https://math.nist.gov/oommf/doc/userguide21a0/userguide/Evolvers.html"
+        },
+        {
+          "id": "A21",
+          "title": "Visser, Acoustic black holes: horizons, ergospheres and Hawking radiation",
+          "url": "https://arxiv.org/abs/gr-qc/9712010"
+        }
+      ],
+      "correctedEquation": "F=\\rho^2+\\lambda_E^2,\\qquad ds^2=-dt^2+d\\rho^2+F(d\\varphi-\\Omega dt)^2\ng_{tt}=-1+F\\Omega^2,\\quad g_{t\\varphi}=-F\\Omega,\\quad\\det(g_{t\\varphi\\ block})=-F\ng^{tt}=-1\\quad(F>0)",
+      "correctedEquationUnits": "As stated in the audit; assumptions and suppressed constants must be restored before a physical implementation."
+    },
+    {
+      "id": "A20",
+      "sourcePage": 5,
+      "pages": [
+        5
+      ],
+      "title": "dynamic Kerr/acoustic horizon inference (p5)",
+      "disposition": "unestablished",
+      "dispositionTags": [
+        "UNESTABLISHED"
+      ],
+      "originalAuditHeading": "A20 - UNESTABLISHED: dynamic Kerr/acoustic horizon inference (p5)",
+      "explanation": "A time-dependent lambda(t) is an additional ansatz, not a dynamics law derived from LLGS. A propagating-mode horizon requires the relevant characteristic cone and directional flow, ordinarily a normal component exceeding the mode speed. A swirl speed or cross term alone is insufficient. Restore the chosen effective velocity scale if time is SI; -dt^2 is otherwise dimensionally incompatible with spatial lengths.",
+      "equation": "No complete standalone equation is supplied for this audit item.",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A6",
+          "title": "Dordevic, Molina and Juricic (2026), Wormhole Geometry from a Magnetic Vortex",
+          "url": "https://arxiv.org/html/2608.12285v1"
+        },
+        {
+          "id": "A7",
+          "title": "OOMMF developers, Oxs_Evolver documentation (LLG and field conventions)",
+          "url": "https://math.nist.gov/oommf/doc/userguide21a0/userguide/Evolvers.html"
+        },
+        {
+          "id": "A21",
+          "title": "Visser, Acoustic black holes: horizons, ergospheres and Hawking radiation",
+          "url": "https://arxiv.org/abs/gr-qc/9712010"
+        }
+      ]
+    },
+    {
+      "id": "A21",
+      "sourcePage": 5,
+      "pages": [
+        5
+      ],
+      "title": "ultrametric and tree with adjacency",
+      "disposition": "retained",
+      "dispositionTags": [
+        "RETAIN"
+      ],
+      "originalAuditHeading": "A21 - RETAIN: ultrametric and tree with adjacency",
+      "explanation": "For prime p, |x+y|_p<=max(|x|_p,|y|_p) is correct. The PGL(2,Qp)/PGL(2,Zp) quotient describes the tree's vertex set; lattice adjacency must be supplied to obtain the (p+1)-regular Bruhat-Tits graph. Its boundary is P^1(Qp). This is not a finite field GF(p^k), nor a physical three-dimensional space.",
+      "equation": "V(\\mathcal T_p)=\\mathrm{PGL}(2,\\mathbb Q_p)/\\mathrm{PGL}(2,\\mathbb Z_p),\\qquad\\partial\\mathcal T_p=\\mathbb P^1(\\mathbb Q_p)",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "V(\\mathcal T_p)=\\mathrm{PGL}(2,\\mathbb Q_p)/\\mathrm{PGL}(2,\\mathbb Z_p),\\qquad\\partial\\mathcal T_p=\\mathbb P^1(\\mathbb Q_p)"
+      ],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A8",
+          "title": "Gubser et al., p-adic AdS/CFT",
+          "url": "https://arxiv.org/abs/1605.01061"
+        },
+        {
+          "id": "A9",
+          "title": "Complex-network p-adic evolution paper (Vladimirov normalization)",
+          "url": "https://doi.org/10.1007/s11868-025-00693-8"
+        }
+      ]
+    },
+    {
+      "id": "A22",
+      "sourcePage": 5,
+      "pages": [
+        5
+      ],
+      "title": "Vladimirov kernel with specified domain",
+      "disposition": "retained",
+      "dispositionTags": [
+        "RETAIN"
+      ],
+      "originalAuditHeading": "A22 - RETAIN: Vladimirov kernel with specified domain",
+      "explanation": "The printed coefficient and sign are correct for alpha>0, normalized Haar measure mu(Zp)=1, and a suitable test-function/operator domain. It is a positive fractional kinetic operator with Fourier multiplier |xi|_p^alpha. Acting on boundary functions in Qp does not automatically evolve weighted bulk-tree geometry.",
+      "equation": "D_p^\\alpha\\psi(x)=\\frac{p^\\alpha-1}{1-p^{-\\alpha-1}}\\int_{\\mathbb Q_p}\\frac{\\psi(x)-\\psi(y)}{|x-y|_p^{\\alpha+1}}d\\mu_p(y)",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "D_p^\\alpha\\psi(x)=\\frac{p^\\alpha-1}{1-p^{-\\alpha-1}}\\int_{\\mathbb Q_p}\\frac{\\psi(x)-\\psi(y)}{|x-y|_p^{\\alpha+1}}d\\mu_p(y)"
+      ],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A8",
+          "title": "Gubser et al., p-adic AdS/CFT",
+          "url": "https://arxiv.org/abs/1605.01061"
+        },
+        {
+          "id": "A9",
+          "title": "Complex-network p-adic evolution paper (Vladimirov normalization)",
+          "url": "https://doi.org/10.1007/s11868-025-00693-8"
+        }
+      ]
+    },
+    {
+      "id": "A23",
+      "sourcePage": 5,
+      "pages": [
+        5
+      ],
+      "title": "continuous-time arithmetic evolution",
+      "disposition": "conditional",
+      "dispositionTags": [
+        "CONDITIONAL"
+      ],
+      "originalAuditHeading": "A23 - CONDITIONAL: continuous-time arithmetic evolution",
+      "explanation": "i partial_tau Psi=D_p^2 Psi+V Psi is a Schrodinger-like model in declared units. Norm conservation requires a self-adjoint kinetic operator and a real/self-adjoint potential. In physical units use i hbar partial_t Psi=H Psi with a kinetic coefficient carrying the energy scale. Diffusion would instead use a real dissipative equation partial_tau Psi=-D Psi. The summary table calls it diffusion while displaying unitary evolution.",
+      "equation": "No complete standalone equation is supplied for this audit item.",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A8",
+          "title": "Gubser et al., p-adic AdS/CFT",
+          "url": "https://arxiv.org/abs/1605.01061"
+        },
+        {
+          "id": "A9",
+          "title": "Complex-network p-adic evolution paper (Vladimirov normalization)",
+          "url": "https://doi.org/10.1007/s11868-025-00693-8"
+        }
+      ]
+    },
+    {
+      "id": "A24",
+      "sourcePage": 5,
+      "pages": [
+        5
+      ],
+      "title": "Schottky quotient",
+      "disposition": "conditional",
+      "dispositionTags": [
+        "CONDITIONAL"
+      ],
+      "originalAuditHeading": "A24 - CONDITIONAL: Schottky quotient",
+      "explanation": "A specified discrete Schottky subgroup can define a quotient geometry with cycles. The report does not supply generators, quotient graph, boundary regions or a causal metric. Identifying branches is therefore a mathematical construction to define, not proof of a Lorentzian traversable wormhole.",
+      "equation": "No complete standalone equation is supplied for this audit item.",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A8",
+          "title": "Gubser et al., p-adic AdS/CFT",
+          "url": "https://arxiv.org/abs/1605.01061"
+        },
+        {
+          "id": "A9",
+          "title": "Complex-network p-adic evolution paper (Vladimirov normalization)",
+          "url": "https://doi.org/10.1007/s11868-025-00693-8"
+        }
+      ]
+    },
+    {
+      "id": "A25",
+      "sourcePage": 5,
+      "pages": [
+        5
+      ],
+      "title": "weighted-link disconnection",
+      "disposition": "corrected",
+      "dispositionTags": [
+        "CORRECT"
+      ],
+      "originalAuditHeading": "A25 - CORRECT: weighted-link disconnection",
+      "explanation": "w_e(t)->0 can reduce transport for a declared conductance/Hamiltonian. Ordinary combinatorial graph distance does not change when weights change; distance tends to infinity only with a specified inverse-weight length or when every connecting path is removed. A transport bottleneck or disconnected graph has no event horizon until causal propagation and a spacetime dictionary are defined.",
+      "equation": "No complete standalone equation is supplied for this audit item.",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A8",
+          "title": "Gubser et al., p-adic AdS/CFT",
+          "url": "https://arxiv.org/abs/1605.01061"
+        },
+        {
+          "id": "A9",
+          "title": "Complex-network p-adic evolution paper (Vladimirov normalization)",
+          "url": "https://doi.org/10.1007/s11868-025-00693-8"
+        }
+      ]
+    },
+    {
+      "id": "A26",
+      "sourcePage": 5,
+      "pages": [
+        5,
+        6
+      ],
+      "title": "RETAIN with finite Galois condition (pp5-6)",
+      "disposition": "retained",
+      "dispositionTags": [
+        "RETAIN"
+      ],
+      "originalAuditHeading": "A26 - RETAIN with finite Galois condition (pp5-6)",
+      "explanation": "For a finite Galois extension L/K the algebra isomorphism below is correct. Without finite, normal and separable hypotheses the stated finite product is not that theorem. The component action is explicit; it is not automatically a unitary quantum-state update.",
+      "equation": "L\\otimes_K L\\longrightarrow\\prod_{\\sigma\\in\\mathrm{Gal}(L/K)}L,\\qquad a\\otimes b\\longmapsto(a\\,\\sigma(b))_\\sigma",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "L\\otimes_K L\\longrightarrow\\prod_{\\sigma\\in\\mathrm{Gal}(L/K)}L,\\qquad a\\otimes b\\longmapsto(a\\,\\sigma(b))_\\sigma"
+      ],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A10",
+          "title": "Stacks Project, Section 59.56, proof of Lemma 59.56.5 (finite Galois splitting)",
+          "url": "https://stacks.math.columbia.edu/tag/03QW"
+        },
+        {
+          "id": "A11",
+          "title": "Helwig and Cui, Absolutely Maximally Entangled States: Existence and Applications",
+          "url": "https://arxiv.org/abs/1306.2536"
+        },
+        {
+          "id": "A12",
+          "title": "Pastawski et al., Holographic quantum error-correcting codes",
+          "url": "https://arxiv.org/abs/1503.06237"
+        }
+      ]
+    },
+    {
+      "id": "A27",
+      "sourcePage": 6,
+      "pages": [
+        6
+      ],
+      "title": "RETAIN AME condition; CORRECT input-isometry claim (p6)",
+      "disposition": "corrected",
+      "dispositionTags": [
+        "RETAIN",
+        "CORRECT"
+      ],
+      "originalAuditHeading": "A27 - RETAIN AME condition; CORRECT input-isometry claim (p6)",
+      "explanation": "The maximally mixed reduction condition is correct for a normalized AME state; testing every maximal allowed A implies smaller reductions. Not every Reed-Solomon or stabilizer tensor is AME. A tensor can be reshaped to a suitably normalized isometry only with at most half the legs as inputs; a larger input Hilbert space cannot isometrically map to a smaller output space. Construction distance, field size and normalization must be specified.",
+      "equation": "\\rho_A=\\mathrm{Tr}_B|\\Psi\\rangle\\langle\\Psi|=\\frac{I_A}{d^{|A|}},\\qquad |A|\\leq\\lfloor n/2\\rfloor",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "\\rho_A=\\mathrm{Tr}_B|\\Psi\\rangle\\langle\\Psi|=\\frac{I_A}{d^{|A|}},\\qquad |A|\\leq\\lfloor n/2\\rfloor"
+      ],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A10",
+          "title": "Stacks Project, Section 59.56, proof of Lemma 59.56.5 (finite Galois splitting)",
+          "url": "https://stacks.math.columbia.edu/tag/03QW"
+        },
+        {
+          "id": "A11",
+          "title": "Helwig and Cui, Absolutely Maximally Entangled States: Existence and Applications",
+          "url": "https://arxiv.org/abs/1306.2536"
+        },
+        {
+          "id": "A12",
+          "title": "Pastawski et al., Holographic quantum error-correcting codes",
+          "url": "https://arxiv.org/abs/1503.06237"
+        }
+      ],
+      "correctedEquation": "\\rho_A=\\mathrm{Tr}_B|\\Psi\\rangle\\langle\\Psi|=\\frac{I_A}{d^{|A|}},\\qquad |A|\\leq\\lfloor n/2\\rfloor",
+      "correctedEquationUnits": "As stated in the audit; assumptions and suppressed constants must be restored before a physical implementation."
+    },
+    {
+      "id": "A28",
+      "sourcePage": 6,
+      "pages": [
+        6
+      ],
+      "title": "RETAIN evolution; CONDITIONAL double trace (p6)",
+      "disposition": "conditional",
+      "dispositionTags": [
+        "RETAIN",
+        "CONDITIONAL"
+      ],
+      "originalAuditHeading": "A28 - RETAIN evolution; CONDITIONAL double trace (p6)",
+      "explanation": "Time ordering is correct if the Hamiltonian is self-adjoint; restore hbar in physical units. H_int=(g/K) sum_j O_L^j O_R^j is one interaction choice. Traversability is not guaranteed for arbitrary state, sign, operator dimensions or coupling schedule: the AdS construction needs its specified negative averaged null-energy backreaction.",
+      "equation": "U(t)=\\mathcal T\\exp\\left[-\\frac{i}{\\hbar}\\int_0^t(H_L+H_R+H_{\\rm int})ds\\right]",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "U(t)=\\mathcal T\\exp\\left[-\\frac{i}{\\hbar}\\int_0^t(H_L+H_R+H_{\\rm int})ds\\right]"
+      ],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A10",
+          "title": "Stacks Project, Section 59.56, proof of Lemma 59.56.5 (finite Galois splitting)",
+          "url": "https://stacks.math.columbia.edu/tag/03QW"
+        },
+        {
+          "id": "A11",
+          "title": "Helwig and Cui, Absolutely Maximally Entangled States: Existence and Applications",
+          "url": "https://arxiv.org/abs/1306.2536"
+        },
+        {
+          "id": "A12",
+          "title": "Pastawski et al., Holographic quantum error-correcting codes",
+          "url": "https://arxiv.org/abs/1503.06237"
+        }
+      ]
+    },
+    {
+      "id": "A29",
+      "sourcePage": 6,
+      "pages": [
+        6
+      ],
+      "title": "circuit schematic and proto-area (p6)",
+      "disposition": "conditional",
+      "dispositionTags": [
+        "CONDITIONAL"
+      ],
+      "originalAuditHeading": "A29 - CONDITIONAL: circuit schematic and proto-area (p6)",
+      "explanation": "The text schematic names Galois tensors and an AME state but gives no tensor dimensions, gates, state, contraction or geometry map. S(rho_A)=-Tr rho_A ln rho_A is entropy in nats, not area in square meters. A cut bounds entropy by sum ln(D_e); equality requires the appropriate isometric/saturation conditions. A gravitational area relation requires its gravity dictionary and bulk corrections. A fixed network's cut is not automatically a time-evolved metric.",
+      "equation": "S(\\rho_A)=-\\mathrm{Tr}(\\rho_A\\ln\\rho_A),\\qquad S_A\\leq\\min_\\gamma\\sum_{e\\in\\gamma}\\ln D_e",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "S(\\rho_A)=-\\mathrm{Tr}(\\rho_A\\ln\\rho_A),\\qquad S_A\\leq\\min_\\gamma\\sum_{e\\in\\gamma}\\ln D_e"
+      ],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A10",
+          "title": "Stacks Project, Section 59.56, proof of Lemma 59.56.5 (finite Galois splitting)",
+          "url": "https://stacks.math.columbia.edu/tag/03QW"
+        },
+        {
+          "id": "A11",
+          "title": "Helwig and Cui, Absolutely Maximally Entangled States: Existence and Applications",
+          "url": "https://arxiv.org/abs/1306.2536"
+        },
+        {
+          "id": "A12",
+          "title": "Pastawski et al., Holographic quantum error-correcting codes",
+          "url": "https://arxiv.org/abs/1503.06237"
+        }
+      ]
+    },
+    {
+      "id": "A30",
+      "sourcePage": 7,
+      "pages": [
+        7
+      ],
+      "title": "scrambling and OTOC",
+      "disposition": "conditional",
+      "dispositionTags": [
+        "CONDITIONAL"
+      ],
+      "originalAuditHeading": "A30 - CONDITIONAL: scrambling and OTOC",
+      "explanation": "t_* approximately beta/(2pi) ln S_BH is a framework-dependent parametric scale in hbar=kB=1 units, not a universal clock. State, thermal regularization, operators and large-N normalization are absent. The exponential form applies before scrambling and cannot extrapolate indefinitely. L/R operators commute in decoupled Hilbert factors; a cross-boundary OTOC needs specified coupling and state. Generic AME tensors do not supply a chaos exponent.",
+      "equation": "F(t)\\simeq1-\\frac{f}{N^2}e^{\\lambda_Lt},\\qquad\\lambda_L\\leq\\frac{2\\pi k_BT}{\\hbar}",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "F(t)\\simeq1-\\frac{f}{N^2}e^{\\lambda_Lt},\\qquad\\lambda_L\\leq\\frac{2\\pi k_BT}{\\hbar}"
+      ],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A4",
+          "title": "Gao, Jafferis and Wall, Traversable Wormholes via a Double Trace Deformation",
+          "url": "https://arxiv.org/abs/1608.05687"
+        },
+        {
+          "id": "A13",
+          "title": "Maldacena, Shenker and Stanford, A bound on chaos",
+          "url": "https://arxiv.org/abs/1503.01409"
+        },
+        {
+          "id": "A14",
+          "title": "Iyer and Vishveshwara, A General Treatment of Orbiting Gyroscope Precession",
+          "url": "https://arxiv.org/abs/gr-qc/9909054"
+        }
+      ]
+    },
+    {
+      "id": "A31",
+      "sourcePage": 7,
+      "pages": [
+        7
+      ],
+      "title": "saturation and shock inference",
+      "disposition": "corrected",
+      "dispositionTags": [
+        "CORRECT"
+      ],
+      "originalAuditHeading": "A31 - CORRECT: saturation and shock inference",
+      "explanation": "The equality lambda_L=2pi/beta needs a system saturating the chaos bound under its assumptions; a general black-hole/wormhole simulation cannot impose it from notation. alpha proportional to exp[2pi(t-t*)/beta] is a model- and perturbation-dependent shift estimate. Its sign, energy and background determine its effect. A positive shock may spoil transmission in a specified setup; this does not prove literal topological disconnection into two isolated universes.",
+      "equation": "No complete standalone equation is supplied for this audit item.",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A4",
+          "title": "Gao, Jafferis and Wall, Traversable Wormholes via a Double Trace Deformation",
+          "url": "https://arxiv.org/abs/1608.05687"
+        },
+        {
+          "id": "A13",
+          "title": "Maldacena, Shenker and Stanford, A bound on chaos",
+          "url": "https://arxiv.org/abs/1503.01409"
+        },
+        {
+          "id": "A14",
+          "title": "Iyer and Vishveshwara, A General Treatment of Orbiting Gyroscope Precession",
+          "url": "https://arxiv.org/abs/gr-qc/9909054"
+        }
+      ]
+    },
+    {
+      "id": "A32",
+      "sourcePage": 7,
+      "pages": [
+        7
+      ],
+      "title": "stress from arithmetic latency",
+      "disposition": "unestablished",
+      "dispositionTags": [
+        "UNESTABLISHED"
+      ],
+      "originalAuditHeading": "A32 - UNESTABLISHED: stress from arithmetic latency",
+      "explanation": "T_mu nu=kappa Xi_mu nu(deconf) is an undefined constitutive proposal. Xi has no operational definition, covariance law, units, conservation equation, measured coefficient or derivation. It cannot replace a stress-energy tensor in Einstein equations without those properties, including covariant conservation. Algorithmic computation time is not gravitational proper time.",
+      "equation": "No complete standalone equation is supplied for this audit item.",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A4",
+          "title": "Gao, Jafferis and Wall, Traversable Wormholes via a Double Trace Deformation",
+          "url": "https://arxiv.org/abs/1608.05687"
+        },
+        {
+          "id": "A13",
+          "title": "Maldacena, Shenker and Stanford, A bound on chaos",
+          "url": "https://arxiv.org/abs/1503.01409"
+        },
+        {
+          "id": "A14",
+          "title": "Iyer and Vishveshwara, A General Treatment of Orbiting Gyroscope Precession",
+          "url": "https://arxiv.org/abs/gr-qc/9909054"
+        }
+      ]
+    },
+    {
+      "id": "A33",
+      "sourcePage": 7,
+      "pages": [
+        7
+      ],
+      "title": "Lense-Thirring phase",
+      "disposition": "corrected",
+      "dispositionTags": [
+        "CORRECT"
+      ],
+      "originalAuditHeading": "A33 - CORRECT scope: Lense-Thirring phase",
+      "explanation": "2GJ/(c^2 r^3) has angular-frequency units and can set a weak-field precession scale. The actual precession vector depends on orientation and trajectory. A phase needs a specified clock/spin/interferometer and integration along its path. The report's loop-integral equality lacks normalization and path dependence. Delta t_eff=tau_prop(1+eta_lag) is an uncalibrated hypothesis; it is not part of established frame dragging.",
+      "equation": "\\Omega_{\\rm LT,scale}=\\frac{2GJ}{c^2r^3},\\qquad\\Delta\\phi=\\int\\Omega_{\\rm observable}(\\tau)\\,d\\tau",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "\\Omega_{\\rm LT,scale}=\\frac{2GJ}{c^2r^3},\\qquad\\Delta\\phi=\\int\\Omega_{\\rm observable}(\\tau)\\,d\\tau"
+      ],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A4",
+          "title": "Gao, Jafferis and Wall, Traversable Wormholes via a Double Trace Deformation",
+          "url": "https://arxiv.org/abs/1608.05687"
+        },
+        {
+          "id": "A13",
+          "title": "Maldacena, Shenker and Stanford, A bound on chaos",
+          "url": "https://arxiv.org/abs/1503.01409"
+        },
+        {
+          "id": "A14",
+          "title": "Iyer and Vishveshwara, A General Treatment of Orbiting Gyroscope Precession",
+          "url": "https://arxiv.org/abs/gr-qc/9909054"
+        }
+      ],
+      "correctedEquation": "\\Omega_{\\rm LT,scale}=\\frac{2GJ}{c^2r^3},\\qquad\\Delta\\phi=\\int\\Omega_{\\rm observable}(\\tau)\\,d\\tau",
+      "correctedEquationUnits": "As stated in the audit; assumptions and suppressed constants must be restored before a physical implementation."
+    },
+    {
+      "id": "A34",
+      "sourcePage": 7,
+      "pages": [
+        7
+      ],
+      "title": "path integral and nonfactorization (p7)",
+      "disposition": "conditional",
+      "dispositionTags": [
+        "CONDITIONAL"
+      ],
+      "originalAuditHeading": "A34 - CONDITIONAL: path integral and nonfactorization (p7)",
+      "explanation": "The integral Z(B1,B2)=integral Dg exp(-S_EH) is schematic. A Euclidean form needs I_E/hbar, matter, boundary terms, gauge fixing, topology class and measure; a Lorentzian form uses exp(iS/hbar). A two-geometry theory also needs its chosen action. Nonfactorizing contributions can occur in particular models; the displayed inequality is not universal and supplies no evolution algorithm. In two dimensions the Einstein-Hilbert term alone is topological; a JT model requires its dilaton and boundary terms.",
+      "equation": "No complete standalone equation is supplied for this audit item.",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A15",
+          "title": "Brown, Feynman Amplitudes and Cosmic Galois group",
+          "url": "https://arxiv.org/abs/1512.06409"
+        },
+        {
+          "id": "A16",
+          "title": "Figueroa and Gracia-Bondia, Combinatorial Hopf algebras in quantum field theory I",
+          "url": "https://arxiv.org/abs/hep-th/0408145"
+        },
+        {
+          "id": "A17",
+          "title": "Lindblad, On the generators of quantum dynamical semigroups",
+          "url": "https://doi.org/10.1007/BF01608499"
+        }
+      ]
+    },
+    {
+      "id": "A35",
+      "sourcePage": 8,
+      "pages": [
+        8
+      ],
+      "title": "Hopf-algebra attribution (p8)",
+      "disposition": "corrected",
+      "dispositionTags": [
+        "CORRECT"
+      ],
+      "originalAuditHeading": "A35 - CORRECT: Hopf-algebra attribution (p8)",
+      "explanation": "The schematic sum over subobjects tensor contracted quotient resembles a graph-renormalization coproduct. It is not a defined Faa di Bruno coproduct, which concerns composition of formal series and its partitions. W_g,n and the allowed W_sub are not defined. Neither schematic formula proves that physical topology changes are caused by a coproduct operation.",
+      "equation": "No complete standalone equation is supplied for this audit item.",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A15",
+          "title": "Brown, Feynman Amplitudes and Cosmic Galois group",
+          "url": "https://arxiv.org/abs/1512.06409"
+        },
+        {
+          "id": "A16",
+          "title": "Figueroa and Gracia-Bondia, Combinatorial Hopf algebras in quantum field theory I",
+          "url": "https://arxiv.org/abs/hep-th/0408145"
+        },
+        {
+          "id": "A17",
+          "title": "Lindblad, On the generators of quantum dynamical semigroups",
+          "url": "https://doi.org/10.1007/BF01608499"
+        }
+      ]
+    },
+    {
+      "id": "A36",
+      "sourcePage": 8,
+      "pages": [
+        8
+      ],
+      "title": "Cosmic Galois group identification (p8)",
+      "disposition": "corrected",
+      "dispositionTags": [
+        "CORRECT"
+      ],
+      "originalAuditHeading": "A36 - CORRECT: Cosmic Galois group identification (p8)",
+      "explanation": "Motivic/cosmic Galois constructions acting on periods are not automatically a subgroup of the absolute arithmetic group Gal(Qbar/Q). One must specify the category, representation and relation; the report does not. Arithmetic field automorphisms are not automatically completely positive quantum channels or transformations between Lorentzian geometries.",
+      "equation": "No complete standalone equation is supplied for this audit item.",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A15",
+          "title": "Brown, Feynman Amplitudes and Cosmic Galois group",
+          "url": "https://arxiv.org/abs/1512.06409"
+        },
+        {
+          "id": "A16",
+          "title": "Figueroa and Gracia-Bondia, Combinatorial Hopf algebras in quantum field theory I",
+          "url": "https://arxiv.org/abs/hep-th/0408145"
+        },
+        {
+          "id": "A17",
+          "title": "Lindblad, On the generators of quantum dynamical semigroups",
+          "url": "https://doi.org/10.1007/BF01608499"
+        }
+      ]
+    },
+    {
+      "id": "A37",
+      "sourcePage": 8,
+      "pages": [
+        8
+      ],
+      "title": "master equation (p8)",
+      "disposition": "unestablished",
+      "dispositionTags": [
+        "CORRECT",
+        "UNESTABLISHED"
+      ],
+      "originalAuditHeading": "A37 - CORRECT / UNESTABLISHED: master equation (p8)",
+      "explanation": "A scalar derivative of <O> cannot equal the displayed operator-valued RHS. Expectations and explicit time derivatives are missing; hbar is suppressed. An infinite group sum needs a measure/convergence and defined nonnegative rates. A mathematically consistent finite random-unitary example is below, only if H is self-adjoint, Gamma_s>=0 and each U_s unitary. This is a repair example, not a recovered Cosmic Galois or topology-change law.",
+      "equation": "\\dot\\rho=-\\frac{i}{\\hbar}[H,\\rho]+\\sum_s\\Gamma_s(U_s\\rho U_s^\\dagger-\\rho)\n\\frac{d\\langle O\\rangle}{dt}=\\left\\langle\\partial_tO+\\frac{i}{\\hbar}[H,O]+\\sum_s\\Gamma_s(U_s^\\dagger O U_s-O)\\right\\rangle",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [
+        "\\dot\\rho=-\\frac{i}{\\hbar}[H,\\rho]+\\sum_s\\Gamma_s(U_s\\rho U_s^\\dagger-\\rho)",
+        "\\frac{d\\langle O\\rangle}{dt}=\\left\\langle\\partial_tO+\\frac{i}{\\hbar}[H,O]+\\sum_s\\Gamma_s(U_s^\\dagger O U_s-O)\\right\\rangle"
+      ],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A15",
+          "title": "Brown, Feynman Amplitudes and Cosmic Galois group",
+          "url": "https://arxiv.org/abs/1512.06409"
+        },
+        {
+          "id": "A16",
+          "title": "Figueroa and Gracia-Bondia, Combinatorial Hopf algebras in quantum field theory I",
+          "url": "https://arxiv.org/abs/hep-th/0408145"
+        },
+        {
+          "id": "A17",
+          "title": "Lindblad, On the generators of quantum dynamical semigroups",
+          "url": "https://doi.org/10.1007/BF01608499"
+        }
+      ],
+      "correctedEquation": "\\dot\\rho=-\\frac{i}{\\hbar}[H,\\rho]+\\sum_s\\Gamma_s(U_s\\rho U_s^\\dagger-\\rho)\n\\frac{d\\langle O\\rangle}{dt}=\\left\\langle\\partial_tO+\\frac{i}{\\hbar}[H,O]+\\sum_s\\Gamma_s(U_s^\\dagger O U_s-O)\\right\\rangle",
+      "correctedEquationUnits": "As stated in the audit; assumptions and suppressed constants must be restored before a physical implementation."
+    },
+    {
+      "id": "A38",
+      "sourcePage": 8,
+      "pages": [
+        8,
+        9
+      ],
+      "title": "Summary table audited in full (pp8-9)",
+      "disposition": "summary",
+      "dispositionTags": [
+        "SUMMARY"
+      ],
+      "originalAuditHeading": "A38 - Summary table audited in full (pp8-9)",
+      "explanation": "GR: mass and expansions are diagnostics, not a causal classification alone. Thin shells: corrected potential needs EOS/conservation. Magnetic vortex: LLGS does not derive an event horizon. Arithmetic bulk: the displayed Schrodinger form is not diffusion. Tensor networks: entropy/cuts need a gravitational dictionary and specified dynamics. Topology change, including the last row on page 9: no verified transition law is provided. There are no additional equations or evidence on page 9.",
+      "equation": "No complete standalone equation is supplied for this audit item.",
+      "equationBasis": "Audited retained/corrected expression, c=1 where stated; not a verbatim quotation of the source PDF.",
+      "equations": [],
+      "scope": "Provenance/reference only; no unverified coupling to the physical field evolution.",
+      "application": "reference-only",
+      "calculators": [],
+      "references": [
+        {
+          "id": "A15",
+          "title": "Brown, Feynman Amplitudes and Cosmic Galois group",
+          "url": "https://arxiv.org/abs/1512.06409"
+        },
+        {
+          "id": "A16",
+          "title": "Figueroa and Gracia-Bondia, Combinatorial Hopf algebras in quantum field theory I",
+          "url": "https://arxiv.org/abs/hep-th/0408145"
+        },
+        {
+          "id": "A17",
+          "title": "Lindblad, On the generators of quantum dynamical semigroups",
+          "url": "https://doi.org/10.1007/BF01608499"
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "A1",
+      "title": "Morris and Thorne (1988), Wormholes in spacetime and their use for interstellar travel",
+      "url": "https://doi.org/10.1119/1.15620"
+    },
+    {
+      "id": "A2",
+      "title": "Hayward, Dynamic wormholes",
+      "url": "https://arxiv.org/abs/gr-qc/9805019"
+    },
+    {
+      "id": "A3",
+      "title": "Hochberg and Visser, The null energy condition in dynamic wormholes",
+      "url": "https://arxiv.org/abs/gr-qc/9802048"
+    },
+    {
+      "id": "A4",
+      "title": "Gao, Jafferis and Wall, Traversable Wormholes via a Double Trace Deformation",
+      "url": "https://arxiv.org/abs/1608.05687"
+    },
+    {
+      "id": "A5",
+      "title": "Poisson and Visser, Thin-shell wormholes: Linearization stability",
+      "url": "https://arxiv.org/abs/gr-qc/9506083"
+    },
+    {
+      "id": "A6",
+      "title": "Dordevic, Molina and Juricic (2026), Wormhole Geometry from a Magnetic Vortex",
+      "url": "https://arxiv.org/html/2608.12285v1"
+    },
+    {
+      "id": "A7",
+      "title": "OOMMF developers, Oxs_Evolver documentation (LLG and field conventions)",
+      "url": "https://math.nist.gov/oommf/doc/userguide21a0/userguide/Evolvers.html"
+    },
+    {
+      "id": "A8",
+      "title": "Gubser et al., p-adic AdS/CFT",
+      "url": "https://arxiv.org/abs/1605.01061"
+    },
+    {
+      "id": "A9",
+      "title": "Complex-network p-adic evolution paper (Vladimirov normalization)",
+      "url": "https://doi.org/10.1007/s11868-025-00693-8"
+    },
+    {
+      "id": "A10",
+      "title": "Stacks Project, Section 59.56, proof of Lemma 59.56.5 (finite Galois splitting)",
+      "url": "https://stacks.math.columbia.edu/tag/03QW"
+    },
+    {
+      "id": "A11",
+      "title": "Helwig and Cui, Absolutely Maximally Entangled States: Existence and Applications",
+      "url": "https://arxiv.org/abs/1306.2536"
+    },
+    {
+      "id": "A12",
+      "title": "Pastawski et al., Holographic quantum error-correcting codes",
+      "url": "https://arxiv.org/abs/1503.06237"
+    },
+    {
+      "id": "A13",
+      "title": "Maldacena, Shenker and Stanford, A bound on chaos",
+      "url": "https://arxiv.org/abs/1503.01409"
+    },
+    {
+      "id": "A14",
+      "title": "Iyer and Vishveshwara, A General Treatment of Orbiting Gyroscope Precession",
+      "url": "https://arxiv.org/abs/gr-qc/9909054"
+    },
+    {
+      "id": "A15",
+      "title": "Brown, Feynman Amplitudes and Cosmic Galois group",
+      "url": "https://arxiv.org/abs/1512.06409"
+    },
+    {
+      "id": "A16",
+      "title": "Figueroa and Gracia-Bondia, Combinatorial Hopf algebras in quantum field theory I",
+      "url": "https://arxiv.org/abs/hep-th/0408145"
+    },
+    {
+      "id": "A17",
+      "title": "Lindblad, On the generators of quantum dynamical semigroups",
+      "url": "https://doi.org/10.1007/BF01608499"
+    },
+    {
+      "id": "A18",
+      "title": "Reall, Black Holes lecture notes, section 5.3 (causal definition)",
+      "url": "https://www.damtp.cam.ac.uk/user/hsr1000/black_holes_lectures_2024.pdf"
+    },
+    {
+      "id": "A19",
+      "title": "Hayward, Gravitational Energy in Spherical Symmetry (Misner-Sharp mass)",
+      "url": "https://arxiv.org/abs/gr-qc/9408002"
+    },
+    {
+      "id": "A20",
+      "title": "Hayward, General laws of black-hole dynamics (outer trapping definition)",
+      "url": "https://arxiv.org/abs/gr-qc/9303006"
+    },
+    {
+      "id": "A21",
+      "title": "Visser, Acoustic black holes: horizons, ergospheres and Hawking radiation",
+      "url": "https://arxiv.org/abs/gr-qc/9712010"
+    },
+    {
+      "id": "A22",
+      "title": "Shenker and Stanford, Black holes and the butterfly effect",
+      "url": "https://arxiv.org/abs/1306.0622"
+    },
+    {
+      "id": "A23",
+      "title": "Saad, Shenker and Stanford, JT gravity as a matrix integral",
+      "url": "https://arxiv.org/abs/1903.11115"
+    }
+  ]
+}

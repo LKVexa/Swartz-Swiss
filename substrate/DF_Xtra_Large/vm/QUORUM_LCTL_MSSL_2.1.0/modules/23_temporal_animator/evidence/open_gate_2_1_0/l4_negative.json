@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "95b4c082269454a0a7f1a593ea190e9ceb76dc6dcbed32cfeaf21d59519771a5",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Temporal Animator",
+  "module_id": 23,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

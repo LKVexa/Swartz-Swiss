@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080f18">
+  <title>GFM Phase Texture Console · JA21</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./phase-controls.css">
+  <link rel="stylesheet" href="./phase-app.css">
+  <script src="./renderer.js" defer></script>
+  <script src="./local-backend.js" defer></script>
+<script src="./app.js" defer></script>
+  <script src="./phase-view.js" defer></script>
+  <script src="./phase-app.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="wordmark" href="./" aria-label="GFM observatory home"><span class="mark">◉</span><span>GFM<span class="wordmark-sub">JA21 RESEARCH CONSOLE</span></span></a>
+  <div class="page-title"><h1>Phase <span>/</span> Texture</h1><p>Matter · plasma · electromagnetism · GFM</p></div>
+  <div class="header-actions"><span class="hypothesis">RESEARCH PROTOTYPE</span><a href="../vendor/terminal/index.html" target="_blank" rel="noopener">GFM terminal ↗</a></div>
+</header>
+<main>
+  <aside class="console">
+    <div class="console-heading"><span class="eyebrow">EXPERIMENT CONTROLS</span><span id="connection" role="status" class="connection pending">Connecting</span></div>
+    <div id="error-message" class="error-message" role="alert" hidden></div>
+    <fieldset id="controls" disabled>
+      <label class="slider-label" for="spin"><span>Shared spin</span><output id="spin-value" for="spin">—</output></label>
+      <input id="spin" type="range" min="0" max="1" step="0.005" value="0.99">
+      <div class="range-labels"><span>0 · stationary</span><span>1 · extremal</span></div>
+      <p class="control-note">Both branches have the same spin ratio a/M.</p>
+      <label class="slider-label" for="cover"><span>Aggie cover load</span><output id="cover-value" for="cover">—</output></label>
+      <input id="cover" class="amber" type="range" min="0" max="3" step="0.025" value="2">
+      <div class="range-labels"><span>0 · bare</span><span>3 · covered</span></div>
+      <p class="control-note">The cover seals at load ≥ 1 toy mass unit.</p>
+      <label class="slider-label" for="critical"><span>Critical spin</span><output id="critical-value" for="critical">—</output></label>
+      <input id="critical" type="range" min="0" max="0.99" step="0.005" value="0.8">
+      <p class="control-note">The aperture opens only above this threshold.</p>
+      <div class="playback"><button id="play" class="primary">Pause</button><button id="step">Step</button><button id="reset" aria-label="Reset the experiment">Reset</button></div>
+      <button id="demo" class="demo-button">▶ Run two-branch example <span>12 s</span></button>
+      <p class="demo-caption" id="demo-caption">Remove the cover, then lower spin to close both apertures.</p>
+    </fieldset>
+    <section class="physics-controls" aria-labelledby="physics-controls-heading">
+      <h3 id="physics-controls-heading">Light-path experiment</h3>
+      <label class="slider-label" for="inclination"><span>Viewing inclination</span><output id="inclination-value">60°</output></label>
+      <input id="inclination" type="range" min="15" max="165" step="5" value="60">
+      <p class="control-note">Sets the starting polar angle of the ray bundle. The orbit camera changes the display only.</p>
+      <label class="select-label" for="accuracy">Numerical accuracy</label>
+      <select id="accuracy"><option value="1e-5">Preview · tolerance 10⁻⁵</option><option value="1e-7" selected>Research · tolerance 10⁻⁷</option><option value="1e-9">Refined · tolerance 10⁻⁹</option></select>
+      <label class="select-label" for="ray-count">Ray bundle</label>
+      <select id="ray-count"><option value="16" selected>16 light paths</option><option value="32">32 light paths</option></select>
+      <p class="control-note">Adaptive integration runs in the backend. The disk glow is illustrative; the light paths are calculated.</p>
+      <a class="physics-export" href="./api/physics-export.json" download>Export full light paths + diagnostics ↓</a>
+    </section>
+    <div class="readout"><div><span class="eyebrow">SIMULATION CLOCK</span><strong id="clock">—</strong><small>seconds · illustrative playback</small></div><span class="clock-glyph">◷</span></div>
+    <div class="equation-card"><span class="eyebrow">ACTIVE APERTURE RULE</span><p>r<sub>A</sub> = r<sub>0</sub> √(1 − (α<sub>c</sub>/α)²)</p><small>For α &gt; α<sub>c</sub>; otherwise r<sub>A</sub> = 0.</small></div>
+    <div class="reference-readouts"><div><span>Outer horizon r<sub>+</sub></span><strong id="rplus">—</strong></div><div><span>Horizon angular velocity Ω<sub>H</sub></span><strong id="omega">—</strong></div><p>Stationary Kerr reference · M = 1, Q = 0 · geometrized units</p></div>
+    <div class="export-actions"><a id="export-json" href="./api/export.json" download>Export run JSON ↓</a><a id="export-csv" href="./api/export.csv" download>CSV ↓</a></div>
+  </aside>
+  <section class="workspace">
+<!-- Integration fragment: backend actions belong to app.js. The view binds
+     data-phase-mode/vectors/defects only; all field colors encode real cells. -->
+<section class="phase-lab" id="phase-lab" aria-labelledby="phase-heading">
+  <header class="phase-heading">
+    <div><span class="eyebrow">LOCAL FIELD LAB · PERIODIC PLASMA BOX</span><h2 id="phase-heading">Structure in the fields</h2><p>Calculated cells, complex phase and magnetic structure. A separate iron enthalpy lab shows material fractions.</p></div>
+    <span id="phase-live-status" class="phase-live-status" role="status">Waiting for calculated fields</span>
+  </header>
+  <div class="phase-toolbar">
+    <label for="phase-mode">Field view<select id="phase-mode" data-phase-mode>
+      <option value="phase">Complex phase + amplitude</option><option value="amplitude">Order-parameter amplitude</option>
+      <option value="density">Plasma density</option><option value="temperature">Plasma temperature · K</option>
+      <option value="magnetic">Magnetic strength</option><option value="magneticPhase">Magnetic direction + strength</option>
+      <option value="ionization">Hydrogen ionization estimate</option><option value="material">Iron material fractions · separate lab</option>
+    </select></label>
+    <div class="phase-overlay-controls"><label><input id="phase-vectors" type="checkbox" checked data-phase-vectors> Magnetic vectors</label><label><input id="phase-defects" type="checkbox" checked data-phase-defects> <span data-phase-defect-label>Complex phase defects</span></label></div>
+    <div class="phase-actions"><button id="phase-play" class="primary">Play fields</button><button id="phase-step">Step</button><button id="phase-reset">Reset fields</button><a id="phase-export" href="./api/phase/export.json" download>Export fields ↓</a></div>
+  </div>
+  <div class="phase-parameters" aria-label="Phase and matter controls">
+<label>Plasma flow speed · normalized<input data-phase-parameter="flowSpeed" type="range" min="0" max="0.8" step="0.01" value="0.3"><output>0.3</output></label>
+<label>Magnetic field scale · normalized<input data-phase-parameter="magneticStrength" type="range" min="0" max="1" step="0.01" value="0.4"><output>0.4</output></label>
+<label>Magnetic diffusivity · normalized<input data-phase-parameter="resistivity" type="range" min="0" max="0.03" step="0.001" value="0.003"><output>0.003</output></label>
+<label>Plasma temperature scale · K<input data-phase-parameter="temperatureScaleK" type="range" min="5000" max="60000" step="1000" value="20000"><output>20000</output></label>
+<label>Complex phase thermal coupling<input data-phase-parameter="phaseThermalCoupling" type="range" min="0" max="0.5" step="0.01" value="0.15"><output>0.15</output></label>
+<label>Iron reference heating · W/kg<input data-phase-parameter="ironHeatingWkg" type="range" min="0" max="100000" step="1000" value="4000"><output>4000</output></label>
+<p class="phase-parameter-note">Changing a field parameter starts a repeatable initial condition at local time zero. Plasma controls act on the local periodic box; iron heating acts on the separate material lab. Spin and cover remain controls for the aperture hypothesis below.</p>
+</div>
+<div class="phase-workspace">
+    <div class="phase-plot"><canvas id="phase-field" tabindex="0" aria-label="Calculated local field cells; select a view, point to inspect a cell, or use arrow keys"></canvas><p>Hover or tap a cell to inspect its values · arrow keys move the probe · colors use the displayed scale</p></div>
+    <aside class="phase-readouts" aria-label="Local field scientific readouts">
+      <div class="phase-summary"><article><span>LOCAL TIME</span><strong data-phase-info="time">—</strong></article><article><span>GRID / BOUNDARY</span><strong data-phase-info="grid">—</strong></article><article><span>DISPLAYED FIELD</span><strong data-phase-info="mode">—</strong></article><article><span>COLOR SCALE</span><strong data-phase-info="range">—</strong></article></div>
+      <div class="phase-diagnostics"><span class="eyebrow">NUMERICAL DIAGNOSTICS</span><p data-phase-info="diagnostics">Waiting for a field frame.</p></div>
+      <div class="phase-probe"><span class="eyebrow">CELL PROBE · ACTUAL VALUES</span><pre data-phase-info="probe">Point to a calculated cell.</pre></div>
+      <div class="phase-scope"><span class="eyebrow">MODEL / UNITS</span><p data-phase-info="scope">The complex order parameter is phenomenological. Material fractions belong to a separate iron reference lab. Neither view models black-hole formation.</p></div>
+    </aside>
+  </div>
+<div id="phase-transform" class="phase-transform">Waiting for GFM samples</div>
+</section>
+
+<section class="observation-panel" aria-labelledby="observations-heading"><span class="eyebrow">OBSERVATION COMPARISON · M87 · EHT 2011–2013</span><h2 id="observations-heading">Let the data challenge the model</h2><span id="observation-result" class="result" role="status">Loading published measurements</span><p id="observation-counts"></p><table><thead><tr><th>Reference model</th><th>Angular scale</th><th>Compact flux</th><th>Training RMS</th><th>Held-out RMS</th><th>Within 3σ</th></tr></thead><tbody id="observation-rows"></tbody></table><canvas id="observation-chart" aria-label="EHT 2013 published amplitudes with error bars and frozen ring predictions"></canvas><p id="observation-scope"></p><p><a href="./observation-report.json" download>Download every prediction and residual ↓</a> · <a href="https://github.com/eventhorizontelescope/2020-D03-01" target="_blank" rel="noopener">Official source release ↗</a></p></section><div class="reference-heading"><span class="eyebrow">3D REFERENCE / HYPOTHESIS COMPARISON</span><h2>Kerr light paths and aperture branches</h2><p>The local phase box above has its own equations and boundary conditions. This 3D reference keeps physical Kerr rays and speculative aperture rules visible.</p></div>
+    <div class="stage-heading"><div><span class="eyebrow">SHARED PHYSICS · TESTABLE DIFFERENCES</span><h2>Follow the light. Test the model.</h2></div><button id="camera-reset" class="camera-button" aria-label="Reset the 3D camera">Reset view</button></div>
+    <div class="view-toolbar"><div class="view-switch" role="group" aria-label="3D model view"><button id="view-physics" aria-pressed="true">Physical exterior</button><button id="view-hypothesis" aria-pressed="false">Aperture hypothesis</button></div><span id="physics-status" role="status">Preparing light paths</span></div>
+    <div class="stage physics-mode" id="stage">
+      <canvas id="universe" aria-label="Interactive 3D comparison of the hypothetical gaseous aperture and aggie cover" tabindex="0"></canvas>
+      <div id="renderer-error" class="renderer-error" hidden></div>
+      <div class="branch-label gaseous"><span class="branch-index">01</span><div><h3 id="gas-title">Gaseous branch</h3><p id="gas-subtitle">Matched Kerr exterior</p></div><span id="gas-status" class="state-chip">—</span></div>
+      <div class="branch-label aggie"><span class="branch-index">02</span><div><h3 id="aggie-title">Aggie branch</h3><p id="aggie-subtitle">Matched Kerr exterior</p></div><span id="aggie-status" class="state-chip amber-chip">—</span></div>
+      <div class="stage-divider"></div>
+      <div class="branch-metric metric-gas"><span>APERTURE RADIUS</span><strong id="gas-radius">—</strong><small>toy length units</small><div>Passage indicator <b id="gas-passage">—</b></div></div>
+      <div class="branch-metric metric-aggie"><span>APERTURE RADIUS</span><strong id="aggie-radius">—</strong><small>toy length units</small><div>Passage indicator <b id="aggie-passage">—</b> <i>·</i> Cover <b id="aggie-cover">—</b></div></div>
+      <span class="view-help">Drag to orbit · scroll to zoom · same camera for both branches</span>
+      <span class="schematic" id="geometry-label">COORDINATE EMBEDDING · ILLUSTRATIVE DISK</span>
+    </div>
+    <p class="physics-caption" id="physics-caption">Both views share the same Kerr spacetime. Calculated light paths cannot reveal a hidden cover when exterior physics is identical.</p>
+    <section class="science-strip" aria-label="Numerical light-path diagnostics">
+      <article><span>LIGHT PATHS</span><strong id="physics-count">—</strong><small id="physics-outcomes">Waiting for calculation</small></article>
+      <article><span>NULL CONSTRAINT ERROR</span><strong id="physics-null">—</strong><small>Normalized residual · lower is better</small></article>
+      <article><span>RADIAL / POLAR ERROR</span><strong id="physics-integrals">—</strong><small>First-integral residuals</small></article>
+      <article><span>COMPUTE TIME</span><strong id="physics-runtime">—</strong><small>Adaptive RK45 · backend worker</small></article>
+    </section>
+    <p id="physics-validity" class="numerical-note">Numerical criteria and stopping diagnostics appear after calculation.</p>
+    <div class="observation-bar"><span class="observation-icon">◎</span><p id="observation">Waiting for the shared exterior comparison…</p><span id="frame-counter">FRAME —</span></div>
+    <section class="data-panel">
+      <div class="data-heading"><div class="tabs" role="tablist" aria-label="Live data views"><button id="tab-timeline" role="tab" aria-selected="true" aria-controls="panel-timeline" data-panel="timeline">Live timeline</button><button id="tab-gfm" role="tab" aria-selected="false" aria-controls="panel-gfm" data-panel="gfm" tabindex="-1">GFM data</button><button id="tab-equations" role="tab" aria-selected="false" aria-controls="panel-equations" data-panel="equations" tabindex="-1">Model &amp; equations</button><button id="tab-validation" role="tab" aria-selected="false" aria-controls="panel-validation" data-panel="validation" tabindex="-1">Credibility</button></div><span class="data-badge" id="data-badge">Waiting for backend</span></div>
+      <div id="panel-timeline" role="tabpanel" aria-labelledby="tab-timeline"><div class="chart-legend"><span class="teal-key">Aperture radius</span><span class="amber-key">Cover load</span><span class="chart-note">Recorded parameter experiment · independent vertical scales</span></div><canvas id="timeline" aria-label="Live graph of aperture radius and cover loading over simulation time"></canvas><p class="chart-footer">The playback clock animates a scripted parameter experiment. It does not calculate formation, accretion, or particle trajectories.</p></div>
+      <div id="panel-gfm" role="tabpanel" aria-labelledby="tab-gfm" hidden><div class="gfm-summary"><div><span>FIELD</span><strong>GF9</strong></div><div><span>SIGNAL ENERGY</span><strong id="signal-energy">—</strong></div><div><span>INVERSE RECOVERY ERROR</span><strong id="recovery-error">—</strong></div><div><span>CHECKS</span><strong id="checks">—</strong></div></div><p class="table-scope">Aperture radius sampled across spin α = 0…1. These nine nodes are a spin sweep, separate from the currently selected spin. Coefficients use the same integer labels and are not radii at those nodes.</p><div class="table-wrap"><table><thead><tr><th>Label x / k</th><th>Input spin α<sub>x</sub></th><th>Raw r<sub>A</sub>(α<sub>x</sub>)</th><th>Re y<sub>k</sub></th><th>Im y<sub>k</sub></th><th>Recovered r<sub>A</sub></th></tr></thead><tbody id="gfm-rows"></tbody></table></div></div>
+      <div id="panel-equations" role="tabpanel" aria-labelledby="tab-equations" hidden><div class="equation-grid"><article><span class="eyebrow">HYPOTHESIS</span><h3>Aperture and cover</h3><p>α = a/M; r<sub>A</sub> = r<sub>0</sub>√(1 − (α<sub>c</sub>/α)²) for α &gt; α<sub>c</sub>.</p><p>C = 1 when L ≥ L<sub>seal</sub>; P = (1 − C) · 1[r<sub>A</sub> &gt; 0].</p><small>These assumed laws have no observational validation here. A passage indicator is not a calculated travel result.</small></article><article><span class="eyebrow">GFM REPRESENTATION</span><h3>Trace-character transform</h3><p>y<sub>k</sub> = ⅓ Σ<sub>x∈GF9</sub> f<sub>x</sub> exp(2πi Tr(kx)/3).</p><p>GF9 = GF3[α] / (α² + 1).</p><small>The field generator α is distinct from spin. The inverse uses negative phase. This transform does not alter spacetime or create missing information.</small></article><article><span class="eyebrow">RELATIVITY</span><h3>Neutral Kerr light paths</h3><p>Σ = r² + a² cos²θ; Δ = r² − 2Mr + a².</p><p>R = [E(r²+a²) − aL<sub>z</sub>]² − Δ[Q<sub>C</sub>+(L<sub>z</sub>−aE)²].</p><p>Θ = Q<sub>C</sub> + a²E²cos²θ − L<sub>z</sub>²cot²θ.</p><small>Carter's separated equations are integrated in Mino parameter. Q<sub>C</sub> is the Carter constant; electric charge is zero. G=c=M=1.</small></article><article><span class="eyebrow">NUMERICAL SCOPE</span><h3>Exterior test-light approximation</h3><p>Adaptive integration calculates light paths in a fixed Kerr metric. Both branches use the same exterior.</p><small>Rays stop at documented exterior horizon/polar guards or numerical limits. No plasma, evolving spacetime, radiative transfer, solid formation or wormhole metric is solved. The display is a coordinate embedding, not proper distance.</small></article></div></div>
+      <div id="panel-validation" role="tabpanel" aria-labelledby="tab-validation" hidden><div class="credibility-grid"><article><span class="eyebrow">ESTABLISHED MODEL</span><h3>Kerr exterior</h3><p>Analytic reference checks cover horizons and equatorial photon orbits. Numerical tests check geodesic first integrals and refinement.</p><p id="physics-benchmarks">Reference values appear when the solver finishes.</p></article><article><span class="eyebrow">WHAT EVIDENCE MEANS</span><h3>Verification and validation</h3><p>Automated tests and analytic comparisons check the implementation. External observational validation has not been performed for this application.</p><p>Near-critical or terminated rays can remain unresolved. The report preserves errors and stopping reasons.</p></article><article><span class="eyebrow">IDENTIFIABILITY</span><h3>Same observations, same likelihood</h3><p>If the branches produce identical observations, those observations cannot update their relative prior probabilities. A GFM transform cannot identify a cover from identical input.</p></article><article><span class="eyebrow">CREDIBILITY FRAMEWORK</span><h3>NASA modeling guidance</h3><p>Document intended use, assumptions, input pedigree, verification, validation, sensitivity and uncertainty.</p><a href="https://standards.nasa.gov/standard/NASA/NASA-STD-7009" target="_blank" rel="noopener">NASA-STD-7009B ↗</a><p>This prototype is not NASA-certified or approved.</p><a href="./api/provenance" target="_blank" rel="noopener">Inspect source hashes ↗</a></article></div></div>
+    </section>
+  </section>
+</main>
+<footer><span>GFM JA21 RESEARCH CONSOLE · v3.0.0</span><span>Computed light paths · documented assumptions · reproducible exports</span></footer>
+<noscript><div class="noscript">Enable JavaScript to use the interactive 3D simulator. Calculated example files are included in the project’s examples folder.</div></noscript>
+</body>
+</html>

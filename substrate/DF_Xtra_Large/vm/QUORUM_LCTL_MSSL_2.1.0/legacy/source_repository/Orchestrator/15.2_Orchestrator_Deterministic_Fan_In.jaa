@@ -1,0 +1,36 @@
+ja source 0.3
+module suite15.orchestrator.deterministic_fan_in
+use Agent
+policy no_network
+
+agent OrchestratorDeterministicFanIn {
+    identity "orchestrator_deterministic_fan_in"
+    role "sophia-charlotte-landon-professor-podium-orchestrator"
+    goal merge_results_deterministically when confidence >= 0.95
+    memory session retention 1h
+    budget steps 45 tools 5
+    tool LANDONCollectResults(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAAlignResults(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEVerifyReplay(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainFanIn(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordFanIn(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectResults
+        authorize SOPHIAAlignResults
+        authorize CHARLOTTEVerifyReplay
+        authorize ProfessorExplainFanIn
+        authorize PodiumRecordFanIn
+        continue when policy_allows
+        execute LANDONCollectResults("suite_results")
+        execute SOPHIAAlignResults("canonical_result_order")
+        execute CHARLOTTEVerifyReplay("aligned_results")
+        execute ProfessorExplainFanIn("verified_merge")
+        execute PodiumRecordFanIn("fan_in_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "OrchestratorDeterministicFanIn.mcrt"
+

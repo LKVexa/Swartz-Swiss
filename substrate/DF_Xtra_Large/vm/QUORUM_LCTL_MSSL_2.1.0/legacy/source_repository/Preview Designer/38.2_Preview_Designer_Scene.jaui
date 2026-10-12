@@ -1,0 +1,47 @@
+ja source 0.3
+module suite38.preview_designer.scene
+use Interface
+policy no_network
+
+interface PreviewDesignerScene {
+    state selected_scene: Text? = null
+    state opening_scene_preview: Flag = false
+    derived can_select_scene = not opening_scene_preview
+    derived can_open_scene_preview = selected_scene != null and not opening_scene_preview
+    component SOPHIA_ScenePreviewModel {
+        label "Interpret scene preview"
+        enabled bind can_open_scene_preview
+        accessibility role button name "Interpret selected scene preview"
+        action interpret_scene_preview requires admin.action:approved
+    }
+    component CHARLOTTE_ScenePreviewGate {
+        label "Validate scene review readiness"
+        enabled bind can_open_scene_preview
+        accessibility role button name "Validate selected scene review readiness"
+        action validate_scene_preview requires admin.action:approved
+    }
+    component LANDON_ScenePreviewOpen {
+        label "Open scene preview"
+        enabled bind can_open_scene_preview
+        accessibility role button name "Open selected deterministic scene preview"
+        action open_scene_preview requires admin.action:approved
+    }
+    component Professor_ScenePreviewGuide {
+        label "Explain scene preview"
+        enabled bind can_select_scene
+        accessibility role button name "Explain scene layers geometry and limitations"
+        action explain_scene_preview requires admin.action:approved
+    }
+    component Podium_ScenePreviewEvidence {
+        label "View scene preview evidence"
+        enabled bind can_open_scene_preview
+        accessibility role button name "View scene preview validation evidence"
+        action show_scene_preview_evidence requires admin.action:approved
+    }
+    component SceneReviewViewport {
+        embed portal.scene "preview_designer_scene"
+        motion bind timeline.scene_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface PreviewDesignerScene

@@ -1,0 +1,43 @@
+profile ja.service_protocol
+source_level 0.3
+
+subsuite Terminal.T_14 StandardStreamsMultiplexer {
+    identity { suite = "66"; id = "T-14"; deterministic = true; autorun = false }
+
+    accept { stdout_chunks[]; stderr_chunks[]; control_events[]; monotonic_clock }
+    emit { OrderedTerminalEventStream; StreamIndex }
+
+    record TerminalStreamEvent {
+        sequence
+        monotonic_time
+        stream_kind
+        byte_length
+        payload_ref
+        payload_hash
+        redaction_state
+    }
+
+    procedure begin_ordered_stream_capture() {
+        sequence = 0
+        open_append_only_raw_streams
+        open_append_only_event_index
+    }
+
+    procedure capture(stdout, stderr, control_events) {
+        for event in merge_by_capture_order(stdout, stderr, control_events) {
+            sequence += 1
+            append(seal(TerminalStreamEvent(event, sequence)))
+            enforce_log_and_output_quota
+        }
+    }
+
+    procedure seal_stream_index() {
+        require no_sequence_gap
+        emit merkle_root(ordered_event_hashes)
+    }
+
+    deny { stream_reordering; payload_mutation; silent_truncation; unmarked_redaction }
+    evidence { raw_stream_refs; event_index; truncation_markers; stream_merkle_root }
+    tests { interleaving; binary_bytes; unicode_split; quota; sequence_integrity; seal }
+}
+

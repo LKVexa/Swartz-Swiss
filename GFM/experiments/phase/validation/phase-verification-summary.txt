@@ -1,0 +1,95 @@
+Phase/MHD numerical verification and equation audit
+2026-10-11
+
+Verified source: backend/phase-mhd.js and byte-identical public/phase-mhd.js
+SHA256: 1a834a359572281279868c4dd29403b7a8dd13d2f386ccc9f214917048e30373
+Reproduce: node --test tests/phase-mhd.cjs
+Evidence: validation/phase-numerical-results.json
+Regenerate numerical evidence: node validation/phase-verification.cjs
+
+All 12 phase tests passed. The numerical references and observables are derived
+outside the solver RHS. Conservation, staggered divergence and energy/EOS
+reconstruction use exported face fields and conserved arrays rather than simply
+trusting the solver's diagnostic pass flag.
+
+Representative conservation and positivity cases:
+- Default n=32 evolved to t=0.3.
+- Ideal n=16 evolved to t=0.2.
+- Strong field/flow and diffusion n=16 evolved to t=0.04.
+Maximum independently measured relative mass residual: 8.89e-16.
+Maximum independently measured relative total-energy residual: 1.56e-15.
+Maximum staggered magnetic divergence: 5.66e-15.
+Momentum, passive concentration mass, EOS reconstruction, material partitions,
+positive density/pressure/material temperature and finite output all passed.
+
+Analytic refinement:
+- Uniform flow scalar sin(x-vt), n=16/32/64, t=0.4: RMS errors
+  0.016418, 0.0085395, 0.0043462; observed spatial orders 0.943, 0.974.
+- Scalar diffusion exp(-Dt)sin(x), D=0.05: RMS errors
+  0.013172, 0.0068226, 0.0034648; orders 0.949, 0.978.
+- Small-amplitude magnetic mode, eta=0.05, t=0.4: measured amplitude
+  ratios 0.932587, 0.955803, 0.967879 versus continuum 0.980199;
+  ratio-error orders 0.965, 0.986. Generated velocity stays below 1.46e-7.
+- Uniform complex cubic reaction: exact logistic amplitude and integrated
+  negative nonlinear phase rotation. Time steps 0.01/0.005/0.0025 give complex
+  errors 1.305e-7, 3.269e-8, 8.182e-9; orders 1.997, 1.998.
+
+Iron and phase topology:
+- Independent latent-heat enthalpy thresholds and partial fusion/vaporization
+  fractions pass, including temperature plateaus at 1811 K and 3134 K.
+- Uniform heating crosses solid, mixed fusion, liquid, mixed vaporization and
+  vapor states. Maximum independent source/enthalpy balance error: 4.66e-9 J/kg.
+- Periodic iron conduction mean enthalpy residual: 5.82e-11 J/kg.
+- cos(x+0.37)+i cos(y+0.53) produces the four analytic simple zeros with
+  Jacobian-sign charges, two positive/two negative, net winding zero.
+  Locations agree within the plaquette-resolution bound. Pi-edge samples
+  are explicitly flagged ambiguous.
+
+API and robustness:
+Invalid parameter objects, unknown/symbol keys, nonfinite/out-of-range values,
+accessor properties and invalid time intervals preserve the previous frame.
+Accessors are rejected without being invoked. Returned frames cannot modify the
+model. Identical step sequences, reset and valid parameter-reset experiments
+replay deterministically. Failed positivity steps restore physical fields and
+elapsed/accepted-step ledgers while exposing an error/rejection diagnostic.
+
+A real trusted-callback reset defect was found and fixed: initialization could
+previously replace parameters and partially replace state before a callback
+failure. setParameters/reset now restore the complete previous experiment on
+callback exceptions or invalid sampled states. Regression tests cover both.
+
+Equation audit:
+E_z=v_y B_x-v_x B_y+eta J_z with B_x,t=-d_y E_z and B_y,t=d_x E_z has the
+Faraday/Ohm damping signs. The shared corner curl preserves discrete divergence.
+The resistive conservative energy flux has x=-eta J_z B_y and y=eta J_z B_x,
+the correct E cross B signs. Viscous energy flux is -tau dot v and thermal flux
+is -k grad(p/rho). Periodic finite-volume sums telescope. Complex diffusion is
+D(1+i beta)laplacian(psi), and nonlinear frequency is -i omega|psi|^2 psi.
+The separate iron periodic enthalpy balance tracks heating/bath sources without
+subtracting them from MHD energy; it is a separate laboratory, not two-way matter
+coupling.
+
+Material limitations:
+First-order Rusanov/CT spatial diffusion is visible even at n=64 and can exceed
+the declared physical diffusion. RK2 temporal order does not establish second-
+order spatial accuracy. Global energy conservation and divB preservation do not
+establish an accurate local entropy or dissipative heating budget. Resolved
+Ohmic/viscous heating integrals are estimates, not exact physical heating totals.
+
+The solver is a local periodic, nonrelativistic 2D ideal-gas MHD model with fixed
+gamma=5/3 and mean molecular weight 0.5. It has no Kerr sources, radiation,
+accretion, horizon or solid-cover mechanics. Saha ionization is a diagnostic
+LTE reference and does not alter the fixed EOS. The neutral complex field has
+one-way phenomenological couplings; magnetic direction/winding does not imply
+flux quantization or a quantum condensate. Iron uses declared constant heat
+capacities, transition temperatures and latent heats; it has no pressure-
+dependent EOS, expansion or solid mechanics. These are numerical verification
+results, not empirical or astronomical validation.
+
+Primary reference context:
+Stone et al., Athena: A New Code for Astrophysical MHD (2008)
+https://arxiv.org/abs/0804.0402
+Gardiner and Stone, An Unsplit Godunov Method for Ideal MHD via CT (2005)
+https://arxiv.org/abs/astro-ph/0501557
+NIST-JANAF Iron thermochemical reference (external context, not a calibration)
+https://janaf.nist.gov/tables/Fe-003.html

@@ -1,0 +1,63 @@
+RUSSL Virtual Terminal application review — release 0.1 historical evidence
+
+Scope
+Reviewed the production src/app.js against the finite-field engine and the
+bounded workbench bridge. Added a dependency-free Node VM/DOM fixture in
+tests/app.test.cjs. The fixture runs production command parsing, model
+transforms, SHA-256 digesting, JSON downloads, and the import event handler.
+It replaces browser rendering and the external workbench with minimal DOM
+operations and bridge-validated protocol responses.
+
+Confirmed behavior
+- GF9 phase commands retain non-real complex amplitudes. The positive-sign
+  trace Fourier convention is reported explicitly, and its inverse recovers
+  the prior state.
+- Invalid labels, malformed state commands, unknown operations, and unknown
+  field IDs preserve the current small-field state and operation count.
+- Sequences stop on the first error and retain earlier completed operations.
+- Session exports restore their state, ledger, returns, and inert provenance.
+  Ledger-only exports use the same envelope but omit returns and provenance.
+- SHA-256 checks reject altered session data and altered record data. Even
+  rehashed envelopes reject incompatible field polynomials, Fourier signs,
+  character definitions, amplitude domains, and label conventions.
+- Valid GF80 capture/replay uses RUSSL-research-slice/1 and
+  RUSSL-research-result/1 with field GF(2^80). Word-mechanics requests do not
+  modify the finite-dimensional complex-amplitude state.
+
+Resolved findings
+1. Rejected overlong or non-string commands previously invalidated the next
+   session export. Rejected commands now use a bounded diagnostic string in
+   returns and provenance, while execution still rejects the original input.
+   The overlong/null command regression test confirms successful reimport.
+2. Imported GF80 snapshots previously passed with schema alone. The importer
+   now also requires a manifest object and an even-length hexadecimal
+   pixelPayloadHex, matching the bridge snapshot shape. Malformed-shape
+   regression cases now fail validation as intended. Hash integrity and
+   witness correctness remain separate checks; replay is still required.
+3. Small-field restoration previously awaited its integrity hash without
+   reserving the terminal, allowing another command to overlap the restore.
+   Restore now uses the serialized ledger.restore command path. Its success
+   or rejection returns a recorded result, completed restores appear in
+   export provenance, and the terminal stays busy through the pending hash.
+   The restoration regression test verifies these behaviors.
+
+Validation after the fixes
+node --test tests/app.test.cjs
+11 tests pass, including all regression checks. The complete engine,
+application, and bridge suite has 42 passing tests. Four additional artifact/source checks also pass (46 total).
+
+Verification limits
+These are production-source tests with a minimal DOM fixture, not rendered
+browser interaction or layout checks. The local browser preview could not
+be opened in this environment. This review does not claim that GF80 source
+witnesses were independently recomputed; that is handled by the preserved
+workbench adapter and its own verification.
+
+RELEASE 0.2 FOLLOW-UP
+The shared fixture now loads the production equation registry and refined
+modules. tests/equation-integration.test.cjs covers the new commands, Wigner
+rendering data, inert equation example insertion, separate scalar profiles,
+invalid-domain state preservation, runtime checks, equation exports and 0.1
+session compatibility. See validation/verification-summary.json for final
+counts. This remains a source/DOM fixture review rather than a browser render
+or live iframe review. Original 0.1 tests remain in the suite.

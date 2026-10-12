@@ -1,0 +1,46 @@
+{
+  "package": "BR-450-04",
+  "record": "BR.PackageRequirements",
+  "requirements": [
+    {
+      "evidence": [
+        "evidence/BR-450-04_audit.md",
+        "evidence/BR-450-04_tests.log"
+      ],
+      "id": "BR-450-04-R01",
+      "status": "OPERATIONAL",
+      "text": "Do not use CRC alone for trust decisions"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-04_audit.md",
+        "evidence/BR-450-04_tests.log"
+      ],
+      "id": "BR-450-04-R02",
+      "status": "OPERATIONAL",
+      "text": "Keep CRC for accidental corruption"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-04_audit.md",
+        "evidence/BR-450-04_tests.log"
+      ],
+      "id": "BR-450-04-R03",
+      "status": "OPERATIONAL",
+      "text": "Use cryptographic authentication for adversarial modification"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-04_audit.md",
+        "evidence/BR-450-04_tests.log"
+      ],
+      "id": "BR-450-04-R04",
+      "status": "OPERATIONAL",
+      "text": "Bind control record to image digest"
+    }
+  ],
+  "scope": "host-reference",
+  "status": "OPERATIONAL",
+  "title": "State authentication",
+  "workflow": "docs/WORKFLOW_APPLIED_4.5.0/04_BR-450-04_state_authentication_PROMPT_AND_WORKFLOW.md"
+}

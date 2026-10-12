@@ -1,0 +1,38 @@
+ja source 0.3
+module suite30.ja_adapter.reconstruction_emitter
+use Service
+policy explicit_network
+
+service JAAdapterReconstructionEmitter {
+    message ReconstructionEmitRequest {
+        request_id: Text,
+        canonical_record: Text,
+        canonical_hash: Text,
+        target_profile: Text,
+        feature_graph_id: Text,
+        scene_id: Text,
+        provenance_id: Text
+    }
+    message ReconstructionEmitResponse {
+        reconstruction_record: Text,
+        output_hash: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_adapter_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint emit_reconstruction(request: ReconstructionEmitRequest) -> Stream<ReconstructionEmitResponse>
+        auth capability ja_adapter.emit.reconstruction
+        deadline 25s
+        retry max 1
+        idempotency request.request_id
+    protocol ReconstructionEmitSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json JAAdapterReconstructionEmitter.compatibility_report

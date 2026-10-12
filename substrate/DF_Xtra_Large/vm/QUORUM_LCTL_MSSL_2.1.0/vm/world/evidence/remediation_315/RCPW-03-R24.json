@@ -1,0 +1,68 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "bc5db0295a532bb3087cdbc0f0015963b546ee0108282b7ef0966c79647737b0",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (VERSION_MIGRATION, FOLD_PROPERTY, SAVE_RECOVERY, MULTI_WORKER_CONFORMANCE, TRAVERSAL_PORTAL, AUTONOMOUS_HISTORY) plus Stage 03 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "AUTONOMOUS_HISTORY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "FOLD_PROPERTY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "MULTI_WORKER_CONFORMANCE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "SAVE_RECOVERY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "TRAVERSAL_PORTAL": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "VERSION_MIGRATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-01",
+    "GW-16",
+    "GW-25",
+    "GW-43",
+    "GW-51",
+    "GW-63"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T3_FABRIC",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Fold qualification includes partition-boundary traversal, policy hot-swap rollback, acceleration-structure rebuild, and worker-loss recovery.",
+  "requirement_id": "RCPW-03-R24",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 3,
+  "stage_title": "Fold Geometry Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "VERSION_MIGRATION",
+    "FOLD_PROPERTY",
+    "SAVE_RECOVERY",
+    "MULTI_WORKER_CONFORMANCE",
+    "TRAVERSAL_PORTAL",
+    "AUTONOMOUS_HISTORY"
+  ],
+  "workflow_file": "03_FOLD_GEOMETRY_AUTHORITY/038_RCPW_03_R24_FOLD_QUALIFICATION_INCLUDES_PARTITION_BOUNDARY_TRAVERSAL_POLICY_HOT_SWAP_ROLLBACK_ACC.md",
+  "workflow_tier": "T3_FABRIC"
+}

@@ -1,0 +1,27 @@
+ja source 0.3
+module suite55.capability_manifests_permissions.capabilities
+use Security
+policy no_network
+
+principal CapabilityManifestWorker
+role CapabilityPermissionEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant capability.manifest.evaluate:approved
+}
+resource CapabilityManifest classification restricted
+policy CapabilityManifestPolicy {
+    deny network.* by default
+    deny process.* by default
+    deny CapabilityManifest when principal.role != CapabilityPermissionEnsemble
+    allow CapabilityManifest when principal.role == CapabilityPermissionEnsemble
+    require human_approval for capability.manifest.publish
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "CapabilityManifestPolicy.decision.mcrt"

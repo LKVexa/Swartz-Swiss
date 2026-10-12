@@ -1,0 +1,32 @@
+{
+  "schema": "GFM-combined-ui-verification/1",
+  "version": "2.1.0",
+  "tests": 7,
+  "pass": 7,
+  "fail": 0,
+  "backend": "installed exact-source numerical worker",
+  "initialPreset": "covered-plasma",
+  "initialSeconds": 2e-9,
+  "fetchRequests": 0,
+  "missingDomIds": 0,
+  "nativeRasterizationVerified": false,
+  "verificationMethod": "Actual app startup, events, strict DOM lookup, actual numerical worker and stateful WebGL buffer submissions in a VM harness",
+  "checks": [
+    "Phase, plasma and cover sampled from one real covered frame",
+    "All three meshes submitted to WebGL, with finite positions/colors/normals",
+    "Toggle removal exactly matches GPU submissions with no stale cover or plane geometry",
+    "Resize and single-field roundtrips",
+    "Neutral reference roundtrip hides and restores combined legend",
+    "Run and Step calculate new frames through local transport",
+    "Physical control reset genuinely masks unresolved carrier phase",
+    "Fixed cover power scale updates live rendering",
+    "Wormhole shape, net energy flow and power/deposition controls preserve the same numerical frame"
+  ],
+  "testedFilesSHA256": {
+    "public/app.js": "e3e64a0588a737a1798098f037a2d3e406d3a26c5ff7271999e32d0d03605aa3",
+    "public/index.html": "5270cfde5eeede8f023cc46c6d277dec2917ba3eb8d63fb67f57d5c07817eafa",
+    "tests/combined-ui.test.cjs": "5255b6eeb348614ad365b0a526f7c6d77d35390b1f93047a949997855ed34c86"
+  },
+  "coveredByFinalSuite": true,
+  "finalSuiteTests": 139
+}

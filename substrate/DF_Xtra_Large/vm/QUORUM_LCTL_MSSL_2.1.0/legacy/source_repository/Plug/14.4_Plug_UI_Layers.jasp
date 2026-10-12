@@ -1,0 +1,34 @@
+ja source 0.3
+module suite14.plug.ui_layers
+use Service
+policy explicit_network
+
+service PlugUILayers {
+    message UIRequest {
+        request_id: Text,
+        view_id: Text,
+        interaction: Text,
+        data_contract: Text
+    }
+    message UIResponse {
+        landon_ui_status: Text,
+        sophia_interaction_judgment: Text,
+        charlotte_accessibility_validation: Text,
+        professor_operator_note: Text,
+        podium_ui_receipt: Text,
+        done: Flag
+    }
+    endpoint render(request: UIRequest) -> Stream<UIResponse>
+        auth capability ui.render
+        deadline 5s
+        retry max 1
+        idempotency request.request_id
+    protocol UISession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json PlugUILayers.compatibility_report
+

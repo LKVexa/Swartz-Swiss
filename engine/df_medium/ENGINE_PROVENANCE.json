@@ -1,0 +1,58 @@
+{
+  "format": "df-medium-ja21-web-engine/1",
+  "version": "8.1.0",
+  "source_archive_sha256": "edca7a73581c190648f90969b1b024ef3a848dd56f02e829a69df3b35af24bb3",
+  "windows_dll_sha256": "dee923c3b378b26fd0aa666f11a16315b831bc0833aeeda26d8df7f5d1792731",
+  "baseline_verify": "20 passed / 0 failed / 0 skipped",
+  "linux_native_selftest": "PASS",
+  "engine_boundary": "DF_Medium VM owns HTML/CSS/resource/layout/scene semantics; WPF is presenter only",
+  "ja21_web_engine_source_sha256": "d53a401457966113af9ce93e64b13d4a6f552e6a40a2e735fddc7956a8456614",
+  "ja21_web_engine_ir_sha256": "6f7c25656abc1a01accd27e3693836e77f9439ecb8265cfcf07e8af887c8d7b2",
+  "native_profile_binding": "dfweb_profile_hash_get returns ja21_web_engine_source_sha256",
+  "native_selftest": "PASS: dfweb_selftest + native ABI behavioral regression suite on Windows x64",
+  "baseline_extract": "342 retained non-log baseline files byte-identical to original DF_Medium archive members; 23 historical log members omitted from distribution",
+  "native_engine_change": "Native Windows rebuild: character-reference repair applied; external CSS retained across commits; bounded URL resolution and ingress; hidden/raw-text subtree suppression; malformed document and layout bounds hardening.",
+  "package_version": "9.8.7",
+  "staged_engine_patch": {
+    "file": "engine/df_medium/patches/8.0.3-html-character-references.patch",
+    "patched_source": "engine/df_medium/patches/ja21_webengine.8.0.3.c",
+    "status": "Applied to active source and rebuilt Windows DLL; historical patch retained for provenance",
+    "fixes": [
+      "attribute values (href/src/style/...) HTML character references decoded",
+      "text decoder read past buffer end on truncated &amp;/&lt;/&gt;/&quot;",
+      "numeric (&#NN; &#xHH;) and common named references in text and title",
+      "<title> text no longer emitted as body content"
+    ]
+  },
+  "native_build": {
+    "compiler": "gcc.exe (Rev4, Built by MSYS2 project) 16.2.0",
+    "target": "x86_64-w64-mingw32",
+    "flags": [
+      "-std=c11",
+      "-O2",
+      "-shared",
+      "-static-libgcc",
+      "-Wl,--no-insert-timestamp,--dynamicbase,--nxcompat,--high-entropy-va,--image-base,0x180000000"
+    ],
+    "sources": {
+      "ja21_webengine.c": "d4df9be9f129f1b061475f2cee418fc6097000b8da3adeca3e4f407d98c32e5a",
+      "ja21_webengine.h": "d851d93cd30b04ca23a41f95138f8420e2574e3287a47b30ef6b13824b7a7eae",
+      "brvm.c": "6a412aab9147980796c6ce5c61d552bc45dd54e2e328af4fc2b08d41adc9e585",
+      "brvm.h": "162f9e73dc4ce14cbea6e75a5b64f676296dbadcb0495581f86b186cd10f7573",
+      "brtrust.c": "0aedbbd66c3829b7aecc88ef0f33afde39eecea6ba28a79782bd19c0cb84d349",
+      "brtrust.h": "52badc964aeb587bc942f99515b3585e6bcd2f2258d8259b555feeec1d7df654"
+    },
+    "rebuild_command": "python -B tools/build_native_engine.py",
+    "reproducibility": "PE timestamp omitted and preferred image base fixed; source hashes and compiler version recorded"
+  },
+  "original_source_archive_sha256": "7c57c6ce49f7ff4c492cc53c3177778d04adfa96f3a96525c57c3c9f4ef2cda4",
+  "source_archive_distribution": {
+    "path": "engine/df_medium/DF_Medium.source.zip",
+    "policy": "Exclude shipped logs; retain all other original member bytes",
+    "original_member_count": 365,
+    "distributed_member_count": 342,
+    "omitted_log_member_count": 23,
+    "verification_record": "provenance/source-archive-filtering.json"
+  },
+  "baseline_verify_scope": "Historical supplied baseline result; not a new qualification of the filtered distribution"
+}

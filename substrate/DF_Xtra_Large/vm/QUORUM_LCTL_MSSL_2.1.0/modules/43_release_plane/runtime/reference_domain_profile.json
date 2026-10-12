@@ -1,0 +1,67 @@
+{
+  "execution_scope": "deterministic local/offline reference semantics consuming module fixtures and emitting typed reference-domain outputs",
+  "input_type": "qualified_artifacts",
+  "module": "Release Plane",
+  "module_id": 43,
+  "non_claims": [
+    "not production domain fidelity",
+    "not executable legacy-runtime equivalence",
+    "not physical distributed authority"
+  ],
+  "operators": [
+    {
+      "node": "N01",
+      "operator": "OBSERVE",
+      "stage": "INPUT"
+    },
+    {
+      "node": "N02",
+      "operator": "VALIDATE",
+      "stage": "VERIFY"
+    },
+    {
+      "node": "N03",
+      "operator": "EXECUTE",
+      "stage": "BUILD"
+    },
+    {
+      "node": "N04",
+      "operator": "MATERIALIZE",
+      "stage": "PACKAGE"
+    },
+    {
+      "node": "N05",
+      "operator": "RECORD",
+      "stage": "HASH"
+    },
+    {
+      "node": "N06",
+      "operator": "CERTIFY",
+      "stage": "CERTIFY"
+    },
+    {
+      "node": "N07",
+      "operator": "MATERIALIZE",
+      "stage": "RELEASE"
+    },
+    {
+      "node": "N08",
+      "operator": "RECORD",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "output_type": "release_package/release_receipt",
+  "plane": "release_delivery",
+  "policy": {
+    "capabilities": [
+      "artifact.read",
+      "evidence.write",
+      "package.write"
+    ],
+    "default": "deny",
+    "network": "deny"
+  },
+  "runner": "qualification/open_gate_runtime.py",
+  "schema": "QUORUM-REFERENCE-DOMAIN-PROFILE/2.1",
+  "version": "2.1.0"
+}

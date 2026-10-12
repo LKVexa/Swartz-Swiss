@@ -1,0 +1,291 @@
+{
+  "df_release": "DF-PA21.2-1.0.0",
+  "distribution": {
+    "BLOCKED": 2,
+    "BLOCKED_EXTERNAL_AUTHORITY": 1,
+    "OPERATIONAL": 12,
+    "SPECIFIED": 2,
+    "VERIFIED": 1
+  },
+  "integrity": {
+    "operational_without_evidence": [],
+    "operational_without_passing_gate": []
+  },
+  "items": [
+    {
+      "evidence": [
+        "conformance/DF_GATE_RESULTS.json#G0.1",
+        "conformance/DF_GATE_RESULTS.json#G0.2",
+        "conformance/DF_GATE_RESULTS.json#G0.4",
+        "conformance/DF_GATE_RESULTS.json#G2",
+        "conformance/DF_GATE_RESULTS.json#G3",
+        "conformance/DF_GATE_RESULTS.json#G1"
+      ],
+      "gate_results": {
+        "G0.1": "SKIPPED",
+        "G0.2": "SKIPPED",
+        "G0.4": "PASS",
+        "G1": "PASS",
+        "G2": "PASS",
+        "G3": "PASS"
+      },
+      "gates": [
+        "G0.1",
+        "G0.2",
+        "G0.4",
+        "G2",
+        "G3",
+        "G1"
+      ],
+      "id": "DFF-01",
+      "note": "G0.1/G0.2 run after sealing; VERIFY re-runs them live",
+      "statement": "hashes, manifest, one pinned core, schemas, citations, core selfcheck",
+      "status": "VERIFIED",
+      "title": "container integrity"
+    },
+    {
+      "evidence": [
+        "conformance/DF_GATE_RESULTS.json#F0",
+        "conformance/DF_GATE_RESULTS.json#F1"
+      ],
+      "gate_results": {
+        "F0": "PASS",
+        "F1": "PASS"
+      },
+      "gates": [
+        "F0",
+        "F1"
+      ],
+      "id": "DFF-02",
+      "statement": "the four node containers are located beside this one and match their pinned SHA256SUMS digests; every present node binds",
+      "status": "OPERATIONAL",
+      "title": "node registry"
+    },
+    {
+      "evidence": [
+        "conformance/DF_GATE_RESULTS.json#F2"
+      ],
+      "gate_results": {
+        "F2": "PASS"
+      },
+      "gates": [
+        "F2"
+      ],
+      "id": "DFF-03",
+      "statement": "fabric/FABRIC.pal parses, verifies and seals to the pinned seal",
+      "status": "OPERATIONAL",
+      "title": "the fabric bundle"
+    },
+    {
+      "evidence": [
+        "conformance/DF_GATE_RESULTS.json#F3"
+      ],
+      "gate_results": {
+        "F3": "PASS"
+      },
+      "gates": [
+        "F3"
+      ],
+      "id": "DFF-04",
+      "statement": "Federation DF0 (2 domains, 4 groups, 4 workers) rebuilds from the node descriptors and equals fabric/FEDERATION.json",
+      "status": "OPERATIONAL",
+      "title": "federation object model"
+    },
+    {
+      "evidence": [
+        "conformance/DF_GATE_RESULTS.json#F4"
+      ],
+      "gate_results": {
+        "F4": "PASS"
+      },
+      "gates": [
+        "F4"
+      ],
+      "id": "DFF-05",
+      "statement": "four independent implementations agree with the CPython reference on every shipped bundle (CROSS_NODE_DIFFERENTIAL_AGREEMENT)",
+      "status": "OPERATIONAL",
+      "title": "replica program"
+    },
+    {
+      "evidence": [
+        "conformance/DF_GATE_RESULTS.json#F6"
+      ],
+      "gate_results": {
+        "F6": "PASS"
+      },
+      "gates": [
+        "F6"
+      ],
+      "id": "DFF-06",
+      "statement": "a 240-row bundle runs as a chain of 84-row segments placed on distinct nodes (static and dynamic) and reaches the reference witness",
+      "status": "OPERATIONAL",
+      "title": "pipeline program"
+    },
+    {
+      "evidence": [
+        "conformance/DF_GATE_RESULTS.json#F4"
+      ],
+      "gate_results": {
+        "F4": "PASS"
+      },
+      "gates": [
+        "F4"
+      ],
+      "id": "DFF-07",
+      "statement": "two supersteps (compute, exchange+vote) with a federation barrier; ALLGATHER and ALLREDUCE(min,max) over explicit transfer schedules chosen by select_algorithm (rule id recorded)",
+      "status": "OPERATIONAL",
+      "title": "BSP program + collectives"
+    },
+    {
+      "evidence": [
+        "conformance/DF_GATE_RESULTS.json#F4",
+        "conformance/DF_GATE_RESULTS.json#F5"
+      ],
+      "gate_results": {
+        "F4": "PASS",
+        "F5": "PASS"
+      },
+      "gates": [
+        "F4",
+        "F5"
+      ],
+      "id": "DFF-08",
+      "statement": "one append-only log per run, sealed; reconstruction and replay self-check PASS; identical hash across two runs in every deterministic profile",
+      "status": "OPERATIONAL",
+      "title": "event log and replay"
+    },
+    {
+      "evidence": [
+        "conformance/DF_GATE_RESULTS.json#F5"
+      ],
+      "gate_results": {
+        "F5": "PASS"
+      },
+      "gates": [
+        "F5"
+      ],
+      "id": "DFF-09",
+      "statement": "single_process_deterministic, multi_thread_deterministic, multi_process_deterministic executed and reproducible; multi_process_throughput executed, reproducibility not claimed",
+      "status": "OPERATIONAL",
+      "title": "execution profiles"
+    },
+    {
+      "evidence": [
+        "conformance/DF_GATE_RESULTS.json#F7"
+      ],
+      "gate_results": {
+        "F7": "PASS"
+      },
+      "gates": [
+        "F7"
+      ],
+      "id": "DFF-10",
+      "statement": "a 5.0.0 image traps 17 on the 4.7.0 VM and is rejected by the QVM loader: the fabric moves rows, not images",
+      "status": "OPERATIONAL",
+      "title": "no image portability"
+    },
+    {
+      "evidence": [
+        "conformance/DF_GATE_RESULTS.json#F8"
+      ],
+      "gate_results": {
+        "F8": "PASS"
+      },
+      "gates": [
+        "F8"
+      ],
+      "id": "DFF-11",
+      "statement": "distributed_state <= DISTRIBUTED_CLASSICAL_EMULATION, quantum boundary NOT_CROSSED, physical flags False, NETWORK=deny",
+      "status": "OPERATIONAL",
+      "title": "provenance ladders"
+    },
+    {
+      "evidence": [
+        "conformance/DF_GATE_RESULTS.json#F9"
+      ],
+      "gate_results": {
+        "F9": "PASS"
+      },
+      "gates": [
+        "F9"
+      ],
+      "id": "DFF-12",
+      "statement": "tools/mssl_to_lctlc.py carries a Small MSSL witness program to Medium with the same result",
+      "status": "OPERATIONAL",
+      "title": "dialect bridge"
+    },
+    {
+      "evidence": [
+        "conformance/DF_GATE_RESULTS.json#F6"
+      ],
+      "gate_results": {
+        "F6": "PASS"
+      },
+      "gates": [
+        "F6"
+      ],
+      "id": "DFF-20",
+      "statement": "static (weighted round-robin) and dynamic (decomposed score) placement of segments with a full LOAD_BALANCE_LEDGER",
+      "status": "OPERATIONAL",
+      "title": "load balancing"
+    },
+    {
+      "evidence": [
+        "core/spec/PA_LCTL_FABRIC_SPEC.md"
+      ],
+      "gate_results": {},
+      "gates": [],
+      "id": "DFF-30",
+      "statement": "present in the carried core (pacore.fabric) but not exercised by the DF fabric programs",
+      "status": "SPECIFIED",
+      "title": "work stealing, straggler mitigation, elasticity, grain adaptation, deadlock detection"
+    },
+    {
+      "evidence": [
+        "fabric/FABRIC.pal"
+      ],
+      "gate_results": {},
+      "gates": [],
+      "id": "DFF-31",
+      "statement": "FABRIC.pal is declarative; SPAWN/BARRIER/collective rows are not yet interpreted as the schedule",
+      "status": "SPECIFIED",
+      "title": "bundle-driven fabric programs"
+    },
+    {
+      "evidence": [
+        "core/spec/PA_LCTL_FABRIC_SPEC.md"
+      ],
+      "gate_results": {},
+      "gates": [],
+      "id": "DFF-32",
+      "statement": "NETWORK=deny; local processes on one host",
+      "status": "BLOCKED",
+      "title": "cross-machine federation"
+    },
+    {
+      "evidence": [
+        "core/spec/PA_LCTL_TARGET_ADAPTER_SPEC.md"
+      ],
+      "gate_results": {},
+      "gates": [],
+      "id": "DFF-33",
+      "statement": "PHYSICAL_PARALLEL_QPU_EXECUTION, PHYSICAL_DISTRIBUTED_QPU_EXECUTION",
+      "status": "BLOCKED_EXTERNAL_AUTHORITY",
+      "title": "physical quantum outputs"
+    },
+    {
+      "evidence": [
+        "fabric/TOPOLOGY.json"
+      ],
+      "gate_results": {},
+      "gates": [],
+      "id": "DFF-34",
+      "statement": "no node has a qubit; qcapacity=0",
+      "status": "BLOCKED",
+      "title": "quantum-face execution on any node"
+    }
+  ],
+  "rule": "No item is operational because its source file exists. Operational status requires native executable evidence satisfying that item's promotion gate.",
+  "schema": "DF/CAPABILITY_LEDGER/1",
+  "subject": "DF_Fabric (DF0)"
+}

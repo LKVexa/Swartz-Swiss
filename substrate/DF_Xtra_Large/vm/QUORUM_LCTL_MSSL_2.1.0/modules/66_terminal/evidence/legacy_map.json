@@ -1,0 +1,164 @@
+{
+  "suite_id": 66,
+  "suite_name": "Terminal",
+  "plane": "interfaces_services",
+  "legacy_sha256": "30690f946628bb7d94b8dfd38fc399d1746872f55e7fa086b8787e0dad61cd49",
+  "legacy_root": "legacy/source_repository/Terminal",
+  "files": [
+    {
+      "path": "66.01_Terminal_Contract_Intake.jasp",
+      "sha256": "a402d8a2e199e91fa221838705e5aa11cb58244d2040cdc279422e512e1d5ad0",
+      "bytes": 1431
+    },
+    {
+      "path": "66.02_Session_Identity_and_Provenance.jasp",
+      "sha256": "489b3f104a4a8b25d4ec38308d407b9df0811fd229fddb9b3afb787175b09dec",
+      "bytes": 1262
+    },
+    {
+      "path": "66.03_Repository_Context_Binding.jasp",
+      "sha256": "9db28841dd0ad52f732b64f7963988b8dd84c2260fac909ac86cb121f0a2551f",
+      "bytes": 1481
+    },
+    {
+      "path": "66.04_Working_Directory_and_Path_Confinement.jasp",
+      "sha256": "0d9ba9fb8346f1794d66c2fe366f3f223c6e8a6e1e356df083eb70aa4a4a894d",
+      "bytes": 1361
+    },
+    {
+      "path": "66.05_Terminal_Profile_and_Environment.jasp",
+      "sha256": "b3e21fbed629c6d43c95c22281235132074c275789b59fe9c148af957689960d",
+      "bytes": 1265
+    },
+    {
+      "path": "66.06_Capability_Manifest_and_Command_Policy.jasp",
+      "sha256": "6774d190381387a7bdea99d150d79e5ea8c17c39523ccb021e7824e1d0c7b338",
+      "bytes": 1528
+    },
+    {
+      "path": "66.07_Professor_Proposal_and_Action_Card.jasp",
+      "sha256": "1f6c569f0a7aea3e1e851fa3fad96cbb5982d20d003a459c782ec58ffed0cfb9",
+      "bytes": 1514
+    },
+    {
+      "path": "66.08_Podium_Authorization_and_Dispatch.jasp",
+      "sha256": "2e61f868fc97b19952419379351b93abb27cac943cb7d53ec40ffa02879fa73a",
+      "bytes": 1400
+    },
+    {
+      "path": "66.09_HERMIT_Terminal_Execution_Cell.jasp",
+      "sha256": "a3674f52f008bebf613c62c5666e71a615717b7376bb2af15cd30d22ed62d205",
+      "bytes": 1473
+    },
+    {
+      "path": "66.10_Shell_Adapter_and_Command_Invocation.jasp",
+      "sha256": "eaf976f2536ab9454ac1ad04fd2b290ed3c97a473f141d5b0db61a0f35f1e277",
+      "bytes": 1437
+    },
+    {
+      "path": "66.11_Input_Editor_and_Parser.jasp",
+      "sha256": "a1655e76a072d01a1e1a0a1ecdb375158882a6f477a2550129c395c308be50ac",
+      "bytes": 1382
+    },
+    {
+      "path": "66.12_Completion_and_Command_Discovery.jasp",
+      "sha256": "0bab2c79422021d81cf10382766ff27797fc9c533b7612270efd8f428386c6e7",
+      "bytes": 1374
+    },
+    {
+      "path": "66.13_PTY_Process_and_Job_Control.jasp",
+      "sha256": "47ee3bdb8539a1a29399f6be6f6baab981f7315e96f213aebea8489f6cca1c78",
+      "bytes": 1338
+    },
+    {
+      "path": "66.14_Standard_Streams_Multiplexer.jasp",
+      "sha256": "bb99aa8cc11496add204919a7a4309fafe48f38c7b1467a9bab481aec20ba19e",
+      "bytes": 1321
+    },
+    {
+      "path": "66.15_Structured_Diagnostics_and_Illuminator_View.jasp",
+      "sha256": "458958eb08402eca09f53f48cbd18151d0a348aab041ee46b8865e64c0a14bf4",
+      "bytes": 1286
+    },
+    {
+      "path": "66.16_Exit_Status_and_Result_Capture.jasp",
+      "sha256": "0d49fae9dc429f17b021b56e167cd4d485cabed641626cdd3842bfa05faa89b0",
+      "bytes": 1446
+    },
+    {
+      "path": "66.17_History_Recall_and_Reproducible_Replay.jasp",
+      "sha256": "6c44ffb035bbf23b2cfff8894366f56bacb049f3fa4e9ec7103ce70f9a092eee",
+      "bytes": 1484
+    },
+    {
+      "path": "66.18_Tabs_Panes_and_Session_Layout.jasp",
+      "sha256": "af73a4f65e36e706275ec951f408e477abb87e058ffb6b679654fa300124f823",
+      "bytes": 1395
+    },
+    {
+      "path": "66.19_Search_Filter_Copy_and_Export.jasp",
+      "sha256": "e66a257230e6fc3eaa6d828286b5e1167c373122313b05f3e4687f828715e2f3",
+      "bytes": 1299
+    },
+    {
+      "path": "66.20_Artifact_Links_Diffs_and_Preview_Handoff.jasp",
+      "sha256": "53043c49e6fcb97aef5520d29641dd2a1f60913ca8cbc84eb03b75024bcc0883",
+      "bytes": 1412
+    },
+    {
+      "path": "66.21_Secrets_Redaction_and_Injection_Defense.jasp",
+      "sha256": "aa91526115a626d6d30652ab82cd08236107797e3c273589d95532a8b867f1dd",
+      "bytes": 1529
+    },
+    {
+      "path": "66.22_Network_and_Air_Gap_Indicator.jasp",
+      "sha256": "e13bf7178f875d5f7b2beefde6513f1650da80c26e3f64a44ae40c70c79a9ea6",
+      "bytes": 1447
+    },
+    {
+      "path": "66.23_Resource_Budget_Timeout_and_Cancellation.jasp",
+      "sha256": "79827dce01ad1d5d760778b2a30e6b8dd8c5d9bacf44bec851b5c11a2de9a4a0",
+      "bytes": 1472
+    },
+    {
+      "path": "66.24_Checkpoint_Reconnect_and_Recovery.jasp",
+      "sha256": "f45e165f2ce00e65944f8b804a978501e37e590468365114ee10996dca5250e1",
+      "bytes": 1737
+    },
+    {
+      "path": "66.25_Localization_Accessibility_and_Large_Output_Windows.jasp",
+      "sha256": "04a6eb7d929b16baff9a308a38f0b5617f334e3d2df069288a28bbab8dc352a0",
+      "bytes": 1609
+    },
+    {
+      "path": "66.26_LANDON_Run_Run_All_and_Review_Control.jasp",
+      "sha256": "c31c219067a9ce752beefd4d9eecbb43e59347e250e475129a3c282d1e14a1dd",
+      "bytes": 1759
+    },
+    {
+      "path": "66.27_SOPHIA_Evaluation_and_Accepted_Learning.jasp",
+      "sha256": "42023a6c0348a93a38a1948b4c052dca4eabb5eb63964630712f0158b60f85ef",
+      "bytes": 1665
+    },
+    {
+      "path": "66.28_CHARLOTTE_Construction_and_Terminal_Inspection.jasp",
+      "sha256": "11bea0c23f8c6172783615998a24765136e357642330fd2a55ea202e86ee44db",
+      "bytes": 1694
+    },
+    {
+      "path": "66.29_Evidence_Archive_and_Filing.jasp",
+      "sha256": "08c2b7227193d7c24c3e41ca8ea34e852a919f5a3bf0ed0c8d4ac92d834c886b",
+      "bytes": 1649
+    },
+    {
+      "path": "66.30_Final_Validation_and_Compatibility_Report.jasp",
+      "sha256": "55323805e33670e3de4bb458feceac37d69d967f74b1cce1e1fe87c51582f644",
+      "bytes": 2379
+    },
+    {
+      "path": "README.md",
+      "sha256": "c2517676c7fd0d259d6d644598669496966fe53d32b75a1026b42b6e85f91119",
+      "bytes": 8931
+    }
+  ]
+}

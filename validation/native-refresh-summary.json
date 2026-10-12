@@ -1,0 +1,21 @@
+{
+  "schema": "GFM-native-refresh/1",
+  "status": "passed",
+  "metrics": [
+    {
+      "instrument": "pulse",
+      "medianDrawsPerSecond": 9.48866631523458,
+      "maximumDrawsPerSecond": 10.443864229765014,
+      "sampleIntervalMs": 250,
+      "durationSeconds": 5
+    },
+    {
+      "instrument": "phase",
+      "medianDrawsPerSecond": 35.42869038126969,
+      "maximumDrawsPerSecond": 38.670148654092415,
+      "sampleIntervalMs": 250,
+      "durationSeconds": 5
+    }
+  ],
+  "scope": "Actual native WebView2 instrument drawing of new numerical states on this host; no guaranteed or monitor FPS claim."
+}

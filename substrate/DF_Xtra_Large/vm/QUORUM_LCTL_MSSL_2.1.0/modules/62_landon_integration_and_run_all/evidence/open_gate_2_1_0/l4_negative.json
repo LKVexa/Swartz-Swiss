@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "2ff903c52a41a8564269415d94960847ed2a8227984cdb2a1ffe9d15c25c31a6",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "LANDON Integration and Run All",
+  "module_id": 62,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

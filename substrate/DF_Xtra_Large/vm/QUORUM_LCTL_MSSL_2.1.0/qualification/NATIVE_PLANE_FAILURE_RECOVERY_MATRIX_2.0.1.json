@@ -1,0 +1,1928 @@
+{
+  "schema": "QUORUM-PLANE-FAILURE-RECOVERY-MATRIX/2.0.1",
+  "plane_count": 12,
+  "all_pass": 12,
+  "scope": "native_runtime_plane_representatives",
+  "results": [
+    {
+      "plane": "data_evidence",
+      "module_id": 8,
+      "module": "Tables",
+      "failures": {
+        "node_unavailable": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "30bdfe3adf16d2554326390a1e967d00645dcd468f8ea20bea4f9ffc932a15a3"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "30bdfe3adf16d2554326390a1e967d00645dcd468f8ea20bea4f9ffc932a15a3"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_link_timeout": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "e0abbf65bf18c5ede1ff66fc489db2503b6929698eb6d9324a8d36424a48b5c8"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "e0abbf65bf18c5ede1ff66fc489db2503b6929698eb6d9324a8d36424a48b5c8"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_packet_loss": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "6ef9947ffd8dce7907c1fc6062f7e00efc1800a1395dffac71d76b111810a9c8"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "6ef9947ffd8dce7907c1fc6062f7e00efc1800a1395dffac71d76b111810a9c8"
+            },
+            "stderr": ""
+          }
+        },
+        "quantum_link_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "ed45d6ce8d00c9e55e31e1879a4e4b6ff14d33a8099796498898deb03e27b130"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "ed45d6ce8d00c9e55e31e1879a4e4b6ff14d33a8099796498898deb03e27b130"
+            },
+            "stderr": ""
+          }
+        },
+        "ebit_generation_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "a6e08365947f5d1fe2074540b7fc384b6e67cdf35f5e3b06e5c57eb63e7f2cc0"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "a6e08365947f5d1fe2074540b7fc384b6e67cdf35f5e3b06e5c57eb63e7f2cc0"
+            },
+            "stderr": ""
+          }
+        }
+      },
+      "physical_distributed": {
+        "exit_code": 1,
+        "output": {
+          "raw": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+        },
+        "stderr": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+      },
+      "checks": {
+        "all_failures_detected": true,
+        "all_recoveries_declared": true,
+        "external_authority_gate": true
+      },
+      "all_pass": true
+    },
+    {
+      "plane": "governance_control",
+      "module_id": 50,
+      "module": "Diff Patch and Review",
+      "failures": {
+        "node_unavailable": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "1f7c4e9ab5e4c70b0c28cafb3c8fa1dd578d0aebfc6281abf824abe4b3895132"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "1f7c4e9ab5e4c70b0c28cafb3c8fa1dd578d0aebfc6281abf824abe4b3895132"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_link_timeout": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "06569b9b775843f6d7fdbe20f9c48aec03f3c00985381f8ff4ec000e16ace604"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "06569b9b775843f6d7fdbe20f9c48aec03f3c00985381f8ff4ec000e16ace604"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_packet_loss": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "7ebfe5319ffbd28f5657404d71a7058118d1bc84438c2598b330f5ec8b4eb754"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "7ebfe5319ffbd28f5657404d71a7058118d1bc84438c2598b330f5ec8b4eb754"
+            },
+            "stderr": ""
+          }
+        },
+        "quantum_link_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "68f66a5fed55b2036c6fa6e74d8a76afc2a6e55b789e49514c174762f96a6c79"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "68f66a5fed55b2036c6fa6e74d8a76afc2a6e55b789e49514c174762f96a6c79"
+            },
+            "stderr": ""
+          }
+        },
+        "ebit_generation_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "80279cf1b42afb351ac4876ac18222dcc32ddd33ec430df94e803d516104ed01"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "80279cf1b42afb351ac4876ac18222dcc32ddd33ec430df94e803d516104ed01"
+            },
+            "stderr": ""
+          }
+        }
+      },
+      "physical_distributed": {
+        "exit_code": 1,
+        "output": {
+          "raw": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+        },
+        "stderr": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+      },
+      "checks": {
+        "all_failures_detected": true,
+        "all_recoveries_declared": true,
+        "external_authority_gate": true
+      },
+      "all_pass": true
+    },
+    {
+      "plane": "intent_reasoning",
+      "module_id": 4,
+      "module": "Compass",
+      "failures": {
+        "node_unavailable": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "497d29ea48b01db8d63e827dfe6a8ef5eb13ad97fd5ceef3aa13757e486d0cd6"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "497d29ea48b01db8d63e827dfe6a8ef5eb13ad97fd5ceef3aa13757e486d0cd6"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_link_timeout": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "f625dc35007c5daed64ac43ed485827a55b75bf834432c13b2a6d0e0f663ebda"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "f625dc35007c5daed64ac43ed485827a55b75bf834432c13b2a6d0e0f663ebda"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_packet_loss": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "692ffb9dcd186c7a31332ea896a27547577c226f552947eeca98c85cbafc718f"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "692ffb9dcd186c7a31332ea896a27547577c226f552947eeca98c85cbafc718f"
+            },
+            "stderr": ""
+          }
+        },
+        "quantum_link_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "6c882f390807b97065411b7b1dac1454f340b78bca21497336b060b8bfeb388c"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "6c882f390807b97065411b7b1dac1454f340b78bca21497336b060b8bfeb388c"
+            },
+            "stderr": ""
+          }
+        },
+        "ebit_generation_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "69456b66c48490932ab2bcaaff4d81f89f7c505dd6dcff8cacbb26cd41ed1581"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "69456b66c48490932ab2bcaaff4d81f89f7c505dd6dcff8cacbb26cd41ed1581"
+            },
+            "stderr": ""
+          }
+        }
+      },
+      "physical_distributed": {
+        "exit_code": 1,
+        "output": {
+          "raw": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+        },
+        "stderr": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+      },
+      "checks": {
+        "all_failures_detected": true,
+        "all_recoveries_declared": true,
+        "external_authority_gate": true
+      },
+      "all_pass": true
+    },
+    {
+      "plane": "interfaces_services",
+      "module_id": 14,
+      "module": "Plug",
+      "failures": {
+        "node_unavailable": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "17b8047dcd72cd14ca5a8ee182b6147f9901d636d41f1365f28bc8f694e55565"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "17b8047dcd72cd14ca5a8ee182b6147f9901d636d41f1365f28bc8f694e55565"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_link_timeout": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "94fe7d37a5db44af9bde46373cc6c9ac092a9de37878bd35c6794759d03f0acd"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "94fe7d37a5db44af9bde46373cc6c9ac092a9de37878bd35c6794759d03f0acd"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_packet_loss": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "7ebe5989cb3961ebf25e10ffc4057bb8534b42d0925a821404c0eff3b301a7d6"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "7ebe5989cb3961ebf25e10ffc4057bb8534b42d0925a821404c0eff3b301a7d6"
+            },
+            "stderr": ""
+          }
+        },
+        "quantum_link_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "b7714735386b061b2af05f93b044c5154dfd96bbee1fcfbcb4a7deff59cf5537"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "b7714735386b061b2af05f93b044c5154dfd96bbee1fcfbcb4a7deff59cf5537"
+            },
+            "stderr": ""
+          }
+        },
+        "ebit_generation_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "ac71e26d48fcb72aabe883ef88aad21fcc51b14879a8d4df044e6e901b2eb50a"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "ac71e26d48fcb72aabe883ef88aad21fcc51b14879a8d4df044e6e901b2eb50a"
+            },
+            "stderr": ""
+          }
+        }
+      },
+      "physical_distributed": {
+        "exit_code": 1,
+        "output": {
+          "raw": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+        },
+        "stderr": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+      },
+      "checks": {
+        "all_failures_detected": true,
+        "all_recoveries_declared": true,
+        "external_authority_gate": true
+      },
+      "all_pass": true
+    },
+    {
+      "plane": "media_visual",
+      "module_id": 19,
+      "module": "Mesh Geometry",
+      "failures": {
+        "node_unavailable": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "395b14ffe2c5963ba4abdc8a18bf54c2f0254c7db28e9eb21a0ad1fab3f84c13"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "395b14ffe2c5963ba4abdc8a18bf54c2f0254c7db28e9eb21a0ad1fab3f84c13"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_link_timeout": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "79639627555cae3881af45bc1c177b20c54a2ce7056c1c192e8eeb0d8c8727bc"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "79639627555cae3881af45bc1c177b20c54a2ce7056c1c192e8eeb0d8c8727bc"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_packet_loss": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "e7c752c45992c10ba6ef8015f303206788449a6d934a71e96bc162332908aa95"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "e7c752c45992c10ba6ef8015f303206788449a6d934a71e96bc162332908aa95"
+            },
+            "stderr": ""
+          }
+        },
+        "quantum_link_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "9b9388fec541ba7ae71bda9d1832c1566c783d2a3dbca8c920b5d16c45029a11"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "9b9388fec541ba7ae71bda9d1832c1566c783d2a3dbca8c920b5d16c45029a11"
+            },
+            "stderr": ""
+          }
+        },
+        "ebit_generation_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "e594ce2ad46c7cd1430d33d5c2617e5b9ab9d08b9600adbbe556aab2f27d7efd"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "e594ce2ad46c7cd1430d33d5c2617e5b9ab9d08b9600adbbe556aab2f27d7efd"
+            },
+            "stderr": ""
+          }
+        }
+      },
+      "physical_distributed": {
+        "exit_code": 1,
+        "output": {
+          "raw": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+        },
+        "stderr": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+      },
+      "checks": {
+        "all_failures_detected": true,
+        "all_recoveries_declared": true,
+        "external_authority_gate": true
+      },
+      "all_pass": true
+    },
+    {
+      "plane": "model_compute",
+      "module_id": 20,
+      "module": "Equation Operator Bank",
+      "failures": {
+        "node_unavailable": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "d4b8f2d2021dd53aff0cb8e41dbb823bec633387d49812c38c60d86cf562908e"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "d4b8f2d2021dd53aff0cb8e41dbb823bec633387d49812c38c60d86cf562908e"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_link_timeout": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "09ae18f40ee664a492e16356fec1972b4d0b77921ee089cff58c5ebade7e6c51"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "09ae18f40ee664a492e16356fec1972b4d0b77921ee089cff58c5ebade7e6c51"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_packet_loss": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "a35a7a0fd4bf9369878d519d23a083a14852ed108c4507ba78e4dc035f078fdf"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "a35a7a0fd4bf9369878d519d23a083a14852ed108c4507ba78e4dc035f078fdf"
+            },
+            "stderr": ""
+          }
+        },
+        "quantum_link_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "2d3cc94dd26267849b7be21dc2dd218753e7c819a45e94a9072ef585e75b2255"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "2d3cc94dd26267849b7be21dc2dd218753e7c819a45e94a9072ef585e75b2255"
+            },
+            "stderr": ""
+          }
+        },
+        "ebit_generation_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "04ddde1459a3f5dbdd40fdfeeee930c03b9df7e950736b2702e07bc6b75cfec6"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "04ddde1459a3f5dbdd40fdfeeee930c03b9df7e950736b2702e07bc6b75cfec6"
+            },
+            "stderr": ""
+          }
+        }
+      },
+      "physical_distributed": {
+        "exit_code": 1,
+        "output": {
+          "raw": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+        },
+        "stderr": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+      },
+      "checks": {
+        "all_failures_detected": true,
+        "all_recoveries_declared": true,
+        "external_authority_gate": true
+      },
+      "all_pass": true
+    },
+    {
+      "plane": "operations_recovery",
+      "module_id": 53,
+      "module": "Operations Plane",
+      "failures": {
+        "node_unavailable": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "d8cc0bd1868cf351ca2c60dc87498fa133c66de436570a2dd5fdcae4d8ab7e9d"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "d8cc0bd1868cf351ca2c60dc87498fa133c66de436570a2dd5fdcae4d8ab7e9d"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_link_timeout": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "d5adb5ea6b44478a2c3063e70b4b72825094b8c6eb70328879470e9eed4cba7b"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "d5adb5ea6b44478a2c3063e70b4b72825094b8c6eb70328879470e9eed4cba7b"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_packet_loss": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "2f92ce51c7227103049e0602263759de3c19cde95b4f718b5d9f99bfebe2421e"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "2f92ce51c7227103049e0602263759de3c19cde95b4f718b5d9f99bfebe2421e"
+            },
+            "stderr": ""
+          }
+        },
+        "quantum_link_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "9a74fed9e44c0b08a2ab9c80e2bacad765eabf0381cdb892d5febe78f5f63407"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "9a74fed9e44c0b08a2ab9c80e2bacad765eabf0381cdb892d5febe78f5f63407"
+            },
+            "stderr": ""
+          }
+        },
+        "ebit_generation_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "ff509c770dc77c56ae255192c0f7e626578ca2362446867b4f7f6e61b895917a"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "ff509c770dc77c56ae255192c0f7e626578ca2362446867b4f7f6e61b895917a"
+            },
+            "stderr": ""
+          }
+        }
+      },
+      "physical_distributed": {
+        "exit_code": 1,
+        "output": {
+          "raw": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+        },
+        "stderr": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+      },
+      "checks": {
+        "all_failures_detected": true,
+        "all_recoveries_declared": true,
+        "external_authority_gate": true
+      },
+      "all_pass": true
+    },
+    {
+      "plane": "orchestration",
+      "module_id": 15,
+      "module": "Orchestrator",
+      "failures": {
+        "node_unavailable": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "d90cc670a42e63537b2104027c0fc7479902b9b4c9464a0e808c0f842790753d"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "d90cc670a42e63537b2104027c0fc7479902b9b4c9464a0e808c0f842790753d"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_link_timeout": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "f314791f685ead5478e1913b5a2bd0eee693a1efa09e720ce1cbbd2040716354"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "f314791f685ead5478e1913b5a2bd0eee693a1efa09e720ce1cbbd2040716354"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_packet_loss": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "0fda80df0b18c7700b563512b8c7e534a8993db3ec0d062cc2b64c32ee7e83a0"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "0fda80df0b18c7700b563512b8c7e534a8993db3ec0d062cc2b64c32ee7e83a0"
+            },
+            "stderr": ""
+          }
+        },
+        "quantum_link_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "3d3a2740ac9bbc7c3f6d30ebab9fb0005d3f9e7652d60f1acd6758a55bbd8914"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "3d3a2740ac9bbc7c3f6d30ebab9fb0005d3f9e7652d60f1acd6758a55bbd8914"
+            },
+            "stderr": ""
+          }
+        },
+        "ebit_generation_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "0c544e5aeadf41b6dff3cfdc75af10b682fb112b1cbb0d957f81cba6b46d488e"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "0c544e5aeadf41b6dff3cfdc75af10b682fb112b1cbb0d957f81cba6b46d488e"
+            },
+            "stderr": ""
+          }
+        }
+      },
+      "physical_distributed": {
+        "exit_code": 1,
+        "output": {
+          "raw": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+        },
+        "stderr": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+      },
+      "checks": {
+        "all_failures_detected": true,
+        "all_recoveries_declared": true,
+        "external_authority_gate": true
+      },
+      "all_pass": true
+    },
+    {
+      "plane": "release_delivery",
+      "module_id": 43,
+      "module": "Release Plane",
+      "failures": {
+        "node_unavailable": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "93494dbd98b0b0986b05f999c3193ad2e0b77e0d88aaf0a54082df31727d2dc7"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "93494dbd98b0b0986b05f999c3193ad2e0b77e0d88aaf0a54082df31727d2dc7"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_link_timeout": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "59b02068dd8437b5639fa80708d1eceb24e19e31ca1a5f10a8c3e7c8232acf36"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "59b02068dd8437b5639fa80708d1eceb24e19e31ca1a5f10a8c3e7c8232acf36"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_packet_loss": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "fb1e4f75ecc4fbbf7ee0f324a5f9b95eb41e1625a86102b70abd846c17e923b2"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "fb1e4f75ecc4fbbf7ee0f324a5f9b95eb41e1625a86102b70abd846c17e923b2"
+            },
+            "stderr": ""
+          }
+        },
+        "quantum_link_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "df25d17a850c1c83b424433f81ded5d84c6ec22274d161fe2fa8410fedb03e81"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "df25d17a850c1c83b424433f81ded5d84c6ec22274d161fe2fa8410fedb03e81"
+            },
+            "stderr": ""
+          }
+        },
+        "ebit_generation_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "0c52ea67825f114cdb188dac6699d57fd5affa227e078a709660c1441981a4f7"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "0c52ea67825f114cdb188dac6699d57fd5affa227e078a709660c1441981a4f7"
+            },
+            "stderr": ""
+          }
+        }
+      },
+      "physical_distributed": {
+        "exit_code": 1,
+        "output": {
+          "raw": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+        },
+        "stderr": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+      },
+      "checks": {
+        "all_failures_detected": true,
+        "all_recoveries_declared": true,
+        "external_authority_gate": true
+      },
+      "all_pass": true
+    },
+    {
+      "plane": "security_authorization",
+      "module_id": 13,
+      "module": "Chair",
+      "failures": {
+        "node_unavailable": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "f90bf0bc6a73af6153bcff7b86af628af8471bc56c6664bbaee7ecfab484446a"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "f90bf0bc6a73af6153bcff7b86af628af8471bc56c6664bbaee7ecfab484446a"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_link_timeout": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "b073ad5f0f2b4a712dba8563c41ef05be91f6f6053e092b499dd0ead114c82e8"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "b073ad5f0f2b4a712dba8563c41ef05be91f6f6053e092b499dd0ead114c82e8"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_packet_loss": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "9e2184730d6bfe0ef35bc081dc0fd74ac0d751f4167a08b97e49ea432f81d1b5"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "9e2184730d6bfe0ef35bc081dc0fd74ac0d751f4167a08b97e49ea432f81d1b5"
+            },
+            "stderr": ""
+          }
+        },
+        "quantum_link_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "d87cae8aca447981f344d7c1189f66f5e97077ae01f5be297998a69d94c08954"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "d87cae8aca447981f344d7c1189f66f5e97077ae01f5be297998a69d94c08954"
+            },
+            "stderr": ""
+          }
+        },
+        "ebit_generation_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "98c4f4b108cf3d09c8692611e35b900e156b11baadca23239c405018fce8cc15"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "98c4f4b108cf3d09c8692611e35b900e156b11baadca23239c405018fce8cc15"
+            },
+            "stderr": ""
+          }
+        }
+      },
+      "physical_distributed": {
+        "exit_code": 1,
+        "output": {
+          "raw": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+        },
+        "stderr": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+      },
+      "checks": {
+        "all_failures_detected": true,
+        "all_recoveries_declared": true,
+        "external_authority_gate": true
+      },
+      "all_pass": true
+    },
+    {
+      "plane": "sense_context",
+      "module_id": 1,
+      "module": "Observer",
+      "failures": {
+        "node_unavailable": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "8381c32ed617683da5c844c114076f82c876013c00b8d2125c89095e3e17588a"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "8381c32ed617683da5c844c114076f82c876013c00b8d2125c89095e3e17588a"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_link_timeout": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "7a50a4965ad947d31cf74e8dea17e38b595c640eb444d9477bf3cc56840e073a"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "7a50a4965ad947d31cf74e8dea17e38b595c640eb444d9477bf3cc56840e073a"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_packet_loss": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "db410c1f158e6a2575b014716e4847a6d608048391f8354484d539371d663bcb"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "db410c1f158e6a2575b014716e4847a6d608048391f8354484d539371d663bcb"
+            },
+            "stderr": ""
+          }
+        },
+        "quantum_link_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "e0a3c72aebe42d07cfa5d20e9c242fd1644630d91129b6bcd4d916449ab96d6f"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "e0a3c72aebe42d07cfa5d20e9c242fd1644630d91129b6bcd4d916449ab96d6f"
+            },
+            "stderr": ""
+          }
+        },
+        "ebit_generation_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "e641ae6b5e68dcbef92fc9c407a758988a676982beccccea6a9b4dceff97953a"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "e641ae6b5e68dcbef92fc9c407a758988a676982beccccea6a9b4dceff97953a"
+            },
+            "stderr": ""
+          }
+        }
+      },
+      "physical_distributed": {
+        "exit_code": 1,
+        "output": {
+          "raw": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+        },
+        "stderr": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+      },
+      "checks": {
+        "all_failures_detected": true,
+        "all_recoveries_declared": true,
+        "external_authority_gate": true
+      },
+      "all_pass": true
+    },
+    {
+      "plane": "translation_interop",
+      "module_id": 30,
+      "module": "JA Adapter",
+      "failures": {
+        "node_unavailable": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "11be27d098b8fafc781d88637f73b609131e09ad2af880403ace8a63a2e4b349"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "node_unavailable",
+              "seed": 7,
+              "detected": true,
+              "recovery": "RESTART_FROM_CLASSICAL_BOUNDARY",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "11be27d098b8fafc781d88637f73b609131e09ad2af880403ace8a63a2e4b349"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_link_timeout": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "262a6b2457073e4ddfe67313b07d4580dc738c532110d2b090d0f290078dadcb"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_link_timeout",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "262a6b2457073e4ddfe67313b07d4580dc738c532110d2b090d0f290078dadcb"
+            },
+            "stderr": ""
+          }
+        },
+        "classical_packet_loss": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "aa1064ea4fb82832bf2c968236690abfb14dd6ee23a52f5a83ed9f23f1a02c0f"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "classical_packet_loss",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REROUTE_SAFE",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "aa1064ea4fb82832bf2c968236690abfb14dd6ee23a52f5a83ed9f23f1a02c0f"
+            },
+            "stderr": ""
+          }
+        },
+        "quantum_link_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "e425662f96426b72b2ac339fdfd297c56b6d803e550a6e93b5ceab49ae17944d"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "quantum_link_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "e425662f96426b72b2ac339fdfd297c56b6d803e550a6e93b5ceab49ae17944d"
+            },
+            "stderr": ""
+          }
+        },
+        "ebit_generation_failure": {
+          "inject": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "092fabc641122ff5236ee920335a8fb13621c547bde7edc79536a5d41aae25b8"
+            },
+            "stderr": ""
+          },
+          "recover": {
+            "exit_code": 0,
+            "output": {
+              "schema": "LCTL-FAILURE/1.0",
+              "scenario": "ebit_generation_failure",
+              "seed": 7,
+              "detected": true,
+              "recovery": "REGENERATE_ENTANGLEMENT",
+              "unknown_qstate_checkpoint_copy": false,
+              "event_hash": "092fabc641122ff5236ee920335a8fb13621c547bde7edc79536a5d41aae25b8"
+            },
+            "stderr": ""
+          }
+        }
+      },
+      "physical_distributed": {
+        "exit_code": 1,
+        "output": {
+          "raw": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+        },
+        "stderr": "FAIL: PHYSICAL_DISTRIBUTED_EXECUTION_BLOCKED_EXTERNAL_AUTHORITY: no authenticated multi-QPU adapter and physical execution receipts"
+      },
+      "checks": {
+        "all_failures_detected": true,
+        "all_recoveries_declared": true,
+        "external_authority_gate": true
+      },
+      "all_pass": true
+    }
+  ]
+}

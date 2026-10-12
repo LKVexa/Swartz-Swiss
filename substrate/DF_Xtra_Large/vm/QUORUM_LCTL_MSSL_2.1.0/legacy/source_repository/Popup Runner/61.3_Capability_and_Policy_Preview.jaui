@@ -1,0 +1,47 @@
+ja source 0.3
+module suite61.popup_runner.capability_and_policy_preview
+use Interface
+policy no_network
+
+interface PopupRunnerCapabilityPolicyPreview {
+    state selected_job: Text? = null
+    state evaluating_policy: Flag = false
+    derived has_selected_job = selected_job != null
+    derived can_preview_policy = selected_job != null and not evaluating_policy
+    component SOPHIA_PolicyContext {
+        label "Interpret requested capabilities and effects"
+        enabled bind can_preview_policy
+        accessibility role button name "Interpret selected job capabilities and effects"
+        action interpret_job_policy requires popup.job.policy:approved
+    }
+    component CHARLOTTE_PolicyGate {
+        label "Validate capability, scope, approval, and execution policy"
+        enabled bind can_preview_policy
+        accessibility role button name "Validate selected job execution policy"
+        action validate_job_policy requires popup.job.policy:approved
+    }
+    component LANDON_PolicyProjection {
+        label "Show effective execution contract"
+        enabled bind can_preview_policy
+        accessibility role button name "Show effective policy-bound execution contract"
+        action project_job_policy requires popup.job.policy:approved
+    }
+    component Professor_PolicyGuide {
+        label "Explain risks, effects, and rollback"
+        enabled bind has_selected_job
+        accessibility role button name "Explain selected job policy and risks"
+        action explain_job_policy requires popup.job.policy:approved
+    }
+    component Podium_PolicyEvidence {
+        label "View policy and approval evidence"
+        enabled bind can_preview_policy
+        accessibility role button name "View selected job policy evidence"
+        action show_job_policy_evidence requires popup.job.policy:approved
+    }
+    component CapabilityPolicyViewport {
+        embed portal.scene "popup_runner_capability_policy_preview"
+        motion bind timeline.policy_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface PopupRunnerCapabilityPolicyPreview

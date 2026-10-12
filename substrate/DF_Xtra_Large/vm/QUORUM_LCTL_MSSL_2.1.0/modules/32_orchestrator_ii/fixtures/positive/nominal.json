@@ -1,0 +1,15 @@
+{
+  "schema": "QUORUM-FIXTURE/2.0",
+  "class": "positive",
+  "module_id": 32,
+  "plane": "orchestration",
+  "input_type": "intent/dependency_set",
+  "payload": {
+    "example": "nominal"
+  },
+  "expected_contract": {
+    "admitted": true,
+    "stage_count": 9,
+    "final_state": "COMPLETED"
+  }
+}

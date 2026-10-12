@@ -1,0 +1,14 @@
+ja source 0.3
+module suite39.core_studio.model
+use Core
+policy no_network
+
+record ModelPlan { id: Count, scope: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_model_plan(item: ModelPlan) -> Result<ModelPlan, Text> effects { pure } {
+    let normalized: Text = item.scope
+    return Ok(ModelPlan { id: item.id, scope: normalized, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: ModelPlan = ModelPlan { id: 3912, scope: "model_registry_and_routing_plan", sophia: "interpret_model_task", charlotte: "validate_model_policy", landon: "stage_approved_model_route", professor: "explain_model_limits", podium: "publish_model_receipt" }
+let result = prepare_model_plan(sample)
+assert result.is_ok == true
+emit json result

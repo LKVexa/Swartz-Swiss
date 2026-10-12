@@ -1,0 +1,33 @@
+ja source 0.3
+module suite14.plug.runtimes
+use Service
+policy explicit_network
+
+service PlugRuntimes {
+    message RuntimeRequest {
+        request_id: Text,
+        runtime_profile: Text,
+        artifact_hash: Text,
+        execution_mode: Text
+    }
+    message RuntimeResponse {
+        landon_runtime_status: Text,
+        charlotte_policy_status: Text,
+        sophia_semantic_status: Text,
+        podium_runtime_receipt: Text,
+        done: Flag
+    }
+    endpoint activate(request: RuntimeRequest) -> Stream<RuntimeResponse>
+        auth capability runtime.activate
+        deadline 20s
+        retry max 1
+        idempotency request.request_id
+    protocol RuntimeSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json PlugRuntimes.compatibility_report
+

@@ -1,0 +1,33 @@
+ja source 0.3
+module suite65.sandbox_engine.resource_budget_quota
+use Operations
+policy explicit_network
+
+workspace SandboxResourceBudgetQuota {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 8 memory 16GB
+    network disabled
+
+    service SOPHIA_budget_context replicas 1
+    health_check SOPHIA_budget_context every 10s
+    service CHARLOTTE_budget_gate replicas 1
+    health_check CHARLOTTE_budget_gate every 10s
+    service LANDON_budget_enforcer replicas 1
+    health_check LANDON_budget_enforcer every 5s
+    service Professor_budget_report replicas 1
+    health_check Professor_budget_report every 10s
+    service Podium_budget_receipt replicas 1
+    health_check Podium_budget_receipt every 10s
+    service sandbox_resource_quota_worker replicas 1
+    health_check sandbox_resource_quota_worker every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "sandbox_engine_resource_budget_quota.msslb"

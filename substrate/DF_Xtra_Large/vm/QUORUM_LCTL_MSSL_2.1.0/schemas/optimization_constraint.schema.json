@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "quorum://schemas/optimization_constraint.schema.json",
+  "title": "optimization_constraint.schema.json",
+  "type": "object",
+  "required": [
+    "pass",
+    "legality",
+    "protected_semantics",
+    "protected_policy",
+    "protected_evidence",
+    "equivalence_check"
+  ],
+  "additionalProperties": true
+}

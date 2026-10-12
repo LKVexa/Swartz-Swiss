@@ -1,0 +1,124 @@
+{
+  "schema": "GFM-phase-observation-source-catalogue/1",
+  "prepared": "2026-10-11",
+  "scope": "New phase/matter and observation sources only. The preserved Kerr catalogue is separate. Source pedigree is not a validation verdict.",
+  "sources": [
+    {
+      "id": "eht-official-data",
+      "title": "Event Horizon Telescope official public data portal",
+      "url": "https://eventhorizontelescope.org/for-astronomers/data",
+      "role": "Publisher identification and release discovery; the selected 2011-2013 release is historical, not the latest EHT campaign."
+    },
+    {
+      "id": "eht-2020-d03-01",
+      "title": "EHT 2020-D03-01: calibrated M87 2011-2013 total-intensity visibility amplitudes",
+      "doi": "10.25739/daft-jz11",
+      "url": "https://github.com/eventhorizontelescope/2020-D03-01",
+      "commit": "0f6bc372e7503d552018c5c05f7ee72d34af5b41",
+      "dataLicense": "Open Data Commons Public Domain Dedication and License (ODC-PDDL)",
+      "licenseScope": "The full publisher LICENSE.txt is preserved. No publisher analysis script is imported.",
+      "manifest": "data/observations/source-manifest.json",
+      "rows": 486,
+      "units": {"uV": "observing wavelengths", "amplitude": "Jy", "sigma": "publisher estimated RMS in Jy", "frequency": "229.3 GHz"},
+      "role": "Actual numeric training and holdout measurements with uncertainties and original row lineage.",
+      "doesNotProvide": ["complex visibility phases", "calibrated polarimetry", "local thermodynamic phase fractions", "direct density/temperature/magnetic maps"]
+    },
+    {
+      "id": "wielgus-2020",
+      "title": "Wielgus et al., Monitoring the Morphology of M87* in 2009-2017 with the Event Horizon Telescope",
+      "doi": "10.3847/1538-4357/abac0d",
+      "url": "https://arxiv.org/abs/2009.11842",
+      "role": "Primary scientific context for sparse early-EHT amplitudes and geometric morphology modelling. The project's stationary circular fit is simpler than the paper's analysis. Its failure does not replicate or refute that analysis."
+    },
+    {
+      "id": "nist-bessel-integral",
+      "title": "NIST DLMF 10.9.1: Bessel integral representation",
+      "url": "https://dlmf.nist.gov/10.9.E1",
+      "role": "Independent angular-quadrature evaluation of J0, independent of the production alternating power series."
+    },
+    {
+      "id": "stone-2008-mhd",
+      "title": "Stone et al., Athena: A New Code for Astrophysical MHD",
+      "doi": "10.1086/588755",
+      "url": "https://arxiv.org/abs/0804.0402",
+      "role": "Primary MHD and constrained-transport methodological reference. The new bounded first-order solver is not Athena and does not inherit Athena's validation results."
+    },
+    {
+      "id": "aranson-kramer-cgle",
+      "title": "Aranson and Kramer, The World of the Complex Ginzburg-Landau Equation",
+      "doi": "10.1103/RevModPhys.74.99",
+      "url": "https://arxiv.org/abs/cond-mat/0106115",
+      "role": "Neutral phenomenological complex equation family and phase-defect context; not evidence for this project's chosen coupling coefficients or an astronomical matter law."
+    },
+    {
+      "id": "nist-iron-thermochemistry",
+      "title": "NIST Chemistry WebBook: iron condensed-phase thermochemistry",
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7439896&Mask=2",
+      "role": "Reference heat-capacity/enthalpy data. The project's constant heat capacities and rounded transition constants are a declared approximation, not a full JANAF fit."
+    },
+    {
+      "id": "nist-iron-fusion",
+      "title": "NIST-hosted reviewed iron thermodynamic compilation",
+      "url": "https://srd.nist.gov/JPCRD/jpcrd298.pdf",
+      "role": "Reference for melting scale 1811 K and fusion enthalpy 13810 J/mol. The laboratory still omits pressure dependence, expansion and microscopic kinetics."
+    },
+    {
+      "id": "nist-iron-atomic",
+      "title": "NIST elemental atomic data: iron",
+      "url": "https://physics.nist.gov/cgi-bin/Elements/elInfo.pl?context=text&element=26",
+      "role": "Iron atomic weight 55.845 and first ionization energy 7.9024681 eV used in the reference diagnostic. No local LTE assumption is empirically established."
+    },
+    {
+      "id": "eht-polarization-vii",
+      "title": "EHT 2021 M87 results VII: Polarization of the Ring",
+      "doi": "10.3847/2041-8213/abe71d",
+      "url": "https://arxiv.org/abs/2105.01169",
+      "importedNumericData": false,
+      "role": "Primary polarimetric context. These are separate observables; the imported amplitude-only release cannot test a polarization or magnetic-direction model."
+    },
+    {
+      "id": "eht-polarization-viii",
+      "title": "EHT 2021 M87 results VIII: Magnetic Field Structure Near the Event Horizon",
+      "doi": "10.3847/2041-8213/abe4de",
+      "url": "https://arxiv.org/abs/2105.01173",
+      "importedNumericData": false,
+      "role": "Model-dependent plasma/GRMHD interpretation, not direct local density/temperature/field values or acceptance targets for this patch."
+    }
+  ],
+  "currentObservationEvidence": {
+    "protocol": "data/observations/protocol.json",
+    "protocolSha256": "925409367cdd70a3308bdb15482298d43cb319c0c30ce9a82c756b65f1d4d7b7",
+    "normalizedDataset": "data/observations/observations.json",
+    "normalizedDatasetSha256": "edd35c123121fb2545a52dbc3ffba6c2d4a1194d9ebba13a5ddb21f864bded62",
+    "sourceHashes": {
+      "M87_EHT_2011_amp.dat": "38a4677a5e7b9a629982bdee675b48df921fdd2fb2b302cc9c3ca14a72341262",
+      "M87_EHT_2012_amp.dat": "f8a672924a4ae355ebbdb68ab06423a17cf489cc7268fefbab410c8520e19521",
+      "M87_EHT_2013_amp.dat": "76b2e517f8f7caba58ea2676e77b2a49808e9f2e1cf7f212492a6ea86e53c3c1"
+    },
+    "productionModel": "backend/observations.cjs",
+    "productionModelSha256": "b9164e15ebea422c8bc6d156401a5baadcb480bbcefd24df2906a9a5251c9ca9",
+    "report": "public/observation-report.json",
+    "reportSha256": "fd68427b65b552d751fe1c0562b0faff04da3926c39098e48d790143fa6b45e0",
+    "independentReport": "validation/observation-independent-results.json",
+    "trainingYears": [2011, 2012],
+    "holdoutYears": [2013],
+    "trainingRows": 173,
+    "holdoutRows": 146,
+    "excludedRows": 167,
+    "calculationVerificationPassed": true,
+    "empiricalComparisonPassed": false,
+    "scope": "Both stationary circular surrogates fail holdout. This is not a validation of phase/matter/MHD, Kerr gravity, a cover or physical passage."
+  },
+  "phaseNumericalEvidence": {
+    "engine": "backend/phase-mhd.js",
+    "browserEngine": "public/phase-mhd.js",
+    "bothEngineSha256": "1a834a359572281279868c4dd29403b7a8dd13d2f386ccc9f214917048e30373",
+    "report": "validation/phase-numerical-results.json",
+    "summary": "validation/phase-verification-summary.txt",
+    "testSuite": "tests/phase-mhd.cjs",
+    "testsPassed": 12,
+    "numericalVerificationPassed": true,
+    "empiricalValidationEstablished": false,
+    "scope": "Representative exported-state conservation/CT checks, smooth scalar and resistive-mode refinement, uniform complex reaction, approximate iron enthalpy and analytic phase windings. First-order spatial numerical diffusion remains significant; no GRMHD, turbulence, high-Mach shock or astronomical calibration verdict follows."
+  }
+}

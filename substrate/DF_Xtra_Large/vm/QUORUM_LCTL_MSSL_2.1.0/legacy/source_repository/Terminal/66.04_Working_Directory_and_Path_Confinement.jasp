@@ -1,0 +1,40 @@
+profile ja.security_policy
+source_level 0.3
+
+subsuite Terminal.T_04 WorkingDirectoryPathConfinement {
+    identity { suite = "66"; id = "T-04"; deterministic = true; autorun = false }
+
+    accept { PinnedTerminalRepositoryContext; working_directory; declared_output_roots[] }
+    emit TerminalPathPolicy
+
+    procedure confine(context, working_directory) {
+        cwd = normalize_path_without_following_untrusted_links(working_directory)
+        require cwd within context.root
+        require every declared_output_root within approved_staging_or_output_mount
+        require every path resolution remains_within_approved_mounts
+
+        return TerminalPathPolicy {
+            repository_root = context.root
+            working_directory = cwd
+            read_roots
+            write_roots
+            output_roots
+            temp_root = quota_bound_disposable_temp
+            symlink_policy = deny_escape
+            junction_policy = deny_escape
+        }
+    }
+
+    deny {
+        parent_traversal
+        absolute_unmapped_host_path
+        symlink_or_junction_escape
+        device_path
+        undeclared_alternate_data_stream
+        write_to_read_only_input
+    }
+
+    evidence { path_normalization_ledger; rejected_paths; mount_manifest; policy_hash }
+    tests { traversal; symlink; junction; device; valid_nested_cwd; output_root_boundary }
+}
+

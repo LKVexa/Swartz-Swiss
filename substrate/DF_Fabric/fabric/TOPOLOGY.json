@@ -1,0 +1,189 @@
+{
+  "crosstalk_pairs": [],
+  "df_release": "DF-PA21.2-1.0.0",
+  "federation_id": "DF0",
+  "links": [
+    {
+      "a": "N_SMALL",
+      "alpha_ticks": 1,
+      "b": "N_MEDIUM",
+      "beta_bytes_per_tick": 1000000,
+      "kind": "classical_channel",
+      "link_id": "C0",
+      "payload": "classical_only",
+      "transport": "local_process"
+    },
+    {
+      "a": "N_SMALL",
+      "alpha_ticks": 1,
+      "b": "N_LARGE",
+      "beta_bytes_per_tick": 1000000,
+      "kind": "classical_channel",
+      "link_id": "C1",
+      "payload": "classical_only",
+      "transport": "local_process"
+    },
+    {
+      "a": "N_SMALL",
+      "alpha_ticks": 1,
+      "b": "N_XLARGE",
+      "beta_bytes_per_tick": 1000000,
+      "kind": "classical_channel",
+      "link_id": "C2",
+      "payload": "classical_only",
+      "transport": "local_process"
+    },
+    {
+      "a": "N_MEDIUM",
+      "alpha_ticks": 1,
+      "b": "N_LARGE",
+      "beta_bytes_per_tick": 1000000,
+      "kind": "classical_channel",
+      "link_id": "C3",
+      "payload": "classical_only",
+      "transport": "local_process"
+    },
+    {
+      "a": "N_MEDIUM",
+      "alpha_ticks": 1,
+      "b": "N_XLARGE",
+      "beta_bytes_per_tick": 1000000,
+      "kind": "classical_channel",
+      "link_id": "C4",
+      "payload": "classical_only",
+      "transport": "local_process"
+    },
+    {
+      "a": "N_LARGE",
+      "alpha_ticks": 1,
+      "b": "N_XLARGE",
+      "beta_bytes_per_tick": 1000000,
+      "kind": "classical_channel",
+      "link_id": "C5",
+      "payload": "classical_only",
+      "transport": "local_process"
+    }
+  ],
+  "nodes": [
+    {
+      "container": "DF_Small",
+      "domain": "D_BR",
+      "failure_domain": "FD_SMALL",
+      "group": "G_BR3",
+      "guest_dialect": "MSSL/ASM-1",
+      "isa": {
+        "arith_modes": [
+          "WRAP",
+          "CHECKED",
+          "SATURATE",
+          "TRAPPING"
+        ],
+        "capability_slots": 16,
+        "memory_bytes": 4096,
+        "name": "BRIM/1-v3 + APDU/1 + MSSL/ASM-1",
+        "opcodes": 24,
+        "registers": 16,
+        "stack_words": 256,
+        "word_bits": 1048576
+      },
+      "kind": "classical_vm",
+      "max_rows_per_lowering": 84,
+      "node_id": "N_SMALL",
+      "quantum_capacity": 0,
+      "supported_ops": [],
+      "worker": "W_SMALL"
+    },
+    {
+      "container": "DF_Medium",
+      "domain": "D_BR",
+      "failure_domain": "FD_MEDIUM",
+      "group": "G_ISA41",
+      "guest_dialect": "LCTLC/1.1 (Columned LCTL, native C compiler brlctlc)",
+      "isa": {
+        "arith_modes": [
+          "WRAP",
+          "CHECKED",
+          "SATURATE",
+          "TRAPPING"
+        ],
+        "core_abi": "0x00040700",
+        "image_version": 9,
+        "memory_bytes": 4096,
+        "name": "ISA 4.1 / ABI 1.0 / Device ABI 1.0",
+        "opcodes": 32,
+        "registers": 16,
+        "services": 20,
+        "stack_words": 256,
+        "word_bits": 1048576
+      },
+      "kind": "classical_vm",
+      "max_rows_per_lowering": 84,
+      "node_id": "N_MEDIUM",
+      "quantum_capacity": 0,
+      "supported_ops": [],
+      "worker": "W_MEDIUM"
+    },
+    {
+      "container": "DF_Large",
+      "domain": "D_BR",
+      "failure_domain": "FD_LARGE",
+      "group": "G_BR11",
+      "guest_dialect": "LCTLC/1.2 (columned-lctl/4.3, Python compiler tools/lctl430.py)",
+      "isa": {
+        "arith_modes": [
+          "WRAP",
+          "CHECKED",
+          "SATURATE",
+          "TRAPPING"
+        ],
+        "image_version": 10,
+        "memory_bytes": 4096,
+        "name": "BR/1.1 (marker 21) / ABI 2 / Device ABI 1.0",
+        "opcodes": 41,
+        "registers": 16,
+        "services": 22,
+        "stack_words": 256,
+        "word_bits": 1048576
+      },
+      "kind": "classical_vm",
+      "max_rows_per_lowering": 84,
+      "node_id": "N_LARGE",
+      "quantum_capacity": 0,
+      "supported_ops": [],
+      "worker": "W_LARGE"
+    },
+    {
+      "container": "DF_Xtra_Large",
+      "domain": "D_QVM",
+      "failure_domain": "FD_XLARGE",
+      "group": "G_QVM1",
+      "guest_dialect": "LCTLC/1.0 (COLUMNED LCTL QVM Profile 1; vm-lane REG rows)",
+      "isa": {
+        "arith_modes": [
+          "modular",
+          "checked",
+          "saturating",
+          "exact"
+        ],
+        "image_version": "QBRIM 2",
+        "memory_bytes": 4096,
+        "name": "QVM ISA 1 / ABI 2 (semantic world ABI 3)",
+        "opcodes": 24,
+        "registers": 16,
+        "services": "0-3 legacy + 16-47 world",
+        "stack_words": 256,
+        "word_bits": 1048576
+      },
+      "kind": "classical_vm",
+      "max_rows_per_lowering": 21843,
+      "node_id": "N_XLARGE",
+      "quantum_capacity": 0,
+      "supported_ops": [],
+      "worker": "W_XLARGE"
+    }
+  ],
+  "note": "declared model of the local federation; every link is a local process boundary on one host (NETWORK=deny)",
+  "qcapacity": 0,
+  "quantum_links": [],
+  "schema": "DF/TOPOLOGY/1"
+}

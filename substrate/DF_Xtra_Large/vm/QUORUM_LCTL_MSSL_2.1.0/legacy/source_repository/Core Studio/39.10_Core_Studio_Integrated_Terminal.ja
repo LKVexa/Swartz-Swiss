@@ -1,0 +1,14 @@
+ja source 0.3
+module suite39.core_studio.integrated_terminal
+use Core
+policy no_network
+
+record IntegratedTerminalPlan { id: Count, scope: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_integrated_terminal_plan(item: IntegratedTerminalPlan) -> Result<IntegratedTerminalPlan, Text> effects { pure } {
+    let normalized: Text = item.scope
+    return Ok(IntegratedTerminalPlan { id: item.id, scope: normalized, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: IntegratedTerminalPlan = IntegratedTerminalPlan { id: 3910, scope: "sandboxed_terminal_plan", sophia: "interpret_command_intent", charlotte: "validate_command_and_capabilities", landon: "stage_approved_terminal_action", professor: "explain_command_effects", podium: "publish_terminal_receipt" }
+let result = prepare_integrated_terminal_plan(sample)
+assert result.is_ok == true
+emit json result

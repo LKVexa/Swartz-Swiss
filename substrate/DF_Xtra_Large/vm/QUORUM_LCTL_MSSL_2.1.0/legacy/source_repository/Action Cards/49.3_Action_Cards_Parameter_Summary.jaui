@@ -1,0 +1,47 @@
+ja source 0.3
+module suite49.action_cards.parameter_summary
+use Interface
+policy no_network
+
+interface ActionCardParameterSummary {
+    state selected_action: Text? = null
+    state summarizing_parameters: Flag = false
+    derived can_select_action = not summarizing_parameters
+    derived can_summarize_parameters = selected_action != null and not summarizing_parameters
+    component SOPHIA_ParameterModel {
+        label "Interpret proposed action parameters"
+        enabled bind can_summarize_parameters
+        accessibility role button name "Interpret parameters for selected action"
+        action interpret_parameter_summary requires admin.action:approved
+    }
+    component CHARLOTTE_ParameterGate {
+        label "Validate parameter identities, types, and redaction"
+        enabled bind can_summarize_parameters
+        accessibility role button name "Validate parameter summary for selected action"
+        action validate_parameter_summary requires admin.action:approved
+    }
+    component LANDON_ParameterBind {
+        label "Bind canonical parameter summary"
+        enabled bind can_summarize_parameters
+        accessibility role button name "Bind parameter summary to selected action card"
+        action bind_parameter_summary requires admin.action:approved
+    }
+    component Professor_ParameterGuide {
+        label "Explain parameter meaning and defaults"
+        enabled bind can_select_action
+        accessibility role button name "Explain selected action parameter summary"
+        action explain_parameter_summary requires admin.action:approved
+    }
+    component Podium_ParameterEvidence {
+        label "View parameter validation evidence"
+        enabled bind can_summarize_parameters
+        accessibility role button name "View selected action parameter evidence"
+        action show_parameter_evidence requires admin.action:approved
+    }
+    component ParameterSummaryViewport {
+        embed portal.scene "action_card_parameter_summary"
+        motion bind timeline.parameter_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface ActionCardParameterSummary

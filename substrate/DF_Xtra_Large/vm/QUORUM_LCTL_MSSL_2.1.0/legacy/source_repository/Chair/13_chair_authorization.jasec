@@ -1,0 +1,21 @@
+ja source 0.3
+module chair.authorization
+use Security
+policy no_network
+
+principal SOPHIA_CHARLOTTE_LANDON_Professor_Podium_AuthorizationWorker
+role ChairAuthorizationWorker {
+    grant authorization.evaluate:approved
+    grant capability.issue:approved
+}
+resource AuthorizedActionDecision classification restricted
+policy ChairAuthorizationPolicy {
+    deny network.* by default
+    allow AuthorizedActionDecision when principal.role == ChairAuthorizationWorker
+    require human_approval for authorization.issue
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == true
+emit mcrt "ChairAuthorizationPolicy.decision.mcrt"

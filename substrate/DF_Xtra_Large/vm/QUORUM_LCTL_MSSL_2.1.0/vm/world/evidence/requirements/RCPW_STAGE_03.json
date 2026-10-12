@@ -1,0 +1,304 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 22,
+    "PARTIAL": 7,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The visible fold transform is continuous and monotonically distance-preserving in ordering.",
+      "requirement_id": "RCPW-03-R01",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The fold has an explicit finite projected horizon and declared near-field identity region.",
+      "requirement_id": "RCPW-03-R02",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical geometry is never destructively deformed by the fold representation.",
+      "requirement_id": "RCPW-03-R03",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Unfolding is stable, deterministic, and free of topological identity swaps.",
+      "requirement_id": "RCPW-03-R04",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Roads, rivers, terrain, rail, navigation links, settlements, and long structures have declared fold semantics.",
+      "requirement_id": "RCPW-03-R05",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Singularities, self-intersections, discontinuities, and invalid inverse regions are detected and fail safely.",
+      "requirement_id": "RCPW-03-R06",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The fold transform is at least C1 continuous everywhere visible and C2 where camera/physics interpolation requires it.",
+      "requirement_id": "RCPW-03-R07",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The transform Jacobian, scale distortion, and angular distortion remain within declared shell-specific limits.",
+      "requirement_id": "RCPW-03-R08",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Collision, picking, navigation, audio propagation, and landmark targeting use explicit canonical/reference conversion rules.",
+      "requirement_id": "RCPW-03-R09",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold-horizon saturation cannot cause canonical aliasing between distinct interactable entities.",
+      "requirement_id": "RCPW-03-R10",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold seams are explicitly modeled as transition manifolds with no canonical adjacency changes and no player-interactable aliasing.",
+      "requirement_id": "RCPW-03-R11",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Terrain curvature, horizon placement, water surfaces, sky/atmosphere anchors, and long routes have fold-aware continuity rules.",
+      "requirement_id": "RCPW-03-R12",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Picking, ray tests, interaction traces, projectile traces, and navigation targets always resolve to canonical objects through an unambiguous inverse mapping.",
+      "requirement_id": "RCPW-03-R13",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Runtime fold telemetry detects discontinuity, non-monotonicity, excessive distortion, repeated landmarks, and self-intersection before player-visible failure.",
+      "requirement_id": "RCPW-03-R14",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold geometry supports anisotropic and topology-aware compactification while preserving canonical route ordering and interaction uniqueness.",
+      "requirement_id": "RCPW-03-R15",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold parameters may adapt to terrain, visibility, speed, and content density only through versioned deterministic policy.",
+      "requirement_id": "RCPW-03-R16",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Folded representations define maximum permitted local scale distortion, angular distortion, and landmark displacement per shell.",
+      "requirement_id": "RCPW-03-R17",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold fallback can temporarily widen the near-field or reduce visible scope when distortion constraints cannot be met.",
+      "requirement_id": "RCPW-03-R18",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold geometry qualification includes randomized topology/property tests over procedurally generated route graphs and landmark layouts.",
+      "requirement_id": "RCPW-03-R19",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-03-R20.json",
+      "evidence_sha256": "28fb9b1687ff0d497b4f7655630024d8b2b54cd24ffc564d07278b287b0228c2",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "Fold geometry can be evaluated in parallel over independent representation sets while using one versioned fold-policy authority.",
+      "requirement_id": "RCPW-03-R20",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold-policy updates are transactional and cannot create mixed-policy visible frames or ambiguous interaction targets.",
+      "requirement_id": "RCPW-03-R21",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Spatial acceleration structures used by folded presentation are derived products and rebuildable from canonical topology/content.",
+      "requirement_id": "RCPW-03-R22",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold-horizon representations include deterministic de-duplication rules for landmarks and route silhouettes across partition boundaries.",
+      "requirement_id": "RCPW-03-R23",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold qualification includes partition-boundary traversal, policy hot-swap rollback, acceleration-structure rebuild, and worker-loss recovery.",
+      "requirement_id": "RCPW-03-R24",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold geometry can compact an expandable world whose canonical extent grows over time without changing previously qualified near-field behavior.",
+      "requirement_id": "RCPW-03-R25",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold horizon policy distinguishes known canonical regions, synthesized-but-unmaterialized regions, archived regions, and intentionally undefined frontier space.",
+      "requirement_id": "RCPW-03-R26",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World expansion beyond the current horizon is admitted only through canonical world-generation transactions, never by render-time improvisation.",
+      "requirement_id": "RCPW-03-R27",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Folded landmark/horizon summarization preserves region identity and directional/topological consistency as world extent grows.",
+      "requirement_id": "RCPW-03-R28",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes repeated world expansion, archive/rehydration, horizon regeneration, and comparison of old-route geometry before/after expansion.",
+      "requirement_id": "RCPW-03-R29",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "stage": 3,
+  "title": "Fold Geometry Authority"
+}

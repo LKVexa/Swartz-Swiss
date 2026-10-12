@@ -1,0 +1,66 @@
+ja source 0.3
+module suite65.sandbox_engine.archive_provenance_filing
+use Data
+policy no_network
+
+schema SandboxArchiveRecord {
+    id: Count primary
+    run_id: Text
+    artifact_id: Text
+    producing_job_id: Text
+    logical_name: Text
+    media_type: Text
+    schema_ref: Text
+    confined_path: Text
+    byte_length: Count
+    artifact_hash: Text
+    provenance_hash: Text
+    validation_refs: Text
+    review_state: Text
+    release_state: Text
+    rollback_ref: Text?
+    sophia_judgment: Text
+    charlotte_validation: Text
+    landon_status: Text
+    professor_explanation: Text?
+    podium_receipt: Text
+    filed_at: Timestamp
+
+    # --- 8S coupling layer ---
+    relation_class: Text
+    eta_ind: F32
+    g5_latent_gap: F32
+    delta8_separation: F32
+    g3_projected_gap: F32
+    gJ_semantic_gap: F32
+    interaction_order: Count
+    r12_replay_id: Text
+}
+# Smithson 8S Coupled Mechanics v1.0 — data-source coupling header.
+# Local dimension is 5+3=8 where the S^3 fiber is noncollapsed; not the standard
+# sphere S^8 without a separate topological proof. Author: Russell Philip Smithson.
+coupling EightS_v1_0 {
+    framework      "Smithson 8S Coupled Mechanics v1.0"
+    base           "penteract field B^5 = [-1,1]^5"
+    object         "S^3 fiber F_i = { y in R^4 : ||y||_2 = r_i }"
+    fifth_axis     "elucidation coordinate t8"
+    support_layers { SOPHIA; CHARLOTTE; LANDON }
+    admission      eta_ind >= epsilon_ind and Delta_8S > epsilon_gain
+    execution      sparse_pairwise escalate_triadic_on { unresolved; contradiction; high_risk; certification_critical }
+    relation_order { UNRESOLVED; CONTRADICTION; HIGHER_ORDER; PROJECTION_ONLY; LATENT_5D_COUPLED; FIBER_STATE_RESONANT; SEMANTIC_ONLY; REINFORCING; NONE }
+    tolerances     { tol5 = 1e-7L; tol8 = 1e-7L; tol3 = 1e-5L; tolJ = declared }
+}
+
+dataset sandbox_archive_records
+    from dmk("sandbox_archive_records.dmk")
+    validate SandboxArchiveRecord
+    partition by run_id shards 4
+query canonical_sandbox_archive {
+    from sandbox_archive_records
+    where artifact_hash != null and provenance_hash != null and podium_receipt != null
+    select id, run_id, artifact_id, producing_job_id, logical_name, media_type, schema_ref, confined_path, byte_length, artifact_hash, provenance_hash, validation_refs, review_state, release_state, rollback_ref, sophia_judgment, charlotte_validation, landon_status, professor_explanation, podium_receipt, relation_class, eta_ind, g5_latent_gap, delta8_separation, g3_projected_gap, gJ_semantic_gap, interaction_order, r12_replay_id
+}
+lineage canonical_sandbox_archive from sandbox_archive_records
+assert coupling.relation_order.preserved == true
+assert schema.valid == true
+emit json canonical_sandbox_archive

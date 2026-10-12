@@ -1,0 +1,2 @@
+# Porting Guide
+Port the HAL rather than the VM semantic core. Implement storage read/write/erase/flush/sync/atomic-replace/status, state authentication, monotonic read/commit, cryptographic verification/hash, clock/random/console/device operations, locking, and yield/panic behavior. Preserve Device ABI IDs, quotas, secure-only production loading, offline-by-default networking, and failure atomicity. Re-run all conformance and target-specific memory/security qualification.

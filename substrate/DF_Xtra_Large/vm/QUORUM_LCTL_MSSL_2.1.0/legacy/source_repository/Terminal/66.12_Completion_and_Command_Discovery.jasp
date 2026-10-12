@@ -1,0 +1,43 @@
+profile ja.interface
+source_level 0.3
+
+subsuite Terminal.T_12 CompletionCommandDiscovery {
+    identity { suite = "66"; id = "T-12"; deterministic = true; autorun = false }
+
+    accept {
+        inert_input_buffer
+        cursor_position
+        TerminalCapabilityManifest
+        TerminalPathPolicy
+        approved_command_catalog
+    }
+
+    emit CompletionCandidateSet
+
+    procedure suggest() {
+        candidates = approved_command_catalog.match(inert_input_buffer, cursor_position)
+        candidates = filter_by(TerminalCapabilityManifest)
+        candidates = filter_paths_by(TerminalPathPolicy)
+        candidates = stable_sort(command_name, argument_kind, canonical_path)
+        annotate(candidates, source + capability + risk + documentation_ref)
+        return bounded(candidates)
+    }
+
+    procedure accept(candidate) {
+        require candidate in current_candidate_set
+        insert_as_inert_text(candidate)
+        require new_parse_and_authorization_before_execution
+    }
+
+    deny {
+        completion_script_execution
+        ambient_path_discovery
+        unapproved_command_suggestion
+        hidden_candidate_side_effect
+        authority_from_completion
+    }
+
+    evidence { catalog_hash; query_hash; filtered_candidates; accepted_candidate_ref }
+    tests { command_completion; path_confinement; stable_order; candidate_limit; no_execution }
+}
+

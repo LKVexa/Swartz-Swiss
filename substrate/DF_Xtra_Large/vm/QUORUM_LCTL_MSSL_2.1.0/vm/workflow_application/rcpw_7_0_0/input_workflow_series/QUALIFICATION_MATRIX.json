@@ -1,0 +1,261 @@
+{
+  "package": "QUORUM_RC_PW_PROMPT_WORKFLOW_SERIES",
+  "version": "7.0.0",
+  "profiles": [
+    "QP0",
+    "QP1",
+    "QP2",
+    "QP3",
+    "QP4"
+  ],
+  "gates": [
+    "DESIGN",
+    "IMPLEMENTATION",
+    "FUNCTIONAL",
+    "ADVERSARIAL",
+    "DETERMINISM",
+    "PERFORMANCE",
+    "RECOVERY",
+    "INTEGRATION",
+    "EVIDENCE",
+    "PROMOTION"
+  ],
+  "stages": [
+    {
+      "stage": 1,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 2,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 3,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 4,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 5,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 6,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 7,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 8,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 9,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 10,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 11,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 12,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 13,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 14,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 15,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 16,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 17,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 18,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 19,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 20,
+      "status_by_profile": {
+        "QP0": "NOT_STARTED",
+        "QP1": "NOT_STARTED",
+        "QP2": "NOT_STARTED",
+        "QP3": "NOT_STARTED",
+        "QP4": "NOT_STARTED"
+      }
+    }
+  ],
+  "supersedes": "6.0.0",
+  "world_quality_matrix": "WORLD_QUALITY_MATRIX.json",
+  "golden_world_scenarios": 80,
+  "master_workflow": "Q0-Q36",
+  "operational_extensions": [
+    "world_compiler",
+    "runtime_abi",
+    "deterministic_randomness",
+    "navigation_travel",
+    "behavior_social_ai",
+    "combat_causality",
+    "transport_moving_frames",
+    "procedural_provenance",
+    "content_scale",
+    "long_soak_chaos",
+    "headless_replay",
+    "compatibility_migration_rollback"
+  ],
+  "fabric_qualification": {
+    "single_worker_reference": "NOT_STARTED",
+    "multi_worker_equivalence": "NOT_STARTED",
+    "repartition_recovery": "NOT_STARTED",
+    "cross_partition_transactions": "NOT_STARTED",
+    "hot_patch_rollback": "NOT_STARTED",
+    "long_soak_chaos": "NOT_STARTED"
+  },
+  "autonomous_world_qualification": {
+    "semantic_world_grammar": "NOT_STARTED",
+    "frontier_expansion": "NOT_STARTED",
+    "knowledge_locality": "NOT_STARTED",
+    "generational_succession": "NOT_STARTED",
+    "settlement_institution_evolution": "NOT_STARTED",
+    "ecological_climate_succession": "NOT_STARTED",
+    "archive_rehydration": "NOT_STARTED",
+    "long_horizon_conformance": "NOT_STARTED"
+  }
+}

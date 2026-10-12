@@ -1,0 +1,47 @@
+ja source 0.3
+module suite45.localization_large_file_plane.large_file_system
+use Interface
+policy no_network
+
+interface LargeFileSystem {
+    state selected_large_resource: Text? = null
+    state coordinating_resource: Flag = false
+    derived can_select_large_resource = not coordinating_resource
+    derived can_coordinate_resource = selected_large_resource != null and not coordinating_resource
+    component SOPHIA_LargeFileModel {
+        label "Interpret large-resource access intent"
+        enabled bind can_coordinate_resource
+        accessibility role button name "Interpret selected large resource"
+        action interpret_large_resource requires admin.action:approved
+    }
+    component CHARLOTTE_LargeFileGate {
+        label "Validate source, size, chunks, index, cache, and limits"
+        enabled bind can_coordinate_resource
+        accessibility role button name "Validate selected large resource"
+        action validate_large_resource requires admin.action:approved
+    }
+    component LANDON_LargeFileCoordinator {
+        label "Coordinate bounded reads and deterministic cache state"
+        enabled bind can_coordinate_resource
+        accessibility role button name "Coordinate selected large resource"
+        action coordinate_large_resource requires admin.action:approved
+    }
+    component Professor_LargeFileGuide {
+        label "Explain limits, progress, recovery, and unavailable ranges"
+        enabled bind can_select_large_resource
+        accessibility role button name "Explain large file system behavior"
+        action explain_large_file_system requires admin.action:approved
+    }
+    component Podium_LargeFileEvidence {
+        label "View resource, range, cache, and recovery evidence"
+        enabled bind can_coordinate_resource
+        accessibility role button name "View large file system evidence"
+        action show_large_file_evidence requires admin.action:approved
+    }
+    component LargeFileSystemViewport {
+        embed portal.scene "large_file_system"
+        motion bind timeline.large_resource_progress
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface LargeFileSystem

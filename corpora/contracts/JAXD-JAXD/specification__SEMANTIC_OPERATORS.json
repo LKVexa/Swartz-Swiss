@@ -1,0 +1,282 @@
+[
+  {
+    "feature": "design_token",
+    "operator": "compose_experience",
+    "track": "01_foundations",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "theme",
+    "operator": "compose_experience",
+    "track": "01_foundations",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "component",
+    "operator": "compose_experience",
+    "track": "01_foundations",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "typed_property",
+    "operator": "compose_experience",
+    "track": "01_foundations",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "typed_slot",
+    "operator": "compose_experience",
+    "track": "01_foundations",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "local_state",
+    "operator": "compose_experience",
+    "track": "01_foundations",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "shared_state",
+    "operator": "compose_experience",
+    "track": "01_foundations",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "derived_value",
+    "operator": "compose_experience",
+    "track": "01_foundations",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "layout_stack",
+    "operator": "compose_experience",
+    "track": "02_layout_accessibility",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "layout_grid",
+    "operator": "compose_experience",
+    "track": "02_layout_accessibility",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "layout_constraint",
+    "operator": "compose_experience",
+    "track": "02_layout_accessibility",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "responsive_behavior",
+    "operator": "compose_experience",
+    "track": "02_layout_accessibility",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "accessibility_role",
+    "operator": "compose_experience",
+    "track": "02_layout_accessibility",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "accessible_name",
+    "operator": "compose_experience",
+    "track": "02_layout_accessibility",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "keyboard_workflow",
+    "operator": "compose_experience",
+    "track": "02_layout_accessibility",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "focus_management",
+    "operator": "compose_experience",
+    "track": "02_layout_accessibility",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "interaction",
+    "operator": "compose_experience",
+    "track": "03_interaction_journeys",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "capability_control",
+    "operator": "compose_experience",
+    "track": "03_interaction_journeys",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "feedback_latency",
+    "operator": "compose_experience",
+    "track": "03_interaction_journeys",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "error_recovery",
+    "operator": "compose_experience",
+    "track": "03_interaction_journeys",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "journey",
+    "operator": "compose_experience",
+    "track": "03_interaction_journeys",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "navigation",
+    "operator": "compose_experience",
+    "track": "03_interaction_journeys",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "form_validation",
+    "operator": "compose_experience",
+    "track": "03_interaction_journeys",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "localization",
+    "operator": "compose_experience",
+    "track": "03_interaction_journeys",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "content_key",
+    "operator": "compose_experience",
+    "track": "03_interaction_journeys",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "motion",
+    "operator": "compose_experience",
+    "track": "04_motion_scene",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "reduced_motion",
+    "operator": "compose_experience",
+    "track": "04_motion_scene",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "vfx_binding",
+    "operator": "compose_experience",
+    "track": "04_motion_scene",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "portal_scene_embedding",
+    "operator": "compose_experience",
+    "track": "04_motion_scene",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "timeline_binding",
+    "operator": "compose_experience",
+    "track": "04_motion_scene",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "resource_loading",
+    "operator": "compose_experience",
+    "track": "04_motion_scene",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "web_target",
+    "operator": "compose_experience",
+    "track": "05_targets_lifecycle_evidence",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "desktop_target",
+    "operator": "compose_experience",
+    "track": "05_targets_lifecycle_evidence",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "mobile_target",
+    "operator": "compose_experience",
+    "track": "05_targets_lifecycle_evidence",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "headless_target",
+    "operator": "compose_experience",
+    "track": "05_targets_lifecycle_evidence",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "installer_lifecycle",
+    "operator": "compose_experience",
+    "track": "05_targets_lifecycle_evidence",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "rollback_visibility",
+    "operator": "compose_experience",
+    "track": "05_targets_lifecycle_evidence",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "evidence",
+    "operator": "compose_experience",
+    "track": "05_targets_lifecycle_evidence",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "r12_lowering",
+    "operator": "compose_experience",
+    "track": "05_targets_lifecycle_evidence",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  },
+  {
+    "feature": "mcrt_provenance",
+    "operator": "compose_experience",
+    "track": "05_targets_lifecycle_evidence",
+    "result_type": "ExperiencePackage",
+    "evidence": "R12 + MCRT"
+  }
+]

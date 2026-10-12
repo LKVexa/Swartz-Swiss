@@ -1,0 +1,175 @@
+{
+  "schema": "QUORUM-MODULE-GRAPH/2.0",
+  "graph_id": "G05",
+  "module_id": 5,
+  "module": "Pencil",
+  "plane": "intent_reasoning",
+  "version": "2.0.0",
+  "entry": "N01",
+  "exit": "N09",
+  "nodes": [
+    {
+      "id": "N01",
+      "stage": "REQUEST",
+      "operator": "OBSERVE",
+      "input": "request/context",
+      "output": "state.request",
+      "precondition": "admitted",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N02",
+      "stage": "CONTEXT",
+      "operator": "RETRIEVE",
+      "input": "N01.output",
+      "output": "state.context",
+      "precondition": "N01.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N03",
+      "stage": "INTERPRET",
+      "operator": "PARSE",
+      "input": "N02.output",
+      "output": "state.interpret",
+      "precondition": "N02.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N04",
+      "stage": "REASON",
+      "operator": "REASON",
+      "input": "N03.output",
+      "output": "state.reason",
+      "precondition": "N03.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N05",
+      "stage": "FILTER",
+      "operator": "FILTER",
+      "input": "N04.output",
+      "output": "state.filter",
+      "precondition": "N04.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N06",
+      "stage": "RANK",
+      "operator": "RANK",
+      "input": "N05.output",
+      "output": "state.rank",
+      "precondition": "N05.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N07",
+      "stage": "VALIDATE",
+      "operator": "VALIDATE",
+      "input": "N06.output",
+      "output": "state.validate",
+      "precondition": "N06.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N08",
+      "stage": "EXPLAIN",
+      "operator": "EXPLAIN",
+      "input": "N07.output",
+      "output": "state.explain",
+      "precondition": "N07.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N09",
+      "stage": "EVIDENCE",
+      "operator": "RECORD",
+      "input": "N08.output",
+      "output": "decision/explanation",
+      "precondition": "N08.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E01",
+      "from": "N01",
+      "to": "N02",
+      "kind": "control+data"
+    },
+    {
+      "id": "E02",
+      "from": "N02",
+      "to": "N03",
+      "kind": "control+data"
+    },
+    {
+      "id": "E03",
+      "from": "N03",
+      "to": "N04",
+      "kind": "control+data"
+    },
+    {
+      "id": "E04",
+      "from": "N04",
+      "to": "N05",
+      "kind": "control+data"
+    },
+    {
+      "id": "E05",
+      "from": "N05",
+      "to": "N06",
+      "kind": "control+data"
+    },
+    {
+      "id": "E06",
+      "from": "N06",
+      "to": "N07",
+      "kind": "control+data"
+    },
+    {
+      "id": "E07",
+      "from": "N07",
+      "to": "N08",
+      "kind": "control+data"
+    },
+    {
+      "id": "E08",
+      "from": "N08",
+      "to": "N09",
+      "kind": "control+data"
+    }
+  ],
+  "legacy_signals": [
+    "beta_reduction",
+    "rule_indexing",
+    "common_subexpression_elimination",
+    "tabling",
+    "proof_normalization",
+    "tail_call",
+    "OPTIMIZE",
+    "LOWER",
+    "PACKAGE",
+    "CERTIFY",
+    "COMPARE"
+  ],
+  "deterministic_order": true
+}

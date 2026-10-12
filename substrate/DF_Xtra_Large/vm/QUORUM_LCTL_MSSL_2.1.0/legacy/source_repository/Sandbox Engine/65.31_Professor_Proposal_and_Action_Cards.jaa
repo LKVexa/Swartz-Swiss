@@ -1,0 +1,35 @@
+ja source 0.3
+module suite65.sandbox_engine.professor_proposal_action_cards
+use Agent
+policy no_network
+
+agent ProfessorSandboxProposal {
+    identity "professor_sandbox_proposal_action_cards"
+    role "sophia-charlotte-landon-professor-podium-proposal"
+    goal produce_complete_non_executing_action_card when confidence >= 0.99
+    memory session retention 1h
+    budget steps 45 tools 5
+    tool SOPHIAInterpretRequestedIntent(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateConstructionScope(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONReviewIntegrationImpact(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorDraftActionCard(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumCheckActionCardCompleteness(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIAInterpretRequestedIntent
+        authorize CHARLOTTEValidateConstructionScope
+        authorize LANDONReviewIntegrationImpact
+        authorize ProfessorDraftActionCard
+        authorize PodiumCheckActionCardCompleteness
+        continue when policy_allows
+        execute SOPHIAInterpretRequestedIntent("bounded_user_intent")
+        execute CHARLOTTEValidateConstructionScope("declared_outputs_and_limits")
+        execute LANDONReviewIntegrationImpact("repository_and_release_impact")
+        execute ProfessorDraftActionCard("proposal_only_no_execution")
+        execute PodiumCheckActionCardCompleteness("required_action_card_fields")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "ProfessorSandboxProposal.mcrt"

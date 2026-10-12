@@ -1,0 +1,38 @@
+ja source 0.3
+module repository.observer.runtime_events
+use Agent
+policy no_network
+
+agent ObserverRuntimeEvents {
+    identity "observer.runtime_events.v1"
+    role "audited-runtime-event-observer"
+    goal runtime_events_observed when confidence >= 0.90
+    memory session retention 24h
+    budget steps 64 tools 6
+    tool ReadRuntimeEventRepository(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIA_CorrelateRuntimeEvents(input: Path) -> Report requires model.infer:approved
+    tool CHARLOTTE_ValidateEventSequence(input: Path) -> Report requires policy.verify:approved
+    tool LANDON_RouteRuntimeRecords(input: Path) -> Report requires ledger.append:approved
+    tool PROFESSOR_ExplainRuntimeFindings(input: Path) -> Report requires model.infer:approved
+    tool PODIUM_PublishRuntimeEvidence(input: Path) -> Report requires ledger.append:approved
+    plan Main {
+        observe workspace
+        authorize ReadRuntimeEventRepository
+        authorize SOPHIA_CorrelateRuntimeEvents
+        authorize CHARLOTTE_ValidateEventSequence
+        authorize LANDON_RouteRuntimeRecords
+        authorize PROFESSOR_ExplainRuntimeFindings
+        authorize PODIUM_PublishRuntimeEvidence
+        continue when policy_allows
+        execute ReadRuntimeEventRepository("repository/01_observer/runtime_events")
+        execute SOPHIA_CorrelateRuntimeEvents("repository/01_observer/runtime_events")
+        execute CHARLOTTE_ValidateEventSequence("repository/01_observer/runtime_events")
+        execute LANDON_RouteRuntimeRecords("repository/01_observer/runtime_events")
+        execute PROFESSOR_ExplainRuntimeFindings("repository/01_observer/runtime_events")
+        execute PODIUM_PublishRuntimeEvidence("repository/01_observer/runtime_events")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "observer_runtime_events.mcrt"

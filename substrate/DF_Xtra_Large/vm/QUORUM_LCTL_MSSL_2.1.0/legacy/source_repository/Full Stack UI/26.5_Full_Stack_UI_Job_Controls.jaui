@@ -1,0 +1,67 @@
+ja source 0.3
+module suite26.full_stack_ui.job_controls
+use Interface
+policy no_network
+
+interface FullStackJobControls {
+    state selected_job: Text? = null
+    state running: Flag = false
+    derived has_job = selected_job != null
+    derived can_select_job = not running
+    derived can_start_job = selected_job != null and not running
+    derived can_stop_job = selected_job != null and running
+    component SOPHIA_JobModel {
+        label "Select and interpret job"
+        enabled bind can_select_job
+        accessibility role button name "Select and interpret a job"
+        action select_job requires admin.action:approved
+    }
+    component CHARLOTTE_JobGate {
+        label "Validate job readiness"
+        enabled bind can_start_job
+        accessibility role button name "Validate selected job readiness"
+        action validate_job requires admin.action:approved
+    }
+    component LANDON_JobStart {
+        label "Start validated job"
+        enabled bind can_start_job
+        accessibility role button name "Start validated job"
+        action start_job requires admin.action:approved
+    }
+    component Professor_JobGuide {
+        label "Explain job state"
+        enabled bind has_job
+        accessibility role button name "Explain selected job state"
+        action explain_job requires admin.action:approved
+    }
+    component Podium_JobEvidence {
+        label "View job evidence"
+        enabled bind has_job
+        accessibility role button name "View selected job evidence"
+        action show_job_evidence requires admin.action:approved
+    }
+    component PauseJob {
+        label "Pause running job"
+        enabled bind can_stop_job
+        accessibility role button name "Pause running job"
+        action pause_job requires admin.action:approved
+    }
+    component CancelJob {
+        label "Cancel running job"
+        enabled bind can_stop_job
+        accessibility role button name "Cancel running job"
+        action cancel_job requires admin.action:approved
+    }
+    component RetryJob {
+        label "Retry selected job"
+        enabled bind can_start_job
+        accessibility role button name "Retry selected job"
+        action retry_job requires admin.action:approved
+    }
+    component JobTraceViewport {
+        embed portal.scene "job_trace"
+        motion bind timeline.job_lifecycle
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface FullStackJobControls

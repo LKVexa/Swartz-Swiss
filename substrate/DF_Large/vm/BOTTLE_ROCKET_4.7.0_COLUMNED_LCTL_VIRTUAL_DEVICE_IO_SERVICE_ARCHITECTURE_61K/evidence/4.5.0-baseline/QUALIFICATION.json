@@ -1,0 +1,77 @@
+{
+  "deterministic_builds": true,
+  "external_not_claimed": [
+    "physical power-cut qualification on target SIM/UICC/eSIM media",
+    "issuer/hardware certification",
+    "native Windows OS execution certification",
+    "third-party security certification"
+  ],
+  "ledger_hash_mismatches": 0,
+  "production_exec_source_bytes": 60995,
+  "qualified_utc": "2026-08-11T06:02:29+00:00",
+  "record": "BR.Qualification",
+  "release": "4.5.0",
+  "repository_build_spec_bytes": 65763,
+  "requirements_operational": 76,
+  "requirements_total": 76,
+  "sanitizers": "PASS",
+  "status": "OPERATIONAL",
+  "tests": {
+    "BR-410": {
+      "failures": 0,
+      "result": "PASS",
+      "suite": "BR-410",
+      "tests": 18
+    },
+    "BR-430": {
+      "canonical_traps": 14,
+      "failures": 0,
+      "opcode_negative": 41,
+      "opcode_positive": 41,
+      "result": "PASS",
+      "suite": "BR-430",
+      "tests": 8
+    },
+    "BR-430-semantic": {
+      "names": [
+        "versioned_native_lctl_43",
+        "isa_41_sync",
+        "service_abi_22_sync",
+        "trap_abi_contract",
+        "native_semantic_columns",
+        "no_hidden_carrier",
+        "reject_legacy_source_magic",
+        "reject_unknown_opcode",
+        "reject_register_bounds",
+        "reject_unknown_mode",
+        "reject_missing_capability",
+        "reject_immediate_overflow",
+        "deterministic_compile",
+        "independent_current_verify",
+        "independent_semantic_rejection",
+        "legacy_42_explicit_verify",
+        "image_contract",
+        "language_spec_contract",
+        "optional_opcode_decisions"
+      ],
+      "result": "PASS",
+      "suite": "BR-430-semantic",
+      "tests": 19
+    },
+    "BR-440": {
+      "failures": 0,
+      "result": "PASS",
+      "suite": "BR-440",
+      "tests": 23
+    },
+    "BR-450": {
+      "failures": 0,
+      "result": "PASS",
+      "suite": "BR-450",
+      "tests": 31
+    },
+    "hardware_anchor": "PASS"
+  },
+  "unsigned_brim_bytes": 112,
+  "work_packages": 11
+}

@@ -1,0 +1,40 @@
+'use strict';
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const vm=require('node:vm');
+const {buildPreview}=require('../build-preview.cjs');
+const ROOT=path.resolve(__dirname,'..');
+test('inline preview fits the host policy and includes the live solver before viewer startup',()=>{
+ const result=buildPreview(),html=fs.readFileSync(path.join(ROOT,result.fragment),'utf8');
+ assert.ok(result.fragmentBytes<1000000);
+ assert.doesNotMatch(html,/<(?:html|head|body)(?:\s|>)|<!doctype/i);
+ assert.match(html,/<div id="gfm-preview-v201">/);
+ assert.ok(html.indexOf('class GFMPreviewBackend')<html.indexOf('window.GFM_LOCAL_BACKEND = new GFMPreviewBackend'));
+ assert.ok(html.indexOf('window.GFM_LOCAL_BACKEND = new GFMPreviewBackend')<html.indexOf('function getJSON'));
+ assert.match(html,/initialPreset:'covered-plasma',initialSeconds:2e-9/);
+ assert.ok(html.indexOf('root.GFMPulseDiagnostics=module.exports')<html.indexOf('function pulseDiagnostics(frame)'));
+ assert.match(html,/id="presentation-shape"/);
+ assert.match(html,/value="wormhole" selected/);
+ assert.doesNotMatch(html,/<script\s+src=|<link[^>]+stylesheet/i);
+ for(const [,script] of html.matchAll(/<script>([\s\S]*?)<\/script>/gi))new vm.Script(script);
+});
+test('standalone viewer opens without a server and keeps the phase, plasma and cover controls',()=>{
+ const html=fs.readFileSync(path.join(ROOT,'Open GFM Preview.html'),'utf8');
+ assert.match(html,/<title>GFM/);
+ assert.match(html,/new WorkerType/);
+ assert.doesNotMatch(html,/<script\s+src=|<link[^>]+stylesheet/i);
+ for(const value of ['envelope','plasma-temperature','plasma-temperature-rise','cover-temperature','cover-liquid'])assert.match(html,new RegExp('value="'+value+'"'));
+ for(const [,script] of html.matchAll(/<script>([\s\S]*?)<\/script>/gi))new vm.Script(script);
+});
+test('default Windows launcher selects the verified self-contained preview',()=>{
+ const {launchPreview}=require('../launch-preview.cjs');
+ const result=launchPreview({openBrowser:false});
+ assert.equal(result.version,require('../release-info.json').version);
+ assert.equal(result.transport,'browser-worker');
+ assert.equal(result.file,path.join(ROOT,'Open GFM Preview.html'));
+ assert.ok(result.receipt.files>0);
+ assert.match(fs.readFileSync(path.join(ROOT,'Open GFM.cmd'),'utf8'),/"%~dp0launch-preview\.cjs"/);
+ assert.match(fs.readFileSync(path.join(ROOT,'Open HTTP Backend.cmd'),'utf8'),/"%~dp0launch\.cjs"/);
+});

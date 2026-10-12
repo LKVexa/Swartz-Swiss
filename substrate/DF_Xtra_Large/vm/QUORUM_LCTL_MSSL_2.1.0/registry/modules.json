@@ -1,0 +1,666 @@
+{
+  "schema": "QUORUM-MODULE-REGISTRY/1.0",
+  "count": 66,
+  "modules": [
+    {
+      "id": 1,
+      "name": "Observer",
+      "slug": "observer",
+      "plane": "sense_context",
+      "description": "This package contains six standalone `.jaa` scripts for repository section `01. Observer`.",
+      "legacy_files": 9,
+      "legacy_sha256": "d8039591bc41fe195d281a5f86031d2479c795bc7949c0470bb9bdb816540af7",
+      "module_path": "modules/01_observer"
+    },
+    {
+      "id": 2,
+      "name": "Anthology",
+      "slug": "anthology",
+      "plane": "sense_context",
+      "description": "This package contains four individual JA Data Language scripts generated from the attached coupling-mechanics corpus.",
+      "legacy_files": 11,
+      "legacy_sha256": "fbbe8b16ab4a28776a891a8fc598bfc12319d1ff54bd3416b308668bc523c79b",
+      "module_path": "modules/02_anthology"
+    },
+    {
+      "id": 3,
+      "name": "Atlas",
+      "slug": "atlas",
+      "plane": "sense_context",
+      "description": "This package contains six individual JA Data Language scripts generated from the attached JA Data Language coupling-mechanics corpus.",
+      "legacy_files": 15,
+      "legacy_sha256": "72eba4f48920a66f3e69a2b3321ae9ec20679d1f6ce2a89d7be36e1917b99801",
+      "module_path": "modules/03_atlas"
+    },
+    {
+      "id": 4,
+      "name": "Compass",
+      "slug": "compass",
+      "plane": "intent_reasoning",
+      "description": "This package contains five individual scripts written in the attached **DeepML Logic Functional Language** corpus profile.",
+      "legacy_files": 8,
+      "legacy_sha256": "95c162b450561e3f4f647fd0c35cb20e9b04d2ea014a9469fb84fb7957e5f14b",
+      "module_path": "modules/04_compass"
+    },
+    {
+      "id": 5,
+      "name": "Pencil",
+      "slug": "pencil",
+      "plane": "intent_reasoning",
+      "description": "This package contains five individual scripts written in the attached DeepML Logic Functional Language.",
+      "legacy_files": 8,
+      "legacy_sha256": "1fd07c954331b91f1abaefe934096e08b89990509ed07223cf0d006ca9932c8a",
+      "module_path": "modules/05_pencil"
+    },
+    {
+      "id": 6,
+      "name": "Pencil Sharpener",
+      "slug": "pencil_sharpener",
+      "plane": "intent_reasoning",
+      "description": "This package contains five independent JA Certifier Grammar 0.3 scripts:",
+      "legacy_files": 6,
+      "legacy_sha256": "9328878a3aa58a676eb9c39cf722208469923d2d8f9162c9aeb79c4ee0ce277c",
+      "module_path": "modules/06_pencil_sharpener"
+    },
+    {
+      "id": 7,
+      "name": "Grinder",
+      "slug": "grinder",
+      "plane": "intent_reasoning",
+      "description": "This package contains five independent DeepML Specialized Language 0.3 scripts:",
+      "legacy_files": 6,
+      "legacy_sha256": "528ed741285b2d4bd3af26acce4406d0c45d84c61b6249b104317b69bd4254e1",
+      "module_path": "modules/07_grinder"
+    },
+    {
+      "id": 8,
+      "name": "Tables",
+      "slug": "tables",
+      "plane": "data_evidence",
+      "description": "This package contains six independent `.jad` scripts:",
+      "legacy_files": 13,
+      "legacy_sha256": "0ffa6a35369151fea99788a12e213a56f5bf89bb9a48468377997169dfd682f1",
+      "module_path": "modules/08_tables"
+    },
+    {
+      "id": 9,
+      "name": "Funnel",
+      "slug": "funnel",
+      "plane": "intent_reasoning",
+      "description": "`09_funnel.jad` converts broad repository recall results into a compact, relevant, deduplicated working set.",
+      "legacy_files": 3,
+      "legacy_sha256": "77d4e9f6f2c4c05cbdb62f4d8c6c5c701634232f2b7acab95e98446aadbe995b",
+      "module_path": "modules/09_funnel"
+    },
+    {
+      "id": 10,
+      "name": "Illuminator",
+      "slug": "illuminator",
+      "plane": "intent_reasoning",
+      "description": "This package contains four independent `.jaui` interface scripts:",
+      "legacy_files": 5,
+      "legacy_sha256": "e24244dcd431c5aaa104b08599131c57bdefcf35e06f85590bd982885421a2b1",
+      "module_path": "modules/10_illuminator"
+    },
+    {
+      "id": 11,
+      "name": "Cypher",
+      "slug": "cypher",
+      "plane": "data_evidence",
+      "description": "This package contains five independent `.jasec` policy scripts:",
+      "legacy_files": 6,
+      "legacy_sha256": "8696689e53a150685244f594771e7e719909a5914da5414797f558636e14dcad",
+      "module_path": "modules/11_cypher"
+    },
+    {
+      "id": 12,
+      "name": "Filing Cabinet",
+      "slug": "filing_cabinet",
+      "plane": "data_evidence",
+      "description": "This package contains six independent `.jad` storage modules:",
+      "legacy_files": 13,
+      "legacy_sha256": "adfed8bacc6ecffefac7779bf69376f0ae76c0f456f00d30e323a1c973baafde",
+      "module_path": "modules/12_filing_cabinet"
+    },
+    {
+      "id": 13,
+      "name": "Chair",
+      "slug": "chair",
+      "plane": "security_authorization",
+      "description": "This package contains five independent JA Certifier Grammar 0.3 scripts:",
+      "legacy_files": 6,
+      "legacy_sha256": "4e100fcb17d7b2097ddc6d85fe07944922e20ea716d70cf228ea5b154c5980ab",
+      "module_path": "modules/13_chair"
+    },
+    {
+      "id": 14,
+      "name": "Plug",
+      "slug": "plug",
+      "plane": "interfaces_services",
+      "description": "Individual JA Service and Protocol Language scripts for the Plug suite.",
+      "legacy_files": 7,
+      "legacy_sha256": "fc9ad34c8d0ffd4086519f2901b67c2b6ac6184badbf696a312b64f07ada3afb",
+      "module_path": "modules/14_plug"
+    },
+    {
+      "id": 15,
+      "name": "Orchestrator",
+      "slug": "orchestrator",
+      "plane": "orchestration",
+      "description": "Independent JA Agent Language scripts for suite fan-out, deterministic fan-in, load order, conflict resolution, and synthesis.",
+      "legacy_files": 6,
+      "legacy_sha256": "906f0763c10c0ea0ef52f6a7a2a07a1ff35533a3a115c21df35fc4fe33575b58",
+      "module_path": "modules/15_orchestrator"
+    },
+    {
+      "id": 16,
+      "name": "Perceiver",
+      "slug": "perceiver",
+      "plane": "sense_context",
+      "description": "Independent JA Agent Language scripts for tiered memory, bounded continuous scanning, scoped recall, and controlled memory promotion.",
+      "legacy_files": 7,
+      "legacy_sha256": "09edd12e96bb3a5bfff22823f12752ef12ab6f3cce1888e6200a5af1cafec6c8",
+      "module_path": "modules/16_perceiver"
+    },
+    {
+      "id": 17,
+      "name": "Asset Observer",
+      "slug": "asset_observer",
+      "plane": "sense_context",
+      "description": "Independent DeepML Core Language scripts for inspecting images, video, archives, UI assets, code, and metadata before reconstruction begins.",
+      "legacy_files": 7,
+      "legacy_sha256": "6985247f393e0cd232aa5787e5c927634171fd0dad69543f79f49191258db2b5",
+      "module_path": "modules/17_asset_observer"
+    },
+    {
+      "id": 18,
+      "name": "Feature Graph",
+      "slug": "feature_graph",
+      "plane": "data_evidence",
+      "description": "Six independent JA Data Language scripts for regions, contours, landmarks, layers, materials, and relations.",
+      "legacy_files": 13,
+      "legacy_sha256": "d64cd1de998690bc08b26312fe66a82628de40a2018030917c4991f086b8fe32",
+      "module_path": "modules/18_feature_graph"
+    },
+    {
+      "id": 19,
+      "name": "Mesh Geometry",
+      "slug": "mesh_geometry",
+      "plane": "media_visual",
+      "description": "Five independent DeepML Specialized Language scripts for geometric proxies, depth hypotheses, topology, camera coordinates, and deformable meshes.",
+      "legacy_files": 6,
+      "legacy_sha256": "a31464e7e1b9da6d8072e2a9f734a17e29cb8abb6a3afa7f62e2bf36bd95d5e2",
+      "module_path": "modules/19_mesh_geometry"
+    },
+    {
+      "id": 20,
+      "name": "Equation Operator Bank",
+      "slug": "equation_operator_bank",
+      "plane": "model_compute",
+      "description": "Five independent DeepML Kernel Language scripts that carry visual-structure evidence into reusable mathematical, MSSL, MSSLB, MCRT, and rendering operator banks.",
+      "legacy_files": 6,
+      "legacy_sha256": "9900c290f8d2de1c03a57d3458386a0f31cf3c94fbeaa62ef2da06c070a90828",
+      "module_path": "modules/20_equation_operator_bank"
+    },
+    {
+      "id": 21,
+      "name": "Scene Reconstruction",
+      "slug": "scene_reconstruction",
+      "plane": "media_visual",
+      "description": "Five independent JA Portal Scene Language scripts for reconstructing deterministic layered scenes from source imagery and inferred geometry.",
+      "legacy_files": 6,
+      "legacy_sha256": "d323d3e92cf7ce6a3c0444525791263ba4456ce0d4b28b4e175a6962f2120efc",
+      "module_path": "modules/21_scene_reconstruction"
+    },
+    {
+      "id": 22,
+      "name": "Motion Planner",
+      "slug": "motion_planner",
+      "plane": "media_visual",
+      "description": "Five independent DeepML Motion Animation Language scripts for transforms, constraints, timing, camera motion, and continuity.",
+      "legacy_files": 6,
+      "legacy_sha256": "a69196be5c761ebca2e86d78ca5dd48f05045dd7109473d77f3ba8c1787ef178",
+      "module_path": "modules/22_motion_planner"
+    },
+    {
+      "id": 23,
+      "name": "Temporal Animator",
+      "slug": "temporal_animator",
+      "plane": "media_visual",
+      "description": "Three independent DeepML Motion Animation Language scripts for frame evaluation, continuity preservation, and deterministic frame-state emission.",
+      "legacy_files": 4,
+      "legacy_sha256": "8275d67e09a9e97f076eddb668b077d33412abbff218d3cf7a535ea03e40db30",
+      "module_path": "modules/23_temporal_animator"
+    },
+    {
+      "id": 24,
+      "name": "C# Renderer",
+      "slug": "csharp_renderer",
+      "plane": "media_visual",
+      "description": "Three independent DeepML Animation VFX Language scripts for the native C# rendering provider, deterministic scene rendering, and deterministic frame-state rendering.",
+      "legacy_files": 4,
+      "legacy_sha256": "2303b21c7ad2b17656c5115da2e068fd807aac07f076a10a548cf5be590875f3",
+      "module_path": "modules/24_csharp_renderer"
+    },
+    {
+      "id": 25,
+      "name": "Media Export",
+      "slug": "media_export",
+      "plane": "media_visual",
+      "description": "Four independent JA Operations Language scripts for frame-sequence encoding, audio encoding, audio/video synchronization and multiplexing, and delivery-format validation.",
+      "legacy_files": 5,
+      "legacy_sha256": "2025bacd8172a94c3855569f121131ae7de09300ae32dd02cc1c59a0f9fefd93",
+      "module_path": "modules/25_media_export"
+    },
+    {
+      "id": 26,
+      "name": "Full Stack UI",
+      "slug": "full_stack_ui",
+      "plane": "interfaces_services",
+      "description": "Five independent JA Interface Language scripts for interfaces, uploads, dashboards, endpoints, and job controls.",
+      "legacy_files": 6,
+      "legacy_sha256": "324841d94795b1008002c0f459aca6135601a9cbabcd61fad024d4da46147e8f",
+      "module_path": "modules/26_full_stack_ui"
+    },
+    {
+      "id": 27,
+      "name": "deepML Worker",
+      "slug": "deepml_worker",
+      "plane": "model_compute",
+      "description": "Four independent DeepML Core scripts for sandboxed inference, feature extraction, reconstruction proposals, and deterministic model routing.",
+      "legacy_files": 5,
+      "legacy_sha256": "c437e30d722cb61937683f1c79fd3f3f55a1e75db14526b5b308f2f988f62e67",
+      "module_path": "modules/27_deepml_worker"
+    },
+    {
+      "id": 28,
+      "name": "Safety Gate",
+      "slug": "safety_gate",
+      "plane": "security_authorization",
+      "description": "Seven independent JA Security Policy Language scripts for AST, lint, archive, path, execution, network, and output validation.",
+      "legacy_files": 8,
+      "legacy_sha256": "6f624064dd0776aea9bcc7ac31fe6f2f40d7aac95f39a54d8a3d72512c15c277",
+      "module_path": "modules/28_safety_gate"
+    },
+    {
+      "id": 29,
+      "name": "Archive Ledger",
+      "slug": "archive_ledger",
+      "plane": "data_evidence",
+      "description": "Six independent JA Data Language scripts for feature graphs, motion plans, training ledgers, manifests, provenance, and hashes.",
+      "legacy_files": 13,
+      "legacy_sha256": "2fbd4be926260753983ecddf602a4a20bfe49421db7d8d73b6d3e14adf408f7b",
+      "module_path": "modules/29_archive_ledger"
+    },
+    {
+      "id": 30,
+      "name": "JA Adapter",
+      "slug": "ja_adapter",
+      "plane": "translation_interop",
+      "description": "Six independent JA Service and Protocol Language scripts that ingest, parse, normalize, and emit JA records for deterministic reconstruction, rendering, and storage workflows.",
+      "legacy_files": 7,
+      "legacy_sha256": "18b5e68f08f1df8bb4dc9257cfdca47472a6e6943116239a0399107b78fbbe64",
+      "module_path": "modules/30_ja_adapter"
+    },
+    {
+      "id": 31,
+      "name": "Vexxa",
+      "slug": "vexxa",
+      "plane": "translation_interop",
+      "description": "Six independent JA Service and Protocol Language scripts that connect deterministic reconstruction workflows to shared native services and operator infrastructure.",
+      "legacy_files": 7,
+      "legacy_sha256": "9cef1589323f3bba59f95a912501d5ed8d5223ef3d53df4c0dddbcd25827a229",
+      "module_path": "modules/31_vexxa"
+    },
+    {
+      "id": 32,
+      "name": "Orchestrator II",
+      "slug": "orchestrator_ii",
+      "plane": "orchestration",
+      "description": "Five independent JA Agent Language scripts for reconstruction, rendering, validation, learning records, and release packaging.",
+      "legacy_files": 6,
+      "legacy_sha256": "18cdbc00d921b621fba201abcc748edffa7afd79378073c04e878b8c2e12a4d0",
+      "module_path": "modules/32_orchestrator_ii"
+    },
+    {
+      "id": 33,
+      "name": "Visual Feedback",
+      "slug": "visual_feedback",
+      "plane": "media_visual",
+      "description": "Six independent JA Training and Evaluation Language experiments that compare generated visual output with admitted targets and produce evidence-backed correction proposals.",
+      "legacy_files": 7,
+      "legacy_sha256": "718d31c32be39d09891e4e2e5d41c7bac0df0e4b995bbd53aef97aadc697eabf",
+      "module_path": "modules/33_visual_feedback"
+    },
+    {
+      "id": 34,
+      "name": "Animation VFX Workspace",
+      "slug": "animation_vfx_workspace",
+      "plane": "media_visual",
+      "description": "Five independent DeepML Animation VFX Language scripts for animation, effects, compositing, inspection, and controlled iteration.",
+      "legacy_files": 6,
+      "legacy_sha256": "f4b69aef3639d32206f389e5d306c6c885648e710b832880c2bb36fb8e149767",
+      "module_path": "modules/34_animation_vfx_workspace"
+    },
+    {
+      "id": 35,
+      "name": "App Designer",
+      "slug": "app_designer",
+      "plane": "interfaces_services",
+      "description": "Five independent JA Interface Language scripts for composition, layout, interaction design, preview, and design-to-development handoff.",
+      "legacy_files": 6,
+      "legacy_sha256": "8c55810d147a09d74d5bd73324ecfcdc85f742957109403c4dadac7507064fa9",
+      "module_path": "modules/35_app_designer"
+    },
+    {
+      "id": 36,
+      "name": "Visual Correction System",
+      "slug": "visual_correction_system",
+      "plane": "media_visual",
+      "description": "Six independent JA Training and Evaluation Language experiments that detect visual defects and coordinate bounded corrective render or interaction passes.",
+      "legacy_files": 7,
+      "legacy_sha256": "444fd65739e67f9bf954f4a9784999ee38f22699d307c7607e28578c1cb4cae3",
+      "module_path": "modules/36_visual_correction_system"
+    },
+    {
+      "id": 37,
+      "name": "Training and Evaluation",
+      "slug": "training_and_evaluation",
+      "plane": "model_compute",
+      "description": "Four independent JA Training and Evaluation Language experiments for visual training examples, evaluation fixtures, feedback records, and evidence-gated learning promotion.",
+      "legacy_files": 5,
+      "legacy_sha256": "719ccc1808b958d6af35e6d42590364e3a9b76d676030dda5432fd3e2dbb3134",
+      "module_path": "modules/37_training_and_evaluation"
+    },
+    {
+      "id": 38,
+      "name": "Preview Designer",
+      "slug": "preview_designer",
+      "plane": "interfaces_services",
+      "description": "Four independent JA Interface Language scripts for reviewable application, scene, animation, and release previews.",
+      "legacy_files": 5,
+      "legacy_sha256": "32bd27abc5b5bcce719907be350adc2494440251149fdbd3c2987931b5b089dc",
+      "module_path": "modules/38_preview_designer"
+    },
+    {
+      "id": 39,
+      "name": "Core Studio",
+      "slug": "core_studio",
+      "plane": "interfaces_services",
+      "description": "Fourteen independent JA Core Application Language scripts for files, editors, tabs, sessions, builds, tests, controlled integration, Repository UI, Code Editor, Integrated Terminal, Visual App Designer, Model, Resource Dashboard, and Local Server.",
+      "legacy_files": 15,
+      "legacy_sha256": "5dd9bb32c81c83e2370d6fa00cd8121edb82dd8b18ad3db57be5708af1868861",
+      "module_path": "modules/39_core_studio"
+    },
+    {
+      "id": 40,
+      "name": "Repository Context Engine",
+      "slug": "repository_context_engine",
+      "plane": "sense_context",
+      "description": "Six independent JA Data Language scripts for repository context, symbols, dependencies, freshness, worktrees, and provenance.",
+      "legacy_files": 13,
+      "legacy_sha256": "75c3c7bef1e46f5aa23217c8582488ffbdfb871a77a61b765cd3dd3be1637ad6",
+      "module_path": "modules/40_repository_context_engine"
+    },
+    {
+      "id": 41,
+      "name": "Knowledge Repository",
+      "slug": "knowledge_repository",
+      "plane": "sense_context",
+      "description": "Ten independent JA Data Language scripts for documentation, architecture records, commands, workflows, suite references, suite documentation, HERMIT commands, the language anthology, the architecture catalog, and operational workflows.",
+      "legacy_files": 21,
+      "legacy_sha256": "75e74fccdb45635055391ed8dc6e357dabf21fc0da3e6a46b5d71633d80cf0e4",
+      "module_path": "modules/41_knowledge_repository"
+    },
+    {
+      "id": 42,
+      "name": "Transition Plane",
+      "slug": "transition_plane",
+      "plane": "translation_interop",
+      "description": "Six independent JA Certifier Grammar (EBNF) scripts for language detection, parsing, intermediate representations, validation, testing, and provenance.",
+      "legacy_files": 7,
+      "legacy_sha256": "e4473f23e84980e59d991b896883f896b58bf3c9021999c5a622298fb7c4f559",
+      "module_path": "modules/42_transition_plane"
+    },
+    {
+      "id": 43,
+      "name": "Release Plane",
+      "slug": "release_plane",
+      "plane": "release_delivery",
+      "description": "Thirteen independent JA Operations Language scripts for build gates, patch admission, generic packaging, signing readiness, rollback planning, release evidence, build jobs, transactional patch application, test gates, MSIX packaging, installer packaging, signing preparation, and rollback execution.",
+      "legacy_files": 14,
+      "legacy_sha256": "1e73efe42dfe7dd6bdf1141adc82e15f441bc9e89e685b9a8591dfb00449dfc2",
+      "module_path": "modules/43_release_plane"
+    },
+    {
+      "id": 44,
+      "name": "Capability and Security Plane",
+      "slug": "capability_and_security_plane",
+      "plane": "security_authorization",
+      "description": "Nine independent JA Security Policy Language scripts for capability manifests, permissions, trust boundaries, approvals, policy enforcement, the Capability Plane, Security, the Trust Plane, and the Evaluation Suite.",
+      "legacy_files": 10,
+      "legacy_sha256": "bc71448e2821a8749225a8af66e6e266d2da68a410ec0feec6374d9b4210e5bb",
+      "module_path": "modules/44_capability_and_security_plane"
+    },
+    {
+      "id": 45,
+      "name": "Localization and Large File Plane",
+      "slug": "localization_and_large_file_plane",
+      "plane": "interfaces_services",
+      "description": "Seven independent JA Interface Language scripts for multilingual presentation, presentation accessibility, bounded large-file windows, repository-scale navigation, the Localization System, the Large File System, and the application-wide Accessibility System.",
+      "legacy_files": 8,
+      "legacy_sha256": "163f8f46144f5774dbb12c42df2f2cba04f6eddbee8f0c5e843d1cc6a3840bf6",
+      "module_path": "modules/45_localization_and_large_file_plane"
+    },
+    {
+      "id": 46,
+      "name": "Air Gap Certification and Installer Plane",
+      "slug": "air_gap_certification_and_installer_plane",
+      "plane": "release_delivery",
+      "description": "Eleven independent JA Operations Language scripts for offline runtime policy, certification records, one-click setup transactions, licensing, installer integration, the Air-Gap Runtime, Certification Fabric, One-Click Setup, Multilingual Setup, the Installer, and the License System.",
+      "legacy_files": 12,
+      "legacy_sha256": "dcb23fdf6dc55aa084fab76b7ab760c28817739dfa976fc566c8461cfdba5c3d",
+      "module_path": "modules/46_air_gap_certification_and_installer_plane"
+    },
+    {
+      "id": 47,
+      "name": "Chatbot",
+      "slug": "chatbot",
+      "plane": "intent_reasoning",
+      "description": "Six independent JA Agent Language scripts for explaining, planning, debugging, reviewing, refactoring, and documenting projects.",
+      "legacy_files": 7,
+      "legacy_sha256": "5e6acfa98dcfabb95021ef0dd45f85f4c6d398432e09276513f56525c0ac9b10",
+      "module_path": "modules/47_chatbot"
+    },
+    {
+      "id": 48,
+      "name": "Answer Modes and Specialized Roles",
+      "slug": "answer_modes_and_specialized_roles",
+      "plane": "intent_reasoning",
+      "description": "Twenty-three independent JA Agent Language scripts for eight answer modes, two coordinators, twelve technical specialists, and one least-privilege role registry.",
+      "legacy_files": 24,
+      "legacy_sha256": "06ec84755d6c5a741eb7533cb52a4b64c9fb641b9d8e2a7cb1dfadc31c5015ad",
+      "module_path": "modules/48_answer_modes_and_specialized_roles"
+    },
+    {
+      "id": 49,
+      "name": "Action Cards",
+      "slug": "action_cards",
+      "plane": "data_evidence",
+      "description": "Fourteen independent JA Interface Language scripts for risk, evidence, parameter, impact, rollback, and hash summaries plus formal capability, parameter, precondition, expected-effect, impact, rollback, unified-diff, and review-history panels.",
+      "legacy_files": 15,
+      "legacy_sha256": "e59a8d043c4114acc33f7cdf79eee03832a764f364936eb1aff98038553e54c7",
+      "module_path": "modules/49_action_cards"
+    },
+    {
+      "id": 50,
+      "name": "Diff Patch and Review",
+      "slug": "diff_patch_and_review",
+      "plane": "governance_control",
+      "description": "Six independent JA Core Application Language scripts for bounded diff production, bounded patch construction, diff review, patch review, human approval, and repository confinement.",
+      "legacy_files": 7,
+      "legacy_sha256": "a67bc5380e1cc7cb4942ed581afedb25512cf63fad993b7599666afc432fe7db",
+      "module_path": "modules/50_diff_patch_and_review"
+    },
+    {
+      "id": 51,
+      "name": "Repository Retrieval and Memory",
+      "slug": "repository_retrieval_and_memory",
+      "plane": "sense_context",
+      "description": "Six independent JA Data Language scripts for exact local evidence retrieval, repository retrieval, governed-memory retrieval, evidence-authority resolution, freshness and provenance, and memory promotion and retention.",
+      "legacy_files": 13,
+      "legacy_sha256": "253983207c24acedcec44dc7305164cefe5f3387e2c539920f46524e8af6dda4",
+      "module_path": "modules/51_repository_retrieval_and_memory"
+    },
+    {
+      "id": 52,
+      "name": "Evaluation and Content Defense",
+      "slug": "evaluation_and_content_defense",
+      "plane": "security_authorization",
+      "description": "Seven independent JA Security Policy Language scripts for answer-quality evaluation, prompt-injection evaluation, malicious repository-content evaluation, fabricated-evidence detection, Permanent Evaluation, Prompt-Injection Defense, and Repository-Content Defense.",
+      "legacy_files": 8,
+      "legacy_sha256": "e8099cf07fc236981a6ccbfd8a224b724acb0c6885caf71e01b40d5deeca96a3",
+      "module_path": "modules/52_evaluation_and_content_defense"
+    },
+    {
+      "id": 53,
+      "name": "Operations Plane",
+      "slug": "operations_plane",
+      "plane": "operations_recovery",
+      "description": "JA21 language: **JA Operations Language** (`.jaops`)",
+      "legacy_files": 8,
+      "legacy_sha256": "a8fb07d9ea6cadff969d0f89d223144c7f60e74c3480f723220df0ea81ec9a10",
+      "module_path": "modules/53_operations_plane"
+    },
+    {
+      "id": 54,
+      "name": "Local Model Provider and Health",
+      "slug": "local_model_provider_and_health",
+      "plane": "model_compute",
+      "description": "Eight independent JA Service and Protocol Language scripts define the approved, local-only model-provider boundary and its routing, lifecycle, readiness, health, contract, dashboard, and reconciliation behavior.",
+      "legacy_files": 9,
+      "legacy_sha256": "740984d5a67d9c5f3b60b4a0391c63b2e8bdf756a279cdc0ec93448cd033db78",
+      "module_path": "modules/54_local_model_provider_and_health"
+    },
+    {
+      "id": 55,
+      "name": "Capability Manifests and Permissions",
+      "slug": "capability_manifests_and_permissions",
+      "plane": "security_authorization",
+      "description": "Four independent JA Security Policy Language scripts define capabilities, command permissions, action scope, and policy-bound execution rights.",
+      "legacy_files": 5,
+      "legacy_sha256": "9d027c57986068ddf16ec4463f199020a02530c5cfd79f01977e44db3ae2f00d",
+      "module_path": "modules/55_capability_manifests_and_permissions"
+    },
+    {
+      "id": 56,
+      "name": "Job Queue Workers and Sandboxes",
+      "slug": "job_queue_workers_and_sandboxes",
+      "plane": "orchestration",
+      "description": "Nine independent JA Operations Language scripts define deterministic queue primitives, worker lifecycle, sandbox isolation, status evidence, recovery, and the higher-level services that coordinate jobs, workers, sandboxes, failures, and retries.",
+      "legacy_files": 10,
+      "legacy_sha256": "cd4bd58900e42f3c63d73ba96f7d55e6380f51416f35a8d859f5072ed48f5adb",
+      "module_path": "modules/56_job_queue_workers_and_sandboxes"
+    },
+    {
+      "id": 57,
+      "name": "Translation Build Test and Evaluation Jobs",
+      "slug": "translation_build_test_and_evaluation_jobs",
+      "plane": "orchestration",
+      "description": "Five independent JA Operations Language scripts define a common governed-job envelope and specialized translation, build, test, and evaluation job families. Every family preserves its artifacts, results, decisions, and provenance as separate identities.",
+      "legacy_files": 6,
+      "legacy_sha256": "0744b0cde64166123544b875cb0fd539aa69bbd07b9ec1a946ccc9cb27566534",
+      "module_path": "modules/57_translation_build_test_and_evaluation_jobs"
+    },
+    {
+      "id": 58,
+      "name": "Indexing Storage Resources Logs and Recovery",
+      "slug": "indexing_storage_resources_logs_and_recovery",
+      "plane": "operations_recovery",
+      "description": "Thirteen independent JA Operations Language scripts define repository indexing, storage, resource monitoring, diagnostics, logs, retries, failure handling, and their higher-level coordinating services. Learning-event recording is kept separate from ordinary telemetry so operational occurrence does not become training evidence automatically.",
+      "legacy_files": 14,
+      "legacy_sha256": "89571b70eb9c3b7d27d5e11258af1ea46b1fe7bfa27632dbd320f6b867311690",
+      "module_path": "modules/58_indexing_storage_resources_logs_and_recovery"
+    },
+    {
+      "id": 59,
+      "name": "Shell",
+      "slug": "shell",
+      "plane": "operations_recovery",
+      "description": "Three independent JA Operations Language scripts define approved command registration, command-policy enforcement, and bounded output streaming.",
+      "legacy_files": 4,
+      "legacy_sha256": "ae6a00263505cf3fc9f07f0890973b415ac53736bfaae5c88d1ff56398b42cb2",
+      "module_path": "modules/59_shell"
+    },
+    {
+      "id": 60,
+      "name": "Worker",
+      "slug": "worker",
+      "plane": "orchestration",
+      "description": "Six independent JA Operations Language scripts define the shared approved repository-job/report contract and specialized build, test, translation, rendering, and packaging workers.",
+      "legacy_files": 7,
+      "legacy_sha256": "b7c88a77e44a7a137c51f4d9d8cf6b6958f3e81990344d683ac291cc642a1a89",
+      "module_path": "modules/60_worker"
+    },
+    {
+      "id": 61,
+      "name": "Popup Runner",
+      "slug": "popup_runner",
+      "plane": "interfaces_services",
+      "description": "Seven independent JA Interface Language scripts define a focused desktop launch surface for approved jobs. The popup exposes selection, typed parameters, policy preview, confirmation, bounded output, results, and recovery without exposing an unrestricted shell, command line, executable picker, or arbitrary working-directory control.",
+      "legacy_files": 8,
+      "legacy_sha256": "8bab1185260bde11b723dc38f14de952b10a1809c9687ae15b4fd28ff681eb27",
+      "module_path": "modules/61_popup_runner"
+    },
+    {
+      "id": 62,
+      "name": "LANDON Integration and Run All",
+      "slug": "landon_integration_and_run_all",
+      "plane": "orchestration",
+      "description": "Four independent JA Agent Language scripts connect approved execution services, run one approved job, coordinate governed multi-job runs, and publish evidence-backed result reports.",
+      "legacy_files": 5,
+      "legacy_sha256": "84ee13df45855d71ce8e0366534b4a3386f6c458f22a152a580916055af777bf",
+      "module_path": "modules/62_landon_integration_and_run_all"
+    },
+    {
+      "id": 63,
+      "name": "Sandbox and Offline Runtime",
+      "slug": "sandbox_and_offline_runtime",
+      "plane": "security_authorization",
+      "description": "Six independent JA Operations Language scripts define approved sandbox and offline-runtime profiles for tools, builds, tests, translation, rendering, and packaging.",
+      "legacy_files": 7,
+      "legacy_sha256": "a3a8ef79a8ad2120f4920801ba8e8b2dbdb493174f8a632e8c803cca1d710647",
+      "module_path": "modules/63_sandbox_and_offline_runtime"
+    },
+    {
+      "id": 64,
+      "name": "Training Desktop and Android Workers",
+      "slug": "training_desktop_and_android_workers",
+      "plane": "model_compute",
+      "description": "Four independent JA Training and Evaluation Language experiments for the Training Worker, Desktop Module, Android Module, and Knowledge Repository.",
+      "legacy_files": 5,
+      "legacy_sha256": "c4025a9eb77ba2406cbb900458aa5ff0a4170fbbca94b497967cbe6b66521a22",
+      "module_path": "modules/64_training_desktop_and_android_workers"
+    },
+    {
+      "id": 65,
+      "name": "Sandbox Engine",
+      "slug": "sandbox_engine",
+      "plane": "security_authorization",
+      "description": "Thirty-six independent JA21 and DeepML scripts implementing the deterministic execution kernel described by the supplied Suite 65 specification.",
+      "legacy_files": 42,
+      "legacy_sha256": "5bad333812d6e4375de11fc31236b7e8ccecb21a26e0874a245d45452b1d036b",
+      "module_path": "modules/65_sandbox_engine"
+    },
+    {
+      "id": 66,
+      "name": "Terminal",
+      "slug": "terminal",
+      "plane": "interfaces_services",
+      "description": "Suite 66 is LANDON's governed terminal surface. It accepts reviewable terminal requests, binds them to an exact repository context, obtains Professor proposals and Podium authorization, executes only through an isolated HERMIT cell, and returns structured terminal evidence for LANDON review.",
+      "legacy_files": 31,
+      "legacy_sha256": "30690f946628bb7d94b8dfd38fc399d1746872f55e7fa086b8787e0dad61cd49",
+      "module_path": "modules/66_terminal"
+    }
+  ]
+}

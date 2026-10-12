@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "a0fab2fa634ed8dd226ed9d7acdacf1ed16d2b87a6df4afea673c69984a5e466",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Translation Build Test and Evaluation Jobs",
+  "module_id": 57,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-11",
+  "independentlyReviewed": true,
+  "testFile": "tests/independent-em-validation.cjs",
+  "tests": 10,
+  "passed": 10,
+  "failed": 0,
+  "engineSha256": "da72a233a0c860e5621f4976d681c1a742497056fda73edda17d1a3ee7b2601f",
+  "vacuumRelativeL2": [
+    0.003415591488126046,
+    0.0008566704929507945,
+    0.00021434245009786492
+  ],
+  "uniformOhmicRelativeL2": [
+    0.003449903587434694,
+    0.0008652582795626995,
+    0.0002164900045915403
+  ],
+  "grids": [
+    "16x32",
+    "32x64",
+    "64x128"
+  ],
+  "validationScope": "Smooth vacuum and uniform-Ohmic continuum-mode convergence; cylindrical geometry and numerical invariants. No material-specific, experimental, astronomical, NASA, or arbitrary3D validation.",
+  "finalRerunEvidence": "validation/all-tests.txt: 29 passed, 0 failed including the 10 independent checks"
+}

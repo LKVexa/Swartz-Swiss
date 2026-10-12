@@ -1,0 +1,57 @@
+{
+  "suite": "JA21 JA Service and Protocol Language Suite",
+  "version": "1.0.0",
+  "profile_id": "ja.service",
+  "operators": [
+    {
+      "name": "discover",
+      "records": 1000,
+      "invariant": "Preserve contract, policy, ordering, and evidence identity."
+    },
+    {
+      "name": "endpoint_bind",
+      "records": 1000,
+      "invariant": "Preserve contract, policy, ordering, and evidence identity."
+    },
+    {
+      "name": "event_publish",
+      "records": 1000,
+      "invariant": "Preserve contract, policy, ordering, and evidence identity."
+    },
+    {
+      "name": "rate_limit",
+      "records": 1000,
+      "invariant": "Preserve contract, policy, ordering, and evidence identity."
+    },
+    {
+      "name": "request",
+      "records": 1000,
+      "invariant": "Preserve contract, policy, ordering, and evidence identity."
+    },
+    {
+      "name": "respond",
+      "records": 1000,
+      "invariant": "Preserve contract, policy, ordering, and evidence identity."
+    },
+    {
+      "name": "retry",
+      "records": 1000,
+      "invariant": "Preserve contract, policy, ordering, and evidence identity."
+    },
+    {
+      "name": "service_declare",
+      "records": 1000,
+      "invariant": "Preserve contract, policy, ordering, and evidence identity."
+    },
+    {
+      "name": "stream_open",
+      "records": 1000,
+      "invariant": "Preserve contract, policy, ordering, and evidence identity."
+    },
+    {
+      "name": "transition",
+      "records": 1000,
+      "invariant": "Preserve contract, policy, ordering, and evidence identity."
+    }
+  ]
+}

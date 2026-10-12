@@ -1,0 +1,42 @@
+{
+  "evidence_sha256": "791078f989b58e719634e86c0a9e1bceda578fcc50d2248f55fa4038138ceaee",
+  "exit_code": 0,
+  "observed_results": {
+    "clean_room_replay": {
+      "corrupt_exit_code": 2,
+      "corrupt_rejected": true,
+      "digest_equal": true,
+      "isolated_exit_code": 0,
+      "ledger_equal": true,
+      "producer_ledger_head": "b3e5df0bdb004b943d1c19b85b80748d97a6db3634f98289744e5f5e6d6ed40a",
+      "producer_state_sha256": "9ff174ca39dc0b504ed60b9bd9238ba47712b17021655a0da6c59cd6b32e76a7",
+      "receipt": {
+        "entities": 7,
+        "ledger_head": "b3e5df0bdb004b943d1c19b85b80748d97a6db3634f98289744e5f5e6d6ed40a",
+        "regions": 4,
+        "renderer_created": false,
+        "schema": "RCPW-HEADLESS-VERIFY/1",
+        "semantic_ledger_sha256": "7ab616cb20f074bbbe4af4aa49d9c8d6aefd8ef8eab942603714cca9a2e3e13e",
+        "state_sha256": "9ff174ca39dc0b504ed60b9bd9238ba47712b17021655a0da6c59cd6b32e76a7",
+        "status": "PASS",
+        "tick": 30,
+        "unresolved_obligations": 0
+      }
+    },
+    "committed_digest": "527289fd741b41caca3fdbbd78b1fde77d83c724c1ed640766e8a768af3efc84",
+    "corrupt_rejected": true,
+    "initial_digest": "058aca16ecc3f4839db7cad856edfda55a4a92916f29a599882d8d459e3c77e7",
+    "invariants": [],
+    "recovery_idempotent": true
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "requirement_id": "RCPW-20-R08",
+  "result_sha256": "847004e53906dba53c2953f0534568ac30398d7ef4cc5c911338cae079bb4293",
+  "schema": "RCPW-26-GATE-EVIDENCE/1",
+  "status": "OPERATIONAL",
+  "test_command": "python vm/world/qualification/remediate_26.py",
+  "tool_versions": {
+    "python": "3.11.15",
+    "world_runtime": "7.0.0-applied-remediated-26"
+  }
+}

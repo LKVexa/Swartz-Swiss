@@ -1,0 +1,147 @@
+{
+  "package": "JA21_Atlas_Individual_Scripts_Attached_Corpus",
+  "repository": "03. Atlas",
+  "language": "JA Data Language",
+  "profile_id": "ja.data",
+  "extension": ".jad",
+  "source_version": "ja source 0.3",
+  "generated_at_utc": "2026-07-22T19:56:19.589431+00:00",
+  "source_corpus": {
+    "filename": "JA_Data_Language_Coupling_Mechanics_Corpus.jsonl.gz",
+    "sha256": "587861f8ebb4d38470488e5c93b75c748ca2302c3f9038bfd26370b67868fb98",
+    "outer_records": 7,
+    "language_records": 10000
+  },
+  "scripts": {
+    "01_atlas_entities.jad": {
+      "checks": {
+        "source_version_0_3": true,
+        "module_declared": true,
+        "data_profile_used": true,
+        "network_disabled": true,
+        "schema_declared": true,
+        "json_dataset_declared": true,
+        "schema_validation_declared": true,
+        "primary_sequence_declared": true,
+        "single_shard_partition": true,
+        "query_declared": true,
+        "lineage_declared": true,
+        "schema_assertion": true,
+        "json_emission": true,
+        "all_suite_fields_present": true
+      },
+      "passed": true,
+      "sha256": "e8a165ffaa6af95febff447d95157beebb39a8d591b65428ebbda8b9d4829503",
+      "bytes": 1143
+    },
+    "02_atlas_domains.jad": {
+      "checks": {
+        "source_version_0_3": true,
+        "module_declared": true,
+        "data_profile_used": true,
+        "network_disabled": true,
+        "schema_declared": true,
+        "json_dataset_declared": true,
+        "schema_validation_declared": true,
+        "primary_sequence_declared": true,
+        "single_shard_partition": true,
+        "query_declared": true,
+        "lineage_declared": true,
+        "schema_assertion": true,
+        "json_emission": true,
+        "all_suite_fields_present": true
+      },
+      "passed": true,
+      "sha256": "5e19c663bb230e270acebfbba24c65ec73893a7fda929b706d553d33bab47173",
+      "bytes": 1179
+    },
+    "03_atlas_files.jad": {
+      "checks": {
+        "source_version_0_3": true,
+        "module_declared": true,
+        "data_profile_used": true,
+        "network_disabled": true,
+        "schema_declared": true,
+        "json_dataset_declared": true,
+        "schema_validation_declared": true,
+        "primary_sequence_declared": true,
+        "single_shard_partition": true,
+        "query_declared": true,
+        "lineage_declared": true,
+        "schema_assertion": true,
+        "json_emission": true,
+        "all_suite_fields_present": true
+      },
+      "passed": true,
+      "sha256": "e1d7541f782e9d35f4e3bfbf80bf12e2b7b1780b1a95536a3e0633ced69ea451",
+      "bytes": 1185
+    },
+    "04_atlas_feature_spaces.jad": {
+      "checks": {
+        "source_version_0_3": true,
+        "module_declared": true,
+        "data_profile_used": true,
+        "network_disabled": true,
+        "schema_declared": true,
+        "json_dataset_declared": true,
+        "schema_validation_declared": true,
+        "primary_sequence_declared": true,
+        "single_shard_partition": true,
+        "query_declared": true,
+        "lineage_declared": true,
+        "schema_assertion": true,
+        "json_emission": true,
+        "all_suite_fields_present": true
+      },
+      "passed": true,
+      "sha256": "8677f757d643e89c56a8baa89e1e54a3665c726e94d5c2c965bc82313fbb2a00",
+      "bytes": 1351
+    },
+    "05_atlas_project_structure.jad": {
+      "checks": {
+        "source_version_0_3": true,
+        "module_declared": true,
+        "data_profile_used": true,
+        "network_disabled": true,
+        "schema_declared": true,
+        "json_dataset_declared": true,
+        "schema_validation_declared": true,
+        "primary_sequence_declared": true,
+        "single_shard_partition": true,
+        "query_declared": true,
+        "lineage_declared": true,
+        "schema_assertion": true,
+        "json_emission": true,
+        "all_suite_fields_present": true
+      },
+      "passed": true,
+      "sha256": "8ad544341e204e843f21d448df17c10104e3e7c220f05558a8b5fd23240f5589",
+      "bytes": 1307
+    },
+    "06_atlas_coordinates.jad": {
+      "checks": {
+        "source_version_0_3": true,
+        "module_declared": true,
+        "data_profile_used": true,
+        "network_disabled": true,
+        "schema_declared": true,
+        "json_dataset_declared": true,
+        "schema_validation_declared": true,
+        "primary_sequence_declared": true,
+        "single_shard_partition": true,
+        "query_declared": true,
+        "lineage_declared": true,
+        "schema_assertion": true,
+        "json_emission": true,
+        "all_suite_fields_present": true
+      },
+      "passed": true,
+      "sha256": "343955600142b179f8977baf6b64f83d6010086b06b9743d845d558e81dc042a",
+      "bytes": 1323
+    }
+  },
+  "runtime_execution": {
+    "performed": false,
+    "reason": "No production-certified JA Data Language compiler/runtime was included with the attachment."
+  }
+}

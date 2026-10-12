@@ -1,0 +1,34 @@
+ja source 0.3
+module suite58.indexing_storage_resources_logs_recovery.resource_dashboard
+use Operations
+policy explicit_network
+
+workspace ResourceDashboard {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 4 memory 8GB
+    network disabled
+    secret dashboard_key reference "vault://suite58/resource-dashboard"
+
+    service SOPHIA_dashboard_context replicas 1
+    health_check SOPHIA_dashboard_context every 10s
+    service CHARLOTTE_dashboard_gate replicas 1
+    health_check CHARLOTTE_dashboard_gate every 10s
+    service LANDON_dashboard_projector replicas 1
+    health_check LANDON_dashboard_projector every 10s
+    service Professor_dashboard_report replicas 1
+    health_check Professor_dashboard_report every 10s
+    service Podium_dashboard_receipt replicas 1
+    health_check Podium_dashboard_receipt every 10s
+    service resource_dashboard_worker replicas 1
+    health_check resource_dashboard_worker every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "indexing_storage_resources_resource_dashboard.msslb"

@@ -1,0 +1,46 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "f05d271fdd5e1440b461fb85c294487645ce4d698061ac2e802485eca6d0132d",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (MULTI_WORKER_CONFORMANCE, MATHEMATICAL_VALIDATION) plus Stage 16 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "MATHEMATICAL_VALIDATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "MULTI_WORKER_CONFORMANCE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-16",
+    "GW-41",
+    "GW-77",
+    "GW-80"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T3_FABRIC",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Experimental mathematical adapters cannot create divergent canonical results between worker layouts unless the profile explicitly marks the model nondeterministic/experimental.",
+  "requirement_id": "RCPW-16-R21",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 16,
+  "stage_title": "Penteract World Coordinate Model",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "MULTI_WORKER_CONFORMANCE",
+    "MATHEMATICAL_VALIDATION"
+  ],
+  "workflow_file": "16_PENTERACT_WORLD_COORDINATE_MODEL/253_RCPW_16_R21_EXPERIMENTAL_MATHEMATICAL_ADAPTERS_CANNOT_CREATE_DIVERGENT_CANONICAL_RESULTS_BETWEEN_.md",
+  "workflow_tier": "T3_FABRIC"
+}

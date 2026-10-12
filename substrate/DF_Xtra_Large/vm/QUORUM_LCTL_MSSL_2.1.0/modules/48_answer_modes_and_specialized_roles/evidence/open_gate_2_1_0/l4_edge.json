@@ -1,0 +1,112 @@
+{
+  "authority_sha256": "15081c64b734ec1200f525ea30663b3d4d1faca8796deca98fcfb7a9d0b0497b",
+  "domain_output": {
+    "decision": {
+      "accepted": true,
+      "confidence": 0.269531,
+      "explanation": "Reference decision produced by Answer Modes and Specialized Roles under deterministic offline profile.",
+      "route": "answer_modes_and_specialized_roles"
+    },
+    "input_type": "request/context",
+    "legacy_signals": [
+      "PACKAGE",
+      "AUTHORIZE",
+      "RECOVER",
+      "INDEX"
+    ],
+    "module": "Answer Modes and Specialized Roles",
+    "output_type": "decision/explanation",
+    "payload_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "plane": "intent_reasoning",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "0a780d90dd7e02a26901e458ac2f57c1415877916e85d4ca2f5884358ae707af",
+  "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "module": "Answer Modes and Specialized Roles",
+  "module_id": 48,
+  "plane": "intent_reasoning",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "e5e6ea839d3e271d4481499b86dffd16fcc28bcff5985306ddc2030f1052ecca",
+  "stage_count": 9,
+  "stages": [
+    {
+      "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "node": "N01",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "5e94e6f666d46896ad2c1961c26145697df7874c9b689a1428236ad30a211543",
+      "stage": "REQUEST"
+    },
+    {
+      "input_sha256": "5e94e6f666d46896ad2c1961c26145697df7874c9b689a1428236ad30a211543",
+      "node": "N02",
+      "operator": "RETRIEVE",
+      "output_sha256": "3e1469ae9953c5de19d49e0dd03d7699dbd6c95ddaa7135c12582c010d45fc90",
+      "retrieved_count": 0,
+      "stage": "CONTEXT"
+    },
+    {
+      "input_sha256": "3e1469ae9953c5de19d49e0dd03d7699dbd6c95ddaa7135c12582c010d45fc90",
+      "node": "N03",
+      "normalized_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "operator": "PARSE",
+      "output_sha256": "dd5fbbcd624dc4f8c60cee9626ff92b64097d9ffd34c34c923289a08c8051166",
+      "stage": "INTERPRET"
+    },
+    {
+      "decision": "REFERENCE_CONTINUE",
+      "input_sha256": "dd5fbbcd624dc4f8c60cee9626ff92b64097d9ffd34c34c923289a08c8051166",
+      "node": "N04",
+      "operator": "REASON",
+      "output_sha256": "ef97d4321a8797bf2185817d48e6e9c7c53fe297817e94423359f8eb68d54cf6",
+      "score": 0.504412,
+      "stage": "REASON"
+    },
+    {
+      "accepted": true,
+      "input_sha256": "ef97d4321a8797bf2185817d48e6e9c7c53fe297817e94423359f8eb68d54cf6",
+      "node": "N05",
+      "operator": "FILTER",
+      "output_sha256": "ffe7e4f1dcf12165008654ce5b4e607faca8ed0fb6d10c8a6b36a4b4438fdd58",
+      "stage": "FILTER"
+    },
+    {
+      "input_sha256": "ffe7e4f1dcf12165008654ce5b4e607faca8ed0fb6d10c8a6b36a4b4438fdd58",
+      "node": "N06",
+      "operator": "RANK",
+      "output_sha256": "11d14d4bfc8c550a200f5f940d4ef499a02d8aa78563c63e72362c5bb7d3bcd3",
+      "rank_score": 0.513725,
+      "stage": "RANK"
+    },
+    {
+      "input_sha256": "11d14d4bfc8c550a200f5f940d4ef499a02d8aa78563c63e72362c5bb7d3bcd3",
+      "node": "N07",
+      "operator": "VALIDATE",
+      "output_sha256": "b5367f2e76a9638eb1eacc9e65c74605dfd214e1bbf4da551d543231166462d7",
+      "stage": "VALIDATE",
+      "valid": true
+    },
+    {
+      "explanation": "Answer Modes and Specialized Roles:EXPLAIN reference semantics completed.",
+      "input_sha256": "b5367f2e76a9638eb1eacc9e65c74605dfd214e1bbf4da551d543231166462d7",
+      "node": "N08",
+      "operator": "EXPLAIN",
+      "output_sha256": "db7e02b9d69da5b8c1ef28ecf1ef4991561f6a0ff87b81d7f0d8c19da7a68230",
+      "stage": "EXPLAIN"
+    },
+    {
+      "input_sha256": "db7e02b9d69da5b8c1ef28ecf1ef4991561f6a0ff87b81d7f0d8c19da7a68230",
+      "node": "N09",
+      "operator": "RECORD",
+      "output_sha256": "b1972bcd1af5964868b934e9a8d6c572a7372b89c5d00f2324606b21e9747e15",
+      "receipt_sha256": "ccf58137ed84e00723bfc7babff78d79a7ee83d6bd675ca957fa179231af97ba",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

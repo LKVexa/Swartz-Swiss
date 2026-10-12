@@ -1,0 +1,65 @@
+RUSSL Zarr — NOTICE
+Copyright (C) 2026 LKVexa and contributors.
+SPDX-License-Identifier: GPL-3.0-only
+
+1. Project license
+
+Original RUSSL Zarr source code and project-authored documentation,
+specifications, schemas, synthetic fixtures and research commentary are
+licensed under the GNU General Public License, version 3 only, to the extent
+that the respective contributors hold the relevant rights. The complete
+license text is in LICENSE. The copyright attribution is in COPYRIGHT.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+the full terms. No additional restriction on use, modification or
+redistribution of GPL-covered material is imposed by this notice.
+
+2. Imported material and existing notices
+
+The repository is a mixed-provenance research corpus. The GPL grant does not
+replace, erase or extend the rights and licenses of independently authored
+third-party material, including supplied research articles, preserved
+source documents, historical archives, embedded third-party code and
+standards excerpts. Their original copyright holders retain their rights.
+Preserve applicable source notices and comply with the terms governing each
+such work. Citation, inclusion in the corpus and repository access do not
+themselves establish permission to redistribute a third-party work.
+
+Consult corpus/research/ for the accession and claim records,
+corpus/SOURCE_AUTHORITY.md for source authority, and
+corpus/institutional/RIGHTS_PRIVACY_AND_DISTRIBUTION.md for the recorded
+rights review. Unknown third-party permissions remain unresolved; the
+project license grant does not represent that those permissions were obtained.
+
+3. Sealed release and subsequent license grant
+
+The corpus/ files and releases/v2.0.0/ distribution preserve the validated
+2.0.0 release bytes. LICENSE, NOTICE, COPYRIGHT and the repository README
+are repository-level companions outside that release's integrity manifest.
+Historical statements inside the sealed corpus about the absence of a
+project license record the state at sealing. These repository-level notices
+record the subsequent GPL-3.0-only grant for project-owned material; they
+do not resolve the separate third-party rights questions.
+
+When conveying the covered material in the preserved release, include the
+applicable license and copyright notices with it. The unchanged ZIP alone
+does not contain these newly added repository-level companions.
+
+4. Research status
+
+The corpus is CANDIDATE_REVIEW_REQUIRED. Its recorded verification concerns
+scoped software and artifact checks. The corpus does not claim complete
+requirements conformance, empirical validation, external certification or
+institutional ratification. These scientific status statements describe
+the evidence and add no restriction to the GPL license.
+
+5. License-text provenance
+
+LICENSE reproduces the GNU General Public License, version 3, 29 June 2007,
+from the SPDX License List's GPL-3.0-only text:
+https://raw.githubusercontent.com/spdx/license-list-data/main/text/GPL-3.0-only.txt
+
+Copyright in the license text belongs to the Free Software Foundation.
+That attribution does not identify the Foundation as the project author.

@@ -1,0 +1,41 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "57e28bf2075df65e08914b605dbd0e30d9b370c9cca8b6ad658285494387086a",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (REFERENCE_PRECISION) plus Stage 16 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "REFERENCE_PRECISION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-16",
+    "GW-41",
+    "GW-77",
+    "GW-80"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Each extended-state component has a declared authority owner, update cadence, valid range, precision, and fallback when experimental mappings are disabled.",
+  "requirement_id": "RCPW-16-R16",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 16,
+  "stage_title": "Penteract World Coordinate Model",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "REFERENCE_PRECISION"
+  ],
+  "workflow_file": "16_PENTERACT_WORLD_COORDINATE_MODEL/250_RCPW_16_R16_EACH_EXTENDED_STATE_COMPONENT_HAS_A_DECLARED_AUTHORITY_OWNER_UPDATE_CADENCE_VALID_RAN.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

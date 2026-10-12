@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "079",
+  "title": "Node Discovery System",
+  "source_file": "079_Node_Discovery_System.md",
+  "source_sha256": "7d2053b4cbef87f76e77c9bfc5b4d875043ac442e3d24fe235254b9023718dd2",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "DF0",
+  "integration_mechanism": "DF_Fabric",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

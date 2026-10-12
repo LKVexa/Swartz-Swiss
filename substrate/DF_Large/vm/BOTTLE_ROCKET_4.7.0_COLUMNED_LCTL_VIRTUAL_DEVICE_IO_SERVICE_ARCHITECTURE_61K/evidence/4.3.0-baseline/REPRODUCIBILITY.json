@@ -1,0 +1,22 @@
+{
+  "build_A": {
+    ".build/br_isa_tests": "09365ed35273f1cc2df779909b70c08c0932b61915a703037ab0796b349ac9c4",
+    ".build/br_tests": "87a08eb53f26cad3bc09105d56cc22f84f920308828c95ef11d8aa5ec73a73b6",
+    ".build/brctl": "5d1b9221ff49a7f8affd224e35d13eabe97978e3ca11e52238a7a6eed630487b",
+    ".build/libbrvm_core.a": "efa65e47f985567844128bf808431709418a01ac5d157af8481a48273f3c4773",
+    "deploy/BOTTLE_ROCKET_SIM_CORE_4.3.0.brimg": "cbdbe8479660c932df4d15e49fc28b99ad4f2e5012a905941aa9e28795d29ad6",
+    "deploy/BOTTLE_ROCKET_SIM_CORE_4.3.0.brir.json": "64148cfc8855a964a995258e538b6837b12abce3b151933c0f394b1c315e5edc",
+    "deploy/BOTTLE_ROCKET_SIM_CORE_4.3.0.provenance.json": "4a628cbf8b231f330d4e40aaa4abab2c449b471e8650ece56558e60bf6399ca9"
+  },
+  "build_B": {
+    ".build/br_isa_tests": "09365ed35273f1cc2df779909b70c08c0932b61915a703037ab0796b349ac9c4",
+    ".build/br_tests": "87a08eb53f26cad3bc09105d56cc22f84f920308828c95ef11d8aa5ec73a73b6",
+    ".build/brctl": "5d1b9221ff49a7f8affd224e35d13eabe97978e3ca11e52238a7a6eed630487b",
+    ".build/libbrvm_core.a": "efa65e47f985567844128bf808431709418a01ac5d157af8481a48273f3c4773",
+    "deploy/BOTTLE_ROCKET_SIM_CORE_4.3.0.brimg": "cbdbe8479660c932df4d15e49fc28b99ad4f2e5012a905941aa9e28795d29ad6",
+    "deploy/BOTTLE_ROCKET_SIM_CORE_4.3.0.brir.json": "64148cfc8855a964a995258e538b6837b12abce3b151933c0f394b1c315e5edc",
+    "deploy/BOTTLE_ROCKET_SIM_CORE_4.3.0.provenance.json": "4a628cbf8b231f330d4e40aaa4abab2c449b471e8650ece56558e60bf6399ca9"
+  },
+  "byte_identical": true,
+  "record": "BR.Reproducibility"
+}

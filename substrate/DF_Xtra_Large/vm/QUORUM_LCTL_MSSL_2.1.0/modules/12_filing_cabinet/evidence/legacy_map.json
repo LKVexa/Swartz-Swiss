@@ -1,0 +1,74 @@
+{
+  "suite_id": 12,
+  "suite_name": "Filing Cabinet",
+  "plane": "data_evidence",
+  "legacy_sha256": "adfed8bacc6ecffefac7779bf69376f0ae76c0f456f00d30e323a1c973baafde",
+  "legacy_root": "legacy/source_repository/Filing Cabinet",
+  "files": [
+    {
+      "path": "12_filing_cabinet_artifacts.jad",
+      "sha256": "30251301330a01f2b5aba606a745f89eaa367d832fff73836726873362b148af",
+      "bytes": 2260
+    },
+    {
+      "path": "12_filing_cabinet_ledgers.jad",
+      "sha256": "19cbf2a0ae246cc936a7a906e99b2bde66d563777cc7284f1da03304b807e60f",
+      "bytes": 2192
+    },
+    {
+      "path": "12_filing_cabinet_manifests.jad",
+      "sha256": "7c6f3f2c3737ccd59f4a4473d96e32d5cf61b88683b8fb3c21be61465a8c32f8",
+      "bytes": 2181
+    },
+    {
+      "path": "12_filing_cabinet_models.jad",
+      "sha256": "ce34f258598b319d2e8cc7fbc14abeacc740260d3971240289356ba58038677c",
+      "bytes": 2142
+    },
+    {
+      "path": "12_filing_cabinet_retrieval_pointers.jad",
+      "sha256": "6b34832040213b88be19cb294476b5c45ab1729067361e42982bf783131e6cf5",
+      "bytes": 2260
+    },
+    {
+      "path": "12_filing_cabinet_rollback_records.jad",
+      "sha256": "69f0ab7be4df5731ea3079a77163cd59637fb3acd6a4a391331b38742b31c220",
+      "bytes": 2268
+    },
+    {
+      "path": "README.md",
+      "sha256": "79ffb80a870f0d9508eb714f3528fc89c07d4b238da0633e7e15596a2411449b",
+      "bytes": 2324
+    },
+    {
+      "path": "cabinet_ledger.dmk",
+      "sha256": "ef829c7725b4afced24a80c88d18e0bc7a5a95dc17a455aebedd76642d4f604a",
+      "bytes": 2571
+    },
+    {
+      "path": "canonical_artifacts.dmk",
+      "sha256": "5e90ca1e0f6a73495760146d2300ffbcdaaf6dea0196a87a93ecf7ddb42a474b",
+      "bytes": 2616
+    },
+    {
+      "path": "manifests.dmk",
+      "sha256": "086b1570d4aab4445d31bd564d5b6d22869c7e8bf4c28f7acc72f50cab1be32f",
+      "bytes": 2555
+    },
+    {
+      "path": "models.dmk",
+      "sha256": "18d6855fd130d389d324c6e269a2ece480f7fba2eabbbeec6321fc712f6b5f37",
+      "bytes": 2531
+    },
+    {
+      "path": "retrieval_pointers.dmk",
+      "sha256": "f058847808ec8580184a5fd1f8d38122370583c47b277da5a5da7ff05a334670",
+      "bytes": 2621
+    },
+    {
+      "path": "rollback_records.dmk",
+      "sha256": "5b2515826e8ab942a037872f1afe74ad26aee59435cd56fae4095dd2357ad86c",
+      "bytes": 2606
+    }
+  ]
+}

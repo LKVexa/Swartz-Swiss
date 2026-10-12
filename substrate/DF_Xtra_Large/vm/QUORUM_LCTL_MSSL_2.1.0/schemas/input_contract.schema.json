@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "quorum://schemas/input_contract.schema.json",
+  "title": "input_contract.schema.json",
+  "type": "object",
+  "required": [
+    "required",
+    "optional",
+    "types",
+    "cardinality",
+    "validation",
+    "provenance"
+  ],
+  "additionalProperties": true
+}

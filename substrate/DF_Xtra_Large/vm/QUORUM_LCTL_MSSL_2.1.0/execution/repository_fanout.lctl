@@ -1,0 +1,39 @@
+LCTL/1.3
+BUNDLE¦ID¦VERSION¦PROFILE¦ENTRY¦FRAMES¦TARGET¦BACKEND¦NETWORK¦REPLAY¦PRECISION¦ERROR_BUDGET¦RESOURCE_CEILING¦ADMISSION¦STATE¦PROOF
+(bundle ¦ quorum.generic_project.repository ¦ 2.0.0 ¦ lctl.quantum.parallel.distributed.native ¦ F0000:C9999 ¦ 1 ¦ local-reference ¦ none ¦ deny ¦ deterministic-seeded ¦ f64 ¦ 0.05 ¦ q<=12;distributed=logical;physical=false ¦ q1-q6 ¦ sealed ¦ lctl-column:1.0)
+QFRAME/1.0 BEGIN F0000
+ID¦PARENT¦MODULE¦QSPACE¦TICK¦PREV¦REGISTERS¦BASIS¦STATE_REGIME¦NOISE_REGIME¦APPROX_REGIME¦HARDWARE¦CONF¦ERROR¦ADMIT¦PROOF
+(F0000 ¦ ROOT ¦ quorum.generic_project.repository ¦ H ¦ 0 ¦ _ ¦ declared ¦ computational ¦ pure_or_mixed ¦ explicit ¦ typed ¦ local-reference ¦ 1.0 ¦ tracked ¦ observe ¦ lctl-column:1.0)
+QTUPLE/1.0
+ROW¦FACE¦LANE¦QSPACE¦OP¦OUT¦CTRL¦A¦B¦PARAM¦TYPE¦BASIS¦REGIME¦ASSUME¦ERROR¦RESOURCE¦CONF¦PROOF
+(D0001 ¦ DECL ¦ alloc ¦ H ¦ QREG ¦ q ¦ _ ¦ _ ¦ _ ¦ 1 ¦ qreg[1] ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ logical_qubits=1 ¦ 1.0 ¦ lctl:1.2)
+(D0002 ¦ DECL ¦ alloc ¦ H ¦ CREG ¦ c ¦ _ ¦ _ ¦ _ ¦ 1 ¦ bit[1] ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ classical_bits=1 ¦ 1.0 ¦ lctl:1.2)
+(P0001 ¦ PARALLEL ¦ plane ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ plane=sense_context;modules=8;authority=mssl ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(P0002 ¦ PARALLEL ¦ plane ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ plane=intent_reasoning;modules=8;authority=mssl ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(P0003 ¦ PARALLEL ¦ plane ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ plane=data_evidence;modules=6;authority=mssl ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(P0004 ¦ PARALLEL ¦ plane ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ plane=orchestration;modules=6;authority=mssl ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(P0005 ¦ PARALLEL ¦ plane ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ plane=security_authorization;modules=7;authority=mssl ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(P0006 ¦ PARALLEL ¦ plane ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ plane=interfaces_services;modules=8;authority=mssl ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(P0007 ¦ PARALLEL ¦ plane ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ plane=media_visual;modules=9;authority=mssl ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(P0008 ¦ PARALLEL ¦ plane ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ plane=model_compute;modules=5;authority=mssl ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(P0009 ¦ PARALLEL ¦ plane ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ plane=translation_interop;modules=3;authority=mssl ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(P0010 ¦ PARALLEL ¦ plane ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ plane=release_delivery;modules=2;authority=mssl ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(P0011 ¦ PARALLEL ¦ plane ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ plane=operations_recovery;modules=3;authority=mssl ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(P0012 ¦ PARALLEL ¦ plane ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ plane=governance_control;modules=1;authority=mssl ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0001 ¦ PARALLEL ¦ scenario ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=sense_context;to=intent_reasoning;kind=scenario_handoff ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0002 ¦ PARALLEL ¦ scenario ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=intent_reasoning;to=orchestration;kind=scenario_handoff ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0003 ¦ PARALLEL ¦ scenario ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=orchestration;to=security_authorization;kind=scenario_handoff ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0004 ¦ PARALLEL ¦ scenario ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=security_authorization;to=interfaces_services;kind=scenario_handoff ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0005 ¦ PARALLEL ¦ scenario ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=sense_context;to=data_evidence;kind=scenario_handoff ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0006 ¦ PARALLEL ¦ scenario ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=data_evidence;to=governance_control;kind=scenario_handoff ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0007 ¦ PARALLEL ¦ scenario ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=media_visual;to=release_delivery;kind=scenario_handoff ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0008 ¦ PARALLEL ¦ scenario ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=model_compute;to=media_visual;kind=scenario_handoff ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0009 ¦ PARALLEL ¦ scenario ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=translation_interop;to=release_delivery;kind=scenario_handoff ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(E0010 ¦ PARALLEL ¦ scenario ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=operations_recovery;to=governance_control;kind=scenario_handoff ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:deep2)
+(V9001 ¦ PARALLEL ¦ evidence ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ receipt=repository;replay=topology;network=deny ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:evidence2)
+(C9999 ¦ CODE ¦ terminal ¦ H ¦ NOP ¦ _ ¦ _ ¦ _ ¦ _ ¦ terminal=sealed_graph_end;justification=canonical_entry_sentinel ¦ operator ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ lctl:nop)
+END QTUPLE
+END QFRAME
+@frame sha256:3d8e6b70400592bfea0b01de3a8e35cc8485696f66d2fb417ee879e27f4d61a7
+END LCTL
+@bundle sha256:61097d7b6f1d8d202252c14cd8c5abf0ff6a1ef52876233cc2a8bba30419a11a

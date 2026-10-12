@@ -1,0 +1,56 @@
+{
+  "arithmetic_ops_per_second": 77198.938,
+  "branch_mean_ns": 16.125,
+  "branch_ops_per_second": 62015624.061,
+  "instructions_per_second": 135117957.713,
+  "load_store_mean_ns": 1220.375,
+  "load_store_ops_per_second": 819420.061,
+  "record": "BOTTLE_ROCKET.PerformanceMedian5",
+  "samples": [
+    {
+      "arithmetic_ops_per_second": 77367.226,
+      "branch_mean_ns": 16.09,
+      "branch_ops_per_second": 62152290.106,
+      "instructions_per_second": 136002078.99,
+      "load_store_mean_ns": 1214.179,
+      "load_store_ops_per_second": 823602.079,
+      "record": "BOTTLE_ROCKET.PerformanceBaseline"
+    },
+    {
+      "arithmetic_ops_per_second": 71227.615,
+      "branch_mean_ns": 16.661,
+      "branch_ops_per_second": 60019759.63,
+      "instructions_per_second": 137536740.263,
+      "load_store_mean_ns": 1321.512,
+      "load_store_ops_per_second": 756708.746,
+      "record": "BOTTLE_ROCKET.PerformanceBaseline"
+    },
+    {
+      "arithmetic_ops_per_second": 79412.112,
+      "branch_mean_ns": 16.125,
+      "branch_ops_per_second": 62015624.061,
+      "instructions_per_second": 133044492.816,
+      "load_store_mean_ns": 1215.242,
+      "load_store_ops_per_second": 822881.599,
+      "record": "BOTTLE_ROCKET.PerformanceBaseline"
+    },
+    {
+      "arithmetic_ops_per_second": 77198.938,
+      "branch_mean_ns": 16.075,
+      "branch_ops_per_second": 62209516.792,
+      "instructions_per_second": 109459635.69,
+      "load_store_mean_ns": 1265.595,
+      "load_store_ops_per_second": 790141.927,
+      "record": "BOTTLE_ROCKET.PerformanceBaseline"
+    },
+    {
+      "arithmetic_ops_per_second": 76836.48,
+      "branch_mean_ns": 16.416,
+      "branch_ops_per_second": 60915063.224,
+      "instructions_per_second": 135117957.713,
+      "load_store_mean_ns": 1220.375,
+      "load_store_ops_per_second": 819420.061,
+      "record": "BOTTLE_ROCKET.PerformanceBaseline"
+    }
+  ]
+}

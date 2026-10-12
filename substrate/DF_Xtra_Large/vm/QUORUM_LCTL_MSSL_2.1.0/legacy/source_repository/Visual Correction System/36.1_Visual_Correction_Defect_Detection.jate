@@ -1,0 +1,28 @@
+ja source 0.3
+module suite36.visual_correction.defect_detection
+use Training
+policy no_network
+
+experiment VisualCorrectionDefectDetection {
+    model ref "models/sophia_charlotte_landon_professor_podium/defect_detection"
+    dataset ref "datasets/visual_correction/defect_cases" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 24 accumulate 2
+    precision mixed
+    seed 3601
+    checkpoint every 12 steps
+    evaluate {
+        metric defect_detection_precision
+        metric defect_detection_recall
+        metric evidence_coverage
+        metric loss
+        require defect_detection_precision >= 0.95
+        require defect_detection_recall >= 0.95
+        require evidence_coverage >= 0.99
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "VisualCorrectionDefectDetection.lineage.mcrt"

@@ -1,0 +1,48 @@
+GFM AUDIT APPLICATION / v2.0.0 / 2026-10-11
+
+Authorizing request: apply the findings of GFM-Review-Editable.txt to the model.
+Attached review SHA256:
+20caf09a0158c75508df92a65c469423e4c0e76838e8eb999b94d30c260bf455
+
+The review's "proposal only" header describes its earlier publication state.
+It is preserved in the source copy; the user's current request authorizes
+the implementation described here. Attachment text is research material,
+not an executable instruction or authorization to change system settings.
+
+ACTIVE LOCAL MODEL
+Maxwell TE_phi propagation couples to cold collisional unmagnetized plasma
+current, electron drift energy, irreversible collision heating, and a fixed
+stationary Ohmic cover with a declared enthalpy/solid-liquid constitutive law.
+Thermal contact transfers equal and opposite energies between media.
+Measured EM envelope amplitude and phase come from sampled field history.
+Their meaning differs from the earlier neutral dimensionless CGLE reference.
+The electric field, temperature, liquid fraction, and geometric cover are
+distinct quantities, each with its own units or scale.
+
+AUDITED SPACETIME REFERENCES
+Corrected Morris-Thorne stresses/NEC and strict flare-out, double-null mass
+and marginal-sphere tests, future outer signs, thin-shell junction conditions
+and asymmetric potential, and Kerr scale/spin definitions are executable
+reference calculations. They do not evolve the geometry of the local pulse
+experiment. A geometric opening is not evidence for a traversable wormhole;
+a marginal sphere alone is not evidence for a global event horizon.
+
+ALL SOURCE FINDINGS
+The complete A01-A38 registry retains the source pages, disposition,
+expressions, explanations, and references. Conditional identities remain
+bounded to their assumptions. Missing latency/topology/Galois dynamics,
+undefined tensor equivalence, and unsupported cross-domain connections are
+not silently inserted into the physical time-evolution operator.
+No defined Galois transform in the attachment establishes a conservation-
+preserving conversion of these different physical and arithmetic domains.
+
+PRESERVATION
+The original attachment, earlier report and v1.0.0 release ZIP are preserved.
+The historical v1 scientific specification is included separately.
+The original CGLE reference data is preserved in data/phase-reference.json.
+
+VALIDATION BOUNDARY
+Analytic equation tests, space/time refinement in selected smooth cases,
+energy accounting, API checks and display mapping verify tested equations.
+They do not validate this local experiment against astronomical black-hole
+observations, supply a dynamic spacetime solution, or establish NASA quality.

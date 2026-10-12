@@ -1,0 +1,10 @@
+# DF_Small -- declared toolchain (checked first by ./VERIFY; gate N0)
+# required to BUILD and to run the VM's own gate:
+cc                 C11 compiler (gcc 13 / clang 18 measured)
+make               GNU make
+openssl-dev        OpenSSL 3 libcrypto headers + library (-lcrypto: SHA-256, Ed25519)
+sh                 POSIX shell
+python3            Python 3.10+ (the adapter, VERIFY, RUN)
+sha256sum          for the VM's own integrity check
+# optional:
+#   nothing else. No network. No JDK.

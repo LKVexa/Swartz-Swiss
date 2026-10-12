@@ -1,0 +1,33 @@
+ja source 0.3
+module suite65.sandbox_engine.job_queue_scheduler
+use Operations
+policy explicit_network
+
+workspace SandboxJobQueueScheduler {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 8 memory 12GB
+    network disabled
+
+    service SOPHIA_queue_context replicas 1
+    health_check SOPHIA_queue_context every 10s
+    service CHARLOTTE_queue_gate replicas 1
+    health_check CHARLOTTE_queue_gate every 10s
+    service LANDON_queue_controller replicas 1
+    health_check LANDON_queue_controller every 5s
+    service Professor_queue_report replicas 1
+    health_check Professor_queue_report every 10s
+    service Podium_queue_receipt replicas 1
+    health_check Podium_queue_receipt every 10s
+    service deterministic_job_scheduler replicas 1
+    health_check deterministic_job_scheduler every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "sandbox_engine_job_queue_scheduler.msslb"

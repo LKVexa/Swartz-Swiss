@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "9ae8753e6c53eba92d609d29afa604a213efcbffafcb399559bd0064abfe6d75",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Sandbox and Offline Runtime",
+  "module_id": 63,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

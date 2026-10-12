@@ -1,0 +1,47 @@
+profile ja.data
+source_level 0.3
+
+subsuite Terminal.T_17 HistoryRecallReproducibleReplay {
+    identity { suite = "66"; id = "T-17"; deterministic = true; autorun = false }
+
+    integrate { Suite_02_Anthology; Suite_16_Perceiver; Suite_51_Repository_Retrieval_and_Memory }
+
+    accept {
+        redacted_command_display
+        contract_hash
+        context_snapshot_hash
+        authorization_ref
+        terminal_result_ref
+        retention_policy
+    }
+
+    emit TerminalHistoryRecord
+
+    procedure record_redacted_non_authoritative_history() {
+        record = TerminalHistoryRecord {
+            display = redacted_command_display
+            contract_hash
+            context_snapshot_hash
+            authorization_ref
+            terminal_result_ref
+            created_at
+            retention_class
+            authoritative_for_execution = false
+        }
+        append_immutable(record)
+        return record
+    }
+
+    procedure request_replay(history_record) {
+        draft = reconstruct_new_contract_from_pinned_refs(history_record)
+        require current_context_comparison
+        require new_Professor_action_card
+        require new_Podium_authorization
+        return draft
+    }
+
+    deny { direct_history_execution; secret_persistence; mutable_history; stale_context_silent_replay }
+    evidence { history_record; redaction_ref; replay_draft; new_authorization_ref }
+    tests { record; recall; redaction; replay_requires_authorization; context_change }
+}
+

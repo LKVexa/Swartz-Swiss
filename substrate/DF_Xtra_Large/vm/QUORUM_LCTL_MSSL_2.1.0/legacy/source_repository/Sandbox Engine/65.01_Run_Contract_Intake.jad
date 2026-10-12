@@ -1,0 +1,70 @@
+ja source 0.3
+module suite65.sandbox_engine.run_contract_intake
+use Data
+policy no_network
+
+schema SandboxRunContractRecord {
+    id: Count primary
+    run_id: Text
+    idempotency_key: Text
+    requested_by: Text
+    intent: Text
+    job_family: Text
+    entry_suite: Text
+    input_manifest_hash: Text
+    repository_root: Text
+    output_contract_hash: Text
+    capability_manifest_hash: Text
+    network_policy: Text
+    resource_budget_hash: Text
+    retry_policy_hash: Text
+    approval_policy_hash: Text
+    release_policy: Text
+    locale: Text
+    accessibility_profile: Text
+    contract_hash: Text
+    sophia_judgment: Text
+    charlotte_validation: Text
+    landon_status: Text
+    professor_explanation: Text?
+    podium_receipt: Text
+    created_at: Timestamp
+
+    # --- 8S coupling layer ---
+    relation_class: Text
+    eta_ind: F32
+    g5_latent_gap: F32
+    delta8_separation: F32
+    g3_projected_gap: F32
+    gJ_semantic_gap: F32
+    interaction_order: Count
+    r12_replay_id: Text
+}
+# Smithson 8S Coupled Mechanics v1.0 — data-source coupling header.
+# Local dimension is 5+3=8 where the S^3 fiber is noncollapsed; not the standard
+# sphere S^8 without a separate topological proof. Author: Russell Philip Smithson.
+coupling EightS_v1_0 {
+    framework      "Smithson 8S Coupled Mechanics v1.0"
+    base           "penteract field B^5 = [-1,1]^5"
+    object         "S^3 fiber F_i = { y in R^4 : ||y||_2 = r_i }"
+    fifth_axis     "elucidation coordinate t8"
+    support_layers { SOPHIA; CHARLOTTE; LANDON }
+    admission      eta_ind >= epsilon_ind and Delta_8S > epsilon_gain
+    execution      sparse_pairwise escalate_triadic_on { unresolved; contradiction; high_risk; certification_critical }
+    relation_order { UNRESOLVED; CONTRADICTION; HIGHER_ORDER; PROJECTION_ONLY; LATENT_5D_COUPLED; FIBER_STATE_RESONANT; SEMANTIC_ONLY; REINFORCING; NONE }
+    tolerances     { tol5 = 1e-7L; tol8 = 1e-7L; tol3 = 1e-5L; tolJ = declared }
+}
+
+dataset sandbox_run_contracts
+    from dmk("sandbox_run_contracts.dmk")
+    validate SandboxRunContractRecord
+    partition by run_id shards 4
+query admitted_sandbox_run_contracts {
+    from sandbox_run_contracts
+    where contract_hash != null and podium_receipt != null
+    select id, run_id, idempotency_key, requested_by, intent, job_family, entry_suite, input_manifest_hash, repository_root, output_contract_hash, capability_manifest_hash, network_policy, resource_budget_hash, retry_policy_hash, approval_policy_hash, release_policy, locale, accessibility_profile, contract_hash, sophia_judgment, charlotte_validation, landon_status, professor_explanation, podium_receipt, relation_class, eta_ind, g5_latent_gap, delta8_separation, g3_projected_gap, gJ_semantic_gap, interaction_order, r12_replay_id
+}
+lineage admitted_sandbox_run_contracts from sandbox_run_contracts
+assert coupling.relation_order.preserved == true
+assert schema.valid == true
+emit json admitted_sandbox_run_contracts

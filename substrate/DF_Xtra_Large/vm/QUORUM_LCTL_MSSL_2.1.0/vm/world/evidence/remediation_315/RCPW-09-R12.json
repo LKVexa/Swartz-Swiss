@@ -1,0 +1,48 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "3741904a61cd7d89ded7b035de0bd60cb3abbe51538ba88ae281ab2d2a323e11",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (LOD_TRANSITION, CAUSAL_REPLAY) plus Stage 09 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "CAUSAL_REPLAY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "LOD_TRANSITION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-04",
+    "GW-12",
+    "GW-35",
+    "GW-68",
+    "GW-69",
+    "GW-70"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Off-screen event resolution declares whether the outcome was fully simulated, abstractly resolved, deferred, or blocked awaiting higher fidelity.",
+  "requirement_id": "RCPW-09-R12",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 9,
+  "stage_title": "Narrative Gravity Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "LOD_TRANSITION",
+    "CAUSAL_REPLAY"
+  ],
+  "workflow_file": "09_NARRATIVE_GRAVITY_AUTHORITY/120_RCPW_09_R12_OFF_SCREEN_EVENT_RESOLUTION_DECLARES_WHETHER_THE_OUTCOME_WAS_FULLY_SIMULATED_ABSTRACT.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

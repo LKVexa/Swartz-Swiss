@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.specialized_roles.repository_analyst
+use Agent
+policy no_network
+
+agent RepositoryAnalyst {
+    identity "repository_analyst"
+    role "sophia-charlotte-landon-professor-podium-specialist"
+    goal produce_current_provenance_bound_repository_analysis when confidence >= 0.95
+    memory session retention 1h
+    budget steps 60 tools 5
+    tool LANDONInventoryRepository(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAModelRepositoryStructure(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateRepositoryAnalysis(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainRepository(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordRepositoryAnalysis(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONInventoryRepository
+        authorize SOPHIAModelRepositoryStructure
+        authorize CHARLOTTEValidateRepositoryAnalysis
+        authorize ProfessorExplainRepository
+        authorize PodiumRecordRepositoryAnalysis
+        continue when policy_allows
+        execute LANDONInventoryRepository("selected_work_repository")
+        execute SOPHIAModelRepositoryStructure("repository_inventory")
+        execute CHARLOTTEValidateRepositoryAnalysis("candidate_repository_model")
+        execute ProfessorExplainRepository("validated_repository_model")
+        execute PodiumRecordRepositoryAnalysis("repository_analysis_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "RepositoryAnalyst.mcrt"

@@ -1,0 +1,9 @@
+{
+  "bundle": "fabric/FABRIC.pal",
+  "reference_witness": 9950524808862381976,
+  "rows": 34,
+  "schema": "DF/FABRIC_SEAL/1",
+  "seal": "8eac80fa8d72bd541c7036311c201ba46dcbf2a29e1173b555611813dc8b9968",
+  "verify_ok": true,
+  "warnings": []
+}

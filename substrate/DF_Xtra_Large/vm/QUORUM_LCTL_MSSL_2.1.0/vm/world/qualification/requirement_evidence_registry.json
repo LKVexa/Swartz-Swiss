@@ -1,0 +1,214 @@
+{
+  "entries": {
+    "RCPW-01-R01": {
+      "evidence_sha256": "ebbe648571409df05f8da6b29a927e1f91a73fc634fadb28bba8c3850b564111",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-01-R01.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-02-R13": {
+      "evidence_sha256": "8d3444abd663d9c0533698d46580cf0bc32b533fe41ac33fe41c240931ea2ee9",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-02-R13.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-03-R20": {
+      "evidence_sha256": "28fb9b1687ff0d497b4f7655630024d8b2b54cd24ffc564d07278b287b0228c2",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-03-R20.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-04-R09": {
+      "evidence_sha256": "0417481c1286b902e25385a94028ddfc2a6919b764b664ec4911ac43c1a31dee",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-04-R09.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-04-R24": {
+      "evidence_sha256": "abee15ffe81d840c8c2f917628757f717a9f1462116079bcd0f11805b8940fd0",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-04-R24.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-07-R09": {
+      "evidence_sha256": "04e75375f58cd2b843dc45ce0c987a72b27da2c1b7c668e9caa89137dae92f01",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-07-R09.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-09-R01": {
+      "evidence_sha256": "d63dac3897ee2862e5c69de1ec6856872b46176b0f3777800101d603d5cbda27",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-09-R01.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-10-R23": {
+      "evidence_sha256": "79a07a9e89e84b855942de341730099c9da17c4c97cebde9104624420e2d59d4",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-10-R23.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-10-R24": {
+      "evidence_sha256": "bbe0ea578be39f595e9bbb60e2181f79decaa0e72f056c13fc72f2b8fa9cb7e5",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-10-R24.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-11-R06": {
+      "evidence_sha256": "503ff879bdadd78b28341a51a905776115dfc8027965fb82bb4a1887511ea9e4",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-11-R06.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-12-R06": {
+      "evidence_sha256": "cec2480f96c87a961a2101cee23e7bfd3d3f2cda75f1e9deb17dabb62f0a29d7",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-12-R06.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-14-R23": {
+      "evidence_sha256": "dc132b9955a8cace1ff6682f1af9e133e6ee808ff18a985202f0a928ccdcaaed",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-14-R23.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-16-R12": {
+      "evidence_sha256": "f79828a34d38a99d75ead3e8f10c983af359fcfe08c3411d9ac9543ef307a08a",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-16-R12.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-17-R18": {
+      "evidence_sha256": "da39105afceaa1681ba22e442152c89164bc0332cc7cd75f79eb8ea8b7324fc6",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-17-R18.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-18-R08": {
+      "evidence_sha256": "22079f107f53c2be150999b5f7a648f34ab22c0e48376c9e9b97a624929cb3a4",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-18-R08.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-18-R16": {
+      "evidence_sha256": "2891f4d2c40c2e1387c35251ec770979234225832a1b298c53d2172d5b1ae7ae",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-18-R16.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-18-R20": {
+      "evidence_sha256": "14974f3cc2b5c7e7f7f98bc1c1d0abbf50fb849d122ffd6f6dc4ed663dfa0325",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-18-R20.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-19-R06": {
+      "evidence_sha256": "ab06aa9507c9fd7b0f7f500e0e850156ab360546c65acaf64b15807962fbb30b",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-19-R06.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-19-R19": {
+      "evidence_sha256": "bee6674af7e5bc767edead6190ff21c22bcaa57cd0f84a315ba7022c63a05a9f",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-19-R19.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-19-R20": {
+      "evidence_sha256": "21399dc4617c4390306d302bb1d84acfc4f8f220344326b7fb3029b510304b38",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-19-R20.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-19-R29": {
+      "evidence_sha256": "ef25fc967e32d233d86006ef5d7e6b3d31938f915e7cd79df91f283ba879fdbc",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-19-R29.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-20-R07": {
+      "evidence_sha256": "f127492bb5eae326de81e2d34672a90c884971a84e4c44d548d7ef326ebc7a8e",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-20-R07.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-20-R08": {
+      "evidence_sha256": "791078f989b58e719634e86c0a9e1bceda578fcc50d2248f55fa4038138ceaee",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-20-R08.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-20-R11": {
+      "evidence_sha256": "39645751bf04bf83c6228efafa47dd96ec1a0eec3dd89efa16338b7b77f016aa",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-20-R11.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-20-R20": {
+      "evidence_sha256": "752972238b192df8b3e2407c26aae84f3e9c507e2d40d47da6c076c64b252142",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-20-R20.json"
+      ],
+      "status": "OPERATIONAL"
+    },
+    "RCPW-20-R25": {
+      "evidence_sha256": "787a6ed7e3f2c9a975f9e4444c82c856c17e0a7bc112ddb4cc7f20bd9d27ff28",
+      "pass_predicate": "evidence status == OPERATIONAL and exit_code == 0",
+      "required_evidence": [
+        "world/evidence/remediation_26/RCPW-20-R25.json"
+      ],
+      "status": "OPERATIONAL"
+    }
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "schema": "RCPW-REQUIREMENT-EVIDENCE-REGISTRY/1"
+}

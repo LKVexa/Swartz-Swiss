@@ -1,0 +1,49 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "eaed8187aef289bdc42faa2759554312a21f8fd1e7491a55422dbaaa2b021d9d",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (TRANSACTION_CONCURRENCY, ECONOMY_CONSERVATION) plus Stage 08 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "ECONOMY_CONSERVATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "TRANSACTION_CONCURRENCY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-03",
+    "GW-14",
+    "GW-27",
+    "GW-29",
+    "GW-48",
+    "GW-64",
+    "GW-65"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T2_HIGH_FIDELITY",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Economic transactions are double-entry or equivalently conservation-auditable for money/inventory/value flows where applicable.",
+  "requirement_id": "RCPW-08-R16",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 8,
+  "stage_title": "Civilization / Economy Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "TRANSACTION_CONCURRENCY",
+    "ECONOMY_CONSERVATION"
+  ],
+  "workflow_file": "08_CIVILIZATION_ECONOMY_AUTHORITY/107_RCPW_08_R16_ECONOMIC_TRANSACTIONS_ARE_DOUBLE_ENTRY_OR_EQUIVALENTLY_CONSERVATION_AUDITABLE_FOR_MON.md",
+  "workflow_tier": "T2_HIGH_FIDELITY"
+}

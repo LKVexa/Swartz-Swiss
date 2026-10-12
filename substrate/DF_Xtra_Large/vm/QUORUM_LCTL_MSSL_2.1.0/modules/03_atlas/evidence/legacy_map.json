@@ -1,0 +1,84 @@
+{
+  "suite_id": 3,
+  "suite_name": "Atlas",
+  "plane": "sense_context",
+  "legacy_sha256": "72eba4f48920a66f3e69a2b3321ae9ec20679d1f6ce2a89d7be36e1917b99801",
+  "legacy_root": "legacy/source_repository/Atlas",
+  "files": [
+    {
+      "path": "03_atlas_coordinates.jad",
+      "sha256": "d7d91251062a5d3c155e32351ba230f1a6aa021984c767fef96f975a097b3be1",
+      "bytes": 2684
+    },
+    {
+      "path": "03_atlas_domains.jad",
+      "sha256": "766e68a408fff21f73abe52f4e151ef73de752b02ae85752454aef0c071ddf0a",
+      "bytes": 2540
+    },
+    {
+      "path": "03_atlas_entities.jad",
+      "sha256": "8543dc49fa695f51b2b193b36840d62062e69a75c62b7fda33f411613ea992ab",
+      "bytes": 2504
+    },
+    {
+      "path": "03_atlas_feature_spaces.jad",
+      "sha256": "c3470b92c4d8e8e5f15e8751ca30f8b264152540610b062fcf81de9a8ba617e8",
+      "bytes": 2712
+    },
+    {
+      "path": "03_atlas_files.jad",
+      "sha256": "f2a1cec77dd7aa3f1160c275b983e76c38b5e160e9080de65b666b7e4db276b1",
+      "bytes": 2546
+    },
+    {
+      "path": "03_atlas_project_structure.jad",
+      "sha256": "9767a5314e45cf2d2c1c15d235579e61b13a15eb46857e96f62ddb0d628bb9d4",
+      "bytes": 2668
+    },
+    {
+      "path": "MANIFEST.json",
+      "sha256": "4e995ee9e7742fecc1c382dbf34a67e2e36623ff00f678d29f766698911f40d3",
+      "bytes": 4901
+    },
+    {
+      "path": "README.md",
+      "sha256": "42f3eb86be8cda4f38146b6d97a36082bf0545590bad8c0cac54d3ace3476aad",
+      "bytes": 2436
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "sha256": "3086fd9eeef1fd26573abb8cdd719642c0011c021fea088b77b18254abde0e55",
+      "bytes": 1473
+    },
+    {
+      "path": "coordinate_records.dmk",
+      "sha256": "3513434870b7ff8688a7a0f37709cf0fcd068ce46ae9ed0692c9fdbd40f3428e",
+      "bytes": 2879
+    },
+    {
+      "path": "domain_records.dmk",
+      "sha256": "d3e7c30f92e20866c9a5e9ca78a1df1cad80f6995f45900fbd733e297c5e71c8",
+      "bytes": 2779
+    },
+    {
+      "path": "entity_records.dmk",
+      "sha256": "bf6f3a7228cc856b64c9175eca39edd06990e15a23fb69c3513b47461c496331",
+      "bytes": 2761
+    },
+    {
+      "path": "feature_space_records.dmk",
+      "sha256": "780702cfaadbcc79573e81f8349c70e7676e9f4794dcf9f20dee61acbf4be778",
+      "bytes": 2889
+    },
+    {
+      "path": "file_records.dmk",
+      "sha256": "4c48f1f9946ccd9e458a9c0a65675758415771b169b7383c2fae74a482ae7c94",
+      "bytes": 2791
+    },
+    {
+      "path": "project_structure_records.dmk",
+      "sha256": "ca2dc18c6e5202f37620d430382854ff1640d4ad67c4e4393a1d0dd05a706817",
+      "bytes": 2866
+    }
+  ]
+}

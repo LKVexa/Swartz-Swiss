@@ -1,0 +1,47 @@
+ja source 0.3
+module suite49.action_cards.impact_summary
+use Interface
+policy no_network
+
+interface ActionCardImpactSummary {
+    state selected_action: Text? = null
+    state summarizing_impact: Flag = false
+    derived can_select_action = not summarizing_impact
+    derived can_summarize_impact = selected_action != null and not summarizing_impact
+    component SOPHIA_ImpactModel {
+        label "Interpret proposed action impact"
+        enabled bind can_summarize_impact
+        accessibility role button name "Interpret impact for selected action"
+        action interpret_impact_summary requires admin.action:approved
+    }
+    component CHARLOTTE_ImpactGate {
+        label "Validate affected scope, severity, and uncertainty"
+        enabled bind can_summarize_impact
+        accessibility role button name "Validate impact summary for selected action"
+        action validate_impact_summary requires admin.action:approved
+    }
+    component LANDON_ImpactBind {
+        label "Bind validated impact summary"
+        enabled bind can_summarize_impact
+        accessibility role button name "Bind impact summary to selected action card"
+        action bind_impact_summary requires admin.action:approved
+    }
+    component Professor_ImpactGuide {
+        label "Explain impact and affected systems"
+        enabled bind can_select_action
+        accessibility role button name "Explain selected action impact summary"
+        action explain_impact_summary requires admin.action:approved
+    }
+    component Podium_ImpactEvidence {
+        label "View impact evidence and receipt"
+        enabled bind can_summarize_impact
+        accessibility role button name "View selected action impact evidence"
+        action show_impact_evidence requires admin.action:approved
+    }
+    component ImpactSummaryViewport {
+        embed portal.scene "action_card_impact_summary"
+        motion bind timeline.impact_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface ActionCardImpactSummary

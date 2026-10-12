@@ -1,0 +1,47 @@
+ja source 0.3
+module suite49.action_cards.expected_effects
+use Interface
+policy no_network
+
+interface ActionCardExpectedEffects {
+    state selected_action: Text? = null
+    state validating_effects: Flag = false
+    derived can_select_action = not validating_effects
+    derived can_validate_effects = selected_action != null and not validating_effects
+    component SOPHIA_EffectsModel {
+        label "Model expected action effects"
+        enabled bind can_validate_effects
+        accessibility role button name "Model expected effects for selected action"
+        action model_expected_effects requires admin.action:approved
+    }
+    component CHARLOTTE_EffectsGate {
+        label "Validate effect identities, order, bounds, and uncertainty"
+        enabled bind can_validate_effects
+        accessibility role button name "Validate expected effects for selected action"
+        action validate_expected_effects requires admin.action:approved
+    }
+    component LANDON_EffectsBind {
+        label "Bind canonical expected-effect preview"
+        enabled bind can_validate_effects
+        accessibility role button name "Bind expected effects to selected action card"
+        action bind_expected_effects requires admin.action:approved
+    }
+    component Professor_EffectsGuide {
+        label "Explain expected, possible, and forbidden effects"
+        enabled bind can_select_action
+        accessibility role button name "Explain selected action expected effects"
+        action explain_expected_effects requires admin.action:approved
+    }
+    component Podium_EffectsEvidence {
+        label "View effect-model evidence and receipt"
+        enabled bind can_validate_effects
+        accessibility role button name "View selected action expected-effect evidence"
+        action show_effect_evidence requires admin.action:approved
+    }
+    component ExpectedEffectsViewport {
+        embed portal.scene "action_card_expected_effects"
+        motion bind timeline.effect_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface ActionCardExpectedEffects

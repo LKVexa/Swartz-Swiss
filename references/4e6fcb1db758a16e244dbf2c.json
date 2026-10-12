@@ -1,0 +1,9 @@
+{
+  "arithmetic_ops_per_second": 79125.056,
+  "branch_mean_ns": 15.288,
+  "branch_ops_per_second": 65408724.042,
+  "instructions_per_second": 137295966.663,
+  "load_store_mean_ns": 1242.471,
+  "load_store_ops_per_second": 804847.511,
+  "record": "BOTTLE_ROCKET.PerformanceBaseline"
+}

@@ -1,0 +1,21 @@
+{
+  "format": "vb-ja21-remanufacture-provenance/3",
+  "source_product": "VB JA21 Omni Virtual Browser 6.1.3",
+  "parent_release": "6.1.3",
+  "release": "7.0.0",
+  "changes": [
+    "Removed the MSHTML/WebBrowser compatibility renderer and WindowsFormsHost bridge.",
+    "Rejected the proposed Edge Chromium/WebView2 path; no external browser engine is used.",
+    "Added sealed renderer.ja -> renderer.ir.json policy unit.",
+    "Added bounded JA Mirror HTTP/HTTPS fetch primitive, HTML tokenizer/DOM, CSS cascade profile and flow document reconstruction.",
+    "Changed default search normalization to a scriptless HTML search endpoint so results can populate without JavaScript.",
+    "Upgraded the omni window and document surface to the luxury hairline/glass/ambient-gradient design system.",
+    "Preserved DF_Small source capsule, offline helper boundary and payload verification.",
+    "Retained Windows path/WPF compile-reference hardening."
+  ],
+  "ja21_corpus_lock": "engine/ja21/corpus.lock.json",
+  "df_small_lock": "engine/ja21/dfsmall.lock.json",
+  "df_small_source_sha256": "d64085ac90f44b24196b0d0ed1b2859bb974723f8644a7258d1347550b9a5e07",
+  "external_browser_engine": null,
+  "windows_path_hotfix_retained": true
+}

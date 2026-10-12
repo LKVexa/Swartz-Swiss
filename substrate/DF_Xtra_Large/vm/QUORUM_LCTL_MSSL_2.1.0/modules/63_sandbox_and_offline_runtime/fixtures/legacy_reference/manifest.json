@@ -1,0 +1,45 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 63,
+  "legacy_root": "legacy/source_repository/Sandbox and Offline Runtime",
+  "legacy_sha256": "a3a8ef79a8ad2120f4920801ba8e8b2dbdb493174f8a632e8c803cca1d710647",
+  "files": [
+    {
+      "path": "63.1_Tools.jaops",
+      "sha256": "282ea6dc093dbd72776889a690f245cba32e8f552c9a0dd3b00fc63d5484f660",
+      "bytes": 1076
+    },
+    {
+      "path": "63.2_Builds.jaops",
+      "sha256": "43e2e12a0209f04fd2288cc61f6cf5df90092fac71b9709c0699e3a3053c7a36",
+      "bytes": 1094
+    },
+    {
+      "path": "63.3_Tests.jaops",
+      "sha256": "bfd6d51508e578f965bf32bd10123ab88f8a602b3a991277840d780bd2eeea8b",
+      "bytes": 1076
+    },
+    {
+      "path": "63.4_Translation.jaops",
+      "sha256": "be234712eb943d88417b0397b56f23158a4fb00e965c8df85c79cc09fb9ea409",
+      "bytes": 1191
+    },
+    {
+      "path": "63.5_Rendering.jaops",
+      "sha256": "3af9b5d2d247f16c77f34fbeb4fb4b5a03d7930432dee50d0cc604748c64adae",
+      "bytes": 1158
+    },
+    {
+      "path": "63.6_Packaging.jaops",
+      "sha256": "adff2e5828c70962cf958f18dd6c70f6aa5fbb5a7386815c3bf09bec044b8525",
+      "bytes": 1157
+    },
+    {
+      "path": "README.md",
+      "sha256": "4ff54fb1ca68109654edbdb3c9e31bbb5aa0f431c37adb172f8ff0d0fdbe86d4",
+      "bytes": 16041
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

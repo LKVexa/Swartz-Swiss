@@ -1,0 +1,111 @@
+{
+  "authority_sha256": "3e44e80f98d65c8c4bad68f1d4563d240161d1eacdde9d7802222ce95cee7707",
+  "domain_output": {
+    "input_type": "event/log/state",
+    "legacy_signals": [
+      "escalation",
+      "action",
+      "PACKAGE",
+      "INDEX"
+    ],
+    "module": "Indexing Storage Resources Logs and Recovery",
+    "operations_receipt": {
+      "detected": true,
+      "recovered": true,
+      "recovery_mode": "REFERENCE_LOCAL",
+      "state_sha256": "6256215550b7c5ed61d4f63857fe68cd5096da57a7f6f7e9dfc3e510e087115b"
+    },
+    "output_type": "recovered_state/operations_receipt",
+    "payload_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+    "plane": "operations_recovery",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "7455c47610bce6537133479b03e63a64f1d8d2c2277503191a4c796314d47189",
+  "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+  "module": "Indexing Storage Resources Logs and Recovery",
+  "module_id": 58,
+  "plane": "operations_recovery",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "f9be4aaf1a7bfa5d1798d10d9d5cbe13aeb9b4901d8c639a7dfac3782985a8c6",
+  "stage_count": 8,
+  "stages": [
+    {
+      "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "node": "N01",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "5841f8c3a30b97a012d743c749539c8a361526a2ce1617ac1ec2142bbe92c8d0",
+      "stage": "EVENT"
+    },
+    {
+      "input_sha256": "5841f8c3a30b97a012d743c749539c8a361526a2ce1617ac1ec2142bbe92c8d0",
+      "node": "N02",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "INSPECT",
+      "output_sha256": "3761e96be645022c563d3e5b34cd5a98cd4b5ef59ae4c1c5b2e23107bd1f7e3a",
+      "stage": "INSPECT"
+    },
+    {
+      "class": "C2",
+      "input_sha256": "3761e96be645022c563d3e5b34cd5a98cd4b5ef59ae4c1c5b2e23107bd1f7e3a",
+      "node": "N03",
+      "operator": "CLASSIFY",
+      "output_sha256": "89b2ad892fe75d592cbc227e9e5967faa0a3ced761708b72af3c9695c98c94dd",
+      "stage": "CLASSIFY"
+    },
+    {
+      "input_sha256": "89b2ad892fe75d592cbc227e9e5967faa0a3ced761708b72af3c9695c98c94dd",
+      "node": "N04",
+      "operator": "RECOVER",
+      "output_sha256": "dc0357071a6973670ddb39cb4ad8e9f03b0c1495caf9fa41983d08e930db008f",
+      "recovered": true,
+      "stage": "RECOVER"
+    },
+    {
+      "input_sha256": "dc0357071a6973670ddb39cb4ad8e9f03b0c1495caf9fa41983d08e930db008f",
+      "node": "N05",
+      "operator": "VALIDATE",
+      "output_sha256": "c30f668ad503699070184e8e1bde81ba0dd7dec38853b4951fb9681e581f6c1b",
+      "stage": "VERIFY",
+      "valid": true
+    },
+    {
+      "checkpoint_sha256": "3a64e705a259cb17ce4cdace499a2ea15a7a10007dfeb6eb3b30ef8be1672ab3",
+      "input_sha256": "c30f668ad503699070184e8e1bde81ba0dd7dec38853b4951fb9681e581f6c1b",
+      "node": "N06",
+      "operator": "CHECKPOINT",
+      "output_sha256": "b91c0589e523a5af32f3572ba1ae887e90d0296c3a69be6752378127a2a9fbdd",
+      "stage": "CHECKPOINT"
+    },
+    {
+      "input_sha256": "b91c0589e523a5af32f3572ba1ae887e90d0296c3a69be6752378127a2a9fbdd",
+      "node": "N07",
+      "operator": "RECORD",
+      "output_sha256": "028c3adaa225bc4ffad5432963803d8c23b9e6a1e95669c9f9ba93f9560dcaef",
+      "receipt_sha256": "3697602a6dfcba119f181dfa20854e53a0d44ac58a060644657d6cc7946d5717",
+      "stage": "RECORD"
+    },
+    {
+      "input_sha256": "028c3adaa225bc4ffad5432963803d8c23b9e6a1e95669c9f9ba93f9560dcaef",
+      "node": "N08",
+      "operator": "RECORD",
+      "output_sha256": "fbc2b579f6cef733acd366312851e17c425fec709d3d9ddfbaa36d81b122987d",
+      "receipt_sha256": "01dce4241ae73db85be697d056a77d73b7f0a090bfbc26bd977ec29711c0ddbc",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

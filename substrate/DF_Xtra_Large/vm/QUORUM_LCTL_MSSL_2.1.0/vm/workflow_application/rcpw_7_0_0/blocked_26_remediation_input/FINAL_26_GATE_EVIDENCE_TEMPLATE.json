@@ -1,0 +1,267 @@
+{
+  "schema": "QUORUM-RCPW7-26-GATE-FINAL/1",
+  "source_status": "26_BLOCKED",
+  "claimed_profile": "",
+  "results": [
+    {
+      "requirement_id": "RCPW-01-R01",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-09-R01",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-11-R06",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-12-R06",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-19-R06",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-20-R07",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-20-R08",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-04-R09",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-07-R09",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-18-R08",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-20-R11",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-02-R13",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-16-R12",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-17-R18",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-18-R16",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-19-R19",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-20-R20",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-03-R20",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-04-R24",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-10-R23",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-10-R24",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-14-R23",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-18-R20",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-19-R20",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-20-R25",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    },
+    {
+      "requirement_id": "RCPW-19-R29",
+      "old_status": "BLOCKED",
+      "new_status": "NOT_RUN",
+      "test_command": "",
+      "exit_code": null,
+      "evidence_path": "",
+      "evidence_sha256": "",
+      "notes": ""
+    }
+  ]
+}

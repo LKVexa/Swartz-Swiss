@@ -1,0 +1,33 @@
+ja source 0.3
+module suite65.sandbox_engine.worker_provisioning_health
+use Operations
+policy explicit_network
+
+workspace SandboxWorkerProvisioningHealth {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 12 memory 24GB
+    network disabled
+
+    service SOPHIA_worker_context replicas 1
+    health_check SOPHIA_worker_context every 10s
+    service CHARLOTTE_worker_gate replicas 1
+    health_check CHARLOTTE_worker_gate every 10s
+    service LANDON_worker_controller replicas 1
+    health_check LANDON_worker_controller every 5s
+    service Professor_worker_report replicas 1
+    health_check Professor_worker_report every 10s
+    service Podium_worker_receipt replicas 1
+    health_check Podium_worker_receipt every 10s
+    service approved_worker_health_manager replicas 1
+    health_check approved_worker_health_manager every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "sandbox_engine_worker_provisioning_health.msslb"

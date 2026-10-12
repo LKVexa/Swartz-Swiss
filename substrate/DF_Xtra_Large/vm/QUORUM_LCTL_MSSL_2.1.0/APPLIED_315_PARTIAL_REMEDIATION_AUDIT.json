@@ -1,0 +1,101 @@
+{
+  "applied_workflow": "QUORUM_RCPW_7_315_PARTIALS_TO_OPERATIONAL_PROMPT_WORKFLOW_1.0.0.zip",
+  "base_repository_regression": "PASS",
+  "claim_boundary": "582/582 atomic RC-PW requirements are OPERATIONAL at the bounded deterministic hosted-reference profile QP1/WQ3/AW3/WP4. This does not assert QP3 production target-hardware scale, production multi-host deployment, WQ4/AW4 production-world qualification, complete native upstream-LCTL self-hosting, or QP4 external-party certification.",
+  "claim_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "final_counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 582,
+    "PARTIAL": 0,
+    "REGRESSED": 0
+  },
+  "generated_utc": "2026-08-11T07:06:57.269726+00:00",
+  "golden_worlds": {
+    "executed": 80,
+    "fail": 0,
+    "pass": 80
+  },
+  "notes": [
+    "The 582-item status is atomic-requirement status scoped to the bounded deterministic hosted-reference profile.",
+    "The generic VM repository production 5.0.0 gate and higher QP3/QP4/WQ4/AW4 claims remain separately scoped and are not promoted by this RC-PW result.",
+    "All 80 Golden World scenarios in this release are hosted-reference qualification scenarios, not production graphical scenes."
+  ],
+  "partial_requirements_targeted": 315,
+  "promoted_operational": 315,
+  "qualification_profile_boundaries": {
+    "AW0": "OPERATIONAL",
+    "AW1": "OPERATIONAL",
+    "AW2": "OPERATIONAL",
+    "AW3": "OPERATIONAL",
+    "AW4": "PARTIAL",
+    "MULTI_WORKER": "PARTIAL",
+    "MULTI_WORKER_HOSTED_REFERENCE": "OPERATIONAL",
+    "PRODUCTION_DISTRIBUTED_FABRIC": "BLOCKED",
+    "QP0": "OPERATIONAL",
+    "QP1": "OPERATIONAL",
+    "QP2": "PARTIAL",
+    "QP3": "BLOCKED",
+    "QP4": "BLOCKED",
+    "WP1_SINGLE": "OPERATIONAL",
+    "WP4_HOSTED_REFERENCE": "OPERATIONAL",
+    "WQ0": "OPERATIONAL",
+    "WQ1": "OPERATIONAL",
+    "WQ2": "OPERATIONAL",
+    "WQ3": "OPERATIONAL",
+    "WQ4": "PARTIAL"
+  },
+  "regression_commands": {
+    "base_repository_regression": {
+      "command": "python qualification/run_qualification.py",
+      "exit_code": 0
+    },
+    "base_vm_tests": {
+      "command": "/opt/pyvenv/bin/python tests/test_vm.py",
+      "exit_code": 0
+    },
+    "blocked_gate_regression": {
+      "command": "/opt/pyvenv/bin/python world/tests/test_blocked_gate_remediation.py",
+      "exit_code": 0
+    },
+    "operational_reference_tests": {
+      "command": "/opt/pyvenv/bin/python world/tests/test_operational_reference.py",
+      "exit_code": 0
+    },
+    "world_full_compile": {
+      "command": "/opt/pyvenv/bin/python toolchain/quorum_vm.py compile src/WORLD_FULL.lctlc world/evidence/WORLD_FULL.payload.json --brir world/evidence/WORLD_FULL.brir.json",
+      "exit_code": 0
+    },
+    "world_full_run": {
+      "command": "/opt/pyvenv/bin/python toolchain/quorum_vm.py run world/evidence/WORLD_FULL.signed.brimg --trust keys/TRUST_STORE.json --snapshot world/evidence/WORLD_FULL.snapshot.json --trace world/evidence/WORLD_FULL.trace.json",
+      "exit_code": 0
+    },
+    "world_full_sign": {
+      "command": "/opt/pyvenv/bin/python toolchain/quorum_vm.py sign world/evidence/WORLD_FULL.payload.json --key keys/DEV_ONLY_private_seed.hex --key-id dev-root --out world/evidence/WORLD_FULL.signed.brimg",
+      "exit_code": 0
+    },
+    "world_tests": {
+      "command": "/opt/pyvenv/bin/python world/tests/test_world_runtime.py",
+      "exit_code": 0
+    }
+  },
+  "release_name": "QUORUM_GENERIC_PROJECT_LCTL_MSSL_VIRTUAL_MACHINE_5.0.0_CANDIDATE_RCPW_7.0.0_582_OPERATIONAL_HOSTED_REFERENCE",
+  "runtime_version": "7.0.0-operational-reference-315",
+  "schema": "QUORUM-RCPW7-315-APPLICATION-AUDIT/1",
+  "source_candidate": "QUORUM_GENERIC_PROJECT_LCTL_MSSL_VIRTUAL_MACHINE_5.0.0_CANDIDATE_RCPW_7.0.0_26_BLOCKERS_REMEDIATED.zip",
+  "starting_counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 267,
+    "PARTIAL": 315,
+    "REGRESSED": 0
+  },
+  "test_family_gates": {
+    "pass": 20,
+    "total": 20
+  },
+  "world_full_guest": {
+    "compile": 0,
+    "run": 0,
+    "sign": 0
+  },
+  "world_service_abi": 3
+}

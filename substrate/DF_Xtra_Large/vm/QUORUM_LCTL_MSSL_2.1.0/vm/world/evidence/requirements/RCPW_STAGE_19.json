@@ -1,0 +1,307 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 21,
+    "PARTIAL": 8,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World-state history is append-only or equivalently tamper-evident and causally linked.",
+      "requirement_id": "RCPW-19-R01",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "High-value consequences remain individually queryable while repetitive low-value events may be safely aggregated.",
+      "requirement_id": "RCPW-19-R02",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ledger queries support entity, region, time, cause, mission, faction, settlement, and event lineage.",
+      "requirement_id": "RCPW-19-R03",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization can consume ledger history to reconstruct local evidence/consequences.",
+      "requirement_id": "RCPW-19-R04",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Hashes/checksums and transactional boundaries expose corruption.",
+      "requirement_id": "RCPW-19-R05",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-19-R06.json",
+      "evidence_sha256": "ab06aa9507c9fd7b0f7f500e0e850156ab360546c65acaf64b15807962fbb30b",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "Historical reconstruction is independently reproducible.",
+      "requirement_id": "RCPW-19-R06",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ledger indexes are rebuildable from canonical segments and are never sole authority.",
+      "requirement_id": "RCPW-19-R07",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Retention/aggregation policies are versioned and replay-aware.",
+      "requirement_id": "RCPW-19-R08",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Historical queries expose whether results are exact, aggregated, inferred, or unavailable.",
+      "requirement_id": "RCPW-19-R09",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialized evidence derived from history stores provenance back to source events/segments.",
+      "requirement_id": "RCPW-19-R10",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World-history queries return provenance and precision class: exact, aggregated, reconstructed, inferred, or unavailable.",
+      "requirement_id": "RCPW-19-R11",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Indexes, summaries, and analytics are rebuildable derived products and never sole canonical authority.",
+      "requirement_id": "RCPW-19-R12",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Retention/compaction policies include legal gameplay retention windows for evidence needed by quests, reputation, law, ecology, economy, and reconstruction.",
+      "requirement_id": "RCPW-19-R13",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialized historical evidence links back to the exact or aggregate causal records that justify its presence.",
+      "requirement_id": "RCPW-19-R14",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World-state ledger supports content-version provenance so historical events remain interpretable after world-package and schema migrations.",
+      "requirement_id": "RCPW-19-R15",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Historical reconstruction can regenerate material evidence while preserving a link to the source event model/version and uncertainty class.",
+      "requirement_id": "RCPW-19-R16",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ledger queries expose causal cut sets for 'what caused this current state?' and dependency sets for 'what still depends on this event?'.",
+      "requirement_id": "RCPW-19-R17",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Archive/compaction keeps a minimum proof sufficient to validate persistent law, reputation, ownership, destruction, economy, ecology, and narrative consequences.",
+      "requirement_id": "RCPW-19-R18",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-19-R19.json",
+      "evidence_sha256": "bee6674af7e5bc767edead6190ff21c22bcaa57cd0f84a315ba7022c63a05a9f",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "Qualification includes multi-day/world-age history, compaction, migration, index rebuild, partial corruption, and independent replay.",
+      "requirement_id": "RCPW-19-R19",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-19-R20.json",
+      "evidence_sha256": "21399dc4617c4390306d302bb1d84acfc4f8f220344326b7fb3029b510304b38",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "World-state ledger archives include partition/worker provenance for diagnostics while canonical event meaning remains execution-layout independent.",
+      "requirement_id": "RCPW-19-R20",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Historical causal queries operate across compacted and repartitioned ledger segments without changing semantic results.",
+      "requirement_id": "RCPW-19-R21",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Archive migration and re-sharding are reproducible maintenance operations with before/after causal digest comparison.",
+      "requirement_id": "RCPW-19-R22",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-lived provenance distinguishes runtime execution location from canonical world location to prevent diagnostic metadata becoming gameplay authority.",
+      "requirement_id": "RCPW-19-R23",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes re-sharding, archive compaction, replica recovery, partial index loss, cross-version migration, and global causal query replay.",
+      "requirement_id": "RCPW-19-R24",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World-state ledger supports historical eras, archival summaries, provenance confidence, lineage/succession relationships, and world-expansion events as first-class query dimensions.",
+      "requirement_id": "RCPW-19-R25",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Historical compaction maintains a proof boundary identifying which details are exact, aggregated, reconstructed, or permanently unavailable.",
+      "requirement_id": "RCPW-19-R26",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Queries can trace present institutions, ownership, settlements, routes, reputations, and ecological conditions back through succession and structural changes.",
+      "requirement_id": "RCPW-19-R27",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Archive rehydration emits provenance links to compacted evidence rather than generating history retrospectively without basis.",
+      "requirement_id": "RCPW-19-R28",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-19-R29.json",
+      "evidence_sha256": "ef25fc967e32d233d86006ef5d7e6b3d31938f915e7cd79df91f283ba879fdbc",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "Qualification includes multi-era query equivalence before/after compaction, archive migration, world expansion, and independent reconstruction.",
+      "requirement_id": "RCPW-19-R29",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "stage": 19,
+  "title": "World-State Ledger"
+}

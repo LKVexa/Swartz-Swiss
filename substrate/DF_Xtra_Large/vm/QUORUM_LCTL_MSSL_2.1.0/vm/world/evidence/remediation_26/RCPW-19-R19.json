@@ -1,0 +1,23 @@
+{
+  "evidence_sha256": "bee6674af7e5bc767edead6190ff21c22bcaa57cd0f84a315ba7022c63a05a9f",
+  "exit_code": 0,
+  "observed_results": {
+    "compressed_bytes": 6182,
+    "compression_ratio": 0.1709387529379234,
+    "corruption_rejected": true,
+    "events": 93,
+    "independent_replay": true,
+    "index_keys": 9,
+    "raw_bytes": 36165
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "requirement_id": "RCPW-19-R19",
+  "result_sha256": "c5d4b3129557c17c046c32bbf43d8cf5932ddd3d0160f30057534b4c257bb09d",
+  "schema": "RCPW-26-GATE-EVIDENCE/1",
+  "status": "OPERATIONAL",
+  "test_command": "python vm/world/qualification/remediate_26.py",
+  "tool_versions": {
+    "python": "3.11.15",
+    "world_runtime": "7.0.0-applied-remediated-26"
+  }
+}

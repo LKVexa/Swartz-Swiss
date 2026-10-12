@@ -1,0 +1,13 @@
+JA21 Portable Optical Instrument Desktop 9.3.0
+Movable floating omni bar integration evidence
+
+- URL/search capsule is a direct overlay child at Ja21Design.ZFloating.
+- Drag grip owns pointer capture; editable text surface remains independent.
+- Movement updates only TranslateTransform X/Y; no renderer/page layout reflow is required.
+- Viewport position is clamped to a 16-DIP inset and stored as normalized coordinates.
+- Portable placement state: workspace/state/ui/omni-bar.position.
+- workspace.state maps to N_XLARGE under the host-mediated placement contract.
+- Double-click grip, Ctrl+Shift+L, and command-palette recenter restore top-center.
+- Immersive mode withdraws and restores the bar.
+- No presenter fabric verdict is created.
+- Target-Windows pointer-capture, mixed-DPI, WPF frame-pacing and WebView2-overlay behavior remain runtime qualification items.

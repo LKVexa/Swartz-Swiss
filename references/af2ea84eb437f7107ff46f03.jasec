@@ -1,0 +1,27 @@
+ja source 0.3
+module suite52.evaluation_content_defense.prompt_injection_defense
+use Security
+policy no_network
+
+principal PromptInjectionDefenseWorker
+role EvaluationDefenseEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant injection.defend:approved
+}
+resource PromptInjectionRequest classification restricted
+policy PromptInjectionDefensePolicy {
+    deny network.* by default
+    deny process.* by default
+    deny PromptInjectionRequest when principal.role != EvaluationDefenseEnsemble
+    allow PromptInjectionRequest when principal.role == EvaluationDefenseEnsemble
+    require human_approval for injection.exception
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "PromptInjectionDefensePolicy.decision.mcrt"

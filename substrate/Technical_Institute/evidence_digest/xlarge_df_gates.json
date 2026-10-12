@@ -1,0 +1,484 @@
+[
+  {
+    "detail": {
+      "reason": "SHA256SUMS.txt not present (pre-seal assembly run)"
+    },
+    "id": "G0.1",
+    "name": "container SHA256SUMS.txt verifies (every delivered byte)",
+    "seconds": 0.0,
+    "status": "SKIPPED"
+  },
+  {
+    "detail": {
+      "reason": "MANIFEST.json not present (pre-seal assembly run)"
+    },
+    "id": "G0.2",
+    "name": "MANIFEST.json inventory matches disk (paths, sizes, digests; no extras)",
+    "seconds": 0.0,
+    "status": "SKIPPED"
+  },
+  {
+    "detail": {
+      "expected_files": 5513,
+      "extra": [],
+      "found_files": 5513,
+      "missing": [],
+      "pass": true,
+      "tree_sha256_expected": "f782f75c8cd8d1818e7c5348efb050a0c1aff221dd421f233e528ffeca068a42",
+      "tree_sha256_found": "f782f75c8cd8d1818e7c5348efb050a0c1aff221dd421f233e528ffeca068a42"
+    },
+    "id": "G0.3",
+    "name": "embedded VM payload byte-identical to the pinned digest (source zip content)",
+    "seconds": 0.272,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "expected": "046a9930c61b1d5a8a98de87b65feb933f8c5979351289953ea72dead5e304a0",
+      "files": 21,
+      "found": "046a9930c61b1d5a8a98de87b65feb933f8c5979351289953ea72dead5e304a0",
+      "pinned_from": "PA_Language_PA21.2/reference/pacore (byte-identical in all 22 PA21.2 packages)"
+    },
+    "id": "G0.4",
+    "name": "core/pacore tree digest equals the pinned digest (one core, many consumers)",
+    "seconds": 0.003,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "corpus_records_validated": 30,
+      "not_yet_present_pre_seal": [
+        "MANIFEST.json"
+      ],
+      "validated": [
+        "node/NODE_DESCRIPTOR.json",
+        "conformance/DF_GATE_RESULTS.json",
+        "reports/DF_CAPABILITY_LEDGER.json",
+        "provenance/DF_PROVENANCE.json",
+        "authority/DF_SOURCE_AUTHORITY.json"
+      ],
+      "violations": {}
+    },
+    "id": "G2",
+    "name": "every JSON artifact validates against the schema shipped beside it",
+    "seconds": 0.003,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "items": 23,
+      "unresolved": []
+    },
+    "id": "G3",
+    "name": "every evidence citation in the capability ledger resolves to a delivered path",
+    "seconds": 0.0,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "returncode": 0,
+      "seconds": 0.582
+    },
+    "id": "G1",
+    "name": "reference core selfcheck (python3 -B -m reference.pacore.cli selfcheck) -> SELFCHECK_PASS",
+    "seconds": 0.582,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "can_build": true,
+      "declared": [
+        "Python 3.10+",
+        "Java 21 runtime (bundled LCTL 1.6.1-RC1 column verifier; without it compile runs with --skip-lctl-verify and the result says so)",
+        "cryptography (optional; pure-Python Ed25519 fallback ships)",
+        "POSIX sh"
+      ],
+      "found": {
+        "cc": "/usr/bin/cc",
+        "java": "/usr/bin/java",
+        "make": "/usr/bin/make",
+        "openssl_headers": true,
+        "python3": "/usr/bin/python3",
+        "sh": "/usr/bin/sh",
+        "sha256sum": "/usr/bin/sha256sum"
+      },
+      "java_available": true,
+      "missing": [],
+      "node_id": "N_XLARGE"
+    },
+    "id": "N0",
+    "name": "toolchain preflight against REQUIREMENTS.txt",
+    "seconds": 0.0,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "failed_steps": {},
+      "note": "run in a scratch copy; the sealed payload is never mutated",
+      "scratch_root": "/tmp/df-verify-n_xlarge-w2ojtgmp/QUORUM_LCTL_MSSL_2.1.0",
+      "steps": {
+        "own_gate": {
+          "returncode": 0,
+          "seconds": 23.72,
+          "tail": "PASS: MSSL seals and repository hashes verified (438 MSSL documents)\nPASS: all Columned LCTL plans lowered and canonical-verified"
+        },
+        "own_gate_l4_l9": {
+          "returncode": 0,
+          "seconds": 0.051,
+          "tail": "PASS: L4-L9 gates OPEN; L4-L8 module reference profiles 66/66; L9 local/offline scenarios 5/5; native core index 66/66"
+        },
+        "own_sums": {
+          "returncode": 0,
+          "seconds": 0.092,
+          "tail": ""
+        },
+        "vm_verify_test": {
+          "returncode": 0,
+          "seconds": 1.456,
+          "tail": "  \"program_version\": 1,\n  \"instructions\": 12,\n  \"payload_sha256\": \"55a548d8f66076979e600ff5a68bd65659f58dafd9ee22f96389cdbcf0d5d2dd\"\n}\npython3 tests/test_vm.py\nmake: Leaving directory '/tmp/df-verify-n_xlarge-w2ojtgmp/QUORUM_LCTL_MSSL_2.1.0/vm'"
+        }
+      }
+    },
+    "id": "N1",
+    "name": "the VM's own build (stock flags) and its own acceptance gate reproduce",
+    "seconds": 25.319,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "feature_classes": {
+        "CX": "UNSUPPORTED",
+        "ENTANGLE_LINK": "UNSUPPORTED",
+        "H": "UNSUPPORTED",
+        "MEASURE": "UNSUPPORTED",
+        "PREP0": "UNSUPPORTED",
+        "TELEPORT": "UNSUPPORTED",
+        "bounded_termination": "SUPPORTED",
+        "classical_face_execution": "UNSUPPORTED",
+        "compile_from_source": "SUPPORTED",
+        "declared_step_budget": "SUPPORTED",
+        "deterministic_replay": "SUPPORTED",
+        "external_column_verifier_jvm": "SUPPORTED_WITH_LIMITS",
+        "image_signing": "SUPPORTED",
+        "independent_image_verification": "UNSUPPORTED",
+        "integer_arithmetic": "SUPPORTED",
+        "quantum_face_execution": "UNSUPPORTED",
+        "row_sequence_witness": "SUPPORTED_WITH_LIMITS",
+        "segmented_row_sequence_witness": "SUPPORTED",
+        "signature_checked_execution": "SUPPORTED",
+        "state_hash_trace": "SUPPORTED",
+        "trust_store_rollback_floor": "SUPPORTED",
+        "wide_word_arithmetic_1048576": "SUPPORTED"
+      },
+      "label": "CLASSICAL_HOSTED_VM_BOUNDED_EXECUTION",
+      "limits": {
+        "cli_step_budget": 1000000,
+        "instruction_ceiling": 65535,
+        "instructions_per_row": 3,
+        "max_rows_per_lowering": 21843,
+        "prologue_epilogue": 4,
+        "qubits": 0,
+        "ram_per_live_vm_bytes_measured": 60000000,
+        "segmentation": "a bundle longer than max_rows_per_lowering is executed as a chain of segments; each segment starts from the previous accumulator",
+        "shots": 1
+      },
+      "target_id": "quorum-vm-5.0.0-candidate-local",
+      "toolchain": {
+        "java_available": true,
+        "lctl_verifier_jar_sha256": "20ce9e1c68d062b6c3cc14b39bb311e135abb6f5358ea07a24c9579ba995bb6a",
+        "quorum_vm_py_sha256": "a1eb5958a0ff660bf6a41ac59cf30d7f5ca615b05122078884f11eac98a0cc11",
+        "trust_store_sha256": "73a19d5941c620c5e793162243225a74c74b97667e732e1170cd2d4ac64f1c69"
+      }
+    },
+    "id": "A1",
+    "name": "adapter attestation (PA-LCTL/TARGET_ADAPTER/1): LOCAL_TRUSTED, CLASSICAL_ label, no physical flag, empty gate set",
+    "seconds": 0.001,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "negatives": [
+        {
+          "negative": 1,
+          "reason": "a DF adapter may not claim trust domain 'PHYSICAL_TARGET_AUTHENTICATED'; permitted: ('LOCAL_TRUSTED', 'LOCAL_UNTRUSTED')",
+          "refused": true
+        },
+        {
+          "negative": 2,
+          "reason": "execution label 'QPU_NATIVE_EXECUTION' must begin 'CLASSICAL_'",
+          "refused": true
+        },
+        {
+          "negative": 3,
+          "reason": "execution label 'CLASSICAL_HARDWARE_EXECUTION' contains forbidden token 'HARDWARE'",
+          "refused": true
+        }
+      ]
+    },
+    "id": "A2",
+    "name": "physical-evidence firewall: three physical claims are refused at construction",
+    "seconds": 0.0,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "examples": {
+        "01_bell_pair.pal": {
+          "agree": true,
+          "extra": {
+            "lctl_column_verify": "JVM",
+            "output_b64": ""
+          },
+          "image_sha256": "0a36cc13c5c952e1cee018df6bb4f2eea914005acf048e743559e4361b955a38",
+          "native_witness": 17360368901394384785,
+          "program_seal": "b29d31d01996f0e9b3047e9f4dcb7f5ab9b316c5bae137d9943d302b48951353",
+          "reference_witness": 17360368901394384785,
+          "rows": 12,
+          "steps": [
+            "compile",
+            "sign",
+            "verify",
+            "run"
+          ],
+          "wall_s": 0.5974
+        },
+        "02_ghz3.pal": {
+          "agree": true,
+          "extra": {
+            "lctl_column_verify": "JVM",
+            "output_b64": ""
+          },
+          "image_sha256": "18eca1460845df312df5fd643b5d2af76e5f7671aac79297fe02975fc1f95fdb",
+          "native_witness": 6735235137199922533,
+          "program_seal": "18873576016d494c27f93088b559b1cc524d45655fd98bbd83d6ac409104fd7e",
+          "reference_witness": 6735235137199922533,
+          "rows": 15,
+          "steps": [
+            "compile",
+            "sign",
+            "verify",
+            "run"
+          ],
+          "wall_s": 0.6002
+        },
+        "03_two_lane_parallel.pal": {
+          "agree": true,
+          "extra": {
+            "lctl_column_verify": "JVM",
+            "output_b64": ""
+          },
+          "image_sha256": "532682672ddc19e69548ffdd7f5ca38346fa6c5290ad301728144799d3f4374d",
+          "native_witness": 2035133056847448988,
+          "program_seal": "7af6e85e1b234b815230a4a0c7cb601b55d3c9837bcb15205aaa9c9e368a6490",
+          "reference_witness": 2035133056847448988,
+          "rows": 16,
+          "steps": [
+            "compile",
+            "sign",
+            "verify",
+            "run"
+          ],
+          "wall_s": 0.6053
+        },
+        "04_distributed_teleport.pal": {
+          "agree": true,
+          "extra": {
+            "lctl_column_verify": "JVM",
+            "output_b64": ""
+          },
+          "image_sha256": "712537d404a61b2ff76efadca9ae56dbaf660d9f85ee9ba0dba48ffda3d7d614",
+          "native_witness": 11114974373231215855,
+          "program_seal": "c32f67190ed34409897afec60212189864dbec013a8113d53acbf2945b3db72d",
+          "reference_witness": 11114974373231215855,
+          "rows": 15,
+          "steps": [
+            "compile",
+            "sign",
+            "verify",
+            "run"
+          ],
+          "wall_s": 0.6265
+        },
+        "05_measurement_feedback.pal": {
+          "agree": true,
+          "extra": {
+            "lctl_column_verify": "JVM",
+            "output_b64": ""
+          },
+          "image_sha256": "02bba955b821ef67325b5c6d0b8927cc0b4c14c97795ab6e341fa76a52778a00",
+          "native_witness": 1825703198280153005,
+          "program_seal": "753b9cb030c67416a721df8c07b5a75d937c009511983fcbd5a4004663e25403",
+          "reference_witness": 1825703198280153005,
+          "rows": 14,
+          "steps": [
+            "compile",
+            "sign",
+            "verify",
+            "run"
+          ],
+          "wall_s": 0.6102
+        },
+        "06_noise_density.pal": {
+          "agree": true,
+          "extra": {
+            "lctl_column_verify": "JVM",
+            "output_b64": ""
+          },
+          "image_sha256": "b95d35d1b9a610d0d268f7b3a975c4999d29150e8a4a346a603ee730c4b21ec9",
+          "native_witness": 725229432034669365,
+          "program_seal": "7e0315be683ad3378924d744116e84572a241c0b2db305e9fa3c742911346144",
+          "reference_witness": 725229432034669365,
+          "rows": 14,
+          "steps": [
+            "compile",
+            "sign",
+            "verify",
+            "run"
+          ],
+          "wall_s": 0.5599
+        },
+        "NODE.pal": {
+          "agree": true,
+          "extra": {
+            "lctl_column_verify": "JVM",
+            "output_b64": ""
+          },
+          "image_sha256": "664bd4f58ade207ed4a2624a5fb8ec34595c834360047e28d37fd5fdcc6870ec",
+          "native_witness": 5900255704340570516,
+          "program_seal": "463141b4815687e05e0fd53638e15a1dad703a823874984cca7629d86dc907c4",
+          "reference_witness": 5900255704340570516,
+          "rows": 18,
+          "steps": [
+            "compile",
+            "sign",
+            "verify",
+            "run"
+          ],
+          "wall_s": 0.5849
+        }
+      }
+    },
+    "id": "A3",
+    "name": "row-sequence witness executes natively and agrees with the CPython reference on 7 bundles",
+    "seconds": 4.193,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "base": 17360368901394384785,
+      "mutations": {
+        "cell_change": {
+          "changed": true,
+          "native": 11554785166328667109,
+          "reference": 11554785166328667109
+        },
+        "row_delete": {
+          "changed": true,
+          "native": 4536442608457809243,
+          "reference": 4536442608457809243
+        },
+        "row_insert": {
+          "changed": true,
+          "native": 18384023426024859841,
+          "reference": 18384023426024859841
+        },
+        "row_reorder": {
+          "changed": true,
+          "native": 5398684778699812071,
+          "reference": 5398684778699812071
+        }
+      }
+    },
+    "id": "A4",
+    "name": "witness sensitivity: cell change, row reorder, row delete, row insert each change the native witness",
+    "seconds": 3.074,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "at_bound_agree": true,
+      "at_bound_instructions": 256,
+      "at_bound_rows": 84,
+      "max_rows": 21843,
+      "over_bound_refusal": {
+        "feature_class": "SUPPORTED_WITH_LIMITS",
+        "instruction_ceiling": 65535,
+        "max_rows": 21843,
+        "node": "N_XLARGE",
+        "rows": 21844
+      }
+    },
+    "id": "A5",
+    "name": "stated bounds are refusals: max_rows+1 refused (SUPPORTED_WITH_LIMITS), max_rows executes",
+    "seconds": 0.658,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "last_step": {
+        "returncode": 13,
+        "stderr": "{\"status\": \"TRAP\", \"trap\": \"TRAP_RESOURCE\", \"code\": 13, \"detail\": \"step limit\"}",
+        "stdout": "",
+        "step": "run"
+      },
+      "refusal": "N_XLARGE run failed (exit 13)"
+    },
+    "id": "A6",
+    "name": "declared step budget is enforced: an unbounded loop traps (BUDGET / TRAP_RESOURCE) instead of running",
+    "seconds": 0.58,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "image_sha256": [
+        "0a36cc13c5c952e1cee018df6bb4f2eea914005acf048e743559e4361b955a38",
+        "0a36cc13c5c952e1cee018df6bb4f2eea914005acf048e743559e4361b955a38"
+      ],
+      "note": "the signed image differs between runs on nodes that mint a fresh key per run; the unsigned image and the witness are identical",
+      "witness": 17360368901394384785
+    },
+    "id": "A7",
+    "name": "deterministic replay: the same rows lower to the same source and image and produce the same witness twice",
+    "seconds": 1.258,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "refusals": {
+        "bad_qcir_schema": "refused: QCIR-P2 schema 'WRONG/1' is not 'PA-LCTL/QCIR-P2/1'",
+        "empty_rows": "refused: no rows to witness",
+        "shots_2": "refused: the row-sequence witness is deterministic; shots > 1 would report repeated ident"
+      }
+    },
+    "id": "A8",
+    "name": "shots > 1, a wrong QCIR-P2 schema and an empty row list are refused, never answered",
+    "seconds": 0.001,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "result_low64": 42,
+      "result_register": "R0",
+      "steps": [
+        "compile",
+        "sign",
+        "verify",
+        "run"
+      ],
+      "wall_s": 0.6049
+    },
+    "id": "A9",
+    "name": "a native LCTLC/1.0 program (examples/add42.lctlc) runs and returns 42",
+    "seconds": 0.605,
+    "status": "PASS"
+  },
+  {
+    "detail": {
+      "lctl_column_verify": "JVM"
+    },
+    "id": "A12",
+    "name": "the bundled LCTL 1.6.1-RC1 column verifier (JVM) verified the lowered unit before compilation",
+    "seconds": 0.0,
+    "status": "PASS"
+  }
+]

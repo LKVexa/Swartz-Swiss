@@ -1,0 +1,18 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.world.operational_living_world:7.0.0-operational-reference-315",
+λ≡"quorum.rcpw.world.operational_living_world",
+ℛ≡{
+  "0001":"module(\"quorum.rcpw.world.operational_living_world\")",
+  "0002":"learn(\"ecology\",literal(\"individual and cohort ecology preserve conserved state across remote/local transitions\"))",
+  "0003":"learn(\"economy\",literal(\"settlement production, consumption, storage, logistics and ownership are conservation auditable\"))",
+  "0004":"learn(\"law\",literal(\"crime, reputation, jurisdiction and observer-local knowledge remain causally persistent\"))",
+  "0005":"learn(\"agents\",literal(\"persistent goals, reservations, succession, lineage and narrative priority are distinct authorities\"))"
+},
+π≡[],δ≡5,τ≡0,
+μ≡{"learn.ecology":"individual and cohort ecology preserve conserved state across remote/local transitions","learn.economy":"settlement production, consumption, storage, logistics and ownership are conservation auditable","learn.law":"crime, reputation, jurisdiction and observer-local knowledge remain causally persistent","learn.agents":"persistent goals, reservations, succession, lineage and narrative priority are distinct authorities"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"ecology":"individual and cohort ecology preserve conserved state across remote/local transitions","economy":"settlement production, consumption, storage, logistics and ownership are conservation auditable","law":"crime, reputation, jurisdiction and observer-local knowledge remain causally persistent","agents":"persistent goals, reservations, succession, lineage and narrative priority are distinct authorities"}},
+ν≡{}
+,κ≡"sha256:76cd175af3cfd08ad678e9a914afa0cd59736e8ccdb644fe61d0863dc7eecee9"
+}⇒⊤

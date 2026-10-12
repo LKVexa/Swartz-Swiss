@@ -1,0 +1,36 @@
+ja certifier 0.3
+module suite65.sandbox_engine.translation_build_pipeline
+policy no_execute_unknown_code
+policy no_network
+
+grammar SandboxTranslationBuildPipeline {
+  token IDENT = letter, { letter | digit | "_" } ;
+  token HASH = letter | digit, { letter | digit } ;
+  production pipeline_record = source_identity, language_identity, grammar_identity, build_identity, test_identity, provenance_identity ;
+  production source_identity = "source", IDENT, HASH ;
+  production language_identity = "language", IDENT ;
+  production grammar_identity = "grammar", IDENT, HASH ;
+  production build_identity = "build", IDENT, HASH ;
+  production test_identity = "tests", IDENT, HASH ;
+  production provenance_identity = "provenance", HASH ;
+  start pipeline_record ;
+  predicate source_is_content_addressed(pipeline_record) ;
+  predicate language_detection_is_evidence_based(pipeline_record) ;
+  predicate build_outputs_are_bounded(pipeline_record) ;
+  type_judgment pipeline_record : CertifiedBuildArtifact ;
+  policy_validator TranslationBuildSafety requires [no_network, no_execute_unknown_code] ;
+  compiler_validator TranslationBuildValidator verifies [AST, R12, MCRT] ;
+  evidence TranslationBuildEvidence {
+    source_hash: required
+    grammar_hash: required
+    compiler_hash: required
+    test_hash: required
+    sophia_judgment: required
+    charlotte_validation: required
+    landon_status: required
+    professor_explanation: required
+    podium_receipt: required
+  }
+  certification profile SandboxTranslationBuildStrict { require all validators }
+}
+certify grammar SandboxTranslationBuildPipeline profile strict

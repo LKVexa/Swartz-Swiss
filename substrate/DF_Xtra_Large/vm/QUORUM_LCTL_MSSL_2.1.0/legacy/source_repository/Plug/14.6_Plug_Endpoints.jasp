@@ -1,0 +1,33 @@
+ja source 0.3
+module suite14.plug.endpoints
+use Service
+policy explicit_network
+
+service PlugEndpoints {
+    message EndpointRequest {
+        request_id: Text,
+        service_name: Text,
+        compatibility_version: Text,
+        transport: Text
+    }
+    message EndpointResponse {
+        endpoint_descriptor: Text,
+        sophia_contract_judgment: Text,
+        charlotte_security_validation: Text,
+        landon_transport_status: Text,
+        podium_discovery_receipt: Text,
+        done: Flag
+    }
+    endpoint resolve(request: EndpointRequest) -> Stream<EndpointResponse>
+        auth capability endpoint.discover
+        deadline 10s
+        retry max 2
+        idempotency request.request_id
+    protocol EndpointSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json PlugEndpoints.compatibility_report

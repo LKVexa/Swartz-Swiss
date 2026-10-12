@@ -1,0 +1,123 @@
+{
+  "adapter": {
+    "abi": "PA-LCTL/TARGET_ADAPTER/1",
+    "class": "LargeNodeAdapter",
+    "module": "adapter/dfabric/nodes.py",
+    "native_gate_set": [],
+    "version": "1.0.0"
+  },
+  "backend_policy": "none",
+  "bounds": {
+    "cli_step_budget": 4096,
+    "instruction_ceiling": 256,
+    "instructions_per_row": 3,
+    "max_rows_per_lowering": 84,
+    "prologue_epilogue": 4,
+    "qubits": 0,
+    "ram_per_live_vm_bytes_measured": 40000000,
+    "segmentation": "a bundle longer than max_rows_per_lowering is executed as a chain of segments; each segment starts from the previous accumulator",
+    "shots": 1
+  },
+  "capabilities": [
+    "classical",
+    "row_sequence_witness",
+    "bottle_rocket",
+    "lctlc/1.2"
+  ],
+  "container": "DF_Large",
+  "df_release": "DF-PA21.2-1.0.0",
+  "domain_id": "D_BR",
+  "execution_label": "CLASSICAL_NATIVE_VM_BOUNDED_EXECUTION",
+  "failure_domain": "FD_LARGE",
+  "feature_classes": {
+    "CX": "UNSUPPORTED",
+    "ENTANGLE_LINK": "UNSUPPORTED",
+    "H": "UNSUPPORTED",
+    "MEASURE": "UNSUPPORTED",
+    "PREP0": "UNSUPPORTED",
+    "TELEPORT": "UNSUPPORTED",
+    "bounded_termination": "SUPPORTED",
+    "classical_face_execution": "UNSUPPORTED",
+    "compile_from_source": "SUPPORTED",
+    "declared_step_budget": "SUPPORTED",
+    "deterministic_replay": "SUPPORTED",
+    "image_signing": "SUPPORTED_WITH_LIMITS",
+    "independent_image_verification": "SUPPORTED",
+    "integer_arithmetic": "SUPPORTED",
+    "production_trust_chain_execution": "UNSUPPORTED",
+    "quantum_face_execution": "UNSUPPORTED",
+    "row_sequence_witness": "SUPPORTED_WITH_LIMITS",
+    "segmented_row_sequence_witness": "SUPPORTED",
+    "signature_checked_execution": "SUPPORTED_WITH_LIMITS",
+    "wide_word_arithmetic_1048576": "SUPPORTED"
+  },
+  "federation_id": "DF0",
+  "group_id": "G_BR11",
+  "network_policy": "deny",
+  "node_id": "N_LARGE",
+  "physical": {
+    "PHYSICAL_DISTRIBUTED_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY",
+    "PHYSICAL_PARALLEL_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY",
+    "physical_distributed": false,
+    "physical_parallel": false,
+    "physical_qpu": false,
+    "quantum_boundary": "QUANTUM_BOUNDARY_NOT_CROSSED"
+  },
+  "requirements": [
+    "C11 compiler (cc/gcc/clang)",
+    "GNU make",
+    "OpenSSL 3 libcrypto headers+lib (-lcrypto)",
+    "Python 3 (compiler tools/lctl430.py, verifier tools/brim_verify.py)",
+    "POSIX sh"
+  ],
+  "resource_limits": {
+    "bandwidth_bytes_per_tick": 1000000.0,
+    "cpu_slots": 1,
+    "ebit_budget": 0,
+    "memory_bytes": 40000000,
+    "qpu_slots": 0
+  },
+  "schema": "DF/NODE_DESCRIPTOR/1",
+  "self_reported": {
+    "blockers": [
+      "actual external network transport/security qualification (network optional, absent by default)",
+      "physical SIM/UICC/eSIM device I/O and timing qualification",
+      "issuer key ceremony/certification",
+      "TPM/secure-element hardware qualification",
+      "native Windows OS execution certification",
+      "independent third-party certification"
+    ],
+    "source": "the package's evidence/qualification ledgers (`status OPERATIONAL, scope host-reference`) and AUDIT_ERRATA.md (F9-F12)"
+  },
+  "target_id": "bottle-rocket-4.7.0-br11-local",
+  "trust_domain": "LOCAL_TRUSTED",
+  "vm": {
+    "guest_dialect": "LCTLC/1.2 (columned-lctl/4.3, Python compiler tools/lctl430.py)",
+    "guest_ext": ".lctlc",
+    "image_format": "BRIM/1 (80-byte header + 16-byte instructions, tag BRLCTL43, optional Ed25519 signature)",
+    "isa": {
+      "arith_modes": [
+        "WRAP",
+        "CHECKED",
+        "SATURATE",
+        "TRAPPING"
+      ],
+      "image_version": 10,
+      "memory_bytes": 4096,
+      "name": "BR/1.1 (marker 21) / ABI 2 / Device ABI 1.0",
+      "opcodes": 41,
+      "registers": 16,
+      "services": 22,
+      "stack_words": 256,
+      "word_bits": 1048576
+    },
+    "lineage": "BOTTLE_ROCKET",
+    "name": "BOTTLE ROCKET 4.7.0 Columned-LCTL Virtual Device/I/O/Service Architecture (BR/1.1, 61K)",
+    "package_dir": "BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE_61K",
+    "payload_tree_sha256": "e3f53aa6551c9dd58277d5d57f769992fb244690de94f264f0f914985a279f46",
+    "result_register": "R2",
+    "runtime_contract": "BR/1.1 ISA (marker 21), ABI 2, Device ABI 1.0, LCTLC/1.2 source, BRIM/1 images; freestanding C11 core behind a HAL",
+    "source_zip_sha256": "94b612d849d9990906e8090ae6576cf187a2154349acd2c44a821b43a4da7574"
+  },
+  "worker_id": "W_LARGE"
+}

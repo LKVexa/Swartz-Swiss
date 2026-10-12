@@ -1,0 +1,674 @@
+{
+  "baseline_source_digest": "58df4327d51d16d52dd12e5e9a6180c5467e4c97e3c94c65532eb9ab269d202e",
+  "commands": [
+    {
+      "command": "cc --version",
+      "elapsed_ns": 1479773,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "cc (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+    },
+    {
+      "command": "make --version",
+      "elapsed_ns": 1110748,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "GNU Make 4.4.1\nBuilt for x86_64-pc-linux-gnu\nCopyright (C) 1988-2023 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n"
+    },
+    {
+      "command": "openssl version",
+      "elapsed_ns": 3080406,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "OpenSSL 3.5.5 27 Jan 2026 (Library: OpenSSL 3.5.5 27 Jan 2026)\n"
+    },
+    {
+      "command": "make clean",
+      "elapsed_ns": 2707325,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "rm -rf .build\n"
+    },
+    {
+      "command": "make all",
+      "elapsed_ns": 2618252336,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "mkdir -p .build\ncc -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong src/brvm.c host/brctl.c -o .build/brctl -lcrypto\ncc -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong src/brvm.c tests/test_main.c -o .build/br_tests -lcrypto\ncc -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong src/brvm.c tools/br_sizes.c -o .build/br_sizes -lcrypto\ncc -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong src/brvm.c tools/br_bench.c -o .build/br_bench -lcrypto\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl assemble /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/tmpu8puf1ni.lctlc /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/tmpu8puf1ni.brimg",
+      "elapsed_ns": 1730626,
+      "exit_code": 1,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl assemble /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/tmp03vhfzi4.lctlc /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/tmp03vhfzi4.brimg",
+      "elapsed_ns": 1793474,
+      "exit_code": 1,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl assemble /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/tmpn9ha49dh.lctlc /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/tmpn9ha49dh.brimg",
+      "elapsed_ns": 1548043,
+      "exit_code": 1,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl assemble /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/tmpt5frv9w6.lctlc /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/tmpt5frv9w6.brimg",
+      "elapsed_ns": 1588310,
+      "exit_code": 1,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl assemble /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/tmp52ow7y9b.lctlc /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/tmp52ow7y9b.brimg",
+      "elapsed_ns": 1608053,
+      "exit_code": 1,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl assemble /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/tmpfspughbm.lctlc /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/tmpfspughbm.brimg",
+      "elapsed_ns": 1834349,
+      "exit_code": 1,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "make test",
+      "elapsed_ns": 3141994994,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ".build/br_tests\n{\"suite\":\"BOTTLE_ROCKET_Q17V3_LCTLC\",\"failures\":0,\"result\":\"PASS\"}\n"
+    },
+    {
+      "command": "make image",
+      "elapsed_ns": 637955611,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "python3 tools/qualify.py --lctl-only >/dev/null\nmkdir -p deploy; .build/brctl assemble src/BOOT.lctlc deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg --factory\n"
+    },
+    {
+      "command": "make operational",
+      "elapsed_ns": 3941979255,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ".build/br_tests\n{\"suite\":\"BOTTLE_ROCKET_Q17V3_LCTLC\",\"failures\":0,\"result\":\"PASS\"}\npython3 tools/qualify.py --lctl-only >/dev/null\nmkdir -p deploy; .build/brctl assemble src/BOOT.lctlc deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg --factory\ntest \"$(wc -c < deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg)\" -le 51200\n.build/brctl build-image .build/factory.brimg && cmp deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg .build/factory.brimg\n.build/brctl assemble src/BOOT.lctlc .build/a.brimg --factory && .build/brctl assemble src/BOOT.lctlc .build/b.brimg --factory && cmp .build/a.brimg .build/b.brimg\n.build/brctl run deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg\n{\"status\":2,\"trap\":0,\"R2\":42}\n.build/br_sizes\n{\"record\":\"BOTTLE_ROCKET.RuntimeMemoryMeasurement\",\"word_bits\":1048576,\"word_bytes\":131072,\"register_count\":16,\"register_requested_bytes\":2097152,\"register_usable_bytes\":2101232,\"stack_words\":256,\"stack_requested_bytes\":33554432,\"stack_usable_bytes\":33558512,\"scratch_words\":2,\"scratch_requested_bytes\":262144,\"scratch_usable_bytes\":266232,\"fragment_requested_bytes\":51200,\"fragment_usable_bytes\":51208,\"vm_inline_bytes\":8888,\"heap_requested_bytes\":35964928,\"heap_usable_bytes\":35977184,\"allocator_overhead_bytes\":12256,\"rss_before_init_kib\":3420,\"rss_idle_kib\":3796,\"native_stack_limit_bytes\":8388608}\nrm -f .build/k .build/p .build/s.brimg .build/state*; .build/brctl keygen .build/k .build/p\n.build/brctl sign-image deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg .build/s.brimg .build/k\n.build/brctl verify-image .build/s.brimg .build/p && .build/brctl run-signed .build/s.brimg .build/p\n{\"image_version\":4,\"bytes\":240,\"status\":0,\"trap\":0}\n{\"image_version\":4,\"bytes\":240,\"status\":2,\"trap\":0}\n{ printf 'LCTLC/1.0\\n@unit id=br.alt version=4.0.1 profile=native br_image_version=5 br_request_caps=CONTROL|UPDATE\\n@defaults qspace=H basis=computational regime=exact assume=finite_dimension error=exact conf=1.0\\n@frame id=F parent=ROOT module=br.alt\\nID\u2502LANE\u2502OP\u2502OUT\u2502CTRL\u2502IN\u2502ARG\u2502META\\nD0\u2502a\u2502Q\u2502q\u2502_\u2502_\u25021\u2502p=br:sentinel\\n'; i=0; while [ $i -lt 255 ]; do printf 'N%03d\u2502e\u2502NOP\u2502R0\u2502C0\u2502_\u2502br.op=NOP;br.mode=WRAP;br.imm=0\u2502qs=C;p=br:isa\\n' $i; i=$((i+1)); done; printf 'H\u2502e\u2502NOP\u2502R0\u2502C0\u2502_\u2502br.op=HALT;br.mode=WRAP;br.imm=0\u2502qs=C;p=br:isa\\n@end\\n'; } > .build/alt.lctlc\n.build/brctl assemble .build/alt.lctlc .build/alt.brimg && .build/brctl sign-image .build/alt.brimg .build/alt.signed .build/k\n.build/brctl update .build/alt.signed .build/p --state .build/state\n{\"update\":\"PASS\",\"version\":5,\"generation\":1}\n.build/brctl recover-state .build/state .build/p\n{\"generation\":1,\"image_version\":5,\"txid\":1,\"slot\":1}\nprintf '010800000200000000000000\\n' | .build/brctl serve --state .build/state .build/p | grep '^9000'\n9000020000000000\n! .build/brctl update .build/s.brimg .build/p --state .build/state\nrm -f .build/k .build/p .build/s.brimg .build/alt* .build/state*\n"
+    },
+    {
+      "command": "make sanitize",
+      "elapsed_ns": 4619197678,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "cc -Isrc -std=c11 -O1 -g -Wall -Wextra -Werror -fsanitize=address,undefined src/brvm.c tests/test_main.c -o .build/san -lcrypto\nASAN_OPTIONS=detect_leaks=0 .build/san\n{\"suite\":\"BOTTLE_ROCKET_Q17V3_LCTLC\",\"failures\":0,\"result\":\"PASS\"}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/br_sizes",
+      "elapsed_ns": 13605906,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"record\":\"BOTTLE_ROCKET.RuntimeMemoryMeasurement\",\"word_bits\":1048576,\"word_bytes\":131072,\"register_count\":16,\"register_requested_bytes\":2097152,\"register_usable_bytes\":2101232,\"stack_words\":256,\"stack_requested_bytes\":33554432,\"stack_usable_bytes\":33558512,\"scratch_words\":2,\"scratch_requested_bytes\":262144,\"scratch_usable_bytes\":266232,\"fragment_requested_bytes\":51200,\"fragment_usable_bytes\":51208,\"vm_inline_bytes\":8888,\"heap_requested_bytes\":35964928,\"heap_usable_bytes\":35977184,\"allocator_overhead_bytes\":12256,\"rss_before_init_kib\":3420,\"rss_idle_kib\":3796,\"native_stack_limit_bytes\":8388608}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/br_bench",
+      "elapsed_ns": 174380298,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"record\":\"BOTTLE_ROCKET.PerformanceBaseline\",\"instructions_per_second\":245436416.628,\"arithmetic_ops_per_second\":80827.653,\"load_store_ops_per_second\":837239.486,\"load_store_mean_ns\":1194.401,\"branch_ops_per_second\":125881849.067,\"branch_mean_ns\":7.944}\n"
+    },
+    {
+      "command": "/usr/bin/time -f __MAXRSS__=%M /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl run /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 17043717,
+      "exit_code": 0,
+      "stderr": "__MAXRSS__=39732\n",
+      "stdout": "{\"status\":2,\"trap\":0,\"R2\":42}\n"
+    },
+    {
+      "command": "/usr/bin/time -f __MAXRSS__=%M /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl assemble /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/src/BOOT.lctlc /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/rss.brimg --factory",
+      "elapsed_ns": 4537814,
+      "exit_code": 0,
+      "stderr": "__MAXRSS__=6492\n",
+      "stdout": ""
+    },
+    {
+      "command": "strip --strip-all /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl.stripped",
+      "elapsed_ns": 1897465,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "cc -Isrc -std=c11 -O0 -g -Wall -Wextra -Werror -fno-common -fstack-protector-strong -ffile-prefix-map=/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K=. src/brvm.c host/brctl.c -o /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl.debug -lcrypto",
+      "elapsed_ns": 252739697,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "make clean",
+      "elapsed_ns": 2648502,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "rm -rf .build\n"
+    },
+    {
+      "command": "make all",
+      "elapsed_ns": 2628067617,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "mkdir -p .build\ncc -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong src/brvm.c host/brctl.c -o .build/brctl -lcrypto\ncc -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong src/brvm.c tests/test_main.c -o .build/br_tests -lcrypto\ncc -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong src/brvm.c tools/br_sizes.c -o .build/br_sizes -lcrypto\ncc -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong src/brvm.c tools/br_bench.c -o .build/br_bench -lcrypto\n"
+    },
+    {
+      "command": "make image",
+      "elapsed_ns": 628820778,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "python3 tools/qualify.py --lctl-only >/dev/null\nmkdir -p deploy; .build/brctl assemble src/BOOT.lctlc deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg --factory\n"
+    },
+    {
+      "command": "make clean",
+      "elapsed_ns": 2808377,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "rm -rf .build\n"
+    },
+    {
+      "command": "make all",
+      "elapsed_ns": 2668875479,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "mkdir -p .build\ncc -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong src/brvm.c host/brctl.c -o .build/brctl -lcrypto\ncc -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong src/brvm.c tests/test_main.c -o .build/br_tests -lcrypto\ncc -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong src/brvm.c tools/br_sizes.c -o .build/br_sizes -lcrypto\ncc -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong src/brvm.c tools/br_bench.c -o .build/br_bench -lcrypto\n"
+    },
+    {
+      "command": "make image",
+      "elapsed_ns": 649821251,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "python3 tools/qualify.py --lctl-only >/dev/null\nmkdir -p deploy; .build/brctl assemble src/BOOT.lctlc deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg --factory\n"
+    },
+    {
+      "command": "make all",
+      "elapsed_ns": 1692990,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "make: Nothing to be done for 'all'.\n"
+    },
+    {
+      "command": "make image",
+      "elapsed_ns": 667689936,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "python3 tools/qualify.py --lctl-only >/dev/null\nmkdir -p deploy; .build/brctl assemble src/BOOT.lctlc deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg --factory\n"
+    },
+    {
+      "command": "cc -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong -fstack-usage -c src/brvm.c -o /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/stack/brvm.o",
+      "elapsed_ns": 551864128,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "cc -Isrc -std=c11 -O2 -Wall -Wextra -Werror -fno-common -fstack-protector-strong -fstack-usage -c host/brctl.c -o /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/stack/brctl.o",
+      "elapsed_ns": 248160846,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl keygen /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/k /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 3614104,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl sign-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/k",
+      "elapsed_ns": 3388096,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl assemble /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/alt.lctlc /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/alt.brimg",
+      "elapsed_ns": 3187537,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl sign-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/alt.brimg /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/alt.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/k",
+      "elapsed_ns": 3254928,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl verify-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 17266404,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"image_version\":4,\"bytes\":240,\"status\":0,\"trap\":0}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl verify-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 17466824,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"image_version\":4,\"bytes\":240,\"status\":0,\"trap\":0}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl verify-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 16740704,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"image_version\":4,\"bytes\":240,\"status\":0,\"trap\":0}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl verify-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 16715720,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"image_version\":4,\"bytes\":240,\"status\":0,\"trap\":0}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl verify-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 17981951,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"image_version\":4,\"bytes\":240,\"status\":0,\"trap\":0}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl verify-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 16330031,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"image_version\":4,\"bytes\":240,\"status\":0,\"trap\":0}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl verify-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 15776180,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"image_version\":4,\"bytes\":240,\"status\":0,\"trap\":0}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl verify-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 18261464,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"image_version\":4,\"bytes\":240,\"status\":0,\"trap\":0}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl verify-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 15083384,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"image_version\":4,\"bytes\":240,\"status\":0,\"trap\":0}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl verify-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 15645404,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"image_version\":4,\"bytes\":240,\"status\":0,\"trap\":0}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl run /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 14593312,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"status\":2,\"trap\":0,\"R2\":42}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl run /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 16299644,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"status\":2,\"trap\":0,\"R2\":42}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl run /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 14059592,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"status\":2,\"trap\":0,\"R2\":42}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl run /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 16160682,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"status\":2,\"trap\":0,\"R2\":42}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl run /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 13771875,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"status\":2,\"trap\":0,\"R2\":42}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl run /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 17926800,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"status\":2,\"trap\":0,\"R2\":42}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl run /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 17981216,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"status\":2,\"trap\":0,\"R2\":42}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl run /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 15934712,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"status\":2,\"trap\":0,\"R2\":42}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl run /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 14433235,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"status\":2,\"trap\":0,\"R2\":42}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl run /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 16619035,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"status\":2,\"trap\":0,\"R2\":42}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl run /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 15864545,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"status\":2,\"trap\":0,\"R2\":42}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl run /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 15636531,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"status\":2,\"trap\":0,\"R2\":42}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl inspect-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 1677078,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"format\":\"BRIM/1\",\"version\":4,\"requested_caps\":255,\"instructions\":6,\"data_bytes\":0,\"signed\":false,\"bytes\":176}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl inspect-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 1682038,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"format\":\"BRIM/1\",\"version\":4,\"requested_caps\":255,\"instructions\":6,\"data_bytes\":0,\"signed\":false,\"bytes\":176}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl inspect-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 1590215,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"format\":\"BRIM/1\",\"version\":4,\"requested_caps\":255,\"instructions\":6,\"data_bytes\":0,\"signed\":false,\"bytes\":176}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl inspect-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 1742449,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"format\":\"BRIM/1\",\"version\":4,\"requested_caps\":255,\"instructions\":6,\"data_bytes\":0,\"signed\":false,\"bytes\":176}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl inspect-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 1730572,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"format\":\"BRIM/1\",\"version\":4,\"requested_caps\":255,\"instructions\":6,\"data_bytes\":0,\"signed\":false,\"bytes\":176}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl inspect-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 2098302,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"format\":\"BRIM/1\",\"version\":4,\"requested_caps\":255,\"instructions\":6,\"data_bytes\":0,\"signed\":false,\"bytes\":176}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl inspect-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 1603240,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"format\":\"BRIM/1\",\"version\":4,\"requested_caps\":255,\"instructions\":6,\"data_bytes\":0,\"signed\":false,\"bytes\":176}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl inspect-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 1607960,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"format\":\"BRIM/1\",\"version\":4,\"requested_caps\":255,\"instructions\":6,\"data_bytes\":0,\"signed\":false,\"bytes\":176}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl inspect-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 1718933,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"format\":\"BRIM/1\",\"version\":4,\"requested_caps\":255,\"instructions\":6,\"data_bytes\":0,\"signed\":false,\"bytes\":176}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl inspect-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 1685490,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"format\":\"BRIM/1\",\"version\":4,\"requested_caps\":255,\"instructions\":6,\"data_bytes\":0,\"signed\":false,\"bytes\":176}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl inspect-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 2167577,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"format\":\"BRIM/1\",\"version\":4,\"requested_caps\":255,\"instructions\":6,\"data_bytes\":0,\"signed\":false,\"bytes\":176}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl inspect-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 1566796,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"format\":\"BRIM/1\",\"version\":4,\"requested_caps\":255,\"instructions\":6,\"data_bytes\":0,\"signed\":false,\"bytes\":176}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl inspect-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 1935640,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"format\":\"BRIM/1\",\"version\":4,\"requested_caps\":255,\"instructions\":6,\"data_bytes\":0,\"signed\":false,\"bytes\":176}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl inspect-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 2014693,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"format\":\"BRIM/1\",\"version\":4,\"requested_caps\":255,\"instructions\":6,\"data_bytes\":0,\"signed\":false,\"bytes\":176}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl inspect-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.0.1.brimg",
+      "elapsed_ns": 1568340,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"format\":\"BRIM/1\",\"version\":4,\"requested_caps\":255,\"instructions\":6,\"data_bytes\":0,\"signed\":false,\"bytes\":176}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl update /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/alt.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p --state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state0",
+      "elapsed_ns": 26954711,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"update\":\"PASS\",\"version\":5,\"generation\":1}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl recover-state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state0 /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 23230141,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"generation\":1,\"image_version\":5,\"txid\":1,\"slot\":1}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl update /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p --state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state0",
+      "elapsed_ns": 20867783,
+      "exit_code": 1,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl update /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/alt.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p --state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state1",
+      "elapsed_ns": 26070000,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"update\":\"PASS\",\"version\":5,\"generation\":1}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl recover-state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state1 /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 20672822,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"generation\":1,\"image_version\":5,\"txid\":1,\"slot\":1}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl update /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p --state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state1",
+      "elapsed_ns": 20827275,
+      "exit_code": 1,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl update /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/alt.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p --state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state2",
+      "elapsed_ns": 25056364,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"update\":\"PASS\",\"version\":5,\"generation\":1}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl recover-state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state2 /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 20435005,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"generation\":1,\"image_version\":5,\"txid\":1,\"slot\":1}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl update /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p --state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state2",
+      "elapsed_ns": 20475162,
+      "exit_code": 1,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl update /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/alt.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p --state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state3",
+      "elapsed_ns": 21544645,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"update\":\"PASS\",\"version\":5,\"generation\":1}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl recover-state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state3 /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 18597265,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"generation\":1,\"image_version\":5,\"txid\":1,\"slot\":1}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl update /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p --state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state3",
+      "elapsed_ns": 18010286,
+      "exit_code": 1,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl update /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/alt.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p --state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state4",
+      "elapsed_ns": 30383000,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"update\":\"PASS\",\"version\":5,\"generation\":1}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl recover-state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state4 /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 18252246,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"generation\":1,\"image_version\":5,\"txid\":1,\"slot\":1}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl update /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p --state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state4",
+      "elapsed_ns": 18170454,
+      "exit_code": 1,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl update /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/alt.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p --state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state5",
+      "elapsed_ns": 28439796,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"update\":\"PASS\",\"version\":5,\"generation\":1}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl recover-state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state5 /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 18996215,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"generation\":1,\"image_version\":5,\"txid\":1,\"slot\":1}\n"
+    },
+    {
+      "command": "/mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl update /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p --state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state5",
+      "elapsed_ns": 24183036,
+      "exit_code": 1,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "/usr/bin/time -f __MAXRSS__=%M /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl verify-image /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/base.signed /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 20321404,
+      "exit_code": 0,
+      "stderr": "__MAXRSS__=39348\n",
+      "stdout": "{\"image_version\":4,\"bytes\":240,\"status\":0,\"trap\":0}\n"
+    },
+    {
+      "command": "/usr/bin/time -f __MAXRSS__=%M /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/brctl recover-state /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/state0 /mnt/data/BOTTLE_ROCKET_4.0.1_COLUMNED_LCTL_TRUTH_MEASURED_61K/.build/qual/p",
+      "elapsed_ns": 21779498,
+      "exit_code": 0,
+      "stderr": "__MAXRSS__=41524\n",
+      "stdout": "{\"generation\":1,\"image_version\":5,\"txid\":1,\"slot\":1}\n"
+    }
+  ],
+  "core_gates": {
+    "operational": "PASS",
+    "reproducible_build": "PASS",
+    "sanitize": "PASS",
+    "size": "PASS",
+    "strict_lctl": "PASS"
+  },
+  "external_lctl_jar": "SUPPLEMENTARY_NOT_REQUIRED",
+  "final_decision": "OPERATIONAL",
+  "finished_utc": "2026-08-11T03:04:11+00:00",
+  "record": "BOTTLE_ROCKET.Qualification",
+  "started_utc": "2026-08-11T03:03:46+00:00",
+  "unresolved_blockers": [],
+  "version": "4.0.1",
+  "work_packages": {
+    "BR-401-01": "OPERATIONAL",
+    "BR-401-02": "OPERATIONAL",
+    "BR-401-03": "OPERATIONAL",
+    "BR-401-04": "OPERATIONAL",
+    "BR-401-05": "OPERATIONAL",
+    "BR-401-06": "OPERATIONAL",
+    "BR-401-07": "OPERATIONAL",
+    "BR-401-08": "OPERATIONAL",
+    "BR-401-09": "OPERATIONAL"
+  }
+}

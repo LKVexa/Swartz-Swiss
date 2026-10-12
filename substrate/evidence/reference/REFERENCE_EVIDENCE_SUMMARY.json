@@ -1,0 +1,130 @@
+{
+  "claim_boundary": "Reference execution evidence only. It does not mark the 286,440 VEC1 actionable checklist items complete and does not claim physical-electron, QPU, or Electron/Chromium equivalence.",
+  "integrated_candidate_quick_verify": {
+    "artifact": "INTEGRATED_QUICK_VERIFY.json",
+    "artifact_sha256": "ac1c49b435598f4271c2fc60fd3e5159dde6e35b7e9d7fb72fa25053135b7dfb",
+    "bound_nodes": [
+      "N_LARGE",
+      "N_MEDIUM",
+      "N_SMALL",
+      "N_XLARGE"
+    ],
+    "component_map": {
+      "count": 110,
+      "ok": true,
+      "unique": 110
+    },
+    "fabric_verdict": "CROSS_NODE_DIFFERENTIAL_AGREEMENT",
+    "replay_ok": true,
+    "schema": "VEC1/VERIFY/1",
+    "verdict": "PASS"
+  },
+  "lifecycle_demo": {
+    "artifact": "VEC_LIFECYCLE_DEMO.json",
+    "artifact_sha256": "5625e015433dd07fda735f1ef2a558e35137b0071a223de0fe6a3de185081295",
+    "child_id": "vec1-9284842789f5f6683a4863d7",
+    "clone_equivalence": {
+      "a": "vec1-29ca3e7d85dbd92896c59504",
+      "b": "vec1-9284842789f5f6683a4863d7",
+      "basis": "shared_sealed_snapshot",
+      "equivalent": true,
+      "schema": "VEC/CLONE_EQUIVALENCE/1",
+      "snapshot_hash": "2bcb135b5ca42de75bf11d907a1030482742ff07e69aa0416d5715769cb5ac81"
+    },
+    "electron_id": "vec1-29ca3e7d85dbd92896c59504",
+    "fabric_verdict": "CROSS_NODE_DIFFERENTIAL_AGREEMENT",
+    "replay_ok": true,
+    "schema": "VEC1/DEMO/1",
+    "snapshot_hash": "ec5963d84d2c33e980b91ffda67dab6a943b714d16dfe87afd689bb1268797e3",
+    "verdict": "PASS"
+  },
+  "package_version": "0.1.0-candidate",
+  "schema": "VEC1/REFERENCE_EVIDENCE/1",
+  "source_suite_strict_all_modes": {
+    "artifact": "FABRIC_ALL_MODES_STRICT_RUN.json",
+    "artifact_sha256": "a2c26090e3753ae048b736b40f64d20cf43b45ec33de805b583e101a91b57ac8",
+    "event_log": {
+      "events": 41,
+      "hash": "dc7a9382ed2e5cf3f7549cebee7fe7a00a384c77a2e6ae6435382ba68b08c5de",
+      "metrics_excluded_from_hash": true,
+      "name": "df_fabric",
+      "reconstruction": {
+        "event_count": 41,
+        "events_per_worker": {
+          "-": 20,
+          "W_LARGE": 5,
+          "W_MEDIUM": 5,
+          "W_SMALL": 6,
+          "W_XLARGE": 5
+        },
+        "operations": [
+          "DF_REPLICA_VERDICT",
+          "STATIC_PLACEMENT",
+          "DF_SEGMENT_HANDOFF",
+          "DF_PIPELINE_VERDICT",
+          "BSP_LOCAL_COMPUTE",
+          "BSP_LOCAL_COMPUTE",
+          "BSP_LOCAL_COMPUTE",
+          "BSP_LOCAL_COMPUTE",
+          "BSP_BARRIER",
+          "BSP_BARRIER",
+          "BSP_BARRIER",
+          "BSP_BARRIER",
+          "BSP_SUPERSTEP",
+          "BSP_LOCAL_COMPUTE",
+          "BSP_LOCAL_COMPUTE",
+          "BSP_LOCAL_COMPUTE",
+          "BSP_LOCAL_COMPUTE",
+          "BSP_SEND",
+          "BSP_SEND",
+          "BSP_SEND",
+          "BSP_SEND",
+          "BSP_SEND",
+          "BSP_SEND",
+          "BSP_SEND",
+          "BSP_SEND",
+          "BSP_SEND",
+          "BSP_SEND",
+          "BSP_SEND",
+          "BSP_SEND",
+          "BSP_BARRIER",
+          "BSP_BARRIER",
+          "BSP_BARRIER",
+          "BSP_BARRIER",
+          "BSP_BARRIER",
+          "BSP_BARRIER",
+          "BSP_BARRIER",
+          "BSP_SUPERSTEP",
+          "ALLGATHER",
+          "ALLREDUCE",
+          "ALLREDUCE",
+          "DF_BSP_VERDICT"
+        ]
+      },
+      "replay_self_check": {
+        "actual_hash": "6a952667cc6f190037a61219012b1160",
+        "events": 41,
+        "expected_hash": "6a952667cc6f190037a61219012b1160",
+        "mismatches": [],
+        "ok": true,
+        "severity": "PASS",
+        "token": "DETERMINISTIC_REPLAY_PASS"
+      },
+      "schema": "PA-LCTL/EVENTLOG/1",
+      "written_to": "/mnt/data/vec1_build/fabric_event_log.json"
+    },
+    "nodes_bound": [
+      "N_SMALL",
+      "N_MEDIUM",
+      "N_LARGE",
+      "N_XLARGE"
+    ],
+    "programs": [
+      "bsp",
+      "pipeline",
+      "replica"
+    ],
+    "schema": "DF/FABRIC_RUN/1",
+    "verdict": "CROSS_NODE_DIFFERENTIAL_AGREEMENT"
+  }
+}

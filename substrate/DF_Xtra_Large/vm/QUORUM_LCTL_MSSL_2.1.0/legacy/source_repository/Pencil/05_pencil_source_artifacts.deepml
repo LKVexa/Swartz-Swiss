@@ -1,0 +1,60 @@
+deepml logic 0.3
+module repository.pencil.source_artifacts
+policy pure_by_default
+policy no_network
+
+type ArtifactStatus = Registered | Verified | Preserved | Superseded
+
+knowledge_base PencilSourceArtifacts {
+  fact suite_assignment("SOPHIA", "semantic_judgment")
+  fact suite_assignment("CHARLOTTE", "structural_validation")
+  fact suite_assignment("LANDON", "repository_integration")
+  fact suite_assignment("PROFESSOR", "reviewable_explanation")
+  fact suite_assignment("PODIUM", "job_and_evidence_queue")
+  fact artifact("artifact_source_001")
+  fact artifact_type("artifact_source_001", "source")
+  fact artifact_author("artifact_source_001", "author_primary")
+  fact artifact_hash("artifact_source_001", "sha256:replace-with-real-hash")
+  fact artifact_immutable("artifact_source_001")
+  fact artifact_provenance_complete("artifact_source_001")
+  fact artifact_repository_path("artifact_source_001", "05_Pencil/source/artifact_source_001")
+
+  fact artifact("artifact_rewrite_001")
+  fact artifact_type("artifact_rewrite_001", "rewrite")
+  fact artifact_author("artifact_rewrite_001", "author_primary")
+  fact artifact_hash("artifact_rewrite_001", "sha256:replace-with-real-hash")
+  fact artifact_immutable("artifact_rewrite_001")
+  fact artifact_provenance_complete("artifact_rewrite_001")
+  fact artifact_repository_path("artifact_rewrite_001", "05_Pencil/rewrites/artifact_rewrite_001")
+  fact derived_from("artifact_rewrite_001", "artifact_source_001")
+
+  rule source_artifact_ready(A) :-
+    artifact(A),
+    artifact_author(A, Author),
+    artifact_hash(A, Hash),
+    artifact_immutable(A),
+    artifact_provenance_complete(A),
+    artifact_repository_path(A, Path)
+
+  rule artifact_ancestor(A, B) :-
+    derived_from(A, B)
+
+  rule artifact_ancestor(A, C) :-
+    derived_from(A, B),
+    artifact_ancestor(B, C)
+
+  rule release_artifact(A) :-
+    source_artifact_ready(A),
+    sophia_approved(A),
+    charlotte_validated(A),
+    landon_integrated(A),
+    professor_explained(A),
+    podium_evidence_complete(A)
+}
+
+query source_artifact_ready(Artifact) strategy tabled
+query artifact_ancestor("artifact_rewrite_001", Source) strategy tabled
+plan PencilArtifactPlan goal source_artifacts_preserved actions [register, hash, attribute, link, preserve, evidence]
+certify logic PencilSourceArtifacts using proof_carrying
+optimize module using [rule_indexing, common_subexpression_elimination, tabling, proof_normalization]
+lower module to DEEPML_LOGIC_R12

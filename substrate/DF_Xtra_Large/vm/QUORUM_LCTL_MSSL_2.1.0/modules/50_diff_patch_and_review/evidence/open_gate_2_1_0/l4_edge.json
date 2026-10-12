@@ -1,0 +1,125 @@
+{
+  "authority_sha256": "6a070afbae23628799bb3e715a0836ae754aa2f796f2d6eda7144c4553455f6c",
+  "domain_output": {
+    "governance_receipt": {
+      "change_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "mutation_applied": false,
+      "requires_real_patch_for_production": true,
+      "review": "APPROVED_REFERENCE"
+    },
+    "input_type": "change/review_context",
+    "legacy_signals": [
+      "PACKAGE",
+      "VALIDATE",
+      "AUTHORIZE",
+      "INDEX"
+    ],
+    "module": "Diff Patch and Review",
+    "output_type": "approved_patch/governance_receipt",
+    "payload_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "plane": "governance_control",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "3d78c0fab64b6a6e10e35b7d5b5443553c25ec9ff13f1771066275db9565b3ec",
+  "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "module": "Diff Patch and Review",
+  "module_id": 50,
+  "plane": "governance_control",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "4fc4049e8278178c28878446752b22303abfa3b7733688ccb8637009d086d6ef",
+  "stage_count": 9,
+  "stages": [
+    {
+      "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "node": "N01",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "INSPECT",
+      "output_sha256": "32c99a3dd73d11d47c154766abc403c2706cc9f226acf669238e14c6206d35fc",
+      "stage": "CHANGE"
+    },
+    {
+      "input_sha256": "32c99a3dd73d11d47c154766abc403c2706cc9f226acf669238e14c6206d35fc",
+      "node": "N02",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "INSPECT",
+      "output_sha256": "8440c873f6f81d6f4475451f18093452dcc3255a8357ed7361e7dfcaa185e265",
+      "stage": "INSPECT"
+    },
+    {
+      "comparison": "SELF_CONSISTENT",
+      "input_sha256": "8440c873f6f81d6f4475451f18093452dcc3255a8357ed7361e7dfcaa185e265",
+      "node": "N03",
+      "operator": "COMPARE",
+      "output_sha256": "083300e2119e3d8820ab2027ab029b5e84264dc2e2154dd303ca0a08c527ae88",
+      "stage": "DIFF"
+    },
+    {
+      "input_sha256": "083300e2119e3d8820ab2027ab029b5e84264dc2e2154dd303ca0a08c527ae88",
+      "node": "N04",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "INSPECT",
+      "output_sha256": "18d605edf1731fcef7e69cbffdffbc0845d138130b738abdeda7a28667434ae2",
+      "stage": "REVIEW"
+    },
+    {
+      "authorized": true,
+      "capabilities": [
+        "evidence.write",
+        "patch.propose",
+        "repository.read"
+      ],
+      "input_sha256": "18d605edf1731fcef7e69cbffdffbc0845d138130b738abdeda7a28667434ae2",
+      "network": "DENY",
+      "node": "N05",
+      "operator": "AUTHORIZE",
+      "output_sha256": "af22b8ede1e78a18ce89c5d30ac5491d49b9b55b4bd8b295e79073cc60c2feee",
+      "stage": "AUTHORIZE"
+    },
+    {
+      "execution_token": "cf2fde35f726829f55abd5bf",
+      "input_sha256": "af22b8ede1e78a18ce89c5d30ac5491d49b9b55b4bd8b295e79073cc60c2feee",
+      "node": "N06",
+      "operator": "EXECUTE",
+      "output_sha256": "ff100b78388629962fde9f7109e896b2c6b108ac1e98cc0067bf166923ee947f",
+      "stage": "APPLY"
+    },
+    {
+      "input_sha256": "ff100b78388629962fde9f7109e896b2c6b108ac1e98cc0067bf166923ee947f",
+      "node": "N07",
+      "operator": "VALIDATE",
+      "output_sha256": "3de225c10e6dcd2b4611bb07b45414933f314bd47ea42816ae00b6bb23643958",
+      "stage": "VERIFY",
+      "valid": true
+    },
+    {
+      "input_sha256": "3de225c10e6dcd2b4611bb07b45414933f314bd47ea42816ae00b6bb23643958",
+      "node": "N08",
+      "operator": "RECORD",
+      "output_sha256": "69afbc5c9752930c05387e835e81d2ec2b2d16a9617d9f00c778f90cec53aea8",
+      "receipt_sha256": "3790690cdb1f73dd37ded5cb0c4f48c94ddcb8579de4f06ce97b25c69421b980",
+      "stage": "RECORD"
+    },
+    {
+      "input_sha256": "69afbc5c9752930c05387e835e81d2ec2b2d16a9617d9f00c778f90cec53aea8",
+      "node": "N09",
+      "operator": "RECORD",
+      "output_sha256": "cc143a46ab3b8f1babd1835780336de9dbd1e24a3839baf1f16ce414c96d2fe5",
+      "receipt_sha256": "45d44d8e32fe1b4925bd19df5eae868ed2aa612e636b33782bd6be150ef6bcc3",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

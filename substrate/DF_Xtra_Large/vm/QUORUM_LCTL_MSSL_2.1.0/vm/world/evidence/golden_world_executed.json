@@ -1,0 +1,201 @@
+{
+  "executed": 21,
+  "results": [
+    {
+      "detail": {
+        "errors": [],
+        "identities_preserved": true,
+        "non_reference_entity_positions_preserved": true
+      },
+      "id": "GW-01",
+      "name": "Fold Circuit",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "changed": true,
+        "errors": []
+      },
+      "id": "GW-02",
+      "name": "Remote Ecology",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "count": 1,
+        "well": "W0001"
+      },
+      "id": "GW-04",
+      "name": "Narrative Well",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "errors": [],
+        "max_shell": 3,
+        "spawned": 250,
+        "views": 250
+      },
+      "id": "GW-05",
+      "name": "Materialization Storm Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "errors": [],
+        "pos": [
+          500000,
+          -200000,
+          50
+        ]
+      },
+      "id": "GW-06",
+      "name": "Teleport Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "count": 4,
+        "errors": []
+      },
+      "id": "GW-07",
+      "name": "Multi-Well Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "digest_equal": true,
+        "ledger_equal": true
+      },
+      "id": "GW-08",
+      "name": "Crash/Recovery Save",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "same_entity": true,
+        "view_changed": true
+      },
+      "id": "GW-11",
+      "name": "Portal/Reference Continuity",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "sheriff_knows": true
+      },
+      "id": "GW-12",
+      "name": "Law Knowledge Persistence",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "entity": "8",
+        "exists": true,
+        "x": 300
+      },
+      "id": "GW-15",
+      "name": "Persistent Companion",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "bounded": true,
+        "monotonic": true
+      },
+      "id": "GW-16",
+      "name": "Fold-Horizon Safety",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "entity_count": 7,
+        "errors": []
+      },
+      "id": "GW-17",
+      "name": "Oscillation Torture Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "digest": "7b5da629ec47e942c5794696a281eb3355b10e622c94ddae3e2ef5939a25cb00",
+        "same": true
+      },
+      "id": "GW-21",
+      "name": "World Package Rebuild",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "moved": true,
+        "route_time_canonical": 50
+      },
+      "id": "GW-22",
+      "name": "Nested Moving Frame Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "distance": 4600
+      },
+      "id": "GW-23",
+      "name": "Pursuit Across Shells",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "same_region": true
+      },
+      "id": "GW-30",
+      "name": "Procedural Region Regeneration",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "ledger": true,
+        "state": true
+      },
+      "id": "GW-39",
+      "name": "Headless Replay",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "entities_unchanged": true,
+        "owner": "P4"
+      },
+      "id": "GW-41",
+      "name": "Single-vs-Multi Layout Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "new_region": "4",
+        "unaffected_equal": true
+      },
+      "id": "GW-61",
+      "name": "Frontier Admission",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "entities_equal": true,
+        "errors": []
+      },
+      "id": "GW-74",
+      "name": "Rehydrate Region",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "errors": [],
+        "regions": 6,
+        "role": "8",
+        "tick": 1000
+      },
+      "id": "GW-80",
+      "name": "Autonomous Continuum Reference Soak",
+      "status": "PASS"
+    }
+  ]
+}

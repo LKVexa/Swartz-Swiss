@@ -1,0 +1,49 @@
+{
+  "suite_id": 45,
+  "suite_name": "Localization and Large File Plane",
+  "plane": "interfaces_services",
+  "legacy_sha256": "163f8f46144f5774dbb12c42df2f2cba04f6eddbee8f0c5e843d1cc6a3840bf6",
+  "legacy_root": "legacy/source_repository/Localization and Large File Plane",
+  "files": [
+    {
+      "path": "45.1_Localization_and_Large_File_Plane_Multilingual_Presentation.jaui",
+      "sha256": "db078ad5ff2fc6fd8b888889e79212bbedbc2593d944023e9476971e3e4b0920",
+      "bytes": 2173
+    },
+    {
+      "path": "45.2_Localization_and_Large_File_Plane_Accessibility_Presentation.jaui",
+      "sha256": "f85dc4e46eb3efae775154297e403cc44a65d1028f5f3f6f03545e673bc45b86",
+      "bytes": 2272
+    },
+    {
+      "path": "45.3_Localization_and_Large_File_Plane_Bounded_Large_File_Windows.jaui",
+      "sha256": "caef6819f032c94898bd44b35b01631740e0079845abdbd8635e5b9316c45b4b",
+      "bytes": 2030
+    },
+    {
+      "path": "45.4_Localization_and_Large_File_Plane_Repository_Scale_Navigation.jaui",
+      "sha256": "1ef5c222683ff7c9c9c5e805a1eb45451ebeaadcb5e0474b3055851539b5bf53",
+      "bytes": 2214
+    },
+    {
+      "path": "45.5_Localization_and_Large_File_Plane_Localization_System.jaui",
+      "sha256": "cf547e562a1869eb1c3e97d0d8f4a1be49dd9317522e530d48d8cc77fec56177",
+      "bytes": 2202
+    },
+    {
+      "path": "45.6_Localization_and_Large_File_Plane_Large_File_System.jaui",
+      "sha256": "9b2cc142068809a6e607ca1c9708941b210076299ca21daf055df055711a6e9e",
+      "bytes": 2160
+    },
+    {
+      "path": "45.7_Localization_and_Large_File_Plane_Accessibility_System.jaui",
+      "sha256": "0fe1d8352616ed21c70658bf415f1e7593306b91fae3332c3aca0632c3d6d600",
+      "bytes": 2381
+    },
+    {
+      "path": "README.md",
+      "sha256": "1b199324cc5f809e0c526dbb265f423ed90ecd2c74333f32816124192b128a25",
+      "bytes": 16681
+    }
+  ]
+}

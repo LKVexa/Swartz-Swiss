@@ -1,0 +1,97 @@
+{
+  "component_id": "BR-401-03",
+  "requirements": [
+    {
+      "baseline": "4.0.0 gates PASS; legacy evidence superseded",
+      "blocker": null,
+      "command": "python3 tools/qualify.py",
+      "evidence_path": "evidence/MEMORY.json",
+      "exit_code": 0,
+      "notes": "Scope and units are defined in the referenced evidence artifact.",
+      "requirement": "Verify exact bytes per 1,048,576-bit word",
+      "requirement_id": "BR-401-03-R01",
+      "result": "fresh measurement/test generated from 4.0.1 work tree",
+      "sha256": "48d1287e349298df89bfafefb7fa641f2741a3a036b8a523ce5c75f49f6a52d7",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.0 gates PASS; legacy evidence superseded",
+      "blocker": null,
+      "command": "python3 tools/qualify.py",
+      "evidence_path": "evidence/MEMORY.json",
+      "exit_code": 0,
+      "notes": "Scope and units are defined in the referenced evidence artifact.",
+      "requirement": "Verify register count times word size",
+      "requirement_id": "BR-401-03-R02",
+      "result": "fresh measurement/test generated from 4.0.1 work tree",
+      "sha256": "48d1287e349298df89bfafefb7fa641f2741a3a036b8a523ce5c75f49f6a52d7",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.0 gates PASS; legacy evidence superseded",
+      "blocker": null,
+      "command": "python3 tools/qualify.py",
+      "evidence_path": "evidence/MEMORY.json",
+      "exit_code": 0,
+      "notes": "Scope and units are defined in the referenced evidence artifact.",
+      "requirement": "Verify stack depth times word size",
+      "requirement_id": "BR-401-03-R03",
+      "result": "fresh measurement/test generated from 4.0.1 work tree",
+      "sha256": "48d1287e349298df89bfafefb7fa641f2741a3a036b8a523ce5c75f49f6a52d7",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.0 gates PASS; legacy evidence superseded",
+      "blocker": null,
+      "command": "python3 tools/qualify.py",
+      "evidence_path": "evidence/MEMORY.json",
+      "exit_code": 0,
+      "notes": "Scope and units are defined in the referenced evidence artifact.",
+      "requirement": "Verify temporary-word count",
+      "requirement_id": "BR-401-03-R04",
+      "result": "fresh measurement/test generated from 4.0.1 work tree",
+      "sha256": "48d1287e349298df89bfafefb7fa641f2741a3a036b8a523ce5c75f49f6a52d7",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.0 gates PASS; legacy evidence superseded",
+      "blocker": null,
+      "command": "python3 tools/qualify.py",
+      "evidence_path": "evidence/MEMORY.json",
+      "exit_code": 0,
+      "notes": "Scope and units are defined in the referenced evidence artifact.",
+      "requirement": "Verify alignment overhead",
+      "requirement_id": "BR-401-03-R05",
+      "result": "fresh measurement/test generated from 4.0.1 work tree",
+      "sha256": "48d1287e349298df89bfafefb7fa641f2741a3a036b8a523ce5c75f49f6a52d7",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.0 gates PASS; legacy evidence superseded",
+      "blocker": null,
+      "command": "python3 tools/qualify.py",
+      "evidence_path": "evidence/MEMORY.json",
+      "exit_code": 0,
+      "notes": "Scope and units are defined in the referenced evidence artifact.",
+      "requirement": "Verify allocator overhead",
+      "requirement_id": "BR-401-03-R06",
+      "result": "fresh measurement/test generated from 4.0.1 work tree",
+      "sha256": "48d1287e349298df89bfafefb7fa641f2741a3a036b8a523ce5c75f49f6a52d7",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.0 gates PASS; legacy evidence superseded",
+      "blocker": null,
+      "command": "python3 tools/qualify.py",
+      "evidence_path": "evidence/MEMORY.json",
+      "exit_code": 0,
+      "notes": "Scope and units are defined in the referenced evidence artifact.",
+      "requirement": "Verify serialized versus in-memory size",
+      "requirement_id": "BR-401-03-R07",
+      "result": "fresh measurement/test generated from 4.0.1 work tree",
+      "sha256": "48d1287e349298df89bfafefb7fa641f2741a3a036b8a523ce5c75f49f6a52d7",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "status": "OPERATIONAL"
+}

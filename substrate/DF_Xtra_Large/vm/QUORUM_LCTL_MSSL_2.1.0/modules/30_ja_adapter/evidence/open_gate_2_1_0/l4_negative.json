@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "e569b357773c18da0a475fae58e6ef09e30477e675bc30751d998bcd61e5b5ed",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "JA Adapter",
+  "module_id": 30,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

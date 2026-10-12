@@ -1,0 +1,14 @@
+ja source 0.3
+module suite39.core_studio.repository_ui
+use Core
+policy no_network
+
+record RepositoryUIPlan { id: Count, scope: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_repository_ui_plan(item: RepositoryUIPlan) -> Result<RepositoryUIPlan, Text> effects { pure } {
+    let normalized: Text = item.scope
+    return Ok(RepositoryUIPlan { id: item.id, scope: normalized, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: RepositoryUIPlan = RepositoryUIPlan { id: 3908, scope: "input_repository_browser_plan", sophia: "interpret_repository_context", charlotte: "validate_repository_scope", landon: "stage_repository_view", professor: "explain_repository_state", podium: "publish_repository_receipt" }
+let result = prepare_repository_ui_plan(sample)
+assert result.is_ok == true
+emit json result

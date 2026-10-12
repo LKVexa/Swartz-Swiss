@@ -1,0 +1,27 @@
+ja source 0.3
+module suite65.sandbox_engine.network_air_gap_policy
+use Security
+policy no_network
+
+principal SandboxNetworkGate
+role SandboxNetworkPolicyEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant sandbox.network.evaluate:approved
+}
+resource SandboxNetworkSession classification restricted
+policy SandboxNetworkAirGapPolicy {
+    deny network.* by default
+    deny process.* by default
+    deny SandboxNetworkSession when principal.role != SandboxNetworkPolicyEnsemble
+    allow SandboxNetworkSession when principal.role == SandboxNetworkPolicyEnsemble
+    require human_approval for network.connect
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "SandboxNetworkAirGapPolicy.decision.mcrt"

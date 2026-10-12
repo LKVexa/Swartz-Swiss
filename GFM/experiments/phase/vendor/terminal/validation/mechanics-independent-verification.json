@@ -1,0 +1,212 @@
+{
+  "validator": "Independent Python standard library; no production JavaScript execution",
+  "version": "0.5.0",
+  "tolerance": 1e-10,
+  "scope": "Finite saved mechanics datasets, transform/rotation recovery, declared source laws, canonical integrity and unchanged historical bytes.",
+  "limits": [
+    "No validation of new physical theory or absent 500-equation suite.",
+    "No browser/download/live-iframe test.",
+    "Finite sample recovery does not certify continuum convergence."
+  ],
+  "status": "PASS",
+  "assertionsEvaluated": 3112,
+  "maximumScaledError": 3.7944826909687133e-13,
+  "testedFileHashes": {
+    "mechanics-reapplication.json": "99d2184aa0858513475b7a835e068d78de8b0cf53a2e9fac49eae92e25286c18",
+    "examples/GFM-Mechanics-session.json": "da42cf1e613e2c5abcb6bb0cc1785edf6ae4578fcb4d63ef04347f69dd54ce44"
+  },
+  "testedFileBytes": {
+    "mechanics-reapplication.json": 305004,
+    "examples/GFM-Mechanics-session.json": 380226
+  },
+  "files": {
+    "mechanics-reapplication.json": {
+      "sha256": "99d2184aa0858513475b7a835e068d78de8b0cf53a2e9fac49eae92e25286c18",
+      "bytes": 305004
+    },
+    "examples/GFM-Mechanics-session.json": {
+      "sha256": "da42cf1e613e2c5abcb6bb0cc1785edf6ae4578fcb4d63ef04347f69dd54ce44",
+      "bytes": 380226
+    },
+    "src/gfm-mechanics.js": {
+      "sha256": "031cf5a05eb3ab3e48cab1f5db18cee6da5c43b78fd90a9a3a26322c7a77e28f",
+      "bytes": 23075
+    }
+  },
+  "groups": [
+    {
+      "name": "Original-source and historical-byte preservation",
+      "assertions": 202,
+      "status": "PASS",
+      "details": {
+        "originalSources": 15,
+        "savedSourceWitnesses": 38,
+        "historicalArtifactsUnchanged": 9
+      }
+    },
+    {
+      "name": "Canonical session and record integrity",
+      "assertions": 43,
+      "status": "PASS",
+      "details": {
+        "canonicalEnvelopesChecked": 18
+      }
+    },
+    {
+      "name": "Complete scoped applicability",
+      "assertions": 876,
+      "status": "PASS",
+      "details": {
+        "dispositions": {
+          "hypothetical-rule-evaluated": 7,
+          "ordinary-reference-calculated": 22,
+          "reference-retained": 20
+        },
+        "noProbabilityOrWignerCalculationRequired": true
+      }
+    },
+    {
+      "name": "Every saved dataset domain and independent transform",
+      "assertions": 1607,
+      "status": "PASS",
+      "details": {
+        "datasetsChecked": {
+          "complex-signal": 41,
+          "field-values": 31
+        },
+        "profilesChecked": {
+          "gtt": 8,
+          "pendulum": 5,
+          "zetaGamma": 5,
+          "ordered-cartesian-components": 18,
+          "exact-polynomial-example": 31,
+          "aggiePassage": 5
+        }
+      }
+    },
+    {
+      "name": "Raw GF9 primary trace transform and inverse",
+      "assertions": 39,
+      "status": "PASS",
+      "details": {
+        "inputNorm": 1.6999491016297381,
+        "outputNorm": 1.6999491016297383,
+        "preservesOriginalScale": true
+      }
+    },
+    {
+      "name": "All three real rotations and raw image transports",
+      "assertions": 200,
+      "status": "PASS",
+      "details": {
+        "axesChecked": [
+          "x",
+          "y",
+          "z"
+        ],
+        "rawCartesianNorm": 3.7416573867739413,
+        "zetaGammaReference": 1.6449340668482264,
+        "independentAdaptiveIntegral": 1.6449340668488226
+      }
+    },
+    {
+      "name": "Exact coefficient pairs and recorded zero data",
+      "assertions": 145,
+      "status": "PASS",
+      "details": {
+        "polynomialRecords": 1,
+        "pairedTransforms": 1,
+        "preservedZeroRecords": 1,
+        "primitiveRoots": {
+          "gf3": 2,
+          "gf4": 2,
+          "gf8": 2,
+          "gf9": 4,
+          "gf16": 2
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "details": {
+    "envelopes": [
+      {
+        "location": "GFM-Mechanics-session",
+        "sha256": "f0108c8b2da89f669cc8a5190a0b841b2f3fcff1763b76e1629d755146635c4b"
+      },
+      {
+        "location": "GFM-Mechanics-session.data.records[0]",
+        "sha256": "5942f1b46ac7d10908320721f886b9a0b5f9826ff52bba73ea99ba8ec9f036e4"
+      },
+      {
+        "location": "GFM-Mechanics-session.data.records[1]",
+        "sha256": "c2d8e51c28bff7a4bb5c2de9f51fe35af7a572fdda2b33645d5ccaee3e2701f4"
+      },
+      {
+        "location": "GFM-Mechanics-session.data.records[2]",
+        "sha256": "d2ee161047ebecf9a4dacbd77b73568f7aae32b6451d48b6595554a103617852"
+      },
+      {
+        "location": "GFM-Mechanics-session.data.records[3]",
+        "sha256": "c981bf60ef64e40ffc688a4e9b61d9951c484874a33688a47495abb58b3ac62d"
+      },
+      {
+        "location": "GFM-Mechanics-session.data.records[4]",
+        "sha256": "00264d0e231b55280675020cf3fdfefbdd444ae6026676cbd6af9e8616a6a6ba"
+      },
+      {
+        "location": "examples/Horizon-Simulation-session.json",
+        "sha256": "9a15f1551c7df3d86b13f0c4b247fdb24c8f1ea1774b5fee6f966d814985a413"
+      },
+      {
+        "location": "examples/Horizon-Simulation-session.json.data.records[0]",
+        "sha256": "23585d247232bfc6121f630aac15578a47475fd7993f92e79d15680cc1dda1ca"
+      },
+      {
+        "location": "examples/Horizon-Simulation-session.json.data.records[1]",
+        "sha256": "49834d6ae5e8e6df4de92993348a5deea10df617897c4d66707f7d7e3fd27751"
+      },
+      {
+        "location": "examples/Horizon-Simulation-session.json.data.records[2]",
+        "sha256": "c96cc677602ec24416ac532e26688f546f885d13e6342843ebf86729924bd410"
+      },
+      {
+        "location": "examples/GFM-Reapplied-session.json",
+        "sha256": "e48efb023a68845e7f329bfc49bf70c01ac119640da2a6d78c06f72569c75690"
+      },
+      {
+        "location": "examples/GFM-Reapplied-session.json.data.records[0]",
+        "sha256": "8011293498feafd222836e995795bdc0925860ffcf6f7f6b613c65a808bf8fd9"
+      },
+      {
+        "location": "examples/GFM-Reapplied-session.json.data.records[1]",
+        "sha256": "a930811cf5b60108f0f8dc68ce31ea5f269ba278eb6d06e913290b4f68847a42"
+      },
+      {
+        "location": "examples/GFM-Reapplied-session.json.data.records[2]",
+        "sha256": "9d990ae24e7aec0070b3716053ca870d4f12a274ed161f057d19f0b15c5c1d16"
+      },
+      {
+        "location": "examples/Audited-Equations-session.json",
+        "sha256": "21f18484ae453fee9d8da6df2a472a3d2604e996b974d6cf50b42223e256b1ea"
+      },
+      {
+        "location": "examples/Audited-Equations-session.json.data.records[0]",
+        "sha256": "e9f5813e44b21ffc7173143fda6b3c59c23bc1c6d1a3ca2d18895916a8990e58"
+      },
+      {
+        "location": "examples/Fourier-Weyl-session.json",
+        "sha256": "b9b17e89dacc3e9cda789351047d180e78edc09695c8fcf1c7bcbea82e2b6d95"
+      },
+      {
+        "location": "examples/Fourier-Weyl-session.json.data.records[0]",
+        "sha256": "42a08399ef88263f8d97456ec9e64f49372142d29e99b6d5403e03246f8cd728"
+      }
+    ],
+    "datasetCounts": {
+      "complex-signal": 41,
+      "field-values": 31
+    },
+    "sourceFiles": 15
+  }
+}

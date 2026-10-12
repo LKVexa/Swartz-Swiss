@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "69438147a4de6f2e8425be655f851584bbe11dfc468d7daad6079a804c4719fc",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "C# Renderer",
+  "module_id": 24,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

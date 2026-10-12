@@ -1,0 +1,30 @@
+{
+  "schema": "GFM-phase-offline-source-bundle/1",
+  "sourceHashes": {
+    "backend/simulation.cjs": "235e67f8d55cba41acade9d05a1a4fcfbf0f1340b3ac1973a076972507868feb",
+    "backend/gfm/gfm-mechanics.js": "031cf5a05eb3ab3e48cab1f5db18cee6da5c43b78fd90a9a3a26322c7a77e28f",
+    "backend/gfm/engine.js": "4e0973c85eaec595cd80815b0a402e66fc50f7085f9ba74df417bd65d8bb3833",
+    "backend/gfm/horizon-gr.js": "74db6e9f8ec1169b94ba3719b1d8ec433446c33afa66d04609fa851891e59a38",
+    "backend/gfm/horizon-scenario.js": "0a8c3dc90027f26a78f8328e492fe3fb2595426dca2e17432d25c9ed00ce70ac",
+    "backend/gfm/gfm-matrix.js": "51f2ef39f26deb90487e7753809fef5bb0f5792237aa2e8993feb41fb1ce3c10",
+    "backend/gfm/gfm-models.js": "3713a68fe07ceb049c097ce01f381e7094e86e1aa37131f0671207d9dfd0755c",
+    "backend/gfm/refined-field.js": "90e18a88cb2756bac35b0ccc371e2134f8a93fbaa2db70f2ef79a83dc8e28f82",
+    "backend/gfm/refined-scalar.js": "84933340371784bdec43220b142a726b2b71bd205940c833a971180b75d602f9",
+    "backend/gfm/gfm-exact.js": "4c6be8770154f541c9a658ca4e6e0aad783a7bdb374c7a41ad1031295c802af8",
+    "backend/observations.cjs": "b9164e15ebea422c8bc6d156401a5baadcb480bbcefd24df2906a9a5251c9ca9"
+  },
+  "observationDataHashes": {
+    "/phase/data/observations/observations.json": "edd35c123121fb2545a52dbc3ffba6c2d4a1194d9ebba13a5ddb21f864bded62",
+    "/phase/data/observations/protocol.json": "925409367cdd70a3308bdb15482298d43cb319c0c30ce9a82c756b65f1d4d7b7",
+    "/phase/data/observations/source-manifest.json": "9fec2098a8596819c482604d7c71510daee09ce92e74af1b435baaf4f6058612",
+    "/phase/backend/observations.cjs": "b9164e15ebea422c8bc6d156401a5baadcb480bbcefd24df2906a9a5251c9ca9",
+    "/phase/data/observations/source/README.md": "fcef2ebefc147ee0884ca3ad7c2e35308aa70808f4f783318feedd10b51b4c09",
+    "/phase/data/observations/source/LICENSE.txt": "9725e2ef4127844b4cf21137a87e61830de0a04ad583ea6ba2229488b5012f1d",
+    "/phase/data/observations/source/INVENTORY.txt": "4fe20fca69df1840cd9512761ffe02126c455a822161e1157bb81a5752100fbc",
+    "/phase/data/observations/source/dat/M87_EHT_2011_amp.dat": "38a4677a5e7b9a629982bdee675b48df921fdd2fb2b302cc9c3ca14a72341262",
+    "/phase/data/observations/source/dat/M87_EHT_2012_amp.dat": "f8a672924a4ae355ebbdb68ab06423a17cf489cc7268fefbab410c8520e19521",
+    "/phase/data/observations/source/dat/M87_EHT_2013_amp.dat": "76b2e517f8f7caba58ea2676e77b2a49808e9f2e1cf7f212492a6ea86e53c3c1"
+  },
+  "bundleSHA256": "9ed280a9d8d9801287ef9d57f3db29d7304b0a90c45808fa380f069d3ef4036d",
+  "numericSourceEdits": false
+}

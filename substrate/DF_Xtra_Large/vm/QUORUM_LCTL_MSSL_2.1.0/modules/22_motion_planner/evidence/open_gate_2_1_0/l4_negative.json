@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "43789a25d074f46c52376dc982e98e4e5186ab2313fa27e6de456ff27555275f",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Motion Planner",
+  "module_id": 22,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

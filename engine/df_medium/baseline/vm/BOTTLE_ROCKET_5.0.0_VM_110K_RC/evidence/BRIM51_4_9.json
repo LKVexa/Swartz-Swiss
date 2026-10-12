@@ -1,0 +1,18 @@
+{
+  "compiler_enforcement": "PASS",
+  "loader_enforcement": "PASS",
+  "native_brim_bytes": 272,
+  "oversized_rejection": [
+    {
+      "command": "brctl inspect-image <BRIM51_OVERSIZE_51201>",
+      "exit_code": 1
+    },
+    {
+      "command": "bradmin run <BRIM51_OVERSIZE_51201>",
+      "exit_code": 1
+    }
+  ],
+  "profile_ceiling_bytes": 51200,
+  "record": "BOTTLE_ROCKET.BRIM51/4.9.0",
+  "result": "PASS"
+}

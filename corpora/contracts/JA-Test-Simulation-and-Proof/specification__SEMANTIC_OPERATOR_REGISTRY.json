@@ -1,0 +1,46 @@
+{
+  "suite": "JA21_JATP_1.0.0",
+  "profile": "ja.proof",
+  "operators": [
+    {
+      "operator": "assert",
+      "record_count": 1000
+    },
+    {
+      "operator": "benchmark",
+      "record_count": 1000
+    },
+    {
+      "operator": "check_invariant",
+      "record_count": 1000
+    },
+    {
+      "operator": "cover",
+      "record_count": 1000
+    },
+    {
+      "operator": "fuzz",
+      "record_count": 1000
+    },
+    {
+      "operator": "generate",
+      "record_count": 1000
+    },
+    {
+      "operator": "prove",
+      "record_count": 1000
+    },
+    {
+      "operator": "shrink",
+      "record_count": 1000
+    },
+    {
+      "operator": "simulate",
+      "record_count": 1000
+    },
+    {
+      "operator": "test_declare",
+      "record_count": 1000
+    }
+  ]
+}

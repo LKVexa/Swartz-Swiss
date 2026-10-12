@@ -1,0 +1,304 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 8,
+    "PARTIAL": 21,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical↔reference transforms are explicit, deterministic, bounded, and round-trip tested.",
+      "requirement_id": "RCPW-02-R01",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Origin rebasing cannot alter canonical coordinates, velocities, or historical identity.",
+      "requirement_id": "RCPW-02-R02",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference handoff between entities is transactional and continuity-preserving.",
+      "requirement_id": "RCPW-02-R03",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Precision error remains below declared limits at all supported canonical distances.",
+      "requirement_id": "RCPW-02-R04",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Physics, rendering, audio, navigation, and interaction consume reference state without becoming canonical authority.",
+      "requirement_id": "RCPW-02-R05",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference state can be discarded and reconstructed entirely from canonical truth plus current reference selection.",
+      "requirement_id": "RCPW-02-R06",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-frame updates are atomic with respect to physics/render/navigation consumers for each simulation tick.",
+      "requirement_id": "RCPW-02-R07",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Transform Jacobians and precision-loss envelopes are measured across all supported distances and fold bands.",
+      "requirement_id": "RCPW-02-R08",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference switches preserve momentum/orientation semantics and do not create one-frame spatial discontinuities.",
+      "requirement_id": "RCPW-02-R09",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "A deterministic trace can reconstruct every origin rebase and reference handoff.",
+      "requirement_id": "RCPW-02-R10",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-frame motion preserves camera, animation, locomotion, projectile, and vehicle continuity across origin rebases.",
+      "requirement_id": "RCPW-02-R11",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference transforms expose stable previous/current transforms suitable for temporal rendering and motion-vector reconstruction.",
+      "requirement_id": "RCPW-02-R12",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-02-R13.json",
+      "evidence_sha256": "8d3444abd663d9c0533698d46580cf0bc32b533fe41ac33fe41c240931ea2ee9",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "Vertical reference semantics, gravity direction, and large-world elevation precision are explicit and tested independently of horizontal folding.",
+      "requirement_id": "RCPW-02-R13",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-frame diagnostics expose rebase frequency, maximum observed transform error, and all continuity violations.",
+      "requirement_id": "RCPW-02-R14",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-frame authority supports moving local frames for mounts, vehicles, trains, elevators, ships, moving platforms, and other nested motion contexts without changing canonical identity.",
+      "requirement_id": "RCPW-02-R15",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Nested reference frames have explicit composition/inversion rules and maximum depth or cycle detection.",
+      "requirement_id": "RCPW-02-R16",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Camera-relative, actor-relative, vehicle-relative, and world-relative transforms are separately typed so accidental frame mixing is rejected.",
+      "requirement_id": "RCPW-02-R17",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-frame handoff across portals, moving platforms, and transport vehicles preserves velocity and interaction continuity according to declared frame semantics.",
+      "requirement_id": "RCPW-02-R18",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference diagnostics provide deterministic transform traces sufficient to reproduce any visible discontinuity.",
+      "requirement_id": "RCPW-02-R19",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference frames remain deterministic when their source entities are simulated on different execution partitions or worker lanes.",
+      "requirement_id": "RCPW-02-R20",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Nested moving frames carry explicit tick/epoch stamps so stale frame transforms are rejected rather than interpolated as current truth.",
+      "requirement_id": "RCPW-02-R21",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-frame consumers can recover after worker/partition restart from canonical state plus deterministic scheduler history.",
+      "requirement_id": "RCPW-02-R22",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rebasing is coordinated with temporal render history, physics broadphase state, navigation caches, audio spatialization, and interaction targeting through explicit invalidation contracts.",
+      "requirement_id": "RCPW-02-R23",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference qualification includes adversarial handoff during partition migration, checkpointing, high-speed travel, and nested moving-frame transitions.",
+      "requirement_id": "RCPW-02-R24",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-frame authority remains stable as newly synthesized regions become canonical and enter the fold horizon.",
+      "requirement_id": "RCPW-02-R25",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference transforms support astronomical/planetary-scale coordinate magnitudes through declared precision-tier or hierarchical-coordinate policy without changing local interaction precision.",
+      "requirement_id": "RCPW-02-R26",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-local observations expose only information physically or narratively available to the observer rather than globally omniscient canonical state.",
+      "requirement_id": "RCPW-02-R27",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference transitions between surface, interior, underground, elevated, or other world layers use explicit topology and gravity/frame semantics.",
+      "requirement_id": "RCPW-02-R28",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference qualification includes expansion-front traversal, deep historical save replay, archived-region rehydration, and observer-specific knowledge views.",
+      "requirement_id": "RCPW-02-R29",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "stage": 2,
+  "title": "Reference Frame Authority"
+}

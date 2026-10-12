@@ -1,0 +1,61 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "503b2c06cc4ad5e47b92ad2979fa3eea0f0b97c4955a03b9eace8bc26d5fd652",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (CAUSAL_REPLAY, ECOLOGY_CONSERVATION, SAVE_RECOVERY, RESOURCE_STRESS, MULTI_WORKER_CONFORMANCE) plus Stage 07 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "CAUSAL_REPLAY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "ECOLOGY_CONSERVATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "MULTI_WORKER_CONFORMANCE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "RESOURCE_STRESS": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "SAVE_RECOVERY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-02",
+    "GW-33",
+    "GW-49",
+    "GW-71"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T3_FABRIC",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Ecological worker restart resumes from checkpoint plus ledger without population duplication or lost resource debt.",
+  "requirement_id": "RCPW-07-R22",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 7,
+  "stage_title": "Ecology Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "CAUSAL_REPLAY",
+    "ECOLOGY_CONSERVATION",
+    "SAVE_RECOVERY",
+    "RESOURCE_STRESS",
+    "MULTI_WORKER_CONFORMANCE"
+  ],
+  "workflow_file": "07_ECOLOGY_AUTHORITY/092_RCPW_07_R22_ECOLOGICAL_WORKER_RESTART_RESUMES_FROM_CHECKPOINT_PLUS_LEDGER_WITHOUT_POPULATION_DUPL.md",
+  "workflow_tier": "T3_FABRIC"
+}

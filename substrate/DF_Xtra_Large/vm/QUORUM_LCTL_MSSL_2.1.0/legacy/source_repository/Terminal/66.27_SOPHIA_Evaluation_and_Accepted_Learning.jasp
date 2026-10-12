@@ -1,0 +1,49 @@
+profile ja.training_evaluation
+source_level 0.3
+
+subsuite Terminal.T_27 SophiaEvaluationAcceptedLearning {
+    identity { suite = "66"; id = "T-27"; deterministic = true; autorun = false }
+
+    principal SOPHIA {
+        may = observe + reason + evaluate + propose_learning
+        must_not = execute + authorize + publish + promote_rejected_feedback
+    }
+
+    accept {
+        NormalizedTerminalContract
+        TerminalCapabilityManifest
+        TerminalResult
+        terminal_diagnostics
+        Professor_feedback_ref
+        LANDON_review_ref
+    }
+
+    emit { SOPHIATerminalEvaluation; TerminalLearningCandidate }
+
+    procedure evaluate(contract, policy, result, diagnostics) {
+        compare_intent_to_observed_outcome
+        score {
+            correctness
+            policy_compliance
+            evidence_completeness
+            efficiency_within_budget
+            reproducibility
+            diagnostic_quality
+        }
+        identify_supported_failure_causes_and_bounded_improvements
+        return evidence_backed_evaluation
+    }
+
+    procedure propose_learning() {
+        require Professor_feedback_ref.present
+        candidate = derive_from_verified_outcome_and_Professor_feedback
+        require LANDON_review_ref.accepts(candidate)
+        require independent_validation_pass
+        emit candidate_for_MSSLB_promotion
+    }
+
+    deny { learning_from_rejected_feedback; unsupported_causal_claim; authority_grant; execution }
+    evidence { evaluation; score_inputs; candidate_lineage; acceptance_ref; promotion_decision }
+    tests { successful_run; failed_run; incomplete_evidence; rejected_feedback; accepted_verified_learning }
+}
+

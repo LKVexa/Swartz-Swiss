@@ -1,0 +1,30 @@
+deepml specialized 0.3
+module grinder.repeated_evaluation
+policy deterministic
+policy no_network
+
+domain grinder_repeated_evaluation {
+  unit Score = base("dimensionless")
+  schema ReplayEvidence { value: f64<Score> timestamp: Time provenance: Hash }
+  tensor candidates: f64<Score>[128,16]
+  operator SophiaEvaluate(x) -> Tensor pure deterministic
+  operator CharlotteCompare(a, b, c) -> Tensor pure deterministic
+  operator LandonReplay(x) -> Tensor pure deterministic
+  operator ProfessorHashAudit(x) -> Tensor pure deterministic
+  operator PodiumRepeatGate(x) -> Tensor pure deterministic
+  calibration ReplayCalibration { method: bounded_least_squares tolerance: 1e-6 }
+  constraint ReplayBounds { min: 0 max: 1 }
+  graph GrinderRepeatedEvaluationGraph {
+    pass_1 = SophiaEvaluate(candidates)
+    pass_2 = SophiaEvaluate(candidates)
+    pass_3 = SophiaEvaluate(candidates)
+    charlotte = CharlotteCompare(pass_1, pass_2, pass_3)
+    landon = LandonReplay(charlotte)
+    professor = ProfessorHashAudit(landon)
+    podium = PodiumRepeatGate(professor)
+  }
+  validate podium with [SophiaEvaluate, CharlotteCompare, LandonReplay, ProfessorHashAudit, PodiumRepeatGate, ReplayCalibration, ReplayBounds]
+  optimize GrinderRepeatedEvaluationGraph using [unit_propagation, dimensional_simplification, op_specialization, sparse_planning, calibration_folding, target_lowering]
+  lower GrinderRepeatedEvaluationGraph to DEEPML_SPECIALIZED_R12
+  package hybrid GrinderRepeatedEvaluationGraph as "grinder_repeated_evaluation.msslb"
+}

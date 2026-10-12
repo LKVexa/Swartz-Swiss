@@ -1,0 +1,26 @@
+{
+  "schema": "GFM-live-preview-build/1",
+  "version": "2.1.0",
+  "backendTransport": "browser-worker with serial local fallback",
+  "networkRequired": false,
+  "fragment": "preview/gfm-live-layers.html",
+  "fragmentBytes": 847949,
+  "fragmentSHA256": "40fc285f185769a5fd62f0aefd4296a036a6b1e264302a11e286af584e84c207",
+  "standalone": "Open GFM Preview.html",
+  "standaloneSHA256": "57bd6aabf3db9fe11f8cf604623d2cc08ada51611068ee406bb1fe3df046fc61",
+  "engineSHA256": "93d1463b46a2bb6eaeb6c347f97c2a43101d811d0d6aa5d95d3a3b587f6a5b0a",
+  "initialExample": {
+    "preset": "covered-plasma",
+    "timeSeconds": 2e-9,
+    "running": false,
+    "display": "combined",
+    "presentationShape": "wormhole",
+    "visibleLayers": [
+      "phase-envelope",
+      "plasma-collision-power",
+      "cover-ohmic-power",
+      "net-energy-flow"
+    ]
+  },
+  "note": "Initial example is recalculated in the exact-source worker; no stored animation replaces live evolution."
+}

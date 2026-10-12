@@ -1,0 +1,28 @@
+ja source 0.3
+module suite33.visual_feedback.visual_comparison
+use Training
+policy no_network
+
+experiment VisualFeedbackVisualComparison {
+    model ref "models/sophia_charlotte_landon_professor_podium/visual_comparison"
+    dataset ref "datasets/visual_feedback/aligned_pairs" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 24 accumulate 2
+    precision mixed
+    seed 3302
+    checkpoint every 12 steps
+    evaluate {
+        metric structural_similarity
+        metric perceptual_similarity
+        metric pixel_accuracy
+        metric loss
+        require structural_similarity >= 0.95
+        require perceptual_similarity >= 0.90
+        require pixel_accuracy >= 0.95
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "VisualFeedbackVisualComparison.lineage.mcrt"

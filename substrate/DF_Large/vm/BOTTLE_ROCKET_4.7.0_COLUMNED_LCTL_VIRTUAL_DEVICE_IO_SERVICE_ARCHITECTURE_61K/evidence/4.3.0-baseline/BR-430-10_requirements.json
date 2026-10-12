@@ -1,0 +1,98 @@
+{
+  "decision": "OPERATIONAL",
+  "package": "BR-430-10",
+  "requirements": [
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-10_tests.log",
+      "exit_code": 0,
+      "notes": "arithmetic_modes_and_traps",
+      "requirement": "Specify unsigned semantics",
+      "requirement_id": "BR-430-10-R01",
+      "result": "PASS",
+      "sha256": "4656338627b36487025722cd03c1cac9ac0eebb4459893a56cf2029a9516b389",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-10_tests.log",
+      "exit_code": 0,
+      "notes": "arithmetic_modes_and_traps",
+      "requirement": "Specify signed two's complement semantics",
+      "requirement_id": "BR-430-10-R02",
+      "result": "PASS",
+      "sha256": "4656338627b36487025722cd03c1cac9ac0eebb4459893a56cf2029a9516b389",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-10_tests.log",
+      "exit_code": 0,
+      "notes": "arithmetic_modes_and_traps",
+      "requirement": "Specify modular semantics",
+      "requirement_id": "BR-430-10-R03",
+      "result": "PASS",
+      "sha256": "4656338627b36487025722cd03c1cac9ac0eebb4459893a56cf2029a9516b389",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-10_tests.log",
+      "exit_code": 0,
+      "notes": "arithmetic_modes_and_traps",
+      "requirement": "Specify saturating semantics if retained",
+      "requirement_id": "BR-430-10-R04",
+      "result": "PASS",
+      "sha256": "4656338627b36487025722cd03c1cac9ac0eebb4459893a56cf2029a9516b389",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-10_tests.log",
+      "exit_code": 0,
+      "notes": "arithmetic_modes_and_traps",
+      "requirement": "Specify exact/trapping mode if desired",
+      "requirement_id": "BR-430-10-R05",
+      "result": "PASS",
+      "sha256": "4656338627b36487025722cd03c1cac9ac0eebb4459893a56cf2029a9516b389",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-10_tests.log",
+      "exit_code": 0,
+      "notes": "arithmetic_modes_and_traps",
+      "requirement": "Define mode encoding",
+      "requirement_id": "BR-430-10-R06",
+      "result": "PASS",
+      "sha256": "4656338627b36487025722cd03c1cac9ac0eebb4459893a56cf2029a9516b389",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-10_tests.log",
+      "exit_code": 0,
+      "notes": "arithmetic_modes_and_traps",
+      "requirement": "Define cross-mode conversion rules",
+      "requirement_id": "BR-430-10-R07",
+      "result": "PASS",
+      "sha256": "4656338627b36487025722cd03c1cac9ac0eebb4459893a56cf2029a9516b389",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "title": "Arithmetic modes"
+}

@@ -1,0 +1,81 @@
+{
+  "package": "BR-460-01",
+  "record": "BR.PackageRequirements",
+  "requirements": [
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 (representation/COW vectors)",
+      "evidence_path": "evidence/BR-460-01_tests.log",
+      "exit_code": 0,
+      "notes": "Canonical descriptor forms and COW are source-audited and exercised by BR-460 vectors.",
+      "requirement_id": "BR-460-01-R01",
+      "result": "PASS",
+      "sha256": "107645b2bae83b3839cfdc9561aefa322b9c5020ee3eb6d6109425b7268b74ca",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 (representation/COW vectors)",
+      "evidence_path": "evidence/BR-460-01_tests.log",
+      "exit_code": 0,
+      "notes": "Canonical descriptor forms and COW are source-audited and exercised by BR-460 vectors.",
+      "requirement_id": "BR-460-01-R02",
+      "result": "PASS",
+      "sha256": "107645b2bae83b3839cfdc9561aefa322b9c5020ee3eb6d6109425b7268b74ca",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 (representation/COW vectors)",
+      "evidence_path": "evidence/BR-460-01_tests.log",
+      "exit_code": 0,
+      "notes": "Canonical descriptor forms and COW are source-audited and exercised by BR-460 vectors.",
+      "requirement_id": "BR-460-01-R03",
+      "result": "PASS",
+      "sha256": "107645b2bae83b3839cfdc9561aefa322b9c5020ee3eb6d6109425b7268b74ca",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 (representation/COW vectors)",
+      "evidence_path": "evidence/BR-460-01_tests.log",
+      "exit_code": 0,
+      "notes": "Canonical descriptor forms and COW are source-audited and exercised by BR-460 vectors.",
+      "requirement_id": "BR-460-01-R04",
+      "result": "PASS",
+      "sha256": "107645b2bae83b3839cfdc9561aefa322b9c5020ee3eb6d6109425b7268b74ca",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 (representation/COW vectors)",
+      "evidence_path": "evidence/BR-460-01_tests.log",
+      "exit_code": 0,
+      "notes": "Canonical descriptor forms and COW are source-audited and exercised by BR-460 vectors.",
+      "requirement_id": "BR-460-01-R05",
+      "result": "PASS",
+      "sha256": "107645b2bae83b3839cfdc9561aefa322b9c5020ee3eb6d6109425b7268b74ca",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 (representation/COW vectors)",
+      "evidence_path": "evidence/BR-460-01_tests.log",
+      "exit_code": 0,
+      "notes": "Canonical descriptor forms and COW are source-audited and exercised by BR-460 vectors.",
+      "requirement_id": "BR-460-01-R06",
+      "result": "PASS",
+      "sha256": "107645b2bae83b3839cfdc9561aefa322b9c5020ee3eb6d6109425b7268b74ca",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "status": "OPERATIONAL",
+  "title": "Word representation",
+  "workflow": "docs/WORKFLOW_APPLIED_4.6.0/01_BR-460-01_word_representation_PROMPT_AND_WORKFLOW.md"
+}

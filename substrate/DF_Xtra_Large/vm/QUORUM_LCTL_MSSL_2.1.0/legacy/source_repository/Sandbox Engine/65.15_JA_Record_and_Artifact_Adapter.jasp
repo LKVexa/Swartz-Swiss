@@ -1,0 +1,40 @@
+ja source 0.3
+module suite65.sandbox_engine.ja_record_artifact_adapter
+use Service
+policy explicit_network
+
+service SandboxJARecordArtifactAdapter {
+    message ArtifactAdaptRequest {
+        run_id: Text,
+        record_profile: Text,
+        source_artifact_hash: Text,
+        target_schema: Text,
+        output_contract_hash: Text,
+        provenance_hash: Text
+    }
+    message ArtifactAdaptResponse {
+        validation_status: Text,
+        normalized_artifact_ref: Text,
+        normalized_artifact_hash: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_adapter_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint adapt(request: ArtifactAdaptRequest) -> Stream<ArtifactAdaptResponse>
+        auth capability sandbox.artifact.adapt
+        deadline 15s
+        retry max 0
+        idempotency request.source_artifact_hash
+    protocol SandboxArtifactAdapterSession {
+        state Open
+        state Validated
+        state Closed
+        transition validate: Open -> Validated
+        transition finish: Validated -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json SandboxJARecordArtifactAdapter.compatibility_report

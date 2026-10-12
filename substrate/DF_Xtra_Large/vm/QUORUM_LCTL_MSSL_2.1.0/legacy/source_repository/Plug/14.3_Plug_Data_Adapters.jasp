@@ -1,0 +1,33 @@
+ja source 0.3
+module suite14.plug.data_adapters
+use Service
+policy explicit_network
+
+service PlugDataAdapters {
+    message AdapterRequest {
+        request_id: Text,
+        source_schema: Text,
+        target_schema: Text,
+        payload: Text
+    }
+    message AdapterResponse {
+        landon_adapter_status: Text,
+        sophia_mapping_judgment: Text,
+        charlotte_schema_validation: Text,
+        podium_provenance_receipt: Text,
+        done: Flag
+    }
+    endpoint translate(request: AdapterRequest) -> Stream<AdapterResponse>
+        auth capability data.adapt
+        deadline 15s
+        retry max 2
+        idempotency request.request_id
+    protocol AdapterSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json PlugDataAdapters.compatibility_report
+

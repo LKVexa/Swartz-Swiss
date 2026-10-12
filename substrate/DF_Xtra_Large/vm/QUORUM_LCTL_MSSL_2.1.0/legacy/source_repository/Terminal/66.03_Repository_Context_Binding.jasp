@@ -1,0 +1,40 @@
+profile ja.data
+source_level 0.3
+
+subsuite Terminal.T_03 RepositoryContextBinding {
+    identity { suite = "66"; id = "T-03"; deterministic = true; autorun = false }
+
+    integrate {
+        Suite_40_Repository_Context_Engine
+        Suite_51_Repository_Retrieval_and_Memory
+        Suite_65_SE_03_Repository_Context_Snapshot
+    }
+
+    accept { repository_root; context_snapshot_ref; selected_files[]; selected_symbols[] }
+    emit PinnedTerminalRepositoryContext
+
+    procedure pin(repository_root, context_snapshot_ref) {
+        root = canonicalize_without_escape(repository_root)
+        snapshot = resolve_content_addressed_snapshot(context_snapshot_ref)
+
+        require root == snapshot.approved_root
+        require snapshot.worktree_state_recorded
+        require snapshot.dependencies_recorded
+        require snapshot.freshness_recorded
+
+        return PinnedTerminalRepositoryContext {
+            root
+            worktree_id = snapshot.worktree_id
+            branch_or_detached_ref = snapshot.branch_ref
+            head_hash = snapshot.head_hash
+            dirty_state_hash = snapshot.dirty_state_hash
+            selection_manifest_hash
+            dependency_snapshot_hash
+        }
+    }
+
+    deny { unresolved_repository_root; stale_unacknowledged_snapshot; context_root_mismatch }
+    evidence { repository_manifest; worktree_state; selection_manifest; context_hash }
+    tests { clean_tree; dirty_tree; detached_head; root_mismatch; freshness_boundary }
+}
+

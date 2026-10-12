@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "d5f62a271336e865aef72466c9ad6bde685980183621d85a2d6882dc3ac90f41",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Preview Designer",
+  "module_id": 38,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

@@ -1,0 +1,121 @@
+{
+  "schema": "JA21/PORTABLE_NODE_PLACEMENT/1",
+  "version": "9.8.6",
+  "fabric_id": "DF0",
+  "claim_boundary": "HOST_MEDIATED_PLACEMENT_ONLY; configuration and receipts do not constitute a DF fabric execution verdict.",
+  "transport": {
+    "mode": "local_process",
+    "network": "deny",
+    "portable_unit": "sealed semantic rows/events; never VM images"
+  },
+  "host_shell": {
+    "owner": "Windows WPF JA21 Optical Instrument presenter",
+    "responsibilities": [
+      "window/composition presentation",
+      "input routing",
+      "accessible chrome",
+      "renderer surface hosting"
+    ],
+    "mutable_root": "workspace/",
+    "rule": "No JA21-owned mutable state is intentionally written outside workspace/ by the portable launch path."
+  },
+  "nodes": {
+    "N_SMALL": {
+      "technical_suite_role": "Compact bounded C11 reference VM; deterministic witness execution, signed-image evaluation, constrained device/service experiments.",
+      "ja21_services": [
+        "boot.guard",
+        "security.policy",
+        "manifest.verify",
+        "heartbeat"
+      ],
+      "browser_parts": [
+        "portable preflight policy",
+        "package-integrity gate",
+        "capability/refusal checks",
+        "safe-mode/native fallback guard"
+      ],
+      "reason": "Small is the narrow, bounded control/reference tier."
+    },
+    "N_MEDIUM": {
+      "technical_suite_role": "Authoritative Columned-LCTL compiler/verifier, provenance, secure bundle and transactional persistence node.",
+      "ja21_services": [
+        "semantic.command",
+        "native.render",
+        "native.verify",
+        "document.inspect"
+      ],
+      "browser_parts": [
+        "JA21 command/policy semantics",
+        "DF_Medium native HTML/CSS inspection engine",
+        "semantic validation",
+        "native-render differential witness"
+      ],
+      "reason": "Medium is the semantic/compiler/verifier authority and existing native browser engine."
+    },
+    "N_LARGE": {
+      "technical_suite_role": "Device-oriented C11 VM with HAL adapters, richer service/device ABI and host-reference qualification.",
+      "ja21_services": [
+        "live.web",
+        "device.io",
+        "downloads",
+        "permissions",
+        "host.bridge"
+      ],
+      "browser_parts": [
+        "WebView2 host adapter boundary",
+        "network/device portal",
+        "portable downloads/uploads",
+        "clipboard/permission brokerage",
+        "OS composition bridge"
+      ],
+      "reason": "Large is the technical suite's device, HAL, I/O and service tier; external host resources terminate here."
+    },
+    "N_XLARGE": {
+      "technical_suite_role": "Large hosted-reference QVM/QUORUM system with deterministic trace/snapshot evidence and world-runtime scaffolding.",
+      "ja21_services": [
+        "workspace.state",
+        "session.snapshot",
+        "history.replay",
+        "long.running"
+      ],
+      "browser_parts": [
+        "tab/workspace graph",
+        "VEC1 electron state",
+        "session snapshots",
+        "history/replay journal",
+        "long-running AI/context jobs",
+        "crash/restore evidence",
+        "portable omni-bar placement state"
+      ],
+      "reason": "Xtra Large is the long-horizon state, snapshot, replay and orchestration tier."
+    }
+  },
+  "fabric": {
+    "services": [
+      "fabric.registry",
+      "fabric.route",
+      "fabric.replay",
+      "fabric.diff"
+    ],
+    "responsibilities": [
+      "register service-to-node ownership",
+      "route deterministic envelopes",
+      "record ownership movement",
+      "preserve replay order",
+      "compare witnesses where two nodes implement the same semantic function",
+      "require explicit control-plane verification for any fabric verdict"
+    ],
+    "program_shapes": [
+      "replica",
+      "pipeline",
+      "BSP",
+      "deterministic replay"
+    ],
+    "non_claims": [
+      "No cross-machine federation",
+      "No quantum execution",
+      "No claim that WPF/WebView2 runs inside a DF VM",
+      "No presenter-generated CROSS_NODE_DIFFERENTIAL_AGREEMENT verdict"
+    ]
+  }
+}

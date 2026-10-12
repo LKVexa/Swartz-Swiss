@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "100",
+  "title": "Orbital Transition Controller",
+  "source_file": "100_Orbital_Transition_Controller.md",
+  "source_sha256": "6cdde49b62e0e00470771e942edaafb4252962dc636b568a16a98404e849442f",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "N_XLARGE+DF0",
+  "integration_mechanism": "QAM integration plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

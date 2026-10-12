@@ -1,0 +1,71 @@
+{
+  "execution_scope": "deterministic local/offline reference semantics consuming module fixtures and emitting typed reference-domain outputs",
+  "input_type": "request/context",
+  "module": "Pencil Sharpener",
+  "module_id": 6,
+  "non_claims": [
+    "not production domain fidelity",
+    "not executable legacy-runtime equivalence",
+    "not physical distributed authority"
+  ],
+  "operators": [
+    {
+      "node": "N01",
+      "operator": "OBSERVE",
+      "stage": "REQUEST"
+    },
+    {
+      "node": "N02",
+      "operator": "RETRIEVE",
+      "stage": "CONTEXT"
+    },
+    {
+      "node": "N03",
+      "operator": "PARSE",
+      "stage": "INTERPRET"
+    },
+    {
+      "node": "N04",
+      "operator": "REASON",
+      "stage": "REASON"
+    },
+    {
+      "node": "N05",
+      "operator": "FILTER",
+      "stage": "FILTER"
+    },
+    {
+      "node": "N06",
+      "operator": "RANK",
+      "stage": "RANK"
+    },
+    {
+      "node": "N07",
+      "operator": "VALIDATE",
+      "stage": "VALIDATE"
+    },
+    {
+      "node": "N08",
+      "operator": "EXPLAIN",
+      "stage": "EXPLAIN"
+    },
+    {
+      "node": "N09",
+      "operator": "RECORD",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "output_type": "decision/explanation",
+  "plane": "intent_reasoning",
+  "policy": {
+    "capabilities": [
+      "evidence.write",
+      "repository.read"
+    ],
+    "default": "deny",
+    "network": "deny"
+  },
+  "runner": "qualification/open_gate_runtime.py",
+  "schema": "QUORUM-REFERENCE-DOMAIN-PROFILE/2.1",
+  "version": "2.1.0"
+}

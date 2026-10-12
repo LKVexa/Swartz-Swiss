@@ -1,0 +1,41 @@
+{
+  "schema": "GFM-JA21-integration-release/1",
+  "date": "2026-10-12",
+  "consoleVersion": "1.3.0",
+  "modelVersion": "2.1.0",
+  "nativeCompilationPassed": true,
+  "nativeHostChecksPassed": 5,
+  "nativeOriginCasesPassed": 12,
+  "nativeLiveViewPassed": true,
+  "webglError": 0,
+  "threePhysicalLayersVisible": true,
+  "actualStepControlPassed": true,
+  "actualExportDownloaded": {
+    "filename": "GFM-phase-pulse-experiment.json",
+    "bytes": 3047870,
+    "sha256": "e61499487241a1ea7b9e6fe75d457e714a6b0d7a5a8651121e9e60ff7367841a",
+    "schema": "GFM-cylindrical-export/2"
+  },
+  "nativeModelParity": {
+    "fields": 37,
+    "samples": 113664,
+    "relativeTolerance": 1e-10,
+    "maxScaledDifference": 5.473937965403187e-11
+  },
+  "offlineModelChecks": {
+    "passed": 139,
+    "failed": 0,
+    "deferredConnectionChecks": 4
+  },
+  "projectIntegrationChecksPassed": 2,
+  "originalConsoleFilesPreserved": 7489,
+  "referencePathAliases": 776,
+  "simulatorSourceSHA256": "93d1463b46a2bb6eaeb6c347f97c2a43101d811d0d6aa5d95d3a3b587f6a5b0a",
+  "renderer": "Standard WPF WebView2 in console mode; loaded control before navigation",
+  "appOrigin": "https://gfm.ja21.invalid/",
+  "localServerRequired": false,
+  "externalBrowserRequired": false,
+  "windowsPolicyChanged": false,
+  "scientificScopeChanged": false,
+  "historicalConsoleChecksDescribeBlankBaseline": true
+}

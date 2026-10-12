@@ -1,0 +1,35 @@
+ja source 0.3
+module suite47.chatbot.planning
+use Agent
+policy no_network
+
+agent ChatbotPlanning {
+    identity "chatbot_planning"
+    role "sophia-charlotte-landon-professor-podium-chatbot"
+    goal produce_bounded_dependency_valid_project_plan when confidence >= 0.93
+    memory session retention 1h
+    budget steps 50 tools 5
+    tool LANDONInventoryPlanningContext(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIABuildProjectPlan(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateProjectPlan(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainProjectPlan(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordProjectPlan(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONInventoryPlanningContext
+        authorize SOPHIABuildProjectPlan
+        authorize CHARLOTTEValidateProjectPlan
+        authorize ProfessorExplainProjectPlan
+        authorize PodiumRecordProjectPlan
+        continue when policy_allows
+        execute LANDONInventoryPlanningContext("selected_project_scope")
+        execute SOPHIABuildProjectPlan("project_inventory")
+        execute CHARLOTTEValidateProjectPlan("candidate_project_plan")
+        execute ProfessorExplainProjectPlan("validated_project_plan")
+        execute PodiumRecordProjectPlan("project_plan_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "ChatbotPlanning.mcrt"

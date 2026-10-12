@@ -1,0 +1,28 @@
+deepml motion 0.3
+module suite65.sandbox_engine.motion_animation_pipeline
+policy deterministic
+policy no_network
+
+skeleton SandboxMotionRig {
+  joint Root parent none bind transform(vec3(0,0,0), quat.identity)
+  joint Subject parent Root bind transform(vec3(0,0,0), quat.identity)
+  joint CameraRig parent Root bind transform(vec3(0,0,0), quat.identity)
+}
+pose SandboxMotionStart for SandboxMotionRig { Root.rotation = quat.identity Subject.rotation = quat.identity CameraRig.rotation = quat.identity }
+clip SandboxMotionClip duration 4s interpolation cubic {
+  channel Subject.position key 0s vec3(0,0,0) key 2s vec3(2,0,1) key 4s vec3(4,0,0)
+  channel Subject.rotation key 0s quat.identity key 2s quat.axis_angle(y, 45deg) key 4s quat.identity
+  channel CameraRig.position key 0s vec3(0,2,-6) key 4s vec3(4,2,-6)
+}
+motion_graph SandboxMotionEvidence {
+  pose SOPHIA = constant_pose(SandboxMotionRig)
+  pose CHARLOTTE = constant_pose(SandboxMotionRig)
+  pose LANDON = constant_pose(SandboxMotionRig)
+  pose Professor = constant_pose(SandboxMotionRig)
+  pose Podium = constant_pose(SandboxMotionRig)
+  blend Ensemble weights [0.2,0.2,0.2,0.2,0.2]
+}
+optimize SandboxMotionEvidence using [pose_constant_folding, curve_compression(0.001), dead_channel_removal, blend_normalization, retarget_cache, ik_scheduling, state_minimization]
+lower SandboxMotionEvidence to DEEPML_MOTION_R12
+package motion SandboxMotionRig as "sandbox_engine_motion_animation.msslb"
+certify motion SandboxMotionRig profile strict

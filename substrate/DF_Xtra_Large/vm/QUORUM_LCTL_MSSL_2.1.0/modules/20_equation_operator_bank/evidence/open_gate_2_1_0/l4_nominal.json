@@ -1,0 +1,119 @@
+{
+  "authority_sha256": "a2fdf940a9132c93149e09f3c96156feac8b4fce3c20aa1b1fad78772c62fa44",
+  "domain_output": {
+    "input_type": "model_input/state",
+    "legacy_signals": [
+      "Bank",
+      "banks",
+      "descriptors",
+      "candidates",
+      "identities",
+      "admission",
+      "identity",
+      "bank",
+      "CERTIFY",
+      "VALIDATE"
+    ],
+    "model_output": {
+      "checkpoint_sha256": "2b88a4e95987667dc30d85c304b422728068892af422a82de219ee65e78195e0",
+      "evaluation_score": 0.572549,
+      "vector": [
+        0.356863,
+        0.937255,
+        -0.388235,
+        0.788235,
+        -0.701961,
+        -0.882353,
+        0.301961,
+        0.74902
+      ]
+    },
+    "module": "Equation Operator Bank",
+    "output_type": "model_output/evaluation_receipt",
+    "payload_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+    "plane": "model_compute",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "63a51378fc915b4ee2b25fb1404ca353cc4c2a07d2bfcd544912f5c31bcb01e7",
+  "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+  "module": "Equation Operator Bank",
+  "module_id": 20,
+  "plane": "model_compute",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "b2834e96a956cdd7b8c8cc5a5cbd4ebc39656bf948907c4ef335af19c4fc3e77",
+  "stage_count": 8,
+  "stages": [
+    {
+      "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "node": "N01",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "6a6a8f472040509e41bdbe907a166775b99671adb3771d09589e03943330a071",
+      "stage": "INPUT"
+    },
+    {
+      "input_sha256": "6a6a8f472040509e41bdbe907a166775b99671adb3771d09589e03943330a071",
+      "node": "N02",
+      "operator": "VALIDATE",
+      "output_sha256": "726b0da8b356105d652bc35a499c05e94bb90dd6545f859eea38259da0c31583",
+      "stage": "VALIDATE",
+      "valid": true
+    },
+    {
+      "input_sha256": "726b0da8b356105d652bc35a499c05e94bb90dd6545f859eea38259da0c31583",
+      "node": "N03",
+      "normalized_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "operator": "NORMALIZE",
+      "output_sha256": "c3187b88a6d97a65ce2510ee6ca8a8cb2c64009b99741ffa25546c84d109919b",
+      "stage": "NORMALIZE"
+    },
+    {
+      "execution_token": "08daeb12a5a79a8531e280f7",
+      "input_sha256": "c3187b88a6d97a65ce2510ee6ca8a8cb2c64009b99741ffa25546c84d109919b",
+      "node": "N04",
+      "operator": "EXECUTE",
+      "output_sha256": "6da2c43ce8382eff23e9bc5ae70b65e888d25fe368fa24a5f58ac3fbd01aaf9e",
+      "stage": "COMPUTE"
+    },
+    {
+      "comparison": "SELF_CONSISTENT",
+      "input_sha256": "6da2c43ce8382eff23e9bc5ae70b65e888d25fe368fa24a5f58ac3fbd01aaf9e",
+      "node": "N05",
+      "operator": "COMPARE",
+      "output_sha256": "53ed52efc059a9ed2b59803885fcac79feec42e19a758b1270d12060e890672a",
+      "stage": "EVALUATE"
+    },
+    {
+      "checkpoint_sha256": "ccb4f5754bc3e4db97a7cb2a405d8467a169ebdd5b1eadae99c40eaab874d34c",
+      "input_sha256": "53ed52efc059a9ed2b59803885fcac79feec42e19a758b1270d12060e890672a",
+      "node": "N06",
+      "operator": "CHECKPOINT",
+      "output_sha256": "89ead4b67a8f49338798ca37f47f18ff2aa8f7b852c1352e37ccbc3a91857b21",
+      "stage": "CHECKPOINT"
+    },
+    {
+      "input_sha256": "89ead4b67a8f49338798ca37f47f18ff2aa8f7b852c1352e37ccbc3a91857b21",
+      "node": "N07",
+      "operator": "RECORD",
+      "output_sha256": "c057714338700e359b10e544aa59d0e5d9d5f922ae3f8ee823ecddff1c14923b",
+      "receipt_sha256": "d2273867980749cb7d77d5d19260a07a125a53bc0e9dfcb23e1608a7a186c387",
+      "stage": "RECORD"
+    },
+    {
+      "input_sha256": "c057714338700e359b10e544aa59d0e5d9d5f922ae3f8ee823ecddff1c14923b",
+      "node": "N08",
+      "operator": "RECORD",
+      "output_sha256": "de334d2904e1947b754f434fc2686afe84470b0115ddc194efd8ec518935120f",
+      "receipt_sha256": "46aaa91dad346780ff41d9104fa4b7f537b04209773af8d24dcae4a4daa2a764",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

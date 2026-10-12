@@ -1,0 +1,675 @@
+{
+  "not_run": 59,
+  "pass": 21,
+  "results": [
+    {
+      "detail": {
+        "errors": [],
+        "identities_preserved": true,
+        "non_reference_entity_positions_preserved": true
+      },
+      "id": "GW-01",
+      "name": "Fold Circuit",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "changed": true,
+        "errors": []
+      },
+      "id": "GW-02",
+      "name": "Remote Ecology",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-03",
+      "name": "Settlement Shock",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "count": 1,
+        "well": "W0001"
+      },
+      "id": "GW-04",
+      "name": "Narrative Well",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "errors": [],
+        "max_shell": 3,
+        "spawned": 250,
+        "views": 250
+      },
+      "id": "GW-05",
+      "name": "Materialization Storm Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "errors": [],
+        "pos": [
+          500000,
+          -200000,
+          50
+        ]
+      },
+      "id": "GW-06",
+      "name": "Teleport Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "count": 4,
+        "errors": []
+      },
+      "id": "GW-07",
+      "name": "Multi-Well Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "digest_equal": true,
+        "ledger_equal": true
+      },
+      "id": "GW-08",
+      "name": "Crash/Recovery Save",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-09",
+      "name": "Save Migration",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-10",
+      "name": "Long Soak",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "same_entity": true,
+        "view_changed": true
+      },
+      "id": "GW-11",
+      "name": "Portal/Reference Continuity",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "sheriff_knows": true
+      },
+      "id": "GW-12",
+      "name": "Law Knowledge Persistence",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-13",
+      "name": "Weather Front Crossing",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-14",
+      "name": "Logistics Chain",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "entity": "8",
+        "exists": true,
+        "x": 300
+      },
+      "id": "GW-15",
+      "name": "Persistent Companion",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "bounded": true,
+        "monotonic": true
+      },
+      "id": "GW-16",
+      "name": "Fold-Horizon Safety",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "entity_count": 7,
+        "errors": []
+      },
+      "id": "GW-17",
+      "name": "Oscillation Torture Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-18",
+      "name": "Event Barrier",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-19",
+      "name": "Content Pack Degradation",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-20",
+      "name": "Full World Day",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "digest": "7b5da629ec47e942c5794696a281eb3355b10e622c94ddae3e2ef5939a25cb00",
+        "same": true
+      },
+      "id": "GW-21",
+      "name": "World Package Rebuild",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "moved": true,
+        "route_time_canonical": 50
+      },
+      "id": "GW-22",
+      "name": "Nested Moving Frame Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "distance": 4600
+      },
+      "id": "GW-23",
+      "name": "Pursuit Across Shells",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-24",
+      "name": "Rail/Route Continuity",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-25",
+      "name": "Combat at Fold Boundary",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-26",
+      "name": "Remote Combat Resolution",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-27",
+      "name": "Persistent Merchant Day",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-28",
+      "name": "Household and Occupation",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-29",
+      "name": "Dynamic Blockage",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "same_region": true
+      },
+      "id": "GW-30",
+      "name": "Procedural Region Regeneration",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-31",
+      "name": "Generated/Authored Override",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-32",
+      "name": "Materialization Dependency Failure",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-33",
+      "name": "Moving Weather + Fire",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-34",
+      "name": "Law Pursuit and Jurisdiction",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-35",
+      "name": "Event Reservation Conflict",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-36",
+      "name": "Multi-Well Transport Crisis",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-37",
+      "name": "Checkpoint Under Load",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-38",
+      "name": "Runtime ABI Upgrade",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "ledger": true,
+        "state": true
+      },
+      "id": "GW-39",
+      "name": "Headless Replay",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-40",
+      "name": "Operational World Soak",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "entities_unchanged": true,
+        "owner": "P4"
+      },
+      "id": "GW-41",
+      "name": "Single-vs-Multi Layout Reference",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-42",
+      "name": "Repartition While Traveling",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-43",
+      "name": "Worker Loss During Fold",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-44",
+      "name": "Worker Loss During Materialization",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-45",
+      "name": "Cross-Partition Inventory Transfer",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-46",
+      "name": "Cross-Partition Combat",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-47",
+      "name": "Concurrent Route Mutation",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-48",
+      "name": "Settlement Transaction Storm",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-49",
+      "name": "Ecology Boundary Migration",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-50",
+      "name": "Authority-Well Reassignment",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-51",
+      "name": "Hot Fold-Policy Patch",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-52",
+      "name": "Presentation Hot Reload",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-53",
+      "name": "Canonical Content Patch",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-54",
+      "name": "Partition Checkpoint Barrier",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-55",
+      "name": "Replica Staleness",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-56",
+      "name": "Duplicate Transaction Delivery",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-57",
+      "name": "Causal Ordering Race",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-58",
+      "name": "Resource Saturation Across Workers",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-59",
+      "name": "Security/Capability Abuse",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-60",
+      "name": "Sovereign World Fabric Soak",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "new_region": "4",
+        "unaffected_equal": true
+      },
+      "id": "GW-61",
+      "name": "Frontier Admission",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-62",
+      "name": "Frontier Rejection",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-63",
+      "name": "Expansion Horizon",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-64",
+      "name": "Deep-Time Settlement Growth",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-65",
+      "name": "Settlement Decline and Reclamation",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-66",
+      "name": "Generational Household",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-67",
+      "name": "Institutional Succession",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-68",
+      "name": "Information Delay",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-69",
+      "name": "False Rumor",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-70",
+      "name": "Historical Narrative Hook",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-71",
+      "name": "Ecology Succession",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-72",
+      "name": "Infrastructure Era Change",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-73",
+      "name": "Archive Region",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "entities_equal": true,
+        "errors": []
+      },
+      "id": "GW-74",
+      "name": "Rehydrate Region",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-75",
+      "name": "Archive During Active Obligation",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-76",
+      "name": "Old Save into Expanded World",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-77",
+      "name": "Long-Horizon vs Fine-Step",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-78",
+      "name": "Autonomous Event Cascade",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "reason": "Scenario requires behavior or production fidelity not executed by the local hosted reference qualification."
+      },
+      "id": "GW-79",
+      "name": "Player Reentry After Era",
+      "status": "NOT_RUN"
+    },
+    {
+      "detail": {
+        "errors": [],
+        "regions": 6,
+        "role": "8",
+        "tick": 1000
+      },
+      "id": "GW-80",
+      "name": "Autonomous Continuum Reference Soak",
+      "status": "PASS"
+    }
+  ],
+  "scenario_count": 80
+}

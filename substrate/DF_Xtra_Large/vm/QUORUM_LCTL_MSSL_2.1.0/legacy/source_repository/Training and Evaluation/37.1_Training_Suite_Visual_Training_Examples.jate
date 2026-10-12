@@ -1,0 +1,30 @@
+ja source 0.3
+module suite37.training_suite.visual_training_examples
+use Training
+policy no_network
+
+experiment TrainingSuiteVisualTrainingExamples {
+    model ref "models/sophia_charlotte_landon_professor_podium/visual_training_examples"
+    dataset ref "datasets/training_suite/visual_training_examples" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 24 accumulate 2
+    precision mixed
+    seed 3701
+    checkpoint every 12 steps
+    evaluate {
+        metric example_schema_validity
+        metric annotation_evidence_coverage
+        metric split_leakage_safety
+        metric provenance_completeness
+        metric loss
+        require example_schema_validity >= 0.99
+        require annotation_evidence_coverage >= 0.99
+        require split_leakage_safety >= 1.00
+        require provenance_completeness >= 0.99
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "TrainingSuiteVisualTrainingExamples.lineage.mcrt"

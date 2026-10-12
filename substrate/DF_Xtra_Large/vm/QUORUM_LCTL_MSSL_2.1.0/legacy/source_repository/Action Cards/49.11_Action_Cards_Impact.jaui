@@ -1,0 +1,47 @@
+ja source 0.3
+module suite49.action_cards.impact
+use Interface
+policy no_network
+
+interface ActionCardImpact {
+    state selected_action: Text? = null
+    state validating_impact: Flag = false
+    derived can_select_action = not validating_impact
+    derived can_validate_impact = selected_action != null and not validating_impact
+    component SOPHIA_ImpactAnalysis {
+        label "Model full action impact and blast radius"
+        enabled bind can_validate_impact
+        accessibility role button name "Model full impact for selected action"
+        action model_action_impact requires admin.action:approved
+    }
+    component CHARLOTTE_ImpactValidation {
+        label "Validate direct, indirect, delayed, and irreversible impact"
+        enabled bind can_validate_impact
+        accessibility role button name "Validate full impact for selected action"
+        action validate_action_impact requires admin.action:approved
+    }
+    component LANDON_ImpactPanel {
+        label "Bind validated impact analysis"
+        enabled bind can_validate_impact
+        accessibility role button name "Bind full impact analysis to selected action card"
+        action bind_action_impact requires admin.action:approved
+    }
+    component Professor_ImpactExplanation {
+        label "Explain impact, affected identities, and mitigations"
+        enabled bind can_select_action
+        accessibility role button name "Explain full selected action impact"
+        action explain_action_impact requires admin.action:approved
+    }
+    component Podium_ImpactReceipt {
+        label "View impact provenance and validation receipt"
+        enabled bind can_validate_impact
+        accessibility role button name "View full selected action impact evidence"
+        action show_action_impact_evidence requires admin.action:approved
+    }
+    component ImpactViewport {
+        embed portal.scene "action_card_impact"
+        motion bind timeline.full_impact_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface ActionCardImpact

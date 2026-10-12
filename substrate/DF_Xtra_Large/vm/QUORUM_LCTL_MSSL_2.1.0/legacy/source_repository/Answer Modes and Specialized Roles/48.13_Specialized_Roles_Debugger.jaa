@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.specialized_roles.debugger
+use Agent
+policy no_network
+
+agent Debugger {
+    identity "debugger"
+    role "sophia-charlotte-landon-professor-podium-specialist"
+    goal identify_reproducible_root_cause_and_repairs when confidence >= 0.96
+    memory session retention 1h
+    budget steps 70 tools 5
+    tool LANDONCollectFailureEvidence(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIARankRootCauseHypotheses(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEReproduceAndValidateCause(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainRootCauseAndRepairs(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordDebuggerEvidence(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectFailureEvidence
+        authorize SOPHIARankRootCauseHypotheses
+        authorize CHARLOTTEReproduceAndValidateCause
+        authorize ProfessorExplainRootCauseAndRepairs
+        authorize PodiumRecordDebuggerEvidence
+        continue when policy_allows
+        execute LANDONCollectFailureEvidence("selected_failure_scope")
+        execute SOPHIARankRootCauseHypotheses("canonical_failure_evidence")
+        execute CHARLOTTEReproduceAndValidateCause("ranked_root_cause_hypotheses")
+        execute ProfessorExplainRootCauseAndRepairs("validated_root_cause")
+        execute PodiumRecordDebuggerEvidence("debugger_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "Debugger.mcrt"

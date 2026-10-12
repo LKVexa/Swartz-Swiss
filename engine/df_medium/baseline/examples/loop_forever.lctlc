@@ -1,0 +1,11 @@
+LCTLC/1.1
+@unit id=df.example.loop version=4.7.0 profile=brvm-native entry=W00001 target=local-reference backend=brir network=deny replay=deterministic image_version=9 requested_caps=CONTROL|ARITH max_steps=4096 termination=bounded
+@defaults mode=WRAP width=WIDE
+@frame id=F0000 parent=ROOT module=df.example.loop
+ID│LANE│OP│OUT│CTRL│IN│ARG│META
+W00001│w│MOVI│R0│C0│_│u64:1│width=WIDE
+W00002│w│MOVI│R1│C0│_│u64:2│width=WIDE
+W00003│w│CMP│R2│C0│R0›R1│_│width=WIDE
+W00004│w│JNZ│_│C0│_│label:W00003│_
+W00005│w│HALT│_│C0│_│_│_
+@end

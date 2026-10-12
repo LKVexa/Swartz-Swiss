@@ -1,0 +1,39 @@
+profile ja.operations
+source_level 0.3
+
+subsuite Terminal.T_09 HermitTerminalExecutionCell {
+    identity { suite = "66"; id = "T-09"; deterministic = true; autorun = false }
+
+    principal HERMIT {
+        may = execute_exact_authorized_invocation
+        must_not = authorize + widen_scope + publish + reuse_mutable_cell
+    }
+
+    integrate {
+        Suite_56_Job_Queue_Workers_and_Sandboxes
+        Suite_63_Sandbox_and_Offline_Runtime
+        Suite_65_SE_13_HERMIT_Execution_Cell
+    }
+
+    procedure create_attested_cell(repository, paths, environment, capabilities, network, resources) {
+        cell = disposable_cell()
+        cell.mount(repository, paths)
+        cell.apply(environment, capabilities, network, resources)
+        cell.attestation = attest_clean_and_confined(cell)
+        require cell.attestation == PASS
+        return cell
+    }
+
+    procedure execute_exact(invocation) {
+        require PodiumTerminalAuthorization.covers(invocation.hash)
+        require active_cell.attestation == PASS
+        return active_cell.execute(invocation)
+    }
+
+    procedure destroy_cell() { terminate_process_tree; seal_evidence; destroy_mounts; invalidate_cell_id }
+
+    deny { self_authorization; host_escape; capability_change; direct_publication; mutable_cell_recovery }
+    evidence { cell_id; attestation; mounts; policies; lifecycle_events; destruction_record }
+    tests { clean_cell; escape_denial; exact_invocation; destruction; recovery_new_cell }
+}
+

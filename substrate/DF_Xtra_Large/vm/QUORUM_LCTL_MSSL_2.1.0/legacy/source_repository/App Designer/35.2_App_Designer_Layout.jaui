@@ -1,0 +1,47 @@
+ja source 0.3
+module suite35.app_designer.layout
+use Interface
+policy no_network
+
+interface AppDesignerLayout {
+    state selected_layout: Text? = null
+    state editing_layout: Flag = false
+    derived can_select_layout = not editing_layout
+    derived can_edit_layout = selected_layout != null and not editing_layout
+    component SOPHIA_LayoutModel {
+        label "Interpret layout intent"
+        enabled bind can_edit_layout
+        accessibility role button name "Interpret selected layout intent"
+        action interpret_layout requires admin.action:approved
+    }
+    component CHARLOTTE_LayoutGate {
+        label "Validate layout constraints"
+        enabled bind can_edit_layout
+        accessibility role button name "Validate selected layout constraints"
+        action validate_layout requires admin.action:approved
+    }
+    component LANDON_LayoutApply {
+        label "Apply validated layout"
+        enabled bind can_edit_layout
+        accessibility role button name "Apply validated responsive layout"
+        action apply_layout requires admin.action:approved
+    }
+    component Professor_LayoutGuide {
+        label "Explain layout behavior"
+        enabled bind can_select_layout
+        accessibility role button name "Explain responsive layout behavior"
+        action explain_layout requires admin.action:approved
+    }
+    component Podium_LayoutEvidence {
+        label "View layout evidence"
+        enabled bind can_edit_layout
+        accessibility role button name "View layout validation evidence"
+        action show_layout_evidence requires admin.action:approved
+    }
+    component LayoutViewport {
+        embed portal.scene "app_designer_layout"
+        motion bind timeline.layout_preview
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface AppDesignerLayout

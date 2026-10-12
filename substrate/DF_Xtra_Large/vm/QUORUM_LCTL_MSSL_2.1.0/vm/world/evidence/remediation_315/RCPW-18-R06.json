@@ -1,0 +1,44 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "b6c86146f994de358d2e05541e678acef96916d7a9cc668e370bf6771aea95ba",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (DIRECT_EXECUTABLE_PROOF) plus Stage 18 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "DIRECT_EXECUTABLE_PROOF": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-04",
+    "GW-07",
+    "GW-35",
+    "GW-36",
+    "GW-50",
+    "GW-60",
+    "GW-78"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "The model can extend to multiplayer semantics without requiring multiplayer implementation.",
+  "requirement_id": "RCPW-18-R06",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 18,
+  "stage_title": "Multiple Reference Points / Authority Wells",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "DIRECT_EXECUTABLE_PROOF"
+  ],
+  "workflow_file": "18_MULTIPLE_REFERENCE_POINTS_AUTHORITY_WELLS/277_RCPW_18_R06_THE_MODEL_CAN_EXTEND_TO_MULTIPLAYER_SEMANTICS_WITHOUT_REQUIRING_MULTIPLAYER_IMPLEMENT.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

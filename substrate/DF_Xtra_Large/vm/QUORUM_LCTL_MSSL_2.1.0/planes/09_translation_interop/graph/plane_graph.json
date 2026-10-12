@@ -1,0 +1,21 @@
+{
+  "schema": "QUORUM-PLANE-GRAPH/2.0",
+  "plane_id": 9,
+  "plane": "translation_interop",
+  "modules": [
+    {
+      "module_id": 30,
+      "name": "JA Adapter"
+    },
+    {
+      "module_id": 31,
+      "name": "Vexxa"
+    },
+    {
+      "module_id": 42,
+      "name": "Transition Plane"
+    }
+  ],
+  "integration": "independent module nodes with scenario-mediated orchestration",
+  "cycles": []
+}

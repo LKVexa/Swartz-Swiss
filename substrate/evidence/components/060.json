@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "060",
+  "title": "Fail-Closed Gate Controller",
+  "source_file": "060_Fail_Closed_Gate_Controller.md",
+  "source_sha256": "d2d4097818bfd5330034aa884c15cf583a1ce3f06857c1a11f7b03fbc70d3908",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "VEC_CONTROL+DF0",
+  "integration_mechanism": "Integrity/evidence plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

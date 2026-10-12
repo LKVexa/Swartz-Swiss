@@ -1,0 +1,18 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.remediation.history_replay:7.0.0-remediated-26",
+λ≡"quorum.rcpw.remediation.history_replay",
+ℛ≡{
+  "0001":"learn(\"module\",literal(\"quorum.rcpw.remediation.history_replay\"))",
+  "0002":"learn(\"archive_schema\",literal(\"RCPW-HISTORY-ARCHIVE/2\"))",
+  "0003":"learn(\"replay_rule\",literal(\"checkpoint plus durable causal tail reconstructs canonical state deterministically\"))",
+  "0004":"learn(\"compaction_rule\",literal(\"compressed history preserves semantic digest and corruption detection\"))",
+  "0005":"learn(\"provenance_rule\",literal(\"worker/partition diagnostics do not alter canonical semantic event digest\"))"
+},
+π≡[],δ≡5,τ≡0,
+μ≡{"learn.module":"quorum.rcpw.remediation.history_replay","learn.archive_schema":"RCPW-HISTORY-ARCHIVE/2","learn.replay_rule":"checkpoint plus durable causal tail reconstructs canonical state deterministically","learn.compaction_rule":"compressed history preserves semantic digest and corruption detection","learn.provenance_rule":"worker/partition diagnostics do not alter canonical semantic event digest"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"learn.module":"quorum.rcpw.remediation.history_replay","learn.archive_schema":"RCPW-HISTORY-ARCHIVE/2","learn.replay_rule":"checkpoint plus durable causal tail reconstructs canonical state deterministically","learn.compaction_rule":"compressed history preserves semantic digest and corruption detection","learn.provenance_rule":"worker/partition diagnostics do not alter canonical semantic event digest"}},
+ν≡{}
+,κ≡"sha256:b6a59d399328f0ce69e2df1bb0741af50fc058c636be06edea47d745c98ada38"
+}⇒⊤

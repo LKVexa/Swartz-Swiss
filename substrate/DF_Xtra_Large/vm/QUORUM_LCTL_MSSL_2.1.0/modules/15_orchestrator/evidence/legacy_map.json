@@ -1,0 +1,39 @@
+{
+  "suite_id": 15,
+  "suite_name": "Orchestrator",
+  "plane": "orchestration",
+  "legacy_sha256": "906f0763c10c0ea0ef52f6a7a2a07a1ff35533a3a115c21df35fc4fe33575b58",
+  "legacy_root": "legacy/source_repository/Orchestrator",
+  "files": [
+    {
+      "path": "15.1_Orchestrator_Suite_Fan_Out.jaa",
+      "sha256": "a2547a7c12c0ee76d39a8367dffe48f67053249f8daa91ec5dc204f40a960bef",
+      "bytes": 1462
+    },
+    {
+      "path": "15.2_Orchestrator_Deterministic_Fan_In.jaa",
+      "sha256": "01baa68114962716f6ab1b0055524114d6809b9d320dee8357180271f7008aed",
+      "bytes": 1495
+    },
+    {
+      "path": "15.3_Orchestrator_Load_Order.jaa",
+      "sha256": "c5db6df9c908d8568b8793fbac455604596651a1a71513930bc2183863160647",
+      "bytes": 1483
+    },
+    {
+      "path": "15.4_Orchestrator_Conflict_Resolution.jaa",
+      "sha256": "d5b5251b5c554576d6629f5b4b613abca00f6a9f951d62d4cbc162ab43b10768",
+      "bytes": 1559
+    },
+    {
+      "path": "15.5_Orchestrator_Synthesis.jaa",
+      "sha256": "55c508c33dfc058c1991a6ac191f5f1d800c3629948e24bd341ce97693c02104",
+      "bytes": 1523
+    },
+    {
+      "path": "README.md",
+      "sha256": "f3837458013c6e00a5986633080f1569f2c98cc6fc4d8d14f3c292014f3bf7f0",
+      "bytes": 8592
+    }
+  ]
+}

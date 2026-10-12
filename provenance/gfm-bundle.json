@@ -1,0 +1,31 @@
+{
+  "schema": "GFM-JA21-app-bundle/1",
+  "sourceRoot": "D:\\Codex\\GFM-Cylindrical-Pulse-Simulator",
+  "sourceManifestSHA256": "e7d74aa88fd107da3874ba0db94bdbaddc7623d6ced853d374cf243d5b54dba2",
+  "sourceFilesVerified": 127,
+  "engineSHA256": "93d1463b46a2bb6eaeb6c347f97c2a43101d811d0d6aa5d95d3a3b587f6a5b0a",
+  "currentModelFilesBundled": true,
+  "projectReferences": [
+    {
+      "source": "D:\\Codex\\JA21_GFM_Console\\READ ME - GFM Integration.txt",
+      "installed": "project-references/JA21-earlier-integration.txt",
+      "sha256": "e9f2205c28ed14acadec786cf6f727dca464ba6308484a673da31d5655541b01"
+    },
+    {
+      "source": "D:\\Codex\\2026-10-11\\pl\\GFM_Phase_Texture_Simulator\\README-Phase.txt",
+      "installed": "project-references/phase-texture.txt",
+      "sha256": "2447a9ebb163c3b77990d175cf21931ba13059d66cb178643b729508323f6e12"
+    },
+    {
+      "source": "D:\\Codex\\2026-10-11\\pl\\GFM_Research_Simulator\\README.txt",
+      "installed": "project-references/research-observatory.txt",
+      "sha256": "0285e11920948f4ef1e36879e81bb016b510d3f4f966780b5ee17fb3cc5eb006"
+    },
+    {
+      "source": "D:\\Codex\\GFM-Phase-Coupling-Study\\coupling-study.json",
+      "installed": "project-references/coupling-study.json",
+      "sha256": "c3ce74957e310ee6982b68a7463fe4d6c6f71fdd692c051189dfd7bb4b7cd682"
+    }
+  ],
+  "historicalModelsEvolved": false
+}

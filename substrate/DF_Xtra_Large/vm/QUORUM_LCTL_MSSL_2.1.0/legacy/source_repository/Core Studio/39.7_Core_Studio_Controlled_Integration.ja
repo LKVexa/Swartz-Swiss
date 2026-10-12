@@ -1,0 +1,14 @@
+ja source 0.3
+module suite39.core_studio.controlled_integration
+use Core
+policy no_network
+
+record ControlledIntegrationPlan { id: Count, scope: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_controlled_integration_plan(item: ControlledIntegrationPlan) -> Result<ControlledIntegrationPlan, Text> effects { pure } {
+    let normalized: Text = item.scope
+    return Ok(ControlledIntegrationPlan { id: item.id, scope: normalized, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: ControlledIntegrationPlan = ControlledIntegrationPlan { id: 3907, scope: "capability_gated_integration", sophia: "interpret_integration_contract", charlotte: "validate_boundaries_and_policy", landon: "stage_approved_integration", professor: "explain_integration_effects", podium: "publish_integration_receipt" }
+let result = prepare_controlled_integration_plan(sample)
+assert result.is_ok == true
+emit json result

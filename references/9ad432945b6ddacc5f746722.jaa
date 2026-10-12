@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.specialized_roles.test_engineer
+use Agent
+policy no_network
+
+agent TestEngineer {
+    identity "test_engineer"
+    role "sophia-charlotte-landon-professor-podium-specialist"
+    goal design_and_run_bounded_evidence_producing_tests when confidence >= 0.96
+    memory session retention 1h
+    budget steps 75 tools 5
+    tool SOPHIADesignTestStrategy(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateTestPlan(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONExecuteApprovedTests(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainTestResults(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordTestEvidence(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIADesignTestStrategy
+        authorize CHARLOTTEValidateTestPlan
+        authorize LANDONExecuteApprovedTests
+        authorize ProfessorExplainTestResults
+        authorize PodiumRecordTestEvidence
+        continue when policy_allows
+        execute SOPHIADesignTestStrategy("selected_test_scope")
+        execute CHARLOTTEValidateTestPlan("candidate_test_plan")
+        execute LANDONExecuteApprovedTests("validated_test_plan")
+        execute ProfessorExplainTestResults("canonical_test_results")
+        execute PodiumRecordTestEvidence("test_engineering_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "TestEngineer.mcrt"

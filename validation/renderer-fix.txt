@@ -1,0 +1,21 @@
+JA21/GFM native renderer integration, 2026-10-12
+
+The first embedded launch reached the correct application origin but the
+composition control failed to initialize: "Catastrophic failure / Window
+creation request failed." The actual console reported that failure.
+
+The working integration uses a standard WPF WebView2 control in console
+mode and defers navigation until the newly attached control is Loaded.
+The original composition control remains in the full browser mode.
+The same local-folder mapping, origin checks, resource policy, simulator
+source and mathematical coefficients are retained. No Windows policy or
+WebView2 sandbox settings were changed.
+
+After this compatibility change, the real native console's Step button
+advanced the computed model from 2 ns to 2.04 ns. Its three physical layers,
+WebGL context, energy fields, actual JSON download and captured pixels were
+verified. The native browser worker's 37 field arrays (113,664 values) agree
+with the original Node calculation at the recorded 1e-10 relative tolerance.
+
+Changing both the control type and navigation timing establishes the tested
+working configuration; it does not isolate either change as the sole cause.

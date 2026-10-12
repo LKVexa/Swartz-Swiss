@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "8a4cb04fb857de9787df81d4a2fe6929403df93c7d6b8fadfb79f1c1ded3ef39",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Training Desktop and Android Workers",
+  "module_id": 64,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

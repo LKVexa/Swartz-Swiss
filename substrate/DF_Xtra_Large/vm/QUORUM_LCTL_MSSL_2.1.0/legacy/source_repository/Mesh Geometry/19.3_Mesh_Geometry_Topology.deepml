@@ -1,0 +1,33 @@
+deepml specialized 0.3
+module suite19.mesh_geometry.topology
+policy deterministic
+policy no_network
+
+domain graphics {
+  unit Meter = base("length")
+  unit MeshIndex = base("mesh_index")
+  schema TopologyEvidence { asset: Hash sophia: Hash charlotte: Hash landon: Hash professor: Hash podium: Hash timestamp: Time provenance: Hash }
+  tensor topology_vertices: f64<Meter>[4096,3]
+  tensor face_indices: f64<MeshIndex>[8192,3]
+  tensor half_edges: f64<MeshIndex>[16384,4]
+  tensor component_labels: f64<MeshIndex>[4096,1]
+  operator sophia_infer_topology(x) -> Tensor pure deterministic
+  operator charlotte_validate_topology(x) -> Tensor pure deterministic
+  operator landon_stage_topology(x) -> Tensor pure deterministic
+  operator professor_explain_topology(x) -> Tensor pure deterministic
+  operator podium_certify_topology(x) -> Tensor pure deterministic
+  calibration TopologyCalibration { method: bounded_least_squares tolerance: 1e-6 }
+  constraint ValidIndexRange { min: 0 max: 100000000 }
+  validate face_indices with [sophia_infer_topology, charlotte_validate_topology, landon_stage_topology, professor_explain_topology, podium_certify_topology, TopologyCalibration, ValidIndexRange]
+  validate half_edges with [charlotte_validate_topology, ValidIndexRange]
+  validate component_labels with [charlotte_validate_topology, ValidIndexRange]
+  graph TopologyGraph {
+    inferred = sophia_infer_topology(face_indices)
+    validated = charlotte_validate_topology(inferred)
+    staged = landon_stage_topology(validated)
+    explained = professor_explain_topology(staged)
+    receipt = podium_certify_topology(explained)
+  }
+  optimize TopologyGraph using [unit_propagation, dimensional_simplification, op_specialization, sparse_planning, calibration_folding, target_lowering]
+  lower TopologyGraph to DEEPML_SPECIALIZED_R12
+}

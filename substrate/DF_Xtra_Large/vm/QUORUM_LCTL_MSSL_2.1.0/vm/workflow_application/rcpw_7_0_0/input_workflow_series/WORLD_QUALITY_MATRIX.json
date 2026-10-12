@@ -1,0 +1,261 @@
+{
+  "package": "QUORUM_RC_PW_PROMPT_WORKFLOW_SERIES",
+  "version": "7.0.0",
+  "world_quality_profiles": {
+    "WQ0": "Structural",
+    "WQ1": "Local Continuity",
+    "WQ2": "Regional Persistence",
+    "WQ3": "Full-World Fold Continuity",
+    "WQ4": "Production World"
+  },
+  "stages": [
+    {
+      "stage": 1,
+      "title": "Canonical World Authority",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 2,
+      "title": "Reference Frame Authority",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 3,
+      "title": "Fold Geometry Authority",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 4,
+      "title": "Simulation LOD Authority",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 5,
+      "title": "Entity Persistence Authority",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 6,
+      "title": "Causal Ledger Authority",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 7,
+      "title": "Ecology Authority",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 8,
+      "title": "Civilization / Economy Authority",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 9,
+      "title": "Narrative Gravity Authority",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 10,
+      "title": "Materialization Authority",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 11,
+      "title": "Visibility / Rendering Authority",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 12,
+      "title": "Save / Replay Authority",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 13,
+      "title": "Reference-Centric World Shells",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 14,
+      "title": "No-Unload Representation Transitions",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 15,
+      "title": "High-Speed Traversal Fold / Unfold",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 16,
+      "title": "Penteract World Coordinate Model",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 17,
+      "title": "QUORUM Fold Operator",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 18,
+      "title": "Multiple Reference Points / Authority Wells",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 19,
+      "title": "World-State Ledger",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 20,
+      "title": "Core Architecture + System Invariants",
+      "status_by_wq": {
+        "WQ0": "NOT_STARTED",
+        "WQ1": "NOT_STARTED",
+        "WQ2": "NOT_STARTED",
+        "WQ3": "NOT_STARTED",
+        "WQ4": "NOT_STARTED"
+      }
+    }
+  ],
+  "golden_world_scenarios": 80,
+  "WQ4_additional_5_0_requirements": [
+    "reproducible world package",
+    "runtime ABI compatibility",
+    "content-scale benchmark",
+    "headless replay",
+    "long-soak/chaos",
+    "migration/rollback proof"
+  ],
+  "WQ4_additional_6_0_requirements": [
+    "multi-worker semantic equivalence",
+    "partition/repartition recovery",
+    "cross-partition transaction correctness",
+    "coherent global checkpoint",
+    "hot patch and rollback",
+    "fabric capacity profile",
+    "worker-loss chaos qualification"
+  ],
+  "WQ4_additional_7_0_requirements": [
+    "deterministic world expansion",
+    "knowledge-locality correctness",
+    "generational succession",
+    "settlement/institution evolution",
+    "climate/ecological succession",
+    "archive/rehydration proof",
+    "long-horizon drift bounds",
+    "autonomous multi-worker conformance"
+  ]
+}

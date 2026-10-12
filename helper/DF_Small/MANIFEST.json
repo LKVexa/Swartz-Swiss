@@ -1,0 +1,769 @@
+{
+  "assembled_at_utc": "2026-08-17T01:30:36.250095Z",
+  "capability_ledger_distribution": {
+    "BLOCKED": 3,
+    "BLOCKED_CAPABILITY_ABSENT": 1,
+    "BLOCKED_EXTERNAL_AUTHORITY": 1,
+    "OPERATIONAL": 16,
+    "VERIFIED": 1
+  },
+  "core_version": "1.6.0-rc1",
+  "df_release": "DF-PA21.2-1.0.0",
+  "embedded_payload": {
+    "bytes": 109905,
+    "files": 20,
+    "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/",
+    "source_zip": "Desktop/VMs/Small.zip",
+    "tree_sha256": "1cf22c38121bcd3b6d56944426ca137129a0f7bfeac5803d38a1bd2b087adc3a",
+    "zip_sha256": "3fd95ec274d475d759d60832b413fbff9e3a8db5003da7e34a3c37d5b3b79fab"
+  },
+  "entry_points": {
+    "BUILD": "./BUILD (BUILD.cmd)",
+    "RUN": "./RUN <program> (RUN.cmd)",
+    "VERIFY": "./VERIFY [--full] (VERIFY.cmd)"
+  },
+  "file_count": 140,
+  "files": [
+    {
+      "bytes": 332,
+      "path": "BUILD",
+      "sha256": "8233af7223d52bd8299649df17f15b0863ad8211cc1363c2d4ac9b173f9d8c53"
+    },
+    {
+      "bytes": 256,
+      "path": "BUILD.cmd",
+      "sha256": "1450d128318b188ef7a3c9fb7b951c20bd058a945b222717d01b41736164208f"
+    },
+    {
+      "bytes": 367,
+      "path": "LICENSE",
+      "sha256": "b85411db15d3305c009498fa47817c0e37cbc7823fd608c03f20d832cb5a7531"
+    },
+    {
+      "bytes": 11561,
+      "path": "README_START_HERE.md",
+      "sha256": "ae79b02fb455957a42035b31422f33851d429ef710fc038b8995e1bd6e798471"
+    },
+    {
+      "bytes": 487,
+      "path": "REQUIREMENTS.txt",
+      "sha256": "f98b28953e1d2b982f7999e331ef2d161926bfaab87bb6919a8e2e316c0b239e"
+    },
+    {
+      "bytes": 347,
+      "path": "RUN",
+      "sha256": "c8c61782fe1783992cbe7d8bdbe2c3c4dc725ef777b5ba3e3bf4ea819ddc5103"
+    },
+    {
+      "bytes": 271,
+      "path": "RUN.cmd",
+      "sha256": "76b6b8ba3df59ea478a076f9c5b346b18ea6b1c7f0ff6293c1e80c797bc65676"
+    },
+    {
+      "bytes": 357,
+      "path": "VERIFY",
+      "sha256": "b6d96d494b00ffbd945bc0682919e5dd3827a0c8df7426b507036732fb0bb4c7"
+    },
+    {
+      "bytes": 281,
+      "path": "VERIFY.cmd",
+      "sha256": "8454353d13e33d80fde99e6df94422ace8f987e736fc645eed504430b711bf7a"
+    },
+    {
+      "bytes": 637,
+      "path": "adapter/dfabric/README.md",
+      "sha256": "86f97e09c5b4752d3c83382b77f4156c14a5b604692a7db4bf90be5485c3e34d"
+    },
+    {
+      "bytes": 4029,
+      "path": "adapter/dfabric/__init__.py",
+      "sha256": "052677a8bbab6a6f74214d6d0010dfba5b33e5010122224f3e33dd538c672934"
+    },
+    {
+      "bytes": 16184,
+      "path": "adapter/dfabric/cli.py",
+      "sha256": "db9f79a2aa96d9b290473d9d3b56e9a9fe40af7517a8e69aff4ec284eed4b235"
+    },
+    {
+      "bytes": 23193,
+      "path": "adapter/dfabric/fabric_runtime.py",
+      "sha256": "eb33c334eb8337737d4810c09d36862b49f1b85b57e3eda230afa15e3ac323b3"
+    },
+    {
+      "bytes": 47715,
+      "path": "adapter/dfabric/gates.py",
+      "sha256": "d36597be476564c26ea899b41ac273ccc715a571f68cbdd7df138827a7f8616d"
+    },
+    {
+      "bytes": 7121,
+      "path": "adapter/dfabric/manifest.py",
+      "sha256": "c4172f86e964163330f27db9275f10d7e8043011b8c551dbbea123c210995e67"
+    },
+    {
+      "bytes": 43605,
+      "path": "adapter/dfabric/nodes.py",
+      "sha256": "5026935d603a40ecbeb01a70f03b14fe853f3167d9708c09e009e4cc3fb206cb"
+    },
+    {
+      "bytes": 13151,
+      "path": "adapter/dfabric/schemas.py",
+      "sha256": "73174d46f4eb95451c75cf9b58277099374259f9c0fa0aec060f46226315c8d0"
+    },
+    {
+      "bytes": 14347,
+      "path": "adapter/dfabric/witness.py",
+      "sha256": "84e56f7feaea9b51a3720c47193e5634018158be340478a890b5cd9da1589e7c"
+    },
+    {
+      "bytes": 23569,
+      "path": "authority/DF_SOURCE_AUTHORITY.json",
+      "sha256": "38d790f62fc87fbd2c19b9411500da6f8649390cc534cf53a6ee8fc90275a421"
+    },
+    {
+      "bytes": 17414,
+      "path": "conformance/DF_GATE_RESULTS.json",
+      "sha256": "a4bd5de6bb5e1a51abb6edd6687157a39e66f64b0b1c4e1d42ca3bd13304dc0d"
+    },
+    {
+      "bytes": 546,
+      "path": "conformance/README.md",
+      "sha256": "7290744b3e85bd60904660832968d134b3fbba752c5e689797d55ef750675009"
+    },
+    {
+      "bytes": 449,
+      "path": "conformance/logs/own_build.log",
+      "sha256": "3b33e18387547c92913086787424c82223063862d9482cb6f7cf9fb9c0158c66"
+    },
+    {
+      "bytes": 2939,
+      "path": "conformance/logs/own_own_gate.log",
+      "sha256": "b889531a2234983726b2ead833ae1ac9b8eb31c46f7d53168459d853a91e9b11"
+    },
+    {
+      "bytes": 57,
+      "path": "conformance/logs/own_own_sums.log",
+      "sha256": "b44e71df4388d3c905e8cc1ca0e925c4eb2ae1e001d722fa72943d360b329ad4"
+    },
+    {
+      "bytes": 1713,
+      "path": "conformance/logs/pacore_selfcheck.log",
+      "sha256": "82b7ea0c40cf2e1daaf82bdf660091d1e7227f828cd520fb8229bdd6814e34cf"
+    },
+    {
+      "bytes": 454,
+      "path": "core/PACORE_DIGEST.json",
+      "sha256": "66ec0b9af4ceded8fc79b91152c0a9742bdd0017e2d09081883e617196d4f1ee"
+    },
+    {
+      "bytes": 464,
+      "path": "core/README.md",
+      "sha256": "6bf02fb016cc8b5d9b18a7500a46cac5e282fc99fae31b2d94e97d06ee7c9bc2"
+    },
+    {
+      "bytes": 1578,
+      "path": "core/examples/01_bell_pair.pal",
+      "sha256": "186a8001301748f53999e38b2677d03a9c13d7ce241d492f375fa8cd640860e8"
+    },
+    {
+      "bytes": 1908,
+      "path": "core/examples/02_ghz3.pal",
+      "sha256": "fb6c145f4736d2ec7aba36ef1afc356254d65e0d207f0b5e79693440ea0f455a"
+    },
+    {
+      "bytes": 2134,
+      "path": "core/examples/03_two_lane_parallel.pal",
+      "sha256": "8b4ec548e931f611d35d59e3d692b97b303144dbf72bcb25f34711e5e7d629fc"
+    },
+    {
+      "bytes": 1900,
+      "path": "core/examples/04_distributed_teleport.pal",
+      "sha256": "1ddebd4b4550d829dc70e79bceebc98fcccf645cd0fe3de3afa16e018a31a466"
+    },
+    {
+      "bytes": 1796,
+      "path": "core/examples/05_measurement_feedback.pal",
+      "sha256": "d83cfd96a535a663d1a2ef44105d729c4390a926a8f0be041c308fdd66c9d7ee"
+    },
+    {
+      "bytes": 1889,
+      "path": "core/examples/06_noise_density.pal",
+      "sha256": "446a2eef8429feb2dc66368672f1cf63843619c7dd2a1ec9f08a4d56f1c5da54"
+    },
+    {
+      "bytes": 1147,
+      "path": "core/examples/README.md",
+      "sha256": "3c9b4a82f75098a993e09c525f44e3e3d8921dc4629165d5dfb98a3307ac26b4"
+    },
+    {
+      "bytes": 0,
+      "path": "core/reference/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1386,
+      "path": "core/reference/pacore/__init__.py",
+      "sha256": "960ffa79484b50651f2921ff508281f835885e86e7508db504ddce09b9260ecc"
+    },
+    {
+      "bytes": 3198,
+      "path": "core/reference/pacore/adapters/__init__.py",
+      "sha256": "c520fc6e834f91f8f47ddf416ea98c1ef6ce1664e43f4abf73250fe287b004f1"
+    },
+    {
+      "bytes": 15989,
+      "path": "core/reference/pacore/adapters/bottlerocket.py",
+      "sha256": "8afbf912f3e0ff4a796473cff31d248fb97a228e30b0990f7789d9ae27f71629"
+    },
+    {
+      "bytes": 7526,
+      "path": "core/reference/pacore/adapters/brlower.py",
+      "sha256": "9c77c9a486af4d96bbec802b3fc9be47cb415ac40d5fb92806f2db3129c1424f"
+    },
+    {
+      "bytes": 56311,
+      "path": "core/reference/pacore/cli.py",
+      "sha256": "6d2df0d872282359aac2be432c70cb376d1af61f2540e32cce970f63a627e03b"
+    },
+    {
+      "bytes": 23544,
+      "path": "core/reference/pacore/commutation.py",
+      "sha256": "89d0138f42305f82ec2dbfb5a83fa565b4a48fe99c6ba8ef10ad57fae7de0f77"
+    },
+    {
+      "bytes": 138282,
+      "path": "core/reference/pacore/conformance.py",
+      "sha256": "9cd313a40ef49751b08c6ff28ee98cd2d605aa725e66ab3e168bf8bfe5f6611f"
+    },
+    {
+      "bytes": 36167,
+      "path": "core/reference/pacore/crdt.py",
+      "sha256": "956f8497e0de723749ecc0e55bd6da71eaa27140c6a8d0206eeb4550e8a2c6d1"
+    },
+    {
+      "bytes": 28126,
+      "path": "core/reference/pacore/erroralgebra.py",
+      "sha256": "be72b62b10643ae1b1a0009feb4b7ba20b1d9a08d63a05581cf009d142635670"
+    },
+    {
+      "bytes": 165855,
+      "path": "core/reference/pacore/fabric.py",
+      "sha256": "9db76eb51cb6411bc7575f44fc5a8457ef555ac2ef0332976ec6f63b49dee482"
+    },
+    {
+      "bytes": 27472,
+      "path": "core/reference/pacore/gapledger.py",
+      "sha256": "e3954c615798b4e4942f8b5609f176d912654c7a179cea4480387163b62ca30a"
+    },
+    {
+      "bytes": 1442,
+      "path": "core/reference/pacore/importers/__init__.py",
+      "sha256": "d34e87c4c74616668cb0103d30d5568bc78d740846b7313ec62de4c41e51e69f"
+    },
+    {
+      "bytes": 13523,
+      "path": "core/reference/pacore/importers/lctl_canonical.py",
+      "sha256": "948678c572d0aa2d6c24a58d4cc79865b872874f979f6c05fab7e0d4560137aa"
+    },
+    {
+      "bytes": 45925,
+      "path": "core/reference/pacore/lang.py",
+      "sha256": "20ed3badc0ca0879461a065d91abdc99575756656e97021d4ea36c78f89a1d16"
+    },
+    {
+      "bytes": 59517,
+      "path": "core/reference/pacore/ledgers.py",
+      "sha256": "f0f559b766b8221ef3927211350c236f8ce32c43b58273a6e0a72741639367fc"
+    },
+    {
+      "bytes": 57090,
+      "path": "core/reference/pacore/planner.py",
+      "sha256": "248d7c8a819a6180cd126b0e2ab9cd3aefbbf6de993306b596815429c893e1cc"
+    },
+    {
+      "bytes": 53175,
+      "path": "core/reference/pacore/protocols.py",
+      "sha256": "1779616c71410b97e1f48d6bfdca2de8b314056af34cccc872fd82e5def4df2b"
+    },
+    {
+      "bytes": 15430,
+      "path": "core/reference/pacore/redesignate.py",
+      "sha256": "c4e0acc74c544f3b44b110afeb1aa05ee97bdbf22e7a5222d6f61713a9b0885f"
+    },
+    {
+      "bytes": 39999,
+      "path": "core/reference/pacore/resilience.py",
+      "sha256": "a004976b606cedec4b8940ff7ea6cd02e812e78b8a90f8cb768a96b00702baf1"
+    },
+    {
+      "bytes": 22069,
+      "path": "core/reference/pacore/ses.py",
+      "sha256": "5c93769d5c808596dbbd981a14f5ead31272509bec592654827531fa639b2b3a"
+    },
+    {
+      "bytes": 77249,
+      "path": "core/reference/pacore/simulator.py",
+      "sha256": "619a7de65eb1696dbf602268c653138c0c293fd677d77b23fde0a1cf95f53030"
+    },
+    {
+      "bytes": 4066,
+      "path": "core/spec/COLUMN_DICTIONARY.md",
+      "sha256": "5909de7536e3b731883bf573061e35623aa07ca16a4e1e27166fa0fb6d78ae96"
+    },
+    {
+      "bytes": 11793,
+      "path": "core/spec/DIAGNOSTIC_CATALOG.md",
+      "sha256": "6747d0a21cb926d3aabe6d9a6a2c2d0f83113ed754270b0b40e619ade15b31ee"
+    },
+    {
+      "bytes": 6019,
+      "path": "core/spec/ERROR_CATALOG.md",
+      "sha256": "455bdfc4ae7688dd65ed375168aa16d0f93747581693037d356bd28d3d7e2900"
+    },
+    {
+      "bytes": 11646,
+      "path": "core/spec/OPERATOR_CATALOG.md",
+      "sha256": "2afa50dbfb935ce2c22b3da796e4aa57289060e05966d70317500dcdfe05a1e1"
+    },
+    {
+      "bytes": 8598,
+      "path": "core/spec/PA_LCTL_BOTTLE_ROCKET_BACKEND.md",
+      "sha256": "6ded0f111a5f627abdf7196a810470d8c6998f6e34b4822df82849ee0a8e0dc0"
+    },
+    {
+      "bytes": 16036,
+      "path": "core/spec/PA_LCTL_CHANNEL_NOISE_MODEL.md",
+      "sha256": "3b3249fe3292b604ad9f34b8efa414bc6b79d40daf79c49a8455d4b4bc6f7b8d"
+    },
+    {
+      "bytes": 23453,
+      "path": "core/spec/PA_LCTL_CONFORMANCE_SPEC.md",
+      "sha256": "dc760a3bc2daeffcb3cd6f61bbb0bb3937dd26f035072ac13c14b8486283ce59"
+    },
+    {
+      "bytes": 15378,
+      "path": "core/spec/PA_LCTL_CONSISTENCY_SPEC.md",
+      "sha256": "93941c053f0734f867ae33f94cf60f61c680dd8e0731523f8fe42ce7b796872e"
+    },
+    {
+      "bytes": 19011,
+      "path": "core/spec/PA_LCTL_ERROR_MODEL.md",
+      "sha256": "8e0604d71776bb2b2e833035f755f33754d3828c44ee0330d3f1a80eb71f3986"
+    },
+    {
+      "bytes": 12944,
+      "path": "core/spec/PA_LCTL_EXECUTION_PROVENANCE.md",
+      "sha256": "a787966b468285116800e80b1f579719b08f3a532941b9744cd769d49c415e2a"
+    },
+    {
+      "bytes": 27872,
+      "path": "core/spec/PA_LCTL_FABRIC_SPEC.md",
+      "sha256": "23e195affdf8f23987b3889a7afaf49f3936e5d667cb0b77c62890c419fa1100"
+    },
+    {
+      "bytes": 17832,
+      "path": "core/spec/PA_LCTL_FAILURE_RECOVERY_SPEC.md",
+      "sha256": "3a1fe1a48ebe84ce442ff45704655052be7c72008fc3bdbbc7d7334c55a039a3"
+    },
+    {
+      "bytes": 22580,
+      "path": "core/spec/PA_LCTL_GRAMMAR.ebnf",
+      "sha256": "61cbb97eb8f3a4d41d4e5a665c0bf85cee124ff1d0b82af443413dfeb058c6a9"
+    },
+    {
+      "bytes": 15533,
+      "path": "core/spec/PA_LCTL_MEASUREMENT_SEMANTICS.md",
+      "sha256": "2ca384ee5ac8dd83c2828ca2c7a157abefd68f51113143f44f1d166a3a6d1820"
+    },
+    {
+      "bytes": 30092,
+      "path": "core/spec/PA_LCTL_NORMATIVE_SPEC.md",
+      "sha256": "38b2530eaca0b8d1e244ed3fa78a7acd7fc74ade6d9a744b2dba65f726d0a2a6"
+    },
+    {
+      "bytes": 21105,
+      "path": "core/spec/PA_LCTL_OPERATOR_SEMANTICS.md",
+      "sha256": "2c3cc043dd4bf8b20663d5c21a66c94aface80a72909ca2533af110e1707b03c"
+    },
+    {
+      "bytes": 19267,
+      "path": "core/spec/PA_LCTL_OWNERSHIP_MODEL.md",
+      "sha256": "93db50a74d70cd203a980a424e6a036f4e781966d09f1d0fe09bd05d0569e170"
+    },
+    {
+      "bytes": 19474,
+      "path": "core/spec/PA_LCTL_PARTITION_PLACEMENT_SPEC.md",
+      "sha256": "7dd7d2d9137e28f5dcb8578d853bbe839585b8edd6076487dbbdaf4a30724dc5"
+    },
+    {
+      "bytes": 22114,
+      "path": "core/spec/PA_LCTL_PROTOCOL_SPEC.md",
+      "sha256": "7fcc1e9b8c5fc2743a526a23c71e887e68b58e5fc30eaadbd01e3f840b6933cb"
+    },
+    {
+      "bytes": 13709,
+      "path": "core/spec/PA_LCTL_Q1_Q6_ADMISSION.md",
+      "sha256": "b0fce4640b60d70f81742423b5ad06b903e0d53dcb722fd13451d0f12b5dbf12"
+    },
+    {
+      "bytes": 13695,
+      "path": "core/spec/PA_LCTL_QCIR_P2_SPEC.md",
+      "sha256": "2bab99c1a38258ca6c144a97bcb9fc25954414bdf31c8025369f789884d64ad5"
+    },
+    {
+      "bytes": 15456,
+      "path": "core/spec/PA_LCTL_RESOURCE_MODEL.md",
+      "sha256": "9165f6592e51d659efbc2cd1428db929bc4867e365c877066a47117dce607f85"
+    },
+    {
+      "bytes": 15629,
+      "path": "core/spec/PA_LCTL_ROUTING_SPEC.md",
+      "sha256": "c7b96ac1030bdee94c98af3820d10c6ecc924ec2bbc5185e844cad8bf3fd7d1f"
+    },
+    {
+      "bytes": 16751,
+      "path": "core/spec/PA_LCTL_SCHEDULER_SPEC.md",
+      "sha256": "c529e809d17f553d852af238f36237e73a6a5f401157b22518d2da436827f9c7"
+    },
+    {
+      "bytes": 20132,
+      "path": "core/spec/PA_LCTL_SES_SPEC.md",
+      "sha256": "a011c897d1a5cbfa98bcceaa8d15e2ee78d53918ec24edacffde1e46de46d0a2"
+    },
+    {
+      "bytes": 15259,
+      "path": "core/spec/PA_LCTL_TARGET_ADAPTER_SPEC.md",
+      "sha256": "fd462b3d3f275354ca8dea77fd68bb2ae35b2ab4b5171ad63487bf5be1c6bc50"
+    },
+    {
+      "bytes": 21160,
+      "path": "core/spec/PA_LCTL_TUPLE_SCHEMA.md",
+      "sha256": "f461f424f435eb565317293dd19b245db9cdf5b9bb4dc438b92082a45d4960ee"
+    },
+    {
+      "bytes": 18424,
+      "path": "core/spec/PA_LCTL_TYPE_SYSTEM.md",
+      "sha256": "c65e557e0fd2b17513165965b94fa3ca32ed2d43359f2d239f15f38a3d8e3616"
+    },
+    {
+      "bytes": 16035,
+      "path": "core/spec/README_SPEC_INDEX.md",
+      "sha256": "b90be7e62aa3ad1fe041b13fe9ed6775718b89dbccba656d08bbcfbc0a4949a2"
+    },
+    {
+      "bytes": 8186,
+      "path": "core/spec/RESOURCE_CATALOG.md",
+      "sha256": "6cb5575b0a61ee69e09cb61fce324f0e23147a1534d203c12aef01be97cf4f11"
+    },
+    {
+      "bytes": 11252,
+      "path": "core/spec/TYPE_CATALOG.md",
+      "sha256": "29338ee3d311e6aefc8631a72332da2f841127c856ac201b7131f787eff4d2db"
+    },
+    {
+      "bytes": 738,
+      "path": "corpus/CORPUS_NOTES.md",
+      "sha256": "76fa60e7fe7dfe6c1e2983b7c8ddf54362bf2af839ec64ddc9603e1289c54d54"
+    },
+    {
+      "bytes": 3192,
+      "path": "corpus/DF_Small_Translation_Corpus.jsonl.gz",
+      "sha256": "50f82235d05dd040f1d364a2eaaf2fec112350935370aa402ada6f338a3145e6"
+    },
+    {
+      "bytes": 1578,
+      "path": "examples/01_bell_pair.pal",
+      "sha256": "186a8001301748f53999e38b2677d03a9c13d7ce241d492f375fa8cd640860e8"
+    },
+    {
+      "bytes": 1908,
+      "path": "examples/02_ghz3.pal",
+      "sha256": "fb6c145f4736d2ec7aba36ef1afc356254d65e0d207f0b5e79693440ea0f455a"
+    },
+    {
+      "bytes": 2134,
+      "path": "examples/03_two_lane_parallel.pal",
+      "sha256": "8b4ec548e931f611d35d59e3d692b97b303144dbf72bcb25f34711e5e7d629fc"
+    },
+    {
+      "bytes": 1900,
+      "path": "examples/04_distributed_teleport.pal",
+      "sha256": "1ddebd4b4550d829dc70e79bceebc98fcccf645cd0fe3de3afa16e018a31a466"
+    },
+    {
+      "bytes": 1796,
+      "path": "examples/05_measurement_feedback.pal",
+      "sha256": "d83cfd96a535a663d1a2ef44105d729c4390a926a8f0be041c308fdd66c9d7ee"
+    },
+    {
+      "bytes": 1889,
+      "path": "examples/06_noise_density.pal",
+      "sha256": "446a2eef8429feb2dc66368672f1cf63843619c7dd2a1ec9f08a4d56f1c5da54"
+    },
+    {
+      "bytes": 563,
+      "path": "examples/README.md",
+      "sha256": "c150493e57396aee59ccb56970ce8e8594ece82f8fcfe46824bfe9d70f7ecc70"
+    },
+    {
+      "bytes": 144,
+      "path": "examples/add42.mssl",
+      "sha256": "ac2025987787f59f180d7e0230811ad00dda3e06f29f29a9f0ce119ac82175d0"
+    },
+    {
+      "bytes": 120,
+      "path": "examples/loop_forever.mssl",
+      "sha256": "cee2bfc339e9eee16c2b748d18ec99603084fc7437cf261e2106510cb3a155aa"
+    },
+    {
+      "bytes": 3555,
+      "path": "node/NODE.pal",
+      "sha256": "892816eb06b413419663a0eeb17006e72c4dc91bc856b2f4df8af48a6964b529"
+    },
+    {
+      "bytes": 3993,
+      "path": "node/NODE_DESCRIPTOR.json",
+      "sha256": "49eeeff3efc867a7f3fdefc088ad7333e29e29f5928fd17a557e793d21efc911"
+    },
+    {
+      "bytes": 336,
+      "path": "node/NODE_SEAL.json",
+      "sha256": "84e8afcd99791ea496217c227b1179cebf9a92b6d52689dac7d76fcb6ff8ce23"
+    },
+    {
+      "bytes": 3775,
+      "path": "node/PAYLOAD_DIGEST.json",
+      "sha256": "851a797ac995a36bfe7e2da4fb3c6be24ee835076a14b51f44f0f4f8ba2a047f"
+    },
+    {
+      "bytes": 2392,
+      "path": "provenance/DF_PROVENANCE.json",
+      "sha256": "08c929c545f5e11b971dc9dc7df474da2aecb10de369f6de1f1fc28a256ac007"
+    },
+    {
+      "bytes": 2077,
+      "path": "reports/DF_BLOCKED_REGISTER.md",
+      "sha256": "0d66a049a0ffdfc1fdd888e95a0d8f7b6e77ea9ec84298e92410888d1d29fecd"
+    },
+    {
+      "bytes": 9157,
+      "path": "reports/DF_CAPABILITY_LEDGER.json",
+      "sha256": "7020468930ea7556054dc498c34b504fb5056bb2e66fcbe108debd735720a2a9"
+    },
+    {
+      "bytes": 4283,
+      "path": "reports/DF_CAPABILITY_LEDGER.md",
+      "sha256": "73979c571a795803a8d3cee8b0a5e546b4a9c53378c153104e94da1acb33e995"
+    },
+    {
+      "bytes": 813,
+      "path": "reports/EVIDENCE_INDEX.md",
+      "sha256": "6082e52e12673343aaaf720a24b5dc4327c04b93061560fceeefcdd388541748"
+    },
+    {
+      "bytes": 9961,
+      "path": "reports/VM_PROFILE_MEASURED.json",
+      "sha256": "1e8000de71c4dc1abff3580a13d24ec07e6d1452d718d48a062242f2cf122ddb"
+    },
+    {
+      "bytes": 13725,
+      "path": "reports/VM_PROFILE_MEASURED.md",
+      "sha256": "40e16474174e3cb4c6b2dd67379ad9f78369c00c53b7b202f8d4787080d5ea85"
+    },
+    {
+      "bytes": 1419,
+      "path": "schemas/DF_CAPABILITY_LEDGER.json",
+      "sha256": "928c0a4ff6b5186a1043aca914051421ff6cbb7258e2928392dc79373821050e"
+    },
+    {
+      "bytes": 1136,
+      "path": "schemas/DF_GATE_RESULTS.json",
+      "sha256": "660807d7438e3c7fbdb62a40fe10cd3ffcf96bfdd5bfb51b1e0d9c4c4f82bee8"
+    },
+    {
+      "bytes": 628,
+      "path": "schemas/DF_NODES.json",
+      "sha256": "9dd059102979582c75aa410355446cc3087a02e81f9983d6e177a60c001b4734"
+    },
+    {
+      "bytes": 1885,
+      "path": "schemas/DF_NODE_DESCRIPTOR.json",
+      "sha256": "2b5eb3a8ff750b09de3bbbb814d69af5b8c9ef29da685fe3766b1678e51a5765"
+    },
+    {
+      "bytes": 2160,
+      "path": "schemas/DF_PACKAGE_MANIFEST.json",
+      "sha256": "560e663e9ab27424c1a8f28fb6e25d7ae7ef7f6ee97d10db52958b330c749f13"
+    },
+    {
+      "bytes": 880,
+      "path": "schemas/DF_PROVENANCE.json",
+      "sha256": "2320ce0ace5f0d2cd88b58e255516924aa322298caaf72d15ab44f700567b579"
+    },
+    {
+      "bytes": 639,
+      "path": "schemas/DF_SOURCE_AUTHORITY.json",
+      "sha256": "c6ef2cbece0d6ad988c5a173f97275438391ab0d50cee831dbcdd7088c299e59"
+    },
+    {
+      "bytes": 2011,
+      "path": "schemas/DF_TRANSLATION_CORPUS_RECORD.json",
+      "sha256": "d6c2a9333f75fb83acddd89e89c3273845f0ef26b4e8931037e254ea648b1f76"
+    },
+    {
+      "bytes": 415,
+      "path": "schemas/README.md",
+      "sha256": "8e05faa9ece2bf7e6565d62c6a8ca81243f158e2d9629d983745dbb204ea18d3"
+    },
+    {
+      "bytes": 6194,
+      "path": "spec/DF_LANGUAGE_MAP.md",
+      "sha256": "746fb91ffe91336f3dbccc940cdaa247cdde471f4a7882cc4118d4e01880b400"
+    },
+    {
+      "bytes": 9761,
+      "path": "spec/DF_NODE_SPEC.md",
+      "sha256": "de01a020d6ff20a177451d0aff6bcba9ff41b67623e71e8fe7bc7ff4b99bb438"
+    },
+    {
+      "bytes": 742,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/MANIFEST.json",
+      "sha256": "be7341d1656cc51b61511dc14b61dea6722338da61674f1483d7dac49c98bd3c"
+    },
+    {
+      "bytes": 2953,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/Makefile",
+      "sha256": "5111c9d32f3aed166287b0455df4e4375fdbbe3fa60786d5c3397fc08d72c498"
+    },
+    {
+      "bytes": 2530,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/README.md",
+      "sha256": "8315690251ec2de5464ffabe6f881b2c301d40e1366c69dffa11b954d769aba8"
+    },
+    {
+      "bytes": 1593,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/SHA256SUMS.txt",
+      "sha256": "7341f3329367681499de94c05d3e211239e04fdb4d5d9b6ca0dab684a8d904e0"
+    },
+    {
+      "bytes": 176,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/deploy/BOTTLE_ROCKET_SIM_CORE_3.0.0_MODEL.brimg",
+      "sha256": "5b5cfcebc2448c27590d61d15ec1d20b5192064e92c34fd6f3053c306d162f54"
+    },
+    {
+      "bytes": 542,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/evidence/AUDIT_DIGEST.json",
+      "sha256": "6cc9b7373a364bf7c14ab2d8e43af3274c1d474ff96ca933a7ac045657f9ac99"
+    },
+    {
+      "bytes": 612,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/evidence/OPERATIONAL.json",
+      "sha256": "3d18a8886c1a08a243691d72f4447eb0df92ceb3a80ad975037d3758fe95196e"
+    },
+    {
+      "bytes": 252,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/evidence/SIZE.json",
+      "sha256": "e2a287d771fbc63896d05ded8b678616b725682f64da81a3a0db15e2a30fb04d"
+    },
+    {
+      "bytes": 188,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/evidence/q17/SIDECAR.json",
+      "sha256": "ff88c39ca4bdc68c6bdf7d4206fc22f782575b90881505fde5aa4171c2bb6c74"
+    },
+    {
+      "bytes": 189,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/examples/boot.mssl",
+      "sha256": "0589cb1f9a87c09afbdfa1f1221f742dc744e4cb5dbc138a434450293a28c2ef"
+    },
+    {
+      "bytes": 622,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/host/br_sizes.c",
+      "sha256": "0670046b86577784c86337eec18a93659343724566053c9b31814a8c782d06bc"
+    },
+    {
+      "bytes": 11709,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/host/brctl.c",
+      "sha256": "0862ea82f98c3914b8c485d962035ee18daba532347869bca6f83557b8ddc2ed"
+    },
+    {
+      "bytes": 1158,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/spec/BR_SPEC.json",
+      "sha256": "bed075f2b65efbde7e4c9cfa4a32f8e7ba9bcf321259701f8fed259c64ba9cab"
+    },
+    {
+      "bytes": 815,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/spec/PROFILE.md",
+      "sha256": "271c60e4a5590c4f2c51dbcd912858e2d8be40204b0f5a8ab7bc95e17be25416"
+    },
+    {
+      "bytes": 658,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/src/CORE.mssl",
+      "sha256": "6c2886e06fff8d7e0aaa923473b5a977ce3896f3f4eccfac30539c65b6c33911"
+    },
+    {
+      "bytes": 9509,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/src/brasm.c",
+      "sha256": "5256b3b7015d5b3fec22bf862e05111a69b6845aad156f5adc9508dd315967fc"
+    },
+    {
+      "bytes": 232,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/src/brasm.h",
+      "sha256": "47764b106f50efb404cc42eafe1f49bac3bcf782e8fe73f76bd7d51539ab5912"
+    },
+    {
+      "bytes": 69670,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/src/brvm.c",
+      "sha256": "96cb5f1fdd770086d2449db630d28c353b114224b6c5995c9841223e4851ee01"
+    },
+    {
+      "bytes": 5482,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/src/brvm.h",
+      "sha256": "71edc58d50fd1740555721d5a7cc57f12bb9caa254330118a76eba749cf9fd0d"
+    },
+    {
+      "bytes": 273,
+      "path": "vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/tests/test_main.c",
+      "sha256": "22ca7aa2340282df211f66bf36ffbae541c6e2a239ead2f40ac9d65453e8f363"
+    }
+  ],
+  "gates_measured_here": {
+    "detail": "conformance/DF_GATE_RESULTS.json",
+    "failed": 0,
+    "passed": 16,
+    "run": 18,
+    "skipped": 2,
+    "verdict": "PASS",
+    "wall_seconds": 30.817
+  },
+  "inventory_exclusion_reason": "Python bytecode caches, the VM build directory (.build), fabric run outputs (_runs) and VERIFY scratch space (_scratch) are machine-specific artefacts, not release content. MANIFEST.json and SHA256SUMS.txt are excluded from their own inventory because they are derived from it.",
+  "inventory_exclusions": [
+    "__pycache__",
+    "*.pyc",
+    ".build",
+    "_runs",
+    "_scratch",
+    ".conformance.json",
+    ".DS_Store",
+    "Thumbs.db"
+  ],
+  "language": "PA-LCTL",
+  "node_id": "N_SMALL",
+  "notes": [
+    "archive layout of the source zip: one top-level directory BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K/"
+  ],
+  "package_kind": "fabric_node",
+  "package_name": "DF_Small",
+  "physical_execution": {
+    "BACKEND": "none",
+    "NETWORK": "deny",
+    "PHYSICAL_DISTRIBUTED_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY",
+    "PHYSICAL_PARALLEL_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY"
+  },
+  "schema": "DF/PACKAGE_MANIFEST/1",
+  "source_corpora": {
+    "detail": "authority/DF_SOURCE_AUTHORITY.json",
+    "packages": 23,
+    "pacore_tree_sha256": "046a9930c61b1d5a8a98de87b65feb933f8c5979351289953ea72dead5e304a0",
+    "root": "Desktop/PA21.2"
+  },
+  "total_bytes": 1851036
+}

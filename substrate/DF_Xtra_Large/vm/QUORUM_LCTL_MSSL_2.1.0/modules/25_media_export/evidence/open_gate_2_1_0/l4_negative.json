@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "bc4eb37c8b0e87dafc869118ea5a1f6e0f6dd2eda8dd1a8aa0a35be6b25f557e",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Media Export",
+  "module_id": 25,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

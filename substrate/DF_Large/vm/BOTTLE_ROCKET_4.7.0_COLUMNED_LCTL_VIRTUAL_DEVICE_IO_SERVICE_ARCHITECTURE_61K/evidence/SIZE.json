@@ -1,0 +1,12 @@
+{
+  "boundary": "runtime_c_h+all_adapters+authoritative_BOOT_LCTL",
+  "brim_bytes": 112,
+  "brim_ceiling_lte": 51200,
+  "ceiling_lt": 61000,
+  "headroom_bytes": 55,
+  "production_exec_source_bytes": 60945,
+  "record": "BR.Size",
+  "release": "4.7.0",
+  "repository_build_spec_bytes": 73863,
+  "repository_build_spec_informational_only": true
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "baseline": "BOTTLE ROCKET 4.9.0 RC local gates PASS; strict BR-490-11 gate BLOCKED",
+    "blocker": null,
+    "command": "python3 qualification/br490_performance.py",
+    "evidence_path": "evidence/br500/BR-500-13_tests.log",
+    "exit_code": 0,
+    "notes": "Refreshed by qualification/reseal_after_patch.py after audit remediation; runtime formats remain frozen.",
+    "requirement_id": "BR-500-13-R01",
+    "requirement_text": "Publish benchmark baseline",
+    "result": "PASS",
+    "sha256": "4f82d559f0b5551fe52d055dbdaf29206efbc5da3aaf9b5f38d751be7cf03df3",
+    "status": "OPERATIONAL"
+  },
+  {
+    "baseline": "BOTTLE ROCKET 4.9.0 RC local gates PASS; strict BR-490-11 gate BLOCKED",
+    "blocker": null,
+    "command": "python3 qualification/br490_performance.py",
+    "evidence_path": "evidence/br500/BR-500-13_tests.log",
+    "exit_code": 0,
+    "notes": "Refreshed by qualification/reseal_after_patch.py after audit remediation; runtime formats remain frozen.",
+    "requirement_id": "BR-500-13-R02",
+    "requirement_text": "Bound startup",
+    "result": "PASS",
+    "sha256": "4f82d559f0b5551fe52d055dbdaf29206efbc5da3aaf9b5f38d751be7cf03df3",
+    "status": "OPERATIONAL"
+  },
+  {
+    "baseline": "BOTTLE ROCKET 4.9.0 RC local gates PASS; strict BR-490-11 gate BLOCKED",
+    "blocker": null,
+    "command": "python3 qualification/br490_performance.py",
+    "evidence_path": "evidence/br500/BR-500-13_tests.log",
+    "exit_code": 0,
+    "notes": "Refreshed by qualification/reseal_after_patch.py after audit remediation; runtime formats remain frozen.",
+    "requirement_id": "BR-500-13-R03",
+    "requirement_text": "Bound verification",
+    "result": "PASS",
+    "sha256": "4f82d559f0b5551fe52d055dbdaf29206efbc5da3aaf9b5f38d751be7cf03df3",
+    "status": "OPERATIONAL"
+  },
+  {
+    "baseline": "BOTTLE ROCKET 4.9.0 RC local gates PASS; strict BR-490-11 gate BLOCKED",
+    "blocker": null,
+    "command": "python3 qualification/br490_performance.py",
+    "evidence_path": "evidence/br500/BR-500-13_tests.log",
+    "exit_code": 0,
+    "notes": "Refreshed by qualification/reseal_after_patch.py after audit remediation; runtime formats remain frozen.",
+    "requirement_id": "BR-500-13-R04",
+    "requirement_text": "Bound memory",
+    "result": "PASS",
+    "sha256": "4f82d559f0b5551fe52d055dbdaf29206efbc5da3aaf9b5f38d751be7cf03df3",
+    "status": "OPERATIONAL"
+  },
+  {
+    "baseline": "BOTTLE ROCKET 4.9.0 RC local gates PASS; strict BR-490-11 gate BLOCKED",
+    "blocker": null,
+    "command": "python3 qualification/br490_performance.py",
+    "evidence_path": "evidence/br500/BR-500-13_tests.log",
+    "exit_code": 0,
+    "notes": "Refreshed by qualification/reseal_after_patch.py after audit remediation; runtime formats remain frozen.",
+    "requirement_id": "BR-500-13-R05",
+    "requirement_text": "Optimize wide arithmetic",
+    "result": "PASS",
+    "sha256": "4f82d559f0b5551fe52d055dbdaf29206efbc5da3aaf9b5f38d751be7cf03df3",
+    "status": "OPERATIONAL"
+  }
+]

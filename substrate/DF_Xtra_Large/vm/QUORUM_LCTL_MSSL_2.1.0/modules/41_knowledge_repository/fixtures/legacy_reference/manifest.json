@@ -1,0 +1,115 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 41,
+  "legacy_root": "legacy/source_repository/Knowledge Repository",
+  "legacy_sha256": "75e74fccdb45635055391ed8dc6e357dabf21fc0da3e6a46b5d71633d80cf0e4",
+  "files": [
+    {
+      "path": "41.10_Knowledge_Repository_Operational_Workflows.jad",
+      "sha256": "dd9fb729299f4b5d0c684e393aede6b3ad76406e8d6c389ee9d0238a0e0597a7",
+      "bytes": 2720
+    },
+    {
+      "path": "41.1_Knowledge_Repository_Documentation.jad",
+      "sha256": "31d1a2c5632ac1e341c9af664d5cab4f48a67789dced2dc2c58b3f8b8c2293f6",
+      "bytes": 2522
+    },
+    {
+      "path": "41.2_Knowledge_Repository_Architecture_Records.jad",
+      "sha256": "499f55203f87d240816be1cc7b6a21550564c659935b3971f2e8f9e891a586c4",
+      "bytes": 2540
+    },
+    {
+      "path": "41.3_Knowledge_Repository_Commands.jad",
+      "sha256": "18aec97442f70ae1b650d13492d4d127630e2684fb3f08a293c93b66980fb657",
+      "bytes": 2513
+    },
+    {
+      "path": "41.4_Knowledge_Repository_Workflows.jad",
+      "sha256": "fd7349c445626341824d06cf185341fb4ce7d2ad3670546a4b2c511c9aecd877",
+      "bytes": 2509
+    },
+    {
+      "path": "41.5_Knowledge_Repository_Suite_References.jad",
+      "sha256": "d4b09d0608430e32140386f8ad0da648789ef11c577d8a8ec432813c2c830091",
+      "bytes": 2567
+    },
+    {
+      "path": "41.6_Knowledge_Repository_Suite_Documentation.jad",
+      "sha256": "491e87b495ff21902f774f5fdfd7e758667092905c7c7f0484e8ad4f9648f2ab",
+      "bytes": 2571
+    },
+    {
+      "path": "41.7_Knowledge_Repository_HERMIT_Commands.jad",
+      "sha256": "69b83e5d504117e77f190d6a1e37515183748ce80bd347065b4ec9679c950882",
+      "bytes": 2647
+    },
+    {
+      "path": "41.8_Knowledge_Repository_Language_Anthology.jad",
+      "sha256": "2cfb44d88600ad6e3cb20ef928ff13323ed8c3470d2f129eab1f1db0a4423647",
+      "bytes": 2630
+    },
+    {
+      "path": "41.9_Knowledge_Repository_Architecture_Catalog.jad",
+      "sha256": "68c252aa736c8a057931180fc86c40378663b98a5009731e31da3c789e536e84",
+      "bytes": 2666
+    },
+    {
+      "path": "README.md",
+      "sha256": "480f521738478e60d73f01f74522ff9c65ea1f27cec6cf5eca600ebf45146b27",
+      "bytes": 26536
+    },
+    {
+      "path": "knowledge_repository_architecture_catalog.dmk",
+      "sha256": "91e56e10ace55d5fb1f497aabc027137dd65930b07e142be1d246627cc8f29f4",
+      "bytes": 2873
+    },
+    {
+      "path": "knowledge_repository_architecture_records.dmk",
+      "sha256": "baf6f5008e4213671aa5bff89f47c788c31e8c0fa845843d3f0505b53b84261d",
+      "bytes": 2786
+    },
+    {
+      "path": "knowledge_repository_commands.dmk",
+      "sha256": "7c72d31ee881d4526839a470bb7672162b3b418926635bc0a0743f83433df85c",
+      "bytes": 2770
+    },
+    {
+      "path": "knowledge_repository_documentation.dmk",
+      "sha256": "c5a71205917e73460220e960e94fff81acdc67c1e5520ec0a387a49199058e7d",
+      "bytes": 2787
+    },
+    {
+      "path": "knowledge_repository_hermit_commands.dmk",
+      "sha256": "9cd24aa65c5e7b2c3964a79181d43ad6908fc52a120f375ed9b66a41df98342d",
+      "bytes": 2849
+    },
+    {
+      "path": "knowledge_repository_language_anthology.dmk",
+      "sha256": "476d498463e8de2d11a7327ed2be3aa1c2180cc2fd6515adefdf06c1fe948254",
+      "bytes": 2853
+    },
+    {
+      "path": "knowledge_repository_operational_workflows.dmk",
+      "sha256": "14e452780e5e45e9a455a690c04f42f9a5f35c9bf673c18621049212bd0617e1",
+      "bytes": 2895
+    },
+    {
+      "path": "knowledge_repository_suite_documentation.dmk",
+      "sha256": "30dc2f163c526bddf335c3e95797ecaf42b8ee8bebba07c181059397e0f3f446",
+      "bytes": 2817
+    },
+    {
+      "path": "knowledge_repository_suite_references.dmk",
+      "sha256": "f14252678e095f9ba24e4aa2661cdf2296122e0d69e65c5fcc0d512a1427ef92",
+      "bytes": 2803
+    },
+    {
+      "path": "knowledge_repository_workflows.dmk",
+      "sha256": "23832e86b88cf0f7d69f6187374484dd5e57332c625610f0dd266718365334c0",
+      "bytes": 2770
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

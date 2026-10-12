@@ -1,0 +1,212 @@
+{
+  "checks": [
+    {
+      "evidence": "evidence/environment.json",
+      "name": "environment-captured",
+      "notes": "",
+      "status": "PASS"
+    },
+    {
+      "evidence": "evidence/lctl_verify_CORE.json",
+      "name": "lctl-verify-CORE.lctlc",
+      "notes": "",
+      "status": "PASS"
+    },
+    {
+      "evidence": "evidence/lctl_verify_BOOT.json",
+      "name": "lctl-verify-BOOT.lctlc",
+      "notes": "",
+      "status": "PASS"
+    },
+    {
+      "evidence": "evidence/lctl_verify_all_opcodes.json",
+      "name": "lctl-verify-all_opcodes.lctlc",
+      "notes": "",
+      "status": "PASS"
+    },
+    {
+      "evidence": "evidence/tests.log",
+      "name": "unit-adversarial-suite",
+      "notes": "",
+      "status": "PASS"
+    },
+    {
+      "evidence": "evidence/static_check.log",
+      "name": "static-syntax-check",
+      "notes": "",
+      "status": "PASS"
+    },
+    {
+      "evidence": "evidence/determinism.json",
+      "name": "deterministic-build-replay",
+      "notes": "",
+      "status": "PASS"
+    },
+    {
+      "evidence": "evidence/isa_conformance.json",
+      "name": "24-opcode-conformance",
+      "notes": "",
+      "status": "PASS"
+    },
+    {
+      "evidence": "evidence/fuzz.json",
+      "name": "deterministic-fuzz",
+      "notes": "",
+      "status": "PASS"
+    },
+    {
+      "evidence": "evidence/benchmark.json",
+      "name": "performance-baseline",
+      "notes": "",
+      "status": "PASS"
+    },
+    {
+      "evidence": "evidence/resource_accounting.json",
+      "name": "resource-accounting",
+      "notes": "",
+      "status": "PASS"
+    },
+    {
+      "evidence": "evidence/network_boundary.json",
+      "name": "offline-network-boundary",
+      "notes": "",
+      "status": "PASS"
+    },
+    {
+      "evidence": "evidence/world_extension_qualification.log",
+      "name": "rcpw-7-world-extension",
+      "notes": "full_gate=PARTIAL",
+      "status": "PASS"
+    },
+    {
+      "evidence": "evidence/base_repository_regression.log",
+      "name": "base-repository-regression",
+      "notes": "",
+      "status": "PASS"
+    },
+    {
+      "evidence": "evidence/RELEASE_MANIFEST.json",
+      "name": "release-manifest",
+      "notes": "",
+      "status": "PASS"
+    }
+  ],
+  "external_blockers": [
+    "QVM ISA semantics are not upstream-native LCTL primitives/self-hosted",
+    "production cryptography/key custody not independently audited",
+    "cross-platform qualification not run",
+    "72-hour soak not run",
+    "independent rebuild not run",
+    "independent replay not run"
+  ],
+  "local_failures": [],
+  "local_hosted_vm_status": "OPERATIONAL",
+  "production_5_0_0_gate": "PARTIAL",
+  "schema": "QVM-QUALIFICATION/1",
+  "version": "5.0.0-candidate",
+  "workflow_application": {
+    "counts": {
+      "BLOCKED": 16,
+      "NOT_APPLICABLE": 0,
+      "OPERATIONAL": 928,
+      "PARTIAL": 13
+    },
+    "requirements": 957,
+    "work_packages": 138
+  },
+  "world_extension": {
+    "blocked_gate_remediation": {
+      "classifier_change": "The 26 prior blockers are now qualified by requirement ID and direct evidence rather than blocked-term keyword matching.",
+      "evidence": "world/evidence/remediation_26/remediation_summary.json",
+      "remaining_atomic_blocked": 0,
+      "remediated_gate_count": 26,
+      "status": "PASS"
+    },
+    "checks": [
+      {
+        "evidence": "world/evidence/world_tests.log",
+        "name": "world-unit-adversarial-suite",
+        "notes": "",
+        "status": "PASS"
+      },
+      {
+        "evidence": "world/evidence/lctl_verify_WORLD_DEMO.json",
+        "name": "world-lctl-column-verify",
+        "notes": "",
+        "status": "PASS"
+      },
+      {
+        "evidence": "world/evidence/world_compiler_determinism.json",
+        "name": "world-compiler-determinism",
+        "notes": "",
+        "status": "PASS"
+      },
+      {
+        "evidence": "world/evidence/world_guest_determinism.json",
+        "name": "world-guest-determinism",
+        "notes": "",
+        "status": "PASS"
+      },
+      {
+        "evidence": "world/evidence/reference_soak.json",
+        "name": "reference-10000-tick-soak",
+        "notes": "10,000-tick hosted reference stress; not 72-hour or production soak",
+        "status": "PASS"
+      },
+      {
+        "evidence": "world/evidence/golden_world_executed.json",
+        "name": "selected-golden-worlds",
+        "notes": "Selected executable reference scenarios only; not all 80 are implemented as full production scenarios.",
+        "status": "PASS"
+      },
+      {
+        "evidence": "world/evidence/remediation_26/remediation_summary.json",
+        "name": "rcpw-26-blocked-gate-remediation",
+        "notes": "26/26 previously blocked atomic requirements passed direct hosted-reference evidence.",
+        "status": "PASS"
+      }
+    ],
+    "claim_boundary": "Hosted deterministic reference world with spawned-process multi-worker conformance, headless replay, reference visual regression, resource budgets, history reconstruction, hot presentation rollback, and the 26 prior requirement-level blockers directly evidenced. Native upstream world primitives, production renderer/physics/AI fidelity, all 80 Golden Worlds, target-hardware/cross-platform qualification, production distributed fabric/soak, and external-party QP4 certification remain outside this claim.",
+    "full_rcpw_7_application_gate": "PARTIAL",
+    "golden_worlds": {
+      "defined": 80,
+      "executed": 21,
+      "not_run": 59,
+      "pass": 21
+    },
+    "local_hosted_world_status": "OPERATIONAL",
+    "profiles": {
+      "AW0": "OPERATIONAL",
+      "AW1": "OPERATIONAL",
+      "AW2": "PARTIAL",
+      "AW3": "PARTIAL",
+      "AW4": "BLOCKED",
+      "MULTI_WORKER": "PARTIAL",
+      "MULTI_WORKER_HOSTED_REFERENCE": "OPERATIONAL",
+      "PRODUCTION_DISTRIBUTED_FABRIC": "BLOCKED",
+      "QP0": "OPERATIONAL",
+      "QP1": "OPERATIONAL",
+      "QP2": "PARTIAL",
+      "QP3": "BLOCKED",
+      "QP4": "BLOCKED",
+      "WP1_SINGLE": "OPERATIONAL",
+      "WP4_HOSTED_REFERENCE": "OPERATIONAL",
+      "WQ0": "OPERATIONAL",
+      "WQ1": "OPERATIONAL",
+      "WQ2": "OPERATIONAL",
+      "WQ3": "PARTIAL",
+      "WQ4": "BLOCKED"
+    },
+    "schema": "QVM-RCPW-QUALIFICATION/1",
+    "workflow_application": {
+      "counts": {
+        "BLOCKED": 0,
+        "OPERATIONAL": 267,
+        "PARTIAL": 315,
+        "REGRESSED": 0
+      },
+      "requirements": 582
+    },
+    "world_extension_version": "7.0.0-applied-remediated-26"
+  }
+}

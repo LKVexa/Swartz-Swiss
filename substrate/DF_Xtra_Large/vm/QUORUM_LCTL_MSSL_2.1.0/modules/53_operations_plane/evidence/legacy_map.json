@@ -1,0 +1,49 @@
+{
+  "suite_id": 53,
+  "suite_name": "Operations Plane",
+  "plane": "operations_recovery",
+  "legacy_sha256": "a8fb07d9ea6cadff969d0f89d223144c7f60e74c3480f723220df0ea81ec9a10",
+  "legacy_root": "legacy/source_repository/Operations Plane",
+  "files": [
+    {
+      "path": "53.1_Operations_Plane_AI_Service_Registry.jaops",
+      "sha256": "2b3e39b6584a39ffa4aa2b54f51e699e919a00fbbdd8a977fb0ac4be200a47b3",
+      "bytes": 1143
+    },
+    {
+      "path": "53.2_Operations_Plane_Runtime_Resource_Control.jaops",
+      "sha256": "22adec1fa972b49b6763bc41dd97625441c793ec7ae05bae17b604f766c7d96b",
+      "bytes": 1170
+    },
+    {
+      "path": "53.3_Operations_Plane_Job_Scheduling_and_Quotas.jaops",
+      "sha256": "2355f4289b5b418e08740d998cafe2bd598e4ef2e3e06bac2eb7ef9455c593a4",
+      "bytes": 1105
+    },
+    {
+      "path": "53.4_Operations_Plane_Health_and_Observability.jaops",
+      "sha256": "98cd81e038023dd14f4fec6bedf0a9f677bdfce15ce95eef78669c8ee7efb764",
+      "bytes": 1174
+    },
+    {
+      "path": "53.5_Operations_Plane_Secrets_and_Configuration.jaops",
+      "sha256": "c0a24decd890f64be25d2a0fef65ee88f15a1935896d400d7439a36e8880b523",
+      "bytes": 1209
+    },
+    {
+      "path": "53.6_Operations_Plane_Deployment_and_Scaling.jaops",
+      "sha256": "17e4b2516f0042eab19a1bab265f67ec80837019887d89941640527143bcb725",
+      "bytes": 1167
+    },
+    {
+      "path": "53.7_Operations_Plane_Upgrade_and_Rollback.jaops",
+      "sha256": "b6347719dc5fc5f3da52a066806d00307a22f1ac94f46bf3c9aef645fb9286f5",
+      "bytes": 1132
+    },
+    {
+      "path": "README.md",
+      "sha256": "935a87b62a17a6f8513c27eb02e43be03c52d5d1d56b98f1cd2804de27df16e5",
+      "bytes": 11844
+    }
+  ]
+}

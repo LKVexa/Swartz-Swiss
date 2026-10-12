@@ -1,0 +1,13 @@
+ja certifier 0.3
+module corpus.ja_certifier.example_07642
+policy no_execute_unknown_code
+policy no_network
+grammar Grammar07642 {
+  production E = E, "+", T | T ;
+  production T = T, "*", F | F ;
+  production F = IDENT | "(", E, ")" ;
+}
+normalize grammar Grammar07642 using [eliminate_left_recursion, factor_prefixes, compute_first_follow, build_automaton, compress_tables]
+analyze ambiguity Grammar07642
+lower certificate Grammar07642 to JA_CERTIFIER_R12
+assert certificate.semantic_hash == "invalid-07642"

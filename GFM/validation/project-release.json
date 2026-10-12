@@ -1,0 +1,20 @@
+{
+  "schema": "GFM-project-release/1",
+  "date": "2026-10-12",
+  "version": "2.1.0",
+  "canonicalRoot": "D:\\Codex\\GFM-Cylindrical-Pulse-Simulator",
+  "integration": "Shared project hub, current browser solver and additive JA21 workspace shortcut; earlier console and models preserved.",
+  "projectReferencesVerified": 11,
+  "integrationAndPreviewChecks": {"passed": 5, "failed": 0, "skipped": 0},
+  "requestHandlerChecksBoundSocket": false,
+  "desktopPublicationAttempted": true,
+  "desktopPublished": false,
+  "desktopError": "Access denied copying to C:\\Users\\russe\\OneDrive\\Desktop\\GFM Simulator.url",
+  "desktopFallback": "Publish to Desktop.cmd",
+  "mutableDesktopReceiptExcludedFromManifest": true,
+  "publisherSyntaxAndFileURIValidated": true,
+  "nativeJA21RendererIntegratedWithNewSolver": false,
+  "engineChanged": false,
+  "engineSHA256": "93d1463b46a2bb6eaeb6c347f97c2a43101d811d0d6aa5d95d3a3b587f6a5b0a",
+  "windowsPolicyChanged": false
+}

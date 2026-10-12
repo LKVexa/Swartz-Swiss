@@ -1,0 +1,21 @@
+{
+  "package": "QUORUM_RC_PW_PROMPT_WORKFLOW_SERIES",
+  "version": "7.0.0",
+  "profiles": {
+    "AW0": "Static Canonical World",
+    "AW1": "Persistent Evolving Regions",
+    "AW2": "Generational / Institutional World",
+    "AW3": "Expandable + Archival Autonomous World",
+    "AW4": "Production Autonomous Continuum"
+  },
+  "required_comparisons": [
+    "preexisting_region_digest_before_after_expansion",
+    "fine_step_vs_long_horizon",
+    "resident_vs_archived_rehydrated",
+    "player_near_vs_player_absent",
+    "single_vs_multi_worker",
+    "old_save_vs_expanded_world_continuation",
+    "knowledge_locality_vs_global_truth"
+  ],
+  "status": "NOT_STARTED"
+}

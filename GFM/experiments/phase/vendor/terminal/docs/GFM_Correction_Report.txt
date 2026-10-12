@@ -1,0 +1,58 @@
+RUSSL GFM TERMINAL — RELEASE 0.5 CORRECTION
+Prepared 2026-10-11.
+
+The default terminal now operates on mechanics datasets. It opens with raw
+pendulum restoring-acceleration samples; their original magnitude and zero
+values are retained. The default composer prepares, transforms, verifies and
+records those data through gfm.* commands.
+
+The primary controls offer two distinct domains:
+  - Ordinary real/complex signals: q samples indexed by GF(q), transformed
+    with the positive additive trace-character kernel and its inverse.
+  - Exact field coefficients: q-1 GF(q) values evaluated at powers of a
+    primitive field element, with exact inverse interpolation.
+
+Field-coordinate oscillator and rational-rotation inspectors remain exact
+algebraic mechanics. The GF80 word workbench, captures and bounded replay
+remain available as a separate reversible mechanics workflow.
+
+The original normalized-state lab is explicitly secondary Reference math.
+Its probability, Wigner and mana tools retain their existing conventions and
+separate state. Selecting GFM commands returns to the mechanics workspace.
+Hiding Reference math also hides its Wigner display through return-tab changes.
+
+Reapply equations and the GFM/horizon load actions now produce an original-
+scale exterior-signal dataset, with inverse recovery checked. The saved report
+also recalculates the raw pendulum and Mellin samples and all three ordinary
+rotations from the supplied images. Exact polynomial examples cover all five
+small fields; the zero passage example remains zero throughout its transform.
+
+All 49 horizon findings, the 20 earlier findings and three prior image families
+retain their audit dispositions and source attribution. Their domains stay
+explicit. The gaseous-aperture/aggie scenario remains the user's hypothetical
+simulation rule. The correction changes the terminal's executable data model;
+it does not establish new gravitational or material laws.
+
+Version 0.5 sessions contain the active mechanics dataset. Mechanics records
+can be restored explicitly. Older sessions, source bytes, equation audits,
+numeric reports and examples remain preserved under their original conventions.
+Older normalized snapshots load into Reference math alongside default raw
+mechanics data. Imported histories remain inert.
+
+OPEN AND REVIEW
+Open index.html or Open-Terminal.cmd after extracting the complete package.
+Import examples/GFM-Mechanics-session.json from Evidence & ledger to load the
+new recorded example. Restore its exact GF9 polynomial or zero-passage record
+to inspect those domains directly.
+
+README.txt provides commands and operating instructions.
+docs/GFM_Terminal_Identity.txt states the current coefficient domains.
+mechanics-reapplication.json contains the current saved calculations.
+validation/verification-summary.json identifies the completed checks.
+validation/tests-v0.5.txt contains the final full automated test output.
+validation/mechanics-independent-verification.json binds the separate Python
+mathematical checks to the exact saved files and preserved source identities.
+
+Live browser rendering, actual downloads and live GF80 iframe communication
+remain unverified. Mathematical, command and DOM checks cover their declared
+scopes. Earlier output releases and original supplied files remain unchanged.

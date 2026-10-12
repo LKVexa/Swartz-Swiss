@@ -1,0 +1,169 @@
+{
+  "format": "ja21-source-archive-distribution/1",
+  "release": "1.1.0",
+  "date": "2026-10-11",
+  "policy": "The public release excludes historical/generated logs, including archive members; all retained source archive members remain byte-identical",
+  "archives": [
+    {
+      "path": "engine/df_medium/DF_Medium.source.zip",
+      "original_source_archive_sha256": "7c57c6ce49f7ff4c492cc53c3177778d04adfa96f3a96525c57c3c9f4ef2cda4",
+      "source_archive_sha256": "edca7a73581c190648f90969b1b024ef3a848dd56f02e829a69df3b35af24bb3",
+      "original_member_count": 365,
+      "distributed_member_count": 342,
+      "distributed_member_bytes": 2925525,
+      "omitted_log_member_count": 23,
+      "omitted_log_members": [
+        {
+          "path": "DF_Medium/conformance/logs/own_build.log",
+          "bytes": 9193,
+          "sha256": "945128ee094337fd47fa9f21ef8f3a891ed4126be9e4adc9cbe360a65dad31ca"
+        },
+        {
+          "path": "DF_Medium/conformance/logs/own_own_gate.log",
+          "bytes": 21321,
+          "sha256": "a7e78e232e2015380b4c24c8b3db70ed1eb3464b52e36e83ea519e60f42b5f37"
+        },
+        {
+          "path": "DF_Medium/conformance/logs/own_own_sums.log",
+          "bytes": 53,
+          "sha256": "8694d0d3fc36984771cbe0c34b6390e44c7cfd1ab67674429004368a3bc84928"
+        },
+        {
+          "path": "DF_Medium/conformance/logs/pacore_selfcheck.log",
+          "bytes": 1713,
+          "sha256": "82b7ea0c40cf2e1daaf82bdf660091d1e7227f828cd520fb8229bdd6814e34cf"
+        },
+        {
+          "path": "DF_Medium/conformance/logs/pacore_test_bottlerocket_backend.log",
+          "bytes": 3338,
+          "sha256": "ae087e004e55cb83a282efcf958a94e650e359d39c6e904d4c2fd7b5ef81538d"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/BR500_FINAL_LOCAL_QUALIFICATION.log",
+          "bytes": 4462,
+          "sha256": "eafe48fb5458d94ea5310a1c28ecd2f31690266857292a6a0224ec9b89f778dd"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/BR500_SANITIZERS.log",
+          "bytes": 279262,
+          "sha256": "f43080605a201a53178b1e2c703712a5fb6f15d4e750bfbf22b057417fcd08e8"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/BR500_SIZE_MEMORY.log",
+          "bytes": 3402,
+          "sha256": "de6a78a25b1d5a6ce37572e392516aa986f62fbcd2eb3aa42205c50c390e15a0"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/br500/BR-500-01_tests.log",
+          "bytes": 1341,
+          "sha256": "86a7916748134629c7e77a3ac110d0ae560f2e7cdb7b1ecfe53d618f4063d1ae"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/br500/BR-500-02_tests.log",
+          "bytes": 2348,
+          "sha256": "4db2829cf5c113fbd9ece3b9296188e34146cbe8e6d816b6d91b0bb7b89c9d1c"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/br500/BR-500-03_tests.log",
+          "bytes": 1500,
+          "sha256": "9d9a03987025b339f7726d89c0f9c89cecfe7a194ca89d3b739be706d869ccb8"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/br500/BR-500-04_tests.log",
+          "bytes": 2163,
+          "sha256": "68f8665c81dfcf322f07350f9eca5f41f7bc812cca10e1f7c8f44a1246891692"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/br500/BR-500-05_tests.log",
+          "bytes": 4354,
+          "sha256": "76c04a77fe0f10f000fd06216a310632de62801fbcec48867d407baa2285577b"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/br500/BR-500-06_tests.log",
+          "bytes": 5446,
+          "sha256": "97a3a599552cfd076f1abff92e98fc57caf35b64960f92ddde916cb2ee9cb76b"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/br500/BR-500-07_tests.log",
+          "bytes": 3172,
+          "sha256": "ca8eb1f6b89d6f3d727e0c853dbf1e2d112c7867ea330fa8e23fd4b216b9cfc2"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/br500/BR-500-08_tests.log",
+          "bytes": 3051,
+          "sha256": "8098ca91e002ea7eedc9134ecaf3fb3f167edf2fbb3fe66fe7d9052d18f30d5a"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/br500/BR-500-09_tests.log",
+          "bytes": 5035,
+          "sha256": "574da395cb676d05dbfb5d1463e7be4251e33ebb1c0e35bc8555d6b231ff73fd"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/br500/BR-500-10_tests.log",
+          "bytes": 1096,
+          "sha256": "885c3305b45b024291da249969983ac90f9c368b17aae55b51381d44a6c9af91"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/br500/BR-500-11_tests.log",
+          "bytes": 2015,
+          "sha256": "b14a820688619a45e4c410b18d0b8e9ce30f7bcc197d6b75214564596e3c9504"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/br500/BR-500-12_tests.log",
+          "bytes": 55900,
+          "sha256": "08e538a147c02bfbcfb718eb6c3105116ea767a0e52e8be12240e8e16cc4c2de"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/br500/BR-500-13_tests.log",
+          "bytes": 2140,
+          "sha256": "4f82d559f0b5551fe52d055dbdaf29206efbc5da3aaf9b5f38d751be7cf03df3"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/br500/BR-500-14_tests.log",
+          "bytes": 226,
+          "sha256": "eac65a6d308e1fa6b3a5f56ce51702e106a646131356f8398089c50b043afbde"
+        },
+        {
+          "path": "DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC/evidence/br500/BR-500-15_tests.log",
+          "bytes": 157776,
+          "sha256": "d83296666ad784a2bc0333f23e6ebf17b22904ca63786d19022e7f25780a107a"
+        }
+      ],
+      "retained_members_byte_identical": true,
+      "zip_crc_verification": "PASS"
+    },
+    {
+      "path": "helper/source/DF_Small-source.zip",
+      "original_source_archive_sha256": "d64085ac90f44b24196b0d0ed1b2859bb974723f8644a7258d1347550b9a5e07",
+      "source_archive_sha256": "6207f5aada3199371a5ec12bf4f18c3a4457da0f10ff3cfbab8eaf9d84e173f3",
+      "original_member_count": 142,
+      "distributed_member_count": 138,
+      "distributed_member_bytes": 1886108,
+      "omitted_log_member_count": 4,
+      "omitted_log_members": [
+        {
+          "path": "DF_Small/conformance/logs/own_build.log",
+          "bytes": 449,
+          "sha256": "3b33e18387547c92913086787424c82223063862d9482cb6f7cf9fb9c0158c66"
+        },
+        {
+          "path": "DF_Small/conformance/logs/own_own_gate.log",
+          "bytes": 2939,
+          "sha256": "b889531a2234983726b2ead833ae1ac9b8eb31c46f7d53168459d853a91e9b11"
+        },
+        {
+          "path": "DF_Small/conformance/logs/own_own_sums.log",
+          "bytes": 57,
+          "sha256": "b44e71df4388d3c905e8cc1ca0e925c4eb2ae1e001d722fa72943d360b329ad4"
+        },
+        {
+          "path": "DF_Small/conformance/logs/pacore_selfcheck.log",
+          "bytes": 1713,
+          "sha256": "82b7ea0c40cf2e1daaf82bdf660091d1e7227f828cd520fb8229bdd6814e34cf"
+        }
+      ],
+      "retained_members_byte_identical": true,
+      "zip_crc_verification": "PASS"
+    }
+  ]
+}

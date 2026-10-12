@@ -1,0 +1,54 @@
+deepml logic 0.3
+module repository.compass.direction
+policy pure_by_default
+policy no_network
+
+type DirectionStatus = Proposed | Admissible | Selected | Rejected
+
+let minimum_direction_score: Int = 70
+
+fn direction_score(priority:Int, feasibility:Int, policy_fit:Int) -> Int =
+  (priority * 5) + (feasibility * 3) + (policy_fit * 2)
+
+predicate admissible_score(score:Int) = score >= minimum_direction_score
+
+knowledge_base CompassDirection {
+  fact suite_assignment("SOPHIA", "semantic_judgment")
+  fact suite_assignment("CHARLOTTE", "structural_validation")
+  fact suite_assignment("LANDON", "repository_integration")
+  fact suite_assignment("PROFESSOR", "reviewable_explanation")
+  fact suite_assignment("PODIUM", "job_and_evidence_queue")
+  fact direction("preserve_provenance")
+  fact direction("deterministic_routing")
+  fact direction("reviewable_change")
+  fact direction_score_record("preserve_provenance", 92)
+  fact direction_score_record("deterministic_routing", 88)
+  fact direction_score_record("reviewable_change", 85)
+  fact policy_allowed("preserve_provenance")
+  fact policy_allowed("deterministic_routing")
+  fact policy_allowed("reviewable_change")
+  fact evidence_ready("preserve_provenance")
+  fact evidence_ready("deterministic_routing")
+  fact evidence_ready("reviewable_change")
+
+  rule admissible_direction(D) :-
+    direction(D),
+    direction_score_record(D, Score),
+    admissible_score(Score),
+    policy_allowed(D),
+    evidence_ready(D)
+
+  rule selected_direction(D) :-
+    admissible_direction(D),
+    sophia_approved(D),
+    charlotte_validated(D),
+    landon_integrated(D),
+    professor_explained(D),
+    podium_evidence_complete(D)
+}
+
+infer admissible_direction(Direction) strategy best_first memoize true
+plan CompassDirectionPlan goal direction_selected actions [score, validate, explain, evidence, select]
+certify logic CompassDirection using proof_carrying
+optimize module using [beta_reduction, rule_indexing, common_subexpression_elimination, tabling, proof_normalization]
+lower module to DEEPML_LOGIC_R12

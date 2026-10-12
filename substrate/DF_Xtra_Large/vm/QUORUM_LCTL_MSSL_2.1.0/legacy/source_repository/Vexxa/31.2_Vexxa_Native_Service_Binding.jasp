@@ -1,0 +1,38 @@
+ja source 0.3
+module suite31.vexxa.native_service_binding
+use Service
+policy explicit_network
+
+service VexxaNativeServiceBinding {
+    message BindingRequest {
+        request_id: Text,
+        service_descriptor: Text,
+        descriptor_hash: Text,
+        native_runtime: Text,
+        reconstruction_artifact_hash: Text,
+        declared_capabilities: Text,
+        transport: Text
+    }
+    message BindingResponse {
+        binding_id: Text,
+        compatibility_status: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_infrastructure_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint bind(request: BindingRequest) -> Stream<BindingResponse>
+        auth capability vexxa.service.bind
+        deadline 20s
+        retry max 1
+        idempotency request.request_id
+    protocol BindingSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json VexxaNativeServiceBinding.compatibility_report

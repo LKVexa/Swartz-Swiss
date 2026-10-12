@@ -1,0 +1,35 @@
+ja source 0.3
+module suite47.chatbot.refactoring
+use Agent
+policy no_network
+
+agent ChatbotRefactoring {
+    identity "chatbot_refactoring"
+    role "sophia-charlotte-landon-professor-podium-chatbot"
+    goal stage_semantics_preserving_bounded_refactor when confidence >= 0.96
+    memory session retention 1h
+    budget steps 65 tools 5
+    tool SOPHIAModelRefactorIntent(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONStageBoundedRefactor(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateRefactorEquivalence(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainRefactor(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordRefactorEvidence(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIAModelRefactorIntent
+        authorize LANDONStageBoundedRefactor
+        authorize CHARLOTTEValidateRefactorEquivalence
+        authorize ProfessorExplainRefactor
+        authorize PodiumRecordRefactorEvidence
+        continue when policy_allows
+        execute SOPHIAModelRefactorIntent("selected_refactor_scope")
+        execute LANDONStageBoundedRefactor("approved_refactor_plan")
+        execute CHARLOTTEValidateRefactorEquivalence("staged_refactor")
+        execute ProfessorExplainRefactor("validated_refactor")
+        execute PodiumRecordRefactorEvidence("refactor_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "ChatbotRefactoring.mcrt"

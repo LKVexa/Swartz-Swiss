@@ -1,0 +1,121 @@
+{
+  "authority_sha256": "05d863ad0c35445b29643d8175126fcde7ce720a84b74b500cf981ec70e83f2a",
+  "domain_output": {
+    "canonical_target_artifact": {
+      "artifact_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "canonical_json": "{}",
+      "loss_report": {
+        "lossy": false,
+        "unsupported_constructs": []
+      }
+    },
+    "input_type": "source_artifact",
+    "legacy_signals": [
+      "LOWER",
+      "PACKAGE",
+      "CERTIFY",
+      "VALIDATE",
+      "AUTHORIZE",
+      "RECOVER",
+      "TRANSLATE",
+      "COMPARE"
+    ],
+    "module": "Transition Plane",
+    "output_type": "canonical_target_artifact/loss_report",
+    "payload_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "plane": "translation_interop",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "c63cf7e7cd1951c18f2bc572da20126caf44e87fdb10649bf13983806d6a2fb0",
+  "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "module": "Transition Plane",
+  "module_id": 42,
+  "plane": "translation_interop",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "76be14589032a81f5aded63a6abe0e34799cda87ff7d43ee15dc9ed0f07a2950",
+  "stage_count": 8,
+  "stages": [
+    {
+      "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "node": "N01",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "2fd30537a4e8679ecba4b61de6e2a5c349a6b3156fabcecc7f33bb7ab8a8a6e1",
+      "stage": "SOURCE"
+    },
+    {
+      "input_sha256": "2fd30537a4e8679ecba4b61de6e2a5c349a6b3156fabcecc7f33bb7ab8a8a6e1",
+      "node": "N02",
+      "normalized_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "operator": "PARSE",
+      "output_sha256": "19890e2283c89eb38eaa64ea10457f85342882bcb49d0452887e5765fe59079d",
+      "stage": "PARSE"
+    },
+    {
+      "input_sha256": "19890e2283c89eb38eaa64ea10457f85342882bcb49d0452887e5765fe59079d",
+      "node": "N03",
+      "normalized_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "operator": "NORMALIZE",
+      "output_sha256": "de6db8266508c6bad4569c19900a2a9dfb480efe7fc648ece50cbc6a69c0ab79",
+      "stage": "NORMALIZE"
+    },
+    {
+      "features": [
+        229,
+        95,
+        122,
+        237,
+        31,
+        221,
+        142,
+        114
+      ],
+      "input_sha256": "de6db8266508c6bad4569c19900a2a9dfb480efe7fc648ece50cbc6a69c0ab79",
+      "node": "N04",
+      "operator": "TRANSFORM",
+      "output_sha256": "3604eaaa54091554a7c1b4d2a69fab8ee5c0664b3c55f4b389b19a787645db8d",
+      "stage": "TRANSLATE"
+    },
+    {
+      "input_sha256": "3604eaaa54091554a7c1b4d2a69fab8ee5c0664b3c55f4b389b19a787645db8d",
+      "node": "N05",
+      "normalized_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "operator": "NORMALIZE",
+      "output_sha256": "7e70df92a38eef5ccbb9618e7b5493e302468df75cceed24602ede9056fe0f71",
+      "stage": "CANONICALIZE"
+    },
+    {
+      "input_sha256": "7e70df92a38eef5ccbb9618e7b5493e302468df75cceed24602ede9056fe0f71",
+      "node": "N06",
+      "operator": "VALIDATE",
+      "output_sha256": "7958388f6f25b835fabf5f2558dab2acb0ee596078ec02d544added9cb19b268",
+      "stage": "VALIDATE",
+      "valid": true
+    },
+    {
+      "artifact_descriptor": {
+        "sha256": "7d2e72f85a7fcdb754bd87e8dd01794b1447c2d0fc77195eca3d4436589f1c70",
+        "type": "state.package"
+      },
+      "input_sha256": "7958388f6f25b835fabf5f2558dab2acb0ee596078ec02d544added9cb19b268",
+      "node": "N07",
+      "operator": "MATERIALIZE",
+      "output_sha256": "8ff4cfd1830edf17cf3f4b651c7ec3dac83895a5334914dfcf3b32f29387a658",
+      "stage": "PACKAGE"
+    },
+    {
+      "input_sha256": "8ff4cfd1830edf17cf3f4b651c7ec3dac83895a5334914dfcf3b32f29387a658",
+      "node": "N08",
+      "operator": "RECORD",
+      "output_sha256": "c9d18e6f8fc35481d5bd2e871602c117863c0b43886c8760a96ccc107b760d4c",
+      "receipt_sha256": "91df43f2c2146b7ea174adfea7929496e6d93de5136fd1503dd7443c1e9f27b9",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

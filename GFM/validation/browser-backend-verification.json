@@ -1,0 +1,13 @@
+{
+  "schema": "GFM-browser-backend-verification/1",
+  "date": "2026-10-11",
+  "tests": 10,
+  "passed": 10,
+  "failed": 0,
+  "exitCode": 0,
+  "scope": "Node VM execution: unchanged solver-source identity, four initial presets, exact API-value 2ns worker and1ns portable covered-pulse snapshot parity, atomic controls, source audit/reference, exports, serial scheduler, request failures, startup progress, synchronous/asynchronous Worker restrictions, and initialization cancellation. JSON API representation normalizes IEEE negative zero without rounding nonzero calculated values.",
+  "browserVisualVerification": "Performed separately by the parent task; this file records no browser UI claims.",
+  "engineSHA256": "93d1463b46a2bb6eaeb6c347f97c2a43101d811d0d6aa5d95d3a3b587f6a5b0a",
+  "browserBundleSHA256": "0710fe0a13fee1205ca96d0f00e03c12e92196378cc136849abf16e32c62808a",
+  "workerSourceSHA256": "277ae1b911eb17bcd5514708f3a0c4bfcca42a5d2d3b42c5bf0cf1f612860446"
+}

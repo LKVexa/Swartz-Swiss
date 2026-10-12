@@ -1,0 +1,10 @@
+{
+  "module_id": 49,
+  "checks": [
+    "authority_documents_present",
+    "graph_nodes_have_stable_ids",
+    "lowering_map_complete",
+    "manifest_references_valid",
+    "only_justified_terminal_nop"
+  ]
+}

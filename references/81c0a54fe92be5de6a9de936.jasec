@@ -1,0 +1,27 @@
+ja source 0.3
+module suite44.capability_security_plane.trust_boundaries
+use Security
+policy no_network
+
+principal TrustBoundaryWorker
+role CapabilitySecurityEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant boundary.inspect:approved
+}
+resource TrustBoundaryTransition classification restricted
+policy TrustBoundaryPolicy {
+    deny network.* by default
+    deny process.* by default
+    deny TrustBoundaryTransition when principal.role != CapabilitySecurityEnsemble
+    allow TrustBoundaryTransition when principal.role == CapabilitySecurityEnsemble
+    require human_approval for boundary.cross
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "TrustBoundaryPolicy.decision.mcrt"

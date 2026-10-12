@@ -1,0 +1,54 @@
+{
+  "suite_id": 1,
+  "suite_name": "Observer",
+  "plane": "sense_context",
+  "legacy_sha256": "d8039591bc41fe195d281a5f86031d2479c795bc7949c0470bb9bdb816540af7",
+  "legacy_root": "legacy/source_repository/Observer",
+  "files": [
+    {
+      "path": "01_observer_decisions.jaa",
+      "sha256": "186a7be5ad5f821576ec4cb07ab61c1cd2873e285139cc1347f175dbe7a8c651",
+      "bytes": 1915
+    },
+    {
+      "path": "01_observer_errors.jaa",
+      "sha256": "f8fa9aa8662ce30d518830b0179189bbbc5595a6ee44158198b686c6cb3380bf",
+      "bytes": 1813
+    },
+    {
+      "path": "01_observer_evidence.jaa",
+      "sha256": "62814f31b6b89099d62411b0f0bbe12a8fa6235ec869fe2e377ea2a31f9e8b99",
+      "bytes": 1899
+    },
+    {
+      "path": "01_observer_prompts.jaa",
+      "sha256": "7c5167319f49b4edf06b491af18311e21229ec86bbaa9eda92424bb0c8ffac07",
+      "bytes": 1762
+    },
+    {
+      "path": "01_observer_runtime_events.jaa",
+      "sha256": "5faa8daf903eed24ad609dfb131b813e9de370f2e69813f7b57af1956205ea96",
+      "bytes": 1914
+    },
+    {
+      "path": "01_observer_uploads.jaa",
+      "sha256": "88359822d756f15b4b0b2bf86a5f9fc6bd8994830fa850b00009811cf92e7b13",
+      "bytes": 1789
+    },
+    {
+      "path": "MANIFEST.json",
+      "sha256": "1f031186cfb5133deede4115d079524a96bbc240bfac9635156bc137acba4db7",
+      "bytes": 3167
+    },
+    {
+      "path": "README.md",
+      "sha256": "7cada7ec1d731809a2d01ec217065c6f4a75909c31b9dec442a71cd5bc2f9333",
+      "bytes": 1763
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "sha256": "0937fdeab047d6e9d3219b1e36533643e3d5c0d0438c2d6fb40c26893304e01f",
+      "bytes": 777
+    }
+  ]
+}

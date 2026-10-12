@@ -1,0 +1,27 @@
+/* Equation register and phase-space values, release 0.2. */
+.workspace-tabs{overflow-x:auto}.workspace-tab{flex-shrink:0}
+.equation-view{max-width:1440px;margin:auto;padding:28px}
+.equation-counts{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+.equation-count{background:var(--panel,#111922);border:1px solid #29343d;border-radius:8px;padding:14px 22px;min-width:145px}
+.equation-count strong{display:block;font-size:26px;margin-bottom:5px}
+.equation-count span,.status-badge{font-size:11px;letter-spacing:1px;text-transform:uppercase}
+.equation-tools{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.equation-tools .search-box{flex:1;min-width:230px;margin:0}
+.equation-tools label{display:flex;align-items:center;gap:10px;font-size:12px;color:#a2aeba}
+.equation-tools select{background:#131c26;color:#d9e3ec;border:1px solid #34414d;border-radius:5px;padding:10px}
+.equation-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:18px 0 30px}
+.equation-card{padding:24px;min-width:0}.equation-card h2{font-size:19px;margin:12px 0}
+.equation-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.equation-top code{font-size:11px;color:#a2aeba}.status-badge{padding:5px 9px;border-radius:4px;font-weight:600;background:#243242;color:#c4d1e2}
+.status-verified{color:#86d7b4;background:#19392f}.status-refined{color:#b5cdfa;background:#203b5e}
+.status-rejected{color:#f2b0a4;background:#422622}.status-unresolved{color:#e5ce92;background:#3b3423}
+.equation-domain{font-size:12px;color:#94a9bd;line-height:1.7}
+.equation-formula{display:block;white-space:pre-wrap;overflow-wrap:anywhere;color:#d8e5f3;background:#0b121a;border:1px solid #283541;border-radius:5px;padding:14px;font-size:13px;line-height:1.8}
+.equation-card p{line-height:1.7;font-size:13px;color:#bdc8d4}.equation-card details{margin:14px 0;font-size:12px}
+.equation-card summary{cursor:pointer;color:#a5b8cf}.equation-card pre{font-size:11px;white-space:pre-wrap;overflow-wrap:anywhere;background:#0b121a;padding:12px;max-height:280px;overflow:auto}
+.equation-links{display:flex;flex-direction:column;gap:7px;margin:16px 0;font-size:12px}
+.equation-card .button{margin-top:8px}.equation-card .small-note{font-size:11px;color:#98a6b7}
+.wigner-grid{display:grid;gap:3px;margin-top:12px}.wigner-label{display:flex;align-items:center;justify-content:center;color:#aab9c8;font-size:10px;min-width:0;aspect-ratio:1}
+.wigner-cell{aspect-ratio:1;border:1px solid #50627355;border-radius:2px}.wigner-cell:focus{outline:2px solid #d1dcf0}
+@media(max-width:900px){.equation-list{grid-template-columns:1fr}.equation-view{padding:18px}}
+@media(max-width:480px){.equation-count{min-width:calc(50% - 6px);padding:12px}.equation-tools{align-items:stretch}.equation-tools .search-box{flex-basis:100%}.equation-card{padding:17px}}

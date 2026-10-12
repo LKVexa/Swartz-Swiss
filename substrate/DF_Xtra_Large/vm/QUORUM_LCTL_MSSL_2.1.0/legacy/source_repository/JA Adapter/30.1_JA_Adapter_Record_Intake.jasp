@@ -1,0 +1,37 @@
+ja source 0.3
+module suite30.ja_adapter.record_intake
+use Service
+policy explicit_network
+
+service JAAdapterRecordIntake {
+    message IntakeRequest {
+        request_id: Text,
+        record_format: Text,
+        schema_version: Text,
+        record_kind: Text,
+        payload: Text,
+        source_hash: Text,
+        provenance_id: Text
+    }
+    message IntakeResponse {
+        canonical_request_id: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_adapter_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint ingest(request: IntakeRequest) -> Stream<IntakeResponse>
+        auth capability ja_adapter.intake
+        deadline 10s
+        retry max 1
+        idempotency request.request_id
+    protocol IntakeSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json JAAdapterRecordIntake.compatibility_report

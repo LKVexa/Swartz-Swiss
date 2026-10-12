@@ -1,0 +1,6 @@
+{
+  "schema": "QUORUM-REPLAY-LEDGER/2.0",
+  "scope": "contract_graph_reference_executor",
+  "exact_contract_replay_pass": 66,
+  "domain_runtime_replay": "BLOCKED_NOT_IMPLEMENTED"
+}

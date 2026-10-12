@@ -1,0 +1,36 @@
+ja source 0.3
+module suite31.vexxa.service_discovery
+use Service
+policy explicit_network
+
+service VexxaServiceDiscovery {
+    message DiscoveryRequest {
+        request_id: Text,
+        service_class: Text,
+        compatibility_version: Text,
+        transport_preference: Text,
+        reconstruction_profile: Text
+    }
+    message DiscoveryResponse {
+        service_descriptor: Text,
+        descriptor_hash: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_infrastructure_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint discover(request: DiscoveryRequest) -> Stream<DiscoveryResponse>
+        auth capability vexxa.service.discover
+        deadline 10s
+        retry max 2
+        idempotency request.request_id
+    protocol DiscoverySession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json VexxaServiceDiscovery.compatibility_report

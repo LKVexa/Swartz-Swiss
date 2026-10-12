@@ -1,0 +1,39 @@
+{
+  "suite_id": 57,
+  "suite_name": "Translation Build Test and Evaluation Jobs",
+  "plane": "orchestration",
+  "legacy_sha256": "0744b0cde64166123544b875cb0fd539aa69bbd07b9ec1a946ccc9cb27566534",
+  "legacy_root": "legacy/source_repository/Translation Build Test and Evaluation Jobs",
+  "files": [
+    {
+      "path": "57.1_Governed_Job_Families.jaops",
+      "sha256": "dd7615ee341d584a47e5294d022b2373fd24361030e2e646b29315c89fc44d6a",
+      "bytes": 1198
+    },
+    {
+      "path": "57.2_Translation_Jobs.jaops",
+      "sha256": "748b40d77d964e69c5d4c135a174302d2e080689056ed74e12a1b7f9f9ef715f",
+      "bytes": 1182
+    },
+    {
+      "path": "57.3_Build_Jobs.jaops",
+      "sha256": "75301838bbba55e804f72c46739aecc184f3558ac214ebe17214e8e341a8d8fd",
+      "bytes": 1081
+    },
+    {
+      "path": "57.4_Test_Jobs.jaops",
+      "sha256": "1d498804385d02256560d29ea39f237958341d275cec58bc23b4694fe1015622",
+      "bytes": 1063
+    },
+    {
+      "path": "57.5_Evaluation_Jobs.jaops",
+      "sha256": "6b1da4e84c807bc5a6cfb4a153135061e76762d7f2d355dcf81f505d918ff000",
+      "bytes": 1166
+    },
+    {
+      "path": "README.md",
+      "sha256": "bf3a5b1d8af7c493de89eb5b8b0b4f199d55dbddc8c2f712866d10b129c5e8f0",
+      "bytes": 16250
+    }
+  ]
+}

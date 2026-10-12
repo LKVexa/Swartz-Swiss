@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "176cbb85b5235f3e16962a6360663336e394768a772952e7852ca5add12cce89",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Filing Cabinet",
+  "module_id": 12,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

@@ -1,0 +1,36 @@
+ja source 0.3
+module suite16.perceiver.recall
+use Agent
+policy no_network
+
+agent PerceiverRecall {
+    identity "perceiver_recall"
+    role "sophia-charlotte-landon-professor-podium-perceiver"
+    goal return_scoped_provenance_bound_recall when confidence >= 0.95
+    memory session retention 1h
+    budget steps 45 tools 5
+    tool LANDONRetrieveCandidates(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIARankRecall(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateRecall(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainRecall(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordRecall(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONRetrieveCandidates
+        authorize SOPHIARankRecall
+        authorize CHARLOTTEValidateRecall
+        authorize ProfessorExplainRecall
+        authorize PodiumRecordRecall
+        continue when policy_allows
+        execute LANDONRetrieveCandidates("scoped_memory_query")
+        execute SOPHIARankRecall("retrieved_memory_candidates")
+        execute CHARLOTTEValidateRecall("ranked_recall_set")
+        execute ProfessorExplainRecall("validated_recall")
+        execute PodiumRecordRecall("recall_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "PerceiverRecall.mcrt"
+

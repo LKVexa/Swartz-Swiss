@@ -1,0 +1,29 @@
+{
+  "arithmetic_ops_per_second": 80827.653,
+  "branch_mean_ns": 7.944,
+  "branch_ops_per_second": 125881849.067,
+  "brim_load_execute_command": {
+    "loops": 12,
+    "max_ns": 17981216,
+    "mean_ns": 15773431.6,
+    "median_ns": 15899628.5,
+    "min_ns": 13771875
+  },
+  "brim_load_execute_mean_ns": 15773431.6,
+  "instructions_per_second": 245436416.628,
+  "load_store_mean_ns": 1194.401,
+  "load_store_ops_per_second": 837239.486,
+  "persistence_commit_mean_ns": 26408086,
+  "record": "BOTTLE_ROCKET.PerformanceBaseline",
+  "recovery_mean_ns": 20030615.7,
+  "replay_rejection_mean_ns": 20422332.7,
+  "signature_validation_command": {
+    "loops": 10,
+    "max_ns": 18261464,
+    "mean_ns": 16726806.6,
+    "median_ns": 16728212.0,
+    "min_ns": 15083384
+  },
+  "signature_validation_mean_ns": 16726806.6,
+  "startup_inspect_mean_ns": 1759288.2
+}

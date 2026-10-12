@@ -1,0 +1,152 @@
+{
+  "schema": "VB-JA21/VEC1_CANONICAL_VECTORS/1",
+  "comment": "Golden canonical-JSON vectors shared by the Python control plane (vec1.common.canonical_bytes) and the C# presenter (VecCanonical.Write). Encoding: UTF-8, object keys sorted by code point, separators ',' and ':', no ensure_ascii escaping. Both implementations must reproduce 'canonical' byte for byte and 'sha256' exactly; the presenter checks this at startup and fails closed.",
+  "vectors": [
+    {
+      "name": "scalars",
+      "value": {
+        "a": null,
+        "b": true,
+        "c": false,
+        "n": 0,
+        "neg": -1,
+        "big": 9007199254740991
+      },
+      "canonical": "{\"a\":null,\"b\":true,\"big\":9007199254740991,\"c\":false,\"n\":0,\"neg\":-1}",
+      "sha256": "6a3938cd55431e7f1e67fb6dc0086ece31c318e80ab3e2327ebee8bf6a341c14"
+    },
+    {
+      "name": "key_order",
+      "value": {
+        "z": 1,
+        "a": 2,
+        "A": 3,
+        "_": 4,
+        "a0": 5,
+        "a_": 6
+      },
+      "canonical": "{\"A\":3,\"_\":4,\"a\":2,\"a0\":5,\"a_\":6,\"z\":1}",
+      "sha256": "0e96adf2e1dd89dfc47df959ba443c89921ef5e49a90afeaed69882042f1cf00"
+    },
+    {
+      "name": "escapes",
+      "value": {
+        "s": "quote\" back\\ slash/ nl\n tab\t cr\r bs\b ff\f bell\u0007 del"
+      },
+      "canonical": "{\"s\":\"quote\\\" back\\\\ slash/ nl\\n tab\\t cr\\r bs\\b ff\\f bell\\u0007 del\"}",
+      "sha256": "17e4bf3217c6bf0d74ba6d913f51399d01399471a3d97446b3f27eb738b7caf9"
+    },
+    {
+      "name": "unicode",
+      "value": {
+        "t": "café — 日本語    🙂"
+      },
+      "canonical": "{\"t\":\"café — 日本語    🙂\"}",
+      "sha256": "1b7e8d735c5d6396f7efcf84ffb97c1f14e6354e84c91cd430b3df6a074ed403"
+    },
+    {
+      "name": "nesting",
+      "value": {
+        "l": [
+          1,
+          "two",
+          null,
+          true,
+          {
+            "k": []
+          },
+          []
+        ],
+        "o": {
+          "i": {
+            "j": {}
+          }
+        }
+      },
+      "canonical": "{\"l\":[1,\"two\",null,true,{\"k\":[]},[]],\"o\":{\"i\":{\"j\":{}}}}",
+      "sha256": "e0e593c6fe32677f4e31718cc8ab29923374e44998412b48072b9f0760b680c1"
+    },
+    {
+      "name": "empty",
+      "value": {},
+      "canonical": "{}",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "name": "electron_shape",
+      "value": {
+        "schema": "VEC/ELECTRON_STATE/1",
+        "electron_id": "vec1-0123456789abcdef01234567",
+        "generation_id": 0,
+        "parent_id": null,
+        "lineage": [
+          "vec1-0123456789abcdef01234567"
+        ],
+        "genesis_record": {
+          "created_utc": "2026-09-17T00:00:00Z",
+          "genome_sha256": "abababababababababababababababababababababababababababababababab"
+        },
+        "genome": {
+          "schema": "VEC/electron_genome/1",
+          "version": "0.1.1-candidate",
+          "program": "programs/fabric_probe.pal",
+          "program_sha256": "cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd",
+          "targets": [
+            "N_SMALL",
+            "N_MEDIUM",
+            "N_LARGE",
+            "N_XLARGE"
+          ],
+          "network": "deny",
+          "capabilities": [
+            "fabric.execute",
+            "state.snapshot",
+            "state.clone",
+            "evidence.read"
+          ]
+        },
+        "properties": {
+          "charge": -1,
+          "energy": 0,
+          "orbital": "UNASSIGNED",
+          "state": "READY",
+          "phase": 0,
+          "spin": "UP",
+          "momentum_vector": [
+            0,
+            0,
+            0
+          ],
+          "position_node_vector": [],
+          "interaction_radius": "DF0_LOCAL"
+        },
+        "runtime": {
+          "tick": 0,
+          "instruction_counter": 0,
+          "execution_status": "READY",
+          "mailbox": [],
+          "outbound_queue": [],
+          "base_snapshot": null,
+          "last_receipt": null
+        },
+        "security": {
+          "network": "deny",
+          "plugins": [],
+          "filesystem": "package-runtime-only",
+          "host_calls": "DF-only",
+          "suspended": false,
+          "retired": false
+        },
+        "provenance": {
+          "origin": "presenter",
+          "role": "session",
+          "session_id": "vec1-0123456789abcdef01234567",
+          "product": "VB JA21 DF_Medium Browser",
+          "version": "9.0.0"
+        }
+      },
+      "canonical": "{\"electron_id\":\"vec1-0123456789abcdef01234567\",\"generation_id\":0,\"genesis_record\":{\"created_utc\":\"2026-09-17T00:00:00Z\",\"genome_sha256\":\"abababababababababababababababababababababababababababababababab\"},\"genome\":{\"capabilities\":[\"fabric.execute\",\"state.snapshot\",\"state.clone\",\"evidence.read\"],\"network\":\"deny\",\"program\":\"programs/fabric_probe.pal\",\"program_sha256\":\"cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd\",\"schema\":\"VEC/electron_genome/1\",\"targets\":[\"N_SMALL\",\"N_MEDIUM\",\"N_LARGE\",\"N_XLARGE\"],\"version\":\"0.1.1-candidate\"},\"lineage\":[\"vec1-0123456789abcdef01234567\"],\"parent_id\":null,\"properties\":{\"charge\":-1,\"energy\":0,\"interaction_radius\":\"DF0_LOCAL\",\"momentum_vector\":[0,0,0],\"orbital\":\"UNASSIGNED\",\"phase\":0,\"position_node_vector\":[],\"spin\":\"UP\",\"state\":\"READY\"},\"provenance\":{\"origin\":\"presenter\",\"product\":\"VB JA21 DF_Medium Browser\",\"role\":\"session\",\"session_id\":\"vec1-0123456789abcdef01234567\",\"version\":\"9.0.0\"},\"runtime\":{\"base_snapshot\":null,\"execution_status\":\"READY\",\"instruction_counter\":0,\"last_receipt\":null,\"mailbox\":[],\"outbound_queue\":[],\"tick\":0},\"schema\":\"VEC/ELECTRON_STATE/1\",\"security\":{\"filesystem\":\"package-runtime-only\",\"host_calls\":\"DF-only\",\"network\":\"deny\",\"plugins\":[],\"retired\":false,\"suspended\":false}}",
+      "sha256": "04f492e6f89f6608206ca50e8c1456a4b7d20b836f4f06a168656c6b503a1b06"
+    }
+  ]
+}

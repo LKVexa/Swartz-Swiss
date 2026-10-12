@@ -1,0 +1,57 @@
+{
+  "package": "BR-460-12",
+  "record": "BR.PackageRequirements",
+  "requirements": [
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 + memory measurement + performance median + make size",
+      "evidence_path": "evidence/BR-460-12_tests.log",
+      "exit_code": 0,
+      "notes": "Idle wide-state preallocation is eliminated and target arithmetic/load-store performance improves. NOP/branch dispatch regression is disclosed in DELTA.json and is not hidden.",
+      "requirement_id": "BR-460-12-R01",
+      "result": "PASS",
+      "sha256": "f58c352bc3bbcf2e4aededc25e6b9f572ceaa48ff977a4d37007e7cbd34ecc8e",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 + memory measurement + performance median + make size",
+      "evidence_path": "evidence/BR-460-12_tests.log",
+      "exit_code": 0,
+      "notes": "Idle wide-state preallocation is eliminated and target arithmetic/load-store performance improves. NOP/branch dispatch regression is disclosed in DELTA.json and is not hidden.",
+      "requirement_id": "BR-460-12-R02",
+      "result": "PASS",
+      "sha256": "f58c352bc3bbcf2e4aededc25e6b9f572ceaa48ff977a4d37007e7cbd34ecc8e",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 + memory measurement + performance median + make size",
+      "evidence_path": "evidence/BR-460-12_tests.log",
+      "exit_code": 0,
+      "notes": "Idle wide-state preallocation is eliminated and target arithmetic/load-store performance improves. NOP/branch dispatch regression is disclosed in DELTA.json and is not hidden.",
+      "requirement_id": "BR-460-12-R03",
+      "result": "PASS",
+      "sha256": "f58c352bc3bbcf2e4aededc25e6b9f572ceaa48ff977a4d37007e7cbd34ecc8e",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.5.0",
+      "blocker": null,
+      "command": ".build/t460 + memory measurement + performance median + make size",
+      "evidence_path": "evidence/BR-460-12_tests.log",
+      "exit_code": 0,
+      "notes": "Idle wide-state preallocation is eliminated and target arithmetic/load-store performance improves. NOP/branch dispatch regression is disclosed in DELTA.json and is not hidden.",
+      "requirement_id": "BR-460-12-R04",
+      "result": "PASS",
+      "sha256": "f58c352bc3bbcf2e4aededc25e6b9f572ceaa48ff977a4d37007e7cbd34ecc8e",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "status": "OPERATIONAL",
+  "title": "Acceptance gate",
+  "workflow": "docs/WORKFLOW_APPLIED_4.6.0/12_BR-460-12_acceptance_gate_PROMPT_AND_WORKFLOW.md"
+}

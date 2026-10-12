@@ -1,0 +1,1036 @@
+{
+  "attestations": {
+    "N_LARGE": {
+      "adapter_abi": "PA-LCTL/TARGET_ADAPTER/1",
+      "adapter_version": "1.0.0",
+      "authority": "local-operator",
+      "df_release": "DF-PA21.2-1.0.0",
+      "execution_label": "CLASSICAL_NATIVE_VM_BOUNDED_EXECUTION",
+      "guest_dialect": "LCTLC/1.2 (columned-lctl/4.3, Python compiler tools/lctl430.py)",
+      "image_format": "BRIM/1 (80-byte header + 16-byte instructions, tag BRLCTL43, optional Ed25519 signature)",
+      "node_id": "N_LARGE",
+      "note": "This attestation covers a classical virtual machine bound as a fabric node. It is not, and cannot be upgraded into, attestation of a physical quantum target.",
+      "physical_distributed": false,
+      "physical_parallel": false,
+      "physical_qpu": false,
+      "physical_release_outputs": {
+        "PHYSICAL_DISTRIBUTED_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY",
+        "PHYSICAL_PARALLEL_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY"
+      },
+      "root": "/mnt/data/vec1_build/assembly_test/DF_Large/vm/BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE_61K",
+      "runtime_contract": "BR/1.1 ISA (marker 21), ABI 2, Device ABI 1.0, LCTLC/1.2 source, BRIM/1 images; freestanding C11 core behind a HAL",
+      "schema": "DF/ADAPTER_ATTESTATION/1",
+      "target_class": "CLASSICAL_LOCAL_VM",
+      "target_id": "bottle-rocket-4.7.0-br11-local",
+      "target_self_reported": {
+        "fabric_execution_binary": ".build/brctl-dev (-DBR_DEVELOPMENT=1)",
+        "production_cli_refuses_unprovisioned_images": true
+      },
+      "toolchain": {
+        "brctl_dev_sha256": "dfaa3efdfe4606c844b9c8de8b069068140391620f61ebab43a44763486a358d",
+        "brim_verify_py_sha256": "89c08654527232581019fcde72b2a466a2c7ab5845383e8d65992b9b4845c071",
+        "lctl430_py_sha256": "cfd4dc7a3dc880f7757144261806f7d366eb32e91b70b65342b2ebaa66ec9e63"
+      },
+      "trust_domain": "LOCAL_TRUSTED",
+      "vm_name": "BOTTLE ROCKET 4.7.0 Columned-LCTL Virtual Device/I/O/Service Architecture (BR/1.1, 61K)"
+    },
+    "N_MEDIUM": {
+      "adapter_abi": "PA-LCTL/TARGET_ADAPTER/1",
+      "adapter_version": "1.0.0",
+      "authority": "local-operator",
+      "df_release": "DF-PA21.2-1.0.0",
+      "execution_label": "CLASSICAL_NATIVE_VM_BOUNDED_EXECUTION",
+      "guest_dialect": "LCTLC/1.1 (Columned LCTL, native C compiler brlctlc)",
+      "image_format": "BRIM/1 + BRPV/1 (80-byte header, 96-byte provenance, optional Ed25519 signature; native <= 8368/8432 bytes; loader ceiling 51200); BRTM/1 secure bundles",
+      "node_id": "N_MEDIUM",
+      "note": "This attestation covers a classical virtual machine bound as a fabric node. It is not, and cannot be upgraded into, attestation of a physical quantum target.",
+      "physical_distributed": false,
+      "physical_parallel": false,
+      "physical_qpu": false,
+      "physical_release_outputs": {
+        "PHYSICAL_DISTRIBUTED_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY",
+        "PHYSICAL_PARALLEL_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY"
+      },
+      "root": "/mnt/data/vec1_build/assembly_test/DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC",
+      "runtime_contract": "LCTLC/1.1 -> BRIR/1.1 -> BRIM/1+BRPV/1 -> BRTM/1; ISA 4.1; ABI 1.0; Device ABI 1.0; BRCR/1; BRGD/1; core ABI 0x00040700",
+      "schema": "DF/ADAPTER_ATTESTATION/1",
+      "target_class": "CLASSICAL_LOCAL_VM",
+      "target_id": "bottle-rocket-5.0.0-local",
+      "target_self_reported": {
+        "PACKAGE_INFO.json": {
+          "blocked_requirements": 8,
+          "blockers": [
+            "independent second-machine/operator replay",
+            "independent second-machine/operator rebuild",
+            "literal 72-hour native soak",
+            "AArch64 and Windows execution qualification",
+            "final 100% evidence ledger dependent on those proofs"
+          ],
+          "brim_bytes": 272,
+          "brim_ceiling": 51200,
+          "core61_ceiling": 61000,
+          "core61_stripped_bytes": 49072,
+          "distribution": "RELEASE_CANDIDATE",
+          "local_blocked_work_packages": 4,
+          "local_operational_work_packages": 11,
+          "operational_requirements": 88,
+          "package": "BOTTLE ROCKET 5.0.0 Columned LCTL Fully Operational VM Qualification Candidate",
+          "production_boundary_bytes": 107675,
+          "production_boundary_ceiling": 110000,
+          "qualification_private_keys_in_release": false,
+          "qualification_private_keys_included": false,
+          "release": "5.0.0-qualification-candidate",
+          "release_manifest_signature_role": "qualification/release-engineering; not production HSM/root",
+          "release_manifest_signed": true,
+          "runtime_contract": "LCTLC/1.1 -> BRIR/1.1 -> BRIM/1+BRPV/1 -> BRTM/1; ISA 4.1; ABI 1.0; Device ABI 1.0; BRCR/1; BRGD/1; core ABI 0x00040700",
+          "strict_dependency_chain": "BLOCKED by inherited BR-490-11 external proofs and corresponding BR-500 gates",
+          "strict_gate": "BLOCKED",
+          "workflow_packages": 15,
+          "workflow_requirements": 96
+        },
+        "blocked_requirements": 8,
+        "blockers": [
+          "independent second-machine/operator replay",
+          "independent second-machine/operator rebuild",
+          "literal 72-hour native soak",
+          "AArch64 and Windows execution qualification",
+          "final 100% evidence ledger dependent on those proofs"
+        ],
+        "operational_requirements": 88,
+        "strict_gate": "BLOCKED"
+      },
+      "toolchain": {
+        "bradmin_sha256": "da2da4c1b79a2cfed34072c1c7fc5a5dabfe2036aa5ca967a08a3ba132bcfb35",
+        "brverify_sha256": "a0043a793d22fe5bfc173ea9cbee3058d4ef7384d5792f500e722e89ca1ff699"
+      },
+      "trust_domain": "LOCAL_TRUSTED",
+      "vm_name": "BOTTLE ROCKET 5.0.0 qualification candidate (frozen 4.7.0 core, ISA 4.1)"
+    },
+    "N_SMALL": {
+      "adapter_abi": "PA-LCTL/TARGET_ADAPTER/1",
+      "adapter_version": "1.0.0",
+      "authority": "local-operator",
+      "df_release": "DF-PA21.2-1.0.0",
+      "execution_label": "CLASSICAL_NATIVE_VM_BOUNDED_EXECUTION",
+      "guest_dialect": "MSSL/ASM-1",
+      "image_format": "BRIM/1-v3 (80-byte header, SHA-256 seal, Q17-MODEL-OPS-3 tag, optional Ed25519 signature; <= 51200 bytes)",
+      "node_id": "N_SMALL",
+      "note": "This attestation covers a classical virtual machine bound as a fabric node. It is not, and cannot be upgraded into, attestation of a physical quantum target.",
+      "physical_distributed": false,
+      "physical_parallel": false,
+      "physical_qpu": false,
+      "physical_release_outputs": {
+        "PHYSICAL_DISTRIBUTED_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY",
+        "PHYSICAL_PARALLEL_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY"
+      },
+      "root": "/mnt/data/vec1_build/assembly_test/DF_Small/vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K",
+      "runtime_contract": "BRIM/1-v3 + APDU/1 + MSSL/ASM-1; word 1,048,576 bits; 16 registers; 24 opcodes; 4 arithmetic modes; classification MODEL_OPERATIONAL",
+      "schema": "DF/ADAPTER_ATTESTATION/1",
+      "target_class": "CLASSICAL_LOCAL_VM",
+      "target_id": "bottle-rocket-3.0.0-model-local",
+      "target_self_reported": {
+        "MANIFEST.json": {
+          "ceilings": {
+            "brim_bytes": 51200,
+            "release_bytes": 110000
+          },
+          "deploy": {
+            "bytes": 176,
+            "path": "deploy/BOTTLE_ROCKET_SIM_CORE_3.0.0_MODEL.brimg",
+            "sha256": "5b5cfcebc2448c27590d61d15ec1d20b5192064e92c34fd6f3053c306d162f54"
+          },
+          "external_gates": "README.md",
+          "inputs": {
+            "archive_sha256": "44d58787c4cafa2ab191142d657c9d4488b2702005b1af27e75b12a74c23f07c",
+            "workflow_sha256": "a20f5d32884d696097c9077ee32e9a38ba747e128e84b11d4be966eb0dbd2661"
+          },
+          "integrity": "SHA256SUMS.txt binds all other release files",
+          "qualification": {
+            "host_model": "MODEL_OPERATIONAL",
+            "physical_sim_uicc": "EXTERNAL_NOT_QUALIFIED"
+          },
+          "record": "BOTTLE_ROCKET.ReleaseManifest",
+          "requirements": [
+            "POSIX",
+            "C11",
+            "Make",
+            "OpenSSL3"
+          ],
+          "verify": "make clean operational && make sanitize",
+          "version": "3.0.0-MODEL"
+        },
+        "evidence/OPERATIONAL.json": {
+          "gate": "PASS",
+          "record": "BOTTLE_ROCKET.ModelEvidence",
+          "scope": "Host model only; physical SIM/UICC external.",
+          "verified": [
+            "24 opcode positive/denial paths",
+            "9 service positive/denial paths",
+            "four arithmetic modes",
+            "1048576-bit register/stack boundaries",
+            "MSSL all-opcode parse/reproduction/rejection",
+            "capability intersection",
+            "guest SHA256 and Ed25519 KAT/wrong signature",
+            "51200-byte signed fragmented update",
+            "fresh-VM activation/replay/rollback/recover",
+            "interrupted-stage rejection",
+            "all 12 APDUs and state slices",
+            "10000 fuzz cases",
+            "ASan+UBSan",
+            "warning-clean build",
+            "size gates"
+          ],
+          "version": "3.0.0-MODEL"
+        },
+        "evidence/SIZE.json": {
+          "brim_bytes": 176,
+          "brim_ceiling": 51200,
+          "brim_gate": "PASS",
+          "ceiling": 110000,
+          "gate": "PASS",
+          "method": "sum of regular files in clean release; build outputs excluded",
+          "record": "BOTTLE_ROCKET.ReleaseSize",
+          "uncompressed_bytes": 109905,
+          "version": "3.0.0-MODEL"
+        }
+      },
+      "toolchain": {
+        "brctl_sha256": "f9ed102c1024d698b75c705bc32c4a261f8edfb6baa3bca4cb43730ea3831dbf"
+      },
+      "trust_domain": "LOCAL_TRUSTED",
+      "vm_name": "BOTTLE ROCKET 3.0.0-MODEL (SIM-core model VM)"
+    },
+    "N_XLARGE": {
+      "adapter_abi": "PA-LCTL/TARGET_ADAPTER/1",
+      "adapter_version": "1.0.0",
+      "authority": "local-operator",
+      "df_release": "DF-PA21.2-1.0.0",
+      "execution_label": "CLASSICAL_HOSTED_VM_BOUNDED_EXECUTION",
+      "guest_dialect": "LCTLC/1.0 (COLUMNED LCTL QVM Profile 1; vm-lane REG rows)",
+      "image_format": "QBRIM 2 (canonical JSON payload + Ed25519 signature; key_id trust store; rollback floor)",
+      "node_id": "N_XLARGE",
+      "note": "This attestation covers a classical virtual machine bound as a fabric node. It is not, and cannot be upgraded into, attestation of a physical quantum target.",
+      "physical_distributed": false,
+      "physical_parallel": false,
+      "physical_qpu": false,
+      "physical_release_outputs": {
+        "PHYSICAL_DISTRIBUTED_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY",
+        "PHYSICAL_PARALLEL_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY"
+      },
+      "root": "/mnt/data/vec1_build/assembly_test/DF_Xtra_Large/vm/QUORUM_LCTL_MSSL_2.1.0",
+      "runtime_contract": "QVM ISA 1 (24 opcodes) / ABI 2; PC + 16 registers up to 1,048,576 bits; 4096-byte memory; 256-word stack; QBRIM 2 signed images; step budget default 1,000,000; program <= 65,535 instructions",
+      "schema": "DF/ADAPTER_ATTESTATION/1",
+      "target_class": "CLASSICAL_LOCAL_VM",
+      "target_id": "quorum-vm-5.0.0-candidate-local",
+      "target_self_reported": {
+        "MANIFEST.json": {
+          "canonical_lctl": 133,
+          "current_file_count_excluding_root_checksum": 5508,
+          "gate_opening_decision": "qualification/open_gates/L4_L9_GATE_OPENING_DECISION_2.1.0.md",
+          "lctl_verification_all_pass_retained_from_2_0_1": true,
+          "lctlc_sources": 138,
+          "legacy_file_count": 612,
+          "legacy_immutability_expected": true,
+          "module_count": 66,
+          "module_current_manifests": 66,
+          "module_current_sha256_manifests": 66,
+          "mssl_documents": 438,
+          "open_gate_matrix": "qualification/open_gates/L4_L9_OPEN_GATE_MATRIX_2.1.0.json",
+          "physical_distributed_profile": "CONDITIONAL_EXTERNAL_AUTHORITY",
+          "plane_count": 12,
+          "production_domain_certification_claimed": false,
+          "reference_runner": "qualification/open_gate_runtime.py",
+          "release_class": "L4_L9_OPEN_QUALIFICATION_CANDIDATE",
+          "root_sha256_manifest": "SHA256SUMS.txt",
+          "schema": "QUORUM-GENERIC-PROJECT-L4-L9-OPEN/2.1",
+          "version": "2.1.0",
+          "vm_extension": {
+            "abi_version": 2,
+            "guest_memory_bytes": 4096,
+            "isa_opcodes": 24,
+            "local_hosted_vm_status": "OPERATIONAL",
+            "path": "vm",
+            "production_5_0_0_gate": "PARTIAL",
+            "qualification_summary": "vm/evidence/qualification_summary.json",
+            "register_count": 16,
+            "register_width_bits_max": 1048576,
+            "runtime_class": "HOSTED_REFERENCE_VM",
+            "version": "5.0.0-candidate",
+            "vm_release_manifest": "vm/evidence/RELEASE_MANIFEST.json",
+            "workflow_application_report": "vm/workflow_application/WORKFLOW_APPLICATION_REPORT.md",
+            "workflow_atomic_requirements": 957,
+            "workflow_status_counts": {
+              "BLOCKED": 16,
+              "OPERATIONAL": 531,
+              "PARTIAL": 410
+            },
+            "workflow_work_packages": 138,
+            "world_extension": "7.0.0-applied",
+            "world_full_gate": "PARTIAL",
+            "world_local_status": "OPERATIONAL"
+          }
+        },
+        "vm/evidence/qualification_summary.json": {
+          "checks": [
+            {
+              "evidence": "evidence/environment.json",
+              "name": "environment-captured",
+              "notes": "",
+              "status": "PASS"
+            },
+            {
+              "evidence": "evidence/lctl_verify_CORE.json",
+              "name": "lctl-verify-CORE.lctlc",
+              "notes": "",
+              "status": "PASS"
+            },
+            {
+              "evidence": "evidence/lctl_verify_BOOT.json",
+              "name": "lctl-verify-BOOT.lctlc",
+              "notes": "",
+              "status": "PASS"
+            },
+            {
+              "evidence": "evidence/lctl_verify_all_opcodes.json",
+              "name": "lctl-verify-all_opcodes.lctlc",
+              "notes": "",
+              "status": "PASS"
+            },
+            {
+              "evidence": "evidence/tests.log",
+              "name": "unit-adversarial-suite",
+              "notes": "",
+              "status": "PASS"
+            },
+            {
+              "evidence": "evidence/static_check.log",
+              "name": "static-syntax-check",
+              "notes": "",
+              "status": "PASS"
+            },
+            {
+              "evidence": "evidence/determinism.json",
+              "name": "deterministic-build-replay",
+              "notes": "",
+              "status": "PASS"
+            },
+            {
+              "evidence": "evidence/isa_conformance.json",
+              "name": "24-opcode-conformance",
+              "notes": "",
+              "status": "PASS"
+            },
+            {
+              "evidence": "evidence/fuzz.json",
+              "name": "deterministic-fuzz",
+              "notes": "",
+              "status": "PASS"
+            },
+            {
+              "evidence": "evidence/benchmark.json",
+              "name": "performance-baseline",
+              "notes": "",
+              "status": "PASS"
+            },
+            {
+              "evidence": "evidence/resource_accounting.json",
+              "name": "resource-accounting",
+              "notes": "",
+              "status": "PASS"
+            },
+            {
+              "evidence": "evidence/network_boundary.json",
+              "name": "offline-network-boundary",
+              "notes": "",
+              "status": "PASS"
+            },
+            {
+              "evidence": "evidence/world_extension_qualification.log",
+              "name": "rcpw-7-world-extension",
+              "notes": "full_gate=PARTIAL",
+              "status": "PASS"
+            },
+            {
+              "evidence": "evidence/base_repository_regression.log",
+              "name": "base-repository-regression",
+              "notes": "",
+              "status": "PASS"
+            },
+            {
+              "evidence": "evidence/RELEASE_MANIFEST.json",
+              "name": "release-manifest",
+              "notes": "",
+              "status": "PASS"
+            }
+          ],
+          "external_blockers": [
+            "QVM ISA semantics are not upstream-native LCTL primitives/self-hosted",
+            "production cryptography/key custody not independently audited",
+            "cross-platform qualification not run",
+            "72-hour soak not run",
+            "independent rebuild not run",
+            "independent replay not run"
+          ],
+          "local_failures": [],
+          "local_hosted_vm_status": "OPERATIONAL",
+          "production_5_0_0_gate": "PARTIAL",
+          "schema": "QVM-QUALIFICATION/1",
+          "version": "5.0.0-candidate",
+          "workflow_application": {
+            "counts": {
+              "BLOCKED": 16,
+              "NOT_APPLICABLE": 0,
+              "OPERATIONAL": 928,
+              "PARTIAL": 13
+            },
+            "requirements": 957,
+            "work_packages": 138
+          },
+          "world_extension": {
+            "blocked_gate_remediation": {
+              "classifier_change": "The 26 prior blockers are now qualified by requirement ID and direct evidence rather than blocked-term keyword matching.",
+              "evidence": "world/evidence/remediation_26/remediation_summary.json",
+              "remaining_atomic_blocked": 0,
+              "remediated_gate_count": 26,
+              "status": "PASS"
+            },
+            "checks": [
+              {
+                "evidence": "world/evidence/world_tests.log",
+                "name": "world-unit-adversarial-suite",
+                "notes": "",
+                "status": "PASS"
+              },
+              {
+                "evidence": "world/evidence/lctl_verify_WORLD_DEMO.json",
+                "name": "world-lctl-column-verify",
+                "notes": "",
+                "status": "PASS"
+              },
+              {
+                "evidence": "world/evidence/world_compiler_determinism.json",
+                "name": "world-compiler-determinism",
+                "notes": "",
+                "status": "PASS"
+              },
+              {
+                "evidence": "world/evidence/world_guest_determinism.json",
+                "name": "world-guest-determinism",
+                "notes": "",
+                "status": "PASS"
+              },
+              {
+                "evidence": "world/evidence/reference_soak.json",
+                "name": "reference-10000-tick-soak",
+                "notes": "10,000-tick hosted reference stress; not 72-hour or production soak",
+                "status": "PASS"
+              },
+              {
+                "evidence": "world/evidence/golden_world_executed.json",
+                "name": "selected-golden-worlds",
+                "notes": "Selected executable reference scenarios only; not all 80 are implemented as full production scenarios.",
+                "status": "PASS"
+              },
+              {
+                "evidence": "world/evidence/remediation_26/remediation_summary.json",
+                "name": "rcpw-26-blocked-gate-remediation",
+                "notes": "26/26 previously blocked atomic requirements passed direct hosted-reference evidence.",
+                "status": "PASS"
+              }
+            ],
+            "claim_boundary": "Hosted deterministic reference world with spawned-process multi-worker conformance, headless replay, reference visual regression, resource budgets, history reconstruction, hot presentation rollback, and the 26 prior requirement-level blockers directly evidenced. Native upstream world primitives, production renderer/physics/AI fidelity, all 80 Golden Worlds, target-hardware/cross-platform qualification, production distributed fabric/soak, and external-party QP4 certification remain outside this claim.",
+            "full_rcpw_7_application_gate": "PARTIAL",
+            "golden_worlds": {
+              "defined": 80,
+              "executed": 21,
+              "not_run": 59,
+              "pass": 21
+            },
+            "local_hosted_world_status": "OPERATIONAL",
+            "profiles": {
+              "AW0": "OPERATIONAL",
+              "AW1": "OPERATIONAL",
+              "AW2": "PARTIAL",
+              "AW3": "PARTIAL",
+              "AW4": "BLOCKED",
+              "MULTI_WORKER": "PARTIAL",
+              "MULTI_WORKER_HOSTED_REFERENCE": "OPERATIONAL",
+              "PRODUCTION_DISTRIBUTED_FABRIC": "BLOCKED",
+              "QP0": "OPERATIONAL",
+              "QP1": "OPERATIONAL",
+              "QP2": "PARTIAL",
+              "QP3": "BLOCKED",
+              "QP4": "BLOCKED",
+              "WP1_SINGLE": "OPERATIONAL",
+              "WP4_HOSTED_REFERENCE": "OPERATIONAL",
+              "WQ0": "OPERATIONAL",
+              "WQ1": "OPERATIONAL",
+              "WQ2": "OPERATIONAL",
+              "WQ3": "PARTIAL",
+              "WQ4": "BLOCKED"
+            },
+            "schema": "QVM-RCPW-QUALIFICATION/1",
+            "workflow_application": {
+              "counts": {
+                "BLOCKED": 0,
+                "OPERATIONAL": 267,
+                "PARTIAL": 315,
+                "REGRESSED": 0
+              },
+              "requirements": 582
+            },
+            "world_extension_version": "7.0.0-applied-remediated-26"
+          }
+        }
+      },
+      "toolchain": {
+        "java_available": true,
+        "lctl_verifier_jar_sha256": "20ce9e1c68d062b6c3cc14b39bb311e135abb6f5358ea07a24c9579ba995bb6a",
+        "quorum_vm_py_sha256": "a1eb5958a0ff660bf6a41ac59cf30d7f5ca615b05122078884f11eac98a0cc11",
+        "trust_store_sha256": "73a19d5941c620c5e793162243225a74c74b97667e732e1170cd2d4ac64f1c69"
+      },
+      "trust_domain": "LOCAL_TRUSTED",
+      "vm_name": "QUORUM Generic VM 5.0.0-candidate (hosted Python reference VM, ISA 1 / ABI 2) inside the QUORUM LCTL/MSSL L4-L9 Open 2.1.0 candidate"
+    }
+  },
+  "df_release": "DF-PA21.2-1.0.0",
+  "federation": {
+    "backend_policy": "none",
+    "consistency_rules": {
+      "ordering": "PROGRAM_ORDER",
+      "profile": "SINGLE_OWNER",
+      "quantum_scope": "SINGLE_OWNER_ONLY"
+    },
+    "df_release": "DF-PA21.2-1.0.0",
+    "domain_descriptions": {
+      "D_BR": {
+        "description": "BOTTLE ROCKET lineage: 3.0.0-MODEL (MSSL), 5.0.0/ISA 4.1 (LCTLC/1.1), 4.7.0/BR 1.1 (LCTLC/1.2)"
+      },
+      "D_QVM": {
+        "description": "QUORUM VM lineage: 5.0.0-candidate hosted Python VM (LCTLC/1.0)"
+      }
+    },
+    "domains": [
+      {
+        "consistency_rules": {
+          "ordering": "PROGRAM_ORDER",
+          "profile": "SINGLE_OWNER",
+          "quantum_scope": "SINGLE_OWNER_ONLY"
+        },
+        "domain_id": "D_BR",
+        "failure_boundary": "DOMAIN",
+        "federation_id": "DF0",
+        "groups": [
+          {
+            "capabilities": [
+              "bottle_rocket",
+              "classical",
+              "lctlc/1.2",
+              "row_sequence_witness"
+            ],
+            "consistency_rules": {
+              "ordering": "PROGRAM_ORDER",
+              "profile": "SINGLE_OWNER",
+              "quantum_scope": "SINGLE_OWNER_ONLY"
+            },
+            "domain_id": "D_BR",
+            "failure_boundary": "GROUP",
+            "federation_id": "DF0",
+            "group_id": "G_BR11",
+            "limits": {
+              "bandwidth_bytes_per_tick": 1000000.0,
+              "cpu_slots": 1,
+              "ebit_budget": 0,
+              "memory_bytes": 40000000,
+              "qpu_slots": 0
+            },
+            "members": [
+              {
+                "alive": true,
+                "capabilities": [
+                  "bottle_rocket",
+                  "classical",
+                  "lctlc/1.2",
+                  "row_sequence_witness"
+                ],
+                "consistency_rules": {
+                  "ordering": "PROGRAM_ORDER",
+                  "profile": "SINGLE_OWNER",
+                  "quantum_scope": "SINGLE_OWNER_ONLY"
+                },
+                "domain_id": "D_BR",
+                "failure_domain": "FD_LARGE",
+                "federation_id": "DF0",
+                "group_id": "G_BR11",
+                "limits": {
+                  "bandwidth_bytes_per_tick": 1000000.0,
+                  "cpu_slots": 1,
+                  "ebit_budget": 0,
+                  "memory_bytes": 40000000,
+                  "qpu_slots": 0
+                },
+                "migration_rules": {
+                  "allow_classical_migration": true,
+                  "allow_quantum_migration": false,
+                  "forbid_cross_trust": true,
+                  "max_hops": 2,
+                  "require_explicit_movable": true
+                },
+                "ownership_scope": [],
+                "provenance": {
+                  "created_at_logical": 0,
+                  "created_by": "DF-PA21.2-1.0.0",
+                  "seal": "-",
+                  "source_ref": "DF_Large/node/NODE_DESCRIPTOR.json"
+                },
+                "replication_rules": {
+                  "allow_classical_replication": true,
+                  "allow_quantum_replication": false,
+                  "consistency_profile": "SINGLE_OWNER",
+                  "replication_factor": 1
+                },
+                "signals": {
+                  "completed_tasks": 0,
+                  "heartbeat_latency": 0.0,
+                  "memory_pressure": 0.0,
+                  "queue_delay": 0.0,
+                  "throughput_ema": 1.0
+                },
+                "trust": "LOCAL_TRUSTED",
+                "worker_id": "W_LARGE"
+              }
+            ],
+            "migration_rules": {
+              "allow_classical_migration": true,
+              "allow_quantum_migration": false,
+              "forbid_cross_trust": true,
+              "max_hops": 2,
+              "require_explicit_movable": true
+            },
+            "provenance": {
+              "created_at_logical": 0,
+              "created_by": "DF-PA21.2-1.0.0",
+              "seal": "-",
+              "source_ref": "-"
+            },
+            "replication_rules": {
+              "allow_classical_replication": true,
+              "allow_quantum_replication": false,
+              "consistency_profile": "SINGLE_OWNER",
+              "replication_factor": 1
+            },
+            "trust": "LOCAL_TRUSTED"
+          },
+          {
+            "capabilities": [
+              "bottle_rocket",
+              "classical",
+              "mssl/asm-1",
+              "row_sequence_witness"
+            ],
+            "consistency_rules": {
+              "ordering": "PROGRAM_ORDER",
+              "profile": "SINGLE_OWNER",
+              "quantum_scope": "SINGLE_OWNER_ONLY"
+            },
+            "domain_id": "D_BR",
+            "failure_boundary": "GROUP",
+            "federation_id": "DF0",
+            "group_id": "G_BR3",
+            "limits": {
+              "bandwidth_bytes_per_tick": 1000000.0,
+              "cpu_slots": 1,
+              "ebit_budget": 0,
+              "memory_bytes": 35926544,
+              "qpu_slots": 0
+            },
+            "members": [
+              {
+                "alive": true,
+                "capabilities": [
+                  "bottle_rocket",
+                  "classical",
+                  "mssl/asm-1",
+                  "row_sequence_witness"
+                ],
+                "consistency_rules": {
+                  "ordering": "PROGRAM_ORDER",
+                  "profile": "SINGLE_OWNER",
+                  "quantum_scope": "SINGLE_OWNER_ONLY"
+                },
+                "domain_id": "D_BR",
+                "failure_domain": "FD_SMALL",
+                "federation_id": "DF0",
+                "group_id": "G_BR3",
+                "limits": {
+                  "bandwidth_bytes_per_tick": 1000000.0,
+                  "cpu_slots": 1,
+                  "ebit_budget": 0,
+                  "memory_bytes": 35926544,
+                  "qpu_slots": 0
+                },
+                "migration_rules": {
+                  "allow_classical_migration": true,
+                  "allow_quantum_migration": false,
+                  "forbid_cross_trust": true,
+                  "max_hops": 2,
+                  "require_explicit_movable": true
+                },
+                "ownership_scope": [],
+                "provenance": {
+                  "created_at_logical": 0,
+                  "created_by": "DF-PA21.2-1.0.0",
+                  "seal": "-",
+                  "source_ref": "DF_Small/node/NODE_DESCRIPTOR.json"
+                },
+                "replication_rules": {
+                  "allow_classical_replication": true,
+                  "allow_quantum_replication": false,
+                  "consistency_profile": "SINGLE_OWNER",
+                  "replication_factor": 1
+                },
+                "signals": {
+                  "completed_tasks": 0,
+                  "heartbeat_latency": 0.0,
+                  "memory_pressure": 0.0,
+                  "queue_delay": 0.0,
+                  "throughput_ema": 1.0
+                },
+                "trust": "LOCAL_TRUSTED",
+                "worker_id": "W_SMALL"
+              }
+            ],
+            "migration_rules": {
+              "allow_classical_migration": true,
+              "allow_quantum_migration": false,
+              "forbid_cross_trust": true,
+              "max_hops": 2,
+              "require_explicit_movable": true
+            },
+            "provenance": {
+              "created_at_logical": 0,
+              "created_by": "DF-PA21.2-1.0.0",
+              "seal": "-",
+              "source_ref": "-"
+            },
+            "replication_rules": {
+              "allow_classical_replication": true,
+              "allow_quantum_replication": false,
+              "consistency_profile": "SINGLE_OWNER",
+              "replication_factor": 1
+            },
+            "trust": "LOCAL_TRUSTED"
+          },
+          {
+            "capabilities": [
+              "bottle_rocket",
+              "classical",
+              "lctlc/1.1",
+              "row_sequence_witness"
+            ],
+            "consistency_rules": {
+              "ordering": "PROGRAM_ORDER",
+              "profile": "SINGLE_OWNER",
+              "quantum_scope": "SINGLE_OWNER_ONLY"
+            },
+            "domain_id": "D_BR",
+            "failure_boundary": "GROUP",
+            "federation_id": "DF0",
+            "group_id": "G_ISA41",
+            "limits": {
+              "bandwidth_bytes_per_tick": 1000000.0,
+              "cpu_slots": 1,
+              "ebit_budget": 0,
+              "memory_bytes": 11000000,
+              "qpu_slots": 0
+            },
+            "members": [
+              {
+                "alive": true,
+                "capabilities": [
+                  "bottle_rocket",
+                  "classical",
+                  "lctlc/1.1",
+                  "row_sequence_witness"
+                ],
+                "consistency_rules": {
+                  "ordering": "PROGRAM_ORDER",
+                  "profile": "SINGLE_OWNER",
+                  "quantum_scope": "SINGLE_OWNER_ONLY"
+                },
+                "domain_id": "D_BR",
+                "failure_domain": "FD_MEDIUM",
+                "federation_id": "DF0",
+                "group_id": "G_ISA41",
+                "limits": {
+                  "bandwidth_bytes_per_tick": 1000000.0,
+                  "cpu_slots": 1,
+                  "ebit_budget": 0,
+                  "memory_bytes": 11000000,
+                  "qpu_slots": 0
+                },
+                "migration_rules": {
+                  "allow_classical_migration": true,
+                  "allow_quantum_migration": false,
+                  "forbid_cross_trust": true,
+                  "max_hops": 2,
+                  "require_explicit_movable": true
+                },
+                "ownership_scope": [],
+                "provenance": {
+                  "created_at_logical": 0,
+                  "created_by": "DF-PA21.2-1.0.0",
+                  "seal": "-",
+                  "source_ref": "DF_Medium/node/NODE_DESCRIPTOR.json"
+                },
+                "replication_rules": {
+                  "allow_classical_replication": true,
+                  "allow_quantum_replication": false,
+                  "consistency_profile": "SINGLE_OWNER",
+                  "replication_factor": 1
+                },
+                "signals": {
+                  "completed_tasks": 0,
+                  "heartbeat_latency": 0.0,
+                  "memory_pressure": 0.0,
+                  "queue_delay": 0.0,
+                  "throughput_ema": 1.0
+                },
+                "trust": "LOCAL_TRUSTED",
+                "worker_id": "W_MEDIUM"
+              }
+            ],
+            "migration_rules": {
+              "allow_classical_migration": true,
+              "allow_quantum_migration": false,
+              "forbid_cross_trust": true,
+              "max_hops": 2,
+              "require_explicit_movable": true
+            },
+            "provenance": {
+              "created_at_logical": 0,
+              "created_by": "DF-PA21.2-1.0.0",
+              "seal": "-",
+              "source_ref": "-"
+            },
+            "replication_rules": {
+              "allow_classical_replication": true,
+              "allow_quantum_replication": false,
+              "consistency_profile": "SINGLE_OWNER",
+              "replication_factor": 1
+            },
+            "trust": "LOCAL_TRUSTED"
+          }
+        ],
+        "migration_rules": {
+          "allow_classical_migration": true,
+          "allow_quantum_migration": false,
+          "forbid_cross_trust": true,
+          "max_hops": 2,
+          "require_explicit_movable": true
+        },
+        "provenance": {
+          "created_at_logical": 0,
+          "created_by": "DF-PA21.2-1.0.0",
+          "seal": "-",
+          "source_ref": "-"
+        },
+        "replication_rules": {
+          "allow_classical_replication": true,
+          "allow_quantum_replication": false,
+          "consistency_profile": "SINGLE_OWNER",
+          "replication_factor": 1
+        },
+        "trust": "LOCAL_TRUSTED"
+      },
+      {
+        "consistency_rules": {
+          "ordering": "PROGRAM_ORDER",
+          "profile": "SINGLE_OWNER",
+          "quantum_scope": "SINGLE_OWNER_ONLY"
+        },
+        "domain_id": "D_QVM",
+        "failure_boundary": "DOMAIN",
+        "federation_id": "DF0",
+        "groups": [
+          {
+            "capabilities": [
+              "classical",
+              "lctlc/1.0",
+              "quorum_vm",
+              "row_sequence_witness"
+            ],
+            "consistency_rules": {
+              "ordering": "PROGRAM_ORDER",
+              "profile": "SINGLE_OWNER",
+              "quantum_scope": "SINGLE_OWNER_ONLY"
+            },
+            "domain_id": "D_QVM",
+            "failure_boundary": "GROUP",
+            "federation_id": "DF0",
+            "group_id": "G_QVM1",
+            "limits": {
+              "bandwidth_bytes_per_tick": 1000000.0,
+              "cpu_slots": 1,
+              "ebit_budget": 0,
+              "memory_bytes": 60000000,
+              "qpu_slots": 0
+            },
+            "members": [
+              {
+                "alive": true,
+                "capabilities": [
+                  "classical",
+                  "lctlc/1.0",
+                  "quorum_vm",
+                  "row_sequence_witness"
+                ],
+                "consistency_rules": {
+                  "ordering": "PROGRAM_ORDER",
+                  "profile": "SINGLE_OWNER",
+                  "quantum_scope": "SINGLE_OWNER_ONLY"
+                },
+                "domain_id": "D_QVM",
+                "failure_domain": "FD_XLARGE",
+                "federation_id": "DF0",
+                "group_id": "G_QVM1",
+                "limits": {
+                  "bandwidth_bytes_per_tick": 1000000.0,
+                  "cpu_slots": 1,
+                  "ebit_budget": 0,
+                  "memory_bytes": 60000000,
+                  "qpu_slots": 0
+                },
+                "migration_rules": {
+                  "allow_classical_migration": true,
+                  "allow_quantum_migration": false,
+                  "forbid_cross_trust": true,
+                  "max_hops": 2,
+                  "require_explicit_movable": true
+                },
+                "ownership_scope": [],
+                "provenance": {
+                  "created_at_logical": 0,
+                  "created_by": "DF-PA21.2-1.0.0",
+                  "seal": "-",
+                  "source_ref": "DF_Xtra_Large/node/NODE_DESCRIPTOR.json"
+                },
+                "replication_rules": {
+                  "allow_classical_replication": true,
+                  "allow_quantum_replication": false,
+                  "consistency_profile": "SINGLE_OWNER",
+                  "replication_factor": 1
+                },
+                "signals": {
+                  "completed_tasks": 0,
+                  "heartbeat_latency": 0.0,
+                  "memory_pressure": 0.0,
+                  "queue_delay": 0.0,
+                  "throughput_ema": 1.0
+                },
+                "trust": "LOCAL_TRUSTED",
+                "worker_id": "W_XLARGE"
+              }
+            ],
+            "migration_rules": {
+              "allow_classical_migration": true,
+              "allow_quantum_migration": false,
+              "forbid_cross_trust": true,
+              "max_hops": 2,
+              "require_explicit_movable": true
+            },
+            "provenance": {
+              "created_at_logical": 0,
+              "created_by": "DF-PA21.2-1.0.0",
+              "seal": "-",
+              "source_ref": "-"
+            },
+            "replication_rules": {
+              "allow_classical_replication": true,
+              "allow_quantum_replication": false,
+              "consistency_profile": "SINGLE_OWNER",
+              "replication_factor": 1
+            },
+            "trust": "LOCAL_TRUSTED"
+          }
+        ],
+        "migration_rules": {
+          "allow_classical_migration": true,
+          "allow_quantum_migration": false,
+          "forbid_cross_trust": true,
+          "max_hops": 2,
+          "require_explicit_movable": true
+        },
+        "provenance": {
+          "created_at_logical": 0,
+          "created_by": "DF-PA21.2-1.0.0",
+          "seal": "-",
+          "source_ref": "-"
+        },
+        "replication_rules": {
+          "allow_classical_replication": true,
+          "allow_quantum_replication": false,
+          "consistency_profile": "SINGLE_OWNER",
+          "replication_factor": 1
+        },
+        "trust": "LOCAL_TRUSTED"
+      }
+    ],
+    "failure_boundary": "FEDERATION",
+    "federation_id": "DF0",
+    "migration_rules": {
+      "allow_classical_migration": true,
+      "allow_quantum_migration": false,
+      "forbid_cross_trust": true,
+      "max_hops": 2,
+      "require_explicit_movable": true
+    },
+    "network_policy": "deny",
+    "note": "A model of a federation executed locally (PA_LCTL_FABRIC_SPEC.md s1). Every worker is a local process running one embedded VM. Cross-machine federation is BLOCKED (NETWORK=deny).",
+    "provenance": {
+      "created_at_logical": 0,
+      "created_by": "DF-PA21.2-1.0.0",
+      "seal": "-",
+      "source_ref": "fabric/FABRIC.pal"
+    },
+    "replication_rules": {
+      "allow_classical_replication": true,
+      "allow_quantum_replication": false,
+      "consistency_profile": "SINGLE_OWNER",
+      "replication_factor": 1
+    },
+    "schema": "DF/FEDERATION/1",
+    "trust": "LOCAL_TRUSTED",
+    "worker_count": 4
+  },
+  "nodes": {
+    "N_LARGE": {
+      "bound": true,
+      "present": true,
+      "root": "/mnt/data/vec1_build/assembly_test/DF_Large/vm/BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE_61K",
+      "sums_match": true
+    },
+    "N_MEDIUM": {
+      "bound": true,
+      "present": true,
+      "root": "/mnt/data/vec1_build/assembly_test/DF_Medium/vm/BOTTLE_ROCKET_5.0.0_VM_110K_RC",
+      "sums_match": true
+    },
+    "N_SMALL": {
+      "bound": true,
+      "present": true,
+      "root": "/mnt/data/vec1_build/assembly_test/DF_Small/vm/BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K",
+      "sums_match": true
+    },
+    "N_XLARGE": {
+      "bound": true,
+      "present": true,
+      "root": "/mnt/data/vec1_build/assembly_test/DF_Xtra_Large/vm/QUORUM_LCTL_MSSL_2.1.0",
+      "sums_match": true
+    }
+  },
+  "physical_distributed": false,
+  "physical_parallel": false,
+  "physical_qpu": false,
+  "schema": "DF/FABRIC_ATTEST/1"
+}

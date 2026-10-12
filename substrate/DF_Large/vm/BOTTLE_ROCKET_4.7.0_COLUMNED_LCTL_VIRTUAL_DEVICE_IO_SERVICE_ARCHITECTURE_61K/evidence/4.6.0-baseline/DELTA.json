@@ -1,0 +1,13 @@
+{
+  "baseline": "4.5.0",
+  "candidate": "4.6.0",
+  "delta_percent": {
+    "arithmetic_ops_per_second_percent": 70527.41771867094,
+    "branch_ops_per_second_percent": -22.965580213714475,
+    "instructions_per_second_percent": -12.911002480225486,
+    "load_store_ops_per_second_percent": 10357.008062306175
+  },
+  "dispatch_regression_disclosed": true,
+  "record": "BR.PerformanceDelta",
+  "wide_state_gate": "PASS: target arithmetic and load/store paths improve materially; dispatch regression is disclosed"
+}

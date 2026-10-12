@@ -1,0 +1,603 @@
+{
+  "operational": 66,
+  "record": "BR.OperationalLedger",
+  "release": "4.7.0",
+  "requirements": [
+    {
+      "evidence": "evidence/BR-470-01_tests.log",
+      "evidence_sha256": "33f72d109085fd7f0cb9dd69e5521e4655b67c4a207113b561af9a926d78893c",
+      "id": "BR-470-01-R01",
+      "package": "BR-470-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define device ID"
+    },
+    {
+      "evidence": "evidence/BR-470-01_tests.log",
+      "evidence_sha256": "33f72d109085fd7f0cb9dd69e5521e4655b67c4a207113b561af9a926d78893c",
+      "id": "BR-470-01-R02",
+      "package": "BR-470-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define device version"
+    },
+    {
+      "evidence": "evidence/BR-470-01_tests.log",
+      "evidence_sha256": "33f72d109085fd7f0cb9dd69e5521e4655b67c4a207113b561af9a926d78893c",
+      "id": "BR-470-01-R03",
+      "package": "BR-470-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define required capability"
+    },
+    {
+      "evidence": "evidence/BR-470-01_tests.log",
+      "evidence_sha256": "33f72d109085fd7f0cb9dd69e5521e4655b67c4a207113b561af9a926d78893c",
+      "id": "BR-470-01-R04",
+      "package": "BR-470-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define operation number"
+    },
+    {
+      "evidence": "evidence/BR-470-01_tests.log",
+      "evidence_sha256": "33f72d109085fd7f0cb9dd69e5521e4655b67c4a207113b561af9a926d78893c",
+      "id": "BR-470-01-R05",
+      "package": "BR-470-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define input buffer"
+    },
+    {
+      "evidence": "evidence/BR-470-01_tests.log",
+      "evidence_sha256": "33f72d109085fd7f0cb9dd69e5521e4655b67c4a207113b561af9a926d78893c",
+      "id": "BR-470-01-R06",
+      "package": "BR-470-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define output buffer"
+    },
+    {
+      "evidence": "evidence/BR-470-01_tests.log",
+      "evidence_sha256": "33f72d109085fd7f0cb9dd69e5521e4655b67c4a207113b561af9a926d78893c",
+      "id": "BR-470-01-R07",
+      "package": "BR-470-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define status"
+    },
+    {
+      "evidence": "evidence/BR-470-01_tests.log",
+      "evidence_sha256": "33f72d109085fd7f0cb9dd69e5521e4655b67c4a207113b561af9a926d78893c",
+      "id": "BR-470-01-R08",
+      "package": "BR-470-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Declare deterministic or non-deterministic behavior"
+    },
+    {
+      "evidence": "evidence/BR-470-02_tests.log",
+      "evidence_sha256": "1aab7c6f2779a7076e9a4fad31bd6ff4c1f9b2f54a24d26de45f2114fac20b53",
+      "id": "BR-470-02-R01",
+      "package": "BR-470-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Implement input"
+    },
+    {
+      "evidence": "evidence/BR-470-02_tests.log",
+      "evidence_sha256": "1aab7c6f2779a7076e9a4fad31bd6ff4c1f9b2f54a24d26de45f2114fac20b53",
+      "id": "BR-470-02-R02",
+      "package": "BR-470-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Implement output"
+    },
+    {
+      "evidence": "evidence/BR-470-02_tests.log",
+      "evidence_sha256": "1aab7c6f2779a7076e9a4fad31bd6ff4c1f9b2f54a24d26de45f2114fac20b53",
+      "id": "BR-470-02-R03",
+      "package": "BR-470-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Implement flush"
+    },
+    {
+      "evidence": "evidence/BR-470-02_tests.log",
+      "evidence_sha256": "1aab7c6f2779a7076e9a4fad31bd6ff4c1f9b2f54a24d26de45f2114fac20b53",
+      "id": "BR-470-02-R04",
+      "package": "BR-470-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Bound message length"
+    },
+    {
+      "evidence": "evidence/BR-470-02_tests.log",
+      "evidence_sha256": "1aab7c6f2779a7076e9a4fad31bd6ff4c1f9b2f54a24d26de45f2114fac20b53",
+      "id": "BR-470-02-R05",
+      "package": "BR-470-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Require capability"
+    },
+    {
+      "evidence": "evidence/BR-470-03_tests.log",
+      "evidence_sha256": "9a2656a9489d6758e014249dc6ab793e3fa0a7556f9f8d1607689fde5fdf6a58",
+      "id": "BR-470-03-R01",
+      "package": "BR-470-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Implement read"
+    },
+    {
+      "evidence": "evidence/BR-470-03_tests.log",
+      "evidence_sha256": "9a2656a9489d6758e014249dc6ab793e3fa0a7556f9f8d1607689fde5fdf6a58",
+      "id": "BR-470-03-R02",
+      "package": "BR-470-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Implement write"
+    },
+    {
+      "evidence": "evidence/BR-470-03_tests.log",
+      "evidence_sha256": "9a2656a9489d6758e014249dc6ab793e3fa0a7556f9f8d1607689fde5fdf6a58",
+      "id": "BR-470-03-R03",
+      "package": "BR-470-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Implement sync"
+    },
+    {
+      "evidence": "evidence/BR-470-03_tests.log",
+      "evidence_sha256": "9a2656a9489d6758e014249dc6ab793e3fa0a7556f9f8d1607689fde5fdf6a58",
+      "id": "BR-470-03-R04",
+      "package": "BR-470-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Implement capacity query"
+    },
+    {
+      "evidence": "evidence/BR-470-03_tests.log",
+      "evidence_sha256": "9a2656a9489d6758e014249dc6ab793e3fa0a7556f9f8d1607689fde5fdf6a58",
+      "id": "BR-470-03-R05",
+      "package": "BR-470-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Enforce bounds"
+    },
+    {
+      "evidence": "evidence/BR-470-04_tests.log",
+      "evidence_sha256": "652b7cb2507c9eab446d7d9d6f9f2e2ded676e6e5479365f2b71799142b25db1",
+      "id": "BR-470-04-R01",
+      "package": "BR-470-04",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Read generation"
+    },
+    {
+      "evidence": "evidence/BR-470-04_tests.log",
+      "evidence_sha256": "652b7cb2507c9eab446d7d9d6f9f2e2ded676e6e5479365f2b71799142b25db1",
+      "id": "BR-470-04-R02",
+      "package": "BR-470-04",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Increment/commit generation"
+    },
+    {
+      "evidence": "evidence/BR-470-04_tests.log",
+      "evidence_sha256": "652b7cb2507c9eab446d7d9d6f9f2e2ded676e6e5479365f2b71799142b25db1",
+      "id": "BR-470-04-R03",
+      "package": "BR-470-04",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Provide anti-rollback guarantees"
+    },
+    {
+      "evidence": "evidence/BR-470-05_tests.log",
+      "evidence_sha256": "c13cdf6f09a0107f90fbf1e6b808e12bd39d9e9e31e1c8c1be40847eb667a483",
+      "id": "BR-470-05-R01",
+      "package": "BR-470-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Make service explicitly non-deterministic"
+    },
+    {
+      "evidence": "evidence/BR-470-05_tests.log",
+      "evidence_sha256": "c13cdf6f09a0107f90fbf1e6b808e12bd39d9e9e31e1c8c1be40847eb667a483",
+      "id": "BR-470-05-R02",
+      "package": "BR-470-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Capability-gate entropy"
+    },
+    {
+      "evidence": "evidence/BR-470-05_tests.log",
+      "evidence_sha256": "c13cdf6f09a0107f90fbf1e6b808e12bd39d9e9e31e1c8c1be40847eb667a483",
+      "id": "BR-470-05-R03",
+      "package": "BR-470-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Provide deterministic substitute during replay/testing"
+    },
+    {
+      "evidence": "evidence/BR-470-05_tests.log",
+      "evidence_sha256": "c13cdf6f09a0107f90fbf1e6b808e12bd39d9e9e31e1c8c1be40847eb667a483",
+      "id": "BR-470-05-R04",
+      "package": "BR-470-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define entropy-failure behavior"
+    },
+    {
+      "evidence": "evidence/BR-470-06_tests.log",
+      "evidence_sha256": "35eb7fc07c380d2dd6326cf0ce62e2ae844ed16493089db22bc38efa5bae9a27",
+      "id": "BR-470-06-R01",
+      "package": "BR-470-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Provide monotonic time"
+    },
+    {
+      "evidence": "evidence/BR-470-06_tests.log",
+      "evidence_sha256": "35eb7fc07c380d2dd6326cf0ce62e2ae844ed16493089db22bc38efa5bae9a27",
+      "id": "BR-470-06-R02",
+      "package": "BR-470-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Provide optional wall time"
+    },
+    {
+      "evidence": "evidence/BR-470-06_tests.log",
+      "evidence_sha256": "35eb7fc07c380d2dd6326cf0ce62e2ae844ed16493089db22bc38efa5bae9a27",
+      "id": "BR-470-06-R03",
+      "package": "BR-470-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Provide deterministic test clock"
+    },
+    {
+      "evidence": "evidence/BR-470-06_tests.log",
+      "evidence_sha256": "35eb7fc07c380d2dd6326cf0ce62e2ae844ed16493089db22bc38efa5bae9a27",
+      "id": "BR-470-06-R04",
+      "package": "BR-470-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Capability-gate clock usage"
+    },
+    {
+      "evidence": "evidence/BR-470-07_tests.log",
+      "evidence_sha256": "73c86e44fe5f5478bda990bae4846859fb806eab4aa98670cdf041b8a6ce06ce",
+      "id": "BR-470-07-R01",
+      "package": "BR-470-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Support host-to-guest messages"
+    },
+    {
+      "evidence": "evidence/BR-470-07_tests.log",
+      "evidence_sha256": "73c86e44fe5f5478bda990bae4846859fb806eab4aa98670cdf041b8a6ce06ce",
+      "id": "BR-470-07-R02",
+      "package": "BR-470-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Support guest-to-host messages"
+    },
+    {
+      "evidence": "evidence/BR-470-07_tests.log",
+      "evidence_sha256": "73c86e44fe5f5478bda990bae4846859fb806eab4aa98670cdf041b8a6ce06ce",
+      "id": "BR-470-07-R03",
+      "package": "BR-470-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Bound packets"
+    },
+    {
+      "evidence": "evidence/BR-470-07_tests.log",
+      "evidence_sha256": "73c86e44fe5f5478bda990bae4846859fb806eab4aa98670cdf041b8a6ce06ce",
+      "id": "BR-470-07-R04",
+      "package": "BR-470-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define explicit ownership"
+    },
+    {
+      "evidence": "evidence/BR-470-07_tests.log",
+      "evidence_sha256": "73c86e44fe5f5478bda990bae4846859fb806eab4aa98670cdf041b8a6ce06ce",
+      "id": "BR-470-07-R05",
+      "package": "BR-470-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Prohibit raw pointer exchange"
+    },
+    {
+      "evidence": "evidence/BR-470-08_tests.log",
+      "evidence_sha256": "d3e7e3b29875e519f7d0d6adf7df5a652f9ed8dc5693be34a70f213dfd670239",
+      "id": "BR-470-08-R01",
+      "package": "BR-470-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Harden APDU parser"
+    },
+    {
+      "evidence": "evidence/BR-470-08_tests.log",
+      "evidence_sha256": "d3e7e3b29875e519f7d0d6adf7df5a652f9ed8dc5693be34a70f213dfd670239",
+      "id": "BR-470-08-R02",
+      "package": "BR-470-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Enforce strict lengths"
+    },
+    {
+      "evidence": "evidence/BR-470-08_tests.log",
+      "evidence_sha256": "d3e7e3b29875e519f7d0d6adf7df5a652f9ed8dc5693be34a70f213dfd670239",
+      "id": "BR-470-08-R03",
+      "package": "BR-470-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Enforce strict command classes"
+    },
+    {
+      "evidence": "evidence/BR-470-08_tests.log",
+      "evidence_sha256": "d3e7e3b29875e519f7d0d6adf7df5a652f9ed8dc5693be34a70f213dfd670239",
+      "id": "BR-470-08-R04",
+      "package": "BR-470-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Authenticate privileged commands"
+    },
+    {
+      "evidence": "evidence/BR-470-08_tests.log",
+      "evidence_sha256": "d3e7e3b29875e519f7d0d6adf7df5a652f9ed8dc5693be34a70f213dfd670239",
+      "id": "BR-470-08-R05",
+      "package": "BR-470-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Separate production and development commands"
+    },
+    {
+      "evidence": "evidence/BR-470-08_tests.log",
+      "evidence_sha256": "d3e7e3b29875e519f7d0d6adf7df5a652f9ed8dc5693be34a70f213dfd670239",
+      "id": "BR-470-08-R06",
+      "package": "BR-470-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Build fuzz corpus"
+    },
+    {
+      "evidence": "evidence/BR-470-09_tests.log",
+      "evidence_sha256": "a77aeaf7f86d4a17e0c82ea036a3af265b5e585619202d5030a573099b5d13df",
+      "id": "BR-470-09-R01",
+      "package": "BR-470-09",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Expose VM state summary"
+    },
+    {
+      "evidence": "evidence/BR-470-09_tests.log",
+      "evidence_sha256": "a77aeaf7f86d4a17e0c82ea036a3af265b5e585619202d5030a573099b5d13df",
+      "id": "BR-470-09-R02",
+      "package": "BR-470-09",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Expose trap state"
+    },
+    {
+      "evidence": "evidence/BR-470-09_tests.log",
+      "evidence_sha256": "a77aeaf7f86d4a17e0c82ea036a3af265b5e585619202d5030a573099b5d13df",
+      "id": "BR-470-09-R03",
+      "package": "BR-470-09",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Expose resource usage"
+    },
+    {
+      "evidence": "evidence/BR-470-09_tests.log",
+      "evidence_sha256": "a77aeaf7f86d4a17e0c82ea036a3af265b5e585619202d5030a573099b5d13df",
+      "id": "BR-470-09-R04",
+      "package": "BR-470-09",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Expose image identity"
+    },
+    {
+      "evidence": "evidence/BR-470-09_tests.log",
+      "evidence_sha256": "a77aeaf7f86d4a17e0c82ea036a3af265b5e585619202d5030a573099b5d13df",
+      "id": "BR-470-09-R05",
+      "package": "BR-470-09",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Expose build identity"
+    },
+    {
+      "evidence": "evidence/BR-470-09_tests.log",
+      "evidence_sha256": "a77aeaf7f86d4a17e0c82ea036a3af265b5e585619202d5030a573099b5d13df",
+      "id": "BR-470-09-R06",
+      "package": "BR-470-09",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Prevent secret leakage"
+    },
+    {
+      "evidence": "evidence/BR-470-10_tests.log",
+      "evidence_sha256": "544ec98db3c9eadc09da44980113b1d8d293b7aa9db69af7caf7e9bf8056715e",
+      "id": "BR-470-10-R01",
+      "package": "BR-470-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "No network device by default"
+    },
+    {
+      "evidence": "evidence/BR-470-10_tests.log",
+      "evidence_sha256": "544ec98db3c9eadc09da44980113b1d8d293b7aa9db69af7caf7e9bf8056715e",
+      "id": "BR-470-10-R02",
+      "package": "BR-470-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Qualify optional network extension separately"
+    },
+    {
+      "evidence": "evidence/BR-470-10_tests.log",
+      "evidence_sha256": "544ec98db3c9eadc09da44980113b1d8d293b7aa9db69af7caf7e9bf8056715e",
+      "id": "BR-470-10-R03",
+      "package": "BR-470-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Capability-gate networking"
+    },
+    {
+      "evidence": "evidence/BR-470-10_tests.log",
+      "evidence_sha256": "544ec98db3c9eadc09da44980113b1d8d293b7aa9db69af7caf7e9bf8056715e",
+      "id": "BR-470-10-R04",
+      "package": "BR-470-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Bound packets"
+    },
+    {
+      "evidence": "evidence/BR-470-10_tests.log",
+      "evidence_sha256": "544ec98db3c9eadc09da44980113b1d8d293b7aa9db69af7caf7e9bf8056715e",
+      "id": "BR-470-10-R05",
+      "package": "BR-470-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Use explicit protocol adapter"
+    },
+    {
+      "evidence": "evidence/BR-470-10_tests.log",
+      "evidence_sha256": "544ec98db3c9eadc09da44980113b1d8d293b7aa9db69af7caf7e9bf8056715e",
+      "id": "BR-470-10-R06",
+      "package": "BR-470-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Prohibit implicit host networking"
+    },
+    {
+      "evidence": "evidence/BR-470-11_tests.log",
+      "evidence_sha256": "b94377d5134a96da7b90183bb0580e26ab8498389b98e6c056048e481271e5f9",
+      "id": "BR-470-11-R01",
+      "package": "BR-470-11",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Enumerate available devices"
+    },
+    {
+      "evidence": "evidence/BR-470-11_tests.log",
+      "evidence_sha256": "b94377d5134a96da7b90183bb0580e26ab8498389b98e6c056048e481271e5f9",
+      "id": "BR-470-11-R02",
+      "package": "BR-470-11",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Expose versions"
+    },
+    {
+      "evidence": "evidence/BR-470-11_tests.log",
+      "evidence_sha256": "b94377d5134a96da7b90183bb0580e26ab8498389b98e6c056048e481271e5f9",
+      "id": "BR-470-11-R03",
+      "package": "BR-470-11",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Expose capabilities"
+    },
+    {
+      "evidence": "evidence/BR-470-11_tests.log",
+      "evidence_sha256": "b94377d5134a96da7b90183bb0580e26ab8498389b98e6c056048e481271e5f9",
+      "id": "BR-470-11-R04",
+      "package": "BR-470-11",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Expose limits"
+    },
+    {
+      "evidence": "evidence/BR-470-11_tests.log",
+      "evidence_sha256": "b94377d5134a96da7b90183bb0580e26ab8498389b98e6c056048e481271e5f9",
+      "id": "BR-470-11-R05",
+      "package": "BR-470-11",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Use deterministic ordering"
+    },
+    {
+      "evidence": "evidence/BR-470-12_tests.log",
+      "evidence_sha256": "2dd229613676d65d5fcf2dd3dae8f8867a7d98f68c318c25d3550617dd8751e3",
+      "id": "BR-470-12-R01",
+      "package": "BR-470-12",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Limit calls per execution"
+    },
+    {
+      "evidence": "evidence/BR-470-12_tests.log",
+      "evidence_sha256": "2dd229613676d65d5fcf2dd3dae8f8867a7d98f68c318c25d3550617dd8751e3",
+      "id": "BR-470-12-R02",
+      "package": "BR-470-12",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Limit bytes transferred"
+    },
+    {
+      "evidence": "evidence/BR-470-12_tests.log",
+      "evidence_sha256": "2dd229613676d65d5fcf2dd3dae8f8867a7d98f68c318c25d3550617dd8751e3",
+      "id": "BR-470-12-R03",
+      "package": "BR-470-12",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Limit storage writes"
+    },
+    {
+      "evidence": "evidence/BR-470-12_tests.log",
+      "evidence_sha256": "2dd229613676d65d5fcf2dd3dae8f8867a7d98f68c318c25d3550617dd8751e3",
+      "id": "BR-470-12-R04",
+      "package": "BR-470-12",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Limit entropy requests"
+    },
+    {
+      "evidence": "evidence/BR-470-12_tests.log",
+      "evidence_sha256": "2dd229613676d65d5fcf2dd3dae8f8867a7d98f68c318c25d3550617dd8751e3",
+      "id": "BR-470-12-R05",
+      "package": "BR-470-12",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Limit mailbox depth"
+    },
+    {
+      "evidence": "evidence/BR-470-13_tests.log",
+      "evidence_sha256": "b1f3ba96c29ca4851f048a48176bc4f635ec575c712d4a2f285bd21819ab42f5",
+      "id": "BR-470-13-R01",
+      "package": "BR-470-13",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Guest cannot interact with host outside device ABI"
+    },
+    {
+      "evidence": "evidence/BR-470-13_tests.log",
+      "evidence_sha256": "b1f3ba96c29ca4851f048a48176bc4f635ec575c712d4a2f285bd21819ab42f5",
+      "id": "BR-470-13-R02",
+      "package": "BR-470-13",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Unauthorized device use traps"
+    },
+    {
+      "evidence": "evidence/BR-470-13_tests.log",
+      "evidence_sha256": "b1f3ba96c29ca4851f048a48176bc4f635ec575c712d4a2f285bd21819ab42f5",
+      "id": "BR-470-13-R03",
+      "package": "BR-470-13",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Device inputs are bounds-safe"
+    },
+    {
+      "evidence": "evidence/BR-470-13_tests.log",
+      "evidence_sha256": "b1f3ba96c29ca4851f048a48176bc4f635ec575c712d4a2f285bd21819ab42f5",
+      "id": "BR-470-13-R04",
+      "package": "BR-470-13",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Replay substitutes non-deterministic inputs correctly"
+    }
+  ],
+  "status": "OPERATIONAL",
+  "total": 66
+}

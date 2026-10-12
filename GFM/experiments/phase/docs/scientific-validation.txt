@@ -1,0 +1,336 @@
+GFM RESEARCH SIMULATOR: SCIENTIFIC ACCEPTANCE AND LIMITS
+Prepared 2026-10-11; research-revision numerical assessment
+
+1. DECISION AND MODEL SCOPE
+
+The intended use is a local research prototype for comparing a stated
+aperture/cover hypothesis with reference Kerr geometry and numerical null
+test-light paths. It supports equation inspection and reproducible numerical
+experiments. It has no accepted empirical domain for an astronomical source.
+Mission, flight, material-safety, and physical-traversability decisions are
+outside the demonstrated scope. No NASA certification is claimed.
+
+The model has distinct layers:
+
+  Reference geometry: stationary, neutral Kerr, prescribed mass and spin.
+  Null paths: massless test particles on that background; no backreaction.
+  Hypothesis: spin-dependent toy aperture and assumed cover threshold.
+  Representation: complex trace-character transform indexed by GF9 labels.
+  Display: coordinate embedding and an illustration clock.
+
+The cover does not enter the Kerr metric or the null-path equations. Both
+branches therefore have the same reference spacetime and ray bundle at the
+same mass, spin, and ray settings. This is a modeling choice. It does not show
+that a real massive cover could be added without changing a gravitational field.
+No formation, Einstein evolution, radiative transfer, Maxwell, GRMHD, or
+material constitutive equations are supplied by this model.
+
+Verification asks whether the code solves the declared model correctly.
+Analytic benchmarks compare numerical outputs with independently calculated
+solutions or limits. Empirical validation would compare the model with relevant
+observations and their measurement process. These are separate evidence types.
+Screenshots, successful controls, and GPU rendering establish software/display
+behavior; they do not establish physical accuracy.
+
+2. CREDIBILITY GUIDANCE
+
+NASA-STD-7009B is used as guidance for this project checklist, not as an
+accreditation assessment. Relevant records are mapped below; no assessed NASA
+credibility level is assigned.
+
+  Use and acceptance: M&S 40, 43, 14, 22-23.
+  Pedigree, equations, assumptions, limits and units: M&S 45-46, 11-13, 24.
+  Verification and its domain: M&S 15-16.
+  Validation and its domain: M&S 17-18.
+  Uncertainty and sensitivity: M&S 19, 21, 28-30.
+  Defects, capability/results assessment and reporting: M&S 51, 48, 31-35, 50.
+
+The acceptance criteria below are project choices. NASA and the cited Kerr
+papers do not prescribe these numerical tolerances for this implementation.
+Source: NASA-STD-7009B, sections 4.1-4.3 and Appendix E.
+https://standards.nasa.gov/sites/default/files/standards/NASA/B/1/NASA-STD-7009B-Final-3-5-2024.pdf
+
+3. COORDINATES, EQUATIONS AND NUMERICAL DOMAIN
+
+Use signature (-,+,+,+), Boyer-Lindquist (t,r,theta,phi), G=c=1,
+Sigma=r^2+a^2*cos(theta)^2, Delta=r^2-2Mr+a^2, a/M=spin.
+The neutral spacetime charge is Q_e=0. Carter's constant Q_C is a different
+quantity and must never be identified with electric charge.
+
+For positive photon energy E normalized to one, write L=Lz/E and eta=Q_C/E^2:
+
+  R(r)=[r^2+a^2-aL]^2-Delta*[eta+(L-a)^2]
+  Theta(theta)=eta+a^2*cos(theta)^2-L^2*cot(theta)^2.
+
+Mino parameter tau satisfies dx/dtau=Sigma*p^mu/E. The implementation's
+chain-rule variables are u=1/r and mu=cos(theta); then u'^2=u^4*R(1/u)
+and mu'^2=(1-mu^2)*Theta(arccos(mu)). Primes mean d/dtau.
+Second-order equations derived from these first integrals naturally pass
+through regular turning points, but numerical constraint error must still be
+measured. E, L and eta are fixed inputs; simply reprinting them is not evidence
+of conservation. Momentum reconstructed from the integrated velocities provides
+an additional, non-tautological check.
+Equation source: Gralla and Lupsasca (2020), equations 1-9, with the project's
+explicit variable changes. https://arxiv.org/html/1910.12881v2
+
+The implemented adaptive method is Dormand-Prince 5(4) on the separated
+equations. Exported settings include tolerance, maxStep, maxMino, maxSteps,
+maxPoints and horizonGuard. The internal local tolerance is
+min(0.02*tolerance,2e-9). Default maxStep=0.025/M, maxMino=10/M,
+maxSteps=12000, maxPoints=600 and horizonGuard=0.02M. The numerical step floor
+is 1e-13/M; exhaustion has its own unresolved outcome. Direct-call bounds
+include M=0.01..100, spin=0..1, tolerance=1e-11..1e-4, maxSteps=10..50000
+and maxPoints=4..5000. These input bounds are not an accuracy guarantee.
+Paths end before the Boyer-Lindquist horizon/polar coordinate singularities;
+an exterior termination guard is not a continuation through the horizon.
+Step exhaustion, a coordinate guard, and an unresolved near-critical path need
+their own outcomes and must not be silently relabeled as physical capture.
+
+An exact unstable radial separatrix previously acquired a false numerical
+capture despite tiny first-integral residuals. That defect was corrected and
+regression checked. The corrected solver examines stationary points of V=u^4R
+over the planned radial range. If abs(V)/max(1,sum(abs(V terms))) is at most
+max(64*machine_epsilon,100*internalTolerance), it reports critical-limit and
+censors an uncertainty neighborhood sqrt(2*absoluteBand/abs(Vsecond)). This is
+a conservative numerical classification band, not a physical shell thickness.
+Its diagnostics record the stationary roots, gap, band and guard. Exact and
+nearby cases are tested independently; no capture/escape claim is accepted
+inside this band. Coordinate-limited and critical-limit paths remain unresolved.
+
+The UI's current worker configuration permits observerRadius 12..100 M,
+inclination 15..165 degrees, 8..32 rays, and tolerance 1e-10..1e-4. These are
+interface bounds observed in backend/physics-service.cjs, not a validated
+accuracy domain. The solver may offer a larger direct-call test domain.
+Finite-radius initial conditions using asymptotic alpha,beta impact parameters
+are not a local orthonormal observer tetrad or a calibrated camera projection.
+
+Display mapping, with y as the polar axis:
+  x=sqrt(r^2+a^2)*sin(theta)*cos(phi)
+  y=r*cos(theta)
+  z=sqrt(r^2+a^2)*sin(theta)*sin(phi).
+The mapping specifies coordinate shape, not proper spatial distance. A display
+animation parameter must not be called photon travel time unless it is tied to
+an explicitly exported time coordinate and a stated mass scale.
+
+4. ACCEPTANCE MATRIX
+
+Status words: DOCUMENTED means a rule or scope is recorded. VERIFIED means
+the exact current source was executed within the stated test scope.
+VERIFIED-PARENT identifies predecessor-only evidence. PENDING means required
+research-revision evidence has not yet been checked. NOT VALIDATED means no
+empirical result is available. A planned numerical test is PENDING.
+
+ID  Check and proposed acceptance                         Status / limits
+
+A01 Source pedigree and configuration
+    Preserve the copied terminal/computation-module hashes; record all new
+    solver/source hashes, inputs, units, integration settings and termination
+    limits with every exported experiment.
+    VERIFIED solver source identity and all integration limits in independent
+    evidence. The actual browser export exactly replays with this frozen solver.
+    PENDING loaded-code fingerprints for the final integration metadata and
+    final package manifest; replay proves matching output, not memory identity.
+
+A02 Initial null condition and admissible starting point
+    Independently reconstruct g(p,p), E, Lz and Q_C from point velocities.
+    Initial normalized null residual <=1e-10 at regular exterior points.
+    No nonfinite values or initially forbidden radial/polar states accepted.
+    VERIFIED for 205 tested admissible starts: maximum independently reconstructed
+    initial normalized null residual 9.853e-16. The 29-test production suite
+    passed including invalid input/guard cases. Excluded regions remain explicit.
+
+A03 Trajectory first integrals and metric reconstruction
+    Record max normalized radial/polar constraint and metric-null residuals
+    over accepted solver states. Provisional regular-exterior targets <=1e-6.
+    Compare reconstructed E/Lz/Q_C with initial constants, normalized by
+    max(1, absolute initial quantity). Do not use echoed constants as evidence.
+    VERIFIED: 205 rays, 29,245 exported points. Independent sampled maxima:
+    radial 1.024e-9, polar 8.974e-8, normalized metric null 3.029e-9,
+    reconstructed E error 7.276e-12, normalized Lz error 4.135e-12,
+    normalized Q_C error 1.646e-8. All meet the 1e-6 project criterion.
+    Reported maxima over accepted states also meet that criterion. The independent
+    checker sees exported samples; downsampling is not hidden as full-step review.
+    Near-horizon raw null cancellation uses an explicit arithmetic-scale budget;
+    independent normalized null remains constrained. No interior claim follows.
+
+A04 Schwarzschild limits
+    a=0 must give r+=2M, photon sphere r_ph=3M, b_critical=3*sqrt(3)*M.
+    Incoming rays at 0.99 and 1.01 times b_critical must have stable opposite
+    capture/escape outcomes at tightened tolerance, outside guard ambiguities.
+    VERIFIED: algebraic targets <=1e-10 relative. Both impact signs at 0.99 and
+    1.01 times critical have correct opposite outcomes at 1e-7/1e-9/1e-11.
+    Exact +/-3*sqrt(3) and nearby +/-1e-10 offsets remain critical-limit at all
+    three tolerances. +/-0.001 offsets resolve correctly outside the band.
+    Tolerance-dependent +/-1e-8 cases and outward critical paths are included.
+    These values follow from the double-root radial potential at a=0.
+
+A05 Kerr equatorial photon-orbit references
+    Compare prograde/retrograde radii with
+      2M*[1+cos((2/3)*acos(-|a|/M))] and
+      2M*[1+cos((2/3)*acos( |a|/M))], respectively.
+    At nondegenerate test spins check independently R=R'=0; algebraic residual
+    <=1e-10 normalized by term magnitudes. The extremal prograde horizon
+    limit is not a regular exterior orbit test.
+    VERIFIED: 15 mass/spin analytic cases; six exact Kerr prograde/retrograde
+    separatrices and three initially circular cases conservatively critical-limit.
+    Teo (2003), equations 1 and 10-11:
+    https://www.physics.nus.edu.sg/wp-content/uploads/sites/5/2019/10/paper.pdf
+
+A06 Convergence and numerical uncertainty
+    Repeat representative rays at tol, tol/10 and tol/100; compare matched
+    endpoint/turning observables rather than unmatched adaptive-step indices.
+    Report differences and step counts. Acceptance requires stable classifications
+    away from the critical boundary and explicitly declared accuracy targets.
+    VERIFIED for the b=6 Schwarzschild scattering observable: at tolerances
+    1e-5, 1e-7, 1e-9, 1e-11, independent angle errors are respectively
+    4.734e-10, 4.734e-10, 1.536e-12 and 6.217e-15 rad. Accepted steps
+    are 59,59,147,369. The loose plateau follows the internal-tolerance cap.
+    This is case-specific refinement; local embedded error is not a bound on
+    global trajectory error or all near-critical trajectories.
+
+A07 Weak Schwarzschild bending
+    Compare asymptotic deflection with leading 4M/b only for M/b<<1. Include
+    higher-order/finite-distance error estimates, or use an independent radial
+    quadrature as the quantitative reference. Finite incoming and outgoing
+    endpoints require separate tail corrections if their radii differ.
+    VERIFIED: b=100M, endpoint 1000M, independently tail-corrected full angle
+    0.0412225397493 rad versus leading 0.04 rad. The finite-radius range alone
+    is not an asymptotic test. Full independent Schwarzschild quadrature checks
+    use angle error/max(1,abs(reference angle)) <=1e-6. Ordinary off-band angle
+    errors are <=2.78e-8 rad in tested cases. A very near-critical offset 1e-8
+    at tolerance 1e-11 has 5.324e-6 rad error (within the scaled criterion),
+    illustrating conditioning. Quadrature uses a regularized turning point;
+    near-separatrix reference budget is 1e-9, ordinary budget 1e-12. Neither
+    these budgets nor conservation residuals are rigorous global error bounds.
+
+A08 Aperture/cover and GF9 representation
+    Preserve strict spin>alphaCritical opening and coverLoad>=sealThreshold
+    sealing, including equality cases. Raw sample magnitudes/zeros remain
+    unchanged through the complex GF9 transform/inverse to numerical tolerance.
+    VERIFIED: 235 inherited snapshots, one freshly generated current-backend
+    snapshot and nine independent basis round trips checked in this research
+    copy. This verifies arithmetic
+    of the declared hypothesis, not the physical existence of an aperture.
+
+A09 Declared observational identifiability
+    Same exterior parameters and observation protocol must give equal exterior
+    predictions. If both likelihoods are equal, posterior branch probability
+    equals its prior. The GF9 transform cannot change this absent information.
+    DOCUMENTED inference within the declared model; empirical classification
+    is NOT VALIDATED. A passage probe changes the observation protocol.
+
+A10 Display, worker lifecycle and reproducible export
+    Verify finite geometry, functional controls, bounded computation/exports,
+    stale-worker-result handling, recorded settings, and source identity.
+    VERIFIED: current 29 software tests passed, including worker lifecycle and
+    export checks. Actual research WebGL, camera, controls, stale-result clearing,
+    two-branch demo, GF9 data and downloaded export checks passed. The downloaded
+    full 32-ray / 6,079-point bundle exactly matches the frozen solver after JSON
+    serialization. Final integration loaded-code fingerprints remain PENDING
+    a service restart; no whole-runtime memory identity claim is made.
+    VERIFIED-PARENT: 16 tests and live GPU/browser QA for predecessor 1.0.1.
+
+A11 Empirical astronomy and model discrepancy
+    Identify a target source, observation data/pedigree, instrument response,
+    emission model, uncertainties, and held-out comparisons before accepting
+    an astrophysical predictive claim. Assess parameter identifiability first.
+    NOT VALIDATED. This project supplies no calibrated observational fit.
+
+5. UNCERTAINTY AND IDENTIFIABILITY
+
+Numerical uncertainty includes floating-point cancellation, accumulated solver
+error, event/guard localization, finite-radius endpoints, and ray sampling.
+The discrete bundle does not provide a converged image or intensity field.
+Do not turn a local tolerance or single conservation residual into a percentage
+accuracy claim for the whole simulation.
+The independent checker reconstructs pointwise first integrals and prescribed
+coordinate derivatives from exported velocities. It does not independently
+integrate every Kerr coordinate or provide a full pathwise phase-error bound.
+Azimuth has an independent complete-scattering benchmark in the tested
+Schwarzschild cases; a quantitative inclined-Kerr image would require further
+coordinate/phase convergence and an explicit observation/emission model.
+
+Model uncertainty includes omitted matter and emission physics, the prescribed
+stationary background, and the unverified aperture/cover law. Its parameters
+are controls, not measured estimates with observational confidence intervals.
+Near the aperture critical spin, dr_A/dspin grows without bound on the open
+side; a cover threshold has a discontinuous passage bit. Small parameter
+perturbations can therefore alter the hypothesis outcome. Log threshold-side
+tests and do not smooth them into evidence for a physical transition.
+
+Identifiability depends on the observation map. Structural identifiability
+asks whether distinct parameters can produce distinguishable outputs even
+with ideal data. For the declared equal-exterior branches, equal likelihoods
+give posterior=prior by Bayes' rule. Different hidden labels cannot be recovered
+by applying an invertible transform to identical exterior inputs. A protocol
+that observes assumed passage has different information and different premises.
+Primary methodology reference: Chis, Banga and Balsa-Canto (2011):
+https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0027755
+
+EHT's M87 analysis fitted visibility data and calibrated models involving an
+emission region. That is an example of the observational work this project
+has not performed. Similar visual appearance is not an observational fit,
+and those results do not validate this project's aperture or cover hypothesis.
+Primary example: EHT Collaboration (2019), M87 Results VI:
+https://arxiv.org/abs/1906.11243
+
+6. EVIDENCE REGISTER AND RELEASE GATE
+
+Current research evidence:
+  backend/relativity.cjs SHA256:
+  94facda381ccf78ed204114d7e02929c99e513c898e343a76712feb576607f77
+  validation/independent-relativity-cases.json: 115 exact-input cases generated
+  from that solver, covering mass 0.1/1/10, spin 0/0.5/0.9/0.99/1,
+  observer radii 12/20/100M, inclined rays, analytic references, scattering,
+  principal congruence, guards and critical boundaries. Thirty-seven rays have
+  critical-limit, deliberately unresolved rather than counted as capture.
+  validation/independent-relativity-results.json: independent stdlib Python
+  reconstruction, quadrature, integration-limit and band checks passed for
+  205 rays / 29,245 sampled points. Input/checker/source hashes are recorded.
+  validation/kerr-convergence-and-negative-checks.json: four refinement levels
+  passed; eight corrupted-evidence cases were rejected (coordinates, velocity,
+  false critical capture, limits, requested inputs, angle, nonfinite data and
+  wrong source identity).
+  validation/research-tests.txt: 29/29 software tests passed; no failures,
+  cancellations, skips or todos. These tests do not substitute for browser QA.
+  validation/browser/research-browser-qa.json: ten actual browser checks passed,
+  including GPU/camera/controls, both hypothesis boundary states, demo, stale
+  result clearing and GF9 data. Its overall status is partial because the live
+  service lacks the latest loaded-module fingerprint metadata.
+  validation/browser/live-export-replay.json: the UI-downloaded full bundle
+  in validation/browser/live-kerr-export.json exactly reproduces with the final
+  frozen solver at spin 0.99, inclination 85 degrees, tolerance 1e-9,
+  32 rays / 6,079 points. This verifies that output and all complete ray limits.
+  It does not substitute for the remaining integration-memory fingerprints.
+  validation/research-hypothesis-independent.json: 235 inherited snapshots plus
+  validation/current-hypothesis-frame.json from this backend (236 total), and
+  nine basis checks re-executed with the independent hypothesis/GF9 checker.
+
+Historical inherited evidence:
+  validation/independent-results.json: 235 preserved hypothesis/reference/GF9
+  snapshots, nine GF9 basis checks, max coefficient error 4.002966042486721e-16,
+  max recovery error 2.2215299868541707e-16 in those stored cases.
+  The inherited v1.0.0 report included the original blocked-browser status.
+  It is historical evidence. The research packager will preserve it as
+  validation/verification-summary-v1.0.0.json with its historical manifest at
+  validation/SHA256SUMS-v1.0.0.txt before generating the research report.
+  Predecessor v1.0.1 had 16 passing software tests and actual browser/GPU QA
+  recorded in the original chat outputs/simulator-browser-qa-v1.0.1.json.
+  Those results establish predecessor behavior only.
+
+Research evidence still required:
+  Final integration loaded-code fingerprint metadata after service restart.
+  Final package/source manifest matching the tested revision.
+  A versioned verification report that distinguishes these scopes.
+
+Planned research package evidence: validation/verification-summary.json and
+SHA256SUMS.txt will identify the current revision; the planned archive is
+../outputs/GFM_Research_Simulator_v2.0.0.zip. At this document's freeze time,
+the research packaging operation has not run. ZIP contents, hashes and CRC
+verification must be recorded by the packager; this document does not claim
+that the planned archive already exists or has passed verification.
+
+Final acceptance requires the evidence to identify the exact tested revision.
+Any unresolved scientific criterion must remain explicitly pending or failed.
+The finite prototype evidence does not imply NASA compliance, observational
+validation, horizon-interior accuracy, or physical traversability.

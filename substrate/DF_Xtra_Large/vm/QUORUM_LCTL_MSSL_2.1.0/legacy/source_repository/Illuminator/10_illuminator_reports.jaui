@@ -1,0 +1,26 @@
+ja source 0.3
+module illuminator.reports
+use Interface
+policy no_network
+
+interface IlluminatorReports {
+    state sophia_explanation: Text? = null
+    state charlotte_organization: Text? = null
+    state landon_execution_summary: Text? = null
+    state professor_evidence_summary: Text? = null
+    state podium_conclusion: Text? = null
+    state running: Flag = false
+    derived can_render = sophia_explanation != null and charlotte_organization != null and landon_execution_summary != null and professor_evidence_summary != null and podium_conclusion != null and not running
+    component ReportButton {
+        label "Render human-readable report"
+        enabled bind can_render
+        accessibility role button name "Render Illuminator report"
+        action render_report requires admin.action:approved
+    }
+    component ReportViewport {
+        embed portal.scene "illuminator_human_readable_report"
+        motion bind timeline.main
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface IlluminatorReports

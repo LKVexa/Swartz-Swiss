@@ -1,0 +1,34 @@
+ja source 0.3
+module suite56.job_queue_workers_sandboxes.status_tracking
+use Operations
+policy explicit_network
+
+workspace StatusTracking {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 4 memory 8GB
+    network disabled
+    secret status_key reference "vault://suite56/status-tracking"
+
+    service SOPHIA_status_context replicas 1
+    health_check SOPHIA_status_context every 10s
+    service CHARLOTTE_status_gate replicas 1
+    health_check CHARLOTTE_status_gate every 10s
+    service LANDON_status_projector replicas 1
+    health_check LANDON_status_projector every 10s
+    service Professor_status_report replicas 1
+    health_check Professor_status_report every 10s
+    service Podium_status_ledger replicas 1
+    health_check Podium_status_ledger every 10s
+    service status_tracking_worker replicas 1
+    health_check status_tracking_worker every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "job_queue_workers_status_tracking.msslb"

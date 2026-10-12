@@ -1,0 +1,9 @@
+{
+  "brim_bytes": 112,
+  "brim_sha256": "4f0b5e321f59e69bf515e84a1fb6c397ce41e08d37a152561d33865cfd778f00",
+  "brir_sha256": "d24a483a13c3abb79bb3a0131900d85d56d3caea9be6d127ac99e62d98cddac6",
+  "provenance_sha256": "5ef303fd2abc3bb7d4bc922d5db1d766d83f4f5c85520bde4193f11bb75829d7",
+  "record": "BR.ImageVerification",
+  "release": "4.7.0",
+  "status": "PASS"
+}

@@ -1,0 +1,26 @@
+deepml vfx 0.3
+module suite34.animation_vfx_workspace.iteration
+policy deterministic
+policy no_network
+
+effect AnimationWorkspaceIteration {
+  procedural operator SOPHIA(scene_state, iteration_state) differentiable
+  procedural operator CHARLOTTE(scene_state, iteration_state) differentiable
+  procedural operator LANDON(scene_state, iteration_state) differentiable
+  procedural operator Professor(scene_state, iteration_state) differentiable
+  procedural operator Podium(scene_state, iteration_state) differentiable
+  cache IterationWorkspaceCache interval 0s..10s step 1/60s hash sha256("suite34:iteration:v1")
+  mask ChangedRegionVisibility source scene.ChangedRegionMask
+  bind scene IterationWorkspaceScene
+  bind timeline IterationWorkspaceTimeline
+  shader function IterationWorkspaceShade(x: vec3) -> color
+  render_target IterationWorkspaceColor format rgba16f
+  render_graph { SOPHIA -> CHARLOTTE -> LANDON -> Professor -> Podium -> IterationComposite }
+  composite multipass [BaselineColor, CandidateColor, DifferenceColor, ReviewOverlay]
+}
+render AnimationWorkspaceIteration camera scene.MainCamera to IterationWorkspaceColor;
+cache AnimationWorkspaceIteration to cache.AnimationWorkspaceIteration;
+optimize AnimationWorkspaceIteration using [node_fusion, dead_pass_removal, attribute_packing, shader_specialization, cache_scheduling, domain_tiling, render_graph_ordering]
+lower AnimationWorkspaceIteration to DEEPML_VFX_R12
+package vfx AnimationWorkspaceIteration as "animation_vfx_workspace_iteration.msslb"
+certify vfx AnimationWorkspaceIteration profile strict

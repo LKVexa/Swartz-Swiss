@@ -1,0 +1,25 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 9,
+  "legacy_root": "legacy/source_repository/Funnel",
+  "legacy_sha256": "77d4e9f6f2c4c05cbdb62f4d8c6c5c701634232f2b7acab95e98446aadbe995b",
+  "files": [
+    {
+      "path": "09_funnel.jad",
+      "sha256": "2f51c2f2224f574da09e5df254a775a480bf61640fd148806b6ce11ee81ed491",
+      "bytes": 2302
+    },
+    {
+      "path": "README.md",
+      "sha256": "4758982438c914bdc2b3068e05b2b2456a0adbf66222e3240a95f3b3a5a6a51c",
+      "bytes": 1637
+    },
+    {
+      "path": "broad_repository_recall_results.dmk",
+      "sha256": "953b8c14f330cec6cd0376750683c8bd1aa96791058e3dc37839e1423cc7932b",
+      "bytes": 2655
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

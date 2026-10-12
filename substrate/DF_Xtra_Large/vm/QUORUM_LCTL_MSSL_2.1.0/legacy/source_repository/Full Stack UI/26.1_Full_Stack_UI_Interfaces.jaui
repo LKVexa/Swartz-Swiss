@@ -1,0 +1,46 @@
+ja source 0.3
+module suite26.full_stack_ui.interfaces
+use Interface
+policy no_network
+
+interface FullStackInterfaces {
+    state selected_view: Text? = null
+    state transitioning: Flag = false
+    derived can_open = selected_view != null and not transitioning
+    component SOPHIA_InterfaceModel {
+        label "Interpret interface intent"
+        enabled bind can_open
+        accessibility role button name "Interpret selected interface"
+        action interpret_interface requires admin.action:approved
+    }
+    component CHARLOTTE_InterfaceGate {
+        label "Validate interface contract"
+        enabled bind can_open
+        accessibility role button name "Validate selected interface"
+        action validate_interface requires admin.action:approved
+    }
+    component LANDON_InterfaceRouter {
+        label "Open selected interface"
+        enabled bind can_open
+        accessibility role button name "Open selected interface"
+        action open_interface requires admin.action:approved
+    }
+    component Professor_InterfaceGuide {
+        label "Explain interface"
+        enabled bind can_open
+        accessibility role button name "Explain selected interface"
+        action explain_interface requires admin.action:approved
+    }
+    component Podium_InterfaceEvidence {
+        label "View interface evidence"
+        enabled bind can_open
+        accessibility role button name "View interface evidence"
+        action show_interface_evidence requires admin.action:approved
+    }
+    component InterfaceViewport {
+        embed portal.scene "full_stack_interface"
+        motion bind timeline.interface_navigation
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface FullStackInterfaces

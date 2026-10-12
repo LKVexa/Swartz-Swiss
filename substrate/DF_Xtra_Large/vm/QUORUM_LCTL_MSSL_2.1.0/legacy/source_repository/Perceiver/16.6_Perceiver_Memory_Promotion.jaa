@@ -1,0 +1,37 @@
+ja source 0.3
+module suite16.perceiver.memory_promotion
+use Agent
+policy no_network
+
+agent PerceiverMemoryPromotion {
+    identity "perceiver_memory_promotion"
+    role "sophia-charlotte-landon-professor-podium-perceiver"
+    goal promote_only_approved_memory when confidence >= 0.95
+    memory session retention 1h
+    budget steps 50 tools 5
+    tool SOPHIAEvaluatePromotion(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEGatePromotion(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONCommitPromotion(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainPromotion(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordPromotion(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIAEvaluatePromotion
+        authorize CHARLOTTEGatePromotion
+        authorize LANDONCommitPromotion
+        authorize ProfessorExplainPromotion
+        authorize PodiumRecordPromotion
+        continue when policy_allows
+        execute SOPHIAEvaluatePromotion("memory_promotion_candidates")
+        execute CHARLOTTEGatePromotion("evaluated_promotion_set")
+        require human_approval before LANDONCommitPromotion
+        execute LANDONCommitPromotion("approved_promotion_manifest")
+        execute ProfessorExplainPromotion("promotion_results")
+        execute PodiumRecordPromotion("promotion_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "PerceiverMemoryPromotion.mcrt"
+

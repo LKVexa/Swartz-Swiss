@@ -1,0 +1,27 @@
+ja source 0.3
+module suite52.evaluation_content_defense.permanent_evaluation
+use Security
+policy no_network
+
+principal PermanentEvaluationWorker
+role EvaluationDefenseEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant evaluation.promote:approved
+}
+resource PermanentEvaluationRecord classification restricted
+policy PermanentEvaluationPolicy {
+    deny network.* by default
+    deny process.* by default
+    deny PermanentEvaluationRecord when principal.role != EvaluationDefenseEnsemble
+    allow PermanentEvaluationRecord when principal.role == EvaluationDefenseEnsemble
+    require human_approval for evaluation.promote
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "PermanentEvaluationPolicy.decision.mcrt"

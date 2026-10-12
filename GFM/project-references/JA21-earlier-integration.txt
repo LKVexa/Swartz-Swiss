@@ -1,0 +1,63 @@
+GFM PHASE TEXTURE IN THE JA21 CONSOLE - WINDOWS LAUNCHER REPAIR
+
+Open Start GFM Console.cmd or GfmConsole.exe. This additive compiled Windows
+entry starts the existing JA21 WPF console with the live GFM phase texture
+application. It does not use a PowerShell script, change execution policy,
+request administrator privileges, or download anything during startup.
+The original Start Console.cmd is preserved as the original blank entry.
+
+Keep the console beside exactly one supplied backend folder:
+  J21 and GFM (new Windows package), or
+  JA21_GFM_Console and GFM_Phase_Texture_Backend (existing project).
+The bundled Node calculation runtime remains outside the native console tree.
+Microsoft Edge WebView2 Runtime and Windows .NET Framework WPF are required.
+Missing dependencies cause a visible error instead of a noninteractive fallback.
+
+LONG PATH REPAIR
+The inherited console includes historical documentation paths longer than the
+traditional Explorer extraction limit. The new Windows ZIP keeps the entire
+console inside JA21.payload.zip, so Explorer extracts only short outer paths.
+Open GFM.cmd uses bundled Node to validate and install that payload with
+Windows extended paths into J21. Every original file and hash is preserved.
+Do not manually extract JA21.payload.zip in Explorer. Extract the outer ZIP
+to D:\Codex so its GFM-Win-3.0.2 folder has a short path, then open Open GFM.cmd.
+The installer rejects invalid Windows names, collisions, unsafe paths,
+archive corruption, hash mismatches and changes to existing installed files.
+It preserves the existing workspace and does not modify system long-path settings.
+
+STARTUP AND PROCESS OWNERSHIP
+The executable verifies its build files, original sources, original runtime
+seal, pinned adapter, installed WebView2 Runtime, and bundled Node checksum.
+It prefers http://127.0.0.1:8791 and can use http://127.0.0.1:8788, both
+already allowed by the preserved console.json. An occupied port is left alone;
+the other permitted port is tried after cleanup of this launch's failed child.
+It waits for a computed phase frame and matching running/on-disk source
+identity before opening the original JA21 presenter. It leaves unrelated
+services untouched. A matching existing GFM Phase Texture 3.0.0 service is
+attached and left running. Only a backend created by this launch is stopped
+when its console closes, with executable and process birth-time checks.
+Close the owner window only when its attached windows no longer need the backend.
+
+Diagnostics: workspace/logs/gfm-launch-latest.log and
+workspace/logs/gfm-exe-session-<run-id>.json. --check verifies dependencies
+without starting the backend or window. --exercise verifies backend startup
+and owned-process cleanup without opening the window. These checks alone
+do not establish native rendering; the release verification report records
+the separate actual native-window review.
+
+CURRENT NATIVE VERIFICATION LIMIT
+The latest launcher (1.2.0) was compiled and statically reviewed. Windows
+Application Control blocked its execution before Main with error 4551:
+"An Application Control policy has blocked this file". No Windows policy was
+changed and no alternative execution path was tried after that denial.
+The launcher code and installed package are ready for an approved Windows
+launch. This release does not claim a verified native GFM display. If Windows
+also blocks a normal desktop opening, retain its error for the Windows policy
+owner; do not treat the numerical or installation tests as a GUI success.
+
+INTEGRITY AND SCIENTIFIC SCOPE
+Original console sources, settings, original launchers, and seals are unchanged.
+GfmConsole.build.json describes the additive executable and its source hashes.
+GFM numerical code is unchanged by this launcher and packaging repair.
+The phase texture model remains a research prototype; the earlier EHT
+holdout comparison failed. Console startup does not validate its physics.

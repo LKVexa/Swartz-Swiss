@@ -1,0 +1,19 @@
+{
+  "domain_runtime_status": "OPEN_REFERENCE_LOCAL",
+  "evidence_required": true,
+  "id": "repository_intelligence",
+  "plane_chain": [
+    "sense_context",
+    "intent_reasoning",
+    "orchestration",
+    "governance_control"
+  ],
+  "policy_gate_required": true,
+  "previous_domain_runtime_status": "BLOCKED_NOT_IMPLEMENTED",
+  "production_domain_runtime_status": "NOT_CLAIMED",
+  "reference_local_exact_replay": true,
+  "reference_local_execution": "PASS",
+  "replay_scope": "topology_contract",
+  "schema": "QUORUM-SCENARIO/2.0",
+  "typed_handoff": true
+}

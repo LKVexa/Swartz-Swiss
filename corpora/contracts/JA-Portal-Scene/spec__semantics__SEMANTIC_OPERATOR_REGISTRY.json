@@ -1,0 +1,271 @@
+{
+  "language": "ja.portal.scene",
+  "version": "1.0.0",
+  "operators": [
+    {
+      "operator": "certify_scene",
+      "records": 1000,
+      "topics": [
+        "duplicate_id",
+        "forbidden_network_effect",
+        "invalid_component_type",
+        "parent_cycle",
+        "physics_contradiction",
+        "projection_error",
+        "replay_divergence",
+        "unresolved_resource"
+      ]
+    },
+    {
+      "operator": "compose_animation_binding",
+      "records": 312,
+      "topics": [
+        "animation_binding"
+      ]
+    },
+    {
+      "operator": "compose_audio",
+      "records": 136,
+      "topics": [
+        "audio"
+      ]
+    },
+    {
+      "operator": "compose_camera",
+      "records": 136,
+      "topics": [
+        "camera"
+      ]
+    },
+    {
+      "operator": "compose_conditional_event",
+      "records": 312,
+      "topics": [
+        "conditional_event"
+      ]
+    },
+    {
+      "operator": "compose_cross_scene_reference",
+      "records": 313,
+      "topics": [
+        "cross_scene_reference"
+      ]
+    },
+    {
+      "operator": "compose_deterministic_mutation",
+      "records": 313,
+      "topics": [
+        "deterministic_mutation"
+      ]
+    },
+    {
+      "operator": "compose_event_handler",
+      "records": 136,
+      "topics": [
+        "event_handler"
+      ]
+    },
+    {
+      "operator": "compose_hierarchy",
+      "records": 137,
+      "topics": [
+        "hierarchy"
+      ]
+    },
+    {
+      "operator": "compose_lighting",
+      "records": 136,
+      "topics": [
+        "lighting"
+      ]
+    },
+    {
+      "operator": "compose_material",
+      "records": 137,
+      "topics": [
+        "material"
+      ]
+    },
+    {
+      "operator": "compose_offline_network_schema",
+      "records": 313,
+      "topics": [
+        "offline_network_schema"
+      ]
+    },
+    {
+      "operator": "compose_physics",
+      "records": 136,
+      "topics": [
+        "physics"
+      ]
+    },
+    {
+      "operator": "compose_portal",
+      "records": 313,
+      "topics": [
+        "portal"
+      ]
+    },
+    {
+      "operator": "compose_prefab",
+      "records": 136,
+      "topics": [
+        "prefab"
+      ]
+    },
+    {
+      "operator": "compose_resource_graph",
+      "records": 312,
+      "topics": [
+        "resource_graph"
+      ]
+    },
+    {
+      "operator": "compose_serialization_plan",
+      "records": 137,
+      "topics": [
+        "serialization_plan"
+      ]
+    },
+    {
+      "operator": "compose_system",
+      "records": 312,
+      "topics": [
+        "system"
+      ]
+    },
+    {
+      "operator": "compose_terrain",
+      "records": 137,
+      "topics": [
+        "terrain"
+      ]
+    },
+    {
+      "operator": "compose_ui",
+      "records": 136,
+      "topics": [
+        "ui"
+      ]
+    },
+    {
+      "operator": "declare_basic_event",
+      "records": 111,
+      "topics": [
+        "basic_event"
+      ]
+    },
+    {
+      "operator": "declare_component",
+      "records": 111,
+      "topics": [
+        "component"
+      ]
+    },
+    {
+      "operator": "declare_entity",
+      "records": 111,
+      "topics": [
+        "entity"
+      ]
+    },
+    {
+      "operator": "declare_header_module",
+      "records": 111,
+      "topics": [
+        "header_module"
+      ]
+    },
+    {
+      "operator": "declare_resource",
+      "records": 111,
+      "topics": [
+        "resource"
+      ]
+    },
+    {
+      "operator": "declare_scene_declaration",
+      "records": 111,
+      "topics": [
+        "scene_declaration"
+      ]
+    },
+    {
+      "operator": "declare_snapshot",
+      "records": 111,
+      "topics": [
+        "snapshot"
+      ]
+    },
+    {
+      "operator": "declare_transform3d",
+      "records": 112,
+      "topics": [
+        "transform3d"
+      ]
+    },
+    {
+      "operator": "declare_vector_literal",
+      "records": 111,
+      "topics": [
+        "vector_literal"
+      ]
+    },
+    {
+      "operator": "integrate_cinematic_scene_state",
+      "records": 416,
+      "topics": [
+        "cinematic_scene_state"
+      ]
+    },
+    {
+      "operator": "integrate_interactive_scene",
+      "records": 417,
+      "topics": [
+        "interactive_scene"
+      ]
+    },
+    {
+      "operator": "integrate_multiplayer_schema",
+      "records": 417,
+      "topics": [
+        "multiplayer_schema"
+      ]
+    },
+    {
+      "operator": "integrate_portal_environment",
+      "records": 417,
+      "topics": [
+        "portal_environment"
+      ]
+    },
+    {
+      "operator": "integrate_save_load_package",
+      "records": 417,
+      "topics": [
+        "save_load_package"
+      ]
+    },
+    {
+      "operator": "integrate_terrain_physics_ui",
+      "records": 416,
+      "topics": [
+        "terrain_physics_ui"
+      ]
+    },
+    {
+      "operator": "optimize_scene",
+      "records": 1500,
+      "topics": [
+        "constant_transform",
+        "graph_normalization",
+        "r12_mcrt_lowering",
+        "resource_deduplication",
+        "serialization_layout",
+        "stable_ids",
+        "topological_order"
+      ]
+    }
+  ]
+}

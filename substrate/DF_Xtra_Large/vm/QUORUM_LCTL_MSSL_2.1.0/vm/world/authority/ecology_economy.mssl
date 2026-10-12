@@ -1,0 +1,19 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.world.ecology_economy:7.0.0-applied-remediated-26",
+λ≡"quorum.rcpw.world.ecology_economy",
+ℛ≡{
+  "0001":"module(\"quorum.rcpw.world.ecology_economy\")",
+  "0002":"learn(\"ecology\",literal(\"remote deer/wolf/forage aggregate state advances under canonical time\"))",
+  "0003":"learn(\"economy\",literal(\"settlement food/money/population/morale state remains resident remotely\"))",
+  "0004":"learn(\"travel\",literal(\"canonical motion is independent of folded display distance\"))",
+  "0005":"learn(\"conservation\",literal(\"inventory transfers are quantity checked and idempotent by transaction ID\"))",
+  "0006":"learn(\"scope\",literal(\"reference aggregate models; production fidelity remains unqualified\"))"
+},
+π≡[],δ≡6,τ≡0,
+μ≡{"learn.ecology":"remote deer/wolf/forage aggregate state advances under canonical time","learn.economy":"settlement food/money/population/morale state remains resident remotely","learn.travel":"canonical motion is independent of folded display distance","learn.conservation":"inventory transfers are quantity checked and idempotent by transaction ID","learn.scope":"reference aggregate models; production fidelity remains unqualified"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"ecology":"remote deer/wolf/forage aggregate state advances under canonical time","economy":"settlement food/money/population/morale state remains resident remotely","travel":"canonical motion is independent of folded display distance","conservation":"inventory transfers are quantity checked and idempotent by transaction ID","scope":"reference aggregate models; production fidelity remains unqualified"}},
+ν≡{}
+,κ≡"sha256:3cc797eb8bee9d82ed734f61843b3ff19dbc2fe6484d1fd0c8328a3758f7223c"
+}⇒⊤

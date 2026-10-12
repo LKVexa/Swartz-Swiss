@@ -1,0 +1,42 @@
+profile ja.interface
+source_level 0.3
+
+subsuite Terminal.T_19 SearchFilterCopyExport {
+    identity { suite = "66"; id = "T-19"; deterministic = true; autorun = false }
+
+    accept {
+        OrderedTerminalEventStream
+        query
+        filter
+        selection
+        export_contract
+        presentation_redaction_map
+    }
+
+    emit { TerminalSearchResults; TerminalExportArtifact }
+
+    procedure search(query, filter) {
+        require query.bounded
+        index = StreamIndex
+        results = index.find(query, filter)
+        return stable_order_and_window(results)
+    }
+
+    procedure copy(selection) {
+        require selection within presentation_stream
+        return copy_with_redaction_markers(selection)
+    }
+
+    procedure export(export_contract) {
+        require export_contract.approved_output_root
+        require export_contract.format in allowed_formats
+        artifact = serialize_selected_events_with_provenance(export_contract)
+        hash_and_register(artifact)
+        return artifact
+    }
+
+    deny { raw_secret_copy; evidence_mutation; unbounded_search; undeclared_export_path }
+    evidence { query_hash; result_window; copy_audit; export_artifact_hash }
+    tests { text_search; regex_policy; large_stream_window; redaction; export_formats; path_denial }
+}
+

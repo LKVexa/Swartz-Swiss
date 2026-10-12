@@ -1,0 +1,148 @@
+{
+  "schema": "QUORUM-MODULE-GRAPH/2.0",
+  "graph_id": "G26",
+  "module_id": 26,
+  "module": "Full Stack UI",
+  "plane": "interfaces_services",
+  "version": "2.0.0",
+  "entry": "N01",
+  "exit": "N08",
+  "nodes": [
+    {
+      "id": "N01",
+      "stage": "EVENT",
+      "operator": "OBSERVE",
+      "input": "interface_event/state",
+      "output": "state.event",
+      "precondition": "admitted",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N02",
+      "stage": "PARSE",
+      "operator": "PARSE",
+      "input": "N01.output",
+      "output": "state.parse",
+      "precondition": "N01.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N03",
+      "stage": "VALIDATE",
+      "operator": "VALIDATE",
+      "input": "N02.output",
+      "output": "state.validate",
+      "precondition": "N02.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N04",
+      "stage": "ROUTE",
+      "operator": "ROUTE",
+      "input": "N03.output",
+      "output": "state.route",
+      "precondition": "N03.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N05",
+      "stage": "STATE_TRANSITION",
+      "operator": "TRANSFORM",
+      "input": "N04.output",
+      "output": "state.state_transition",
+      "precondition": "N04.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N06",
+      "stage": "MATERIALIZE",
+      "operator": "MATERIALIZE",
+      "input": "N05.output",
+      "output": "state.materialize",
+      "precondition": "N05.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N07",
+      "stage": "RECORD",
+      "operator": "RECORD",
+      "input": "N06.output",
+      "output": "state.record",
+      "precondition": "N06.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N08",
+      "stage": "EVIDENCE",
+      "operator": "RECORD",
+      "input": "N07.output",
+      "output": "service_response/state_transition",
+      "precondition": "N07.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E01",
+      "from": "N01",
+      "to": "N02",
+      "kind": "control+data"
+    },
+    {
+      "id": "E02",
+      "from": "N02",
+      "to": "N03",
+      "kind": "control+data"
+    },
+    {
+      "id": "E03",
+      "from": "N03",
+      "to": "N04",
+      "kind": "control+data"
+    },
+    {
+      "id": "E04",
+      "from": "N04",
+      "to": "N05",
+      "kind": "control+data"
+    },
+    {
+      "id": "E05",
+      "from": "N05",
+      "to": "N06",
+      "kind": "control+data"
+    },
+    {
+      "id": "E06",
+      "from": "N06",
+      "to": "N07",
+      "kind": "control+data"
+    },
+    {
+      "id": "E07",
+      "from": "N07",
+      "to": "N08",
+      "kind": "control+data"
+    }
+  ],
+  "legacy_signals": [
+    "VALIDATE"
+  ],
+  "deterministic_order": true
+}

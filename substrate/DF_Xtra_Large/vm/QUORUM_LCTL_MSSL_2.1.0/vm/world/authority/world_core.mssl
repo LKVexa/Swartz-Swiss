@@ -1,0 +1,19 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.world.core:7.0.0-applied-remediated-26",
+λ≡"quorum.rcpw.world.core",
+ℛ≡{
+  "0001":"module(\"quorum.rcpw.world.core\")",
+  "0002":"learn(\"world_version\",literal(\"7.0.0-applied-remediated-26\"))",
+  "0003":"learn(\"canonical_rule\",literal(\"distance changes representation, not existence\"))",
+  "0004":"learn(\"coordinate_rule\",literal(\"canonical integer world coordinates are never mutated by folding\"))",
+  "0005":"learn(\"reference_rule\",literal(\"reference-space state is derived from canonical state plus reference selection\"))",
+  "0006":"learn(\"claim_boundary\",literal(\"hosted reference world subsystem; not native LCTL world primitives or production renderer\"))"
+},
+π≡[],δ≡6,τ≡0,
+μ≡{"learn.world_version":"7.0.0-applied-remediated-26","learn.canonical_rule":"distance changes representation, not existence","learn.coordinate_rule":"canonical integer world coordinates are never mutated by folding","learn.reference_rule":"reference-space state is derived from canonical state plus reference selection","learn.claim_boundary":"hosted reference world subsystem; not native LCTL world primitives or production renderer"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"world_version":"7.0.0-applied-remediated-26","canonical_rule":"distance changes representation, not existence","coordinate_rule":"canonical integer world coordinates are never mutated by folding","reference_rule":"reference-space state is derived from canonical state plus reference selection","claim_boundary":"hosted reference world subsystem; not native LCTL world primitives or production renderer"}},
+ν≡{}
+,κ≡"sha256:b9cdab3a72aeebe9c97477639a93db8e41fd70161dbca3324a019633e6b65c9e"
+}⇒⊤

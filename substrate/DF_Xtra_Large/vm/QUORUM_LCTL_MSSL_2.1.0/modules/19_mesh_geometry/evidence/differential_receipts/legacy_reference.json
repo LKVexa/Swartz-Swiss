@@ -1,0 +1,8 @@
+{
+  "schema": "QUORUM-DIFFERENTIAL-RECEIPT/2.0",
+  "module_id": 19,
+  "legacy_sha256": "a31464e7e1b9da6d8072e2a9f734a17e29cb8abb6a3afa7f62e2bf36bd95d5e2",
+  "structural_signal_reference": "PRESERVED",
+  "executable_legacy_runtime": false,
+  "verdict": "BLOCKED_EXECUTABLE_DIFFERENTIAL"
+}

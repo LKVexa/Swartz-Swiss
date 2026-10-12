@@ -1,0 +1,55 @@
+deepml logic 0.3
+module repository.pencil.rewrites
+policy pure_by_default
+policy no_network
+
+type RewriteStatus = Draft | Reviewable | Accepted | Rejected
+
+let minimum_fidelity_score: Int = 90
+
+predicate fidelity_ready(score:Int) = score >= minimum_fidelity_score
+
+theorem identity_rewrite(x) : x == x
+proof identity_rewrite { simplify qed }
+
+knowledge_base PencilRewrites {
+  fact suite_assignment("SOPHIA", "semantic_judgment")
+  fact suite_assignment("CHARLOTTE", "structural_validation")
+  fact suite_assignment("LANDON", "repository_integration")
+  fact suite_assignment("PROFESSOR", "reviewable_explanation")
+  fact suite_assignment("PODIUM", "job_and_evidence_queue")
+  fact rewrite("rewrite_001")
+  fact rewrite_source("rewrite_001", "artifact_source_001")
+  fact rewrite_output("rewrite_001", "artifact_rewrite_001")
+  fact rewrite_author("rewrite_001", "author_primary")
+  fact meaning_preservation_score("rewrite_001", 96)
+  fact provenance_preserved("rewrite_001")
+  fact author_attribution_preserved("rewrite_001")
+  fact reviewable_diff_available("rewrite_001")
+
+  rule admissible_rewrite(R) :-
+    rewrite(R),
+    rewrite_source(R, Source),
+    rewrite_output(R, Output),
+    rewrite_author(R, Author),
+    meaning_preservation_score(R, Score),
+    fidelity_ready(Score),
+    provenance_preserved(R),
+    author_attribution_preserved(R),
+    reviewable_diff_available(R)
+
+  rule accepted_rewrite(R) :-
+    admissible_rewrite(R),
+    sophia_approved(R),
+    charlotte_validated(R),
+    landon_integrated(R),
+    professor_explained(R),
+    podium_evidence_complete(R)
+}
+
+query admissible_rewrite(Rewrite) strategy tabled
+plan PencilRewritePlan goal rewrite_accepted actions [compare, preserve_meaning, preserve_attribution, explain, evidence]
+transform PencilRewriteRuleSet with proof { preserve semantics using theorem identity_rewrite }
+certify logic PencilRewrites using proof_carrying
+optimize module using [beta_reduction, rule_indexing, common_subexpression_elimination, tabling, proof_normalization]
+lower module to DEEPML_LOGIC_R12

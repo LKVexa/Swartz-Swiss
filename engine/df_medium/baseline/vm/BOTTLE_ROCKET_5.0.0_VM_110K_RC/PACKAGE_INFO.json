@@ -1,0 +1,31 @@
+{
+  "blocked_requirements": 8,
+  "blockers": [
+    "independent second-machine/operator replay",
+    "independent second-machine/operator rebuild",
+    "literal 72-hour native soak",
+    "AArch64 and Windows execution qualification",
+    "final 100% evidence ledger dependent on those proofs"
+  ],
+  "brim_bytes": 272,
+  "brim_ceiling": 51200,
+  "core61_ceiling": 61000,
+  "core61_stripped_bytes": 49072,
+  "distribution": "RELEASE_CANDIDATE",
+  "local_blocked_work_packages": 4,
+  "local_operational_work_packages": 11,
+  "operational_requirements": 88,
+  "package": "BOTTLE ROCKET 5.0.0 Columned LCTL Fully Operational VM Qualification Candidate",
+  "production_boundary_bytes": 107675,
+  "production_boundary_ceiling": 110000,
+  "qualification_private_keys_in_release": false,
+  "qualification_private_keys_included": false,
+  "release": "5.0.0-qualification-candidate",
+  "release_manifest_signature_role": "qualification/release-engineering; not production HSM/root",
+  "release_manifest_signed": true,
+  "runtime_contract": "LCTLC/1.1 -> BRIR/1.1 -> BRIM/1+BRPV/1 -> BRTM/1; ISA 4.1; ABI 1.0; Device ABI 1.0; BRCR/1; BRGD/1; core ABI 0x00040700",
+  "strict_dependency_chain": "BLOCKED by inherited BR-490-11 external proofs and corresponding BR-500 gates",
+  "strict_gate": "BLOCKED",
+  "workflow_packages": 15,
+  "workflow_requirements": 96
+}

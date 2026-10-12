@@ -1,0 +1,94 @@
+{
+  "schema": "GFM-Research-browser-QA/1",
+  "passed": true,
+  "status": "partial",
+  "checkedAt": "2026-10-11T15:38:25.496Z",
+  "url": "http://127.0.0.1:8788/",
+  "title": "GFM Research Observatory — Kerr / Aperture",
+  "browser": "Codex in-app browser",
+  "sourceHashes": {
+    "server.cjs": "8f77c77b5d305ef6ce76fc146509b0233b7f6abeef31479236012b7da8aabf1c",
+    "backend/simulation.cjs": "235e67f8d55cba41acade9d05a1a4fcfbf0f1340b3ac1973a076972507868feb",
+    "backend/relativity.cjs": "94facda381ccf78ed204114d7e02929c99e513c898e343a76712feb576607f77",
+    "backend/physics-service.cjs": "18afdb6befe25a73c4f6c79d7230b19f36cf405dee89b42866f71b2fae467a23",
+    "backend/physics-worker.cjs": "ac4ad16d97b3b8d7958baaaa709cb0c2f43702c525cf43f3e50980d695d8c9fe",
+    "public/index.html": "c127c26bd1596eba82656218bfea80bd897a09ec0fe43e406264eb42d1e917e0",
+    "public/app.js": "1993b2737d837a021436520ab295136201795e6226b21d732e0e2f383ba4f7c8",
+    "public/style.css": "25f36eefcb2bce12811cdd5031275209ba3a3b758f6cad48db66807ecfa8e955",
+    "public/renderer.js": "1cb735fa048d80da95b7cbf817e3da8e5dfa5dff9b28b39ae007e300745864b6"
+  },
+  "loadedBackendSha256": null,
+  "restartPending": true,
+  "checks": [
+    {
+      "name": "Actual WebGL split view",
+      "passed": true,
+      "details": "Both physical exteriors show matched computed paths; screenshot confirms real GPU rendering."
+    },
+    {
+      "name": "3D camera",
+      "passed": true,
+      "details": "Dragging the canvas changed both branches together; Reset view restored the camera."
+    },
+    {
+      "name": "Live controls and hypothesis equality boundary",
+      "passed": true,
+      "details": "At spin0.99/cover0 both passage bits1. At spin0.8 equal to critical spin, both apertures close and passage bits0."
+    },
+    {
+      "name": "Stale-result protection",
+      "passed": true,
+      "details": "Changing spin clears old counts/residuals and trajectories while Calculating light paths is displayed."
+    },
+    {
+      "name": "Refined live calculation",
+      "passed": true,
+      "details": "Spin0.8, inclination85deg, tolerance1e-9,32rays:16captured/16escaped, normalized null1.98e-11, radial8.08e-12, polar3.10e-10."
+    },
+    {
+      "name": "Two-branch12-second example",
+      "passed": true,
+      "details": "Live cover removal and spin reduction updated geometry and timeline; completion restored spin0.99/cover2 and paused at12s."
+    },
+    {
+      "name": "GFM transform data",
+      "passed": true,
+      "details": "Nine raw spin-sweep rows, complex coefficients and recovered values visible. Displayed inverse error5.551e-17 and checksPASS."
+    },
+    {
+      "name": "Scope and credibility display",
+      "passed": true,
+      "details": "Physical exterior, experimental passage law, coordinate embedding, illustrative disk and absence of NASA certification are explicitly labeled."
+    },
+    {
+      "name": "Live export and exact frozen-solver replay",
+      "passed": true,
+      "details": "Full bundle after JSON serialization, exact equality",
+      "rayCount": 32,
+      "pointCount": 6079,
+      "evidence": "validation/browser/live-export-replay.json"
+    },
+    {
+      "name": "Working example left open",
+      "passed": true,
+      "details": "Physical exterior with32refined rays, spin0.99, cover2, inclination85deg, running live clock; tab marked deliverable."
+    }
+  ],
+  "screenshots": [
+    "validation/browser/research-working-example.png",
+    "validation/browser/research-hypothesis.png",
+    "validation/browser/research-credibility.png"
+  ],
+  "screenshotSha256": {
+    "validation/browser/research-working-example.png": "c49488d28fd936eb4b93abd45e72f0dd32ea373c3e64ee7ef64f19d179bd4a69",
+    "validation/browser/research-hypothesis.png": "74e905fbcd2b46df2130d47371ff1f623b6f6764430dc736818395c6ad02b17e",
+    "validation/browser/research-credibility.png": "f65ec2dc0f233a3921c24aaf5c7cb17f91bd1ca460e99fee3f18cf611bbb23f4"
+  },
+  "consoleErrors": [],
+  "liveSolverOutputSourceSha256": "94facda381ccf78ed204114d7e02929c99e513c898e343a76712feb576607f77",
+  "runtimeIdentity": {
+    "verified": false,
+    "reason": "The running service was opened before the final loaded-module fingerprint fields were added. Its downloaded full Kerr result exactly reproduces the final solver; its integration-module memory fingerprints are unavailable. Restart loads the added export tracking. No final-runtime fingerprint claim is made."
+  },
+  "scope": "Actual UI/GPU/control/live-export verification passed. Full32ray/6079point output exactly matches the frozen archived solver. Final integration fingerprint metadata awaits restart; analytic numerical reports test the final archive independently. No optical intensity rendering, empirical validation or NASA certification is implied."
+}

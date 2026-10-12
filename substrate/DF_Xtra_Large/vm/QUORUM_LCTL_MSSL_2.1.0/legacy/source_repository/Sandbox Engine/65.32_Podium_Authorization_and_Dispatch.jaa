@@ -1,0 +1,35 @@
+ja source 0.3
+module suite65.sandbox_engine.podium_authorization_dispatch
+use Agent
+policy no_network
+
+agent PodiumSandboxAuthorizationDispatch {
+    identity "podium_sandbox_authorization_dispatch"
+    role "sophia-charlotte-landon-professor-podium-authorizer"
+    goal authorize_and_dispatch_exact_bounded_scope when confidence >= 0.99
+    memory session retention 1h
+    budget steps 55 tools 5
+    tool SOPHIAEvaluateProposalEvidence(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateConstructionPrerequisites(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONConfirmGovernanceControls(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainAuthorizationBasis(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumAuthorizeAndSchedule(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIAEvaluateProposalEvidence
+        authorize CHARLOTTEValidateConstructionPrerequisites
+        authorize LANDONConfirmGovernanceControls
+        authorize ProfessorExplainAuthorizationBasis
+        authorize PodiumAuthorizeAndSchedule
+        continue when policy_allows
+        execute SOPHIAEvaluateProposalEvidence("proposal_evidence")
+        execute CHARLOTTEValidateConstructionPrerequisites("construction_prerequisites")
+        execute LANDONConfirmGovernanceControls("pause_cancel_review_controls")
+        execute ProfessorExplainAuthorizationBasis("authorization_rationale")
+        execute PodiumAuthorizeAndSchedule("exact_jobs_capabilities_resources_cell")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "PodiumSandboxAuthorizationDispatch.mcrt"

@@ -1,0 +1,21 @@
+{
+  "schema": "GFM-phase-offline-pipeline-verification/1",
+  "date": "2026-10-12T11:20:04.600Z",
+  "exitCode": 0,
+  "tests": 59,
+  "passed": 59,
+  "failed": 0,
+  "skipped": 0,
+  "files": [
+    "tests/phase-mhd.cjs",
+    "tests/phase-view.test.cjs",
+    "tests/phase-worker-parity.cjs",
+    "tests/relativity.cjs",
+    "tests/observations.cjs",
+    "tests/backend-simulation.cjs",
+    "tests/backend-provenance.cjs",
+    "tests/offline-console.cjs",
+    "tests/combined-relativity-worker.cjs"
+  ],
+  "scope": "Original numerical cores, observation holdout, actual Kerr source, browser worker numeric parity, bounded publication/latest cache, stale ACK and pause safety, explicit toy clock, Node phase-service ACK compatibility. No HTTP/native/GPU test claim."
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "JA21/OPTICAL_MASTER_SERIES_APPLICATION/1",
+  "release": "9.0.0",
+  "source_catalog": "JA21_Optical_Instrument_12500_Prompt_Workflow_Catalog_v1.0.0",
+  "source_catalog_sha256": "848a54b669357b0c475488f449d0162a59b04af254ac9c7381a40c30d2b0493e",
+  "source_todo_master_sha256": "6265af97580589a5040f8b1a63496b4cf8961e60a790210bdba7bc647b695c1f",
+  "id_range": [
+    "1.01.01",
+    "20.25.25"
+  ],
+  "work_item_count": 12500,
+  "dispositions": {
+    "APPLIED_SPECIFICATION": 6000,
+    "IMPLEMENTED_STATIC_VERIFIED": 4000,
+    "WINDOWS_VISUAL_QUALIFICATION_REQUIRED": 500,
+    "WINDOWS_PERFORMANCE_QUALIFICATION_REQUIRED": 500,
+    "WINDOWS_COMPATIBILITY_QUALIFICATION_REQUIRED": 500,
+    "APPLIED_DOCUMENTED": 500,
+    "PENDING_TARGET_QUALIFICATION": 500
+  },
+  "implementation_strategy": "The 12,500 prompts converge onto shared architectural systems. Work-item IDs are mapped to the shared implementation/test/evidence artifacts instead of creating duplicate one-off code paths.",
+  "runtime_qualification_not_claimed": [
+    "Windows WPF Add-Type compile",
+    "real WebView2CompositionControl overlay execution",
+    "mixed-DPI monitor traversal",
+    "HDR/color-profile validation",
+    "protected-media/DRM",
+    "ETW/frame-time performance measurements",
+    "screen-reader target-machine run"
+  ]
+}

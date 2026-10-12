@@ -1,0 +1,34 @@
+ja source 0.3
+module suite58.indexing_storage_resources_logs_recovery.learning_event_recording
+use Operations
+policy explicit_network
+
+workspace LearningEventRecording {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 6 memory 12GB
+    network disabled
+    secret learning_event_key reference "vault://suite58/learning-event-recording"
+
+    service SOPHIA_learning_context replicas 1
+    health_check SOPHIA_learning_context every 10s
+    service CHARLOTTE_learning_gate replicas 1
+    health_check CHARLOTTE_learning_gate every 10s
+    service LANDON_learning_recorder replicas 1
+    health_check LANDON_learning_recorder every 10s
+    service Professor_learning_report replicas 1
+    health_check Professor_learning_report every 10s
+    service Podium_learning_receipt replicas 1
+    health_check Podium_learning_receipt every 10s
+    service learning_event_worker replicas 1
+    health_check learning_event_worker every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "indexing_storage_resources_learning_events.msslb"

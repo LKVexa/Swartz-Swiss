@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "c30f4738a6d4c1c3189f7984abb39d58aa5f904d1ae2e2d76d4a513d93a9df69",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Sandbox Engine",
+  "module_id": 65,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

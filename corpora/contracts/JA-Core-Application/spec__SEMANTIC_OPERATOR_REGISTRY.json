@@ -1,0 +1,47 @@
+{
+  "suite": "JA21 JA Core Application Language",
+  "profile": "ja.core",
+  "status": "corpus-derived provisional registry",
+  "operators": [
+    {
+      "operator": "await",
+      "records": 1000
+    },
+    {
+      "operator": "bind",
+      "records": 1000
+    },
+    {
+      "operator": "borrow",
+      "records": 1000
+    },
+    {
+      "operator": "declare",
+      "records": 1000
+    },
+    {
+      "operator": "expand",
+      "records": 1000
+    },
+    {
+      "operator": "foreign_call",
+      "records": 1000
+    },
+    {
+      "operator": "invoke",
+      "records": 1000
+    },
+    {
+      "operator": "match",
+      "records": 1000
+    },
+    {
+      "operator": "stream",
+      "records": 1000
+    },
+    {
+      "operator": "verify",
+      "records": 1000
+    }
+  ]
+}

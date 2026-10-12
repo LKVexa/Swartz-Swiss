@@ -1,0 +1,26 @@
+{
+  "build_A": {
+    ".build/brctl": "8c32b0c677151130cb64b2f647e894a121f78936e2a4f02be9238356a9692068",
+    ".build/libbrvm_core.a": "dc08d558041d5cd5e31bd6a9a20524536d9f44edad562e7d1f9760aba7347530",
+    ".build/t410": "746e398bf2691d4363a197a0c97407086f5298708a8b507369e1b678975b2814",
+    ".build/t430": "6e7180fd1b8f4db925b07db92d4db6e73931d4ef11bb1382ab68db9804872de5",
+    ".build/t440": "1d5dea577dcdca1a8e2833c7755c8de788d4c57323f23f76d76f8b8acdfc18f8",
+    ".build/thw": "3a3a44c3ab3acb6a1aacd4c6dfe311ce6ad78fc105af2fc7bfad90d094962095",
+    "deploy/BOTTLE_ROCKET_SIM_CORE_4.3.0.brimg": "cbdbe8479660c932df4d15e49fc28b99ad4f2e5012a905941aa9e28795d29ad6",
+    "deploy/BOTTLE_ROCKET_SIM_CORE_4.3.0.brir.json": "64148cfc8855a964a995258e538b6837b12abce3b151933c0f394b1c315e5edc",
+    "deploy/BOTTLE_ROCKET_SIM_CORE_4.3.0.provenance.json": "4a628cbf8b231f330d4e40aaa4abab2c449b471e8650ece56558e60bf6399ca9"
+  },
+  "build_B": {
+    ".build/brctl": "8c32b0c677151130cb64b2f647e894a121f78936e2a4f02be9238356a9692068",
+    ".build/libbrvm_core.a": "dc08d558041d5cd5e31bd6a9a20524536d9f44edad562e7d1f9760aba7347530",
+    ".build/t410": "746e398bf2691d4363a197a0c97407086f5298708a8b507369e1b678975b2814",
+    ".build/t430": "6e7180fd1b8f4db925b07db92d4db6e73931d4ef11bb1382ab68db9804872de5",
+    ".build/t440": "1d5dea577dcdca1a8e2833c7755c8de788d4c57323f23f76d76f8b8acdfc18f8",
+    ".build/thw": "3a3a44c3ab3acb6a1aacd4c6dfe311ce6ad78fc105af2fc7bfad90d094962095",
+    "deploy/BOTTLE_ROCKET_SIM_CORE_4.3.0.brimg": "cbdbe8479660c932df4d15e49fc28b99ad4f2e5012a905941aa9e28795d29ad6",
+    "deploy/BOTTLE_ROCKET_SIM_CORE_4.3.0.brir.json": "64148cfc8855a964a995258e538b6837b12abce3b151933c0f394b1c315e5edc",
+    "deploy/BOTTLE_ROCKET_SIM_CORE_4.3.0.provenance.json": "4a628cbf8b231f330d4e40aaa4abab2c449b471e8650ece56558e60bf6399ca9"
+  },
+  "byte_identical": true,
+  "record": "BR.Reproducibility"
+}

@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "036812ffdbb250402fd95a87d0f4689c2b86cd901a3c2a3511183f5adae3fb7e",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Funnel",
+  "module_id": 9,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

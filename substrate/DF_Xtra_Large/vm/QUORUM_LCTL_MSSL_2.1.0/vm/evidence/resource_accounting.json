@@ -1,0 +1,12 @@
+{
+  "core_source_bytes": 1374,
+  "empty_register_host_bytes": 28,
+  "max_bit_register_host_bytes_observed": 139836,
+  "memory_bytes": 4096,
+  "python_runtime_source_bytes": 36726,
+  "repository_bytes": 21013271,
+  "signed_image_bytes": 1323,
+  "stack_depth": 256,
+  "vm_subsystem_bytes": 9304196,
+  "wide_word_bits": 1048576
+}

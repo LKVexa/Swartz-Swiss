@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "426e825d3bc56fb2cde4a793e107716db08cf15c8ab8e8eb89a314e9c2d60d95",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Knowledge Repository",
+  "module_id": 41,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

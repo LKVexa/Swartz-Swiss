@@ -1,0 +1,124 @@
+{
+  "adapter": {
+    "abi": "PA-LCTL/TARGET_ADAPTER/1",
+    "class": "MediumNodeAdapter",
+    "module": "adapter/dfabric/nodes.py",
+    "native_gate_set": [],
+    "version": "1.0.0"
+  },
+  "backend_policy": "none",
+  "bounds": {
+    "cli_step_budget": 4096,
+    "instruction_ceiling": 256,
+    "instructions_per_row": 3,
+    "max_rows_per_lowering": 84,
+    "prologue_epilogue": 4,
+    "qubits": 0,
+    "ram_per_live_vm_bytes_measured": 11000000,
+    "segmentation": "a bundle longer than max_rows_per_lowering is executed as a chain of segments; each segment starts from the previous accumulator",
+    "shots": 1
+  },
+  "capabilities": [
+    "classical",
+    "row_sequence_witness",
+    "bottle_rocket",
+    "lctlc/1.1"
+  ],
+  "container": "DF_Medium",
+  "df_release": "DF-PA21.2-1.0.0",
+  "domain_id": "D_BR",
+  "execution_label": "CLASSICAL_NATIVE_VM_BOUNDED_EXECUTION",
+  "failure_domain": "FD_MEDIUM",
+  "feature_classes": {
+    "CX": "UNSUPPORTED",
+    "ENTANGLE_LINK": "UNSUPPORTED",
+    "H": "UNSUPPORTED",
+    "MEASURE": "UNSUPPORTED",
+    "PREP0": "UNSUPPORTED",
+    "TELEPORT": "UNSUPPORTED",
+    "bounded_termination": "SUPPORTED",
+    "classical_face_execution": "UNSUPPORTED",
+    "compile_from_source": "SUPPORTED",
+    "declared_step_budget": "SUPPORTED",
+    "deterministic_replay": "SUPPORTED",
+    "image_signing": "SUPPORTED",
+    "independent_image_verification": "SUPPORTED",
+    "integer_arithmetic": "SUPPORTED",
+    "native_semantic_verifier": "SUPPORTED",
+    "pacore_bottlerocket_adapter_compatible": "SUPPORTED",
+    "quantum_face_execution": "UNSUPPORTED",
+    "row_sequence_witness": "SUPPORTED_WITH_LIMITS",
+    "segmented_row_sequence_witness": "SUPPORTED",
+    "signature_checked_execution": "SUPPORTED",
+    "wide_word_arithmetic_1048576": "SUPPORTED"
+  },
+  "federation_id": "DF0",
+  "group_id": "G_ISA41",
+  "network_policy": "deny",
+  "node_id": "N_MEDIUM",
+  "physical": {
+    "PHYSICAL_DISTRIBUTED_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY",
+    "PHYSICAL_PARALLEL_QPU_EXECUTION": "BLOCKED_EXTERNAL_AUTHORITY",
+    "physical_distributed": false,
+    "physical_parallel": false,
+    "physical_qpu": false,
+    "quantum_boundary": "QUANTUM_BOUNDARY_NOT_CROSSED"
+  },
+  "requirements": [
+    "C11 compiler (cc/gcc/clang)",
+    "GNU make",
+    "OpenSSL 3 libcrypto headers+lib (-lcrypto)",
+    "Python 3 (qualification tools)",
+    "POSIX sh"
+  ],
+  "resource_limits": {
+    "bandwidth_bytes_per_tick": 1000000.0,
+    "cpu_slots": 1,
+    "ebit_budget": 0,
+    "memory_bytes": 11000000,
+    "qpu_slots": 0
+  },
+  "schema": "DF/NODE_DESCRIPTOR/1",
+  "self_reported": {
+    "blockers": [
+      "independent second-machine/operator replay",
+      "independent second-machine/operator rebuild",
+      "literal 72-hour native soak",
+      "AArch64 and Windows execution qualification",
+      "final 100% evidence ledger dependent on those proofs"
+    ],
+    "source": "PACKAGE_INFO.json (`strict_gate: BLOCKED`, 88/96 OPERATIONAL, 8 BLOCKED)"
+  },
+  "target_id": "bottle-rocket-5.0.0-local",
+  "trust_domain": "LOCAL_TRUSTED",
+  "vm": {
+    "guest_dialect": "LCTLC/1.1 (Columned LCTL, native C compiler brlctlc)",
+    "guest_ext": ".lctlc",
+    "image_format": "BRIM/1 + BRPV/1 (80-byte header, 96-byte provenance, optional Ed25519 signature; native <= 8368/8432 bytes; loader ceiling 51200); BRTM/1 secure bundles",
+    "isa": {
+      "arith_modes": [
+        "WRAP",
+        "CHECKED",
+        "SATURATE",
+        "TRAPPING"
+      ],
+      "core_abi": "0x00040700",
+      "image_version": 9,
+      "memory_bytes": 4096,
+      "name": "ISA 4.1 / ABI 1.0 / Device ABI 1.0",
+      "opcodes": 32,
+      "registers": 16,
+      "services": 20,
+      "stack_words": 256,
+      "word_bits": 1048576
+    },
+    "lineage": "BOTTLE_ROCKET",
+    "name": "BOTTLE ROCKET 5.0.0 qualification candidate (frozen 4.7.0 core, ISA 4.1)",
+    "package_dir": "BOTTLE_ROCKET_5.0.0_VM_110K_RC",
+    "payload_tree_sha256": "887f41e99771bd09a9e539959d375fdc3f018c8a345e807e590118789a7ff0ff",
+    "result_register": "R2",
+    "runtime_contract": "LCTLC/1.1 -> BRIR/1.1 -> BRIM/1+BRPV/1 -> BRTM/1; ISA 4.1; ABI 1.0; Device ABI 1.0; BRCR/1; BRGD/1; core ABI 0x00040700",
+    "source_zip_sha256": "fcc7ec8e027d187fa00ab7bc7bb9e69a98f35c362931bc6a6b636541ce9f9c1a"
+  },
+  "worker_id": "W_MEDIUM"
+}

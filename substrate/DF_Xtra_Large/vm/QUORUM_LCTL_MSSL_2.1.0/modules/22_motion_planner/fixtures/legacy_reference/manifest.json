@@ -1,0 +1,40 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 22,
+  "legacy_root": "legacy/source_repository/Motion Planner",
+  "legacy_sha256": "a69196be5c761ebca2e86d78ca5dd48f05045dd7109473d77f3ba8c1787ef178",
+  "files": [
+    {
+      "path": "22.1_Motion_Planner_Transforms.deepml",
+      "sha256": "46279e8ded695c3c62b52bef982ee40cd5d9f500d242fa8676148e1a291e0e5b",
+      "bytes": 1291
+    },
+    {
+      "path": "22.2_Motion_Planner_Constraints.deepml",
+      "sha256": "5761c4b42d02e434433ae5519596aec6f71a67e6c1c23632a2b3415389988367",
+      "bytes": 1453
+    },
+    {
+      "path": "22.3_Motion_Planner_Timing.deepml",
+      "sha256": "663136b8a1e93eed0d7f4ae896f356f36f15ec24e2715a77c41259354c304df7",
+      "bytes": 1293
+    },
+    {
+      "path": "22.4_Motion_Planner_Camera_Motion.deepml",
+      "sha256": "966d69d1616c00c4a9d55f691d4ca97ec74e7e7a10f20bac1d002fc2d878c6b0",
+      "bytes": 1506
+    },
+    {
+      "path": "22.5_Motion_Planner_Continuity.deepml",
+      "sha256": "e1f5a40fc88bdee4347fd572f0d0a4fe8ec4707550fb0408a3f393297f5becf2",
+      "bytes": 1625
+    },
+    {
+      "path": "README.md",
+      "sha256": "0f0a9be3e0717db8324ed05d740bfcc34b16599828b275ea9da4dbf9bfeaacb0",
+      "bytes": 9869
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

@@ -1,0 +1,14 @@
+ja source 0.3
+module suite39.core_studio.local_server
+use Core
+policy no_network
+
+record LocalServerPlan { id: Count, scope: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_local_server_plan(item: LocalServerPlan) -> Result<LocalServerPlan, Text> effects { pure } {
+    let normalized: Text = item.scope
+    return Ok(LocalServerPlan { id: item.id, scope: normalized, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: LocalServerPlan = LocalServerPlan { id: 3914, scope: "loopback_server_configuration_plan", sophia: "interpret_server_intent", charlotte: "validate_bind_and_policy", landon: "stage_approved_server_configuration", professor: "explain_server_boundaries", podium: "publish_server_receipt" }
+let result = prepare_local_server_plan(sample)
+assert result.is_ok == true
+emit json result

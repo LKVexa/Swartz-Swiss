@@ -1,0 +1,11 @@
+{
+  "schema": "GFM-live-phase-replay/1",
+  "passed": true,
+  "input": "D:\\Codex\\2026-10-11\\pl\\GFM_Phase_Texture_Simulator\\examples\\phase-browser-export.json",
+  "execution": "browser-worker",
+  "sequence": 1,
+  "time": 0.05,
+  "comparedNumericValues": 25718,
+  "maximumAbsoluteDifference": 2.3283064365386963e-10,
+  "scope": "A real browser-downloaded frame was replayed by the backend session from its parameters and fixed 0.05 local-time output steps. Identity strings and running state are not mathematical fields. This checks shared-engine execution, not observational validity."
+}

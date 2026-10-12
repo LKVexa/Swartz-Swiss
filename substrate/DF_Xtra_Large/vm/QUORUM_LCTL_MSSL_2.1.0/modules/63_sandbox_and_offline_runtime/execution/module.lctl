@@ -1,0 +1,20 @@
+LCTL/1.3
+BUNDLE¦ID¦VERSION¦PROFILE¦ENTRY¦FRAMES¦TARGET¦BACKEND¦NETWORK¦REPLAY¦PRECISION¦ERROR_BUDGET¦RESOURCE_CEILING¦ADMISSION¦STATE¦PROOF
+(bundle ¦ quorum.generic_project.module.63.sandbox_and_offline_runtime ¦ 1.0.0 ¦ lctl.quantum.parallel.distributed.native ¦ F0000:C9999 ¦ 1 ¦ local-reference ¦ none ¦ deny ¦ deterministic-seeded ¦ f64 ¦ 0.05 ¦ q<=12;distributed=logical;physical=false ¦ q1-q6 ¦ sealed ¦ lctl-column:1.0)
+QFRAME/1.0 BEGIN F0000
+ID¦PARENT¦MODULE¦QSPACE¦TICK¦PREV¦REGISTERS¦BASIS¦STATE_REGIME¦NOISE_REGIME¦APPROX_REGIME¦HARDWARE¦CONF¦ERROR¦ADMIT¦PROOF
+(F0000 ¦ ROOT ¦ quorum.generic_project.module.63.sandbox_and_offline_runtime ¦ H ¦ 0 ¦ _ ¦ declared ¦ computational ¦ pure_or_mixed ¦ explicit ¦ typed ¦ local-reference ¦ 1.0 ¦ tracked ¦ observe ¦ lctl-column:1.0)
+QTUPLE/1.0
+ROW¦FACE¦LANE¦QSPACE¦OP¦OUT¦CTRL¦A¦B¦PARAM¦TYPE¦BASIS¦REGIME¦ASSUME¦ERROR¦RESOURCE¦CONF¦PROOF
+(D0001 ¦ DECL ¦ alloc ¦ H2^1 ¦ QREG ¦ q ¦ _ ¦ _ ¦ _ ¦ 1 ¦ qreg[1] ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ logical_qubits=1 ¦ 1.0 ¦ lctl:1.2)
+(D0002 ¦ DECL ¦ alloc ¦ C ¦ CREG ¦ c ¦ _ ¦ _ ¦ _ ¦ 1 ¦ creg[1] ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ classical_bits=1 ¦ 1.0 ¦ lctl:1.2)
+(X0001 ¦ PARALLEL ¦ meta ¦ H ¦ REGION ¦ _ ¦ _ ¦ _ ¦ _ ¦ module=sandbox_and_offline_runtime;plane=security_authorization;legacy_files=7 ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:reimagined)
+(X0002 ¦ PARALLEL ¦ meta ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=mssl_authority;to=lctl_execution;kind=semantic ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:reimagined)
+(X0003 ¦ PARALLEL ¦ meta ¦ H ¦ DEPENDENCY ¦ _ ¦ _ ¦ _ ¦ _ ¦ from=lctl_execution;to=evidence;kind=verification ¦ parallel ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:reimagined)
+(X0004 ¦ DISTRIBUTED ¦ meta ¦ H ¦ PROVENANCE ¦ _ ¦ _ ¦ _ ¦ _ ¦ complete=true;clock=logical;legacy_sha256=a3a8ef79a8ad2120 ¦ distributed ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ quorum:reimagined)
+(C9999 ¦ CODE ¦ lane0 ¦ H ¦ NOP ¦ _ ¦ _ ¦ _ ¦ _ ¦ _ ¦ operator ¦ computational ¦ exact ¦ finite_dimension ¦ exact ¦ _ ¦ 1.0 ¦ lctl:nop)
+END QTUPLE
+END QFRAME
+@frame sha256:02d2baeb49bca3b40065999203c92b5f71024ff7672d6d98167a6da7dbbfe982
+END LCTL
+@bundle sha256:6d793d10bf788597d917aa2d3530fb0f2bceaa6849c8c34c9c2d9e9432e7c429

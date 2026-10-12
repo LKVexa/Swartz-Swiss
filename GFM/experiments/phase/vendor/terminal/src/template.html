@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A local RUSSL research terminal for finite-field transforms and reversible word mechanics.">
+  <title>RUSSL · Galois Field Mechanics Terminal</title>
+  <style>/*__STYLE__*/</style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="RUSSL GFM terminal home"><span class="brand-mark">R</span><span>RUSSL <small>GALOIS FIELD MECHANICS TERMINAL</small></span></a>
+    <div class="top-status"><span class="status-dot"></span> LOCAL BROWSER <span class="version">FOUNDATION 0.5.1</span></div>
+    <button id="export-session" class="button subtle" disabled>Export session <span>↗</span></button>
+  </header>
+  <section class="preview-status" aria-label="Calculation readiness"><p id="engine-status" data-state="pending" role="status">Live calculations have not started. If controls stay disabled, open Open-Terminal.cmd from this folder in Windows. The saved example below contains completed GFM calculations.</p><p><a href="docs/Pendulum_Example.html" target="_blank">Read calculated example</a> · <a href="docs/Pendulum_Example.csv" download>Numeric CSV</a> · <a href="docs/Preview_Diagnostics.txt" target="_blank">Opening and diagnosis</a></p></section>
+  <details class="saved-demo-panel" open><summary>Completed GFM example — equations, raw values and transformed data</summary>/*__DEMO__*/</details>
+  <fieldset id="gfm-live-controls" disabled>
+  <nav class="workspace-tabs" aria-label="Workspaces">
+    <button class="workspace-tab active" data-view="terminal" aria-pressed="true">01 <span>GFM terminal</span></button>
+    <button class="workspace-tab" data-view="workbench" aria-pressed="false">02 <span>Word workbench</span></button>
+    <button class="workspace-tab" data-view="evidence" aria-pressed="false">03 <span>Evidence & ledger</span></button>
+    <button class="workspace-tab" data-view="equations" aria-pressed="false">04 <span>Equation audit</span></button>
+    <button class="workspace-tab" data-view="gfm" aria-pressed="false">05 <span>GFM reapplication</span></button>
+    <button class="workspace-tab" data-view="horizon" aria-pressed="false">06 <span>Aperture & aggie</span></button>
+    <button class="workspace-tab" data-view="architecture" aria-pressed="false">07 <span>Foundation map</span></button>
+  </nav>
+  <main>
+    <section id="view-terminal" class="view terminal-layout">
+      <aside class="catalogue panel">
+        <div class="panel-heading"><span>COMMAND CATALOGUE</span><span id="command-count" class="muted"></span></div>
+        <label class="search-box"><span>⌕</span><input id="command-search" type="search" placeholder="Find a command…" aria-label="Search commands"></label>
+        <div class="section-caption">EXPERIMENT PRESETS</div>
+        <div id="m-presets" class="presets"></div>
+        <details class="reference-presets"><summary>Reference math presets</summary><div id="presets" class="presets"></div></details>
+        <div class="section-caption">AVAILABLE OPERATIONS</div>
+        <label class="m-command-mode">Catalogue<select id="command-mode"><option value="gfm">GFM mechanics</option><option value="all">All / reference math</option></select></label><div id="command-list" class="command-list"></div>
+        <div class="catalogue-foot"><span class="tiny-dot"></span> Browser-local mechanics<br><span>Exact field arithmetic · raw data</span></div>
+      </aside>
+      <div class="experiment-column">
+        <section class="panel mechanics-panel"><div class="panel-heading"><span>ACTIVE GFM DATASET</span><span id="m-representation" class="live-tag">samples</span></div><div class="m-heading"><p class="eyebrow">GALOIS FIELD MECHANICS</p><h1>Data → transform → mechanics</h1><p id="m-description"></p></div><div class="m-input-grid"><label>Field<select id="m-field"><option value="gf3">GF(3)</option><option value="gf4">GF(4)</option><option value="gf8">GF(8)</option><option value="gf9" selected>GF(9)</option><option value="gf16">GF(16)</option></select></label><label>Coefficient domain<select id="m-domain"><option value="complex-signal">Ordinary real / complex signal</option><option value="field-values">Exact field elements</option></select></label><label>Declared units<input id="m-units" value="rad/s²" aria-label="Mechanics data units"></label></div><label class="m-values-label" for="m-values">Editable values · q samples or q−1 field coefficients</label><textarea id="m-values" spellcheck="false" aria-label="Raw mechanics values"></textarea><div class="m-actions"><button id="m-prepare" class="button">Load values</button><button id="m-forward" class="button accent">Transform</button><button id="m-inverse" class="button">Inverse</button><button id="m-verify" class="button">Verify data</button><button id="m-record" class="button">Record</button></div><div class="m-data-metric"><span id="m-energy-label">L2 ENERGY</span><strong id="m-energy"></strong><span>Original magnitude retained</span></div><h2 id="m-plot-title" class="m-plot-label">Raw sample magnitude</h2><div id="m-bars" class="state-bars" aria-label="Mechanics coefficient magnitudes"></div><p id="m-scale-note" class="small-note">Bar heights are scaled to the displayed maximum. The dataset values retain their original numerical magnitude.</p><p id="m-domain-note" class="m-domain-note"></p><details class="m-values-details"><summary>Inspect original coordinates and values</summary><div class="m-table-wrap"><table id="m-table"></table></div></details><div class="m-actions"><button id="m-reapply" class="button accent">Reapply equations</button><button id="m-export" class="button">Export dataset</button><button id="m-reference-toggle" class="button">Show reference math</button></div></section>
+        <section id="legacy-state-panel" class="panel state-panel" hidden>
+          <div class="panel-heading"><span>REFERENCE MATH / NORMALIZED VECTOR LAB</span><span class="live-tag">SECONDARY</span></div>
+          <div class="state-title"><div><p class="eyebrow">FINITE ALGEBRA / COMPLEX HILBERT SPACE</p><h1 id="field-title">GF(9)</h1><p id="field-subtitle" class="muted"></p></div><label class="field-picker">FIELD<select id="field-select"><option value="gf3">GF(3)</option><option value="gf4">GF(4)</option><option value="gf8">GF(8)</option><option value="gf9" selected>GF(9)</option><option value="gf16">GF(16)</option></select></label></div>
+          <div class="metrics"><div><span>STATE NORM²</span><strong id="norm-value">1.000000</strong></div><div><span>OPERATIONS</span><strong id="operation-value">0</strong></div><div><span>LAST AUDIT</span><strong id="audit-value">Pending</strong></div></div>
+          <div class="plot-heading"><h2>Probability & phase</h2><span id="state-description" class="muted">Basis state |1⟩</span></div>
+          <p id="encoding-note" class="small-note" hidden></p>
+          <div id="state-bars" class="state-bars" aria-label="State probabilities and phases"></div>
+          <div class="plot-legend"><span><i class="legend-box"></i> |ψ(x)|² · bars scaled to current maximum</span><span><i class="phase-dot"></i> Phase angle</span><span>Polynomial-basis labels, low coefficient first</span></div>
+          <div class="quick-controls"><label>Basis label <input id="basis-element" type="number" min="0" max="8" value="1" aria-label="Basis state label"></label><button class="button" id="prepare-basis">Prepare</button><button class="button accent" id="apply-fourier">Apply Fourier</button><button class="button" id="inverse-fourier">Inverse</button><button class="button" id="audit-state">Verify</button></div>
+        </section>
+        <section class="panel composer-panel">
+          <div class="panel-heading"><span>SEQUENCE COMPOSER</span><span class="muted">Insert → review → run</span></div>
+          <label for="sequence" class="visually-hidden">Editable command sequence</label>
+          <textarea id="sequence" spellcheck="false">gfm.pendulum 9.81 1 0.2
+gfm.transform
+gfm.verify
+gfm.record Pendulum GFM data</textarea>
+          <div class="composer-actions"><span id="sequence-status" role="status" class="muted">4 commands · ready to run</span><div><button class="button" id="cancel-sequence" disabled>Stop</button><button class="button accent" id="run-sequence">Run sequence <span>▶</span></button></div></div>
+        </section>
+        <section class="panel console-panel">
+          <div class="panel-heading"><span>COMMAND LOG</span><button class="text-button" id="clear-log">Clear log</button></div>
+          <div id="console-log" class="console-log" role="log" aria-label="Command execution log"></div>
+          <form id="command-form" class="command-form"><span>russl ›</span><input id="command-input" autocomplete="off" spellcheck="false" placeholder="Enter a command, or type help" aria-label="Terminal command"><button type="submit" aria-label="Run command">↵</button></form>
+        </section>
+      </div>
+      <aside class="results-column">
+        <section class="panel return-panel">
+          <div class="panel-heading"><span>RETURN EXPLORER</span><span id="return-status" class="muted">IDLE</span></div>
+          <div class="return-tabs" aria-label="Result detail"><button data-result="summary" class="active" aria-pressed="true">Summary</button><button data-result="details" aria-pressed="false">Details</button><button data-result="raw" aria-pressed="false">JSON</button></div>
+          <div id="return-content" class="return-content"></div>
+          <button class="button wide" id="export-result" disabled>Export selected return</button>
+        </section>
+        <section id="legacy-kernel-panel" class="panel kernel-panel" hidden>
+          <div class="panel-heading"><span>REFERENCE TRACE KERNEL</span><span id="kernel-size" class="muted">9 × 9</span></div>
+          <p class="kernel-formula">F<sub>kx</sub> = χ(kx) / √q<br><span>χ(t) = exp(2πi Tr(t) / p)</span></p>
+          <div id="kernel-grid" class="kernel-grid" aria-label="Fourier kernel phase matrix"></div>
+          <p class="small-note">Color encodes character phase. Hover over a cell for its labels and trace.</p>
+        </section>
+        <section id="wigner-panel" class="panel kernel-panel" hidden>
+          <div class="panel-heading"><span>WIGNER PHASE SPACE</span><span id="wigner-mana" class="muted"></span></div>
+          <div id="wigner-grid" class="wigner-grid" aria-label="Wigner values with position rows and momentum columns"></div>
+          <p id="wigner-note" class="small-note"></p>
+        </section>
+        <section class="domain-note"><span class="section-caption">GFM DOMAINS</span><p>Exact field coefficients use a multiplicative transform of length q−1. Ordinary numeric samples use the additive trace kernel of length q; their magnitude and units are retained.</p><p>GF80 word mechanics uses exact q/p values, reversible kick/drift rules and Pixel160 slices.</p><a href="docs/GFM_Terminal_Identity.txt" target="_blank">Read the GFM contract ↗</a></section>
+      </aside>
+    </section>
+    <section id="view-workbench" class="view workbench-view" hidden>
+      <div class="view-intro"><div><p class="eyebrow">PRESERVED RUSSL RESEARCH WORKBENCH</p><h1>Reversible word mechanics</h1><p>Five independent word axes · GF(2⁸⁰) · exact Pixel160 slices</p></div><div class="intro-actions"><button class="button accent" id="capture-workbench">Capture current slice</button><button class="button" id="open-workbench">Open full workbench ↗</button></div></div>
+      <p id="workbench-status" class="bridge-status" role="status">Load the workbench, then capture a bounded source-witness record into the ledger.</p>
+      <iframe id="workbench-frame" title="RUSSL GF80 word workbench" sandbox="allow-scripts allow-downloads" data-src="reference/workbench.html"></iframe>
+    </section>
+    <section id="view-evidence" class="view evidence-view" hidden>
+      <div class="view-intro"><div><p class="eyebrow">RECORDS / SOURCES / REPRODUCIBILITY</p><h1>Evidence & ledger</h1><p>Captured states, source identities, and an explicit scope for every result.</p></div><div class="intro-actions"><button class="button" id="import-session">Import session</button><button class="button accent" id="export-ledger">Export ledger</button></div></div>
+      <input type="file" id="session-file" accept="application/json,.json" hidden>
+      <div class="evidence-grid"><section class="panel"><div class="panel-heading"><span>RESEARCH LEDGER</span><span id="ledger-count" class="muted">0 records</span></div><div id="ledger-list" class="ledger-list"></div></section><section class="panel"><div class="panel-heading"><span>SOURCE REGISTER</span><span class="muted">LOCAL COPIES</span></div><div id="source-list" class="source-list"></div></section></div>
+      <div class="evidence-note">Imported JSON is checked as data. It never runs commands. Record hashes check integrity; they do not authenticate authorship or establish a physical theory.</div>
+    </section>
+    <section id="view-equations" class="view equation-view" hidden>
+      <div class="view-intro"><div><p class="eyebrow">CANDIDATE REPORT / CHECKED DOMAINS</p><h1>Equation audit</h1><p>Review the formula, domain, and evidence before inserting an experiment.</p></div><div class="intro-actions"><a class="button" href="docs/Equation_Audit.txt" target="_blank">Read full audit ↗</a><button id="export-equations" class="button accent">Export equation register</button></div></div>
+      <p class="evidence-note">The attachment is an audit narrative. Its original 500-equation suite was not supplied. Numbered entries below refer to labels in that report; acceptance applies only within each declared domain.</p>
+      <div id="equation-counts" class="equation-counts" aria-label="Audit status counts"></div>
+      <div class="equation-tools"><label class="search-box"><span>⌕</span><input id="equation-search" type="search" placeholder="Search equations, domains, or findings…" aria-label="Search equation register"></label><label>Status <select id="equation-filter"><option value="all">All entries</option><option value="verified">Verified</option><option value="refined">Refined</option><option value="rejected">Rejected</option><option value="unresolved">Unresolved</option></select></label><button id="verify-equations" class="button">Run verification checks</button></div>
+      <p id="equation-visible-count" class="small-note" role="status"></p>
+      <div id="equation-list" class="equation-list"></div>
+    </section>
+    <section id="view-gfm" class="view gfm-view" hidden>
+      <div class="view-intro"><div><p class="eyebrow">EQUATIONS / TRANSFORM / REAPPLICATION</p><h1>Apply the equations to the model</h1><p>Compare source identities, sampled signals, and transformed operators.</p></div><div class="intro-actions"><button id="load-gfm" class="button accent">Load reapplied model</button><button id="verify-gfm" class="button">Verify</button><button id="export-gfm" class="button">Export model report</button></div></div>
+      <p id="gfm-summary" class="evidence-note" role="status"></p>
+      <div class="gfm-contract panel"><p><strong>Raw signal:</strong> y=Fv retains original magnitude and zero data. <strong>Ordinary operator:</strong> A′=FAF† acts on Fv; F† recovers Av.</p><p>F[k,x]=exp(2πi Tr(kx)/p)/√q transforms q ordinary complex samples. The separate polynomial transform evaluates q−1 exact field coefficients at powers of a primitive field element. Units, integrals and coordinates remain in their declared domains.</p><a href="docs/GFM_Terminal_Identity.txt" target="_blank">Read GFM mechanics contract ↗</a> <a href="examples/GFM-Mechanics-session.json" download>Download GFM session ↗</a></div>
+      <div id="gfm-image-list" class="gfm-image-list"></div>
+      <div class="gfm-bottom"><section class="panel gfm-card"><h2>Stored equation applicability</h2><p class="small-note">49 horizon findings and 20 earlier findings retain their audit dispositions. Supported scalar and image adapters are recalculated. The full 500-equation suite was not supplied.</p><div id="gfm-applicability"></div></section><section class="panel gfm-card"><h2>Prepared mechanics dataset</h2><p id="gfm-final"></p><p>Load recomputes the raw exterior samples and their GF9 trace transform, then records the dataset in the ledger. Original values, coordinates, units and operations are included in exports.</p><p class="small-note">The pendulum signal is a sampled acceleration profile. The exact field oscillator is a separate dimensionless model with finite cycles. Its cycle length has no units of seconds.</p><p class="small-note">The linked X post could not be retrieved. These preserved images supply the transcribed equations.</p></section></div>
+    </section>
+    <section id="view-horizon" class="view horizon-view" hidden>
+      <div class="view-intro"><div><p class="eyebrow">HYPOTHESIS / OBSERVATIONS / TRANSFORM</p><h1>Aperture & aggie simulation</h1><p>Explore the proposed cover rule alongside checked exterior references.</p></div><div class="intro-actions"><button id="h-loadmodel" class="button accent">Load GFM signal</button><button id="h-verify" class="button">Verify</button><button id="h-export" class="button">Export report</button></div></div>
+      <p class="evidence-note">Gaseous formation, an aggie cover and passage are user-proposed assumptions. Standard relativity does not establish these rules or a black-hole/wormhole identity. The display separates hidden simulation truth from what the selected observations reveal.</p>
+      <section class="panel h-controls"><h2>Choose a hypothetical case</h2><div class="h-control-grid"><label>Shared spin a/M<input id="h-spin" type="number" min="0" max="1" step="0.01" value="0.99"></label><label>Critical spin<input id="h-critical" type="number" min="0" max="0.999999999999" step="0.01" value="0.8"></label><label>Aggie load<input id="h-load" type="number" min="0" max="1000000" step="0.1" value="2"></label><label>Seal threshold<input id="h-seal" type="number" min="0.000000001" max="1000000" step="0.1" value="1"></label><label>Radius scale<input id="h-radius" type="number" min="0.000000001" max="1000000" step="0.1" value="1"></label><label>Permitted observation<select id="h-probe"><option value="exterior">Shared exterior only</option><option value="passage">Optional toy passage test</option></select></label></div><button id="h-run-comparison" class="button accent">Apply & compare</button><p class="small-note">Load and threshold use the same toy mass units; radius uses toy length. Equality closes the aperture and seals the cover.</p></section>
+      <section class="panel h-observations"><span class="section-caption">OBSERVATION RESULT</span><h2 id="h-observation-result" role="status"></h2><p id="h-protocol-note"></p><p id="h-reference" class="small-note"></p></section>
+      <div id="h-branches" class="h-branches" aria-label="Hidden branch rules shown as schematic diagrams"></div>
+      <section class="panel h-spec"><h2>Simulation specification</h2><p id="h-coverage"></p><p>The GFM load action transforms raw exterior samples at their original magnitude using the declared trace kernel. A zero passage signal stays zero data. Earlier normalized examples remain historical reference files. The logical map T = I₄ + εK acts on family labels; it does not establish a spacetime isometry.</p><div class="intro-actions"><a class="button" href="docs/Horizon_Simulation_Specification.txt" target="_blank">Read preserved specification ↗</a><a class="button" href="docs/GFM_Terminal_Identity.txt" target="_blank">Current GFM contract ↗</a><a class="button" href="docs/Horizon_Equation_Audit.txt" target="_blank">Read equation audit ↗</a><a class="button" href="examples/GFM-Mechanics-session.json" download>Download GFM session</a><button id="h-specexport" class="button">Export specification</button></div><details><summary>Preserved user write-up</summary><pre id="h-user-writeup"></pre></details><p class="small-note">The electromagnetic zap claim remains unresolved: no field distribution or interaction law was supplied. Extreme spin does not establish timeless matter.</p></section>
+      <section class="h-register"><h2>Audited source equations</h2><p class="small-note">Expand an entry to inspect its source expression, correction, domain and applicability. Full field and perturbation equations remain references; this foundation does not solve those systems.</p><div id="h-equation-list"></div></section>
+    </section>
+    <section id="view-architecture" class="view architecture-view" hidden>
+      <div class="view-intro"><div><p class="eyebrow">GFM FOUNDATION / VERSION 0.5</p><h1>A terminal with declared mechanics domains</h1><p>Raw mechanics signals, exact finite-field coefficients and reversible word mechanics.</p></div><a class="button" href="docs/GFM_Terminal_Identity.txt" target="_blank">Read GFM contract ↗</a></div>
+      <div class="architecture-grid"><article class="panel architecture-card"><span class="step-number">01</span><h2>GFM command surface</h2><p>Searchable mechanics commands, editable presets, ordered execution, cancellation between operations, and structured returns follow SpinDoctor’s interface pattern.</p><code>gfm.* · workbench.* · ledger.*</code></article><article class="panel architecture-card"><span class="step-number">02</span><h2>Two transform domains</h2><p>Trace characters transform raw complex signals of length q. Polynomial evaluation and interpolation use exact field coefficients of length q−1. GF(3), GF(4), GF(8), GF(9) and GF(16) have explicit polynomial encodings.</p><code>Raw numeric signals / exact field values</code></article><article class="panel architecture-card"><span class="step-number">03</span><h2>Word-mechanics adapter</h2><p>The existing workbench supplies GF80 slices, inverse witnesses, and bounded replay. Its original interface, lab models, TIFF exports, and word imports remain available.</p><code>Pixel160 / GF(2^80)</code></article><article class="panel architecture-card"><span class="step-number">04</span><h2>Mechanics evidence</h2><p>Dataset records retain original scale, coordinates, units, field encoding, operations and digests. The normalized reference lab is an explicit secondary tool.</p><code>Inspect / record / replay / export</code></article></div>
+      <div class="foundation-bottom"><section class="panel"><div class="panel-heading"><span>CANDIDATE STATUS</span></div><div class="padded"><h2>Mechanics data leads the terminal.</h2><p>The supplied candidate spans several frameworks. Executable GFM foundations include raw signal transport, exact polynomial transforms, field-coordinate mechanics and the existing GF80 workbench. Quantum-derived operators remain in Reference math. Broader physical claims retain their audit status.</p><a href="docs/candidate-review.txt" target="_blank">Read preserved candidate review ↗</a></div></section><section class="panel"><div class="panel-heading"><span>LINEAGE & LICENSING</span></div><div class="padded"><p>RUSSL Research Workbench + SpinDoctor 3.1.2 interface patterns. Browser-local foundation prepared 2026-10-11.</p><p>Editable source, original workbench ZIP, preserved reference terminal, notices, and validation evidence accompany this package.</p><a href="NOTICE.txt" target="_blank">Attribution & modifications ↗</a> <a href="LICENSE.txt" target="_blank">GPL v3 ↗</a></div></section></div>
+    </section>
+  </main>
+  </fieldset>
+  <footer><span>RUSSL / GALOIS FIELD MECHANICS</span><span id="footer-status">Memory-only session · export to preserve your work</span><span>v0.5.1</span></footer>
+  <script>/*__STARTUP__*/</script>
+  <script>/*__CONFIG__*/</script>
+  <script>/*__ENGINE__*/</script>
+  <script>/*__FIELD__*/</script>
+  <script>/*__SCALAR__*/</script>
+  <script>/*__MATRIX__*/</script>
+  <script>/*__EXACT__*/</script>
+  <script>/*__MODELS__*/</script>
+  <script>/*__REGISTRY__*/</script>
+  <script>/*__IMAGES__*/</script>
+  <script>/*__REAPPLICATION__*/</script>
+  <script>/*__HORIZONGR__*/</script>
+  <script>/*__SCENARIO__*/</script>
+  <script>/*__HORIZON__*/</script>
+  <script>/*__HORIZONREGISTRY__*/</script>
+  <script>/*__HORIZONDATA__*/</script>
+  <script>/*__MECHANICS__*/</script>
+  <script>/*__APP__*/</script>
+</body>
+</html>
+
+

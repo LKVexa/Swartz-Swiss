@@ -1,0 +1,44 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "fdd742b4078ced9aea090003691aa56321dc6199c672d58bb61f79d9c9982559",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (ECONOMY_CONSERVATION) plus Stage 15 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "ECONOMY_CONSERVATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-06",
+    "GW-11",
+    "GW-23",
+    "GW-24",
+    "GW-29",
+    "GW-42",
+    "GW-63"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Backpressure can reduce speculative look-ahead without delaying canonical transport or world time.",
+  "requirement_id": "RCPW-15-R18",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 15,
+  "stage_title": "High-Speed Traversal Fold / Unfold",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "ECONOMY_CONSERVATION"
+  ],
+  "workflow_file": "15_HIGH_SPEED_TRAVERSAL_FOLD_UNFOLD/229_RCPW_15_R18_BACKPRESSURE_CAN_REDUCE_SPECULATIVE_LOOK_AHEAD_WITHOUT_DELAYING_CANONICAL_TRANSPORT_O.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

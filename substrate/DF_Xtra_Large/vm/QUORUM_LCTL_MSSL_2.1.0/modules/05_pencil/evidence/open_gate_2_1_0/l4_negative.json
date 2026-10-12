@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "03ac0484e861b371c26d032f327061037a1b175712cce8b55d4057f983e55945",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Pencil",
+  "module_id": 5,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

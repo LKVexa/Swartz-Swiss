@@ -1,0 +1,49 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "743219227359f699cb3c28aa2c640665e0e54aadb0653672c0a9e2ea6920a201",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (ECOLOGY_CONSERVATION, AUTONOMOUS_HISTORY) plus Stage 08 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "AUTONOMOUS_HISTORY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "ECOLOGY_CONSERVATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-03",
+    "GW-14",
+    "GW-27",
+    "GW-29",
+    "GW-48",
+    "GW-64",
+    "GW-65"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Individual citizens and aggregate households/cohorts convert without duplicating or erasing population.",
+  "requirement_id": "RCPW-08-R02",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 8,
+  "stage_title": "Civilization / Economy Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "ECOLOGY_CONSERVATION",
+    "AUTONOMOUS_HISTORY"
+  ],
+  "workflow_file": "08_CIVILIZATION_ECONOMY_AUTHORITY/097_RCPW_08_R02_INDIVIDUAL_CITIZENS_AND_AGGREGATE_HOUSEHOLDS_COHORTS_CONVERT_WITHOUT_DUPLICATING_OR_E.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "GFM-phase-serial-worker-benchmark/2",
+  "date": "2026-10-12T11:14:10.272Z",
+  "runtime": "v24.19.0",
+  "measurement": "Actual Node worker executes production phase-worker.js and unchanged phase session with immediate consumer ACK; no HTTP, browser GPU or native window measurement. Baseline is the earlier capture on this host, not a simultaneous controlled run.",
+  "baselineDate": "2026-10-12T11:02:12.278Z",
+  "physicalStepUnchanged": 0.05,
+  "cases": [
+    {
+      "resolution": 16,
+      "computedFrames": 141,
+      "wallMilliseconds": 2212.7736,
+      "deliveredFieldHz": 63.720933763851846,
+      "meanStepMilliseconds": 3.693018439716312,
+      "p95StepMilliseconds": 4.888000000000034,
+      "targetHz": 0,
+      "simulationTime": 7.049999999999996,
+      "expectedSimulationTime": 7.050000000000001,
+      "pauseFrozen": true,
+      "pendingTimersAfterPause": 0,
+      "previousCapturedFieldHz": 46.49239691326595,
+      "throughputRatio": 1.3705667591784234
+    },
+    {
+      "resolution": 32,
+      "computedFrames": 130,
+      "wallMilliseconds": 2211.4336999999996,
+      "deliveredFieldHz": 58.78539338529571,
+      "meanStepMilliseconds": 10.583380769230752,
+      "p95StepMilliseconds": 13.569700000000012,
+      "targetHz": 0,
+      "simulationTime": 6.500000000000006,
+      "expectedSimulationTime": 6.5,
+      "pauseFrozen": true,
+      "pendingTimersAfterPause": 0,
+      "previousCapturedFieldHz": 29.4394884449555,
+      "throughputRatio": 1.9968211572429233
+    },
+    {
+      "resolution": 64,
+      "computedFrames": 23,
+      "wallMilliseconds": 2223.8629,
+      "deliveredFieldHz": 10.342364180813485,
+      "meanStepMilliseconds": 86.41663043478275,
+      "p95StepMilliseconds": 111.54240000000027,
+      "targetHz": 0,
+      "simulationTime": 1.1499999999999995,
+      "expectedSimulationTime": 1.1500000000000001,
+      "pauseFrozen": true,
+      "pendingTimersAfterPause": 0,
+      "previousCapturedFieldHz": 5.253404994447151,
+      "throughputRatio": 1.9686972909466076
+    }
+  ]
+}

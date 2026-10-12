@@ -1,0 +1,134 @@
+{
+  "release": "RUSSL Virtual Research Terminal foundation 0.4.0",
+  "prepared": "2026-10-11",
+  "localOnly": true,
+  "projectTests": {
+    "passed": 232,
+    "failed": 0,
+    "skipped": 0,
+    "command": "node --test --test-reporter=tap tests/*.test.cjs",
+    "transcript": "tests-v0.4.txt",
+    "scope": "Production mathematical modules, independent references, app/DOM fixtures, state preservation, hypothetical controls, inert session imports/exports, source bytes and exact offline build. No rendered browser checks."
+  },
+  "independentHorizon": {
+    "passed": true,
+    "assertions": 1661,
+    "maximumScaledNumericError": 3.666956925440851e-12,
+    "tolerance": 1e-10,
+    "packetSha256": "d2f984234deed7347754dbc9b14daa0af4aacdb171461971fd7865173682f6c3",
+    "sessionSha256": "edea14d4cfe466afa50b1a1f8ef2e73ec7162872b87e4b7607f38d4b5012ecd7",
+    "evidence": "horizon-independent-validation.txt",
+    "method": "Python standard library only; independently reconstructed finite fields, Fourier, matrix and Wigner calculations plus GR coframe expansion and five-point first-law differentiation."
+  },
+  "horizonCoverage": {
+    "newFindings": 49,
+    "pdfNumberedEquations": 23,
+    "previousFindings": 20,
+    "previousImageFamilies": 3
+  },
+  "registryStatuses": {
+    "refined": 15,
+    "verified": 17,
+    "reference-only": 9,
+    "toy-assumption": 8
+  },
+  "applicability": {
+    "reference-calculated": 22,
+    "reference-only": 19,
+    "hypothetical-rule-evaluated": 7,
+    "logical-map-transformed": 1
+  },
+  "reapplication": {
+    "passed": true,
+    "checks": {
+      "previousGFM": {
+        "passed": true,
+        "residual": 1.7008353577453975e-14
+      },
+      "standardSmarr": {
+        "passed": true,
+        "residual": 2.2204460492503126e-16
+      },
+      "firstLaw": {
+        "passed": true,
+        "residual": 0
+      },
+      "metric": {
+        "passed": true,
+        "residual": 1.75442650804963e-16
+      },
+      "signal": {
+        "passed": true,
+        "residual": 2.612598060469303e-16
+      },
+      "logicalMap": {
+        "passed": true,
+        "residual": 0
+      },
+      "indistinguishability": {
+        "passed": true,
+        "residual": 0
+      },
+      "finalState": {
+        "passed": true,
+        "residual": 2.220446049250313e-16
+      },
+      "chargedMassRelation": {
+        "passed": true,
+        "residual": 0
+      }
+    },
+    "finalField": "gf9",
+    "description": "Kerr exterior gtt signal → GFM → D(3,4) → R(3,4)",
+    "manaBase2": 1.0013510525793157
+  },
+  "identifiability": {
+    "exteriorComparison": {
+      "identical": true,
+      "comparison": "Exact equality of declared deterministic observable vectors; no noise likelihood model is supplied.",
+      "priorGaseous": 0.5,
+      "posteriorGaseous": 0.5,
+      "optimalAccuracy": 0.5,
+      "conclusion": "Unidentifiable from these observations. The posterior equals the prior.",
+      "scope": "Accuracy concerns this deterministic toy observation protocol, not an astrophysical detector. Hidden formation/cover labels are excluded from the observation vectors."
+    },
+    "transformedDifference": 0,
+    "optionalPassage": {
+      "identical": false,
+      "comparison": "Exact equality of declared deterministic observable vectors; no noise likelihood model is supplied.",
+      "priorGaseous": 0.5,
+      "posteriorGaseous": null,
+      "optimalAccuracy": 1,
+      "conclusion": "The declared ideal observations distinguish the branches. This probe relaxes any premise of equivalence under all tests.",
+      "scope": "Accuracy concerns this deterministic toy observation protocol, not an astrophysical detector. Hidden formation/cover labels are excluded from the observation vectors."
+    },
+    "scope": "The optional hypothetical probe changes the permitted observation protocol."
+  },
+  "previousReleaseEvidence": {
+    "release": "0.3.0",
+    "projectTestsPassed": 167,
+    "independentGFMAssertions": 2201,
+    "retainedExamplesUnchanged": [
+      "examples/Fourier-Weyl-session.json",
+      "examples/Audited-Equations-session.json",
+      "examples/GFM-Reapplied-session.json"
+    ],
+    "summary": "verification-summary-v0.3.json",
+    "scope": "Historical validation retained. Current full JavaScript suite also exercises the earlier modules."
+  },
+  "sourceCount": 15,
+  "liveBrowser": {
+    "status": "unverified",
+    "scope": "No completed rendered preview, native download interaction or live GF80 iframe communication."
+  },
+  "scientificLimits": [
+    "Toy formation/cover/passage rules are assumptions.",
+    "No global black-hole/wormhole isometry or traversal result.",
+    "Extreme spin does not establish timeless matter.",
+    "Electromagnetic zap has no supplied interaction law.",
+    "Perturbation PDE/modes are references; no PDE solver.",
+    "Radiation/lifetime use a stated ideal approximation.",
+    "Original full 500-equation suite was not supplied."
+  ],
+  "originalFilesChanged": false
+}

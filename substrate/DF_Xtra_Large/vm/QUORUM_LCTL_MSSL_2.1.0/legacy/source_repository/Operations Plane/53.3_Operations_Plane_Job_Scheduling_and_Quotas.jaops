@@ -1,0 +1,34 @@
+ja source 0.3
+module suite53.operations_plane.job_scheduling_and_quotas
+use Operations
+policy explicit_network
+
+workspace OperationsPlaneJobSchedulingAndQuotas {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 8 memory 16GB
+    network disabled
+    secret scheduler_key reference "vault://suite53/job-scheduling-quotas"
+
+    service SOPHIA_job_context replicas 1
+    health_check SOPHIA_job_context every 10s
+    service CHARLOTTE_quota_gate replicas 1
+    health_check CHARLOTTE_quota_gate every 10s
+    service LANDON_job_scheduler replicas 1
+    health_check LANDON_job_scheduler every 10s
+    service Professor_job_report replicas 1
+    health_check Professor_job_report every 10s
+    service Podium_job_receipt replicas 1
+    health_check Podium_job_receipt every 10s
+    service job_scheduler_worker replicas 1
+    health_check job_scheduler_worker every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "operations_plane_job_scheduling_quotas.msslb"

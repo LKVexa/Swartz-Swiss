@@ -1,0 +1,27 @@
+ja certifier 0.3
+module pencil_sharpener.compile_readiness
+policy no_execute_unknown_code
+policy no_network
+
+grammar PencilSharpenerCompileReadiness {
+  import ja.portal.scene as Scene ;
+  import mcrt.portal.timeline as Timeline ;
+  lexer suite Lex { modes: [DEFAULT, STRING] unicode: true }
+  parser suite Parse { algorithm: lr1 recovery: bounded }
+  ast suite AST { provenance: line_column semantic_ids: stable }
+  type suite Types { judgments: [WellFormed, WellTyped] }
+  safety suite Safety { policies: [no_network, no_execute_unknown_code] }
+  lower suite Lower { profiles: [R12, MCRT] }
+  predicate every_stage_is_admitted(AST) ;
+  policy_validator SophiaReadinessValidator requires [no_network, no_execute_unknown_code] ;
+  compiler_validator CharlotteFrontEndValidator verifies [AST, R12, MCRT] ;
+  compiler_validator LandonBackEndValidator verifies [AST, R12, MCRT] ;
+  evidence ProfessorBuildEvidence { source_hash: required compiler_hash: required runtime_hash: required }
+  certification profile PodiumCompileReadiness { require all validators }
+  compatibility from 0.2 to 0.3 classification additive ;
+  certificate PencilSharpenerCompileReadinessBundle sign_with local_test_key ;
+}
+
+certify grammar PencilSharpenerCompileReadiness profile PodiumCompileReadiness
+lower certificate PencilSharpenerCompileReadiness to JA_CERTIFIER_R12
+package certificate PencilSharpenerCompileReadinessBundle as "pencil_sharpener_compile_readiness.msslb"

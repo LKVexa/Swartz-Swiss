@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "062",
+  "title": "MSSL Lowering Backend",
+  "source_file": "062_MSSL_Lowering_Backend.md",
+  "source_sha256": "d3857d5bec49c965d3d3dd7a6e88ae3f52a7fcdc50842d0ce057c7fe9ecc3a8e",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "N_SMALL",
+  "integration_mechanism": "MSSL lowering",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

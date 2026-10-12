@@ -1,0 +1,68 @@
+{
+  "release": "RUSSL Virtual Research Terminal foundation 0.2.0",
+  "prepared": "2026-10-11",
+  "localOnly": true,
+  "candidateReportAudit": {
+    "scope": "Supplied report only; original 500-equation suite not provided.",
+    "sourceSha256": "068f68965b6157c88e9e881a48a6bfacfc040455cb957af17f613785ad0237f8",
+    "findings": 20,
+    "displayedMathBlocksParsed": 12,
+    "statuses": {
+      "verified": 5,
+      "refined": 10,
+      "rejected": 2,
+      "unresolved": 3
+    },
+    "criticalFindings": [
+      "Eq437 T=-3 counterexample; real lattice band cutoff excludes fixed-a infinite-step limit.",
+      "Eq370 mixes operator normalizations; finite complex matrices cannot obey a global canonical CCR.",
+      "Eq438 modular functions and lattice/Dirac matching are undefined.",
+      "Cayley restored to forward complex Schr\u00f6dinger convention; numerical residuals and rational phase error remain explicit."
+    ]
+  },
+  "projectTests": {
+    "command": "node --test tests/*.test.cjs",
+    "passed": 99,
+    "failed": 0,
+    "skipped": 0,
+    "byFile": {
+      "engine": 23,
+      "app": 11,
+      "adapter": 8,
+      "artifact": 4,
+      "refinedField": 14,
+      "refinedScalar": 16,
+      "candidateDiagnostics": 5,
+      "equationRegistry": 5,
+      "equationIntegration": 13
+    },
+    "scope": "Production mathematical modules, command/UI DOM fixture, source/registry integrity, exports/imports, counterexamples; no rendered browser checks."
+  },
+  "independentExamples": {
+    "legacyGF9": "PASS",
+    "auditedGF9": "PASS",
+    "scope": "Separate Python standard-library closed-form amplitudes, explicit Wigner grid/marginals, CG/delta/Cayley values, and canonical numeric-lexical envelope digests.",
+    "evidence": [
+      "independent-example-check.json",
+      "independent-audited-example-check.json"
+    ]
+  },
+  "legacyCompatibility": "PASS; real unchanged 0.1 session and record digests validate/import; re-export preserves field metadata and record hashes.",
+  "originalGF80Tests": {
+    "passed": 79,
+    "failed": 0,
+    "scope": "Retained prior-release check of unchanged original sources; not rerun for equation additions."
+  },
+  "originalResearchSuite": "Retained prior PASS evidence in original-research-tests.txt and original-session-independent.json.",
+  "browserVerification": {
+    "completed": false,
+    "reason": "Prior loopback preview timed out and file URL policy rejected preview. No workaround attempted.",
+    "unverified": [
+      "Rendered desktop/mobile layout",
+      "Native browser download/save transport",
+      "Live browser GF80 capture/replay"
+    ]
+  },
+  "sourceIntegrity": "Six preserved local references match registered byte lengths and SHA-256 digests; derivative workbench contains only the identified relay addition.",
+  "originalFilesChanged": false
+}

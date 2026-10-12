@@ -1,0 +1,49 @@
+{
+  "verificationDate": "2026-10-12",
+  "runtime": "v24.19.0",
+  "command": "runtime\\node.exe --test tests\\pulse-diagnostics.test.cjs",
+  "testResult": {
+    "tests": 22,
+    "passed": 22,
+    "failed": 0
+  },
+  "files": {
+    "diagnosticsModuleSha256": "e03a79d9a9236711ec7413cd6cf52eda9817dbfd85c1296b1982614ee9366a55",
+    "testModuleSha256": "34987c91180105bbff150b6fee54123ff25e8466cb07ad51cbebf5b028c49a90",
+    "engineModuleSha256": "93d1463b46a2bb6eaeb6c347f97c2a43101d811d0d6aa5d95d3a3b587f6a5b0a"
+  },
+  "coverage": [
+    "Independent E cross H signs and SI full-cell collision/Ohmic power",
+    "Audited saved snapshot compared with authoritative solver diagnostics",
+    "Live midpoint cumulative deposits, distinct from instantaneous power",
+    "Signed hot/cold thermal contact; no duplicate deposition destinations",
+    "Zero/negative source work and live source energy extraction",
+    "Exact vacuum characteristic forward-minus-backward identity and pure channels",
+    "Material/plasma/sponge masks and eight-sigma source Gaussian suppression",
+    "Unavailable vacuum port returns null powers",
+    "Frozen/typed input arrays, returned-array independence, live model immutability",
+    "Malformed arrays, invalid scalars and unsupported current errors"
+  ],
+  "auditedSnapshot": {
+    "path": "examples/audited-covered-frame.json",
+    "timeSeconds": 2.0000000000000055e-9,
+    "unchangedByDiagnostics": true,
+    "sourceWorkJ": 2.585588170158838e-11,
+    "plasmaCollisionDepositedJ": 1.3370390849172253e-12,
+    "solverPlasmaCollisionHeatJ": 1.3370390849172111e-12,
+    "coverOhmicDepositedJ": 3.93712103042801e-12,
+    "solverCoverOhmicHeatJ": 3.9371210304279134e-12,
+    "balanceResidualJ": 1.0727498569047078e-23,
+    "solverEnergyBalanceResidualJ": 1.0727498569047078e-23,
+    "relativeBalanceResidual": 4.1489587138651185e-13,
+    "vacuumPort": {
+      "status": "ready",
+      "planeZM": 0.08833333333333333,
+      "annulusCount": 28,
+      "characteristicIdentityResidualW": -3.469446951953614e-18,
+      "sourceTailLimitZM": 0.07500000000000001,
+      "axialGaussianTailFactorUpperBound": 1.9654838241636744e-25
+    }
+  },
+  "scope": "Pure diagnostics only. The port is a sampled vacuum annulus, not an open boundary or a separated incident/scattered measurement. The wormhole display does not change Maxwell/Drude/enthalpy equations."
+}

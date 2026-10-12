@@ -1,0 +1,30 @@
+ja source 0.3
+module suite65.sandbox_engine.sophia_evaluation_accepted_learning
+use Training
+policy no_network
+
+experiment SandboxSOPHIAEvaluationAcceptedLearning {
+    model ref "models/sophia_charlotte_landon_professor_podium/sophia_evaluation_accepted_learning"
+    dataset ref "datasets/sandbox_engine/admitted_professor_feedback" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 16 accumulate 4
+    precision mixed
+    seed 6533
+    checkpoint every 8 steps
+    evaluate {
+        metric evidence_backed_evaluation
+        metric professor_feedback_acceptance_integrity
+        metric protected_regression_safety
+        metric learning_lineage_completeness
+        metric loss
+        require evidence_backed_evaluation >= 0.99
+        require professor_feedback_acceptance_integrity >= 1.00
+        require protected_regression_safety >= 1.00
+        require learning_lineage_completeness >= 1.00
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "SandboxSOPHIAEvaluationAcceptedLearning.lineage.mcrt"

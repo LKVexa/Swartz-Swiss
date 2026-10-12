@@ -1,0 +1,38 @@
+ja source 0.3
+module suite31.vexxa.reconstruction_bridge
+use Service
+policy explicit_network
+
+service VexxaReconstructionBridge {
+    message BridgeRequest {
+        request_id: Text,
+        binding_id: Text,
+        reconstruction_id: Text,
+        feature_graph_hash: Text,
+        scene_hash: Text,
+        target_service: Text,
+        provenance_id: Text
+    }
+    message BridgeResponse {
+        bridge_record: Text,
+        dispatch_plan_hash: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_infrastructure_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint bridge(request: BridgeRequest) -> Stream<BridgeResponse>
+        auth capability vexxa.reconstruction.bridge
+        deadline 25s
+        retry max 1
+        idempotency request.request_id
+    protocol BridgeSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json VexxaReconstructionBridge.compatibility_report

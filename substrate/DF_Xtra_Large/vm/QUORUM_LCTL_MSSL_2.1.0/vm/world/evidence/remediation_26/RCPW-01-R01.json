@@ -1,0 +1,47 @@
+{
+  "evidence_sha256": "ebbe648571409df05f8da6b29a927e1f91a73fc634fadb28bba8c3850b564111",
+  "exit_code": 0,
+  "observed_results": {
+    "coordinate_authority": {
+      "axes": {
+        "x": "east_west",
+        "y": "north_south",
+        "z": "elevation"
+      },
+      "folded_coordinates_are_derived": true,
+      "gravity_vector": [
+        0,
+        0,
+        -1
+      ],
+      "max": 9223372036854775807,
+      "min": -9223372036854775808,
+      "numeric": "signed_integer",
+      "reference_independent": true,
+      "resolution": 1,
+      "schema": "RCPW-CANONICAL-XYZ-I64/1",
+      "unit": "canonical_meter"
+    },
+    "folded": [
+      46340,
+      -46341,
+      5
+    ],
+    "save_roundtrip": true,
+    "test_point": [
+      1000000000000,
+      -1000000000000,
+      123456789
+    ]
+  },
+  "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+  "requirement_id": "RCPW-01-R01",
+  "result_sha256": "4020d3133a57fda82a90e3e3a89cdf35fd6efe24d21ab9a02611dc4717af9e3a",
+  "schema": "RCPW-26-GATE-EVIDENCE/1",
+  "status": "OPERATIONAL",
+  "test_command": "python vm/world/qualification/remediate_26.py",
+  "tool_versions": {
+    "python": "3.11.15",
+    "world_runtime": "7.0.0-applied-remediated-26"
+  }
+}

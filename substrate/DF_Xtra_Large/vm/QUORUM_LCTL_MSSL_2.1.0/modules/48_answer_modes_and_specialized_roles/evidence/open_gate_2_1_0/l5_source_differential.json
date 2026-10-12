@@ -1,0 +1,26 @@
+{
+  "claim": "source/contract differential only; not executable legacy-runtime equivalence",
+  "legacy_categories": {
+    "evidence": true,
+    "execution": true,
+    "identity": true,
+    "policy": true,
+    "state": true,
+    "tests": true
+  },
+  "legacy_files_parsed": 24,
+  "legacy_runtime_available": false,
+  "mapped_category_count": 6,
+  "new_categories": {
+    "evidence": true,
+    "execution": true,
+    "identity": true,
+    "policy": true,
+    "state": true,
+    "tests": true
+  },
+  "observed_category_count": 6,
+  "schema": "QUORUM-SOURCE-DIFFERENTIAL/2.1",
+  "static_mapping_coverage": 1.0,
+  "status": "PASS"
+}

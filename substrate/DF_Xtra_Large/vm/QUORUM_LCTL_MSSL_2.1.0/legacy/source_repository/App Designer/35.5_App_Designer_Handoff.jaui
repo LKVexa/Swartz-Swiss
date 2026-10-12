@@ -1,0 +1,47 @@
+ja source 0.3
+module suite35.app_designer.handoff
+use Interface
+policy no_network
+
+interface AppDesignerHandoff {
+    state selected_handoff: Text? = null
+    state packaging_handoff: Flag = false
+    derived can_select_handoff = not packaging_handoff
+    derived can_package_handoff = selected_handoff != null and not packaging_handoff
+    component SOPHIA_HandoffModel {
+        label "Prepare design handoff"
+        enabled bind can_package_handoff
+        accessibility role button name "Prepare selected design handoff"
+        action prepare_handoff requires admin.action:approved
+    }
+    component CHARLOTTE_HandoffGate {
+        label "Validate handoff package"
+        enabled bind can_package_handoff
+        accessibility role button name "Validate selected handoff package"
+        action validate_handoff requires admin.action:approved
+    }
+    component LANDON_HandoffPackage {
+        label "Package validated handoff"
+        enabled bind can_package_handoff
+        accessibility role button name "Package validated design handoff"
+        action package_handoff requires admin.action:approved
+    }
+    component Professor_HandoffGuide {
+        label "Explain handoff package"
+        enabled bind can_select_handoff
+        accessibility role button name "Explain handoff contents and limitations"
+        action explain_handoff requires admin.action:approved
+    }
+    component Podium_HandoffEvidence {
+        label "View handoff evidence"
+        enabled bind can_package_handoff
+        accessibility role button name "View handoff certification evidence"
+        action show_handoff_evidence requires admin.action:approved
+    }
+    component HandoffViewport {
+        embed portal.scene "app_designer_handoff"
+        motion bind timeline.handoff_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface AppDesignerHandoff

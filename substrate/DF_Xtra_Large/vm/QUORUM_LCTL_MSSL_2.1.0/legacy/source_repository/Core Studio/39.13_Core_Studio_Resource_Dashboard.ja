@@ -1,0 +1,14 @@
+ja source 0.3
+module suite39.core_studio.resource_dashboard
+use Core
+policy no_network
+
+record ResourceDashboardPlan { id: Count, scope: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_resource_dashboard_plan(item: ResourceDashboardPlan) -> Result<ResourceDashboardPlan, Text> effects { pure } {
+    let normalized: Text = item.scope
+    return Ok(ResourceDashboardPlan { id: item.id, scope: normalized, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: ResourceDashboardPlan = ResourceDashboardPlan { id: 3913, scope: "resource_observation_plan", sophia: "interpret_resource_state", charlotte: "validate_metrics_and_limits", landon: "stage_dashboard_snapshot", professor: "explain_resource_pressure", podium: "publish_resource_receipt" }
+let result = prepare_resource_dashboard_plan(sample)
+assert result.is_ok == true
+emit json result

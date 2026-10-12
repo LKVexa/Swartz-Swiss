@@ -1,0 +1,47 @@
+profile ja.data
+source_level 0.3
+
+subsuite Terminal.T_01 TerminalContractIntake {
+    identity { suite = "66"; id = "T-01"; deterministic = true; autorun = false }
+
+    accept TerminalRunContract as request
+    emit NormalizedTerminalContract as normalized
+
+    procedure normalize_validate_hash_freeze(request) {
+        require request.fields_complete
+        require request.terminal_run_id.unique
+        require request.idempotency_key.not_empty
+        require request.command_argv.typed_and_nonempty
+        require request.output_contract.bounded
+        require request.retry_policy.finite
+        require request.resource_budget.finite
+
+        normalized = canonicalize(request)
+        normalized.created_at = utc(normalized.created_at)
+        normalized.command_display = presentation_only(normalized.command_display)
+        normalized.contract_hash = sha256(canonical_bytes(normalized))
+        normalized.frozen = true
+
+        assert same_idempotency_key_and_hash_resolve_same_run
+        return normalized
+    }
+
+    deny {
+        missing_required_field
+        mutable_input_reference
+        unbounded_output
+        infinite_retry
+        authority_derived_from_display_text
+    }
+
+    evidence {
+        original_request_ref
+        normalization_findings
+        canonical_contract
+        contract_hash
+        idempotency_record
+    }
+
+    tests { positive; negative; boundary; deterministic_replay }
+}
+

@@ -1,0 +1,74 @@
+{
+  "suite_id": 8,
+  "suite_name": "Tables",
+  "plane": "data_evidence",
+  "legacy_sha256": "0ffa6a35369151fea99788a12e213a56f5bf89bb9a48468377997169dfd682f1",
+  "legacy_root": "legacy/source_repository/Tables",
+  "files": [
+    {
+      "path": "08_tables_deterministic_outputs.jad",
+      "sha256": "eae17e30b98f8add2b2c58e0735d1fa0db4fe07b26d3d824ab1c912ce9a27f2b",
+      "bytes": 2197
+    },
+    {
+      "path": "08_tables_ledgers.jad",
+      "sha256": "97d3a5f073ae04a2b256e1dbdf817017209c4e89fee9a039a6fce8bb385dc861",
+      "bytes": 2188
+    },
+    {
+      "path": "08_tables_metrics.jad",
+      "sha256": "9fa497a4ff77b212bf77e9baee7b18f67e3dbf89ff6fb2a094330ca831fffcd3",
+      "bytes": 2159
+    },
+    {
+      "path": "08_tables_records.jad",
+      "sha256": "baf58bb9da98ff35b04b4dea60e584042af6ea06e1e0c0f8b935fffaa7c6e502",
+      "bytes": 2075
+    },
+    {
+      "path": "08_tables_schemas.jad",
+      "sha256": "4a1bcfde7b8a9c73f8fa7620798b63281248c62642f7a37d36a8c63099521f5c",
+      "bytes": 2181
+    },
+    {
+      "path": "08_tables_test_matrices.jad",
+      "sha256": "47fd1d652b94651ba02025e845c3a11720543386e615c214705a625ade65a51e",
+      "bytes": 2166
+    },
+    {
+      "path": "README.md",
+      "sha256": "6804a1453bc29f730cc2eb6b480ad4ec9e2c1bd0b2fb839718d8e5bdabe34711",
+      "bytes": 1936
+    },
+    {
+      "path": "deterministic_output_rows.dmk",
+      "sha256": "bebca06dde6aebbbe3c5f5b4454eec92b6b6ccf7505bc82f78d1109c225134b5",
+      "bytes": 2596
+    },
+    {
+      "path": "ledger_entries.dmk",
+      "sha256": "4138273f1139b47489aa0c1a2617e36c5a56720d4039798b78f296b91def4adb",
+      "bytes": 2542
+    },
+    {
+      "path": "metric_records.dmk",
+      "sha256": "93c8364ecf4b80614dd5bee87be51ae005764a90bdc69853b68f8941bd91eb5a",
+      "bytes": 2551
+    },
+    {
+      "path": "schema_registry.dmk",
+      "sha256": "bdb25695a4dee70f62c5827807b7b39ba190f250106083dd926450c445e2f096",
+      "bytes": 2570
+    },
+    {
+      "path": "table_records.dmk",
+      "sha256": "df294834542c5c499f76ffc805fa0d265cf30ea6264109fe977f1558c962870c",
+      "bytes": 2481
+    },
+    {
+      "path": "test_matrix_rows.dmk",
+      "sha256": "f18b5e868b6ca711db70d5444af71e0c4a4e96bd548c11fc9c8ff918392b327e",
+      "bytes": 2551
+    }
+  ]
+}

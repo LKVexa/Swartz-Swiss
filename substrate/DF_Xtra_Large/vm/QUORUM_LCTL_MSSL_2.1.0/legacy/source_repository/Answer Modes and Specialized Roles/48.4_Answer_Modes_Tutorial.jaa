@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.answer_modes.tutorial
+use Agent
+policy no_network
+
+agent AnswerModeTutorial {
+    identity "answer_mode_tutorial"
+    role "sophia-charlotte-landon-professor-podium-answer-mode"
+    goal emit_stepwise_verifiable_tutorial when confidence >= 0.93
+    memory session retention 1h
+    budget steps 55 tools 5
+    tool LANDONCollectTutorialContext(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIADesignTutorialPath(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateTutorialSteps(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorTeachTutorial(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordTutorial(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectTutorialContext
+        authorize SOPHIADesignTutorialPath
+        authorize CHARLOTTEValidateTutorialSteps
+        authorize ProfessorTeachTutorial
+        authorize PodiumRecordTutorial
+        continue when policy_allows
+        execute LANDONCollectTutorialContext("selected_request_scope")
+        execute SOPHIADesignTutorialPath("learner_and_project_context")
+        execute CHARLOTTEValidateTutorialSteps("candidate_tutorial")
+        execute ProfessorTeachTutorial("validated_tutorial")
+        execute PodiumRecordTutorial("tutorial_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "AnswerModeTutorial.mcrt"

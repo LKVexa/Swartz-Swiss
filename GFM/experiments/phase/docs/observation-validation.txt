@@ -1,0 +1,128 @@
+OBSERVATION CHECK: M87 CALIBRATED VISIBILITY AMPLITUDES
+Prepared 2026-10-11
+
+The data pipeline and independent arithmetic checks passed. Both simple
+stationary brightness surrogates failed the untouched 2013 observation check.
+This is an implemented empirical comparison with a reported failure, not an
+accepted validation of the phase field, matter model, magnetic texture or MHD.
+
+DATA AND PEDIGREE
+
+Publisher: Event Horizon Telescope Collaboration.
+Official release: 2020-D03-01; DOI 10.25739/daft-jz11.
+Primary paper: Wielgus et al. (2020), ApJ 901,67,
+https://doi.org/10.3847/1538-4357/abac0d
+Official portal: https://eventhorizontelescope.org/for-astronomers/data
+Official repository: https://github.com/eventhorizontelescope/2020-D03-01
+Pinned commit: 0f6bc372e7503d552018c5c05f7ee72d34af5b41
+
+Six source files totaling 77,923 bytes were downloaded normally and preserved
+under data/observations/source, with byte hashes/URLs in source-manifest.json.
+The publisher licenses the data ODC-PDDL; its full original LICENSE.txt remains
+included. No publisher analysis scripts were imported into the model.
+
+The three text files provide 486 calibrated, debiased total-intensity visibility
+amplitudes: 232 in 2011, 67 in 2012, 187 in 2013. Each row contains campaign time,
+station pair, u/v baseline projections in observing wavelengths, amplitude in Jy
+and estimated RMS uncertainty in Jy. The stated observing frequency is 229.3 GHz.
+Time can exceed 24 hours and is preserved relative to the campaign start date.
+Every parsed row retains its original filename and line number.
+
+Source SHA256:
+  M87_EHT_2011_amp.dat
+  38a4677a5e7b9a629982bdee675b48df921fdd2fb2b302cc9c3ca14a72341262
+  M87_EHT_2012_amp.dat
+  f8a672924a4ae355ebbdb68ab06423a17cf489cc7268fefbab410c8520e19521
+  M87_EHT_2013_amp.dat
+  76b2e517f8f7caba58ea2676e77b2a49808e9f2e1cf7f212492a6ea86e53c3c1
+
+FIXED TRAINING/HOLDOUT PROTOCOL
+
+data/observations/protocol.json was fixed before the first project fit. Source
+headers and some example rows had already been inspected, so this is not a
+blinded or externally registered preregistration.
+
+Training: 2011+2012. Holdout: 2013. Select projected baseline length >=0.2 Glambda
+on both splits; this excludes intra-site total-flux rows from a compact-only
+surrogate. There are 173 training rows, 146 holdout rows and 167 excluded rows.
+Excluded measurements remain in the preserved source and parsed dataset.
+
+Two circular brightness models are compared using the Fourier visibility
+relation. With rho=sqrt(u^2+v^2), angular scales in radians and compact flux F:
+  Thin emission ring: amplitude=F*abs(J0(pi*diameter*rho)).
+  Circular Gaussian: amplitude=F*exp[-(pi*FWHM*rho)^2/(4*ln(2))].
+These are geometric emission surrogates. The angular emission-ring diameter
+is not equated with the geometric photon-capture shadow diameter.
+
+At each scale on a 0..120 microarcsecond grid with 0.1 microarcsecond spacing,
+fit a single nonnegative compact flux (0..10 Jy) analytically by minimizing
+sum[(observed-predicted)/sigma]^2 using training rows only. Both years share
+that flux. Diameter/FWHM, flux, selection, error model and acceptance thresholds
+stay fixed when predicting 2013. No holdout-specific gain, flux or error-floor
+adjustment is made.
+
+The project diagnostic requires normalized residual RMS <=2 and at least 95%
+of rows within 3 publisher RMS errors, on both training and holdout. These are
+declared diagnostic thresholds, not an astrophysical significance test.
+
+RESULTS FROM ACTUAL DATA
+
+Model       Training scale    Compact flux   Training RMS  Holdout RMS  Within 3sigma
+Thin ring   39.9 microas       0.817412 Jy    1.2205        13.2550      6.8493%
+Gaussian    38.2 microas FWHM  0.828223 Jy    1.2312        13.5309      4.1096%
+
+Both training diagnostics pass; both unchanged holdout predictions fail.
+The ring's slightly better training residual does not establish a held-out
+success or uniquely identify a ring in the sparse early-EHT observations.
+public/observation-report.json and validation/observation-fit-report.json
+retain the entire training-grid profile and all selected observed/predicted
+values and residuals. A formal delta-chi-square=1 grid interval is conditional
+on the diagonal-error surrogate and is not accepted as a physical confidence
+interval when the hypothesis/calibration assumptions fail.
+
+UNCERTAINTY AND INTERPRETATION
+
+Publisher RMS errors are treated as independent Gaussian amplitude errors.
+Station gain correlations, calibration covariance and non-Gaussian low-SNR
+amplitude likelihoods are omitted. A time-independent circular morphology
+with one shared flux also omits brightness asymmetry, extended emission and
+intrinsic variability. The observed discrepancy does not by itself identify
+which omission is responsible. It is not evidence against Kerr gravity.
+No formal p-value is reported from this incomplete likelihood.
+
+This amplitude-only release contains no calibrated polarization or complex
+visibility phases. The phase of a Fourier coefficient is not a material
+order-parameter phase. The data do not separately estimate local density,
+temperature, magnetic field, solid/liquid/gas/plasma state or vortices.
+GR radiative transfer, particle distributions and a specified observer model
+would be needed to connect simulated matter/fields to these measurements.
+The present brightness surrogate has no such connection.
+
+Independent mass/distance measurements can provide an additional angular
+shadow-scale sanity check without using EHT-inferred mass as an input. Stellar
+and gas dynamical masses disagree and carry model systematics. Any future such
+check must preserve each measurement's M/D convention and distinguish its
+predicted geometric shadow from the observed emission ring. This scalar check
+is not used to replace the real baseline holdout comparison above.
+
+INDEPENDENT VERIFICATION
+
+validation/validate-observations.py imports no production module. It reparses
+all 486 publisher rows, checks hashes and reproduces both 1201-point training
+grids. It evaluates J0 by periodic angular quadrature (NIST DLMF 10.9.1),
+independently of the production power series. Every training and holdout
+prediction/residual was checked. Maximum prediction disagreement was
+3.331e-16 Jy. Altered holdout predictions and false acceptance labels were
+deliberately rejected. validation/observation-independent-results.json records
+checker, data, protocol, model and report hashes.
+
+Calculation verificationPassed=true and observationComparisonPassed=false
+are different results and remain separate in machine-readable evidence.
+The comparison adds an empirical test and an explicit model failure. It does
+not validate a new complex-phase matter law, GRMHD solver, iron laboratory,
+black-hole cover or physical passage. No NASA certification is claimed.
+
+Reproduction from project directory:
+  node backend/observations.cjs
+  python -B validation/validate-observations.py
+The preserved files enable offline reproduction; downloading is not required.

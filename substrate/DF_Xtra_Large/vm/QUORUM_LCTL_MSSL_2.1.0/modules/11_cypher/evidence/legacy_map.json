@@ -1,0 +1,39 @@
+{
+  "suite_id": 11,
+  "suite_name": "Cypher",
+  "plane": "data_evidence",
+  "legacy_sha256": "8696689e53a150685244f594771e7e719909a5914da5414797f558636e14dcad",
+  "legacy_root": "legacy/source_repository/Cypher",
+  "files": [
+    {
+      "path": "11_cypher_audit_provenance.jasec",
+      "sha256": "a5f814a11e9b3eb70381404ba678d603676759a7968005f693aaf8c47b336873",
+      "bytes": 652
+    },
+    {
+      "path": "11_cypher_fingerprints.jasec",
+      "sha256": "fad81728d766e8d3c52e2c9056691a67ca886e45b0cd7860ca5bc98570aa28dc",
+      "bytes": 682
+    },
+    {
+      "path": "11_cypher_hashes.jasec",
+      "sha256": "c11d7c3edcc8a968d55eda3b1ee9225264eda67b5b557840518c442ea7888bdd",
+      "bytes": 627
+    },
+    {
+      "path": "11_cypher_signs.jasec",
+      "sha256": "6b356db1aa87971fd9e9a6d47b23d35855365a9bb3996ae5b00961ac339db53e",
+      "bytes": 622
+    },
+    {
+      "path": "11_cypher_verifies.jasec",
+      "sha256": "03a02c490afb8293afabe192461f979bf68845e282ab01bd577e9260430a14b6",
+      "bytes": 645
+    },
+    {
+      "path": "README.md",
+      "sha256": "1186faa48ec9ab8b496f05cab975fa8e314c3207eb8df8d182aca629acdee4d3",
+      "bytes": 1990
+    }
+  ]
+}

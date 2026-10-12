@@ -1,0 +1,203 @@
+{
+  "schema": "GFM-native-phase-parity/1",
+  "passed": true,
+  "nativeSource": "Actual embedded WebView2 phase worker",
+  "referenceSource": "Unchanged phase backend with exported parameters at time zero",
+  "relativeTolerance": 1e-10,
+  "fields": 32,
+  "samples": 32768,
+  "comparisons": [
+    {
+      "field": "fields.density",
+      "samples": 1024,
+      "maxAbsoluteDifference": 2.220446049250313e-16,
+      "maxScaledDifference": 2.0797221048646533e-16
+    },
+    {
+      "field": "fields.concentration",
+      "samples": 1024,
+      "maxAbsoluteDifference": 1.1102230246251565e-16,
+      "maxScaledDifference": 2.1393968459516232e-16
+    },
+    {
+      "field": "fields.temperature",
+      "samples": 1024,
+      "maxAbsoluteDifference": 2.220446049250313e-16,
+      "maxScaledDifference": 2.513143457219703e-16
+    },
+    {
+      "field": "fields.temperatureK",
+      "samples": 1024,
+      "maxAbsoluteDifference": 7.275957614183426e-12,
+      "maxScaledDifference": 4.1175342403087615e-16
+    },
+    {
+      "field": "fields.vx",
+      "samples": 1024,
+      "maxAbsoluteDifference": 5.551115123125783e-17,
+      "maxScaledDifference": 2.393721455717886e-16
+    },
+    {
+      "field": "fields.vy",
+      "samples": 1024,
+      "maxAbsoluteDifference": 5.551115123125783e-17,
+      "maxScaledDifference": 2.393721455717886e-16
+    },
+    {
+      "field": "fields.bx",
+      "samples": 1024,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "fields.by",
+      "samples": 1024,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "fields.magneticStrength",
+      "samples": 1024,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "fields.currentZ",
+      "samples": 1024,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "fields.electricZ",
+      "samples": 1024,
+      "maxAbsoluteDifference": 2.7755575615628914e-17,
+      "maxScaledDifference": 7.356140258664003e-15
+    },
+    {
+      "field": "fields.psiRe",
+      "samples": 1024,
+      "maxAbsoluteDifference": 1.1102230246251565e-16,
+      "maxScaledDifference": 1.6464879021862947e-16
+    },
+    {
+      "field": "fields.psiIm",
+      "samples": 1024,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "fields.phase",
+      "samples": 1024,
+      "maxAbsoluteDifference": 4.440892098500626e-16,
+      "maxScaledDifference": 2.2195280753074235e-16
+    },
+    {
+      "field": "fields.amplitude",
+      "samples": 1024,
+      "maxAbsoluteDifference": 2.220446049250313e-16,
+      "maxScaledDifference": 2.28544549065892e-16
+    },
+    {
+      "field": "fields.magneticPhase",
+      "samples": 1024,
+      "maxAbsoluteDifference": 4.440892098500626e-16,
+      "maxScaledDifference": 2.2166228866098076e-16
+    },
+    {
+      "field": "fields.hydrogenIonization",
+      "samples": 1024,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "fields.phaseDefined",
+      "samples": 1024,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "fields.magneticPhaseDefined",
+      "samples": 1024,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "conserved.density",
+      "samples": 1024,
+      "maxAbsoluteDifference": 2.220446049250313e-16,
+      "maxScaledDifference": 2.0797221048646533e-16
+    },
+    {
+      "field": "conserved.momentumX",
+      "samples": 1024,
+      "maxAbsoluteDifference": 5.551115123125783e-17,
+      "maxScaledDifference": 2.5061410240631127e-16
+    },
+    {
+      "field": "conserved.momentumY",
+      "samples": 1024,
+      "maxAbsoluteDifference": 5.551115123125783e-17,
+      "maxScaledDifference": 2.1966509795332096e-16
+    },
+    {
+      "field": "conserved.totalEnergy",
+      "samples": 1024,
+      "maxAbsoluteDifference": 2.220446049250313e-16,
+      "maxScaledDifference": 1.4669050509723167e-16
+    },
+    {
+      "field": "conserved.concentrationMass",
+      "samples": 1024,
+      "maxAbsoluteDifference": 1.1102230246251565e-16,
+      "maxScaledDifference": 2.385013668235387e-16
+    },
+    {
+      "field": "staggeredMagneticField.bxFaces",
+      "samples": 1024,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "staggeredMagneticField.byFaces",
+      "samples": 1024,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "materials.iron.temperatureK",
+      "samples": 1024,
+      "maxAbsoluteDifference": 4.547473508864641e-13,
+      "maxScaledDifference": 2.9233854814014603e-16
+    },
+    {
+      "field": "materials.iron.enthalpyJkg",
+      "samples": 1024,
+      "maxAbsoluteDifference": 3.4924596548080444e-10,
+      "maxScaledDifference": 4.1148501523687833e-16
+    },
+    {
+      "field": "materials.iron.solidFraction",
+      "samples": 1024,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "materials.iron.liquidFraction",
+      "samples": 1024,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "materials.iron.vaporFraction",
+      "samples": 1024,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    },
+    {
+      "field": "materials.iron.plasmaFraction",
+      "samples": 1024,
+      "maxAbsoluteDifference": 0,
+      "maxScaledDifference": 0
+    }
+  ]
+}

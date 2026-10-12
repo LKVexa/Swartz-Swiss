@@ -1,0 +1,10 @@
+const fs=require('node:fs');const path=require('node:path');const crypto=require('node:crypto');const E=require('./src/engine.js');
+const stable=v=>v===null||typeof v!=='object'?JSON.stringify(v):Array.isArray(v)?'['+v.map(stable).join(',')+']':'{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+':'+stable(v[k])).join(',')+'}';
+const digest=v=>crypto.createHash('sha256').update(stable(v)).digest('hex');
+const f=E.field('gf9');let vector=E.basisState(9,1);vector=E.fourier(f,vector);vector=E.shift(f,vector,3);vector=E.phase(f,vector,4);
+const model={schema:'RUSSL-finite-field-model/1',field:E.fields.gf9,labelEncoding:'integer = sum(c_i * p^i), polynomial coefficients low first',amplitudes:'complex floating point',fourierSign:'+2pi i',normalization:'1/sqrt(q)',character:'exp(2pi i Tr(x)/p)',tolerance:E.tolerance,backend:'local browser JavaScript',physicalScope:'finite-dimensional complex-amplitude simulation'};
+const snapshot={model,state:vector,description:'Phase by 4',operations:4,normSquared:E.norm(vector)**2};
+const commandProvenance=['gf.field gf9','gf.basis 1','gf.fourier','gf.shift 3','gf.phase 4','gf.verify'];
+const data={schema:'RUSSL-research-record/1',kind:'gf-state',label:'GF9 Fourier / shift / phase reference',capturedAt:'2026-10-11T12:00:00.000Z',payload:{snapshot,commandProvenance,verification:E.audit(f,vector)}};const recordHash=digest(data);
+const packetData={schema:'RUSSL-virtual-session/1',version:'0.1.0',kind:'session',exportedAt:'2026-10-11T12:00:00.000Z',snapshot,records:[{id:'rec-1-'+recordHash.slice(0,8),sha256:recordHash,data}],commandProvenance,returns:[]};
+fs.mkdirSync(path.join(__dirname,'examples'),{recursive:true});fs.writeFileSync(path.join(__dirname,'examples/Fourier-Weyl-session.json'),JSON.stringify({sha256:digest(packetData),data:packetData},null,2));console.log('Created deterministic GF9 example session.');

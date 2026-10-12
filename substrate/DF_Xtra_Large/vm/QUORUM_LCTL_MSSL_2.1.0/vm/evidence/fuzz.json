@@ -1,0 +1,10 @@
+{
+  "legal_cases": 100,
+  "legal_halt": 100,
+  "legal_trap": 0,
+  "mutation_cases": 100,
+  "mutation_rejected": 100,
+  "seed": 20260810,
+  "status": "PASS",
+  "unexpected": []
+}

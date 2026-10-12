@@ -1,0 +1,26 @@
+ja source 0.3
+module illuminator.diagnostics
+use Interface
+policy no_network
+
+interface IlluminatorDiagnostics {
+    state sophia_semantic_diagnostics: Text? = null
+    state charlotte_structural_diagnostics: Text? = null
+    state landon_runtime_diagnostics: Text? = null
+    state professor_evidence_diagnostics: Text? = null
+    state podium_certification_diagnostics: Text? = null
+    state running: Flag = false
+    derived can_render = sophia_semantic_diagnostics != null and charlotte_structural_diagnostics != null and landon_runtime_diagnostics != null and professor_evidence_diagnostics != null and podium_certification_diagnostics != null and not running
+    component DiagnosticsButton {
+        label "Render layered diagnostics"
+        enabled bind can_render
+        accessibility role button name "Render Illuminator diagnostics"
+        action render_diagnostics requires admin.action:approved
+    }
+    component DiagnosticsViewport {
+        embed portal.scene "illuminator_diagnostics_report"
+        motion bind timeline.main
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface IlluminatorDiagnostics

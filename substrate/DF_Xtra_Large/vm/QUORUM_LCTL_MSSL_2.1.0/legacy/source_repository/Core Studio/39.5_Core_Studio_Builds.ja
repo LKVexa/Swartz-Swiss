@@ -1,0 +1,14 @@
+ja source 0.3
+module suite39.core_studio.builds
+use Core
+policy no_network
+
+record BuildsPlan { id: Count, scope: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_builds_plan(item: BuildsPlan) -> Result<BuildsPlan, Text> effects { pure } {
+    let normalized: Text = item.scope
+    return Ok(BuildsPlan { id: item.id, scope: normalized, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: BuildsPlan = BuildsPlan { id: 3905, scope: "deterministic_build_plan", sophia: "interpret_build_goal", charlotte: "validate_build_inputs", landon: "stage_approved_build", professor: "explain_build_graph", podium: "publish_build_receipt" }
+let result = prepare_builds_plan(sample)
+assert result.is_ok == true
+emit json result

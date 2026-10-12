@@ -1,0 +1,31 @@
+ja source 0.3
+module suite43.release_plane.patch_application
+use Operations
+policy explicit_network
+
+workspace ReleasePlanePatchApplication {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 4 memory 8GB
+    network disabled
+    secret signing_key reference "vault://release-plane/signing"
+    service SOPHIA_patch_application_profile replicas 1
+    health_check SOPHIA_patch_application_profile every 10s
+    service CHARLOTTE_patch_application_gate replicas 1
+    health_check CHARLOTTE_patch_application_gate every 10s
+    service LANDON_patch_transaction replicas 1
+    health_check LANDON_patch_transaction every 10s
+    service Professor_patch_application_report replicas 1
+    health_check Professor_patch_application_report every 10s
+    service Podium_patch_application_receipt replicas 1
+    health_check Podium_patch_application_receipt every 10s
+    service transactional_patch_worker replicas 1
+    health_check transactional_patch_worker every 5s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == true
+emit package "release_plane_patch_application.msslb"

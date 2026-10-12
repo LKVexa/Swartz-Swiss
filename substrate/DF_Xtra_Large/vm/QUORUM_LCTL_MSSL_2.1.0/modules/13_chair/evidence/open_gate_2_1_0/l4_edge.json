@@ -1,0 +1,117 @@
+{
+  "authority_sha256": "478ef7cb81d608fdfe0934171c1a9b3aa9c752a601055ec8b3af0e0cab92ae31",
+  "domain_output": {
+    "authorization_decision": {
+      "decision": "ALLOW_REFERENCE_LOCAL",
+      "network": "DENY",
+      "reason": "fixture admitted under sealed local profile",
+      "side_effects": "REFERENCE_ONLY"
+    },
+    "input_type": "request/policy_context",
+    "legacy_signals": [
+      "PACKAGE",
+      "VALIDATE",
+      "EVALUATE",
+      "COMPILE"
+    ],
+    "module": "Chair",
+    "output_type": "authorization_decision/evidence",
+    "payload_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "plane": "security_authorization",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "b6df24bb2b8037850a5e9ab7dd05e28f7bd1a13e1105d3ca86de0f1ecb2179c6",
+  "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "module": "Chair",
+  "module_id": 13,
+  "plane": "security_authorization",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "255044416b73bfea589f72104126325a5c069bd0a72ca2a6155d98494e9908de",
+  "stage_count": 8,
+  "stages": [
+    {
+      "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "node": "N01",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "5e94e6f666d46896ad2c1961c26145697df7874c9b689a1428236ad30a211543",
+      "stage": "REQUEST"
+    },
+    {
+      "input_sha256": "5e94e6f666d46896ad2c1961c26145697df7874c9b689a1428236ad30a211543",
+      "node": "N02",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "INSPECT",
+      "output_sha256": "0d7e5fc45eed42a27adf88bbe86bd8931b155693d0d5ade6139234264dee5640",
+      "stage": "INSPECT"
+    },
+    {
+      "input_sha256": "0d7e5fc45eed42a27adf88bbe86bd8931b155693d0d5ade6139234264dee5640",
+      "node": "N03",
+      "operator": "VALIDATE",
+      "output_sha256": "d9a6206cb493c355417248db078edf2fd7517b3ebdfd3f7f0678efdc572ee0ce",
+      "stage": "POLICY_EVALUATE",
+      "valid": true
+    },
+    {
+      "authorized": true,
+      "capabilities": [
+        "evidence.write",
+        "policy.evaluate"
+      ],
+      "input_sha256": "d9a6206cb493c355417248db078edf2fd7517b3ebdfd3f7f0678efdc572ee0ce",
+      "network": "DENY",
+      "node": "N04",
+      "operator": "AUTHORIZE",
+      "output_sha256": "718a1939f76feaf9e300832f21425b43b09d9a5d89fb55abb5edd8afc9574c76",
+      "stage": "CAPABILITY_CHECK"
+    },
+    {
+      "authorized": true,
+      "capabilities": [
+        "evidence.write",
+        "policy.evaluate"
+      ],
+      "input_sha256": "718a1939f76feaf9e300832f21425b43b09d9a5d89fb55abb5edd8afc9574c76",
+      "network": "DENY",
+      "node": "N05",
+      "operator": "AUTHORIZE",
+      "output_sha256": "04bb03ece72379f5c5af6eb5afd3699ee9300b9f81f0f17884d7e9f9173ed9f7",
+      "stage": "AUTHORIZE"
+    },
+    {
+      "execution_token": "d9a0e1c10db6f136cc61e2bb",
+      "input_sha256": "04bb03ece72379f5c5af6eb5afd3699ee9300b9f81f0f17884d7e9f9173ed9f7",
+      "node": "N06",
+      "operator": "EXECUTE",
+      "output_sha256": "3190128e409a6857b608290cc5d7a7e2ba4410ae24bf719ade0c3faf2e45d71b",
+      "stage": "ENFORCE"
+    },
+    {
+      "input_sha256": "3190128e409a6857b608290cc5d7a7e2ba4410ae24bf719ade0c3faf2e45d71b",
+      "node": "N07",
+      "operator": "RECORD",
+      "output_sha256": "41926122bcde409297e7200c89b568466f551052f40955219f82199fc515242c",
+      "receipt_sha256": "49c6978aec629d269b4fdadfc6f2bd93eae9eca50915ce0bb1e0e18e696c695d",
+      "stage": "RECORD"
+    },
+    {
+      "input_sha256": "41926122bcde409297e7200c89b568466f551052f40955219f82199fc515242c",
+      "node": "N08",
+      "operator": "RECORD",
+      "output_sha256": "276d2169f384ee91c03777ac27723d741ce2173bb604d8930c4967ca15036c21",
+      "receipt_sha256": "d3c028de792064e69e872822ee8b42670ea59d218bec9be6eb23a7660905b08f",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

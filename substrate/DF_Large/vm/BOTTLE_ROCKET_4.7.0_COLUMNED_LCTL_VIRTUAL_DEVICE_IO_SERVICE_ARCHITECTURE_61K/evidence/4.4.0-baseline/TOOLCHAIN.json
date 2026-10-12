@@ -1,0 +1,11 @@
+{
+  "cc": "cc (Debian 14.2.0-19) 14.2.0",
+  "ld": "GNU ld (GNU Binutils for Debian) 2.44",
+  "machine": "x86_64",
+  "openssl": "OpenSSL 3.5.5 27 Jan 2026 (Library: OpenSSL 3.5.5 27 Jan 2026)",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "python": "3.13.5",
+  "python_cryptography": "46.0.4",
+  "record": "BR.Toolchain",
+  "release": "4.4.0"
+}

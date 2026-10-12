@@ -1,0 +1,2 @@
+# Security Model
+Production execution is fail-closed and requires BRTM/1 Root→Issuer→Release→Image authorization. Ed25519 signatures, SHA-256 content/provenance hashes, signed recovery control, revocation, expiry, capability binding, authenticated persistence, and monotonic rollback state protect the execution chain. Test signing material belongs only in qualification distributions. No implicit network path exists.

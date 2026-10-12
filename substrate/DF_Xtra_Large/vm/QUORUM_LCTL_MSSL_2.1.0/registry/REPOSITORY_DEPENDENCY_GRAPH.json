@@ -1,0 +1,389 @@
+{
+  "schema": "QUORUM-REPOSITORY-DEPENDENCY-GRAPH/2.0",
+  "nodes": [
+    {
+      "id": 1,
+      "name": "Observer",
+      "plane": "sense_context"
+    },
+    {
+      "id": 2,
+      "name": "Anthology",
+      "plane": "sense_context"
+    },
+    {
+      "id": 3,
+      "name": "Atlas",
+      "plane": "sense_context"
+    },
+    {
+      "id": 4,
+      "name": "Compass",
+      "plane": "intent_reasoning"
+    },
+    {
+      "id": 5,
+      "name": "Pencil",
+      "plane": "intent_reasoning"
+    },
+    {
+      "id": 6,
+      "name": "Pencil Sharpener",
+      "plane": "intent_reasoning"
+    },
+    {
+      "id": 7,
+      "name": "Grinder",
+      "plane": "intent_reasoning"
+    },
+    {
+      "id": 8,
+      "name": "Tables",
+      "plane": "data_evidence"
+    },
+    {
+      "id": 9,
+      "name": "Funnel",
+      "plane": "intent_reasoning"
+    },
+    {
+      "id": 10,
+      "name": "Illuminator",
+      "plane": "intent_reasoning"
+    },
+    {
+      "id": 11,
+      "name": "Cypher",
+      "plane": "data_evidence"
+    },
+    {
+      "id": 12,
+      "name": "Filing Cabinet",
+      "plane": "data_evidence"
+    },
+    {
+      "id": 13,
+      "name": "Chair",
+      "plane": "security_authorization"
+    },
+    {
+      "id": 14,
+      "name": "Plug",
+      "plane": "interfaces_services"
+    },
+    {
+      "id": 15,
+      "name": "Orchestrator",
+      "plane": "orchestration"
+    },
+    {
+      "id": 16,
+      "name": "Perceiver",
+      "plane": "sense_context"
+    },
+    {
+      "id": 17,
+      "name": "Asset Observer",
+      "plane": "sense_context"
+    },
+    {
+      "id": 18,
+      "name": "Feature Graph",
+      "plane": "data_evidence"
+    },
+    {
+      "id": 19,
+      "name": "Mesh Geometry",
+      "plane": "media_visual"
+    },
+    {
+      "id": 20,
+      "name": "Equation Operator Bank",
+      "plane": "model_compute"
+    },
+    {
+      "id": 21,
+      "name": "Scene Reconstruction",
+      "plane": "media_visual"
+    },
+    {
+      "id": 22,
+      "name": "Motion Planner",
+      "plane": "media_visual"
+    },
+    {
+      "id": 23,
+      "name": "Temporal Animator",
+      "plane": "media_visual"
+    },
+    {
+      "id": 24,
+      "name": "C# Renderer",
+      "plane": "media_visual"
+    },
+    {
+      "id": 25,
+      "name": "Media Export",
+      "plane": "media_visual"
+    },
+    {
+      "id": 26,
+      "name": "Full Stack UI",
+      "plane": "interfaces_services"
+    },
+    {
+      "id": 27,
+      "name": "deepML Worker",
+      "plane": "model_compute"
+    },
+    {
+      "id": 28,
+      "name": "Safety Gate",
+      "plane": "security_authorization"
+    },
+    {
+      "id": 29,
+      "name": "Archive Ledger",
+      "plane": "data_evidence"
+    },
+    {
+      "id": 30,
+      "name": "JA Adapter",
+      "plane": "translation_interop"
+    },
+    {
+      "id": 31,
+      "name": "Vexxa",
+      "plane": "translation_interop"
+    },
+    {
+      "id": 32,
+      "name": "Orchestrator II",
+      "plane": "orchestration"
+    },
+    {
+      "id": 33,
+      "name": "Visual Feedback",
+      "plane": "media_visual"
+    },
+    {
+      "id": 34,
+      "name": "Animation VFX Workspace",
+      "plane": "media_visual"
+    },
+    {
+      "id": 35,
+      "name": "App Designer",
+      "plane": "interfaces_services"
+    },
+    {
+      "id": 36,
+      "name": "Visual Correction System",
+      "plane": "media_visual"
+    },
+    {
+      "id": 37,
+      "name": "Training and Evaluation",
+      "plane": "model_compute"
+    },
+    {
+      "id": 38,
+      "name": "Preview Designer",
+      "plane": "interfaces_services"
+    },
+    {
+      "id": 39,
+      "name": "Core Studio",
+      "plane": "interfaces_services"
+    },
+    {
+      "id": 40,
+      "name": "Repository Context Engine",
+      "plane": "sense_context"
+    },
+    {
+      "id": 41,
+      "name": "Knowledge Repository",
+      "plane": "sense_context"
+    },
+    {
+      "id": 42,
+      "name": "Transition Plane",
+      "plane": "translation_interop"
+    },
+    {
+      "id": 43,
+      "name": "Release Plane",
+      "plane": "release_delivery"
+    },
+    {
+      "id": 44,
+      "name": "Capability and Security Plane",
+      "plane": "security_authorization"
+    },
+    {
+      "id": 45,
+      "name": "Localization and Large File Plane",
+      "plane": "interfaces_services"
+    },
+    {
+      "id": 46,
+      "name": "Air Gap Certification and Installer Plane",
+      "plane": "release_delivery"
+    },
+    {
+      "id": 47,
+      "name": "Chatbot",
+      "plane": "intent_reasoning"
+    },
+    {
+      "id": 48,
+      "name": "Answer Modes and Specialized Roles",
+      "plane": "intent_reasoning"
+    },
+    {
+      "id": 49,
+      "name": "Action Cards",
+      "plane": "data_evidence"
+    },
+    {
+      "id": 50,
+      "name": "Diff Patch and Review",
+      "plane": "governance_control"
+    },
+    {
+      "id": 51,
+      "name": "Repository Retrieval and Memory",
+      "plane": "sense_context"
+    },
+    {
+      "id": 52,
+      "name": "Evaluation and Content Defense",
+      "plane": "security_authorization"
+    },
+    {
+      "id": 53,
+      "name": "Operations Plane",
+      "plane": "operations_recovery"
+    },
+    {
+      "id": 54,
+      "name": "Local Model Provider and Health",
+      "plane": "model_compute"
+    },
+    {
+      "id": 55,
+      "name": "Capability Manifests and Permissions",
+      "plane": "security_authorization"
+    },
+    {
+      "id": 56,
+      "name": "Job Queue Workers and Sandboxes",
+      "plane": "orchestration"
+    },
+    {
+      "id": 57,
+      "name": "Translation Build Test and Evaluation Jobs",
+      "plane": "orchestration"
+    },
+    {
+      "id": 58,
+      "name": "Indexing Storage Resources Logs and Recovery",
+      "plane": "operations_recovery"
+    },
+    {
+      "id": 59,
+      "name": "Shell",
+      "plane": "operations_recovery"
+    },
+    {
+      "id": 60,
+      "name": "Worker",
+      "plane": "orchestration"
+    },
+    {
+      "id": 61,
+      "name": "Popup Runner",
+      "plane": "interfaces_services"
+    },
+    {
+      "id": 62,
+      "name": "LANDON Integration and Run All",
+      "plane": "orchestration"
+    },
+    {
+      "id": 63,
+      "name": "Sandbox and Offline Runtime",
+      "plane": "security_authorization"
+    },
+    {
+      "id": 64,
+      "name": "Training Desktop and Android Workers",
+      "plane": "model_compute"
+    },
+    {
+      "id": 65,
+      "name": "Sandbox Engine",
+      "plane": "security_authorization"
+    },
+    {
+      "id": 66,
+      "name": "Terminal",
+      "plane": "interfaces_services"
+    }
+  ],
+  "declared_module_edges": [],
+  "scenario_plane_edges": [
+    {
+      "from": "sense_context",
+      "to": "intent_reasoning",
+      "kind": "scenario_handoff_not_hard_dependency"
+    },
+    {
+      "from": "intent_reasoning",
+      "to": "orchestration",
+      "kind": "scenario_handoff_not_hard_dependency"
+    },
+    {
+      "from": "orchestration",
+      "to": "security_authorization",
+      "kind": "scenario_handoff_not_hard_dependency"
+    },
+    {
+      "from": "security_authorization",
+      "to": "interfaces_services",
+      "kind": "scenario_handoff_not_hard_dependency"
+    },
+    {
+      "from": "sense_context",
+      "to": "data_evidence",
+      "kind": "scenario_handoff_not_hard_dependency"
+    },
+    {
+      "from": "data_evidence",
+      "to": "governance_control",
+      "kind": "scenario_handoff_not_hard_dependency"
+    },
+    {
+      "from": "media_visual",
+      "to": "release_delivery",
+      "kind": "scenario_handoff_not_hard_dependency"
+    },
+    {
+      "from": "model_compute",
+      "to": "media_visual",
+      "kind": "scenario_handoff_not_hard_dependency"
+    },
+    {
+      "from": "translation_interop",
+      "to": "release_delivery",
+      "kind": "scenario_handoff_not_hard_dependency"
+    },
+    {
+      "from": "operations_recovery",
+      "to": "governance_control",
+      "kind": "scenario_handoff_not_hard_dependency"
+    }
+  ],
+  "cycle_status": "PASS_NO_DECLARED_MODULE_CYCLES"
+}

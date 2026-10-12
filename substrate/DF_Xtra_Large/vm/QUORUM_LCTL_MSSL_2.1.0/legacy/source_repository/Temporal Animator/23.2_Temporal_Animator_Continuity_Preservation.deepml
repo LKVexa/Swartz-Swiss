@@ -1,0 +1,40 @@
+deepml motion 0.3
+module suite23.temporal_animator.continuity_preservation
+policy deterministic
+policy no_network
+
+skeleton TemporalContinuityRig {
+  joint Root parent none bind transform(vec3(0,0,0), quat.identity)
+  joint Actor parent Root bind transform(vec3(0,0,0), quat.identity)
+}
+clip TemporalSegmentA duration 2s interpolation cubic {
+  channel Actor.position key 0s vec3(0,0,0) key 1s vec3(1,0,0) key 2s vec3(2,0,0)
+  channel Actor.rotation key 0s quat.identity key 1s quat.axis_angle(y, 15deg) key 2s quat.axis_angle(y, 30deg)
+}
+clip TemporalSegmentB duration 2s interpolation cubic {
+  channel Actor.position key 0s vec3(2,0,0) key 1s vec3(3,0,0) key 2s vec3(4,0,0)
+  channel Actor.rotation key 0s quat.axis_angle(y, 30deg) key 1s quat.axis_angle(y, 45deg) key 2s quat.axis_angle(y, 60deg)
+}
+state_machine ContinuityPreservationState {
+  SegmentA -> SegmentB when segment_complete == true
+  SegmentB -> SegmentA when loop_requested == true
+}
+root_motion from Root axes [x,z]
+sample TemporalSegmentA at 2s as SegmentAEnd;
+sample TemporalSegmentB at 0s as SegmentBStart;
+synchronize TemporalSegmentA with scene.Actor and timeline.TemporalContinuitySequence
+synchronize TemporalSegmentB with scene.Actor and timeline.TemporalContinuitySequence
+motion_graph ContinuityPreservationEvidence {
+  pose SOPHIA = constant_pose(TemporalContinuityRig)
+  pose CHARLOTTE = constant_pose(TemporalContinuityRig)
+  pose LANDON = constant_pose(TemporalContinuityRig)
+  pose Professor = constant_pose(TemporalContinuityRig)
+  pose Podium = constant_pose(TemporalContinuityRig)
+  curve PositionBoundaryError = keys([0:0, 0.5:0, 1:0])
+  curve RotationBoundaryError = keys([0:0, 0.5:0, 1:0])
+  blend Ensemble weights [0.2,0.2,0.2,0.2,0.2]
+}
+optimize ContinuityPreservationEvidence using [pose_constant_folding, curve_compression(0.001), dead_channel_removal, blend_normalization, retarget_cache, ik_scheduling, state_minimization]
+lower ContinuityPreservationEvidence to DEEPML_MOTION_R12
+package motion TemporalContinuityRig as "temporal_animator_continuity_preservation.msslb"
+certify motion TemporalContinuityRig profile strict

@@ -1,0 +1,17 @@
+{
+  "brim_bytes": 176,
+  "brim_ceiling_bytes": 51200,
+  "brim_pass": true,
+  "debug_brctl_bytes": 117464,
+  "generated_evidence_bytes": 456705,
+  "lctl_source_bytes": 2806,
+  "packed_source_zip_bytes": 36259,
+  "packed_source_zip_sha256": "fa4350b5fee5af6bfa4d0c5fde01d5bdc756c9e73c7d042abef824c5fec0522b",
+  "production_source_bytes": 60824,
+  "production_source_ceiling_bytes": 61000,
+  "production_source_pass": true,
+  "release_brctl_bytes": 61584,
+  "source_repository_bytes": 99493,
+  "source_repository_definition": "all tracked/non-generated files excluding .build/, evidence/, deploy/, dist/, Python caches",
+  "stripped_brctl_bytes": 55944
+}

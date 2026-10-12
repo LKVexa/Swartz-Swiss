@@ -1,0 +1,37 @@
+ja source 0.3
+module suite30.ja_adapter.record_normalizer
+use Service
+policy explicit_network
+
+service JAAdapterRecordNormalizer {
+    message NormalizeRequest {
+        request_id: Text,
+        ast_record: Text,
+        schema_version: Text,
+        canonicalization_profile: Text,
+        source_hash: Text,
+        provenance_id: Text
+    }
+    message NormalizeResponse {
+        canonical_record: Text,
+        canonical_hash: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_adapter_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint normalize(request: NormalizeRequest) -> Stream<NormalizeResponse>
+        auth capability ja_adapter.normalize
+        deadline 20s
+        retry max 1
+        idempotency request.request_id
+    protocol NormalizeSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json JAAdapterRecordNormalizer.compatibility_report

@@ -1,0 +1,34 @@
+{
+  "profile_id": "ja.experience.design",
+  "version": "0.1.0",
+  "status": "bootstrap-provisional",
+  "pipeline": [
+    "parse_envelope",
+    "charlotte_graph",
+    "sophia_judgment",
+    "experience_ir",
+    "r12_lowering",
+    "landon_projection",
+    "mcrt_evidence"
+  ],
+  "inputs": [
+    ".jxd"
+  ],
+  "outputs": [
+    "experience.ir.json",
+    "experience.jaui",
+    "experience.dmk",
+    "experience.evidence.json",
+    "manifest.json"
+  ],
+  "invariants": [
+    "readable_projections",
+    "stable_ids",
+    "no_hidden_network",
+    "explicit_non_ui_capabilities",
+    "accessibility_structural",
+    "reduced_motion_required_when_motion_present",
+    "source_hash_preserved"
+  ],
+  "claim_boundary": "Bootstrap structural compiler; not a production renderer or complete JA compiler."
+}

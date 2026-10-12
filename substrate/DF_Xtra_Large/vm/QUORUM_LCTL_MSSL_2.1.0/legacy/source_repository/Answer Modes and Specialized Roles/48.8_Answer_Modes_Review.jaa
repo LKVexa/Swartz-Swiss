@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.answer_modes.review
+use Agent
+policy no_network
+
+agent AnswerModeReview {
+    identity "answer_mode_review"
+    role "sophia-charlotte-landon-professor-podium-answer-mode"
+    goal emit_prioritized_evidence_bound_review_answer when confidence >= 0.94
+    memory session retention 1h
+    budget steps 55 tools 5
+    tool LANDONCollectReviewEvidence(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAInterpretReviewScope(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateReviewFindings(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorComposeReviewAnswer(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordReviewAnswer(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectReviewEvidence
+        authorize SOPHIAInterpretReviewScope
+        authorize CHARLOTTEValidateReviewFindings
+        authorize ProfessorComposeReviewAnswer
+        authorize PodiumRecordReviewAnswer
+        continue when policy_allows
+        execute LANDONCollectReviewEvidence("selected_review_scope")
+        execute SOPHIAInterpretReviewScope("canonical_review_evidence")
+        execute CHARLOTTEValidateReviewFindings("candidate_review_findings")
+        execute ProfessorComposeReviewAnswer("validated_review_findings")
+        execute PodiumRecordReviewAnswer("review_answer_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "AnswerModeReview.mcrt"

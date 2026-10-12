@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.specialized_roles.ai_model_engineer
+use Agent
+policy no_network
+
+agent AIModelEngineer {
+    identity "ai_model_engineer"
+    role "sophia-charlotte-landon-professor-podium-specialist"
+    goal produce_reproducible_policy_valid_model_engineering_decision when confidence >= 0.97
+    memory session retention 1h
+    budget steps 75 tools 5
+    tool LANDONCollectModelArtifacts(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAModelAIEngineeringIntent(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateModelEngineering(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainModelEngineering(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordModelEngineering(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectModelArtifacts
+        authorize SOPHIAModelAIEngineeringIntent
+        authorize CHARLOTTEValidateModelEngineering
+        authorize ProfessorExplainModelEngineering
+        authorize PodiumRecordModelEngineering
+        continue when policy_allows
+        execute LANDONCollectModelArtifacts("selected_model_scope")
+        execute SOPHIAModelAIEngineeringIntent("model_artifact_inventory")
+        execute CHARLOTTEValidateModelEngineering("candidate_model_engineering_plan")
+        execute ProfessorExplainModelEngineering("validated_model_engineering")
+        execute PodiumRecordModelEngineering("model_engineering_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "AIModelEngineer.mcrt"

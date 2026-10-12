@@ -1,0 +1,47 @@
+ja source 0.3
+module suite45.localization_large_file_plane.accessibility_presentation
+use Interface
+policy no_network
+
+interface AccessibilityPresentation {
+    state selected_surface: Text? = null
+    state validating_surface: Flag = false
+    derived can_select_surface = not validating_surface
+    derived can_validate_surface = selected_surface != null and not validating_surface
+    component SOPHIA_AccessibilityIntent {
+        label "Interpret presentation accessibility needs"
+        enabled bind can_validate_surface
+        accessibility role button name "Interpret accessibility needs for selected surface"
+        action interpret_accessibility_presentation requires admin.action:approved
+    }
+    component CHARLOTTE_AccessibilityGate {
+        label "Validate names, roles, focus, contrast, and alternatives"
+        enabled bind can_validate_surface
+        accessibility role button name "Validate accessibility of selected surface"
+        action validate_accessibility_presentation requires admin.action:approved
+    }
+    component LANDON_AccessibilityApply {
+        label "Apply validated presentation accommodations"
+        enabled bind can_validate_surface
+        accessibility role button name "Apply accessibility accommodations to selected surface"
+        action apply_accessibility_presentation requires admin.action:approved
+    }
+    component Professor_AccessibilityGuide {
+        label "Explain accessible interaction and repair guidance"
+        enabled bind can_select_surface
+        accessibility role button name "Explain accessibility behavior and repairs"
+        action explain_accessibility_presentation requires admin.action:approved
+    }
+    component Podium_AccessibilityEvidence {
+        label "View presentation accessibility evidence"
+        enabled bind can_validate_surface
+        accessibility role button name "View accessibility evidence for selected surface"
+        action show_accessibility_presentation_evidence requires admin.action:approved
+    }
+    component AccessibilityPresentationViewport {
+        embed portal.scene "accessibility_presentation"
+        motion bind timeline.accessibility_review
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface AccessibilityPresentation

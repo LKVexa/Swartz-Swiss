@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "e2c945e469adbecd8e143a68f7862b3660d856a4d14c731a07588d807bdf4eea",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Visual Correction System",
+  "module_id": 36,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

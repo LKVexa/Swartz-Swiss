@@ -1,0 +1,35 @@
+ja source 0.3
+module suite47.chatbot.explaining
+use Agent
+policy no_network
+
+agent ChatbotExplaining {
+    identity "chatbot_explaining"
+    role "sophia-charlotte-landon-professor-podium-chatbot"
+    goal produce_evidence_bound_project_explanation when confidence >= 0.92
+    memory session retention 1h
+    budget steps 45 tools 5
+    tool LANDONCollectExplanationContext(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAInterpretExplanationIntent(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateExplanationClaims(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorComposeExplanation(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordExplanation(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectExplanationContext
+        authorize SOPHIAInterpretExplanationIntent
+        authorize CHARLOTTEValidateExplanationClaims
+        authorize ProfessorComposeExplanation
+        authorize PodiumRecordExplanation
+        continue when policy_allows
+        execute LANDONCollectExplanationContext("selected_project_scope")
+        execute SOPHIAInterpretExplanationIntent("project_context")
+        execute CHARLOTTEValidateExplanationClaims("interpreted_context")
+        execute ProfessorComposeExplanation("validated_explanation_evidence")
+        execute PodiumRecordExplanation("explanation_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "ChatbotExplaining.mcrt"

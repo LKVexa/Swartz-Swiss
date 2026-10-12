@@ -1,0 +1,37 @@
+{
+  "product": "JA21 Blank Virtual Console",
+  "console_version": "1.1.0",
+  "base_browser_version": "9.8.7",
+  "starts_blank": true,
+  "visible_tabs": false,
+  "search_bar": false,
+  "buttons": false,
+  "default_size": [
+    760,
+    640
+  ],
+  "minimum_size": [
+    420,
+    360
+  ],
+  "original_backup_preserved": true,
+  "simulation_integration": "Prepared empty host; not yet combined with GFM simulation",
+  "source_integrity": "Active runtime verified; 191 pre-existing absent legacy references recorded in provenance/source-audit.json",
+  "release_date": "2026-10-11",
+  "license": "GPL-3.0-only",
+  "copyright": "Copyright (C) 2026 RUSSELL PHILIP SMITHSON",
+  "validation": {
+    "date": "2026-10-11",
+    "platform": "Windows x64",
+    "unified_release_check": "passed",
+    "python_tests": 212,
+    "python_skipped": 3,
+    "launcher_checks": 15,
+    "bootstrap_checks": 6,
+    "headless_console_checks": 12,
+    "local_origin_cases": 16,
+    "desktop_live_integration": "not exercised",
+    "log_exclusion": "235 physical files and 27 embedded archive members omitted"
+  },
+  "publication_policy": "Complete source and historical documents; physical and embedded logs excluded"
+}

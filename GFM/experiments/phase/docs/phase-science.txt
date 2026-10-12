@@ -1,0 +1,190 @@
+PHASE, MATTER AND ELECTROMAGNETIC FIELD EXPERIMENT
+Prepared 2026-10-11
+
+The new texture layer evolves a local plasma experiment, a neutral complex
+field and a separate iron enthalpy laboratory. Its displayed colors derive
+from computed fields. Placing that patch beside the black-hole illustration
+does not make it a solution for matter near a Kerr horizon.
+
+The imported EHT observations test separate circular brightness surrogates.
+Both fail the held-out 2013 comparison. No empirical validation of the plasma,
+complex-phase law, iron parcel, magnetic texture or aperture cover follows.
+See observation-validation.txt and observation-sources.json for the actual
+data, uncertainties, frozen protocol, predictions and independent results.
+
+ACTUAL COMPUTED MODELS
+
+1. Plasma and electromagnetic fields
+
+backend/phase-mhd.js evolves compressible, nonrelativistic MHD on a square
+periodic Cartesian grid of 16, 32 or 64 cells per side. The fixed ideal-gas
+closure is gamma=5/3 and mean molecular weight=0.5. In normalized units:
+  E=p/(gamma-1)+rho*|v|^2/2+|B|^2/2; T=p/rho.
+  rho_t+div(rho*v)=0.
+  (rho*v)_t+div[rho*v*v+(p+|B|^2/2)I-B*B-tau]=0.
+  E_t+div[(E+p+|B|^2/2)v-(v.B)B-tau.v-kappa*grad(T)
+           +eta*(J cross B)]=0.
+  B_t=-curl(Eelectric); Eelectric=-v cross B+eta*J; J=curl(B).
+The 2D fields have in-plane velocity and magnetic components and a normal
+current/electric component. A passive concentration follows advection and
+diffusion; it is not an independently evolved solid material.
+
+The method uses first-order Rusanov finite-volume spatial fluxes, face magnetic
+fields, a shared corner electric field for constrained transport and SSP RK2
+time integration. CFL, diffusion and reaction limits control the step size.
+Rejected positivity steps reduce the time step; numerical failures are
+reported without silently applying pressure/density floors. Artificial
+diffusion from the discretization remains and requires refinement checks.
+
+The default normalization is T0=20000 K, n0=1e15 nuclei/m^3 and t0=1 s:
+  rho0=mp*n0; v0=sqrt(kB*T0/(0.5*mp)); L0=v0*t0;
+  B0=v0*sqrt(mu0*rho0).
+Temperature, velocity, magnetic/electric field and current have explicit
+conversion scales in each export. The periodic domain length is expressed
+in L0. Normalized resistivity, viscosity and conduction are declared model
+parameters; they are not measured M87 transport coefficients.
+
+This closure omits relativity, Kerr gravitational forces, radiation,
+collisionless particle distributions, anisotropic conduction, ionization
+energy and a variable-ionization equation of state. Hydrogen ground-state
+LTE Saha ionization is a reference diagnostic only. Its fractions do not
+change the fixed MHD equation of state. LTE has not been established for this
+patch or for the optically thin astronomical plasma seen by EHT.
+
+2. Complex phase, amplitude and vortices
+
+The model evolves a neutral phenomenological complex Ginzburg-Landau field:
+  psi_t+v.grad(psi)=D*(1+i*c1)*laplacian(psi)
+      +[mu0-cT*(T-1)+crho*(rho-1)-cB*|B|^2
+        -g*|psi|^2-i*omega*|psi|^2]*psi.
+Plasma influences psi through advection and the declared growth terms. Psi
+does not exert a force on the plasma. The coefficients are illustrative,
+not inferred from EHT observations or microscopic matter experiments.
+
+Amplitude is abs(psi); phase is arg(psi). Four-corner wrapped phase changes
+give a plaquette winding indicator. Low-amplitude or nearly pi edge samples
+are flagged unresolved; locations are cell-plaquette centers, not fitted
+subcell vortex cores. Undefined phase is stored as zero solely for finite
+JSON transport, with a separate phaseDefined flag. This is not a charged
+wavefunction, quantum probability, condensate or observed VLBI phase.
+
+Magnetic phase arg(Bx+i*By) separately describes in-plane field direction.
+Its zeros and windings do not imply flux quantization or superconductivity.
+The displayed density, temperature and magnetic textures are computed field
+maps; visual resemblance to a telescope image is not a likelihood test.
+
+3. Solid, liquid, vapor and first-ionized iron diagnostic
+
+A separate grid evolves iron specific enthalpy, with physical length default
+0.1 m, fixed density 7874 kg/m^3 and reference pressure 1 bar. It solves:
+  h_t=(k/rhoFe)*laplacian(Tiron)+Qheat
+          +Cbath*(Tplasma-Tiron),
+with conversion from local simulation time to seconds. This is a separate
+isobaric parcel model, not the MHD plasma equation of state or a cold cover.
+
+Declared approximations are melting at 1811 K, boiling at 3134 K, constant
+heat capacities 450/820/372.2 J/(kg K), fusion enthalpy 13810/0.055845 J/kg
+and vaporization enthalpy 340000/0.055845 J/kg. Finite latent-enthalpy intervals
+hold temperature at the transition while changing the phase fraction.
+These rounded constants are not a full NIST-JANAF thermodynamic fit or an
+uncertainty-aware pressure-dependent phase diagram. NIST data independently
+support the iron melting/fusion scale and provide richer temperature-dependent
+heat capacities that this approximation does not implement.
+
+The vapor is partitioned into neutral and first-ionized diagnostic fractions
+using an LTE ground-state Saha reference at a declared nuclei density. Solid,
+liquid, neutral vapor and first-ionized fractions sum to one. Multiple
+ionization, latent ionization heat, expansion, stresses, elastic dynamics,
+magnetic material properties and pressure evolution are omitted.
+
+GFM REPRESENTATION AND OBSERVABLES
+
+Nine selected spatial samples of psi are indexed by GF(9) and transformed in
+a complex finite-field Fourier basis. An inverse check tests representation
+recovery of the original complex samples. The implemented session performs
+no unit normalization: input and transform sample energies are exported and
+original amplitudes are retained. This representation does not alter the MHD
+equations or provide a physical coupling to the aperture hypothesis.
+
+The previously verified neutral Kerr null trajectories remain a separate
+vacuum exterior calculation. The aperture/aggie cover rule remains a declared
+hypothesis. Neither calculation receives a self-consistent stress-energy
+tensor from this local patch. No GRMHD, accretion model, polarized ray transfer
+or astronomical matter-to-visibility forward model is implemented here.
+
+The EHT amplitude release contains neither calibrated polarimetry nor complex
+visibility phases. The published EHT polarization analyses use a richer
+observable/model chain. Their inferred magnetic/temperature ranges are model
+dependent and are not direct local-field targets used to tune this experiment.
+
+ACCEPTANCE AND CURRENT EVIDENCE
+
+Check                              Status and limit
+EHT raw hashes/units/row lineage    PASS: 486 preserved publisher rows.
+Training-only fit reproduction     PASS: both full 1201-point grids.
+Independent observation arithmetic PASS: 3.331e-16 Jy maximum disagreement.
+2013 ring and Gaussian holdout      FAIL: RMS residuals 13.2550 and 13.5309 sigma.
+Local MHD conservation/divergence   PASS for three representative test cases.
+Local analytic/refinement checks   PASS for smooth scalar/resistive Fourier
+                                   modes and uniform complex reaction.
+Iron latent heat/energy checks     PASS for declared approximate enthalpy law.
+Phase winding/resolution checks    PASS for four analytic zeros and ambiguous
+                                   pi-edge diagnostic samples.
+Empirical plasma/phase/iron test    NOT ESTABLISHED by the imported observations.
+Native JA21 console display        Separate integration evidence required;
+                                   not implied by source/static checks.
+
+Runtime criteria are relative global mass and total MHD energy errors below
+1e-8, normalized staggered div(B) below 1e-10, finite fields and positive
+density, pressure and material temperature. Passing these checks establishes
+numerical consistency for a run, not accuracy of its dynamics or empirical
+validation. Analytic limiting cases and spatial/time refinement are needed
+in addition to conserved totals. Record source hashes, parameters, boundary
+conditions, accepted/rejected steps and the measured errors with each result.
+
+The final phase-specific suite passes 12 tests. Evidence is in
+validation/phase-numerical-results.json and phase-verification-summary.txt.
+The checked backend/public engine bytes have SHA256:
+  1a834a359572281279868c4dd29403b7a8dd13d2f386ccc9f214917048e30373
+Independent reconstruction of the exported conserved and staggered arrays
+measured relative mass error <=8.89e-16, relative total-energy error <=1.56e-15
+and maximum staggered magnetic divergence <=5.66e-15. The checks do not rely
+solely on the runtime pass flag.
+
+Spatial refinement over 16/32/64 cells gives approximately first-order
+convergence: scalar advection orders 0.943/0.974, scalar diffusion 0.949/0.978
+and small magnetic-mode decay 0.965/0.986. Uniform complex reaction has
+temporal orders 1.997/1.998. Numerical diffusion is substantial: at 64 cells,
+eta=0.05 and time=0.4, the magnetic-mode amplitude ratio is 0.967879 rather
+than the continuum 0.980199. Conservation does not erase that discrepancy.
+
+Independent iron heating/enthalpy balance differs by at most 4.66e-9 J/kg;
+periodic conduction mean enthalpy differs by 5.82e-11 J/kg. The known complex
+test field has two positive and two negative winding charges, net zero and
+location agreement within the plaquette-resolution bound. Invalid inputs,
+failed steps, trusted-callback reset rollback and deterministic replay are
+covered. These smooth-mode and parcel tests are not a turbulent, high-Mach,
+kinetic-plasma or empirical calibration suite. Estimated resolved Ohmic and
+viscous heating integrals are not an exact entropy/thermal-energy balance.
+
+This is a bounded research demonstration. The project does not claim NASA
+certification, observational validation of a novel phase-matter law or a
+physically established liquid/solid surface near a black hole.
+
+PRIMARY REFERENCES
+
+Stone et al. (2008), Athena: A New Code for Astrophysical MHD.
+https://arxiv.org/abs/0804.0402
+MHD/constrained-transport reference; this implementation is not Athena.
+Aranson and Kramer (2002), The World of the Complex Ginzburg-Landau Equation.
+https://doi.org/10.1103/RevModPhys.74.99
+https://arxiv.org/abs/cond-mat/0106115
+General phenomenological equation family; not a calibration of this psi law.
+NIST iron thermochemistry and reviewed melting/fusion compilation:
+https://webbook.nist.gov/cgi/cbook.cgi?ID=C7439896&Mask=2
+https://srd.nist.gov/JPCRD/jpcrd298.pdf
+NIST atomic ionization-energy reference:
+https://physics.nist.gov/cgi-bin/Elements/elInfo.pl?context=text&element=26
+EHT M87 polarization VII and VIII (2021), separate unimported observations:
+https://arxiv.org/abs/2105.01169
+https://arxiv.org/abs/2105.01173

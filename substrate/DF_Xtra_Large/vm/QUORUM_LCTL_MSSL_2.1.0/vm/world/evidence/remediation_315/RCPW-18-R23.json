@@ -1,0 +1,59 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "8b6fe27be2b2d27eab011d9d567f41ef6427109318af3654129fa3d83861125c",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (CAUSAL_REPLAY, SAVE_RECOVERY, MULTI_WORKER_CONFORMANCE, AUTONOMOUS_HISTORY) plus Stage 18 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "AUTONOMOUS_HISTORY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "CAUSAL_REPLAY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "MULTI_WORKER_CONFORMANCE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "SAVE_RECOVERY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-04",
+    "GW-07",
+    "GW-35",
+    "GW-36",
+    "GW-50",
+    "GW-60",
+    "GW-78"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T3_FABRIC",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Well state is checkpointed and recoverable so worker loss does not silently dismiss remote high-priority events.",
+  "requirement_id": "RCPW-18-R23",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 18,
+  "stage_title": "Multiple Reference Points / Authority Wells",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "CAUSAL_REPLAY",
+    "SAVE_RECOVERY",
+    "MULTI_WORKER_CONFORMANCE",
+    "AUTONOMOUS_HISTORY"
+  ],
+  "workflow_file": "18_MULTIPLE_REFERENCE_POINTS_AUTHORITY_WELLS/285_RCPW_18_R23_WELL_STATE_IS_CHECKPOINTED_AND_RECOVERABLE_SO_WORKER_LOSS_DOES_NOT_SILENTLY_DISMISS_R.md",
+  "workflow_tier": "T3_FABRIC"
+}

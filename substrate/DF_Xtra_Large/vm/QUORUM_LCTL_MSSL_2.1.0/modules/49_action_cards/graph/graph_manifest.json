@@ -1,0 +1,168 @@
+{
+  "schema": "QUORUM-MODULE-GRAPH/2.0",
+  "graph_id": "G49",
+  "module_id": 49,
+  "module": "Action Cards",
+  "plane": "data_evidence",
+  "version": "2.0.0",
+  "entry": "N01",
+  "exit": "N09",
+  "nodes": [
+    {
+      "id": "N01",
+      "stage": "SOURCE",
+      "operator": "OBSERVE",
+      "input": "records/artifacts",
+      "output": "state.source",
+      "precondition": "admitted",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N02",
+      "stage": "PARSE",
+      "operator": "PARSE",
+      "input": "N01.output",
+      "output": "state.parse",
+      "precondition": "N01.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N03",
+      "stage": "NORMALIZE",
+      "operator": "NORMALIZE",
+      "input": "N02.output",
+      "output": "state.normalize",
+      "precondition": "N02.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N04",
+      "stage": "VALIDATE",
+      "operator": "VALIDATE",
+      "input": "N03.output",
+      "output": "state.validate",
+      "precondition": "N03.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N05",
+      "stage": "TRANSFORM",
+      "operator": "TRANSFORM",
+      "input": "N04.output",
+      "output": "state.transform",
+      "precondition": "N04.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N06",
+      "stage": "STORE",
+      "operator": "STORE",
+      "input": "N05.output",
+      "output": "state.store",
+      "precondition": "N05.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N07",
+      "stage": "HASH",
+      "operator": "RECORD",
+      "input": "N06.output",
+      "output": "state.hash",
+      "precondition": "N06.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N08",
+      "stage": "RECORD",
+      "operator": "RECORD",
+      "input": "N07.output",
+      "output": "state.record",
+      "precondition": "N07.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    },
+    {
+      "id": "N09",
+      "stage": "EVIDENCE",
+      "operator": "RECORD",
+      "input": "N08.output",
+      "output": "validated_records/evidence",
+      "precondition": "N08.complete",
+      "postcondition": "receipt_emitted",
+      "policy": "default_deny_side_effects",
+      "evidence": "stage_receipt"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E01",
+      "from": "N01",
+      "to": "N02",
+      "kind": "control+data"
+    },
+    {
+      "id": "E02",
+      "from": "N02",
+      "to": "N03",
+      "kind": "control+data"
+    },
+    {
+      "id": "E03",
+      "from": "N03",
+      "to": "N04",
+      "kind": "control+data"
+    },
+    {
+      "id": "E04",
+      "from": "N04",
+      "to": "N05",
+      "kind": "control+data"
+    },
+    {
+      "id": "E05",
+      "from": "N05",
+      "to": "N06",
+      "kind": "control+data"
+    },
+    {
+      "id": "E06",
+      "from": "N06",
+      "to": "N07",
+      "kind": "control+data"
+    },
+    {
+      "id": "E07",
+      "from": "N07",
+      "to": "N08",
+      "kind": "control+data"
+    },
+    {
+      "id": "E08",
+      "from": "N08",
+      "to": "N09",
+      "kind": "control+data"
+    }
+  ],
+  "legacy_signals": [
+    "RENDER",
+    "PACKAGE",
+    "VALIDATE",
+    "EVALUATE"
+  ],
+  "deterministic_order": true
+}

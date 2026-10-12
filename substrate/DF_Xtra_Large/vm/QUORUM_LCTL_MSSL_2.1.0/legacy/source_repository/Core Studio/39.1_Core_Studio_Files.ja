@@ -1,0 +1,14 @@
+ja source 0.3
+module suite39.core_studio.files
+use Core
+policy no_network
+
+record FilesPlan { id: Count, scope: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_files_plan(item: FilesPlan) -> Result<FilesPlan, Text> effects { pure } {
+    let normalized: Text = item.scope
+    return Ok(FilesPlan { id: item.id, scope: normalized, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: FilesPlan = FilesPlan { id: 3901, scope: "workspace_files", sophia: "interpret_file_intent", charlotte: "validate_paths_and_policy", landon: "stage_approved_file_plan", professor: "explain_file_changes", podium: "publish_file_receipt" }
+let result = prepare_files_plan(sample)
+assert result.is_ok == true
+emit json result

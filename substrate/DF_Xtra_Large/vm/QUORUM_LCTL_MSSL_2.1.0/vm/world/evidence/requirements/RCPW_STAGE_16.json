@@ -1,0 +1,304 @@
+{
+  "counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 5,
+    "PARTIAL": 24,
+    "REGRESSED": 0
+  },
+  "qualification_method": "requirement-ID evidence update",
+  "requirements": [
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The eight components have declared semantics, units/domains, precision, and update ownership.",
+      "requirement_id": "RCPW-16-R01",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The model distinguishes mathematical/state dimensions from rendered spatial dimensions.",
+      "requirement_id": "RCPW-16-R02",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Projection into local 3D reference space is explicit and testable.",
+      "requirement_id": "RCPW-16-R03",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The 8S Penteract/S³ coupled-mechanics terms are integrated only where their semantics are formally mapped and dimensionally valid.",
+      "requirement_id": "RCPW-16-R04",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Admission/score terms cannot silently override canonical state authority.",
+      "requirement_id": "RCPW-16-R05",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Numerical and dimensional-consistency tests cover all operators.",
+      "requirement_id": "RCPW-16-R06",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Every non-spatial coordinate has a monotonicity/ordering rule or explicitly declares that none exists.",
+      "requirement_id": "RCPW-16-R07",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Projection from extended state to 3D cannot mutate the extended canonical state.",
+      "requirement_id": "RCPW-16-R08",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Dimension normalization cannot conflate physical units with abstract authority/significance scores.",
+      "requirement_id": "RCPW-16-R09",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "8S/Penteract adapters expose confidence and experimental status in machine-readable metadata.",
+      "requirement_id": "RCPW-16-R10",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The extended world coordinate defines comparison/ordering semantics for each non-spatial component and explicitly rejects invalid mixed-unit operations.",
+      "requirement_id": "RCPW-16-R11",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/remediation_26/RCPW-16-R12.json",
+      "evidence_sha256": "f79828a34d38a99d75ead3e8f10c983af359fcfe08c3411d9ac9543ef307a08a",
+      "profile": "QP1/WQ2/AW1/WP4_HOSTED_REFERENCE",
+      "requirement": "8S/Penteract mappings are versioned independently from runtime schemas so mathematical experimentation cannot silently alter canonical save semantics.",
+      "requirement_id": "RCPW-16-R12",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Uncertainty/confidence attached to experimental mathematical mappings propagates into diagnostics and gate status.",
+      "requirement_id": "RCPW-16-R13",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Projection and update operators have golden vectors covering normal, boundary, invalid, overflow, NaN/Inf, and extreme-distance conditions.",
+      "requirement_id": "RCPW-16-R14",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Penteract world-coordinate metadata is serialized with explicit schema and mathematical-model version so saves/replays cannot silently reinterpret non-spatial dimensions.",
+      "requirement_id": "RCPW-16-R15",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Each extended-state component has a declared authority owner, update cadence, valid range, precision, and fallback when experimental mappings are disabled.",
+      "requirement_id": "RCPW-16-R16",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "8S-derived quantities are isolated behind adapter interfaces and can be disabled without changing canonical spatial/topological truth.",
+      "requirement_id": "RCPW-16-R17",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Numerical conditioning tests cover long simulation duration, extreme canonical distance, repeated rebasing, and repeated fold parameter adaptation.",
+      "requirement_id": "RCPW-16-R18",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Mathematical qualification includes reference vectors, property tests, sensitivity analysis, and machine-readable mapping status for every runtime-connected term.",
+      "requirement_id": "RCPW-16-R19",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Extended Penteract/8S state components have serialization/compatibility rules for partition transfer and replay.",
+      "requirement_id": "RCPW-16-R20",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Experimental mathematical adapters cannot create divergent canonical results between worker layouts unless the profile explicitly marks the model nondeterministic/experimental.",
+      "requirement_id": "RCPW-16-R21",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Numeric types and reduction order for deterministic quantities are specified where parallel aggregation could change results.",
+      "requirement_id": "RCPW-16-R22",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Cross-worker floating-point reductions use deterministic ordering, compensated summation, fixed-point, or another declared equivalence strategy as required.",
+      "requirement_id": "RCPW-16-R23",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Mathematical qualification compares repeated runs across worker counts, partition layouts, long duration, and extreme-distance folds.",
+      "requirement_id": "RCPW-16-R24",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Penteract extended-state schema may encode world-age/history relevance only through explicitly typed components or adapters, never by overloading canonical spatial coordinates.",
+      "requirement_id": "RCPW-16-R25",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Experimental 8S/Penteract models used for long-horizon world evolution have validation against simpler reference models and publish divergence/error envelopes.",
+      "requirement_id": "RCPW-16-R26",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Historical uncertainty and reconstruction confidence are separate from canonical authority; low confidence cannot silently downgrade known exact historical facts.",
+      "requirement_id": "RCPW-16-R27",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Mathematical adapters are versioned by era/ontology compatibility where historical saves may outlive model revisions.",
+      "requirement_id": "RCPW-16-R28",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "OPERATIONAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes sensitivity of long-horizon fold/world-evolution outcomes to timestep, worker count, archive compaction, and model version.",
+      "requirement_id": "RCPW-16-R29",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    }
+  ],
+  "stage": 16,
+  "title": "Penteract World Coordinate Model"
+}

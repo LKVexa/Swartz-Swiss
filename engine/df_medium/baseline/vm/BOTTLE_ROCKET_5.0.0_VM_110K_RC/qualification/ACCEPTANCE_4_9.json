@@ -1,0 +1,14 @@
+{
+  "atomic_requirements": 78,
+  "blocked": {
+    "BR-490-11-R08": "Literal 72-hour soak has not elapsed in this execution environment.",
+    "BR-490-11-R09": "Independent second-machine/operator replay has not been performed."
+  },
+  "blocked_requirements": 2,
+  "local_release_engineering_checks": "PASS",
+  "operational_requirements": 76,
+  "record": "BOTTLE_ROCKET.RCAcceptance/4.9.0",
+  "strict_gate": "BLOCKED",
+  "unresolved_critical_findings": 0,
+  "unresolved_high_findings": 0
+}

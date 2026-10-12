@@ -1,0 +1,98 @@
+{
+  "decision": "OPERATIONAL",
+  "package": "BR-430-14",
+  "requirements": [
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-14_tests.log",
+      "exit_code": 0,
+      "notes": "41 positive + 41 negative + trap/control/boundary corpus",
+      "requirement": "Positive case for every opcode",
+      "requirement_id": "BR-430-14-R01",
+      "result": "PASS",
+      "sha256": "74765b6d4f870edc3f650accd26c4e65db47651ee40b6de458452cceeb27352b",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-14_tests.log",
+      "exit_code": 0,
+      "notes": "41 positive + 41 negative + trap/control/boundary corpus",
+      "requirement": "Negative case for every opcode",
+      "requirement_id": "BR-430-14-R02",
+      "result": "PASS",
+      "sha256": "74765b6d4f870edc3f650accd26c4e65db47651ee40b6de458452cceeb27352b",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-14_tests.log",
+      "exit_code": 0,
+      "notes": "41 positive + 41 negative + trap/control/boundary corpus",
+      "requirement": "Boundary vectors",
+      "requirement_id": "BR-430-14-R03",
+      "result": "PASS",
+      "sha256": "74765b6d4f870edc3f650accd26c4e65db47651ee40b6de458452cceeb27352b",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-14_tests.log",
+      "exit_code": 0,
+      "notes": "41 positive + 41 negative + trap/control/boundary corpus",
+      "requirement": "Maximum-width vectors",
+      "requirement_id": "BR-430-14-R04",
+      "result": "PASS",
+      "sha256": "74765b6d4f870edc3f650accd26c4e65db47651ee40b6de458452cceeb27352b",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-14_tests.log",
+      "exit_code": 0,
+      "notes": "41 positive + 41 negative + trap/control/boundary corpus",
+      "requirement": "Arithmetic-mode vectors",
+      "requirement_id": "BR-430-14-R05",
+      "result": "PASS",
+      "sha256": "74765b6d4f870edc3f650accd26c4e65db47651ee40b6de458452cceeb27352b",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-14_tests.log",
+      "exit_code": 0,
+      "notes": "41 positive + 41 negative + trap/control/boundary corpus",
+      "requirement": "Trap vectors",
+      "requirement_id": "BR-430-14-R06",
+      "result": "PASS",
+      "sha256": "74765b6d4f870edc3f650accd26c4e65db47651ee40b6de458452cceeb27352b",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-14_tests.log",
+      "exit_code": 0,
+      "notes": "41 positive + 41 negative + trap/control/boundary corpus",
+      "requirement": "Control-flow vectors",
+      "requirement_id": "BR-430-14-R07",
+      "result": "PASS",
+      "sha256": "74765b6d4f870edc3f650accd26c4e65db47651ee40b6de458452cceeb27352b",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "title": "ISA conformance corpus"
+}

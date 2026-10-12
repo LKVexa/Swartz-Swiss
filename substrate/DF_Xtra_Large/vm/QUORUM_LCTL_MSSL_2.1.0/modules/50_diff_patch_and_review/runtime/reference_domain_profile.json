@@ -1,0 +1,72 @@
+{
+  "execution_scope": "deterministic local/offline reference semantics consuming module fixtures and emitting typed reference-domain outputs",
+  "input_type": "change/review_context",
+  "module": "Diff Patch and Review",
+  "module_id": 50,
+  "non_claims": [
+    "not production domain fidelity",
+    "not executable legacy-runtime equivalence",
+    "not physical distributed authority"
+  ],
+  "operators": [
+    {
+      "node": "N01",
+      "operator": "INSPECT",
+      "stage": "CHANGE"
+    },
+    {
+      "node": "N02",
+      "operator": "INSPECT",
+      "stage": "INSPECT"
+    },
+    {
+      "node": "N03",
+      "operator": "COMPARE",
+      "stage": "DIFF"
+    },
+    {
+      "node": "N04",
+      "operator": "INSPECT",
+      "stage": "REVIEW"
+    },
+    {
+      "node": "N05",
+      "operator": "AUTHORIZE",
+      "stage": "AUTHORIZE"
+    },
+    {
+      "node": "N06",
+      "operator": "EXECUTE",
+      "stage": "APPLY"
+    },
+    {
+      "node": "N07",
+      "operator": "VALIDATE",
+      "stage": "VERIFY"
+    },
+    {
+      "node": "N08",
+      "operator": "RECORD",
+      "stage": "RECORD"
+    },
+    {
+      "node": "N09",
+      "operator": "RECORD",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "output_type": "approved_patch/governance_receipt",
+  "plane": "governance_control",
+  "policy": {
+    "capabilities": [
+      "evidence.write",
+      "patch.propose",
+      "repository.read"
+    ],
+    "default": "deny",
+    "network": "deny"
+  },
+  "runner": "qualification/open_gate_runtime.py",
+  "schema": "QUORUM-REFERENCE-DOMAIN-PROFILE/2.1",
+  "version": "2.1.0"
+}

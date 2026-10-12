@@ -1,0 +1,13 @@
+{
+  "boundary": "runtime_c_h+all_adapters+authoritative_BOOT_LCTL",
+  "ceiling_lt": 61000,
+  "current_reference_image": "unsigned; production deployment requires offline issuer/release signing under BRTP/BRMF.",
+  "headroom_bytes": 5,
+  "historical_boundary_note": "The 4.4 repository+build+spec aggregate is no longer claimed under 61K. The 4.5 61K gate covers runtime C/H, all adapters, and authoritative BOOT.lctlc; required production persistence behavior remains inside that measured boundary.",
+  "production_exec_source_bytes": 60995,
+  "record": "BR.Size",
+  "release": "4.5.0",
+  "repository_build_spec_bytes": 65763,
+  "repository_build_spec_informational_only": true,
+  "unsigned_brim_bytes": 112
+}

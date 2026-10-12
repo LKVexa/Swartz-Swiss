@@ -1,0 +1,6 @@
+{
+  "comment": "Canonical (sorted-key, compact-separator, UTF-8) SHA-256 of config/vec1.json and config/security_policy.json. The presenter stamps configuration_sha256 into every electron it seals; vecctl recomputes it live. A mismatch means config was edited without resealing -- run tools/vec_seal.py.",
+  "configuration_sha256": "a8f661cf92fdead041b37bfe359d941a02f79fef24b38bd5ee1252840a36dcb8",
+  "schema": "VB-JA21/VEC1_CONFIG_SEAL/1",
+  "security_policy_sha256": "f0bcaed7e68ece57d27a87ed6f8677a0ca9ccb1cd017e3680bc9be451323fd21"
+}

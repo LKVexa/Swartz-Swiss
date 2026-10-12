@@ -1,0 +1,62 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "a3a813a1e2978f1017fed75e4e1dd4245b6d86fecae966b0e1006a1e929ccccc",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (LOD_TRANSITION, CAUSAL_REPLAY, ECOLOGY_CONSERVATION, ECONOMY_CONSERVATION, NARRATIVE_KNOWLEDGE) plus Stage 04 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "CAUSAL_REPLAY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "ECOLOGY_CONSERVATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "ECONOMY_CONSERVATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "LOD_TRANSITION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "NARRATIVE_KNOWLEDGE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-10",
+    "GW-17",
+    "GW-18",
+    "GW-40",
+    "GW-77"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T2_HIGH_FIDELITY",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Simulation LOD authority defines subsystem-specific fidelity contracts for AI, ecology, economy, weather, navigation, combat, transport, and narrative events.",
+  "requirement_id": "RCPW-04-R15",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 4,
+  "stage_title": "Simulation LOD Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "LOD_TRANSITION",
+    "CAUSAL_REPLAY",
+    "ECOLOGY_CONSERVATION",
+    "ECONOMY_CONSERVATION",
+    "NARRATIVE_KNOWLEDGE"
+  ],
+  "workflow_file": "04_SIMULATION_LOD_AUTHORITY/049_RCPW_04_R15_SIMULATION_LOD_AUTHORITY_DEFINES_SUBSYSTEM_SPECIFIC_FIDELITY_CONTRACTS_FOR_AI_ECOLOGY.md",
+  "workflow_tier": "T2_HIGH_FIDELITY"
+}

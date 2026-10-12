@@ -1,0 +1,45 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 14,
+  "legacy_root": "legacy/source_repository/Plug",
+  "legacy_sha256": "fc9ad34c8d0ffd4086519f2901b67c2b6ac6184badbf696a312b64f07ada3afb",
+  "files": [
+    {
+      "path": "14.1_Plug_Interfaces.jasp",
+      "sha256": "685bddf0d3facc3a95b5dd0d5ae34c144a2f1be802eb42a02d8687f136959cda",
+      "bytes": 841
+    },
+    {
+      "path": "14.2_Plug_Runtimes.jasp",
+      "sha256": "670236e700c5ea77de339db3e99c811bfe80a9d1cd57d3937c109ec655ad35c4",
+      "bytes": 861
+    },
+    {
+      "path": "14.3_Plug_Data_Adapters.jasp",
+      "sha256": "682b9ed82e7fed5304efc41054f6b09eb452e9b747cb58006e9827c64f17ee1f",
+      "bytes": 868
+    },
+    {
+      "path": "14.4_Plug_UI_Layers.jasp",
+      "sha256": "3076a2fa671120262494ec73ea84bac4c2a13eb330169f34cd7dd853cb90345c",
+      "bytes": 861
+    },
+    {
+      "path": "14.5_Plug_Execution.jasp",
+      "sha256": "91e0d7e78c21145ba9ce2e92e27decad28950e36384ef2725f30c27ed2b7e564",
+      "bytes": 911
+    },
+    {
+      "path": "14.6_Plug_Endpoints.jasp",
+      "sha256": "fb578fe95f3377a23785ff85ef384d9316cc5f38777e9105dc384127624bec79",
+      "bytes": 915
+    },
+    {
+      "path": "README.md",
+      "sha256": "8cc29fe5aaecacba099371adee9f1544de7fc4a963bfa959e21897656601886e",
+      "bytes": 5770
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

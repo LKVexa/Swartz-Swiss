@@ -1,0 +1,35 @@
+ja source 0.3
+module suite32.orchestrator_ii.release_packaging
+use Agent
+policy no_network
+
+agent OrchestratorIIReleasePackaging {
+    identity "orchestrator_ii_release_packaging"
+    role "sophia-charlotte-landon-professor-podium-orchestrator"
+    goal publish_verified_release_package when confidence >= 0.95
+    memory session retention 1h
+    budget steps 60 tools 5
+    tool SOPHIADraftReleaseManifest(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateRelease(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONPackageRelease(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainRelease(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumPublishRelease(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIADraftReleaseManifest
+        authorize CHARLOTTEValidateRelease
+        authorize LANDONPackageRelease
+        authorize ProfessorExplainRelease
+        authorize PodiumPublishRelease
+        continue when policy_allows
+        execute SOPHIADraftReleaseManifest("certified_release_inputs")
+        execute CHARLOTTEValidateRelease("candidate_release_manifest")
+        execute LANDONPackageRelease("approved_release_manifest")
+        execute ProfessorExplainRelease("verified_release_package")
+        execute PodiumPublishRelease("release_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "OrchestratorIIReleasePackaging.mcrt"

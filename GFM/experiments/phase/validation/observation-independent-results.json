@@ -1,0 +1,78 @@
+{
+  "schema": "GFM-EHT-independent-check/1",
+  "verificationPassed": true,
+  "observationComparisonPassed": false,
+  "rawRowsChecked": 486,
+  "trainingRows": 173,
+  "holdoutRows": 146,
+  "models": [
+    {
+      "model": "thin-ring",
+      "independentFit": {
+        "scaleMicroas": 39.900000000000006,
+        "fluxJy": 0.817411714644064,
+        "chiSquare": 257.7154075737981
+      },
+      "gridPointsChecked": 1201,
+      "training": {
+        "rows": 173,
+        "normalizedResidualRms": 1.2205262950230789,
+        "fractionWithin3Sigma": 0.9595375722543352,
+        "diagnosticPassed": true,
+        "maximumPredictionDifferenceJy": 2.7755575615628914e-16
+      },
+      "holdout": {
+        "rows": 146,
+        "normalizedResidualRms": 13.255048490239181,
+        "fractionWithin3Sigma": 0.0684931506849315,
+        "diagnosticPassed": false,
+        "maximumPredictionDifferenceJy": 2.7755575615628914e-16
+      },
+      "comparisonPassed": false
+    },
+    {
+      "model": "gaussian",
+      "independentFit": {
+        "scaleMicroas": 38.2,
+        "fluxJy": 0.8282228252106797,
+        "chiSquare": 262.23816080078467
+      },
+      "gridPointsChecked": 1201,
+      "training": {
+        "rows": 173,
+        "normalizedResidualRms": 1.2311894732654598,
+        "fractionWithin3Sigma": 0.9595375722543352,
+        "diagnosticPassed": true,
+        "maximumPredictionDifferenceJy": 3.3306690738754696e-16
+      },
+      "holdout": {
+        "rows": 146,
+        "normalizedResidualRms": 13.530934743514948,
+        "fractionWithin3Sigma": 0.0410958904109589,
+        "diagnosticPassed": false,
+        "maximumPredictionDifferenceJy": 2.220446049250313e-16
+      },
+      "comparisonPassed": false
+    }
+  ],
+  "negativeChecks": [
+    {
+      "case": "changed-held-out-prediction",
+      "rejected": true,
+      "reason": "Visibility prediction differs from independent reference"
+    },
+    {
+      "case": "false-holdout-acceptance",
+      "rejected": true,
+      "reason": "Diagnostic pass label differs"
+    }
+  ],
+  "hashes": {
+    "checker": "bc0695a093292a2753e98c15a1aef48413c72fd07bb2dd3cad33dab28348452d",
+    "observations": "edd35c123121fb2545a52dbc3ffba6c2d4a1194d9ebba13a5ddb21f864bded62",
+    "protocol": "925409367cdd70a3308bdb15482298d43cb319c0c30ce9a82c756b65f1d4d7b7",
+    "publicReport": "fd68427b65b552d751fe1c0562b0faff04da3926c39098e48d790143fa6b45e0",
+    "productionModel": "b9164e15ebea422c8bc6d156401a5baadcb480bbcefd24df2906a9a5251c9ca9"
+  },
+  "scope": "Independent parsing, full training-grid fit and untouched held-out residual verification. Surrogate failures remain failures; no empirical phase/matter/MHD validation follows."
+}

@@ -1,0 +1,44 @@
+profile ja.operations
+source_level 0.3
+
+subsuite Terminal.T_13 PtyProcessJobControl {
+    identity { suite = "66"; id = "T-13"; deterministic = true; autorun = false }
+
+    accept {
+        TypedShellInvocation
+        hermit_cell_ref
+        interactive_mode
+        signal_policy
+        background_job_limit
+    }
+
+    emit TerminalJobControlLedger
+
+    procedure attach_governed_pty(invocation) {
+        require invocation.authorized
+        require hermit_cell_ref.attested
+        pty = create_cell_local_pty()
+        pty.dimensions = bounded_initial_dimensions
+        bind(invocation, pty)
+        record_foreground_process_group
+        return pty
+    }
+
+    procedure signal(job, signal) {
+        require signal in signal_policy.allowed
+        require job belongs_to active_terminal_run
+        deliver_to_cell_process_group(job, signal)
+        record(signal)
+    }
+
+    procedure background(job) {
+        require background_job_limit > 0
+        require job.capabilities_cover_background_execution
+        register_bounded_background_job(job)
+    }
+
+    deny { host_process_signal; orphan_process; unbounded_background_job; process_group_escape }
+    evidence { pty_id; process_tree; signal_ledger; job_states; teardown_record }
+    tests { foreground; interrupt; terminate; resize; background_limit; orphan_cleanup }
+}
+

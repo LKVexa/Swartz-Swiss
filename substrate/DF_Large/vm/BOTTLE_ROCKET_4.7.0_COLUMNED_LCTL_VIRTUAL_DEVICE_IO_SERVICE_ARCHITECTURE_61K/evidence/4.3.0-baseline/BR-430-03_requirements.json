@@ -1,0 +1,98 @@
+{
+  "decision": "OPERATIONAL",
+  "package": "BR-430-03",
+  "requirements": [
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-03_tests.log",
+      "exit_code": 0,
+      "notes": "logical_shift_rotate_contract + full opcode vectors",
+      "requirement": "Specify AND",
+      "requirement_id": "BR-430-03-R01",
+      "result": "PASS",
+      "sha256": "d3b40167ab59bc4e65a941356ac08efd9e68c3e6d036decaf0b7378aaad0e0a9",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-03_tests.log",
+      "exit_code": 0,
+      "notes": "logical_shift_rotate_contract + full opcode vectors",
+      "requirement": "Specify OR",
+      "requirement_id": "BR-430-03-R02",
+      "result": "PASS",
+      "sha256": "d3b40167ab59bc4e65a941356ac08efd9e68c3e6d036decaf0b7378aaad0e0a9",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-03_tests.log",
+      "exit_code": 0,
+      "notes": "logical_shift_rotate_contract + full opcode vectors",
+      "requirement": "Specify XOR",
+      "requirement_id": "BR-430-03-R03",
+      "result": "PASS",
+      "sha256": "d3b40167ab59bc4e65a941356ac08efd9e68c3e6d036decaf0b7378aaad0e0a9",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-03_tests.log",
+      "exit_code": 0,
+      "notes": "logical_shift_rotate_contract + full opcode vectors",
+      "requirement": "Specify NOT",
+      "requirement_id": "BR-430-03-R04",
+      "result": "PASS",
+      "sha256": "d3b40167ab59bc4e65a941356ac08efd9e68c3e6d036decaf0b7378aaad0e0a9",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-03_tests.log",
+      "exit_code": 0,
+      "notes": "logical_shift_rotate_contract + full opcode vectors",
+      "requirement": "Specify bit-test",
+      "requirement_id": "BR-430-03-R05",
+      "result": "PASS",
+      "sha256": "d3b40167ab59bc4e65a941356ac08efd9e68c3e6d036decaf0b7378aaad0e0a9",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-03_tests.log",
+      "exit_code": 0,
+      "notes": "logical_shift_rotate_contract + full opcode vectors",
+      "requirement": "Specify masks",
+      "requirement_id": "BR-430-03-R06",
+      "result": "PASS",
+      "sha256": "d3b40167ab59bc4e65a941356ac08efd9e68c3e6d036decaf0b7378aaad0e0a9",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.2.0 native semantic authority",
+      "blocker": null,
+      "command": "make operational; make sanitize; make size; python3 tests/test_430_semantic.py; .build/br_isa_tests; .build/br_tests",
+      "evidence_path": "evidence/BR-430-03_tests.log",
+      "exit_code": 0,
+      "notes": "logical_shift_rotate_contract + full opcode vectors",
+      "requirement": "Add population/count only if justified",
+      "requirement_id": "BR-430-03-R07",
+      "result": "PASS",
+      "sha256": "d3b40167ab59bc4e65a941356ac08efd9e68c3e6d036decaf0b7378aaad0e0a9",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "title": "Logical instructions"
+}

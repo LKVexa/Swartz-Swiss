@@ -1,0 +1,109 @@
+{
+  "package": "BR-450-05",
+  "record": "BR.PackageRequirements",
+  "requirements": [
+    {
+      "evidence": [
+        "evidence/BR-450-05_audit.md",
+        "evidence/BR-450-05_tests.log"
+      ],
+      "id": "BR-450-05-R01",
+      "status": "OPERATIONAL",
+      "text": "Verify incoming image"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-05_audit.md",
+        "evidence/BR-450-05_tests.log"
+      ],
+      "id": "BR-450-05-R02",
+      "status": "OPERATIONAL",
+      "text": "Choose inactive slot"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-05_audit.md",
+        "evidence/BR-450-05_tests.log"
+      ],
+      "id": "BR-450-05-R03",
+      "status": "OPERATIONAL",
+      "text": "Write candidate"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-05_audit.md",
+        "evidence/BR-450-05_tests.log"
+      ],
+      "id": "BR-450-05-R04",
+      "status": "OPERATIONAL",
+      "text": "Sync candidate"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-05_audit.md",
+        "evidence/BR-450-05_tests.log"
+      ],
+      "id": "BR-450-05-R05",
+      "status": "OPERATIONAL",
+      "text": "Reread candidate"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-05_audit.md",
+        "evidence/BR-450-05_tests.log"
+      ],
+      "id": "BR-450-05-R06",
+      "status": "OPERATIONAL",
+      "text": "Verify candidate"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-05_audit.md",
+        "evidence/BR-450-05_tests.log"
+      ],
+      "id": "BR-450-05-R07",
+      "status": "OPERATIONAL",
+      "text": "Write pending control record"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-05_audit.md",
+        "evidence/BR-450-05_tests.log"
+      ],
+      "id": "BR-450-05-R08",
+      "status": "OPERATIONAL",
+      "text": "Sync pending record"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-05_audit.md",
+        "evidence/BR-450-05_tests.log"
+      ],
+      "id": "BR-450-05-R09",
+      "status": "OPERATIONAL",
+      "text": "Atomically activate"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-05_audit.md",
+        "evidence/BR-450-05_tests.log"
+      ],
+      "id": "BR-450-05-R10",
+      "status": "OPERATIONAL",
+      "text": "Sync activation"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-05_audit.md",
+        "evidence/BR-450-05_tests.log"
+      ],
+      "id": "BR-450-05-R11",
+      "status": "OPERATIONAL",
+      "text": "Confirm activation"
+    }
+  ],
+  "scope": "host-reference",
+  "status": "OPERATIONAL",
+  "title": "Atomic update sequence",
+  "workflow": "docs/WORKFLOW_APPLIED_4.5.0/05_BR-450-05_atomic_update_sequence_PROMPT_AND_WORKFLOW.md"
+}

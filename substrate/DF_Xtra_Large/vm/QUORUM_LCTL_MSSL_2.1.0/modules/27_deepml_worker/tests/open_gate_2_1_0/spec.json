@@ -1,0 +1,31 @@
+{
+  "module_id": 27,
+  "schema": "QUORUM-OPEN-GATE-TEST-SPEC/2.1",
+  "tests": [
+    {
+      "expected": "PASS",
+      "gate": "L4",
+      "test": "positive+edge consume/transform and negative fail-closed"
+    },
+    {
+      "expected": "PASS",
+      "gate": "L5",
+      "test": "legacy source/contract category differential"
+    },
+    {
+      "expected": "PASS",
+      "gate": "L6",
+      "test": "exact reference-domain replay"
+    },
+    {
+      "expected": "PASS",
+      "gate": "L7",
+      "test": "negative admission + authority tamper + network default deny"
+    },
+    {
+      "expected": "PASS",
+      "gate": "L8",
+      "test": "measured deterministic reference-runtime benchmark"
+    }
+  ]
+}

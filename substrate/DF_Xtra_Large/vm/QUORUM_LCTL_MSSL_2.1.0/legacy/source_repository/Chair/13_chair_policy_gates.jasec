@@ -1,0 +1,21 @@
+ja source 0.3
+module chair.policy_gates
+use Security
+policy no_network
+
+principal SOPHIA_CHARLOTTE_LANDON_Professor_Podium_GateWorker
+role ChairGateWorker {
+    grant policy.evaluate:approved
+    grant gate.admit:approved
+}
+resource PolicyGateDecision classification restricted
+policy ChairPolicyGatePolicy {
+    deny network.* by default
+    allow PolicyGateDecision when principal.role == ChairGateWorker
+    require human_approval for gate.open
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == true
+emit mcrt "ChairPolicyGatePolicy.decision.mcrt"

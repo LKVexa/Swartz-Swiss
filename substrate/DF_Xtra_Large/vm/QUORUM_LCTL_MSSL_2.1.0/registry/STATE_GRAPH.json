@@ -1,0 +1,22 @@
+{
+  "schema": "QUORUM-STATE-GRAPH/2.0",
+  "states": [
+    "INITIAL",
+    "ADMITTED",
+    "RUNNING",
+    "VALIDATING",
+    "COMPLETED",
+    "FAILED",
+    "RECOVERY_OR_TERMINAL",
+    "FAILED_CLOSED"
+  ],
+  "legal_transitions": [
+    "INITIAL->ADMITTED",
+    "ADMITTED->RUNNING",
+    "RUNNING->VALIDATING",
+    "VALIDATING->COMPLETED",
+    "RUNNING->FAILED",
+    "FAILED->RECOVERY_OR_TERMINAL",
+    "RECOVERY_OR_TERMINAL->FAILED_CLOSED"
+  ]
+}

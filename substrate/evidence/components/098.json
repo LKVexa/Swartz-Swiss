@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "098",
+  "title": "Atomic Membership Record",
+  "source_file": "098_Atomic_Membership_Record.md",
+  "source_sha256": "9803202efad33ad2853ab2ec2c6869c4bc02b89d268c388e2e6b9410dc0dbd0c",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "N_XLARGE+DF0",
+  "integration_mechanism": "QAM integration plane",
+  "implementation_status": "REFERENCE_INTERFACE_ONLY",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

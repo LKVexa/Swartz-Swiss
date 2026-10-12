@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "d880cd345ea5344bc58b6b3572a99dac62753b15a9c530e75be67953c43d008f",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Mesh Geometry",
+  "module_id": 19,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

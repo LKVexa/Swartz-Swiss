@@ -1,0 +1,12 @@
+{
+  "schema": "QUORUM-EVIDENCE-GRAPH/2.0",
+  "flow": [
+    "input_receipt",
+    "authority_receipt",
+    "stage_receipts",
+    "policy_receipts",
+    "output_or_failure_receipt",
+    "replay_receipt",
+    "qualification_receipt"
+  ]
+}

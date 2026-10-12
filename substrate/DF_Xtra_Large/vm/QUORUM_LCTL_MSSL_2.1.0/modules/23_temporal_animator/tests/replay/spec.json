@@ -1,0 +1,11 @@
+{
+  "module_id": 23,
+  "mode": "contract_graph_replay",
+  "pins": [
+    "authority_hash",
+    "lctlc_hash",
+    "fixture_hash",
+    "graph_hash"
+  ],
+  "domain_runtime_replay": "BLOCKED_NOT_IMPLEMENTED"
+}

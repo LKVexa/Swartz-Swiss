@@ -1,0 +1,25 @@
+{
+  "brim_direct_hash_A": "7d1cbe7b4f8f11b64fff3b6eb53e947d14dfd1194c4889e553b42bbfdaf9e17d",
+  "brim_direct_hash_B": "7d1cbe7b4f8f11b64fff3b6eb53e947d14dfd1194c4889e553b42bbfdaf9e17d",
+  "brim_direct_identical": true,
+  "build_A": {
+    "artifacts": {
+      ".build/br_tests": "e0db0e91bd649a98bf9fcadc6cde8b4e9819af7f84e3644cc244ec177be79222",
+      ".build/brctl": "3853f5747da47add5636d05e151a47542c729d9c0fdd0c19ea0b1f88c3449eec",
+      ".build/libbrvm_core.a": "0e9a81d2431e9fd7e81708b427e887937d47c2c1ecb1ab55e13dfa5c3d49dd9c",
+      "deploy/BOTTLE_ROCKET_SIM_CORE_4.1.0.brimg": "7d1cbe7b4f8f11b64fff3b6eb53e947d14dfd1194c4889e553b42bbfdaf9e17d"
+    },
+    "label": "clean-A"
+  },
+  "build_B": {
+    "artifacts": {
+      ".build/br_tests": "e0db0e91bd649a98bf9fcadc6cde8b4e9819af7f84e3644cc244ec177be79222",
+      ".build/brctl": "3853f5747da47add5636d05e151a47542c729d9c0fdd0c19ea0b1f88c3449eec",
+      ".build/libbrvm_core.a": "0e9a81d2431e9fd7e81708b427e887937d47c2c1ecb1ab55e13dfa5c3d49dd9c",
+      "deploy/BOTTLE_ROCKET_SIM_CORE_4.1.0.brimg": "7d1cbe7b4f8f11b64fff3b6eb53e947d14dfd1194c4889e553b42bbfdaf9e17d"
+    },
+    "label": "clean-B"
+  },
+  "byte_identical": true,
+  "deterministic_source_archives_identical": true
+}

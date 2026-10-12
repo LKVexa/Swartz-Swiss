@@ -1,0 +1,36 @@
+ja source 0.3
+module suite15.orchestrator.synthesis
+use Agent
+policy no_network
+
+agent OrchestratorSynthesis {
+    identity "orchestrator_synthesis"
+    role "sophia-charlotte-landon-professor-podium-orchestrator"
+    goal publish_certified_synthesis when confidence >= 0.95
+    memory session retention 1h
+    budget steps 50 tools 5
+    tool LANDONStageEvidence(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIASynthesizeResults(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTECertifySynthesis(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainSynthesis(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumPublishSynthesis(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONStageEvidence
+        authorize SOPHIASynthesizeResults
+        authorize CHARLOTTECertifySynthesis
+        authorize ProfessorExplainSynthesis
+        authorize PodiumPublishSynthesis
+        continue when policy_allows
+        execute LANDONStageEvidence("resolved_suite_results")
+        execute SOPHIASynthesizeResults("canonical_evidence_set")
+        execute CHARLOTTECertifySynthesis("candidate_synthesis")
+        execute ProfessorExplainSynthesis("certified_synthesis")
+        execute PodiumPublishSynthesis("synthesis_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "OrchestratorSynthesis.mcrt"
+

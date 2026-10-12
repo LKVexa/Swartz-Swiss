@@ -1,0 +1,126 @@
+{
+  "release": "RUSSL Virtual Research Terminal foundation 0.3.0",
+  "prepared": "2026-10-11",
+  "localOnly": true,
+  "projectTests": {
+    "passed": 167,
+    "failed": 0,
+    "skipped": 0,
+    "command": "node --test tests/*.test.cjs",
+    "transcript": "tests-v0.3.txt",
+    "byFile": {
+      "engine": 27,
+      "app": 11,
+      "bridge": 8,
+      "artifact": 5,
+      "candidateDiagnostics": 5,
+      "equationRegistry": 5,
+      "equationIntegration": 13,
+      "refinedField": 14,
+      "refinedScalar": 16,
+      "gfmExact": 12,
+      "gfmMatrix": 16,
+      "gfmModels": 22,
+      "gfmIntegration": 12,
+      "exportRetention": 1
+    },
+    "scope": "Production modules, independent mathematical references, command/DOM fixtures, all-axis saved-report transport, preparation validation, imports/exports, source integrity and workbench relay. No rendered browser checks."
+  },
+  "independentGFM": {
+    "passed": true,
+    "assertions": 2201,
+    "maximumScaledNumericError": 3.776934389658655e-13,
+    "scope": "Python standard library only. Source identities, all stored adapters, three rotation axes, pendulum samples, saved zeta(2) versus pi²/6 and adaptive integral, exact field analogues, final 9 amplitudes and 81 Wigner cells.",
+    "packetSha256": "d516e6ddc14b2cbb1a5df1445472a5d0a3563c680e9b1400c0325133b5db1e61",
+    "evidence": "gfm-independent-validation.txt"
+  },
+  "reapplication": {
+    "coverage": {
+      "storedFindings": 20,
+      "imageFamilies": 3,
+      "parsedImageStatements": 15,
+      "outcomes": {
+        "metadata-retained": 4,
+        "signal-transformed": 4,
+        "operator-reapplied": 4,
+        "label-map-checked": 1,
+        "basis-covariance-verified": 2,
+        "reference-only": 5
+      },
+      "original500EquationSuite": "not supplied",
+      "GF80": "Separate retained exact word-mechanics backend; no 2^80 amplitude vector allocated."
+    },
+    "allPicturedRotationsComputed": [
+      "x",
+      "y",
+      "z"
+    ],
+    "passed": true,
+    "checks": {
+      "storedAdapters": {
+        "passed": true,
+        "residual": 6.866350197783356e-16
+      },
+      "pendulum": {
+        "passed": true,
+        "residual": 2.220446049250313e-16
+      },
+      "rotation": {
+        "passed": true,
+        "residual": 4.440892098500626e-16
+      },
+      "mellinReference": {
+        "passed": true,
+        "residual": 1.7008353577453975e-14
+      },
+      "finalState": {
+        "passed": true,
+        "residual": 4.440892098500626e-16
+      },
+      "exactFieldAnalogues": {
+        "passed": true,
+        "residual": 0
+      }
+    },
+    "finalField": "gf9",
+    "finalDescription": "GFM pendulum signal → D(3,4) → R(3,4)",
+    "finalManaBase2": 1.2619837975125687,
+    "sourceAuditVersion": "0.2.0",
+    "referenceScope": "The full original 500-equation suite was not provided; 20 stored findings and 3 supplied image families are covered."
+  },
+  "sessionCompatibility": {
+    "versionsAccepted": [
+      "0.1.0",
+      "0.2.0",
+      "0.3.0"
+    ],
+    "historicalExamplesPreserved": true,
+    "sourceScaleCodecAndSubsequentOperationsRetained": true,
+    "importedCommandsExecuted": false,
+    "GF80RecordsRetainedWhenLoadingModel": true
+  },
+  "originalGF80Tests": {
+    "passed": 79,
+    "failed": 0,
+    "scope": "Retained prior-release evidence for unchanged original sources; not rerun for these model additions."
+  },
+  "browserVerification": {
+    "completed": false,
+    "reason": "Prior loopback preview timed out and file-URL policy rejected preview. No workaround attempted.",
+    "unverified": [
+      "Rendered layout",
+      "Native browser download/save transport",
+      "Live browser GF80 capture/replay"
+    ]
+  },
+  "sourceIntegrity": {
+    "preservedLocalReferences": 9,
+    "sourceCopiesMatchDeclaredSHA256": true,
+    "workbenchDerivative": "Original plus identified relay only",
+    "linkedPost": {
+      "url": "https://x.com/TheMathFlow/status/2109220659838787921",
+      "retrieval": "Unavailable during preparation; no post text inferred. Supplied images are the source."
+    }
+  },
+  "originalFilesChanged": false
+}

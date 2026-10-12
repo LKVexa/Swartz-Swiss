@@ -1,0 +1,10 @@
+{
+  "canonical_policy_byte_identical": true,
+  "dev_key_id": "50b18c1d3d70455d",
+  "manifest_bindings": true,
+  "manifest_sha256": "8784047680d11e9709bbd292c31dc5d8ffd379ef09d1621830e9e54cef6f98fe",
+  "policy_sha256": "18599846f6fcbf3bc4ebd30de687708990fa9ccf71c1dcce510c4ed0d987556b",
+  "record": "BR.OfflineSignerProof",
+  "signed_brim_sha256": "0c060fbf613d5f4dcfaa38faa0d62965aae35875e84c413db30d700559b48a0c",
+  "status": "PASS"
+}

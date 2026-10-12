@@ -1,0 +1,12 @@
+{
+  "module_id": 47,
+  "metrics": [
+    "lctlc_rows",
+    "canonical_rows",
+    "graph_depth",
+    "artifact_bytes",
+    "verification_latency_ms"
+  ],
+  "scope": "structural_toolchain_only",
+  "domain_performance": "BLOCKED_NOT_IMPLEMENTED"
+}

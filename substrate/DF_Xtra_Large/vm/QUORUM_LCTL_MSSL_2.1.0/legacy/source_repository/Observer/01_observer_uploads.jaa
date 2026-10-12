@@ -1,0 +1,38 @@
+ja source 0.3
+module repository.observer.uploads
+use Agent
+policy no_network
+
+agent ObserverUploads {
+    identity "observer.uploads.v1"
+    role "audited-upload-observer"
+    goal uploads_observed when confidence >= 0.90
+    memory session retention 24h
+    budget steps 52 tools 6
+    tool InspectUploadRepository(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIA_ProfileUploads(input: Path) -> Report requires model.infer:approved
+    tool CHARLOTTE_VerifyUploadIntegrity(input: Path) -> Report requires policy.verify:approved
+    tool LANDON_RouteUploadRecords(input: Path) -> Report requires ledger.append:approved
+    tool PROFESSOR_ExplainUploadFindings(input: Path) -> Report requires model.infer:approved
+    tool PODIUM_PublishUploadEvidence(input: Path) -> Report requires ledger.append:approved
+    plan Main {
+        observe workspace
+        authorize InspectUploadRepository
+        authorize SOPHIA_ProfileUploads
+        authorize CHARLOTTE_VerifyUploadIntegrity
+        authorize LANDON_RouteUploadRecords
+        authorize PROFESSOR_ExplainUploadFindings
+        authorize PODIUM_PublishUploadEvidence
+        continue when policy_allows
+        execute InspectUploadRepository("repository/01_observer/uploads")
+        execute SOPHIA_ProfileUploads("repository/01_observer/uploads")
+        execute CHARLOTTE_VerifyUploadIntegrity("repository/01_observer/uploads")
+        execute LANDON_RouteUploadRecords("repository/01_observer/uploads")
+        execute PROFESSOR_ExplainUploadFindings("repository/01_observer/uploads")
+        execute PODIUM_PublishUploadEvidence("repository/01_observer/uploads")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "observer_uploads.mcrt"

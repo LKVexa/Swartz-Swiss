@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "108",
+  "title": "Resource Dashboard",
+  "source_file": "108_Resource_Dashboard.md",
+  "source_sha256": "468e49ed1a0f1ea19d92d2c12890b08047cb4795ae598962188d1aa3785e0c2f",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "VEC_CONTROL+UI",
+  "integration_mechanism": "Observability plane",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

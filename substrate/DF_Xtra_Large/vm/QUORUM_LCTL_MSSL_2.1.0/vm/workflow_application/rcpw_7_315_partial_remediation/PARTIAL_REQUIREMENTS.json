@@ -1,0 +1,3189 @@
+{
+  "schema": "QUORUM-RCPW7-315-PARTIALS/1",
+  "source_candidate": "QUORUM_GENERIC_PROJECT_LCTL_MSSL_VIRTUAL_MACHINE_5.0.0_CANDIDATE_RCPW_7.0.0_26_BLOCKERS_REMEDIATED.zip",
+  "source_ledger_counts": {
+    "BLOCKED": 0,
+    "OPERATIONAL": 267,
+    "PARTIAL": 315,
+    "REGRESSED": 0
+  },
+  "partial_count": 315,
+  "blocker_counts": {
+    "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.": 140,
+    "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.": 175
+  },
+  "stage_counts": {
+    "1": 11,
+    "2": 21,
+    "3": 7,
+    "4": 17,
+    "5": 12,
+    "6": 13,
+    "7": 14,
+    "8": 16,
+    "9": 21,
+    "10": 16,
+    "11": 26,
+    "12": 14,
+    "13": 11,
+    "14": 19,
+    "15": 18,
+    "16": 24,
+    "17": 13,
+    "18": 17,
+    "19": 8,
+    "20": 17
+  },
+  "requirements": [
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Derived rendering, physics, cache, and reference-space systems cannot mutate canonical truth outside declared APIs.",
+      "requirement_id": "RCPW-01-R05",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Schema migration and rollback preserve identity and causal history across versions.",
+      "requirement_id": "RCPW-01-R06",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical\u2194reference transforms are explicit, deterministic, bounded, and round-trip tested.",
+      "requirement_id": "RCPW-02-R01",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Precision error remains below declared limits at all supported canonical distances.",
+      "requirement_id": "RCPW-02-R04",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Physics, rendering, audio, navigation, and interaction consume reference state without becoming canonical authority.",
+      "requirement_id": "RCPW-02-R05",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference state can be discarded and reconstructed entirely from canonical truth plus current reference selection.",
+      "requirement_id": "RCPW-02-R06",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Roads, rivers, terrain, rail, navigation links, settlements, and long structures have declared fold semantics.",
+      "requirement_id": "RCPW-03-R05",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Singularities, self-intersections, discontinuities, and invalid inverse regions are detected and fail safely.",
+      "requirement_id": "RCPW-03-R06",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Every persistent entity class has a declared simulation representation ladder.",
+      "requirement_id": "RCPW-04-R01",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Promotion/demotion preserves identity, causal obligations, and gameplay-significant state.",
+      "requirement_id": "RCPW-04-R02",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Hysteresis prevents transition thrashing.",
+      "requirement_id": "RCPW-04-R03",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Resource exhaustion degrades fidelity without silently erasing authoritative state.",
+      "requirement_id": "RCPW-04-R05",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Gameplay-significant entities are not deleted because of distance or invisibility.",
+      "requirement_id": "RCPW-05-R01",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Identity, ownership, health, inventory, relationships, goals, schedule, and causal obligations survive abstraction.",
+      "requirement_id": "RCPW-05-R02",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Creation, destruction, death, consumption, transfer, and retirement are explicit world events rather than streaming side effects.",
+      "requirement_id": "RCPW-05-R03",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Parent/child and container/member relationships remain referentially valid through every representation transition.",
+      "requirement_id": "RCPW-05-R04",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Durable world mutations emit causally linked events with deterministic IDs.",
+      "requirement_id": "RCPW-06-R01",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Events record time, actor/entity, canonical location, cause, pre-state/post-state references, authority level, seed, and dependencies.",
+      "requirement_id": "RCPW-06-R02",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Conflicting concurrent mutations are detected and resolved by an explicit policy.",
+      "requirement_id": "RCPW-06-R04",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ephemeral telemetry is separated from durable causal history.",
+      "requirement_id": "RCPW-06-R06",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Promotion/demotion between individuals and cohorts is mass/population consistent within declared tolerances.",
+      "requirement_id": "RCPW-07-R02",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Remote ecological interactions create durable consequences that can later materialize locally.",
+      "requirement_id": "RCPW-07-R03",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Random ecological resolutions are deterministic under recorded seeds.",
+      "requirement_id": "RCPW-07-R05",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Settlements retain authoritative economic and social state when outside local rendering range.",
+      "requirement_id": "RCPW-08-R01",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Individual citizens and aggregate households/cohorts convert without duplicating or erasing population.",
+      "requirement_id": "RCPW-08-R02",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Production, consumption, inventory, transport, scarcity, pricing, labor, migration, crime, and law have explicit state transitions.",
+      "requirement_id": "RCPW-08-R03",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Remote shocks propagate causally through connected trade/transport networks.",
+      "requirement_id": "RCPW-08-R04",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Aggregate history materializes into locally coherent inventories, prices, NPC schedules, prosperity/damage, law state, and migration.",
+      "requirement_id": "RCPW-08-R05",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Economic abstraction error is measured against a smaller high-fidelity reference simulation.",
+      "requirement_id": "RCPW-08-R06",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative significance changes priority, update frequency, and representation only within bounded resource policy.",
+      "requirement_id": "RCPW-09-R02",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative gravity decays or transitions according to explicit lifecycle rules.",
+      "requirement_id": "RCPW-09-R04",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative gravity cannot mutate canonical story truth by itself.",
+      "requirement_id": "RCPW-09-R05",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Priority manipulation and starvation attacks are bounded and testable.",
+      "requirement_id": "RCPW-09-R06",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Visibility/interaction deadlines drive prewarm priority.",
+      "requirement_id": "RCPW-10-R02",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fast traversal and teleportation have explicit staging/fallback behavior.",
+      "requirement_id": "RCPW-10-R03",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "State unavailable by deadline degrades presentation safely rather than fabricating authoritative truth.",
+      "requirement_id": "RCPW-10-R04",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Render visibility is never used as persistent existence authority.",
+      "requirement_id": "RCPW-11-R01",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Folded rendering is coherent with canonical direction, landmarks, routes, and horizon semantics.",
+      "requirement_id": "RCPW-11-R02",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Temporal transitions are stable and free of visible popping/jitter within declared thresholds.",
+      "requirement_id": "RCPW-11-R03",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rendering overload sheds visual quality before simulation authority.",
+      "requirement_id": "RCPW-11-R04",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-distance silhouettes, lighting, atmospheric effects, shadows/reflections, and audio landmarks have declared fidelity policies.",
+      "requirement_id": "RCPW-11-R05",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Save state is canonical authority plus ledger/checkpoint metadata, not transient reference/render state.",
+      "requirement_id": "RCPW-12-R01",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Incremental checkpoints bound recovery time for large worlds.",
+      "requirement_id": "RCPW-12-R04",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Schema migrations are explicit and test backward/forward compatibility policy.",
+      "requirement_id": "RCPW-12-R05",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Distance/invisibility never directly deletes gameplay-significant entities.",
+      "requirement_id": "RCPW-14-R01",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Every representation transition declares exact carried, summarized, and reconstructible state.",
+      "requirement_id": "RCPW-14-R02",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Compression is bounded and cannot erase unresolved causal obligations.",
+      "requirement_id": "RCPW-14-R03",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Restoration cannot create impossible time, position, ownership, or inventory state.",
+      "requirement_id": "RCPW-14-R04",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Transition failures are explicit and recoverable.",
+      "requirement_id": "RCPW-14-R05",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Endurance cycling shows no cumulative identity/state drift.",
+      "requirement_id": "RCPW-14-R06",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Teleportation has a deterministic destination-staging protocol.",
+      "requirement_id": "RCPW-15-R04",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Missed prewarm deadlines degrade presentation safely.",
+      "requirement_id": "RCPW-15-R05",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "High-speed traversal remains within declared frame, memory, and I/O budgets.",
+      "requirement_id": "RCPW-15-R06",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The eight components have declared semantics, units/domains, precision, and update ownership.",
+      "requirement_id": "RCPW-16-R01",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The model distinguishes mathematical/state dimensions from rendered spatial dimensions.",
+      "requirement_id": "RCPW-16-R02",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Projection into local 3D reference space is explicit and testable.",
+      "requirement_id": "RCPW-16-R03",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The 8S Penteract/S\u00b3 coupled-mechanics terms are integrated only where their semantics are formally mapped and dimensionally valid.",
+      "requirement_id": "RCPW-16-R04",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Admission/score terms cannot silently override canonical state authority.",
+      "requirement_id": "RCPW-16-R05",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Numerical and dimensional-consistency tests cover all operators.",
+      "requirement_id": "RCPW-16-R06",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "F_P(W_C)=W_P has explicit domain, codomain, parameters, and reference authority.",
+      "requirement_id": "RCPW-17-R01",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Visible-domain components are continuous and bounded.",
+      "requirement_id": "RCPW-17-R03",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Lossy presentation components are explicitly identified and never treated as canonical inverse authority.",
+      "requirement_id": "RCPW-17-R04",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Changing reference points does not alter canonical world identity.",
+      "requirement_id": "RCPW-17-R05",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Singularities and unsupported domains are explicit and fail closed.",
+      "requirement_id": "RCPW-17-R06",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Overlapping wells never double-apply mutable world simulation.",
+      "requirement_id": "RCPW-18-R02",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Wells can merge, split, migrate, expire, and hand off without state loss.",
+      "requirement_id": "RCPW-18-R04",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Resource allocation across wells is bounded and starvation-aware.",
+      "requirement_id": "RCPW-18-R05",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The model can extend to multiplayer semantics without requiring multiplayer implementation.",
+      "requirement_id": "RCPW-18-R06",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World-state history is append-only or equivalently tamper-evident and causally linked.",
+      "requirement_id": "RCPW-19-R01",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "High-value consequences remain individually queryable while repetitive low-value events may be safely aggregated.",
+      "requirement_id": "RCPW-19-R02",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Global invariant: rendering/optimization cannot silently mutate canonical truth.",
+      "requirement_id": "RCPW-20-R05",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Global invariant: no documentation-only, mock, placeholder, or self-declared PASS qualifies an operational gate.",
+      "requirement_id": "RCPW-20-R06",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical state exposes monotonic revision/epoch numbers for stale-read and stale-write detection.",
+      "requirement_id": "RCPW-01-R08",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World-state snapshots are quiescent or use a documented consistency algorithm that proves cross-component coherence.",
+      "requirement_id": "RCPW-01-R09",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical state recovery is tested across power-loss-equivalent interruption at every write boundary.",
+      "requirement_id": "RCPW-01-R10",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-frame updates are atomic with respect to physics/render/navigation consumers for each simulation tick.",
+      "requirement_id": "RCPW-02-R07",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference switches preserve momentum/orientation semantics and do not create one-frame spatial discontinuities.",
+      "requirement_id": "RCPW-02-R09",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "A deterministic trace can reconstruct every origin rebase and reference handoff.",
+      "requirement_id": "RCPW-02-R10",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The fold transform is at least C1 continuous everywhere visible and C2 where camera/physics interpolation requires it.",
+      "requirement_id": "RCPW-03-R07",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Collision, picking, navigation, audio propagation, and landmark targeting use explicit canonical/reference conversion rules.",
+      "requirement_id": "RCPW-03-R09",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Update cadence changes preserve time integration and do not create energy/state jumps when promoted.",
+      "requirement_id": "RCPW-04-R08",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Mass promotion storms are rate-limited without erasing unresolved authoritative obligations.",
+      "requirement_id": "RCPW-04-R10",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Entity histories remain queryable after retirement/destruction according to retention policy.",
+      "requirement_id": "RCPW-05-R10",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Compaction/aggregation cannot sever causal parents required by live unresolved obligations.",
+      "requirement_id": "RCPW-06-R09",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecological time-step adaptation is bounded and conservation error is measured per species/resource system.",
+      "requirement_id": "RCPW-07-R07",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Remote stochastic outcomes expose reproducible seeds and probability models.",
+      "requirement_id": "RCPW-07-R08",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Transport latency and capacity remain canonical and are not shortened merely because geography is visually folded.",
+      "requirement_id": "RCPW-08-R08",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Remote shocks include causal delay, substitution, and recovery rather than instantaneous global propagation.",
+      "requirement_id": "RCPW-08-R10",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative gravity is signed/typed so urgency, relevance, threat, and authored importance are distinguishable.",
+      "requirement_id": "RCPW-09-R07",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Priority escalation has hard caps and reserve budgets for non-narrative systemic simulation.",
+      "requirement_id": "RCPW-09-R08",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "No narrative-gravity rule may fabricate outcomes for events that require canonical simulation evidence.",
+      "requirement_id": "RCPW-09-R10",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization has explicit readiness levels separating visually present, physically valid, AI-ready, and interactable.",
+      "requirement_id": "RCPW-10-R07",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Interaction is gated until authoritative collision, ownership, and gameplay state are valid.",
+      "requirement_id": "RCPW-10-R08",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Prewarm cancellation releases resources without losing canonical state or leaving orphan handles.",
+      "requirement_id": "RCPW-10-R09",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rendering exposes a fold-artifact detector for scale discontinuity, horizon inversion, repeated landmarks, and topology leaks.",
+      "requirement_id": "RCPW-11-R07",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Render culling cannot suppress simulation events or event ledger emission.",
+      "requirement_id": "RCPW-11-R09",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Quality degradation is ordered and measurable, with simulation truth protected above visual fidelity.",
+      "requirement_id": "RCPW-11-R10",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Load verifies dependency/schema compatibility before mutating live canonical state.",
+      "requirement_id": "RCPW-12-R08",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Representation transitions define a conservation vector for identity, time, position, ownership, health, inventory, and unresolved obligations.",
+      "requirement_id": "RCPW-14-R07",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Abstract simulation never advances an entity beyond a canonical event barrier that requires higher fidelity.",
+      "requirement_id": "RCPW-14-R09",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Round-trip transition error budgets are quantified by entity class.",
+      "requirement_id": "RCPW-14-R10",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Traversal prediction has bounded speculation windows and backpressure.",
+      "requirement_id": "RCPW-15-R07",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Teleport destination staging validates canonical time, occupancy, collision, and active mission constraints.",
+      "requirement_id": "RCPW-15-R09",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Every non-spatial coordinate has a monotonicity/ordering rule or explicitly declares that none exists.",
+      "requirement_id": "RCPW-16-R07",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Projection from extended state to 3D cannot mutate the extended canonical state.",
+      "requirement_id": "RCPW-16-R08",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Dimension normalization cannot conflate physical units with abstract authority/significance scores.",
+      "requirement_id": "RCPW-16-R09",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "8S/Penteract adapters expose confidence and experimental status in machine-readable metadata.",
+      "requirement_id": "RCPW-16-R10",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Interaction targeting round-trips to one canonical entity or fails explicitly; ambiguous aliases are forbidden.",
+      "requirement_id": "RCPW-17-R08",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The near-field identity transform has measurable error bounds approaching numerical precision.",
+      "requirement_id": "RCPW-17-R09",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Operator composition order is fixed and verified; reordering operators requires a versioned migration.",
+      "requirement_id": "RCPW-17-R10",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Per-well budgets include reserve and eviction policy so one well cannot monopolize all simulation capacity.",
+      "requirement_id": "RCPW-18-R09",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Well retirement drains or transfers unresolved obligations before deallocation.",
+      "requirement_id": "RCPW-18-R10",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Historical queries expose whether results are exact, aggregated, inferred, or unavailable.",
+      "requirement_id": "RCPW-19-R09",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The integrated scheduler defines deterministic phase ordering for canonical mutation, remote simulation, folding, materialization, physics, rendering views, ledger commit, and checkpointing.",
+      "requirement_id": "RCPW-20-R09",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "A global resource governor protects canonical/persistence/ledger work before derived simulation and rendering quality.",
+      "requirement_id": "RCPW-20-R10",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Release promotion requires a reproducible build manifest, test corpus digest, evidence digest, unresolved-risk register, and rollback plan.",
+      "requirement_id": "RCPW-20-R12",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical world state includes a versioned spatial-semantic region graph linking regions, biomes, routes, waterways, settlements, interiors, landmarks, and jurisdictional domains.",
+      "requirement_id": "RCPW-01-R11",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Partial-region availability, damaged content packs, and missing optional content fail without invalidating unrelated canonical regions.",
+      "requirement_id": "RCPW-01-R14",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-frame motion preserves camera, animation, locomotion, projectile, and vehicle continuity across origin rebases.",
+      "requirement_id": "RCPW-02-R11",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference transforms expose stable previous/current transforms suitable for temporal rendering and motion-vector reconstruction.",
+      "requirement_id": "RCPW-02-R12",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-frame diagnostics expose rebase frequency, maximum observed transform error, and all continuity violations.",
+      "requirement_id": "RCPW-02-R14",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Picking, ray tests, interaction traces, projectile traces, and navigation targets always resolve to canonical objects through an unambiguous inverse mapping.",
+      "requirement_id": "RCPW-03-R13",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Remote AI schedule, intent, movement, and social-state integration account for elapsed canonical time when update cadence changes.",
+      "requirement_id": "RCPW-04-R12",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Promotion debt is tracked so repeatedly deferred high-value entities receive bounded service without creating an uncontrolled promotion storm.",
+      "requirement_id": "RCPW-04-R13",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "LOD approximation error is measured per subsystem and incorporated into qualification rather than treated as visually acceptable by default.",
+      "requirement_id": "RCPW-04-R14",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Selective persistence policies are explicit for debris, tracks, corpses, temporary props, transient crowds, and other high-volume world evidence.",
+      "requirement_id": "RCPW-05-R14",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Causal graphs detect or explicitly model cycles and prevent accidental recursive event amplification.",
+      "requirement_id": "RCPW-06-R11",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Debugging can produce a minimal causal slice showing why a selected entity or region reached its current authoritative state.",
+      "requirement_id": "RCPW-06-R14",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Habitat connectivity is canonical and cannot be altered merely by visual fold distance; migration uses canonical route/topology cost.",
+      "requirement_id": "RCPW-07-R11",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Local depletion and remote regeneration use one conserved resource model with declared approximation bounds.",
+      "requirement_id": "RCPW-07-R13",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Settlement economies include explicit production chains, storage, transport dependency, labor allocation, demand substitution, and recovery after shocks.",
+      "requirement_id": "RCPW-08-R11",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Law, reputation, faction control, crime, policing, and social response remain causally active outside the local render shell.",
+      "requirement_id": "RCPW-08-R12",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative gravity integrates with an event-orchestration authority that distinguishes authored beats, systemic events, optional encounters, and emergent consequences.",
+      "requirement_id": "RCPW-09-R11",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Off-screen event resolution declares whether the outcome was fully simulated, abstractly resolved, deferred, or blocked awaiting higher fidelity.",
+      "requirement_id": "RCPW-09-R12",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative priority cannot violate canonical travel time, ownership, death, destruction, or other established causal facts without an explicit authored override event.",
+      "requirement_id": "RCPW-09-R13",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Competing narrative wells use deterministic arbitration and expose why one event received higher simulation authority.",
+      "requirement_id": "RCPW-09-R14",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization supports exterior/interior/portal transitions, including prewarming of destination geometry, navigation, physics, audio, and interaction state.",
+      "requirement_id": "RCPW-10-R11",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Animation pose, ragdoll/physics warm-start, vehicle suspension, and moving-platform state reconstruct without a visible first-frame discontinuity.",
+      "requirement_id": "RCPW-10-R12",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Navigation and collision readiness are mandatory before an entity becomes interactable.",
+      "requirement_id": "RCPW-10-R13",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Visibility uses fold-aware hierarchical occlusion while acoustics uses canonical propagation rules or an explicitly qualified approximation.",
+      "requirement_id": "RCPW-11-R11",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Weather, fog, smoke, cloud cover, night lighting, and atmospheric perspective may mask streaming but cannot become correctness dependencies.",
+      "requirement_id": "RCPW-11-R12",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Temporal rendering history is invalidated or transformed correctly when fold parameters, reference origins, portals, or shell representations change.",
+      "requirement_id": "RCPW-11-R13",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Replay tools can seek to canonical checkpoints and verify state digests without requiring full real-time rendering.",
+      "requirement_id": "RCPW-12-R12",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Recovery objectives declare maximum acceptable data loss, recovery time, and checkpoint age for each qualification profile.",
+      "requirement_id": "RCPW-12-R14",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell adaptation considers world-content complexity, expected interaction density, portal/interior proximity, and materialization backlog in addition to distance and speed.",
+      "requirement_id": "RCPW-13-R12",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Nested interior/portal spaces have explicit shell ownership and do not accidentally inherit exterior fold distortion.",
+      "requirement_id": "RCPW-13-R13",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Every representation compression declares semantic fidelity classes so critical gameplay facts cannot be summarized into ambiguous state.",
+      "requirement_id": "RCPW-14-R11",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Abstract simulation respects canonical time and event barriers; it may not skip through unresolved interaction-critical events.",
+      "requirement_id": "RCPW-14-R12",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "High-speed traversal predicts movement and camera look-ahead separately to reduce over-prefetch and preserve directional uncertainty.",
+      "requirement_id": "RCPW-15-R11",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Transport networks, tunnels, bridges, portals, and interiors receive route-aware prewarm rather than distance-only prewarm.",
+      "requirement_id": "RCPW-15-R12",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Emergency degradation exposes a measurable recovery path back to target fidelity after overload ends.",
+      "requirement_id": "RCPW-15-R14",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The extended world coordinate defines comparison/ordering semantics for each non-spatial component and explicitly rejects invalid mixed-unit operations.",
+      "requirement_id": "RCPW-16-R11",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Uncertainty/confidence attached to experimental mathematical mappings propagates into diagnostics and gate status.",
+      "requirement_id": "RCPW-16-R13",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Projection and update operators have golden vectors covering normal, boundary, invalid, overflow, NaN/Inf, and extreme-distance conditions.",
+      "requirement_id": "RCPW-16-R14",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Conflicting observers of the same remote event receive causally consistent outcomes even if presentation fidelity differs.",
+      "requirement_id": "RCPW-18-R12",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Speculative local work created for a temporary well is commit-gated or rollback-capable when the well expires or loses arbitration.",
+      "requirement_id": "RCPW-18-R14",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Indexes, summaries, and analytics are rebuildable derived products and never sole canonical authority.",
+      "requirement_id": "RCPW-19-R12",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialized historical evidence links back to the exact or aggregate causal records that justify its presence.",
+      "requirement_id": "RCPW-19-R14",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The final release gate executes the Golden World suite plus a content-scale worldbuilding scenario containing regions, settlements, interiors, ecology, economy, transport, weather, narrative wells, and persistent history.",
+      "requirement_id": "RCPW-20-R15",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Release promotion requires a rollback-tested package, risk disposition, reproducible build/test manifest, compatibility matrix, and explicit statement of which qualification profiles are actually OPERATIONAL.",
+      "requirement_id": "RCPW-20-R16",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical revisions distinguish world-content revision, runtime-state revision, schema revision, and simulation epoch.",
+      "requirement_id": "RCPW-01-R17",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical authority provides a content-addressed lookup path for immutable authored assets and a revisioned lookup path for mutable world state.",
+      "requirement_id": "RCPW-01-R18",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Camera-relative, actor-relative, vehicle-relative, and world-relative transforms are separately typed so accidental frame mixing is rejected.",
+      "requirement_id": "RCPW-02-R17",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-frame handoff across portals, moving platforms, and transport vehicles preserves velocity and interaction continuity according to declared frame semantics.",
+      "requirement_id": "RCPW-02-R18",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference diagnostics provide deterministic transform traces sufficient to reproduce any visible discontinuity.",
+      "requirement_id": "RCPW-02-R19",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Simulation LOD authority defines subsystem-specific fidelity contracts for AI, ecology, economy, weather, navigation, combat, transport, and narrative events.",
+      "requirement_id": "RCPW-04-R15",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Approximation debt is accumulated and repaid when an entity or region returns to higher fidelity, with bounded reconciliation work.",
+      "requirement_id": "RCPW-04-R18",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Persistent entities expose capability/ownership tokens or equivalent guards for mutation by AI, combat, inventory, transport, and mission systems.",
+      "requirement_id": "RCPW-05-R16",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Remote abstract resolutions record the model/version and fidelity class that produced the outcome.",
+      "requirement_id": "RCPW-06-R17",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecology qualification includes long-soak biodiversity, resource depletion/recovery, seasonal migration, and repeated individual\u2194cohort cycling.",
+      "requirement_id": "RCPW-07-R19",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Civilization/economy authority includes household, workplace, production-site, merchant, transport, and jurisdiction relationships in the canonical world graph.",
+      "requirement_id": "RCPW-08-R15",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Economic transactions are double-entry or equivalently conservation-auditable for money/inventory/value flows where applicable.",
+      "requirement_id": "RCPW-08-R16",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative gravity consumes explicit story/event metadata but does not own canonical facts such as death, travel, inventory, location, or destruction.",
+      "requirement_id": "RCPW-09-R15",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative authority supports event reservation so two authored/systemic events cannot simultaneously claim an exclusive actor/resource without arbitration.",
+      "requirement_id": "RCPW-09-R16",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Story/event conditions are evaluated against canonical state and ledger history rather than render presence.",
+      "requirement_id": "RCPW-09-R17",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Deferred narrative events carry expiration, escalation, and fallback semantics so off-screen blocking cannot deadlock the world.",
+      "requirement_id": "RCPW-09-R18",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization is driven by an explicit dependency graph covering geometry, collision, navigation, AI, animation, audio, inventory, interaction, and event bindings.",
+      "requirement_id": "RCPW-10-R15",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Partial readiness is machine-readable and interaction is permitted only when the required dependency subset is authoritative and ready.",
+      "requirement_id": "RCPW-10-R16",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization supports deterministic warm-start of moving actors/vehicles from canonical route phase, velocity, animation, and physics state.",
+      "requirement_id": "RCPW-10-R17",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Cancellation and eviction release derived resources in dependency-safe order while preserving canonical state and unresolved obligations.",
+      "requirement_id": "RCPW-10-R18",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Content-scale qualification measures p50/p95/p99 materialization latency, backlog recovery time, memory burst, I/O burst, and missed interaction deadlines.",
+      "requirement_id": "RCPW-10-R19",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Visibility/rendering consumes a world-compiler-produced hierarchy of regions, visibility cells, portals, landmarks, and fold-safe representation tiers.",
+      "requirement_id": "RCPW-11-R15",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rendering and audio use separate fidelity/budget policies while sharing canonical identity and event timing.",
+      "requirement_id": "RCPW-11-R16",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Temporal effects have explicit reset/reprojection rules for portal transitions, fold-parameter changes, origin rebases, teleports, and moving-frame handoffs.",
+      "requirement_id": "RCPW-11-R17",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Visual landmark substitution at extreme fold distance records canonical identity so materialization cannot swap one landmark for another.",
+      "requirement_id": "RCPW-11-R18",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes automated image/telemetry comparison for seam popping, landmark duplication, horizon inversion, temporal ghosting, and frame-time spikes.",
+      "requirement_id": "RCPW-11-R19",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Incremental checkpoints identify dirty canonical partitions and prove cross-partition consistency at the checkpoint barrier.",
+      "requirement_id": "RCPW-12-R17",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-soak qualification repeatedly checkpoints, crashes, recovers, migrates, and replays while measuring recovery time and storage growth.",
+      "requirement_id": "RCPW-12-R19",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-centric shells are emitted from or validated against world-compiler metadata for content density, portal complexity, route complexity, and expected materialization cost.",
+      "requirement_id": "RCPW-13-R15",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell policies reserve dedicated capacity for portals/interiors, moving transport, combat/event barriers, and recovery operations.",
+      "requirement_id": "RCPW-13-R16",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell qualification includes dense city, sparse wilderness, underground/interior, transport corridor, and rapid oscillation profiles.",
+      "requirement_id": "RCPW-13-R19",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "No-unload transitions have subsystem-specific conservation contracts for navigation progress, combat state, transport phase, economy obligations, ecology state, and narrative reservations.",
+      "requirement_id": "RCPW-14-R15",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Abstract state may use compressed representation, but unresolved exclusive ownership and event reservations remain exact.",
+      "requirement_id": "RCPW-14-R16",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Transition code supports versioned migration so representation formats may evolve without invalidating persistent identity.",
+      "requirement_id": "RCPW-14-R17",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Demotion may be rejected when required event barriers or dependencies make abstraction unsafe.",
+      "requirement_id": "RCPW-14-R18",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "High-speed traversal integrates route-aware prediction from canonical navigation graphs, not only velocity extrapolation.",
+      "requirement_id": "RCPW-15-R15",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Traversal prewarm treats portals, tunnels, bridges, stations, dense settlements, and scripted/event barriers as high-cost milestones.",
+      "requirement_id": "RCPW-15-R17",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Backpressure can reduce speculative look-ahead without delaying canonical transport or world time.",
+      "requirement_id": "RCPW-15-R18",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification covers mounts, fast ground transport, rail-like transport, vertical transport, portal travel, teleportation, and rapid reference switching.",
+      "requirement_id": "RCPW-15-R19",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Each extended-state component has a declared authority owner, update cadence, valid range, precision, and fallback when experimental mappings are disabled.",
+      "requirement_id": "RCPW-16-R16",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "8S-derived quantities are isolated behind adapter interfaces and can be disabled without changing canonical spatial/topological truth.",
+      "requirement_id": "RCPW-16-R17",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Mathematical qualification includes reference vectors, property tests, sensitivity analysis, and machine-readable mapping status for every runtime-connected term.",
+      "requirement_id": "RCPW-16-R19",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold-operator implementation exposes a canonical targeting service shared by interaction, navigation, audio landmarks, and debug tooling.",
+      "requirement_id": "RCPW-17-R15",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes randomized reference paths, moving landmarks, topology changes, portal crossings, and extreme entity density near fold horizons.",
+      "requirement_id": "RCPW-17-R19",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Presentation-only observers cannot acquire canonical mutation authority by merely increasing priority.",
+      "requirement_id": "RCPW-18-R18",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Historical reconstruction can regenerate material evidence while preserving a link to the source event model/version and uncertainty class.",
+      "requirement_id": "RCPW-19-R16",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The integrated architecture includes a deterministic world compiler that validates and emits canonical world metadata, dependency graphs, topology, content hashes, seeds, visibility/portal data, and runtime manifests.",
+      "requirement_id": "RCPW-20-R17",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The runtime kernel has a versioned service ABI defining canonical mutation, scheduler phases, ledger commit, LOD/fold planning, materialization, navigation, AI, environment, rendering views, save/replay, and diagnostics.",
+      "requirement_id": "RCPW-20-R18",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The final qualification executes a content-scale world containing wilderness, multiple settlements, interiors, transport networks, ecology, economy, law/reputation, weather, narrative events, persistent agents, and long-lived history under continuous folding.",
+      "requirement_id": "RCPW-20-R19",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The 5.0 promotion gate requires all mandatory QP/WQ gates, 40 Golden World scenarios, long-soak stability, rollback proof, world-package reproducibility, runtime ABI compatibility, and an explicit blocker ledger.",
+      "requirement_id": "RCPW-20-R21",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "A canonical-state verifier can validate identity uniqueness, topology closure, revision consistency, ledger correspondence, and partition ownership without rendering the world.",
+      "requirement_id": "RCPW-01-R24",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference frames remain deterministic when their source entities are simulated on different execution partitions or worker lanes.",
+      "requirement_id": "RCPW-02-R20",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Nested moving frames carry explicit tick/epoch stamps so stale frame transforms are rejected rather than interpolated as current truth.",
+      "requirement_id": "RCPW-02-R21",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-frame consumers can recover after worker/partition restart from canonical state plus deterministic scheduler history.",
+      "requirement_id": "RCPW-02-R22",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rebasing is coordinated with temporal render history, physics broadphase state, navigation caches, audio spatialization, and interaction targeting through explicit invalidation contracts.",
+      "requirement_id": "RCPW-02-R23",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference qualification includes adversarial handoff during partition migration, checkpointing, high-speed travel, and nested moving-frame transitions.",
+      "requirement_id": "RCPW-02-R24",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold qualification includes partition-boundary traversal, policy hot-swap rollback, acceleration-structure rebuild, and worker-loss recovery.",
+      "requirement_id": "RCPW-03-R24",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Approximation debt and promotion debt survive worker restart, checkpoint/recovery, and partition migration.",
+      "requirement_id": "RCPW-04-R23",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Entity references crossing partitions use stable canonical IDs and never rely on process-local pointers as authority.",
+      "requirement_id": "RCPW-05-R21",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Worker failure cannot orphan canonical ownership; recovery deterministically re-establishes authoritative ownership from committed state.",
+      "requirement_id": "RCPW-05-R22",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "High-volume transient evidence uses bounded retention/compaction without reusing canonical identities in a way that breaks historical references.",
+      "requirement_id": "RCPW-05-R23",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Persistence qualification includes forced worker loss during migration, ownership transfer, materialization, save, and ledger commit.",
+      "requirement_id": "RCPW-05-R24",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Event sequence/causal ordering remains reconstructible even when simulation work executes concurrently.",
+      "requirement_id": "RCPW-06-R21",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ledger replication or redundant persistence, where configured, uses explicit quorum/commit semantics and never treats an uncommitted replica as canonical.",
+      "requirement_id": "RCPW-06-R22",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecological regions may execute on different workers/partitions while migration and shared-resource boundaries use canonical transfer events.",
+      "requirement_id": "RCPW-07-R20",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Cohort split/merge across partition boundaries is deterministic and conservation-audited.",
+      "requirement_id": "RCPW-07-R21",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecological worker restart resumes from checkpoint plus ledger without population duplication or lost resource debt.",
+      "requirement_id": "RCPW-07-R22",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Economic worker restart cannot duplicate money, inventory, population, deliveries, or outstanding obligations.",
+      "requirement_id": "RCPW-08-R22",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Economy scale qualification includes concurrent settlements, partition migration, route disruption, worker loss, recovery, and ledger reconciliation.",
+      "requirement_id": "RCPW-08-R24",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative reservations and authority wells are globally arbitrated even when actors/events are simulated on different workers.",
+      "requirement_id": "RCPW-09-R20",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Exclusive actor/resource reservations use deterministic conflict resolution and survive partition migration/recovery.",
+      "requirement_id": "RCPW-09-R21",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative state read from a lagging partition is revision-checked before committing canonical story consequences.",
+      "requirement_id": "RCPW-09-R22",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Authored live-content updates cannot rewrite completed canonical history unless delivered as explicit versioned migration/retcon events.",
+      "requirement_id": "RCPW-09-R23",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative qualification includes hot content patch, worker restart, competing reservations, long off-screen deferral, and rollback.",
+      "requirement_id": "RCPW-09-R24",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Derived asset streaming failure cannot cause canonical entity deletion or ownership transfer.",
+      "requirement_id": "RCPW-10-R22",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rendering consumes immutable per-frame world-view snapshots or equivalent coherent views so parallel canonical updates cannot tear a visible frame.",
+      "requirement_id": "RCPW-11-R20",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Render workers may be decoupled from simulation workers, but presentation lag is measured and cannot be mistaken for canonical state.",
+      "requirement_id": "RCPW-11-R21",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold/LOD/reference metadata carried into rendering is version stamped so mixed-frame state is detected.",
+      "requirement_id": "RCPW-11-R22",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Asset/visual hot reload supports transactional frame-boundary activation and rollback without changing canonical identity.",
+      "requirement_id": "RCPW-11-R23",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Rendering qualification includes worker restart, asset version rollback, fold-policy change, origin rebase, portal crossing, and presentation backlog.",
+      "requirement_id": "RCPW-11-R24",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Checkpoint metadata records partition membership/ownership so recovery can remap partitions without changing canonical semantics.",
+      "requirement_id": "RCPW-12-R21",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Concurrent checkpoint and content-patch activation are serialized or coordinated by a declared compatibility protocol.",
+      "requirement_id": "RCPW-12-R22",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Headless replay can recover a multi-partition save into a different worker layout and reproduce canonical checkpoint digests.",
+      "requirement_id": "RCPW-12-R23",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Save qualification includes partial partition loss, incomplete replica, stale checkpoint fragment, remapping, migration, and repeated recovery.",
+      "requirement_id": "RCPW-12-R24",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World-shell scheduling can distribute shell/region workloads across workers while preserving one canonical shell/LOD decision trace.",
+      "requirement_id": "RCPW-13-R20",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Adaptive shell controllers consume globally coherent budget/backlog telemetry rather than inconsistent worker-local estimates for promotion decisions.",
+      "requirement_id": "RCPW-13-R21",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell saturation triggers deterministic admission/backpressure policies across workers.",
+      "requirement_id": "RCPW-13-R23",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes asymmetric worker capacity, worker loss, hot addition/removal of workers, and reference travel across migrated shell workloads.",
+      "requirement_id": "RCPW-13-R24",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Representation transitions may execute asynchronously, but source/target revisions and ownership tokens prevent stale transition completion from overwriting newer state.",
+      "requirement_id": "RCPW-14-R20",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Cross-partition transitions carry exact unresolved obligations and event reservations before old ownership is released.",
+      "requirement_id": "RCPW-14-R22",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes duplicate/reordered completion messages, retries, cancellations, partition moves, and crash at each transition phase.",
+      "requirement_id": "RCPW-14-R24",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Route milestones carry predicted arrival windows and priority classes for deterministic cross-worker prewarm.",
+      "requirement_id": "RCPW-15-R21",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Transport/reference wells can migrate execution ownership ahead of the player while preserving canonical route phase and passenger state.",
+      "requirement_id": "RCPW-15-R22",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Speculative prewarm is cancellable and resource-bounded; canonical simulation never waits on cosmetic asset fetch.",
+      "requirement_id": "RCPW-15-R23",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Traversal qualification includes cross-partition rail/road/portal travel, worker migration, packet/message delay simulation, and sudden direction reversal.",
+      "requirement_id": "RCPW-15-R24",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Experimental mathematical adapters cannot create divergent canonical results between worker layouts unless the profile explicitly marks the model nondeterministic/experimental.",
+      "requirement_id": "RCPW-16-R21",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Numeric types and reduction order for deterministic quantities are specified where parallel aggregation could change results.",
+      "requirement_id": "RCPW-16-R22",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Cross-worker floating-point reductions use deterministic ordering, compensated summation, fixed-point, or another declared equivalence strategy as required.",
+      "requirement_id": "RCPW-16-R23",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Mathematical qualification compares repeated runs across worker counts, partition layouts, long duration, and extreme-distance folds.",
+      "requirement_id": "RCPW-16-R24",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Fold-operator policy is distributed as immutable versioned configuration so all workers evaluating one canonical epoch use the same operator version.",
+      "requirement_id": "RCPW-17-R20",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical targeting never depends on which worker produced the visible representation.",
+      "requirement_id": "RCPW-17-R22",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Operator qualification includes heterogeneous workload placement, worker restart, policy rollback, and deterministic seam reconstruction.",
+      "requirement_id": "RCPW-17-R24",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Authority wells may move between workers without ending the underlying canonical event or resetting simulation fidelity debt.",
+      "requirement_id": "RCPW-18-R21",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Global reserve budgets protect canonical/event-barrier work when many wells compete.",
+      "requirement_id": "RCPW-18-R22",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Well state is checkpointed and recoverable so worker loss does not silently dismiss remote high-priority events.",
+      "requirement_id": "RCPW-18-R23",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes large well counts, cross-worker overlap, event reservations, transport wells, recovery, and deterministic replay.",
+      "requirement_id": "RCPW-18-R24",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes re-sharding, archive compaction, replica recovery, partial index loss, cross-version migration, and global causal query replay.",
+      "requirement_id": "RCPW-19-R24",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The integrated 6.0 architecture defines a sovereign world fabric that can run as one process or many deterministic workers without changing canonical world semantics.",
+      "requirement_id": "RCPW-20-R22",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The runtime includes deterministic partitioning/ownership, transactional cross-partition mutation, global ledger ordering, coherent checkpointing, worker recovery, and headless verification contracts.",
+      "requirement_id": "RCPW-20-R23",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The 6.0 promotion gate requires all mandatory QP/WQ gates, 60 Golden World scenarios, deterministic-parallel conformance, hot-patch/rollback qualification, re-partition recovery, long-soak/chaos evidence, and a complete unresolved-blocker ledger.",
+      "requirement_id": "RCPW-20-R26",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Canonical world history distinguishes world age, era, content generation epoch, and simulation epoch so later synthesis cannot silently rewrite earlier truth.",
+      "requirement_id": "RCPW-01-R26",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference transforms support astronomical/planetary-scale coordinate magnitudes through declared precision-tier or hierarchical-coordinate policy without changing local interaction precision.",
+      "requirement_id": "RCPW-02-R26",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference-local observations expose only information physically or narratively available to the observer rather than globally omniscient canonical state.",
+      "requirement_id": "RCPW-02-R27",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Reference transitions between surface, interior, underground, elevated, or other world layers use explicit topology and gravity/frame semantics.",
+      "requirement_id": "RCPW-02-R28",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "World expansion beyond the current horizon is admitted only through canonical world-generation transactions, never by render-time improvisation.",
+      "requirement_id": "RCPW-03-R27",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Simulation LOD includes ultra-long-horizon demographic, institutional, ecological, economic, and infrastructure representations for generational world evolution.",
+      "requirement_id": "RCPW-04-R25",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-horizon abstraction cannot resolve events whose outcome depends on unknown player-local information or unresolved high-fidelity barriers.",
+      "requirement_id": "RCPW-04-R26",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "LOD models expose temporal validity windows so coarse long-horizon predictions are invalidated/recomputed when canonical shocks exceed assumptions.",
+      "requirement_id": "RCPW-04-R27",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Approximation debt includes historical uncertainty and is reduced through re-simulation or evidence-backed reconstruction when a region becomes relevant again.",
+      "requirement_id": "RCPW-04-R28",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification compares short-step and long-horizon simulations over selected reference regions to quantify drift and acceptable semantic error.",
+      "requirement_id": "RCPW-04-R29",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Persistent identity never gets recycled after archival/death in a way that could collide with historical references.",
+      "requirement_id": "RCPW-05-R27",
+      "stage": 5,
+      "stage_title": "Entity Persistence Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Historical compaction records uncertainty and aggregation class rather than presenting compressed history as exact event detail.",
+      "requirement_id": "RCPW-06-R26",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Counterfactual/debug branches are isolated from canonical history and cannot leak mutations into the authoritative timeline.",
+      "requirement_id": "RCPW-06-R27",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Causal queries can identify both direct causes and historically inherited causes across generational/organizational succession.",
+      "requirement_id": "RCPW-06-R28",
+      "stage": 6,
+      "stage_title": "Causal Ledger Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecology supports long-term succession, habitat transformation, local extinction/reintroduction, resource regeneration, and climate/season coupling across world ages.",
+      "requirement_id": "RCPW-07-R25",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Ecological inheritance tracks persistent habitat changes caused by settlement growth, infrastructure, fire, resource depletion, and restoration.",
+      "requirement_id": "RCPW-07-R27",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes multi-era ecological succession, settlement expansion pressure, climate variation, region synthesis, archive, and later rehydration.",
+      "requirement_id": "RCPW-07-R29",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Demographics include household formation/dissolution, migration, births/creations, deaths/retirement, occupation transfer, and role succession with conservation/accounting rules.",
+      "requirement_id": "RCPW-08-R26",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes multi-generation town growth/decline, migration waves, infrastructure change, route-network evolution, and economic continuity after archival/rehydration.",
+      "requirement_id": "RCPW-08-R29",
+      "stage": 8,
+      "stage_title": "Civilization / Economy Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Narrative gravity distinguishes world-history significance from immediate player-story relevance so historically important remote changes may remain durable without consuming high local fidelity indefinitely.",
+      "requirement_id": "RCPW-09-R25",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Materialization can reconstruct temporally evolved settlements, infrastructure, agents, ecology, weather context, and visible historical evidence from long-horizon canonical state.",
+      "requirement_id": "RCPW-10-R25",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Visibility/rendering represents world age and historical change through canonical condition/state rather than static content assumptions.",
+      "requirement_id": "RCPW-11-R25",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Folded horizon rendering can summarize newly expanded world extent without exposing undefined or not-yet-canonical geography as interactable fact.",
+      "requirement_id": "RCPW-11-R26",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-distance landmark replacement reflects canonical construction/destruction/abandonment history and never resurrects obsolete landmarks from stale caches.",
+      "requirement_id": "RCPW-11-R27",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Historical presentation layers such as weathering, vegetation succession, infrastructure decay, and settlement growth remain derived from authoritative state/provenance.",
+      "requirement_id": "RCPW-11-R28",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification compares pre/post-era visual state, expansion-horizon continuity, archive rehydration, and stale-cache rejection.",
+      "requirement_id": "RCPW-11-R29",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Replay can verify long-horizon world evolution by canonical semantic checkpoints even when detailed historical telemetry has been compacted.",
+      "requirement_id": "RCPW-12-R28",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes ancient-save migration, world expansion after save, archival restoration, generational state, and headless multi-era replay.",
+      "requirement_id": "RCPW-12-R29",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Shell controllers reserve capacity for semantic rehydration before visual asset hydration when returning to historically evolved regions.",
+      "requirement_id": "RCPW-13-R27",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-horizon world processes may remain outside geometric shells but retain scheduled canonical updates according to world-evolution policy.",
+      "requirement_id": "RCPW-13-R28",
+      "stage": 13,
+      "stage_title": "Reference-Centric World Shells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Archival transitions declare irreversible losses, if any, and are prohibited from discarding information required for active quests, law, ownership, lineage, or deterministic recovery.",
+      "requirement_id": "RCPW-14-R26",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "High-speed traversal into newly generated or long-archived regions triggers semantic validation/rehydration ahead of ordinary visual prewarm.",
+      "requirement_id": "RCPW-15-R25",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Long-distance transport remains governed by canonical route history, including routes built, destroyed, abandoned, or restored across eras.",
+      "requirement_id": "RCPW-15-R27",
+      "stage": 15,
+      "stage_title": "High-Speed Traversal Fold / Unfold",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Penteract extended-state schema may encode world-age/history relevance only through explicitly typed components or adapters, never by overloading canonical spatial coordinates.",
+      "requirement_id": "RCPW-16-R25",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Experimental 8S/Penteract models used for long-horizon world evolution have validation against simpler reference models and publish divergence/error envelopes.",
+      "requirement_id": "RCPW-16-R26",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Historical uncertainty and reconstruction confidence are separate from canonical authority; low confidence cannot silently downgrade known exact historical facts.",
+      "requirement_id": "RCPW-16-R27",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes sensitivity of long-horizon fold/world-evolution outcomes to timestep, worker count, archive compaction, and model version.",
+      "requirement_id": "RCPW-16-R29",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Autonomous world wells have strict budgets, expiration/escalation rules, and cannot monopolize simulation indefinitely.",
+      "requirement_id": "RCPW-18-R26",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Historical or generational events spanning many agents/regions use hierarchical wells or equivalent aggregation rather than materializing every participant.",
+      "requirement_id": "RCPW-18-R27",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Well state survives era transition, archive/rehydration, repartition, and worker recovery when unresolved obligations remain.",
+      "requirement_id": "RCPW-18-R28",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Qualification includes simultaneous autonomous world events, multi-generation succession, player-created wells, and deterministic arbitration across archival boundaries.",
+      "requirement_id": "RCPW-18-R29",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "Requirement was applied to the design/traceability ledger but lacks a direct executable proof specific enough for OPERATIONAL status.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "Historical compaction maintains a proof boundary identifying which details are exact, aggregated, reconstructed, or permanently unavailable.",
+      "requirement_id": "RCPW-19-R26",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The runtime includes knowledge-locality, generational agent/institution succession, settlement/infrastructure evolution, long-horizon world simulation, archival compaction, and causal rehydration services.",
+      "requirement_id": "RCPW-20-R29",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The final qualification compares autonomous long-horizon evolution across deterministic worker layouts and validates that world expansion does not perturb prior canonical history outside declared mutations.",
+      "requirement_id": "RCPW-20-R30",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    },
+    {
+      "blocker": "A bounded hosted reference mechanism or contract exists, but the requirement exceeds the implemented local fidelity or qualification scope.",
+      "evidence_path": "world/evidence/qualification_summary.json",
+      "profile": "QP1/WQ2/AW1/WP1_SINGLE",
+      "requirement": "The 7.0 promotion gate requires all mandatory QP/WQ gates, 80 Golden World scenarios, autonomous-world conformance, era/archive/rehydration qualification, knowledge-locality tests, multi-generation soak evidence, and an explicit blocker/risk ledger.",
+      "requirement_id": "RCPW-20-R31",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "status": "PARTIAL"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "package": "BR-450-06",
+  "record": "BR.PackageRequirements",
+  "requirements": [
+    {
+      "evidence": [
+        "evidence/BR-450-06_audit.md",
+        "evidence/BR-450-06_tests.log"
+      ],
+      "id": "BR-450-06-R01",
+      "status": "OPERATIONAL",
+      "text": "Inject before candidate write"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-06_audit.md",
+        "evidence/BR-450-06_tests.log"
+      ],
+      "id": "BR-450-06-R02",
+      "status": "OPERATIONAL",
+      "text": "Inject during candidate write"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-06_audit.md",
+        "evidence/BR-450-06_tests.log"
+      ],
+      "id": "BR-450-06-R03",
+      "status": "OPERATIONAL",
+      "text": "Inject after candidate write"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-06_audit.md",
+        "evidence/BR-450-06_tests.log"
+      ],
+      "id": "BR-450-06-R04",
+      "status": "OPERATIONAL",
+      "text": "Inject before sync"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-06_audit.md",
+        "evidence/BR-450-06_tests.log"
+      ],
+      "id": "BR-450-06-R05",
+      "status": "OPERATIONAL",
+      "text": "Inject after sync"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-06_audit.md",
+        "evidence/BR-450-06_tests.log"
+      ],
+      "id": "BR-450-06-R06",
+      "status": "OPERATIONAL",
+      "text": "Inject during control write"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-06_audit.md",
+        "evidence/BR-450-06_tests.log"
+      ],
+      "id": "BR-450-06-R07",
+      "status": "OPERATIONAL",
+      "text": "Inject before rename"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-06_audit.md",
+        "evidence/BR-450-06_tests.log"
+      ],
+      "id": "BR-450-06-R08",
+      "status": "OPERATIONAL",
+      "text": "Inject after rename"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-06_audit.md",
+        "evidence/BR-450-06_tests.log"
+      ],
+      "id": "BR-450-06-R09",
+      "status": "OPERATIONAL",
+      "text": "Inject during first boot"
+    },
+    {
+      "evidence": [
+        "evidence/BR-450-06_audit.md",
+        "evidence/BR-450-06_tests.log"
+      ],
+      "id": "BR-450-06-R10",
+      "status": "OPERATIONAL",
+      "text": "Inject after first successful boot"
+    }
+  ],
+  "scope": "host-reference",
+  "status": "OPERATIONAL",
+  "title": "Power-loss injection",
+  "workflow": "docs/WORKFLOW_APPLIED_4.5.0/06_BR-450-06_power_loss_injection_PROMPT_AND_WORKFLOW.md"
+}

@@ -1,0 +1,15 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum:generic_project:59:shell:2.0.0",
+λ≡"quorum.generic_project.module.59.shell",
+ℛ≡{"0001":"module(\"quorum.generic_project.module.59.shell\")","0002":"learn(\"module_id\",literal(\"59\"))","0003":"learn(\"canonical_name\",literal(\"\\\"Shell\\\"\"))","0004":"learn(\"slug\",literal(\"\\\"shell\\\"\"))","0005":"learn(\"version\",literal(\"\\\"2.0.0\\\"\"))","0006":"learn(\"plane\",literal(\"\\\"operations_recovery\\\"\"))","0007":"learn(\"purpose\",literal(\"\\\"Three independent JA Operations Language scripts define approved command registration, command-policy enforcement, and bounded output streaming.\\\"\"))","0008":"learn(\"legacy_sha256\",literal(\"\\\"ae6a00263505cf3fc9f07f0890973b415ac53736bfaae5c88d1ff56398b42cb2\\\"\"))","0009":"learn(\"legacy_source_count\",literal(\"4\"))","0010":"learn(\"legacy_signals\",literal(\"[\\\"intent\\\",\\\"action\\\",\\\"PACKAGE\\\",\\\"VALIDATE\\\",\\\"AUTHORIZE\\\",\\\"EVALUATE\\\"]\"))","0011":"learn(\"maturity\",literal(\"\\\"L3_STRUCTURALLY_VERIFIED\\\"\"))","0012":"learn(\"claim_boundary\",literal(\"\\\"Native semantic/graph/LCTL structure is implemented and canonical-verified; module-specific legacy behavioral equivalence and production runtime effects remain unproven unless separately evidenced.\\\"\"))"},
+π≡[],
+δ≡12,
+τ≡0,
+μ≡{"learn.module_id":59,"learn.canonical_name":"Shell","learn.slug":"shell","learn.version":"2.0.0","learn.plane":"operations_recovery","learn.purpose":"Three independent JA Operations Language scripts define approved command registration, command-policy enforcement, and bounded output streaming.","learn.legacy_sha256":"ae6a00263505cf3fc9f07f0890973b415ac53736bfaae5c88d1ff56398b42cb2","learn.legacy_source_count":4,"learn.legacy_signals":["intent","action","PACKAGE","VALIDATE","AUTHORIZE","EVALUATE"],"learn.maturity":"L3_STRUCTURALLY_VERIFIED","learn.claim_boundary":"Native semantic/graph/LCTL structure is implemented and canonical-verified; module-specific legacy behavioral equivalence and production runtime effects remain unproven unless separately evidenced."},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},
+χ≡[],
+η≡{"events":[],"state":{"module_id":59,"canonical_name":"Shell","slug":"shell","version":"2.0.0","plane":"operations_recovery","purpose":"Three independent JA Operations Language scripts define approved command registration, command-policy enforcement, and bounded output streaming.","legacy_sha256":"ae6a00263505cf3fc9f07f0890973b415ac53736bfaae5c88d1ff56398b42cb2","legacy_source_count":4,"legacy_signals":["intent","action","PACKAGE","VALIDATE","AUTHORIZE","EVALUATE"],"maturity":"L3_STRUCTURALLY_VERIFIED","claim_boundary":"Native semantic/graph/LCTL structure is implemented and canonical-verified; module-specific legacy behavioral equivalence and production runtime effects remain unproven unless separately evidenced."}},
+ν≡{}
+,κ≡"sha256:6993cc4113bf9fe9bcf43c31057424db29f7fc4b348c3ccf9803b5c4cba9eb23"
+}⇒⊤

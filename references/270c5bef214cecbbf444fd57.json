@@ -1,0 +1,72 @@
+{
+  "decision": "OPERATIONAL",
+  "package": "BR-420-12",
+  "requirements": [
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-12_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: acceptance_hidden_semantic_metadata_eliminated",
+      "requirement": "Every production BRIM originates from verified LCTL",
+      "requirement_id": "BR-420-12-R01",
+      "result": "PASS",
+      "sha256": "03c5d4fa638ad96b2c98242a5d20a9e3031e1c908789aa6a2ee37e08f41e8543",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-12_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: acceptance_independent_brim_verifier",
+      "requirement": "Eliminate hidden semantic metadata interpretation",
+      "requirement_id": "BR-420-12-R02",
+      "result": "PASS",
+      "sha256": "03c5d4fa638ad96b2c98242a5d20a9e3031e1c908789aa6a2ee37e08f41e8543",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-12_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: acceptance_independent_rejects_invalid_brim",
+      "requirement": "Invalid programs fail before image creation",
+      "requirement_id": "BR-420-12-R03",
+      "result": "PASS",
+      "sha256": "03c5d4fa638ad96b2c98242a5d20a9e3031e1c908789aa6a2ee37e08f41e8543",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-12_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: acceptance_every_production_brim_tagged_verified_lctl",
+      "requirement": "Compiler and verifier agree",
+      "requirement_id": "BR-420-12-R04",
+      "result": "PASS",
+      "sha256": "03c5d4fa638ad96b2c98242a5d20a9e3031e1c908789aa6a2ee37e08f41e8543",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-12_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: acceptance_hidden_semantic_metadata_eliminated",
+      "requirement": "Independent verifier validates generated BRIM",
+      "requirement_id": "BR-420-12-R05",
+      "result": "PASS",
+      "sha256": "03c5d4fa638ad96b2c98242a5d20a9e3031e1c908789aa6a2ee37e08f41e8543",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "title": "Acceptance gate"
+}

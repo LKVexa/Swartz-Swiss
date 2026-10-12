@@ -1,0 +1,31 @@
+ja source 0.3
+module suite46.air_gap_certification_installer_plane.one_click_setup_transaction
+use Operations
+policy explicit_network
+
+workspace OneClickSetupTransaction {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 6 memory 12GB
+    network disabled
+    secret setup_key reference "vault://suite46/one-click-setup-transaction"
+    service SOPHIA_setup_intent replicas 1
+    health_check SOPHIA_setup_intent every 10s
+    service CHARLOTTE_setup_preflight replicas 1
+    health_check CHARLOTTE_setup_preflight every 10s
+    service LANDON_setup_transaction replicas 1
+    health_check LANDON_setup_transaction every 10s
+    service Professor_setup_report replicas 1
+    health_check Professor_setup_report every 10s
+    service Podium_setup_receipt replicas 1
+    health_check Podium_setup_receipt every 10s
+    service one_click_transaction_worker replicas 1
+    health_check one_click_transaction_worker every 5s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == true
+emit package "one_click_setup_transaction.msslb"

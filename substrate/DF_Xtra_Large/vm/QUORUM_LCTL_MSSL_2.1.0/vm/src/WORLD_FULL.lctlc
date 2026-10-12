@@ -1,0 +1,45 @@
+LCTLC/1.0
+@unit id=quorum.generic_project.vm.rcpw.world_full version=7.0.0 profile=native entry=F0000:V0001 target=hosted-reference-operational error_budget=0 resource_ceiling=world=bounded;network=denied proof=quorum:rcpw7:315
+@defaults qspace=H basis=computational regime=exact assume=finite_dimension error=exact conf=1.0
+@frame id=F0000 parent=ROOT module=quorum.generic_project.vm.rcpw.world_full proof=quorum:rcpw7:315
+ID│LANE│OP│OUT│CTRL│IN│ARG│META
+D0001│alloc│Q│q│_│_│1│res="logical_qubits=1";p=lctl:1.2
+D0002│alloc│C│c│_│_│1│res="classical_bits=1";p=lctl:1.2
+V0001│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=315│t=world_seed;p=quorum:rcpw7
+V0002│vm│REG│_│_│_│vm.op=SVC;svc=16│t=world_init;p=quorum:rcpw7
+V0003│vm│REG│_│_│_│vm.op=SVC;svc=32│t=canonical_verify;p=quorum:rcpw7
+V0004│vm│REG│_│_│_│vm.op=SVC;svc=33│t=coherent_snapshot;p=quorum:rcpw7
+V0005│vm│REG│_│_│_│vm.op=SVC;svc=34│t=scheduler_trace;p=quorum:rcpw7
+V0006│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=95│t=cpu_pressure;p=quorum:rcpw7
+V0007│vm│REG│_│_│_│vm.op=MOVI;dst=R1;imm=80│t=memory_pressure;p=quorum:rcpw7
+V0008│vm│REG│_│_│_│vm.op=MOVI;dst=R2;imm=70│t=io_pressure;p=quorum:rcpw7
+V0009│vm│REG│_│_│_│vm.op=MOVI;dst=R3;imm=120│t=materialization_backlog;p=quorum:rcpw7
+V0010│vm│REG│_│_│_│vm.op=SVC;svc=35│t=resource_governor;p=quorum:rcpw7
+V0011│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=12000│t=reference_x;p=quorum:rcpw7
+V0012│vm│REG│_│_│_│vm.op=MOVI;dst=R1;imm=500│t=reference_y;p=quorum:rcpw7
+V0013│vm│REG│_│_│_│vm.op=MOVI;dst=R2;imm=50│t=reference_z;p=quorum:rcpw7
+V0014│vm│REG│_│_│_│vm.op=SVC;svc=36│t=atomic_reference;p=quorum:rcpw7
+V0015│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=3│t=entity_id;p=quorum:rcpw7
+V0016│vm│REG│_│_│_│vm.op=SVC;svc=37│t=c2_fold_view;p=quorum:rcpw7
+V0017│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=1│t=economic_shock;p=quorum:rcpw7
+V0018│vm│REG│_│_│_│vm.op=SVC;svc=38│t=economy_transition;p=quorum:rcpw7
+V0019│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=1│t=crime_actor;p=quorum:rcpw7
+V0020│vm│REG│_│_│_│vm.op=SVC;svc=39│t=crime_law_transition;p=quorum:rcpw7
+V0021│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=6│t=materialize_entity;p=quorum:rcpw7
+V0022│vm│REG│_│_│_│vm.op=SVC;svc=40│t=materialize;p=quorum:rcpw7
+V0023│vm│REG│_│_│_│vm.op=SVC;svc=41│t=frame_view;p=quorum:rcpw7
+V0024│vm│REG│_│_│_│vm.op=SVC;svc=42│t=checkpoint;p=quorum:rcpw7
+V0025│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=3│t=transition_entity;p=quorum:rcpw7
+V0026│vm│REG│_│_│_│vm.op=MOVI;dst=R1;imm=2│t=target_lod;p=quorum:rcpw7
+V0027│vm│REG│_│_│_│vm.op=SVC;svc=43│t=transition;p=quorum:rcpw7
+V0028│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=3│t=rail_route;p=quorum:rcpw7
+V0029│vm│REG│_│_│_│vm.op=MOVI;dst=R1;imm=120│t=travel_speed;p=quorum:rcpw7
+V0030│vm│REG│_│_│_│vm.op=SVC;svc=44│t=traversal_plan;p=quorum:rcpw7
+V0031│vm│REG│_│_│_│vm.op=MOVI;dst=R0;imm=3│t=penteract_entity;p=quorum:rcpw7
+V0032│vm│REG│_│_│_│vm.op=SVC;svc=45│t=penteract_state;p=quorum:rcpw7
+V0033│vm│REG│_│_│_│vm.op=SVC;svc=46│t=history_archive;p=quorum:rcpw7
+V0034│vm│REG│_│_│_│vm.op=SVC;svc=47│t=semantic_graph;p=quorum:rcpw7
+V0035│vm│REG│_│_│_│vm.op=SVC;svc=26│t=invariants;p=quorum:rcpw7
+V0036│vm│REG│_│_│_│vm.op=HALT│t=halt;p=quorum:rcpw7
+C9999│terminal│.│_│_│_│terminal=sealed_graph_end;justification=canonical_entry_sentinel│p=lctl:nop
+@end

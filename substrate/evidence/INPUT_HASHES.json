@@ -1,0 +1,41 @@
+{
+  "schema": "VEC1/INPUT_PROVENANCE/1",
+  "created_utc": "2026-09-17T03:30:47.906827+00:00",
+  "inputs": {
+    "VEC1_Component_Checklists_1_110_v1.3.0_Audited_Hardened.zip": {
+      "sha256": "875b4276995757bd07f36db559f452ef4f6d8ac23fe7341ed4a5275972a24d3e",
+      "bytes": 63620144,
+      "source_name": "VEC1_Component_Checklists_1_110_v1.3.0_Audited_Hardened(1).zip"
+    },
+    "DF_Fabric.zip": {
+      "sha256": "68190339251b5faa98d16f010b400b97e182cd825e7ee29a5985cc662400c718",
+      "bytes": 608267,
+      "source_name": "DF_Fabric(5).zip"
+    },
+    "DF_Large.zip": {
+      "sha256": "7acac542729a118c58e02ad85918391a02d50f09aec04a1c07a9aa2e401e1ab9",
+      "bytes": 2067527,
+      "source_name": "DF_Large(20260917-032008).zip"
+    },
+    "DF_Medium.zip": {
+      "sha256": "7c57c6ce49f7ff4c492cc53c3177778d04adfa96f3a96525c57c3c9f4ef2cda4",
+      "bytes": 1211714,
+      "source_name": "DF_Medium(20260917-032007).zip"
+    },
+    "DF_Small.zip": {
+      "sha256": "d64085ac90f44b24196b0d0ed1b2859bb974723f8644a7258d1347550b9a5e07",
+      "bytes": 615735,
+      "source_name": "DF_Small(20260917-032007).zip"
+    },
+    "DF_Xtra_Large.zip": {
+      "sha256": "c0432c148083baf01cc8dbf159a5f742cf1f9b9d4780f89db5a0a8870fec9a83",
+      "bytes": 9573100,
+      "source_name": "DF_Xtra_Large(6).zip"
+    },
+    "DF_VM_Technical_Institute_v2.1.2.zip": {
+      "sha256": "869c73c23486a632058439505b64a4d00d2dbba9d315d49fd9dbc0fb9a89ec19",
+      "bytes": 134870,
+      "source_name": "DF_VM_Technical_Institute_v2.1.2(2).zip"
+    }
+  }
+}

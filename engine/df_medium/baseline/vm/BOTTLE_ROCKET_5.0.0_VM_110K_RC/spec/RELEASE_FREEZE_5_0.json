@@ -1,0 +1,24 @@
+{
+  "record": "BOTTLE_ROCKET.ReleaseFreeze/5.0.0",
+  "package_version": "5.0.0-qualification-candidate",
+  "qualification_overlay": true,
+  "frozen_runtime_contract": {
+    "columned_lctl": "LCTLC/1.1",
+    "brir": "BRIR/1.1",
+    "brim": "BRIM/1+BRPV/1",
+    "isa": "4.1",
+    "abi": "1.0",
+    "device_abi": "1.0",
+    "secure_manifest": "BRTM/1",
+    "persistence": "BRCR/1",
+    "guest_persistence": "BRGD/1",
+    "core_abi": "0x00040700"
+  },
+  "size_contracts": {
+    "core61_bytes": 61000,
+    "brim51_bytes": 51200,
+    "production_runtime_and_authority_source_bytes": 110000
+  },
+  "offline_by_default": true,
+  "promotion_rule": "OPERATIONAL only when every BR-500 atomic requirement has fresh PASS evidence; blocked external requirements must remain BLOCKED."
+}

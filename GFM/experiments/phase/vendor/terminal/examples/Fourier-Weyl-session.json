@@ -1,0 +1,208 @@
+{
+  "sha256": "b9b17e89dacc3e9cda789351047d180e78edc09695c8fcf1c7bcbea82e2b6d95",
+  "data": {
+    "schema": "RUSSL-virtual-session/1",
+    "version": "0.1.0",
+    "kind": "session",
+    "exportedAt": "2026-10-11T12:00:00.000Z",
+    "snapshot": {
+      "model": {
+        "schema": "RUSSL-finite-field-model/1",
+        "field": {
+          "id": "gf9",
+          "p": 3,
+          "n": 2,
+          "q": 9,
+          "polynomial": [
+            1,
+            0,
+            1
+          ],
+          "label": "GF(9)"
+        },
+        "labelEncoding": "integer = sum(c_i * p^i), polynomial coefficients low first",
+        "amplitudes": "complex floating point",
+        "fourierSign": "+2pi i",
+        "normalization": "1/sqrt(q)",
+        "character": "exp(2pi i Tr(x)/p)",
+        "tolerance": 1e-10,
+        "backend": "local browser JavaScript",
+        "physicalScope": "finite-dimensional complex-amplitude simulation"
+      },
+      "state": [
+        {
+          "re": 0.3333333333333333,
+          "im": 0
+        },
+        {
+          "re": -0.16666666666666663,
+          "im": 0.28867513459481287
+        },
+        {
+          "re": -0.16666666666666663,
+          "im": -0.28867513459481287
+        },
+        {
+          "re": -0.16666666666666666,
+          "im": 0.28867513459481287
+        },
+        {
+          "re": -0.16666666666666666,
+          "im": -0.28867513459481287
+        },
+        {
+          "re": 0.3333333333333333,
+          "im": 0
+        },
+        {
+          "re": -0.16666666666666666,
+          "im": -0.28867513459481287
+        },
+        {
+          "re": 0.3333333333333333,
+          "im": 0
+        },
+        {
+          "re": -0.16666666666666666,
+          "im": 0.28867513459481287
+        }
+      ],
+      "description": "Phase by 4",
+      "operations": 4,
+      "normSquared": 1
+    },
+    "records": [
+      {
+        "id": "rec-1-42a08399",
+        "sha256": "42a08399ef88263f8d97456ec9e64f49372142d29e99b6d5403e03246f8cd728",
+        "data": {
+          "schema": "RUSSL-research-record/1",
+          "kind": "gf-state",
+          "label": "GF9 Fourier / shift / phase reference",
+          "capturedAt": "2026-10-11T12:00:00.000Z",
+          "payload": {
+            "snapshot": {
+              "model": {
+                "schema": "RUSSL-finite-field-model/1",
+                "field": {
+                  "id": "gf9",
+                  "p": 3,
+                  "n": 2,
+                  "q": 9,
+                  "polynomial": [
+                    1,
+                    0,
+                    1
+                  ],
+                  "label": "GF(9)"
+                },
+                "labelEncoding": "integer = sum(c_i * p^i), polynomial coefficients low first",
+                "amplitudes": "complex floating point",
+                "fourierSign": "+2pi i",
+                "normalization": "1/sqrt(q)",
+                "character": "exp(2pi i Tr(x)/p)",
+                "tolerance": 1e-10,
+                "backend": "local browser JavaScript",
+                "physicalScope": "finite-dimensional complex-amplitude simulation"
+              },
+              "state": [
+                {
+                  "re": 0.3333333333333333,
+                  "im": 0
+                },
+                {
+                  "re": -0.16666666666666663,
+                  "im": 0.28867513459481287
+                },
+                {
+                  "re": -0.16666666666666663,
+                  "im": -0.28867513459481287
+                },
+                {
+                  "re": -0.16666666666666666,
+                  "im": 0.28867513459481287
+                },
+                {
+                  "re": -0.16666666666666666,
+                  "im": -0.28867513459481287
+                },
+                {
+                  "re": 0.3333333333333333,
+                  "im": 0
+                },
+                {
+                  "re": -0.16666666666666666,
+                  "im": -0.28867513459481287
+                },
+                {
+                  "re": 0.3333333333333333,
+                  "im": 0
+                },
+                {
+                  "re": -0.16666666666666666,
+                  "im": 0.28867513459481287
+                }
+              ],
+              "description": "Phase by 4",
+              "operations": 4,
+              "normSquared": 1
+            },
+            "commandProvenance": [
+              "gf.field gf9",
+              "gf.basis 1",
+              "gf.fourier",
+              "gf.shift 3",
+              "gf.phase 4",
+              "gf.verify"
+            ],
+            "verification": {
+              "field": "gf9",
+              "dimension": 9,
+              "stateNorm": 1,
+              "tolerance": 1e-10,
+              "residuals": {
+                "normalization": 0,
+                "fourierInverse": 6.206335383118183e-17,
+                "frobeniusCycle": 0,
+                "characterOrthogonality": 2.4671622769447922e-17,
+                "weyl": 6.206335383118183e-17
+              },
+              "checks": {
+                "normalization": {
+                  "residual": 0,
+                  "passed": true
+                },
+                "fourierInverse": {
+                  "residual": 6.206335383118183e-17,
+                  "passed": true
+                },
+                "frobeniusCycle": {
+                  "residual": 0,
+                  "passed": true
+                },
+                "characterOrthogonality": {
+                  "residual": 2.4671622769447922e-17,
+                  "passed": true
+                },
+                "weyl": {
+                  "residual": 6.206335383118183e-17,
+                  "passed": true
+                }
+              },
+              "passed": true
+            }
+          }
+        }
+      }
+    ],
+    "commandProvenance": [
+      "gf.field gf9",
+      "gf.basis 1",
+      "gf.fourier",
+      "gf.shift 3",
+      "gf.phase 4",
+      "gf.verify"
+    ],
+    "returns": []
+  }
+}

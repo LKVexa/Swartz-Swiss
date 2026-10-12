@@ -1,0 +1,50 @@
+deepml logic 0.3
+module repository.pencil.authors
+policy pure_by_default
+policy no_network
+
+type AuthorStatus = Proposed | Verified | Attributed | Rejected
+
+let minimum_attribution_score: Int = 90
+
+fn attribution_score(identity:Int, consent:Int, provenance:Int) -> Int =
+  (identity * 4) + (consent * 3) + (provenance * 3)
+
+predicate attribution_ready(score:Int) = score >= minimum_attribution_score
+
+knowledge_base PencilAuthors {
+  fact suite_assignment("SOPHIA", "semantic_judgment")
+  fact suite_assignment("CHARLOTTE", "structural_validation")
+  fact suite_assignment("LANDON", "repository_integration")
+  fact suite_assignment("PROFESSOR", "reviewable_explanation")
+  fact suite_assignment("PODIUM", "job_and_evidence_queue")
+  fact author("author_primary")
+  fact author_name("author_primary", "Primary Author")
+  fact author_role("author_primary", "originator")
+  fact identity_verified("author_primary")
+  fact attribution_consent("author_primary")
+  fact provenance_linked("author_primary", "artifact_source_001")
+  fact attribution_score_record("author_primary", 100)
+
+  rule qualified_author(A) :-
+    author(A),
+    identity_verified(A),
+    attribution_consent(A),
+    provenance_linked(A, Artifact),
+    attribution_score_record(A, Score),
+    attribution_ready(Score)
+
+  rule release_author(A) :-
+    qualified_author(A),
+    sophia_approved(A),
+    charlotte_validated(A),
+    landon_integrated(A),
+    professor_explained(A),
+    podium_evidence_complete(A)
+}
+
+query qualified_author(Author) strategy tabled
+plan PencilAuthorPlan goal authorship_verified actions [identify, verify, attribute, explain, evidence]
+certify logic PencilAuthors using proof_carrying
+optimize module using [beta_reduction, rule_indexing, common_subexpression_elimination, tabling, proof_normalization]
+lower module to DEEPML_LOGIC_R12

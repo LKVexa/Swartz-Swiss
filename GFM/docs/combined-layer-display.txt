@@ -1,0 +1,45 @@
+GFM COMBINED 3D DISPLAY CONTRACT - v2.0.2
+
+One snapshot supplies the electromagnetic, plasma and cover quantities.
+The two crossing axial slices reconstruct circumferentially uniform
+scalar fields from the existing r-z cells. They are display samples of
+the m=0 model, not a new general three-dimensional field calculation.
+
+WAVE SLICE
+Hue = relativeCarrierPhaseRad; brightness = envelopeAmplitudeVPerM on a
+fixed 0-100 V/m peak-amplitude reference. carrierPhaseValidMask excludes
+unresolved phase. The upstream TOTAL-field reference includes reflections.
+The causal Hann phase window has a group delay; its analysis time is
+displayed independently of the instantaneous snapshot time. At a 2 ns
+snapshot the default phase analysis is centred at approximately 1.8333 ns.
+
+PLASMA SLICE
+Color = plasmaTemperatureRiseK on a fixed 0-0.002 K range. A cell requires
+positive plasma fill and positive full-cell heat capacity. Heating is
+relative to the initial plasma temperature. Zero-density plasma has no
+temperature-rise sample. Color saturation is counted in the legend.
+
+AGGIE SURFACE
+Color = instantaneous joulePowerDensityWPerM3 = fc*sigma_c*Ephi^2,
+on a fixed 0-20 W/m3 range, adjustable through the cover scale upper input.
+The power density is normalized to the full numerical cell volume.
+Analytic stationary material surfaces sample actual intersected material
+cells. Cover temperature and liquid fraction remain separate reported
+quantities, rather than being inferred from deposition color.
+At covered 2 ns, maximum power density is about 17.60 W/m3 and maximum
+plasma heating is about 0.001242 K. Cover temperature rise is only about
+2.90e-14 K and liquid fraction remains zero. The pulse does not melt it.
+
+GEOMETRY AND OVERLAP
+All layers use the same metre-to-display coordinate transform. Neither
+electric amplitude nor thermal/liquid state displaces the material.
+Plasma and material masks can overlap in homogenized fractional cells;
+both responses remain represented there. Cover fraction prescribes the
+geometric clear mouth. Melting does not remove or open the cover.
+Cutaway and visibility controls affect rendering only. They do not remove
+matter, suppress a physical current, change source forcing or alter energy.
+Transparency is a display property, not calculated optical depth.
+
+The numerical equations, phase history and audit registry are unchanged.
+General-relativistic reference calculators and the independent neutral
+CGLE phase texture remain separate from this local Maxwell calculation.

@@ -1,0 +1,139 @@
+TAP version 13
+# Subtest: all backend engines and the preserved terminal retain the registered source bytes
+ok 1 - all backend engines and the preserved terminal retain the registered source bytes
+  ---
+  duration_ms: 126.2227
+  type: 'test'
+  ...
+# Subtest: shared exterior and distinct cover branches produce the declared default passage bits
+ok 2 - shared exterior and distinct cover branches produce the declared default passage bits
+  ---
+  duration_ms: 6.5937
+  type: 'test'
+  ...
+# Subtest: critical spin equality closes, cover equality seals, and raw zero GFM values remain valid
+ok 3 - critical spin equality closes, cover equality seals, and raw zero GFM values remain valid
+  ---
+  duration_ms: 5.852
+  type: 'test'
+  ...
+# Subtest: invalid parameters preserve the complete state and do not emit updates
+ok 4 - invalid parameters preserve the complete state and do not emit updates
+  ---
+  duration_ms: 3.5896
+  type: 'test'
+  ...
+# Subtest: play, pause, step and bounded export record real backend values without outside mutation
+ok 5 - play, pause, step and bounded export record real backend values without outside mutation
+  ---
+  duration_ms: 8.1748
+  type: 'test'
+  ...
+# Subtest: repeatable demo exposes sealed, open and low-spin-closed states and pauses at completion
+ok 6 - repeatable demo exposes sealed, open and low-spin-closed states and pauses at completion
+  ---
+  duration_ms: 29.3183
+  type: 'test'
+  ...
+# Subtest: play resumes the illustration clock after the scripted experiment has completed
+ok 7 - play resumes the illustration clock after the scripted experiment has completed
+  ---
+  duration_ms: 22.2845
+  type: 'test'
+  ...
+# Subtest: offline Kerr bundle contains unchanged inherited solver bytes and true loaded source hashes
+ok 8 - offline Kerr bundle contains unchanged inherited solver bytes and true loaded source hashes
+  ---
+  duration_ms: 4.7771
+  type: 'test'
+  ...
+# Subtest: browser module reproduces complete nonextremal, Schwarzschild, and extremal bundles exactly
+ok 9 - browser module reproduces complete nonextremal, Schwarzschild, and extremal bundles exactly
+  ---
+  duration_ms: 256.6351
+  type: 'test'
+  ...
+# Subtest: actual browser worker loads local assets only and returns the full deterministic solver result
+ok 10 - actual browser worker loads local assets only and returns the full deterministic solver result
+  ---
+  duration_ms: 54.6408
+  type: 'test'
+  ...
+# Subtest: worker input failures are explicit, correlated, and do not prevent a subsequent valid calculation
+ok 11 - worker input failures are explicit, correlated, and do not prevent a subsequent valid calculation
+  ---
+  duration_ms: 11.137
+  type: 'test'
+  ...
+# Subtest: an actual asynchronous worker executes the same browser-packaged core without a backend service
+ok 12 - an actual asynchronous worker executes the same browser-packaged core without a backend service
+  ---
+  duration_ms: 60.8274
+  type: 'test'
+  ...
+# Subtest: browser source retains independent Schwarzschild bending refinement and exterior guard behavior
+ok 13 - browser source retains independent Schwarzschild bending refinement and exterior guard behavior
+  ---
+  duration_ms: 54.6498
+  type: 'test'
+  ...
+# Subtest: browser source preserves unresolved critical and truncated trajectories rather than manufacturing capture
+ok 14 - browser source preserves unresolved critical and truncated trajectories rather than manufacturing capture
+  ---
+  duration_ms: 6.3793
+  type: 'test'
+  ...
+# Subtest: isolated DOM client receives real HTTP/SSE calculations, controls spin/cover, and displays raw GFM rows
+not ok 15 - isolated DOM client receives real HTTP/SSE calculations, controls spin/cover, and displays raw GFM rows
+  ---
+  duration_ms: 3116.0283
+  type: 'test'
+  location: 'D:\\Codex\\GFM-Blackhole-Console\\GFM\\experiments\\phase\\tests\\frontend.test.cjs:39:1'
+  failureType: 'testCodeFailure'
+  error: 'Timed out: initial API and event data'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    waitFor (D:\Codex\GFM-Blackhole-Console\GFM\experiments\phase\tests\frontend.test.cjs:22:159)
+    async fixture (D:\Codex\GFM-Blackhole-Console\GFM\experiments\phase\tests\frontend.test.cjs:35:3)
+    async TestContext.<anonymous> (D:\Codex\GFM-Blackhole-Console\GFM\experiments\phase\tests\frontend.test.cjs:40:11)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: isolated DOM playback, step, reset, demo and accessible data tabs route to the backend
+not ok 16 - isolated DOM playback, step, reset, demo and accessible data tabs route to the backend
+  ---
+  duration_ms: 3036.5725
+  type: 'test'
+  location: 'D:\\Codex\\GFM-Blackhole-Console\\GFM\\experiments\\phase\\tests\\frontend.test.cjs:52:1'
+  failureType: 'testCodeFailure'
+  error: 'Timed out: initial API and event data'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    waitFor (D:\Codex\GFM-Blackhole-Console\GFM\experiments\phase\tests\frontend.test.cjs:22:159)
+    async fixture (D:\Codex\GFM-Blackhole-Console\GFM\experiments\phase\tests\frontend.test.cjs:35:3)
+    async TestContext.<anonymous> (D:\Codex\GFM-Blackhole-Console\GFM\experiments\phase\tests\frontend.test.cjs:53:11)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: schematic WebGL geometry stays finite at zero, threshold, open and covered cases (GPU rendering unverified)
+ok 17 - schematic WebGL geometry stays finite at zero, threshold, open and covered cases (GPU rendering unverified)
+  ---
+  duration_ms: 89.2389
+  type: 'test'
+  ...
+# Subtest: research UI receives computed ray diagnostics and routes view/accuracy/inclination controls correctly
+not ok 18 - research UI receives computed ray diagnostics and routes view/accuracy/inclination controls correctly
+  ---
+  duration_ms: 3012.1191
+  type: 'test'
+  location: 'D:\\Codex\\GFM-Blackhole-Console\\GFM\\experiments\\phase\\tests\\frontend.test.cjs:75:1'
+  failureType: 'testCodeFailure'
+  error: 'Timed out: initial API and event data'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    waitFor (D:\Codex\GFM-Blackhole-Console\GFM\experiments\phase\tests\frontend.test.cjs:22:159)
+    async fixture (D:\Codex\GFM-Blackhole-Console\GFM\experiments\phase\tests\frontend.test.cjs:35:3)
+    async TestContext.<anonymous> (D:\Codex\GFM-Blackhole-Console\GFM\experiments\phase\tests\frontend.test.cjs:76:11)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...

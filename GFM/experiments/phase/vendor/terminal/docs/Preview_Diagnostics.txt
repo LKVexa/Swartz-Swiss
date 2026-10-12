@@ -1,0 +1,69 @@
+GFM TERMINAL — PREVIEW AND DATA DIAGNOSIS / PATCH 0.5.1
+
+The user reported that the Codex file preview displayed controls without
+producing results. This environment's browser automation rejects local-file
+URLs, so no live rendered browser check or preview-policy diagnosis is claimed.
+
+The actual delivered 0.5 HTML was parsed into its real IDs and script blocks
+and executed in an isolated browser-like JavaScript context. That check found
+no packaged startup failure. The actual button/form commands produced raw
+datasets, transforms, inverse recovery, exports and a ledger record. Those
+checks do not establish that a particular app preview executes scripts.
+
+Official OpenAI documentation says HTML files can have interactive previews
+when that feature is available. It does not establish the script behavior of
+the user's current preview. An absent script runtime is consistent with the
+reported visible controls and absent data, but is not proven by that report.
+Source: https://learn.chatgpt.com/docs/artifacts-viewer?surface=app
+
+WHAT PATCH 0.5.1 CHANGES
+
+The terminal now shows an engine readiness message above its live controls.
+Controls start disabled and become active only after all modules, renderers
+and event bindings complete. Startup errors display their message. If scripts
+do not execute at all, the waiting message and disabled controls remain visible.
+
+The expanded completed-example section is generated from an actual GFM
+calculation before the HTML is saved. It shows the equation, nine input values,
+GF9 trace coefficients, inverse-recovered values and measured error. It remains
+readable without JavaScript. It is labelled as saved data, not a live run.
+
+docs/Pendulum_Example.html is a separate document with no scripts or live
+controls. It shows the same completed calculation. Its CSV and JSON companions
+retain full numeric values. No browser session, local server or external
+deployment is required to read those files. New live calculations require the
+terminal's script runtime.
+
+TO RUN LIVE CALCULATIONS
+
+Extract the complete terminal package. In Windows File Explorer, open its
+folder and double-click Open-Terminal.cmd. This opens index.html in your
+regular browser. This manual opening route is provided for the user; the agent
+has not launched a different browser to bypass the rejected automation action.
+
+Check that the top message says the live GFM calculation engine is ready.
+Run sequence applies the default pendulum equation to raw GF9 samples.
+Enter gfm.verify to leave the recovery checks in Return Explorer. Details and
+JSON show the active result. Reapply equations evaluates the registered raw
+image and exterior-signal adapters with their original domains and scale.
+
+If the engine message stays pending, scripts have not completed startup there.
+If it shows an error, the exact displayed message identifies a startup failure.
+Report that message and the opening route to diagnose it further. Avoid judging
+data production from an unchanged last record receipt: the active dataset and
+its table contain the sample/coefficient values; the receipt describes storage.
+
+COMPATIBILITY
+
+This patch leaves the mathematical engines, source files, earlier saved
+examples, audit reports and dataset/session contracts unchanged. Product
+version is 0.5.1; the established 0.5.0 session envelope version is retained
+because its data format is unchanged. Original output releases are preserved.
+
+VERIFICATION
+
+The saved example was independently reconstructed in standard-library Python.
+The actual assembled page is tested in an isolated JavaScript/DOM context.
+These are calculation, startup and interaction checks, not rendered browser
+or actual download/iframe verification. See validation/ for the completed
+numeric checks and test output.

@@ -1,0 +1,62 @@
+deepml logic 0.3
+module repository.compass.priorities
+policy pure_by_default
+policy no_network
+
+type PriorityClass = Critical | High | Normal | Deferred
+
+let critical_threshold: Int = 90
+let high_threshold: Int = 70
+
+predicate critical_score(score:Int) = score >= critical_threshold
+predicate high_score(score:Int) = score >= high_threshold
+
+knowledge_base CompassPriorities {
+  fact suite_assignment("SOPHIA", "semantic_judgment")
+  fact suite_assignment("CHARLOTTE", "structural_validation")
+  fact suite_assignment("LANDON", "repository_integration")
+  fact suite_assignment("PROFESSOR", "reviewable_explanation")
+  fact suite_assignment("PODIUM", "job_and_evidence_queue")
+  fact priority("protect_evidence", 100)
+  fact priority("preserve_provenance", 98)
+  fact priority("enforce_policy", 95)
+  fact priority("validate_feasibility", 88)
+  fact priority("optimize_route", 78)
+  fact dependency_satisfied("protect_evidence")
+  fact dependency_satisfied("preserve_provenance")
+  fact dependency_satisfied("enforce_policy")
+  fact dependency_satisfied("validate_feasibility")
+  fact dependency_satisfied("optimize_route")
+  fact policy_allowed("protect_evidence")
+  fact policy_allowed("preserve_provenance")
+  fact policy_allowed("enforce_policy")
+  fact policy_allowed("validate_feasibility")
+  fact policy_allowed("optimize_route")
+
+  rule critical_priority(P) :-
+    priority(P, Score),
+    critical_score(Score)
+
+  rule high_priority(P) :-
+    priority(P, Score),
+    high_score(Score)
+
+  rule executable_priority(P) :-
+    high_priority(P),
+    dependency_satisfied(P),
+    policy_allowed(P)
+
+  rule release_priority(P) :-
+    executable_priority(P),
+    sophia_approved(P),
+    charlotte_validated(P),
+    landon_integrated(P),
+    professor_explained(P),
+    podium_evidence_complete(P)
+}
+
+query executable_priority(Priority) strategy tabled
+plan CompassPriorityPlan goal priorities_ordered actions [classify, score, validate_dependencies, schedule]
+certify logic CompassPriorities using proof_carrying
+optimize module using [beta_reduction, rule_indexing, common_subexpression_elimination, tabling, proof_normalization]
+lower module to DEEPML_LOGIC_R12

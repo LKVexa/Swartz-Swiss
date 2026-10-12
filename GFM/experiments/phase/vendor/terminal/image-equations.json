@@ -1,0 +1,116 @@
+{
+  "schema": "RUSSL-image-equations/1",
+  "version": "0.3.0",
+  "prepared": "2026-10-11",
+  "scope": "Direct transcription and domain audit of three supplied images. Ordinary reference identities, sampled complex profiles, Fourier basis changes and chosen exact field analogues are separate models. Surrounding post text and the unavailable 500-equation suite are outside this audit.",
+  "basisConvention": "F[k,x] = exp(2*pi*i*Tr(k*x)/p)/sqrt(q); positive sign; inverse F^dagger; finite-field labels with ordinary complex amplitudes.",
+  "transportContract": {
+    "vector": "y = F*v; v_returned = F^dagger*y; explicitly chosen samples; round-trip residual.",
+    "operator": "A_GFM = F*A*F^dagger; A_returned = F^dagger*A_GFM*F; complex matrix of dimension q; similarity and round-trip residuals.",
+    "finiteField": "A separately declared algebraic construction, with characteristic and denominator restrictions; no canonical reduction of real transcendental functions.",
+    "sourcePolicy": "Source images and formulas are inert reference content. Image hashes identify retained bytes and do not authenticate authorship."
+  },
+  "entries": [
+    {
+      "id": "image-pendulum",
+      "aliases": ["pendulum"],
+      "title": "Point-mass pendulum and small-angle frequency",
+      "sourcePath": "reference/image-equations/HQMFVPabcAArgH_.jpg",
+      "source": {
+        "path": "reference/image-equations/HQMFVPabcAArgH_.jpg",
+        "originalName": "HQMFVPabcAArgH_.jpg",
+        "sha256": "2d6f9bbdc99ab37a2a27c7b5331a78242193a6865d852ce0bea2d51468129a32",
+        "bytes": 128056,
+        "visibleAttribution": null,
+        "provenanceScope": "User-supplied image; no creator, date, license or surrounding post text inferred."
+      },
+      "status": "verified",
+      "domain": "Ordinary real point-mass mechanics; g>0, l>0, m>0; angle in radians; unforced and undamped. Frequency and period use the small-angle linear model.",
+      "formula": "-m*g*l*sin(theta)=m*l^2*theta_ddot; small-angle theta_ddot+(g/l)*theta=0; omega_n=sqrt(g/l); f_n=omega_n/(2*pi); T=2*pi*sqrt(l/g).",
+      "parsedEquations": [
+        {"id":"pendulum-1","latex":"\\sum M_A=I_A\\ddot{\\theta}","meaning":"Rotational equation about the fixed pivot A.","qualification":"Restoring moment sign follows the declared positive angular direction."},
+        {"id":"pendulum-2","latex":"-mg(\\sin\\theta)l=ml^2\\ddot{\\theta}","meaning":"Nonlinear gravity torque equals point-mass rotational inertia times acceleration.","qualification":"Point mass and massless rigid link; fixed pivot; no other torques."},
+        {"id":"pendulum-3","latex":"I_A=ml^2","meaning":"Point-mass inertia about A.","qualification":"An extended bob or massive link requires its actual moment of inertia."},
+        {"id":"pendulum-4","latex":"\\sin\\theta\\approx\\theta","meaning":"Small-angle approximation.","qualification":"Radians and small amplitude; not a global trigonometric identity."},
+        {"id":"pendulum-5","latex":"ml^2\\ddot{\\theta}+mgl\\theta=0","meaning":"Linearized equation before cancellation.","qualification":"Exact as a linear-model equation, approximate for the nonlinear pendulum."},
+        {"id":"pendulum-6","latex":"\\ddot{\\theta}+\\frac{g}{l}\\theta=0\\quad\\text{(I)}","meaning":"Linearized equation after division by ml^2.","qualification":"m and l are nonzero; g/l has units of inverse time squared."},
+        {"id":"pendulum-7","latex":"\\ddot{\\theta}+\\omega_n^2\\theta=0\\quad\\text{(II)}","meaning":"Standard undamped single-degree-of-freedom linear oscillator equation.","qualification":"The restoring coefficient is positive in the ordinary mechanical model."},
+        {"id":"pendulum-8","latex":"\\omega_n=\\sqrt{\\frac{g}{l}}\\;\\mathrm{rad/sec}","meaning":"Positive angular frequency.","qualification":"Small-angle model with g>0 and l>0."},
+        {"id":"pendulum-9","latex":"f_n=\\frac{\\omega_n}{2\\pi}=\\frac{1}{2\\pi}\\sqrt{\\frac{g}{l}}\\;\\mathrm{Hz}","meaning":"Cyclic frequency.","qualification":"Units follow from consistent length/time inputs."},
+        {"id":"pendulum-10","latex":"T=\\frac{1}{f_n}=2\\pi\\sqrt{\\frac{l}{g}}\\;\\mathrm{sec}","meaning":"Linear-model time period.","qualification":"Finite-amplitude nonlinear periods depend on amplitude."}
+      ],
+      "finding": "All displayed steps are correct for the ideal point-mass pendulum and its explicitly stated small-angle approximation.",
+      "evidence": "The exact nonlinear torque equation linearizes at theta=0. A complex sampled solution may be transformed and recovered by F. An exact field Verlet map is a distinct chosen algebraic analogue, with 2 invertible and no claim of real time or positive mechanical energy.",
+      "references": [
+        {"title":"MIT OCW: Physical Pendulum, section 24.1.1 and Appendix 24A","url":"https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/mit8_01scs22_chapter24.pdf"},
+        {"title":"MIT OCW: Nonlinear Dynamics, pendulum section 1.1","url":"https://ocw.mit.edu/courses/12-006j-nonlinear-dynamics-chaos-fall-2022/mit12_006jf22_lec4-5.pdf"}
+      ],
+      "adapters": [
+        {"kind":"ordinary-reference-and-sampled-profile","command":"model.pendulum 9.81 1 0.2","domain":"Ordinary real restoring-acceleration signal sampled on an angle grid, with linear frequency reference","scope":"Normalized signal encoding with source scale and grid metadata; trace-Fourier round trip; no time trajectory or predicted quantum wavefunction."},
+        {"kind":"exact-field-analogue","command":"model.oscillator 1 0 1 1 12","domain":"Odd-characteristic field coordinates","scope":"Reversible algebraic velocity-Verlet map; independent field parameters; no sine reduction or physical time conversion."}
+      ]
+    },
+    {
+      "id": "image-rotations",
+      "aliases": ["rotations"],
+      "title": "Three active right-handed axis rotations",
+      "sourcePath": "reference/image-equations/HKIRhAvaYAEyfhj.jpg",
+      "source": {
+        "path": "reference/image-equations/HKIRhAvaYAEyfhj.jpg",
+        "originalName": "HKIRhAvaYAEyfhj.jpg",
+        "sha256": "ddc477a36328e1c33639898ddb4d03720fe0c314929a1e5b5f691520a8068b90",
+        "bytes": 63895,
+        "visibleAttribution": "TheMathFlow",
+        "provenanceScope": "Visible creator label retained; no publication date, license or surrounding post text inferred."
+      },
+      "status": "verified",
+      "domain": "Ordinary real SO(3), active rotations of column vectors in a right-handed frame. Degree input is converted to radians before sine and cosine.",
+      "formula": "Rx=[[1,0,0],[0,c,-s],[0,s,c]]; Ry=[[c,0,s],[0,1,0],[-s,0,c]]; Rz=[[c,-s,0],[s,c,0],[0,0,1]]; c=cos(theta), s=sin(theta); displayed theta=232.75 degrees.",
+      "parsedEquations": [
+        {"id":"rotations-1","latex":"R_x(\\theta)=\\begin{pmatrix}1&0&0\\\\0&\\cos\\theta&-\\sin\\theta\\\\0&\\sin\\theta&\\cos\\theta\\end{pmatrix}","meaning":"Active rotation about x.","qualification":"Column-vector, right-handed convention; passive frame rotation is the transpose."},
+        {"id":"rotations-2","latex":"R_y(\\theta)=\\begin{pmatrix}\\cos\\theta&0&\\sin\\theta\\\\0&1&0\\\\-\\sin\\theta&0&\\cos\\theta\\end{pmatrix}","meaning":"Active rotation about y.","qualification":"An ordered product of rotations requires an explicit composition order."},
+        {"id":"rotations-3","latex":"R_z(\\theta)=\\begin{pmatrix}\\cos\\theta&-\\sin\\theta&0\\\\\\sin\\theta&\\cos\\theta&0\\\\0&0&1\\end{pmatrix}","meaning":"Active rotation about z.","qualification":"R(-theta)=R(theta)^T and determinant one in ordinary real arithmetic."},
+        {"id":"rotations-4","latex":"\\theta=232.75^{\\circ}","meaning":"Angle displayed in the image.","qualification":"This real angle is not a finite-field label or a rational-circle field parameter."}
+      ],
+      "finding": "The three matrices have correct active right-handed signs. The image supplies no Euler composition order.",
+      "evidence": "Each real axis matrix has R^T R=I and determinant one. The GF3-sized complex transform F R F^dagger is a unitary similarity, not a matrix over GF3. A separate exact field construction uses c=(1-u^2)/(1+u^2), s=2u/(1+u^2), excluding zero denominators; the projective parameter infinity gives c=-1, s=0.",
+      "references": [
+        {"title":"NASA/JPL NAIF: Rotation notation and coordinate-axis matrices","url":"https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/C/req/rotation.html"},
+        {"title":"A. Vourdas: trace-character Fourier formalism","url":"https://arxiv.org/abs/quant-ph/0605054"}
+      ],
+      "adapters": [
+        {"kind":"ordinary-reference-and-complex-basis-change","command":"model.rotate x 232.75","domain":"Real 3x3 axis rotation and complex GF3 Fourier basis","scope":"Requires GF3; applies (F R F^dagger)(F psi), then F^dagger to return R psi in the original basis; orthogonality, determinant and covariance/round-trip residuals."},
+        {"kind":"exact-field-analogue","command":"model.fieldrotate x 1 1 2 0","domain":"Odd-characteristic field quadratic form","scope":"Rational-circle parameter u with 1+u^2 nonzero, or explicit infinity case; no claim of reproducing the displayed real angle."}
+      ]
+    },
+    {
+      "id": "image-zeta-gamma",
+      "aliases": ["zeta-gamma"],
+      "title": "Zeta–gamma Mellin integral",
+      "sourcePath": "reference/image-equations/HJPJPQbaYAADLiP.jpg",
+      "source": {
+        "path": "reference/image-equations/HJPJPQbaYAADLiP.jpg",
+        "originalName": "HJPJPQbaYAADLiP.jpg",
+        "sha256": "952aa0ef699a34ed455c523000d0bcaa28aaab334229f334534a6e637eef7912",
+        "bytes": 294305,
+        "visibleAttribution": null,
+        "visibleCaption": "zeta-Gamma Relation",
+        "provenanceScope": "User-supplied image; caption retained; no creator, date, license or surrounding post text inferred."
+      },
+      "status": "verified",
+      "domain": "Ordinary complex s with Re(s)>1; real integration variable t>0 and t^(s-1)=exp((s-1)*log(t)).",
+      "formula": "zeta(s)*Gamma(s) = integral_0^infinity t^(s-1)/(exp(t)-1) dt, for Re(s)>1.",
+      "parsedEquations": [
+        {"id":"zeta-gamma-1","latex":"\\zeta(s)\\Gamma(s)=\\int_0^{\\infty}\\frac{t^{s-1}}{e^t-1}\\,dt\\quad\\text{for }\\Re(s)>1","meaning":"Mellin integral identity and its convergence half-plane.","qualification":"The unchanged integral diverges near zero when Re(s)<=1; analytic continuation requires a different representation."}
+      ],
+      "finding": "The displayed identity and convergence condition agree with NIST DLMF 25.5.1.",
+      "evidence": "The small-t integrand behaves as t^(s-2), and the large-t tail decays exponentially. A finite cutoff/quadrature and transformed sampled integrand are bounded numerical profiles. They are not finite-field zeta/Gamma functions and do not retain the improper-integral identity by a Fourier round trip.",
+      "references": [
+        {"title":"NIST DLMF 25.5.1: integral representation of Riemann zeta","url":"https://dlmf.nist.gov/25.5.E1"}
+      ],
+      "adapters": [
+        {"kind":"ordinary-reference-and-sampled-profile","command":"model.zeta 2","domain":"Real integer s=2..8; ordinary floating-point quadrature and complex samples","scope":"Declared finite sampling/cutoff, normalized signal encoding with source scale metadata, numerical comparison to ordinary zeta*Gamma and trace-Fourier round trip; no finite-field integral identity or predicted quantum wavefunction."}
+      ]
+    }
+  ]
+}

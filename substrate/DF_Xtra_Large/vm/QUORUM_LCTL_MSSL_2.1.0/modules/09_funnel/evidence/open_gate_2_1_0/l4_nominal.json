@@ -1,0 +1,111 @@
+{
+  "authority_sha256": "036812ffdbb250402fd95a87d0f4689c2b86cd901a3c2a3511183f5adae3fb7e",
+  "domain_output": {
+    "decision": {
+      "accepted": true,
+      "confidence": 0.679688,
+      "explanation": "Reference decision produced by Funnel under deterministic offline profile.",
+      "route": "funnel"
+    },
+    "input_type": "request/context",
+    "legacy_signals": [
+      "VALIDATE"
+    ],
+    "module": "Funnel",
+    "output_type": "decision/explanation",
+    "payload_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+    "plane": "intent_reasoning",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "4760b8982e95f77a0956d2e1973a0d5dc2747f0faab0fae81a164d78442174ca",
+  "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+  "module": "Funnel",
+  "module_id": 9,
+  "plane": "intent_reasoning",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "b805ec14940761cfacabf0462a73973b0cf66cbbf0c6bd2a6c0d068ea738c6cf",
+  "stage_count": 9,
+  "stages": [
+    {
+      "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "node": "N01",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "c703c0379979b77d5595cc4099817b7d64e805adf1f7c9caaa9bca446474ef8e",
+      "stage": "REQUEST"
+    },
+    {
+      "input_sha256": "c703c0379979b77d5595cc4099817b7d64e805adf1f7c9caaa9bca446474ef8e",
+      "node": "N02",
+      "operator": "RETRIEVE",
+      "output_sha256": "fd9b2385ea085ee61fac579f1ef27f1ee133a670b4031c2a3233cf5f6c9ea192",
+      "retrieved_count": 1,
+      "stage": "CONTEXT"
+    },
+    {
+      "input_sha256": "fd9b2385ea085ee61fac579f1ef27f1ee133a670b4031c2a3233cf5f6c9ea192",
+      "node": "N03",
+      "normalized_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "operator": "PARSE",
+      "output_sha256": "5654bf9132453c39f51b4b25ef3ce603149a110c1327c1d92a6d80ee8a1ba2bb",
+      "stage": "INTERPRET"
+    },
+    {
+      "decision": "REFERENCE_CONTINUE",
+      "input_sha256": "5654bf9132453c39f51b4b25ef3ce603149a110c1327c1d92a6d80ee8a1ba2bb",
+      "node": "N04",
+      "operator": "REASON",
+      "output_sha256": "e66afe81193e62530e331144f2771bbb13ab843205723b2593661980fa624675",
+      "score": 0.420098,
+      "stage": "REASON"
+    },
+    {
+      "accepted": true,
+      "input_sha256": "e66afe81193e62530e331144f2771bbb13ab843205723b2593661980fa624675",
+      "node": "N05",
+      "operator": "FILTER",
+      "output_sha256": "7559d5c863850856e82ffe011ab9a6f97819ee6223c4d1417be88a2f20fa0708",
+      "stage": "FILTER"
+    },
+    {
+      "input_sha256": "7559d5c863850856e82ffe011ab9a6f97819ee6223c4d1417be88a2f20fa0708",
+      "node": "N06",
+      "operator": "RANK",
+      "output_sha256": "57fa6998c4283a558469657de9ec596bcaf46b7272bd0d8c004947409d307c28",
+      "rank_score": 0.664706,
+      "stage": "RANK"
+    },
+    {
+      "input_sha256": "57fa6998c4283a558469657de9ec596bcaf46b7272bd0d8c004947409d307c28",
+      "node": "N07",
+      "operator": "VALIDATE",
+      "output_sha256": "8de8393b64c4bbe426fb9614b40f3e5dd332b262239372fc43c0e218707e0a63",
+      "stage": "VALIDATE",
+      "valid": true
+    },
+    {
+      "explanation": "Funnel:EXPLAIN reference semantics completed.",
+      "input_sha256": "8de8393b64c4bbe426fb9614b40f3e5dd332b262239372fc43c0e218707e0a63",
+      "node": "N08",
+      "operator": "EXPLAIN",
+      "output_sha256": "a5a073873a3ce1e5171dd6977857e791dc6315f0a1a93f5e0303d633c3273bb7",
+      "stage": "EXPLAIN"
+    },
+    {
+      "input_sha256": "a5a073873a3ce1e5171dd6977857e791dc6315f0a1a93f5e0303d633c3273bb7",
+      "node": "N09",
+      "operator": "RECORD",
+      "output_sha256": "90930e751e99f405642427f0c62d65f2246bd860ff85f76c76ea14ec44bf9352",
+      "receipt_sha256": "6ff90506786fdfd77d58bbd22a389cd763f2ace7dd3103df2bc7b264498133da",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

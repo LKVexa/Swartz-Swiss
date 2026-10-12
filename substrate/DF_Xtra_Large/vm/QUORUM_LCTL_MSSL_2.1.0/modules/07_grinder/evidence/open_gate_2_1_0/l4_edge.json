@@ -1,0 +1,132 @@
+{
+  "authority_sha256": "d22abcddbff484072a0001048c9d6e243fe9eb7b01af459e78772d7e873f8884",
+  "domain_output": {
+    "decision": {
+      "accepted": true,
+      "confidence": 0.269531,
+      "explanation": "Reference decision produced by Grinder under deterministic offline profile.",
+      "route": "grinder"
+    },
+    "input_type": "request/context",
+    "legacy_signals": [
+      "SophiaBaseline",
+      "CharlottePropose",
+      "LandonImprove",
+      "ProfessorCompare",
+      "PodiumPromote",
+      "SophiaObjective",
+      "CharlotteSearch",
+      "LandonOptimize",
+      "ProfessorAudit",
+      "PodiumSelect",
+      "SophiaPreserve",
+      "CharlotteFactor",
+      "LandonReduce",
+      "ProfessorEquivalence",
+      "PodiumAdmit",
+      "SophiaEvaluate",
+      "CharlotteCompare",
+      "LandonReplay",
+      "ProfessorHashAudit",
+      "PodiumRepeatGate",
+      "SophiaStress",
+      "LandonBound",
+      "ProfessorRiskAudit",
+      "PodiumStressGate"
+    ],
+    "module": "Grinder",
+    "output_type": "decision/explanation",
+    "payload_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "plane": "intent_reasoning",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "2692cfc559f976f7d9bacf4f897dc89a521c087f93a43bf73c47ed386eb43432",
+  "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "module": "Grinder",
+  "module_id": 7,
+  "plane": "intent_reasoning",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "400f665877b1faef319954b7d901e9a657caac3161af68359fb9e52223994be0",
+  "stage_count": 9,
+  "stages": [
+    {
+      "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "node": "N01",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "5e94e6f666d46896ad2c1961c26145697df7874c9b689a1428236ad30a211543",
+      "stage": "REQUEST"
+    },
+    {
+      "input_sha256": "5e94e6f666d46896ad2c1961c26145697df7874c9b689a1428236ad30a211543",
+      "node": "N02",
+      "operator": "RETRIEVE",
+      "output_sha256": "3e1469ae9953c5de19d49e0dd03d7699dbd6c95ddaa7135c12582c010d45fc90",
+      "retrieved_count": 0,
+      "stage": "CONTEXT"
+    },
+    {
+      "input_sha256": "3e1469ae9953c5de19d49e0dd03d7699dbd6c95ddaa7135c12582c010d45fc90",
+      "node": "N03",
+      "normalized_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "operator": "PARSE",
+      "output_sha256": "dd5fbbcd624dc4f8c60cee9626ff92b64097d9ffd34c34c923289a08c8051166",
+      "stage": "INTERPRET"
+    },
+    {
+      "decision": "REFERENCE_CONTINUE",
+      "input_sha256": "dd5fbbcd624dc4f8c60cee9626ff92b64097d9ffd34c34c923289a08c8051166",
+      "node": "N04",
+      "operator": "REASON",
+      "output_sha256": "ef97d4321a8797bf2185817d48e6e9c7c53fe297817e94423359f8eb68d54cf6",
+      "score": 0.504412,
+      "stage": "REASON"
+    },
+    {
+      "accepted": true,
+      "input_sha256": "ef97d4321a8797bf2185817d48e6e9c7c53fe297817e94423359f8eb68d54cf6",
+      "node": "N05",
+      "operator": "FILTER",
+      "output_sha256": "ffe7e4f1dcf12165008654ce5b4e607faca8ed0fb6d10c8a6b36a4b4438fdd58",
+      "stage": "FILTER"
+    },
+    {
+      "input_sha256": "ffe7e4f1dcf12165008654ce5b4e607faca8ed0fb6d10c8a6b36a4b4438fdd58",
+      "node": "N06",
+      "operator": "RANK",
+      "output_sha256": "11d14d4bfc8c550a200f5f940d4ef499a02d8aa78563c63e72362c5bb7d3bcd3",
+      "rank_score": 0.513725,
+      "stage": "RANK"
+    },
+    {
+      "input_sha256": "11d14d4bfc8c550a200f5f940d4ef499a02d8aa78563c63e72362c5bb7d3bcd3",
+      "node": "N07",
+      "operator": "VALIDATE",
+      "output_sha256": "b5367f2e76a9638eb1eacc9e65c74605dfd214e1bbf4da551d543231166462d7",
+      "stage": "VALIDATE",
+      "valid": true
+    },
+    {
+      "explanation": "Grinder:EXPLAIN reference semantics completed.",
+      "input_sha256": "b5367f2e76a9638eb1eacc9e65c74605dfd214e1bbf4da551d543231166462d7",
+      "node": "N08",
+      "operator": "EXPLAIN",
+      "output_sha256": "f9445c1d89324854536e92c7d40a4e4e2e045e758238370bb5a4a0f75163c4b6",
+      "stage": "EXPLAIN"
+    },
+    {
+      "input_sha256": "f9445c1d89324854536e92c7d40a4e4e2e045e758238370bb5a4a0f75163c4b6",
+      "node": "N09",
+      "operator": "RECORD",
+      "output_sha256": "2050ea57138135da4f07a3fd7aaadbd845d6b346ba6e98fee6780d385e296d68",
+      "receipt_sha256": "cc0a1f349330d67d9857965bacfac64711240f80211c8c2e84369f4faaa84967",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,31 @@
+ja source 0.3
+module suite46.air_gap_certification_installer_plane.certification_records
+use Operations
+policy explicit_network
+
+workspace CertificationRecords {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 4 memory 8GB
+    network disabled
+    secret certification_key reference "vault://suite46/certification-records"
+    service SOPHIA_certification_context replicas 1
+    health_check SOPHIA_certification_context every 10s
+    service CHARLOTTE_certification_gate replicas 1
+    health_check CHARLOTTE_certification_gate every 10s
+    service LANDON_certification_recorder replicas 1
+    health_check LANDON_certification_recorder every 10s
+    service Professor_certification_report replicas 1
+    health_check Professor_certification_report every 10s
+    service Podium_certification_receipt replicas 1
+    health_check Podium_certification_receipt every 10s
+    service certification_record_worker replicas 1
+    health_check certification_record_worker every 5s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == true
+emit package "certification_records.msslb"

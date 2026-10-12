@@ -1,0 +1,18 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.remediation.authority_wells:7.0.0-remediated-26",
+λ≡"quorum.rcpw.remediation.authority_wells",
+ℛ≡{
+  "0001":"learn(\"module\",literal(\"quorum.rcpw.remediation.authority_wells\"))",
+  "0002":"learn(\"version\",literal(\"RCPW-AUTHORITY-WELL-ARBITER/1\"))",
+  "0003":"learn(\"ordering\",literal(\"priority desc; created_tick asc; stable well id asc\"))",
+  "0004":"learn(\"independence\",literal(\"arrival/thread timing does not decide canonical winner\"))",
+  "0005":"learn(\"ownership\",literal(\"presentation priority and canonical mutation ownership are distinct\"))"
+},
+π≡[],δ≡5,τ≡0,
+μ≡{"learn.module":"quorum.rcpw.remediation.authority_wells","learn.version":"RCPW-AUTHORITY-WELL-ARBITER/1","learn.ordering":"priority desc; created_tick asc; stable well id asc","learn.independence":"arrival/thread timing does not decide canonical winner","learn.ownership":"presentation priority and canonical mutation ownership are distinct"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"learn.module":"quorum.rcpw.remediation.authority_wells","learn.version":"RCPW-AUTHORITY-WELL-ARBITER/1","learn.ordering":"priority desc; created_tick asc; stable well id asc","learn.independence":"arrival/thread timing does not decide canonical winner","learn.ownership":"presentation priority and canonical mutation ownership are distinct"}},
+ν≡{}
+,κ≡"sha256:4148ed127c1943e69b404c49ee6d553b18c9c64a8fa4da1c1236dca255709549"
+}⇒⊤

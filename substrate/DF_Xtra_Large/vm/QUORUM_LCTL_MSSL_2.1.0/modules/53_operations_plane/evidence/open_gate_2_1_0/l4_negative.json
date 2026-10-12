@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "6178597f14f101ee3728dd5c79726fab5deec39cec278f0ff1d2dc5d39b2f22f",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Operations Plane",
+  "module_id": 53,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

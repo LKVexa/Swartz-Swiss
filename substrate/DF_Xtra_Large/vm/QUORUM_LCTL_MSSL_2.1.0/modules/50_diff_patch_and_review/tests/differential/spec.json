@@ -1,0 +1,7 @@
+{
+  "module_id": 50,
+  "legacy_sha256": "a67bc5380e1cc7cb4942ed581afedb25512cf63fad993b7599666afc432fe7db",
+  "structural_signal_comparison": true,
+  "executable_legacy_comparison": false,
+  "blocker": "NO_BUNDLED_LEGACY_RUNTIME"
+}

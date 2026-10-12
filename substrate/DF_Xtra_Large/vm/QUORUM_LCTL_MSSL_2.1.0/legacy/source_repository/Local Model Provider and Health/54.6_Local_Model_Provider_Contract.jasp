@@ -1,0 +1,43 @@
+ja source 0.3
+module suite54.local_model_provider.provider_contract
+use Service
+policy explicit_network
+
+service LocalModelProviderContract {
+    message ProviderContractRequest {
+        request_id: Text,
+        provider_id: Text,
+        provider_descriptor_hash: Text,
+        request_schema_hash: Text,
+        response_schema_hash: Text,
+        protocol_version: Text,
+        serialization_format: Text,
+        local_transport: Text,
+        error_contract_hash: Text
+    }
+    message ProviderContractResponse {
+        contract_status: Text,
+        negotiated_version: Text,
+        admitted_capabilities: Text,
+        denied_capabilities: Text,
+        compatibility_evidence_hash: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_provider_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint validate(request: ProviderContractRequest) -> Stream<ProviderContractResponse>
+        auth capability local_model.provider.contract.validate
+        deadline 15s
+        retry max 1
+        idempotency request.request_id
+    protocol ProviderContractSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json LocalModelProviderContract.compatibility_report

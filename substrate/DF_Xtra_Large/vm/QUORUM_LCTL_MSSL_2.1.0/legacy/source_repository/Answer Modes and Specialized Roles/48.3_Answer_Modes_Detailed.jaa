@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.answer_modes.detailed
+use Agent
+policy no_network
+
+agent AnswerModeDetailed {
+    identity "answer_mode_detailed"
+    role "sophia-charlotte-landon-professor-podium-answer-mode"
+    goal emit_complete_structured_evidence_bound_answer when confidence >= 0.94
+    memory session retention 1h
+    budget steps 55 tools 5
+    tool LANDONCollectDetailedEvidence(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAModelDetailedAnswer(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateDetailedCoverage(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorComposeDetailedAnswer(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordDetailedAnswer(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectDetailedEvidence
+        authorize SOPHIAModelDetailedAnswer
+        authorize CHARLOTTEValidateDetailedCoverage
+        authorize ProfessorComposeDetailedAnswer
+        authorize PodiumRecordDetailedAnswer
+        continue when policy_allows
+        execute LANDONCollectDetailedEvidence("selected_request_scope")
+        execute SOPHIAModelDetailedAnswer("canonical_evidence_set")
+        execute CHARLOTTEValidateDetailedCoverage("candidate_detailed_answer")
+        execute ProfessorComposeDetailedAnswer("validated_detailed_answer")
+        execute PodiumRecordDetailedAnswer("detailed_answer_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "AnswerModeDetailed.mcrt"

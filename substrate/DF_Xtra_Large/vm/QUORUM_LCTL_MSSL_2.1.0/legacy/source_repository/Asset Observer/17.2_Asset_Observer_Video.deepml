@@ -1,0 +1,38 @@
+deepml core 0.3
+module suite17.asset_observer.video
+policy deterministic
+policy no_network
+policy no_execute_unknown_code
+policy stable_ids
+policy preserve_provenance
+
+module LANDON {
+  fn inspect(x: u8[batch,frames,height,width,channels]) -> f32[batch,frames,height,width,channels] = cast(x, f32)
+}
+module SOPHIA {
+  fn interpret(x: f32[batch,frames,height,width,channels]) -> f32[batch,frames,height,width,channels] = layer_norm(x)
+}
+module CHARLOTTE {
+  fn validate(x: f32[batch,frames,height,width,channels]) -> f32[batch,frames,height,width,channels] = identity(x)
+}
+module Professor {
+  fn explain(x: f32[batch,frames,height,width,channels]) -> f32[batch,frames,height,width,channels] = identity(x)
+}
+module Podium {
+  fn record(x: f32[batch,frames,height,width,channels]) -> f32[batch,frames,height,width,channels] = identity(x)
+}
+
+graph AssetObserverVideo train_infer {
+  source = input("approved_video_frame_tensor")
+  source_shape = shape(source)
+  inspected = LANDON.inspect(source)
+  interpreted = SOPHIA.interpret(inspected)
+  validated = CHARLOTTE.validate(interpreted)
+  explanation = Professor.explain(validated)
+  evidence = Podium.record(explanation)
+  scene_state = bind ja.portal.scene::SceneState(evidence)
+  timeline_state = bind mcrt.portal.timeline::TimelineState(evidence)
+}
+checkpoint "asset_observer_video" every 1 steps
+infer AssetObserverVideo -> evidence
+

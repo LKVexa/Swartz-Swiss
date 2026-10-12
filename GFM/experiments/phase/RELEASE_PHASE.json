@@ -1,0 +1,29 @@
+{
+  "schema": "GFM-phase-release/1",
+  "version": "3.0.0",
+  "scientificStatus": "Research prototype; local MHD/complex phase/material laws are not observationally validated",
+  "tests": {
+    "simulator": {
+      "passed": 62,
+      "failed": 0,
+      "skipped": 0,
+      "log": "validation/phase-release-tests.txt"
+    },
+    "preservedJA21": {
+      "passed": 202,
+      "failed": 0,
+      "skipped": 3,
+      "log": "validation/ja21-preserved-console-tests-utf8.txt",
+      "scope": "Original source/runtime integrity and legacy static/control-plane tests; native GFM GUI not tested"
+    }
+  },
+  "numericalEvidence": "validation/phase-numerical-results.json",
+  "numericalSourceSha256": "1a834a359572281279868c4dd29403b7a8dd13d2f386ccc9f214917048e30373",
+  "observationReport": "public/observation-report.json",
+  "observationHoldoutPassed": false,
+  "actualBrowserReplay": "validation/phase-browser-replay.json",
+  "nativeLauncher": "Statically parsed; lifecycle execution blocked by Windows script policy, no new bypass included",
+  "liveExample": "http://127.0.0.1:8788/phase-console.html",
+  "originalTerminalPreserved": true,
+  "historicalEvidence": "v1/v2 reports in validation refer to earlier releases; they do not validate the new phase laws."
+}

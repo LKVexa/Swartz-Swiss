@@ -1,0 +1,45 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 36,
+  "legacy_root": "legacy/source_repository/Visual Correction System",
+  "legacy_sha256": "444fd65739e67f9bf954f4a9784999ee38f22699d307c7607e28578c1cb4cae3",
+  "files": [
+    {
+      "path": "36.1_Visual_Correction_Defect_Detection.jate",
+      "sha256": "c763359dae655acc33ab9054cdf3b82779450c868669384a310fd5647daa6376",
+      "bytes": 942
+    },
+    {
+      "path": "36.2_Visual_Correction_Defect_Classification_and_Localization.jate",
+      "sha256": "1506dfb8521622c53cd89078d6fb811e5b24e0933404c1240f0bdadb18b8d567",
+      "bytes": 1104
+    },
+    {
+      "path": "36.3_Visual_Correction_Correction_Planning.jate",
+      "sha256": "bc061abb269d98a9d5ea37df3c26936fbb835993fb2fa97827e3b64612ad34b6",
+      "bytes": 991
+    },
+    {
+      "path": "36.4_Visual_Correction_Corrective_Render_Passes.jate",
+      "sha256": "9b1edc2343b58a8fd66a181980a2c0e7d5fd620626d9e22a6f050fbda59efad7",
+      "bytes": 1062
+    },
+    {
+      "path": "36.5_Visual_Correction_Corrective_Interaction_Passes.jate",
+      "sha256": "2aa92ef94c730fb78414ed25a0df30b0b6bc0fee0c9edd285042f149ec160b12",
+      "bytes": 1107
+    },
+    {
+      "path": "36.6_Visual_Correction_Verification_and_Rollback.jate",
+      "sha256": "04cf9175fb706a10bbc9f24a306f103ac650023aa0de525ca205c729f3759427",
+      "bytes": 1035
+    },
+    {
+      "path": "README.md",
+      "sha256": "a6196415d286630f4b7fbd88c22fbd00a18e16160c19685f02d18956a57ebb76",
+      "bytes": 15823
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

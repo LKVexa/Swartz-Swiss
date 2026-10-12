@@ -1,0 +1,78 @@
+{
+  "schema": "QVM-SPEC/1",
+  "name": "QUORUM Generic VM",
+  "release": "5.0.0-candidate",
+  "source_authority": "COLUMNED LCTL-C 1.0 with QVM instruction records",
+  "canonical_lctl_verifier": "bundled LCTL 1.6.1-RC1 column-verify",
+  "isa": {
+    "version": 1,
+    "opcode_count": 24
+  },
+  "abi": {
+    "version": 2,
+    "registers": 16,
+    "word_bits": 1048576,
+    "memory_bytes": 4096,
+    "stack_depth": 256
+  },
+  "arithmetic_modes": [
+    "modular",
+    "checked",
+    "saturating",
+    "exact"
+  ],
+  "image": {
+    "format": "QBRIM",
+    "version": 2,
+    "signature": "Ed25519"
+  },
+  "persistence": {
+    "scheme": "authenticated dual slot",
+    "control_record": "atomic replace",
+    "rollback_floor": true
+  },
+  "devices": {
+    "abi_version": 2,
+    "services": {
+      "0": "noop",
+      "1": "console-byte",
+      "2": "virtual-clock",
+      "3": "deterministic-prng",
+      "16": "world-init",
+      "17": "world-advance",
+      "18": "world-move-reference",
+      "19": "world-spawn",
+      "20": "world-entity-view",
+      "21": "world-expand-frontier",
+      "22": "world-archive-region",
+      "23": "world-rehydrate-region",
+      "24": "world-authority-well",
+      "25": "world-digest",
+      "26": "world-invariants",
+      "27": "world-knowledge",
+      "28": "world-succession",
+      "29": "world-partition-migrate",
+      "30": "world-inventory-transfer",
+      "31": "world-summary"
+    },
+    "apdu_max_bytes": 4096
+  },
+  "resource_limits": {
+    "program_instructions": 65535,
+    "default_steps": 1000000,
+    "guest_output_bytes": 4096
+  },
+  "network": "deny-by-default; no network device is implemented",
+  "qualification_scope": "host-reference VM; not bare-metal, self-hosted, 72-hour-soak, cross-platform, or independently audited production certification",
+  "world_extension": {
+    "version": "7.0.0-applied",
+    "schema": "QVM-RCPW-WORLD/1",
+    "source": "world/world_runtime.py",
+    "guest_demo": "src/WORLD_DEMO.lctlc",
+    "fold_policy": "rational-c1/1",
+    "shells": "S0-S8",
+    "lod": "L0-L8",
+    "world_service_abi": "2",
+    "claim_profile": "HOSTED_REFERENCE_WORLD"
+  }
+}

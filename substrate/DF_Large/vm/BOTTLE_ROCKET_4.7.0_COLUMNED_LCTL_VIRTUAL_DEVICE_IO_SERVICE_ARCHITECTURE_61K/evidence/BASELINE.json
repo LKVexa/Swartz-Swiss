@@ -1,0 +1,8 @@
+{
+  "input_archive_sha256": "49454fc017d10c4422ffb89111a78dea888e234c9a1079c7352571d11e1791e6",
+  "record": "BR.Baseline",
+  "release": "4.6.0",
+  "retained_baseline": "evidence/4.6.0-baseline",
+  "retained_source": "baseline/4.6.0",
+  "workflow_archive_sha256": "b969248b8a2bb811d8c8a5435083c7798d7013f0e4cfef09137a499677bf2c08"
+}

@@ -1,0 +1,21 @@
+deepml core 0.3
+module suite65.sandbox_engine.asset_intake_inspection
+policy deterministic
+policy no_network
+
+tensor asset_manifest: f32[1,8] = constant(0.0)
+tensor inspection_weight_a: f32[8,8] = variable(seed=6502)
+tensor inspection_weight_b: f32[8,8] = variable(seed=6503)
+graph AssetIntakeInspection {
+  SOPHIA = layer_norm(asset_manifest)
+  CHARLOTTE = relu(matmul(SOPHIA, inspection_weight_a))
+  LANDON = relu(matmul(CHARLOTTE, inspection_weight_b))
+  Professor = LANDON + SOPHIA
+  Podium = softmax(Professor)
+}
+infer AssetIntakeInspection -> Podium
+execute AssetIntakeInspection on cpu
+optimize AssetIntakeInspection using [constant_folding, algebraic_simplification, operator_fusion, common_subexpression_elimination, memory_planning, device_partitioning]
+lower AssetIntakeInspection to DEEPML_CORE_R12
+package model AssetIntakeInspection as "sandbox_engine_asset_inspection.msslb"
+certify graph AssetIntakeInspection profile strict

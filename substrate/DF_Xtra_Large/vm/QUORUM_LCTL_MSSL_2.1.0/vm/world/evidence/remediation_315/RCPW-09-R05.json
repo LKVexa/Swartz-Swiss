@@ -1,0 +1,43 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "ec656dc8db245f6d1ce1266f452e4ebea701ea96f16e0b2e8e2496f5c9131611",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (NARRATIVE_KNOWLEDGE) plus Stage 09 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "NARRATIVE_KNOWLEDGE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-04",
+    "GW-12",
+    "GW-35",
+    "GW-68",
+    "GW-69",
+    "GW-70"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Narrative gravity cannot mutate canonical story truth by itself.",
+  "requirement_id": "RCPW-09-R05",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 9,
+  "stage_title": "Narrative Gravity Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "NARRATIVE_KNOWLEDGE"
+  ],
+  "workflow_file": "09_NARRATIVE_GRAVITY_AUTHORITY/114_RCPW_09_R05_NARRATIVE_GRAVITY_CANNOT_MUTATE_CANONICAL_STORY_TRUTH_BY_ITSELF.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

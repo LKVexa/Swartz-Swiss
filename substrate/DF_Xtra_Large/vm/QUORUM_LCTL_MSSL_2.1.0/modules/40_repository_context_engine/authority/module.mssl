@@ -1,0 +1,15 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum:generic_project:40:repository_context_engine:2.0.0",
+λ≡"quorum.generic_project.module.40.repository_context_engine",
+ℛ≡{"0001":"module(\"quorum.generic_project.module.40.repository_context_engine\")","0002":"learn(\"module_id\",literal(\"40\"))","0003":"learn(\"canonical_name\",literal(\"\\\"Repository Context Engine\\\"\"))","0004":"learn(\"slug\",literal(\"\\\"repository_context_engine\\\"\"))","0005":"learn(\"version\",literal(\"\\\"2.0.0\\\"\"))","0006":"learn(\"plane\",literal(\"\\\"sense_context\\\"\"))","0007":"learn(\"purpose\",literal(\"\\\"Six independent JA Data Language scripts for repository context, symbols, dependencies, freshness, worktrees, and provenance.\\\"\"))","0008":"learn(\"legacy_sha256\",literal(\"\\\"75c3c7bef1e46f5aa23217c8582488ffbdfb871a77a61b765cd3dd3be1637ad6\\\"\"))","0009":"learn(\"legacy_source_count\",literal(\"13\"))","0010":"learn(\"legacy_signals\",literal(\"[\\\"PACKAGE\\\",\\\"VALIDATE\\\",\\\"INDEX\\\",\\\"COMPARE\\\"]\"))","0011":"learn(\"maturity\",literal(\"\\\"L3_STRUCTURALLY_VERIFIED\\\"\"))","0012":"learn(\"claim_boundary\",literal(\"\\\"Native semantic/graph/LCTL structure is implemented and canonical-verified; module-specific legacy behavioral equivalence and production runtime effects remain unproven unless separately evidenced.\\\"\"))"},
+π≡[],
+δ≡12,
+τ≡0,
+μ≡{"learn.module_id":40,"learn.canonical_name":"Repository Context Engine","learn.slug":"repository_context_engine","learn.version":"2.0.0","learn.plane":"sense_context","learn.purpose":"Six independent JA Data Language scripts for repository context, symbols, dependencies, freshness, worktrees, and provenance.","learn.legacy_sha256":"75c3c7bef1e46f5aa23217c8582488ffbdfb871a77a61b765cd3dd3be1637ad6","learn.legacy_source_count":13,"learn.legacy_signals":["PACKAGE","VALIDATE","INDEX","COMPARE"],"learn.maturity":"L3_STRUCTURALLY_VERIFIED","learn.claim_boundary":"Native semantic/graph/LCTL structure is implemented and canonical-verified; module-specific legacy behavioral equivalence and production runtime effects remain unproven unless separately evidenced."},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},
+χ≡[],
+η≡{"events":[],"state":{"module_id":40,"canonical_name":"Repository Context Engine","slug":"repository_context_engine","version":"2.0.0","plane":"sense_context","purpose":"Six independent JA Data Language scripts for repository context, symbols, dependencies, freshness, worktrees, and provenance.","legacy_sha256":"75c3c7bef1e46f5aa23217c8582488ffbdfb871a77a61b765cd3dd3be1637ad6","legacy_source_count":13,"legacy_signals":["PACKAGE","VALIDATE","INDEX","COMPARE"],"maturity":"L3_STRUCTURALLY_VERIFIED","claim_boundary":"Native semantic/graph/LCTL structure is implemented and canonical-verified; module-specific legacy behavioral equivalence and production runtime effects remain unproven unless separately evidenced."}},
+ν≡{}
+,κ≡"sha256:1cd00110140624b1ff18411d5be1a81b73683d3e93d78c6cf0df936bb05302e7"
+}⇒⊤

@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "70d22de8b8392b7ea4dcaaf2e8dd04998ae6b26c29cd6ab2ce10d3aae5e9da5c",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "App Designer",
+  "module_id": 35,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

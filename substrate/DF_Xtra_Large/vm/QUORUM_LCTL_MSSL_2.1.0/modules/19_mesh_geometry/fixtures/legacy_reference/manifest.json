@@ -1,0 +1,40 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 19,
+  "legacy_root": "legacy/source_repository/Mesh Geometry",
+  "legacy_sha256": "a31464e7e1b9da6d8072e2a9f734a17e29cb8abb6a3afa7f62e2bf36bd95d5e2",
+  "files": [
+    {
+      "path": "19.1_Mesh_Geometry_Geometric_Proxies.deepml",
+      "sha256": "1087bbb6276f27d99b806285daf7418611c0a1e815bba96f4fc21c00067f1244",
+      "bytes": 1813
+    },
+    {
+      "path": "19.2_Mesh_Geometry_Depth_Hypotheses.deepml",
+      "sha256": "f9826a1f07636ee65699dcdda3ca208a1bfcb30cf9cf84a16df84d5879814189",
+      "bytes": 1788
+    },
+    {
+      "path": "19.3_Mesh_Geometry_Topology.deepml",
+      "sha256": "09c7ad375ef0eefda208cd55da07c0705a3aa977ef9ed538fc21441fffb2feee",
+      "bytes": 1829
+    },
+    {
+      "path": "19.4_Mesh_Geometry_Camera_Coordinates.deepml",
+      "sha256": "df644725fa58c7a84b8ea860b876602b9bde39ada34f4770298c80bbcf2de472",
+      "bytes": 1911
+    },
+    {
+      "path": "19.5_Mesh_Geometry_Deformable_Meshes.deepml",
+      "sha256": "fb006c950affceb3f0a0305d9a1afc239d852af3f3ae38bf20ead6d98d191f94",
+      "bytes": 2017
+    },
+    {
+      "path": "README.md",
+      "sha256": "1d2fe56c738e4b5f5ef2580249401d478412097a8c3efe5c9cee8fb74d800abb",
+      "bytes": 10451
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

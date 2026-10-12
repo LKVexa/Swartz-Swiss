@@ -1,0 +1,39 @@
+ja source 0.3
+module suite31.vexxa.health_and_recovery
+use Service
+policy explicit_network
+
+service VexxaHealthAndRecovery {
+    message RecoveryRequest {
+        request_id: Text,
+        binding_id: Text,
+        health_snapshot_hash: Text,
+        checkpoint_id: Text,
+        expected_state_hash: Text,
+        recovery_mode: Text,
+        approval_receipt: Text
+    }
+    message RecoveryResponse {
+        health_status: Text,
+        recovery_plan: Text,
+        reconciled_state_hash: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_infrastructure_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint recover(request: RecoveryRequest) -> Stream<RecoveryResponse>
+        auth capability vexxa.infrastructure.recover
+        deadline 40s
+        retry max 0
+        idempotency request.request_id
+    protocol RecoverySession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json VexxaHealthAndRecovery.compatibility_report

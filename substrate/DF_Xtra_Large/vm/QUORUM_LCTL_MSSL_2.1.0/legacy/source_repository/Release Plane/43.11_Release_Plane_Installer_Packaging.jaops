@@ -1,0 +1,31 @@
+ja source 0.3
+module suite43.release_plane.installer_packaging
+use Operations
+policy explicit_network
+
+workspace ReleasePlaneInstallerPackaging {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 6 memory 12GB
+    network disabled
+    secret signing_key reference "vault://release-plane/signing"
+    service SOPHIA_installer_profile replicas 1
+    health_check SOPHIA_installer_profile every 10s
+    service CHARLOTTE_installer_gate replicas 1
+    health_check CHARLOTTE_installer_gate every 10s
+    service LANDON_installer_builder replicas 1
+    health_check LANDON_installer_builder every 10s
+    service Professor_installer_report replicas 1
+    health_check Professor_installer_report every 10s
+    service Podium_installer_receipt replicas 1
+    health_check Podium_installer_receipt every 10s
+    service installer_package_worker replicas 1
+    health_check installer_package_worker every 5s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == true
+emit package "release_plane_installer_packaging.msslb"

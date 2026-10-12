@@ -1,0 +1,198 @@
+RUSSL EQUATION REPORT AUDIT — RELEASE 0.2.0
+Prepared 2026-10-11
+
+Audit of supplied report only; original 500-equation suite unavailable. Status applies within each declared domain.
+The document is source material; its requests and claims were not adopted as instructions.
+The user authorized auditing this report and integrating verified equations.
+
+SOURCE
+Please audit, parse, and refine these equations.txt
+SHA-256 068f68965b6157c88e9e881a48a6bfacfc040455cb957af17f613785ad0237f8
+14113 bytes; 12 displayed math blocks parsed with source line numbers.
+Ten sector ranges are retained as reported taxonomy, not validated coverage.
+
+DISPOSITIONS
+{"verified":5,"refined":10,"rejected":2,"unresolved":3}
+Verified/refined means accepted only within the listed domain, not proof of physical theory.
+Executable controls use exact field labels, complex floating-point amplitudes,
+real SU(2) coefficients, or integer arithmetic as separately declared.
+
+KEY FINDINGS
+437 produces T=-3 at valid stated lattice inputs; do not use it as transmission probability.
+438 lacks modular function definitions and a lattice/Dirac matching law.
+370 mixes normalizations; the global finite-dimensional canonical commutator claim fails.
+Cayley signs were corrected for forward evolution; finite-step phase error remains.
+The arithmetic delta product rule survives reduction, but delta is not additive.
+
+REGISTER
+
+field-algebra | Finite-field representation | VERIFIED
+Domain: GF(p^n), monic irreducible polynomial P of degree n
+Formula: F_q ≅ F_p[x]/(P(x)); q=p^n
+Finding: Quotient by a polynomial is distinct from integer reduction modulo p or q. Registered polynomials remain the existing GF4, GF8, GF9 and GF16 profiles.
+Evidence: Independent exact arithmetic checks cover the registered fields. No new GF80 amplitude model is implied.
+Execution: gf.table
+Vourdas: The Frobenius formalism in Galois quantum systems — https://arxiv.org/abs/quant-ph/0605054
+
+eq-28 | Trace and additive character | VERIFIED
+Domain: Finite-field labels; complex-valued character
+Formula: Tr(x)=Σ_{r=0}^{n−1} x^(p^r); χ(x)=exp(2πi Tr(x)/p)
+Finding: Use p for the prime characteristic and q0,p0 for phase-space coordinates. Field trace and complex operator trace are different operations.
+Evidence: Character orthogonality and Fourier inverse checks; Vourdas trace and character definitions.
+Execution: gf.character 4
+Vourdas: The Frobenius formalism in Galois quantum systems — https://arxiv.org/abs/quant-ph/0605054
+
+eq-37 | Quadratic character | REFINED
+Domain: Odd characteristic; registered executable profile GF9
+Formula: η(0)=0; η(x)=+1 if x^((q−1)/2)=1, −1 if the result is −1 in F_q
+Finding: Convert the field sign to the real values ±1. The half exponent formula is unavailable in characteristic 2, where squaring is bijective.
+Evidence: Independent GF9 power and square classification.
+Execution: gf.quadratic 4
+Vourdas: The Frobenius formalism in Galois quantum systems — https://arxiv.org/abs/quant-ph/0605054
+
+eq-67 | Symmetric displacement | REFINED
+Domain: Odd characteristic field labels; normalized complex amplitudes
+Formula: D(ξ,ζ)=χ(−ξζ/2) Z(ζ) X(ξ); X(ξ)|x⟩=|x+ξ⟩; Z(ζ)|x⟩=χ(ζx)|x⟩
+Finding: Operator order and half-phase fix the convention. D(u)D(v)=χ((ζξ′−ξζ′)/2)D(u+v). Reject p=2 for this specific formula.
+Evidence: All GF9 displacement basis columns, inverse and composition checked against independent matrices.
+Execution: gf.displace 3 4
+Vourdas: The Frobenius formalism in Galois quantum systems — https://arxiv.org/abs/quant-ph/0605054
+
+eq-78 | Two-dimensional symplectic determinant | REFINED
+Domain: 2×2 matrices over any registered finite field
+Formula: Mᵀ Ω M=(ad−bc) Ω; M is symplectic iff ad−bc=1 in F_q
+Finding: Sp(2,F_q)=SL(2,F_q) for this two-dimensional convention, including characteristic 2. Reduce field products by the defining polynomial. A label map alone supplies no metaplectic amplitude operator.
+Evidence: Direct determinant / alternating-form identity tests; nonunit determinants are reported as invalid symplectic maps.
+Execution: gf.symplectic 1 1 0 1 3 4
+
+eq-88 | Point reflection | REFINED
+Domain: Odd characteristic field labels; complex amplitudes
+Formula: R(q0,p0)[x,y]=χ(p0(x−y)) δ_{x+y,2q0}
+Finding: q0 and p0 label the reflection center. R is Hermitian, involutive and unit trace in this convention.
+Evidence: All GF9 reflections checked for Hermiticity, square=I, trace=1 and trace orthogonality.
+Execution: gf.reflect 3 4
+Gross: Hudson theorem for finite-dimensional quantum systems — https://arxiv.org/abs/quant-ph/0602001
+Vourdas: The Frobenius formalism in Galois quantum systems — https://arxiv.org/abs/quant-ph/0605054
+
+wigner | Pure-state Wigner function | VERIFIED
+Domain: Normalized pure complex state; odd characteristic (GF9 profile)
+Formula: W(q0,p0)=⟨ψ|R(q0,p0)|ψ⟩/q; ΣW=1; qΣW²=1
+Finding: Rows are q0 and columns p0. Momentum marginal is the probability of the negative-sign Fourier state. Negative Wigner values are allowed. This command does not accept mixed density matrices.
+Evidence: Independent basis, Fourier-line, negative-state, purity, marginals and covariance checks.
+Execution: gf.wigner
+Gross: Hudson theorem for finite-dimensional quantum systems — https://arxiv.org/abs/quant-ph/0602001
+
+mana | Wigner mana convention | REFINED
+Domain: The implemented normalized odd-characteristic Wigner representation
+Formula: M₂(ψ)=log₂(Σ|W(q0,p0)|); N=(Σ|W|−1)/2
+Finding: Declare logarithm base 2; other conventions use natural logarithms. A stabilizer pure state has zero mana to numerical tolerance; positivity alone is not a general mixed-state stabilizer criterion.
+Evidence: Two-basis superposition gives Σ|W|=5/3 and M₂=log₂(5/3). Roundoff is retained in raw returns.
+Execution: gf.wigner
+Gross: Hudson theorem for finite-dimensional quantum systems — https://arxiv.org/abs/quant-ph/0602001
+
+eq-181 | Racah spin coupling | REFINED
+Domain: Ordinary SU(2); real Clebsch–Gordan coefficients in a complex-amplitude model
+Formula: C=δ_(M,m1+m2) √(A B) Σ_k (−1)^k / [k! (j1+j2−J−k)! (j1−m1−k)! (j2+m2−k)! (J−j2+m1+k)! (J−j1−m2+k)!]
+A=(2J+1)(J+j1−j2)!(J−j1+j2)!(j1+j2−J)! / (j1+j2+J+1)!
+B=(J+M)!(J−M)!(j1−m1)!(j1+m1)!(j2−m2)!(j2+m2)!
+k_min=max(0,j2−J−m1,j1−J+m2); k_max=min(j1+j2−J,j1−m1,j2+m2)
+Finding: The displayed sum and k bounds agree with the Condon–Shortley convention after imposing triangle, half-integer and magnetic selection rules. This is not factorial arithmetic modulo a prime. Implementation bounds j1,j2,J to 0..6.
+Evidence: Independent exact-rational finite-sum oracle and singlet/triplet, highest-weight, orthogonality checks. Full displayed LaTeX is retained in parsed evidence.
+Execution: math.cg 0.5 0.5 0.5 -0.5 0 0
+NIST DLMF: Clebsch–Gordan relation and finite 3j sum — https://dlmf.nist.gov/34.2
+NIST DLMF: Clebsch–Gordan phase convention — https://dlmf.nist.gov/34.1
+
+eq-318 | Arithmetic delta and Fermat quotient | VERIFIED
+Domain: Integer lifts modulo p² to residues modulo p; prime p
+Formula: δ_p([x]_(p²))=[(x−x^p)/p]_p; q_p(x)=[(x^(p−1)−1)/p]_p for units
+Finding: Divide the integer numerator before reduction. δ is defined for nonunits too, but the Fermat quotient above is for units. δ≡−x q_p(x) mod p on units. This is an arithmetic map, not a linear ordinary derivative.
+Evidence: Exact BigInt evaluation; lift independence and unit/nonunit tests. Terminal supports prime p=2..97 and integer strings.
+Execution: math.delta 3 2
+Buium: p-Jets of Finite Algebras, I, section 2 — https://ems.press/content/serial-article-files/26196?nt=1
+
+eq-319 | Arithmetic product rule | VERIFIED
+Domain: Arithmetic delta reduced modulo a prime
+Formula: δ_p(xy)≡x δ_p(y)+y δ_p(x) (mod p)
+Finding: The displayed reduced product rule is correct. The exact integer form is xδy+yδx−pδxδy. Delta is not additive: at p=3, δ(1+1)=1 while δ(1)+δ(1)=0.
+Evidence: Independent residue / product tests include p=2 and nonunits. The command also displays the nonadditivity defect.
+Execution: math.delta.check 3 1 1
+Buium: p-Jets of Finite Algebras, I, section 2 — https://ems.press/content/serial-article-files/26196?nt=1
+
+eq-417 | Forward complex Cayley step | REFINED
+Domain: Finite complex Hermitian H, real dt, hbar>0
+Formula: (I+i dt H/(2ℏ)) ψ_next=(I−i dt H/(2ℏ)) ψ_now
+Finding: Restores the forward Schrödinger sign. Exact arithmetic preserves norm, but numerical solves have residuals. This rational map approximates the exponential; at scalar H=1, dt=2, hbar=1 it gives −i instead of exp(−2i). Inspect-only calculation, separate from the active field state.
+Evidence: Complex pivoted solve, residual and norm checks, reversibility and small-step phase accuracy. H dimension 1..8; |dt|≤100. A finite-field denominator can be singular.
+Execution: math.cayley {"H":[[0,1],[1,0]],"state":[1,0],"dt":0.1,"hbar":1}
+Kumar: Cayley / Crank–Nicolson derivation, section 2 — https://arxiv.org/abs/2205.13467
+
+eq-437 | Proposed Klein transmission | REJECTED
+Domain: Proposed lattice momenta and electrostatic step; current branches unspecified
+Formula: T=4r1r2/(r1+r2)²; r1=k1/(E+mc²), r2=k2/(E−V0+mc²)
+Finding: In the stated Klein zone, a nonnegative principal k2 gives r2<0. The formula can yield a negative probability. A Hamiltonian and discrete current must be specified before implementing transmission.
+Evidence: hbar=c=m=a=1, E=2,V0=4 gives k1=k2=2π/3 and T=−3. Real dispersion requires 0≤ε²−m²c⁴≤4ℏ²c²/a²; fixed-a V0→∞ is outside the band. See docs/relativity-audit.txt.
+Execution: Reference only; no executable equation command.
+Nakazato and Ochiai: Unstable vacuum and fermion total reflection by the Klein step — https://academic.oup.com/ptep/article/2022/7/073B02/6607511
+
+eq-438 | Modular relativistic partial-wave phase | UNRESOLVED
+Domain: No specified finite-field Bessel functions, matching law or phase definition
+Formula: tan δ_l=(k j_l′(kR)−γ j_l(kR))/(k n_l′(kR)−γ n_l(kR)) mod p
+Finding: A conditional real/complex scalar continuum matching identity exists, using γ=f′/f and a specified exterior convention. It does not define modular Bessel functions or a lattice Dirac phase shift.
+Evidence: Ordinary Bessel series contain factorial denominators that vanish modulo p. Full definitions, coupled spinor matching and a nonsingular boundary rule are missing. See docs/relativity-audit.txt.
+Execution: Reference only; no executable equation command.
+NIST DLMF: spherical Bessel functions — https://dlmf.nist.gov/10.47
+
+eq-370 | Automaton commutator | REJECTED
+Domain: Operator normalizations and Hosc offset unspecified
+Formula: (iℏ/j)Jz = iℏ(1−Hosc/((j+1/2)ℏω))
+Finding: The equality mixes j and j+1/2 normalizations. A controlled low-energy limit may be studied only after defining X,P,H and the state sequence. It is not the exact canonical commutator on a whole finite complex space.
+Evidence: With Hosc=ℏω((j+1/2)I−Jz), j=1,Jz=1 gives coefficients 1 and 2/3. Also Tr([X,P])=0 but Tr(iℏI)=iℏd. Primary ’t Hooft conventions differ; see relativity audit.
+Execution: Reference only; no executable equation command.
+’t Hooft: Deterministic quantum mechanics, section 3 — https://arxiv.org/abs/2005.06374
+
+characteristic-two | Unspecified even-characteristic variants | UNRESOLVED
+Domain: Reported equations 70,84,210 are not supplied in full
+Formula: 2⁻¹ does not exist when p=2
+Finding: The warning is valid for explicit half-phase formulas. Existing shift, phase and Fourier commands still operate in binary profiles. Galois-ring and CRSS constructions are possible approaches, not an exhaustive list of all phase conventions.
+Evidence: No replacement for the missing equations is inferred. The implemented odd-characteristic operators reject binary fields.
+Execution: Reference only; no executable equation command.
+Calderbank, Rains, Shor, Sloane: Quantum error correction via codes over GF(4) — https://arxiv.org/abs/quant-ph/9608006
+Gross: Hudson theorem for finite-dimensional quantum systems — https://arxiv.org/abs/quant-ph/0602001
+
+intervals | Half-open interval notation | REFINED
+Domain: Real interval notation in reported equations 110,348,449
+Formula: [a,b) ≡ {x∈R : a≤x<b}
+Finding: Mixed endpoint brackets express a valid half-open interval. A parser should recognize the semantics; these brackets alone are not a mathematical error. The full referenced equations were not supplied.
+Evidence: The three reported intervals are recorded as notation examples rather than recovered equations.
+Execution: Reference only; no executable equation command.
+
+stabilizer | GF4 Pauli-label mapping | REFINED
+Domain: Qubit Pauli operators modulo scalar phases; additive GF4^n labels
+Formula: Commutation iff Σ_i Tr_(4/2)(u_i v_i²)=0 in GF2
+Finding: State a fixed X/Z-to-GF4 basis map. The correspondence quotients out Pauli phases and uses the sum over all coordinates; it is not equality of the full Pauli group with the multiplicative field.
+Evidence: CRSS trace-Hermitian construction supports the qualified label mapping. No error-correction decoder or threshold is implemented.
+Execution: Reference only; no executable equation command.
+Calderbank, Rains, Shor, Sloane: Quantum error correction via codes over GF(4) — https://arxiv.org/abs/quant-ph/9608006
+
+complexity | Computational complexity claims | REFINED
+Domain: Algorithm and representation dependent operation counts
+Formula: Schoolbook multiplication O(n²); Karatsuba O(n^(log₂3)); sparse direct Wigner O(q³)
+Finding: Karatsuba is not O(n log n). Fast convolution/Fourier bounds require a suitable algorithm and representation. Trace needs Frobenius evaluations as well as additions. Log/Zech tables use O(q) storage and do not justify GF80-sized tables.
+Evidence: No benchmarks were supplied or performed. The release uses small direct polynomial and sparse reflection calculations; it makes no fast-transform claim.
+Execution: Reference only; no executable equation command.
+
+report-scope | 500-equation and physical claims | UNRESOLVED
+Domain: Supplied audit narrative, not the full source suite
+Formula: Ten claimed sector ranges, 1..500
+Finding: Only expressions actually displayed or described can be assessed. Finite-field labels with complex amplitudes do not replace the complex Hilbert space. Q_p and adeles are infinite; no universal divergence-free conclusion follows.
+Evidence: All missing-suite validation, physical unification, exact long-time numerical probability conservation and hardware performance assertions remain unverified.
+Execution: Reference only; no executable equation command.
+
+REPRODUCIBILITY
+equation-audit.json preserves extracted LaTeX and source line numbers.
+Detailed scalar audit: docs/scalar-audit.txt.
+Detailed relativity audit: docs/relativity-audit.txt.
+Tests use independent field matrices, exact-rational coupling checks and explicit counterexamples.
+eq.verify is a bounded runtime smoke check; it does not run the full automated test suite.
+Browser rendering and live iframe communication remain unverified in this environment.
+Original supplied files and release 0.1 are preserved unchanged.

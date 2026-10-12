@@ -1,0 +1,14 @@
+ja source 0.3
+module suite65.sandbox_engine.workspace_staging
+use Core
+policy no_network
+
+record WorkspaceStagingPlan { id: Count, run_id: Text, repository_snapshot_hash: Text, confined_root: Text, read_only_input_root: Text, staging_root: Text, output_root: Text, temporary_root: Text, evidence_root: Text, path_policy_hash: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_workspace_staging(item: WorkspaceStagingPlan) -> Result<WorkspaceStagingPlan, Text> effects { pure } {
+    let normalized_root: Text = item.confined_root
+    return Ok(WorkspaceStagingPlan { id: item.id, run_id: item.run_id, repository_snapshot_hash: item.repository_snapshot_hash, confined_root: normalized_root, read_only_input_root: item.read_only_input_root, staging_root: item.staging_root, output_root: item.output_root, temporary_root: item.temporary_root, evidence_root: item.evidence_root, path_policy_hash: item.path_policy_hash, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: WorkspaceStagingPlan = WorkspaceStagingPlan { id: 6504, run_id: "required_run_id", repository_snapshot_hash: "required_sha256", confined_root: "approved_repository_root", read_only_input_root: "run/input", staging_root: "run/repository", output_root: "run/output", temporary_root: "run/temp", evidence_root: "run/evidence", path_policy_hash: "required_policy_hash", sophia: "interpret_staging_intent", charlotte: "validate_mounts_and_paths", landon: "stage_confined_workspace", professor: "explain_workspace_plan", podium: "record_staging_receipt" }
+let result = prepare_workspace_staging(sample)
+assert result.is_ok == true
+emit json result

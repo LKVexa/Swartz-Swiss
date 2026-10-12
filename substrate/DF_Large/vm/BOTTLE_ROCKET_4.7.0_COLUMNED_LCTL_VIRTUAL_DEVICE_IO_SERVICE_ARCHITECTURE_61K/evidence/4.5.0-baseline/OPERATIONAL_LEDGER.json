@@ -1,0 +1,693 @@
+{
+  "operational": 76,
+  "record": "BR.OperationalLedger",
+  "release": "4.5.0",
+  "requirements": [
+    {
+      "evidence": "evidence/BR-450-01_requirements.json",
+      "evidence_sha256": "86b2f15cf5ef3a5d6257b8d94b7f872596b068515098d046d75be7fdb1b6c590",
+      "id": "BR-450-01-R01",
+      "package": "BR-450-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define read block"
+    },
+    {
+      "evidence": "evidence/BR-450-01_requirements.json",
+      "evidence_sha256": "86b2f15cf5ef3a5d6257b8d94b7f872596b068515098d046d75be7fdb1b6c590",
+      "id": "BR-450-01-R02",
+      "package": "BR-450-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define write block"
+    },
+    {
+      "evidence": "evidence/BR-450-01_requirements.json",
+      "evidence_sha256": "86b2f15cf5ef3a5d6257b8d94b7f872596b068515098d046d75be7fdb1b6c590",
+      "id": "BR-450-01-R03",
+      "package": "BR-450-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define erase"
+    },
+    {
+      "evidence": "evidence/BR-450-01_requirements.json",
+      "evidence_sha256": "86b2f15cf5ef3a5d6257b8d94b7f872596b068515098d046d75be7fdb1b6c590",
+      "id": "BR-450-01-R04",
+      "package": "BR-450-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define flush"
+    },
+    {
+      "evidence": "evidence/BR-450-01_requirements.json",
+      "evidence_sha256": "86b2f15cf5ef3a5d6257b8d94b7f872596b068515098d046d75be7fdb1b6c590",
+      "id": "BR-450-01-R05",
+      "package": "BR-450-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define sync"
+    },
+    {
+      "evidence": "evidence/BR-450-01_requirements.json",
+      "evidence_sha256": "86b2f15cf5ef3a5d6257b8d94b7f872596b068515098d046d75be7fdb1b6c590",
+      "id": "BR-450-01-R06",
+      "package": "BR-450-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define atomic replace where supported"
+    },
+    {
+      "evidence": "evidence/BR-450-01_requirements.json",
+      "evidence_sha256": "86b2f15cf5ef3a5d6257b8d94b7f872596b068515098d046d75be7fdb1b6c590",
+      "id": "BR-450-01-R07",
+      "package": "BR-450-01",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define storage status reporting"
+    },
+    {
+      "evidence": "evidence/BR-450-02_requirements.json",
+      "evidence_sha256": "4c5400d102c9781919581fb9b0bdb72a31ea807116375302485d9a0b6f3aa1cc",
+      "id": "BR-450-02-R01",
+      "package": "BR-450-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Maintain Slot A"
+    },
+    {
+      "evidence": "evidence/BR-450-02_requirements.json",
+      "evidence_sha256": "4c5400d102c9781919581fb9b0bdb72a31ea807116375302485d9a0b6f3aa1cc",
+      "id": "BR-450-02-R02",
+      "package": "BR-450-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Maintain Slot B"
+    },
+    {
+      "evidence": "evidence/BR-450-02_requirements.json",
+      "evidence_sha256": "4c5400d102c9781919581fb9b0bdb72a31ea807116375302485d9a0b6f3aa1cc",
+      "id": "BR-450-02-R03",
+      "package": "BR-450-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Track active slot"
+    },
+    {
+      "evidence": "evidence/BR-450-02_requirements.json",
+      "evidence_sha256": "4c5400d102c9781919581fb9b0bdb72a31ea807116375302485d9a0b6f3aa1cc",
+      "id": "BR-450-02-R04",
+      "package": "BR-450-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Track candidate slot"
+    },
+    {
+      "evidence": "evidence/BR-450-02_requirements.json",
+      "evidence_sha256": "4c5400d102c9781919581fb9b0bdb72a31ea807116375302485d9a0b6f3aa1cc",
+      "id": "BR-450-02-R05",
+      "package": "BR-450-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Track previous-good slot"
+    },
+    {
+      "evidence": "evidence/BR-450-02_requirements.json",
+      "evidence_sha256": "4c5400d102c9781919581fb9b0bdb72a31ea807116375302485d9a0b6f3aa1cc",
+      "id": "BR-450-02-R06",
+      "package": "BR-450-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Track slot generation"
+    },
+    {
+      "evidence": "evidence/BR-450-02_requirements.json",
+      "evidence_sha256": "4c5400d102c9781919581fb9b0bdb72a31ea807116375302485d9a0b6f3aa1cc",
+      "id": "BR-450-02-R07",
+      "package": "BR-450-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Track slot hash"
+    },
+    {
+      "evidence": "evidence/BR-450-02_requirements.json",
+      "evidence_sha256": "4c5400d102c9781919581fb9b0bdb72a31ea807116375302485d9a0b6f3aa1cc",
+      "id": "BR-450-02-R08",
+      "package": "BR-450-02",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Track slot signature status"
+    },
+    {
+      "evidence": "evidence/BR-450-03_requirements.json",
+      "evidence_sha256": "edd835f7a92cf8d647123b3016e820caf8981f0cfbdaa64a4145abcc2d772a15",
+      "id": "BR-450-03-R01",
+      "package": "BR-450-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define magic"
+    },
+    {
+      "evidence": "evidence/BR-450-03_requirements.json",
+      "evidence_sha256": "edd835f7a92cf8d647123b3016e820caf8981f0cfbdaa64a4145abcc2d772a15",
+      "id": "BR-450-03-R02",
+      "package": "BR-450-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define format version"
+    },
+    {
+      "evidence": "evidence/BR-450-03_requirements.json",
+      "evidence_sha256": "edd835f7a92cf8d647123b3016e820caf8981f0cfbdaa64a4145abcc2d772a15",
+      "id": "BR-450-03-R03",
+      "package": "BR-450-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define active slot"
+    },
+    {
+      "evidence": "evidence/BR-450-03_requirements.json",
+      "evidence_sha256": "edd835f7a92cf8d647123b3016e820caf8981f0cfbdaa64a4145abcc2d772a15",
+      "id": "BR-450-03-R04",
+      "package": "BR-450-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define generation"
+    },
+    {
+      "evidence": "evidence/BR-450-03_requirements.json",
+      "evidence_sha256": "edd835f7a92cf8d647123b3016e820caf8981f0cfbdaa64a4145abcc2d772a15",
+      "id": "BR-450-03-R05",
+      "package": "BR-450-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define transaction sequence"
+    },
+    {
+      "evidence": "evidence/BR-450-03_requirements.json",
+      "evidence_sha256": "edd835f7a92cf8d647123b3016e820caf8981f0cfbdaa64a4145abcc2d772a15",
+      "id": "BR-450-03-R06",
+      "package": "BR-450-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define issuer epoch"
+    },
+    {
+      "evidence": "evidence/BR-450-03_requirements.json",
+      "evidence_sha256": "edd835f7a92cf8d647123b3016e820caf8981f0cfbdaa64a4145abcc2d772a15",
+      "id": "BR-450-03-R07",
+      "package": "BR-450-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define image hash"
+    },
+    {
+      "evidence": "evidence/BR-450-03_requirements.json",
+      "evidence_sha256": "edd835f7a92cf8d647123b3016e820caf8981f0cfbdaa64a4145abcc2d772a15",
+      "id": "BR-450-03-R08",
+      "package": "BR-450-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define authentication tag/signature"
+    },
+    {
+      "evidence": "evidence/BR-450-03_requirements.json",
+      "evidence_sha256": "edd835f7a92cf8d647123b3016e820caf8981f0cfbdaa64a4145abcc2d772a15",
+      "id": "BR-450-03-R09",
+      "package": "BR-450-03",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Define recovery status"
+    },
+    {
+      "evidence": "evidence/BR-450-04_requirements.json",
+      "evidence_sha256": "81b84bf8eac204f5e00c3770e7578425847dda4f80550a4af60178f84a326dfe",
+      "id": "BR-450-04-R01",
+      "package": "BR-450-04",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Do not use CRC alone for trust decisions"
+    },
+    {
+      "evidence": "evidence/BR-450-04_requirements.json",
+      "evidence_sha256": "81b84bf8eac204f5e00c3770e7578425847dda4f80550a4af60178f84a326dfe",
+      "id": "BR-450-04-R02",
+      "package": "BR-450-04",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Keep CRC for accidental corruption"
+    },
+    {
+      "evidence": "evidence/BR-450-04_requirements.json",
+      "evidence_sha256": "81b84bf8eac204f5e00c3770e7578425847dda4f80550a4af60178f84a326dfe",
+      "id": "BR-450-04-R03",
+      "package": "BR-450-04",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Use cryptographic authentication for adversarial modification"
+    },
+    {
+      "evidence": "evidence/BR-450-04_requirements.json",
+      "evidence_sha256": "81b84bf8eac204f5e00c3770e7578425847dda4f80550a4af60178f84a326dfe",
+      "id": "BR-450-04-R04",
+      "package": "BR-450-04",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Bind control record to image digest"
+    },
+    {
+      "evidence": "evidence/BR-450-05_requirements.json",
+      "evidence_sha256": "8b29d20ed6c0d486651c7827b00b4e0550c8b1351482bb169be2c1408d1c6cdf",
+      "id": "BR-450-05-R01",
+      "package": "BR-450-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Verify incoming image"
+    },
+    {
+      "evidence": "evidence/BR-450-05_requirements.json",
+      "evidence_sha256": "8b29d20ed6c0d486651c7827b00b4e0550c8b1351482bb169be2c1408d1c6cdf",
+      "id": "BR-450-05-R02",
+      "package": "BR-450-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Choose inactive slot"
+    },
+    {
+      "evidence": "evidence/BR-450-05_requirements.json",
+      "evidence_sha256": "8b29d20ed6c0d486651c7827b00b4e0550c8b1351482bb169be2c1408d1c6cdf",
+      "id": "BR-450-05-R03",
+      "package": "BR-450-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Write candidate"
+    },
+    {
+      "evidence": "evidence/BR-450-05_requirements.json",
+      "evidence_sha256": "8b29d20ed6c0d486651c7827b00b4e0550c8b1351482bb169be2c1408d1c6cdf",
+      "id": "BR-450-05-R04",
+      "package": "BR-450-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Sync candidate"
+    },
+    {
+      "evidence": "evidence/BR-450-05_requirements.json",
+      "evidence_sha256": "8b29d20ed6c0d486651c7827b00b4e0550c8b1351482bb169be2c1408d1c6cdf",
+      "id": "BR-450-05-R05",
+      "package": "BR-450-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Reread candidate"
+    },
+    {
+      "evidence": "evidence/BR-450-05_requirements.json",
+      "evidence_sha256": "8b29d20ed6c0d486651c7827b00b4e0550c8b1351482bb169be2c1408d1c6cdf",
+      "id": "BR-450-05-R06",
+      "package": "BR-450-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Verify candidate"
+    },
+    {
+      "evidence": "evidence/BR-450-05_requirements.json",
+      "evidence_sha256": "8b29d20ed6c0d486651c7827b00b4e0550c8b1351482bb169be2c1408d1c6cdf",
+      "id": "BR-450-05-R07",
+      "package": "BR-450-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Write pending control record"
+    },
+    {
+      "evidence": "evidence/BR-450-05_requirements.json",
+      "evidence_sha256": "8b29d20ed6c0d486651c7827b00b4e0550c8b1351482bb169be2c1408d1c6cdf",
+      "id": "BR-450-05-R08",
+      "package": "BR-450-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Sync pending record"
+    },
+    {
+      "evidence": "evidence/BR-450-05_requirements.json",
+      "evidence_sha256": "8b29d20ed6c0d486651c7827b00b4e0550c8b1351482bb169be2c1408d1c6cdf",
+      "id": "BR-450-05-R09",
+      "package": "BR-450-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Atomically activate"
+    },
+    {
+      "evidence": "evidence/BR-450-05_requirements.json",
+      "evidence_sha256": "8b29d20ed6c0d486651c7827b00b4e0550c8b1351482bb169be2c1408d1c6cdf",
+      "id": "BR-450-05-R10",
+      "package": "BR-450-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Sync activation"
+    },
+    {
+      "evidence": "evidence/BR-450-05_requirements.json",
+      "evidence_sha256": "8b29d20ed6c0d486651c7827b00b4e0550c8b1351482bb169be2c1408d1c6cdf",
+      "id": "BR-450-05-R11",
+      "package": "BR-450-05",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Confirm activation"
+    },
+    {
+      "evidence": "evidence/BR-450-06_requirements.json",
+      "evidence_sha256": "bc35c11bd74e8b72744d357589ef74d42df174c068ad097dc8e20ea572818b14",
+      "id": "BR-450-06-R01",
+      "package": "BR-450-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Inject before candidate write"
+    },
+    {
+      "evidence": "evidence/BR-450-06_requirements.json",
+      "evidence_sha256": "bc35c11bd74e8b72744d357589ef74d42df174c068ad097dc8e20ea572818b14",
+      "id": "BR-450-06-R02",
+      "package": "BR-450-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Inject during candidate write"
+    },
+    {
+      "evidence": "evidence/BR-450-06_requirements.json",
+      "evidence_sha256": "bc35c11bd74e8b72744d357589ef74d42df174c068ad097dc8e20ea572818b14",
+      "id": "BR-450-06-R03",
+      "package": "BR-450-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Inject after candidate write"
+    },
+    {
+      "evidence": "evidence/BR-450-06_requirements.json",
+      "evidence_sha256": "bc35c11bd74e8b72744d357589ef74d42df174c068ad097dc8e20ea572818b14",
+      "id": "BR-450-06-R04",
+      "package": "BR-450-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Inject before sync"
+    },
+    {
+      "evidence": "evidence/BR-450-06_requirements.json",
+      "evidence_sha256": "bc35c11bd74e8b72744d357589ef74d42df174c068ad097dc8e20ea572818b14",
+      "id": "BR-450-06-R05",
+      "package": "BR-450-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Inject after sync"
+    },
+    {
+      "evidence": "evidence/BR-450-06_requirements.json",
+      "evidence_sha256": "bc35c11bd74e8b72744d357589ef74d42df174c068ad097dc8e20ea572818b14",
+      "id": "BR-450-06-R06",
+      "package": "BR-450-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Inject during control write"
+    },
+    {
+      "evidence": "evidence/BR-450-06_requirements.json",
+      "evidence_sha256": "bc35c11bd74e8b72744d357589ef74d42df174c068ad097dc8e20ea572818b14",
+      "id": "BR-450-06-R07",
+      "package": "BR-450-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Inject before rename"
+    },
+    {
+      "evidence": "evidence/BR-450-06_requirements.json",
+      "evidence_sha256": "bc35c11bd74e8b72744d357589ef74d42df174c068ad097dc8e20ea572818b14",
+      "id": "BR-450-06-R08",
+      "package": "BR-450-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Inject after rename"
+    },
+    {
+      "evidence": "evidence/BR-450-06_requirements.json",
+      "evidence_sha256": "bc35c11bd74e8b72744d357589ef74d42df174c068ad097dc8e20ea572818b14",
+      "id": "BR-450-06-R09",
+      "package": "BR-450-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Inject during first boot"
+    },
+    {
+      "evidence": "evidence/BR-450-06_requirements.json",
+      "evidence_sha256": "bc35c11bd74e8b72744d357589ef74d42df174c068ad097dc8e20ea572818b14",
+      "id": "BR-450-06-R10",
+      "package": "BR-450-06",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Inject after first successful boot"
+    },
+    {
+      "evidence": "evidence/BR-450-07_requirements.json",
+      "evidence_sha256": "77fe68ea3fe0e85fd922c5fec9c0245e5d453e0a7b6d2a5afb4603f345f852c8",
+      "id": "BR-450-07-R01",
+      "package": "BR-450-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Detect incomplete transaction"
+    },
+    {
+      "evidence": "evidence/BR-450-07_requirements.json",
+      "evidence_sha256": "77fe68ea3fe0e85fd922c5fec9c0245e5d453e0a7b6d2a5afb4603f345f852c8",
+      "id": "BR-450-07-R02",
+      "package": "BR-450-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Validate both slots"
+    },
+    {
+      "evidence": "evidence/BR-450-07_requirements.json",
+      "evidence_sha256": "77fe68ea3fe0e85fd922c5fec9c0245e5d453e0a7b6d2a5afb4603f345f852c8",
+      "id": "BR-450-07-R03",
+      "package": "BR-450-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Select highest valid committed generation"
+    },
+    {
+      "evidence": "evidence/BR-450-07_requirements.json",
+      "evidence_sha256": "77fe68ea3fe0e85fd922c5fec9c0245e5d453e0a7b6d2a5afb4603f345f852c8",
+      "id": "BR-450-07-R04",
+      "package": "BR-450-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Reject corrupted control records"
+    },
+    {
+      "evidence": "evidence/BR-450-07_requirements.json",
+      "evidence_sha256": "77fe68ea3fe0e85fd922c5fec9c0245e5d453e0a7b6d2a5afb4603f345f852c8",
+      "id": "BR-450-07-R05",
+      "package": "BR-450-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Reject mismatched image/control pairs"
+    },
+    {
+      "evidence": "evidence/BR-450-07_requirements.json",
+      "evidence_sha256": "77fe68ea3fe0e85fd922c5fec9c0245e5d453e0a7b6d2a5afb4603f345f852c8",
+      "id": "BR-450-07-R06",
+      "package": "BR-450-07",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Return to last-known-good state"
+    },
+    {
+      "evidence": "evidence/BR-450-08_requirements.json",
+      "evidence_sha256": "c4cf6e1bbb0cb4c2f8aebe5f9ab870eb8f460497fdfbd963dd4e1f0d6c285e32",
+      "id": "BR-450-08-R01",
+      "package": "BR-450-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Implement storage locks"
+    },
+    {
+      "evidence": "evidence/BR-450-08_requirements.json",
+      "evidence_sha256": "c4cf6e1bbb0cb4c2f8aebe5f9ab870eb8f460497fdfbd963dd4e1f0d6c285e32",
+      "id": "BR-450-08-R02",
+      "package": "BR-450-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Implement update locks"
+    },
+    {
+      "evidence": "evidence/BR-450-08_requirements.json",
+      "evidence_sha256": "c4cf6e1bbb0cb4c2f8aebe5f9ab870eb8f460497fdfbd963dd4e1f0d6c285e32",
+      "id": "BR-450-08-R03",
+      "package": "BR-450-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Use lock files where appropriate"
+    },
+    {
+      "evidence": "evidence/BR-450-08_requirements.json",
+      "evidence_sha256": "c4cf6e1bbb0cb4c2f8aebe5f9ab870eb8f460497fdfbd963dd4e1f0d6c285e32",
+      "id": "BR-450-08-R04",
+      "package": "BR-450-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Protect against multiple host processes"
+    },
+    {
+      "evidence": "evidence/BR-450-08_requirements.json",
+      "evidence_sha256": "c4cf6e1bbb0cb4c2f8aebe5f9ab870eb8f460497fdfbd963dd4e1f0d6c285e32",
+      "id": "BR-450-08-R05",
+      "package": "BR-450-08",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Prevent partial concurrent upgrade"
+    },
+    {
+      "evidence": "evidence/BR-450-09_requirements.json",
+      "evidence_sha256": "de718eb9804b11bdaaa2d9a79d70f37a7179dbe03ec4e4650d270a8d1ae1fa0a",
+      "id": "BR-450-09-R01",
+      "package": "BR-450-09",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Protect against symlinks"
+    },
+    {
+      "evidence": "evidence/BR-450-09_requirements.json",
+      "evidence_sha256": "de718eb9804b11bdaaa2d9a79d70f37a7179dbe03ec4e4650d270a8d1ae1fa0a",
+      "id": "BR-450-09-R02",
+      "package": "BR-450-09",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Use restrictive permissions"
+    },
+    {
+      "evidence": "evidence/BR-450-09_requirements.json",
+      "evidence_sha256": "de718eb9804b11bdaaa2d9a79d70f37a7179dbe03ec4e4650d270a8d1ae1fa0a",
+      "id": "BR-450-09-R03",
+      "package": "BR-450-09",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Canonicalize paths"
+    },
+    {
+      "evidence": "evidence/BR-450-09_requirements.json",
+      "evidence_sha256": "de718eb9804b11bdaaa2d9a79d70f37a7179dbe03ec4e4650d270a8d1ae1fa0a",
+      "id": "BR-450-09-R04",
+      "package": "BR-450-09",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Use safe temporary files"
+    },
+    {
+      "evidence": "evidence/BR-450-09_requirements.json",
+      "evidence_sha256": "de718eb9804b11bdaaa2d9a79d70f37a7179dbe03ec4e4650d270a8d1ae1fa0a",
+      "id": "BR-450-09-R05",
+      "package": "BR-450-09",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Fsync parent directory where appropriate"
+    },
+    {
+      "evidence": "evidence/BR-450-09_requirements.json",
+      "evidence_sha256": "de718eb9804b11bdaaa2d9a79d70f37a7179dbe03ec4e4650d270a8d1ae1fa0a",
+      "id": "BR-450-09-R06",
+      "package": "BR-450-09",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Handle unexpected truncation"
+    },
+    {
+      "evidence": "evidence/BR-450-10_requirements.json",
+      "evidence_sha256": "3e59b05e19398cd68fa86c4dd21f22a24da4eaa0e6212903d83ebbbe6f27f08a",
+      "id": "BR-450-10-R01",
+      "package": "BR-450-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Separate executable state from guest data"
+    },
+    {
+      "evidence": "evidence/BR-450-10_requirements.json",
+      "evidence_sha256": "3e59b05e19398cd68fa86c4dd21f22a24da4eaa0e6212903d83ebbbe6f27f08a",
+      "id": "BR-450-10-R02",
+      "package": "BR-450-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Namespace persistent objects"
+    },
+    {
+      "evidence": "evidence/BR-450-10_requirements.json",
+      "evidence_sha256": "3e59b05e19398cd68fa86c4dd21f22a24da4eaa0e6212903d83ebbbe6f27f08a",
+      "id": "BR-450-10-R03",
+      "package": "BR-450-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Enforce quotas"
+    },
+    {
+      "evidence": "evidence/BR-450-10_requirements.json",
+      "evidence_sha256": "3e59b05e19398cd68fa86c4dd21f22a24da4eaa0e6212903d83ebbbe6f27f08a",
+      "id": "BR-450-10-R04",
+      "package": "BR-450-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Version persistent data"
+    },
+    {
+      "evidence": "evidence/BR-450-10_requirements.json",
+      "evidence_sha256": "3e59b05e19398cd68fa86c4dd21f22a24da4eaa0e6212903d83ebbbe6f27f08a",
+      "id": "BR-450-10-R05",
+      "package": "BR-450-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Protect integrity"
+    },
+    {
+      "evidence": "evidence/BR-450-10_requirements.json",
+      "evidence_sha256": "3e59b05e19398cd68fa86c4dd21f22a24da4eaa0e6212903d83ebbbe6f27f08a",
+      "id": "BR-450-10-R06",
+      "package": "BR-450-10",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Support migration"
+    },
+    {
+      "evidence": "evidence/BR-450-11_requirements.json",
+      "evidence_sha256": "f95d54cd1c4dabb71011231732ea9519bf7de464ed9fe728c5f9a2b451035e53",
+      "id": "BR-450-11-R01",
+      "package": "BR-450-11",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Every injected interruption recovers predictably"
+    },
+    {
+      "evidence": "evidence/BR-450-11_requirements.json",
+      "evidence_sha256": "f95d54cd1c4dabb71011231732ea9519bf7de464ed9fe728c5f9a2b451035e53",
+      "id": "BR-450-11-R02",
+      "package": "BR-450-11",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "No partially installed image becomes active"
+    },
+    {
+      "evidence": "evidence/BR-450-11_requirements.json",
+      "evidence_sha256": "f95d54cd1c4dabb71011231732ea9519bf7de464ed9fe728c5f9a2b451035e53",
+      "id": "BR-450-11-R03",
+      "package": "BR-450-11",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Latest authenticated committed state wins"
+    },
+    {
+      "evidence": "evidence/BR-450-11_requirements.json",
+      "evidence_sha256": "f95d54cd1c4dabb71011231732ea9519bf7de464ed9fe728c5f9a2b451035e53",
+      "id": "BR-450-11-R04",
+      "package": "BR-450-11",
+      "scope": "host-reference",
+      "status": "OPERATIONAL",
+      "text": "Previous valid image remains recoverable"
+    }
+  ],
+  "status": "OPERATIONAL",
+  "total": 76
+}

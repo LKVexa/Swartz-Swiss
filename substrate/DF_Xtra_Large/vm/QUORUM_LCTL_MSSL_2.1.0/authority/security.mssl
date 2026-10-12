@@ -1,0 +1,15 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum:generic_project:security:2.0.0",
+λ≡"quorum.generic_project.security",
+ℛ≡{"0001":"module(\"quorum.generic_project.security\")","0002":"learn(\"repository_id\",literal(\"\\\"quorum.generic_project.deep_computational\\\"\"))","0003":"learn(\"version\",literal(\"\\\"2.0.0\\\"\"))","0004":"learn(\"default\",literal(\"\\\"deny\\\"\"))","0005":"learn(\"network\",literal(\"\\\"deny\\\"\"))","0006":"learn(\"unknown_code\",literal(\"\\\"deny\\\"\"))","0007":"learn(\"capability_grant\",literal(\"\\\"explicit_only\\\"\"))","0008":"learn(\"sandbox\",literal(\"\\\"required_for_privileged_effects\\\"\"))","0009":"learn(\"tamper\",literal(\"\\\"fail_closed\\\"\"))","0010":"learn(\"evidence\",literal(\"\\\"required\\\"\"))"},
+π≡[],
+δ≡10,
+τ≡0,
+μ≡{"learn.repository_id":"quorum.generic_project.deep_computational","learn.version":"2.0.0","learn.default":"deny","learn.network":"deny","learn.unknown_code":"deny","learn.capability_grant":"explicit_only","learn.sandbox":"required_for_privileged_effects","learn.tamper":"fail_closed","learn.evidence":"required"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},
+χ≡[],
+η≡{"events":[],"state":{"repository_id":"quorum.generic_project.deep_computational","version":"2.0.0","default":"deny","network":"deny","unknown_code":"deny","capability_grant":"explicit_only","sandbox":"required_for_privileged_effects","tamper":"fail_closed","evidence":"required"}},
+ν≡{}
+,κ≡"sha256:bb4469dd092b508170e13dee94b8343d42fe796a0afa3a54df02ee64c3ed1d27"
+}⇒⊤

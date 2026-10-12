@@ -1,0 +1,27 @@
+ja source 0.3
+module suite28.safety_gate.archive
+use Security
+policy no_network
+
+principal SafetyGateArchiveWorker
+role SafetyGateEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant archive.inspect:approved
+}
+resource ArchiveCandidate classification restricted
+policy SafetyGateArchivePolicy {
+    deny network.* by default
+    deny process.* by default
+    deny archive.extract.* by default
+    allow ArchiveCandidate when principal.role == SafetyGateEnsemble
+    require human_approval for archive.extract
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "SafetyGateArchivePolicy.decision.mcrt"

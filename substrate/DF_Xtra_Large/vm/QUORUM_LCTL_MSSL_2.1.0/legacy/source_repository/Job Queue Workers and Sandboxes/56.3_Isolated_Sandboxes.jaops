@@ -1,0 +1,34 @@
+ja source 0.3
+module suite56.job_queue_workers_sandboxes.isolated_sandboxes
+use Operations
+policy explicit_network
+
+workspace IsolatedSandboxes {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 8 memory 16GB
+    network disabled
+    secret sandbox_key reference "vault://suite56/isolated-sandboxes"
+
+    service SOPHIA_sandbox_context replicas 1
+    health_check SOPHIA_sandbox_context every 10s
+    service CHARLOTTE_sandbox_gate replicas 1
+    health_check CHARLOTTE_sandbox_gate every 10s
+    service LANDON_sandbox_controller replicas 1
+    health_check LANDON_sandbox_controller every 10s
+    service Professor_sandbox_report replicas 1
+    health_check Professor_sandbox_report every 10s
+    service Podium_sandbox_receipt replicas 1
+    health_check Podium_sandbox_receipt every 10s
+    service isolated_sandbox_worker replicas 1
+    health_check isolated_sandbox_worker every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "job_queue_workers_isolated_sandboxes.msslb"

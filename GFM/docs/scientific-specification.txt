@@ -1,0 +1,168 @@
+GFM CYLINDRICAL PULSE LABORATORY / AUDITED v2.0.0 / 2026-10-11
+
+DEFINITIONS AND SCOPE
+
+A black hole is a region unable to send a causal signal to selected exterior
+future null infinity; an event horizon is a global causal boundary. A
+traversable wormhole requires a specified spacetime with causal passage,
+boundary conditions, regularity and traveler-specific constraints. The
+aperture/aggie is the user's local opening/cover hypothesis. A material hole,
+a marginal sphere or exterior observational similarity proves none of these.
+
+This instrument evolves local SI fields on an r-z grid. The rendered volume
+is an m=0 axisymmetric reconstruction; no azimuthal perturbations are evolved.
+The older neutral dimensionless CGLE snapshot remains a separate reference.
+It is not a Maxwell field, temperature, charge wavefunction or spacetime.
+
+ACTIVE ELECTROMAGNETIC AND PLASMA EQUATIONS
+
+E=E_phi e_phi; H=H_r e_r+H_z e_z; d/dphi=0.
+epsilon0 E_phi,t = H_r,z - H_z,r - J_p - sigma_eff E_phi + F_phi
+mu0 H_r,t = E_phi,z
+mu0 H_z,t = -(1/r)(r E_phi),r
+F_phi=-J_ext,phi; P_source=integral[-E_phi J_ext,phi dV].
+
+E is V/m, H A/m, B=mu0 H tesla, J A/m^2. The regular prescribed Gaussian
+ring current is O(r) at the axis. It is forcing, not a specified incident
+electric amplitude. E_phi and H_r are O(r); H_z is finite on the axis.
+The retained azimuthally uniform E and J have zero divergence with neutral
+initial charge. Other charge modes require more field components.
+
+J_p,t+nu J_p=alpha E_phi
+alpha=f_p n_e e^2/m_e=f_p epsilon0 omega_p^2
+omega_p^2=n_e e^2/(epsilon0 m_e)
+K_p=J_p^2/(2alpha); q_nu=nu J_p^2/alpha>=0
+E_phi J_p=K_p,t+q_nu.
+
+Intrinsic n_e is per plasma volume; J_p is per full computational-cell
+volume. Fixed fractions obey f_p+f_c<=1. At alpha=0, J_p=K_p=q_nu=0;
+no artificial density floor is used. Plasma current is not counted again
+as an equivalent Ohmic conductivity. At nu=0 its work is reversible drift
+storage, not heat. Instantaneous E*J can be negative while q_nu remains
+nonnegative. For frozen harmonic coefficients with exp(-i omega t),
+sigma_p=alpha/(nu-i omega); temporal current governs actual finite pulses.
+
+Fixed stationary ions, fixed density and geometry, unmagnetized electrons:
+there is no imposed B0/Hall bias, bulk rotation, advection or ionization.
+These omissions are deliberate limits of the retained polarization.
+
+THERMAL AND COVER RESPONSE
+
+C_p=(3/2)f_p(n_e+n_i)k_B, n_i=n_e/Z
+C_p T_p,t=q_nu-Q_pc
+Q_pc=g_pc(T_p-T_c), g_pc>=0 [W/(m^3 K)]
+J_c=f_c sigma_c(T_c,f_l)E_phi
+q_c=f_c sigma_c E_phi^2>=0
+sigma_c=(1-f_l)sigma_solid(T_c)+f_l sigma_liquid(T_c)
+f_l=clip[(T_c-T_s)/(T_l-T_s),0,1], T_l>T_s
+h_c(T)=integral[c_p dT]+L_m f_l(T)
+(f_c rho_c h_c),t=q_c+Q_pc.
+
+The single plasma temperature assumes electron/ion equilibration. Thermal
+contact acts only in mixed cells with both media, transfers equal/opposite
+energy and defaults to zero. It is a phenomenological volumetric contact,
+not a resolved measured surface conductance. Spatial thermal conduction is
+absent. Specific enthalpy is J/kg, c_p J/(kg K), latent heat L_m J/kg.
+
+Material parameters are declared synthetic coefficients, not measurements
+of an aggie, iron, aluminum or an astrophysical plasma. The solid/liquid
+interval is a mushy regularization, not a pure-material equilibrium plateau.
+Memoryless Ohmic cover response is a constitutive approximation; predictive
+metal dispersion requires calibrated Drude/Lorentz coefficients.
+
+Geometry is independent: r_clear=(R_c-wallThickness)*sqrt(1-C_g).
+Melting does not remove cover mass or open the mouth. That would require
+mechanics/ablation/vaporization. Parameter changes reset the fields, history
+and energy ledger together. The warm-start cover preset starts inside the
+mushy interval; its initial melting state is not caused by the pulse.
+
+ENERGY, FLUX AND NUMERICS
+
+u_EM=(epsilon0 E^2+mu0 H^2)/2; S=E cross H.
+S_r=E_phi H_z; S_z=-E_phi H_r [W/m^2].
+The receiving mouth is at the smaller z end, outward normal -e_z. Positive
+S_z is net inward flux. The signed plane integral is not incident/reflected
+mode separation. Positive-only intake can count recrossings and is not
+absorptance; amplitude alone is not total energy in standing/dispersive waves.
+
+Delta(U_EM+K_p+U_thermal,plasma+U_thermal,cover)+Q_sponge=W_source
+up to a numerical residual, for this closed PEC domain. Internal contact
+cancels. Cumulative collision/Joule heat is exported but not added again
+when thermal stored energy is in the ledger. Tiny temperature increments
+are retained independently of rounded absolute-temperature values.
+
+Outer radial/axial boundaries are reflecting PEC. Physical boundary escape
+is zero. The optional electric sponge is a separate artificial sink, not
+a PML, radiation, or material absorption; its reflection is not quantified.
+
+Finite-volume annular cells have volume pi(r_out^2-r_in^2) dz. H occupies
+dual faces. Weighted-adjoint curls and implicit midpoint preserve the
+field/drift quadratic work identity. Material coefficients are frozen for
+a field substep and refreshed from updated enthalpy. This is not a
+monolithic nonlinear moving-interface solve. Time steps must resolve
+propagation, carrier/envelope, plasma, collision and Ohmic relaxation.
+A-stability or a closed ledger does not guarantee accuracy for stiffness.
+Geometric cell fractions homogenize interfaces and do not resolve skin depth.
+
+PHYSICAL PHASE AND AMPLITUDE
+
+E_phi(t)=Re{Ecal_phi(t) exp(-i omega0 t)}
+Ecal_phi=2 LPF_W{E_phi exp(+i omega0 t)}
+A_E=|Ecal_phi| [peak V/m]
+Delta theta=arg(Ecal_phi Ecal_ref*) [rad].
+
+Defaults: 32 uniform history samples/carrier cycle, a normalized causal
+Hann window over two cycles, centered timestamp with W/2 group delay.
+The actual filter/sample/window/reference metadata is exported. A real
+snapshot alone does not define complex phase. Few-cycle pulse phase depends
+on the declared analysis window; the finite Hann filter is not ideal LPF.
+
+Reference: the computed TOTAL E_phi near r=0.028 m,z=0.065 m, upstream of
+the cavity. Actual nearest-cell coordinates are exported. It includes
+reflected waves and is not a separated incident wave. Both histories share
+carrier/filter/time conventions. Phase is masked during warmup or below
+the amplitude floor in either history. Hue shows relative phase, brightness
+uses a fixed V/m scale. Plasma temperature, cover temperature and liquid
+fraction have independent legends. A_E/sqrt(2) is a narrowband RMS convention,
+not the exact field/drift energy or Poynting flux.
+
+AUDIT AND SPACETIME REFERENCES
+
+All A01-A38 findings retain source pages, dispositions and expressions.
+Corrected executable references include Morris-Thorne stresses/NEC and
+strict flare-out, double-null mass/marginal spheres, future OUTER signs,
+two-exterior thin-shell pressure/potential and Kerr scale/spin definitions.
+They explicitly restore units and export calculation assumptions. They do
+not drive or classify the local Maxwell/material volume as a black hole.
+
+Conditional arithmetic/tensor/analogue identities retain their assumptions.
+Undefined latency/topology transition rates, tensor equivalence and a
+material-to-spacetime Galois transform are not executable physical laws.
+No supplied transform establishes a conservation-preserving conversion
+between all these different domains. See the preserved complete source
+review in GFM-Review-Editable.txt and GFM-Audit.pdf for all 79 equations.
+
+VERIFICATION AND CLAIM BOUNDARY
+
+Tests cover smooth vacuum/Ohmic Bessel refinement, causal plasma current,
+drift/collision work, zero-density/zero-collision limits, enthalpy/thermal
+contact, history-phase reconstruction/masks, corrected GR references,
+HTTP controls and Windows packaging. Results and hashes live in validation/.
+Example exports match source/constitutive parameters between open/covered
+runs, recording signed work and remaining stored energy explicitly.
+
+These checks verify tested reduced equations. They do not establish
+interface convergence for all plasma/material settings, agreement with
+astronomical observations, general 3D dynamics, a solved Einstein-matter
+spacetime, calibrated material prediction or NASA certification.
+Further prediction requires measured constitutive data, independent-code
+agreement, systematic interface/time refinement, uncertainty estimates and
+a specified observation model/dataset. This audit does not supply those.
+
+The audit's primary-source bibliography is preserved with the full review.
+Earlier baseline references include MIT 6.013 (Maxwell/Poynting),
+https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/
+NIST DLMF 10.6 (Bessel identities), https://dlmf.nist.gov/10.6
+Meep official cylindrical tutorial (symmetry/modes),
+https://meep.readthedocs.io/en/latest/Python_Tutorials/Cylindrical_Coordinates/
+No agreement with those solvers or their observational predictions is implied.

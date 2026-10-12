@@ -1,0 +1,26 @@
+{
+  "baseline": "same-host pre-change 4.2.0 measurement; retained 4.2 evidence also preserved in BASELINE.json",
+  "performance": {
+    "arithmetic_ops_per_second": {
+      "baseline": 72197.99,
+      "current": 77198.938,
+      "percent": 6.93
+    },
+    "branch_ops_per_second": {
+      "baseline": 62977543.832,
+      "current": 62015624.061,
+      "percent": -1.53
+    },
+    "instructions_per_second": {
+      "baseline": 95174332.92,
+      "current": 135117957.713,
+      "percent": 41.97
+    },
+    "load_store_ops_per_second": {
+      "baseline": 749073.695,
+      "current": 819420.061,
+      "percent": 9.39
+    }
+  },
+  "policy": "recorded; correctness/size gates are not waived by throughput"
+}

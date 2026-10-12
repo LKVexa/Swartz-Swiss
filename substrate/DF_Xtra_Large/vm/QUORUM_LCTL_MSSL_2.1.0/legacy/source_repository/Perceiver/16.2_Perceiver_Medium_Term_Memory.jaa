@@ -1,0 +1,36 @@
+ja source 0.3
+module suite16.perceiver.medium_term_memory
+use Agent
+policy no_network
+
+agent PerceiverMediumTermMemory {
+    identity "perceiver_medium_term_memory"
+    role "sophia-charlotte-landon-professor-podium-perceiver"
+    goal maintain_scoped_episodic_memory when confidence >= 0.95
+    memory session retention 1h
+    budget steps 45 tools 5
+    tool LANDONStageEpisodes(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAClusterEpisodes(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateMediumScope(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainMediumMemory(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordMediumMemory(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONStageEpisodes
+        authorize SOPHIAClusterEpisodes
+        authorize CHARLOTTEValidateMediumScope
+        authorize ProfessorExplainMediumMemory
+        authorize PodiumRecordMediumMemory
+        continue when policy_allows
+        execute LANDONStageEpisodes("approved_short_term_records")
+        execute SOPHIAClusterEpisodes("staged_episode_candidates")
+        execute CHARLOTTEValidateMediumScope("clustered_episode_memory")
+        execute ProfessorExplainMediumMemory("validated_medium_term_memory")
+        execute PodiumRecordMediumMemory("medium_term_memory_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "PerceiverMediumTermMemory.mcrt"
+

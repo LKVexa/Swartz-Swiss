@@ -1,0 +1,39 @@
+ja source 0.3
+module repository.observer.errors
+use Agent
+policy no_network
+
+agent ObserverErrors {
+    identity "observer.errors.v1"
+    role "audited-error-observer"
+    goal errors_observed when confidence >= 0.92
+    memory session retention 24h
+    budget steps 72 tools 6
+    tool ReadErrorRepository(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIA_ClassifyErrors(input: Path) -> Report requires model.infer:approved
+    tool CHARLOTTE_VerifyErrorSafety(input: Path) -> Report requires policy.verify:approved
+    tool LANDON_RouteRecoveryRecords(input: Path) -> Report requires ledger.append:approved
+    tool PROFESSOR_ExplainErrorCauses(input: Path) -> Report requires model.infer:approved
+    tool PODIUM_PublishErrorEvidence(input: Path) -> Report requires ledger.append:approved
+    plan Main {
+        observe workspace
+        authorize ReadErrorRepository
+        authorize SOPHIA_ClassifyErrors
+        authorize CHARLOTTE_VerifyErrorSafety
+        authorize LANDON_RouteRecoveryRecords
+        authorize PROFESSOR_ExplainErrorCauses
+        authorize PODIUM_PublishErrorEvidence
+        continue when policy_allows
+        execute ReadErrorRepository("repository/01_observer/errors")
+        execute SOPHIA_ClassifyErrors("repository/01_observer/errors")
+        execute CHARLOTTE_VerifyErrorSafety("repository/01_observer/errors")
+        execute LANDON_RouteRecoveryRecords("repository/01_observer/errors")
+        execute PROFESSOR_ExplainErrorCauses("repository/01_observer/errors")
+        require human_approval before PODIUM_PublishErrorEvidence
+        execute PODIUM_PublishErrorEvidence("repository/01_observer/errors")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "observer_errors.mcrt"

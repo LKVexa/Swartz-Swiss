@@ -1,0 +1,39 @@
+{
+  "suite_id": 26,
+  "suite_name": "Full Stack UI",
+  "plane": "interfaces_services",
+  "legacy_sha256": "324841d94795b1008002c0f459aca6135601a9cbabcd61fad024d4da46147e8f",
+  "legacy_root": "legacy/source_repository/Full Stack UI",
+  "files": [
+    {
+      "path": "26.1_Full_Stack_UI_Interfaces.jaui",
+      "sha256": "cdefb98c1555c0ad09e1d74e83584586992beca8a0026b032f991868fb2857ba",
+      "bytes": 1734
+    },
+    {
+      "path": "26.2_Full_Stack_UI_Uploads.jaui",
+      "sha256": "05dd0ba56b5845a06362ca1ab4c3a9b485384de6060c8bacedc76deedcc2d66b",
+      "bytes": 1780
+    },
+    {
+      "path": "26.3_Full_Stack_UI_Dashboards.jaui",
+      "sha256": "93d868550cd663af014b3b93c62f9639119f02bfc2377af8116c5afc619079b3",
+      "bytes": 1764
+    },
+    {
+      "path": "26.4_Full_Stack_UI_Endpoints.jaui",
+      "sha256": "91075a2c7657373fd1d542c79c9c1c79b172d73ddd308d67c8ea531baabb0630",
+      "bytes": 1724
+    },
+    {
+      "path": "26.5_Full_Stack_UI_Job_Controls.jaui",
+      "sha256": "c81fffc320cd548f5f524e631768582f1d0178c76a487ca8f32f64599c89227e",
+      "bytes": 2438
+    },
+    {
+      "path": "README.md",
+      "sha256": "74fdf0023780df0cdde8fbee3d3ecad7ead86861810516091609ed37bc90f92c",
+      "bytes": 11235
+    }
+  ]
+}

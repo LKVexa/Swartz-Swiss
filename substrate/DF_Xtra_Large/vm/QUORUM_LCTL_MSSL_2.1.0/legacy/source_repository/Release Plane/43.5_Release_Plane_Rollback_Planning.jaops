@@ -1,0 +1,31 @@
+ja source 0.3
+module suite43.release_plane.rollback_planning
+use Operations
+policy explicit_network
+
+workspace ReleasePlaneRollbackPlanning {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 4 memory 8GB
+    network disabled
+    secret signing_key reference "vault://release-plane/signing"
+    service SOPHIA_rollback_profile replicas 1
+    health_check SOPHIA_rollback_profile every 10s
+    service CHARLOTTE_rollback_plan_gate replicas 1
+    health_check CHARLOTTE_rollback_plan_gate every 10s
+    service LANDON_rollback_checkpoint_stage replicas 1
+    health_check LANDON_rollback_checkpoint_stage every 10s
+    service Professor_rollback_plan_report replicas 1
+    health_check Professor_rollback_plan_report every 10s
+    service Podium_rollback_plan_receipt replicas 1
+    health_check Podium_rollback_plan_receipt every 10s
+    service rollback_plan_validator replicas 1
+    health_check rollback_plan_validator every 5s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == true
+emit package "release_plane_rollback_planning.msslb"

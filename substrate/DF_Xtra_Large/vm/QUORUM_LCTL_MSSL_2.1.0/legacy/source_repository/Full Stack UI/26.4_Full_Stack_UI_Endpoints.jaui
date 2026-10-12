@@ -1,0 +1,46 @@
+ja source 0.3
+module suite26.full_stack_ui.endpoints
+use Interface
+policy no_network
+
+interface FullStackEndpoints {
+    state selected_endpoint: Text? = null
+    state invoking: Flag = false
+    derived can_invoke = selected_endpoint != null and not invoking
+    component SOPHIA_EndpointModel {
+        label "Interpret endpoint intent"
+        enabled bind can_invoke
+        accessibility role button name "Interpret selected endpoint"
+        action interpret_endpoint requires admin.action:approved
+    }
+    component CHARLOTTE_EndpointGate {
+        label "Validate endpoint contract"
+        enabled bind can_invoke
+        accessibility role button name "Validate selected endpoint"
+        action validate_endpoint requires admin.action:approved
+    }
+    component LANDON_EndpointInvoke {
+        label "Invoke approved endpoint"
+        enabled bind can_invoke
+        accessibility role button name "Invoke approved endpoint"
+        action invoke_endpoint requires admin.action:approved
+    }
+    component Professor_EndpointGuide {
+        label "Explain endpoint"
+        enabled bind can_invoke
+        accessibility role button name "Explain selected endpoint"
+        action explain_endpoint requires admin.action:approved
+    }
+    component Podium_EndpointEvidence {
+        label "View endpoint evidence"
+        enabled bind can_invoke
+        accessibility role button name "View endpoint evidence"
+        action show_endpoint_evidence requires admin.action:approved
+    }
+    component EndpointTraceViewport {
+        embed portal.scene "endpoint_trace"
+        motion bind timeline.endpoint_invocation
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface FullStackEndpoints

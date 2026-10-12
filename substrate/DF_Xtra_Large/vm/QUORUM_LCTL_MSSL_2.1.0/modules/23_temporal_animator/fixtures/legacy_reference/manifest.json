@@ -1,0 +1,30 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 23,
+  "legacy_root": "legacy/source_repository/Temporal Animator",
+  "legacy_sha256": "8275d67e09a9e97f076eddb668b077d33412abbff218d3cf7a535ea03e40db30",
+  "files": [
+    {
+      "path": "23.1_Temporal_Animator_Frame_Evaluation.deepml",
+      "sha256": "71f47ef440813e8a2fa6f2a4572710c9b7b3a9ed9cfa1fb2dc820e3e843245c6",
+      "bytes": 1907
+    },
+    {
+      "path": "23.2_Temporal_Animator_Continuity_Preservation.deepml",
+      "sha256": "c586900ae1feff1d2a047dcd32c1ae938101aa36c980bba288ec0777d86e3f88",
+      "bytes": 2120
+    },
+    {
+      "path": "23.3_Temporal_Animator_Deterministic_Frame_States.deepml",
+      "sha256": "a2f9b43f63b10c4dddae4289807c5c0006bd2778fe0b86ed52c8aca6e1398243",
+      "bytes": 2167
+    },
+    {
+      "path": "README.md",
+      "sha256": "46e964f04b9bf97aad730cd62de43ef580b424b56262dd1a4646e857033693d5",
+      "bytes": 9559
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

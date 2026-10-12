@@ -1,0 +1,12 @@
+{
+  "schema": "QUORUM-FIXTURE/2.0",
+  "class": "edge",
+  "module_id": 63,
+  "plane": "security_authorization",
+  "input_type": "request/policy_context",
+  "payload": {},
+  "expected_contract": {
+    "admitted": true,
+    "boundary": "minimal"
+  }
+}

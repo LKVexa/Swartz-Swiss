@@ -1,0 +1,36 @@
+{
+  "BR-410": "18/18",
+  "BR-440": "23/23",
+  "BR-450": "31/31",
+  "BR-460": "13/13",
+  "avoided_preallocation_bytes": 35862528,
+  "canonical_traps": "14/14",
+  "deterministic_builds": "PASS",
+  "dispatch_regression_disclosed": true,
+  "external_not_claimed": [
+    "physical SIM/UICC/eSIM memory/timing qualification",
+    "issuer key ceremony and certification",
+    "TPM/secure-element hardware qualification",
+    "native Windows OS execution certification",
+    "independent third-party certification"
+  ],
+  "idle_heap_requested_bytes": 51200,
+  "ledger_hash_mismatches": 0,
+  "opcode_negative": "41/41",
+  "opcode_positive": "41/41",
+  "performance_delta_percent": {
+    "arithmetic_ops_per_second_percent": 70527.41771867094,
+    "branch_ops_per_second_percent": -22.965580213714475,
+    "instructions_per_second_percent": -12.911002480225486,
+    "load_store_ops_per_second_percent": 10357.008062306175
+  },
+  "record": "BR.Acceptance",
+  "release": "4.6.0",
+  "requirements": "59/59",
+  "sanitizers": "PASS",
+  "scope": "host-reference",
+  "semantic": "19/19",
+  "status": "OPERATIONAL",
+  "toolchain": "2/2",
+  "work_packages": "12/12"
+}

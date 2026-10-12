@@ -1,0 +1,64 @@
+{
+  "schema": "QUORUM-CONTRACT-EXECUTION/2.0",
+  "module_id": 15,
+  "admitted": true,
+  "state": "COMPLETED",
+  "error": null,
+  "stages": [
+    {
+      "node": "N01",
+      "operator": "INSPECT",
+      "input_hash": "9cae7d694d692242650edb6fc6c13167ffd1a01e2cf363a18ba419a5fd168111",
+      "output_hash": "7dbbbb50aaf3d99add79e3e5bedfcd3871036b561c6eecc3d88941e6abaf9785"
+    },
+    {
+      "node": "N02",
+      "operator": "REASON",
+      "input_hash": "7dbbbb50aaf3d99add79e3e5bedfcd3871036b561c6eecc3d88941e6abaf9785",
+      "output_hash": "53d3ac0ef330bd397a36bdcbdac7dfdd1478a624688417123f34a93c9a140dce"
+    },
+    {
+      "node": "N03",
+      "operator": "RETRIEVE",
+      "input_hash": "53d3ac0ef330bd397a36bdcbdac7dfdd1478a624688417123f34a93c9a140dce",
+      "output_hash": "031e738b38f0a77252550f4158815bdb6cd03185c322e3216f4f4a93fe24330c"
+    },
+    {
+      "node": "N04",
+      "operator": "AUTHORIZE",
+      "input_hash": "031e738b38f0a77252550f4158815bdb6cd03185c322e3216f4f4a93fe24330c",
+      "output_hash": "90c6032c281c96e17a41ab1a87859b3cdab8544085e20356b95f5a76f2a1176e"
+    },
+    {
+      "node": "N05",
+      "operator": "ROUTE",
+      "input_hash": "90c6032c281c96e17a41ab1a87859b3cdab8544085e20356b95f5a76f2a1176e",
+      "output_hash": "5c9ca32d1008aeb162ae2591f7c8bf3a744c271fdf0f5a9b1fc764a1e63f7643"
+    },
+    {
+      "node": "N06",
+      "operator": "EXECUTE",
+      "input_hash": "5c9ca32d1008aeb162ae2591f7c8bf3a744c271fdf0f5a9b1fc764a1e63f7643",
+      "output_hash": "ca6bf1d874c51d4d71a055de3b267b90442f238515a4f14a481a1542e0b91e70"
+    },
+    {
+      "node": "N07",
+      "operator": "INSPECT",
+      "input_hash": "ca6bf1d874c51d4d71a055de3b267b90442f238515a4f14a481a1542e0b91e70",
+      "output_hash": "369ff600bbc9296e137a8625a2f0a928745c0bb38e3790851f3bb944922a686f"
+    },
+    {
+      "node": "N08",
+      "operator": "TRANSFORM",
+      "input_hash": "369ff600bbc9296e137a8625a2f0a928745c0bb38e3790851f3bb944922a686f",
+      "output_hash": "20dad0fa79ffa800846fb75ded81fe5d4b44b4018357c3600aecbc88f9a07ed9"
+    },
+    {
+      "node": "N09",
+      "operator": "RECORD",
+      "input_hash": "20dad0fa79ffa800846fb75ded81fe5d4b44b4018357c3600aecbc88f9a07ed9",
+      "output_hash": "cc3bda264fff9f3a52ed6d85e077288a0ad712ab83ba571b55227a3c6f3d4944"
+    }
+  ],
+  "output_hash": "cc3bda264fff9f3a52ed6d85e077288a0ad712ab83ba571b55227a3c6f3d4944"
+}

@@ -1,0 +1,28 @@
+ja source 0.3
+module suite65.sandbox_engine.capability_manifest
+use Security
+policy no_network
+
+principal SandboxCapabilityCompiler
+role SandboxCapabilityEnsemble {
+    grant sophia.interpret
+    grant charlotte.validate
+    grant landon.enforce
+    grant professor.explain
+    grant podium.audit
+    grant sandbox.capability.compile:approved
+}
+resource SandboxCapabilityManifest classification restricted
+policy SandboxCapabilityManifestPolicy {
+    deny network.* by default
+    deny process.* by default
+    deny repository.write.* by default
+    deny SandboxCapabilityManifest when principal.role != SandboxCapabilityEnsemble
+    allow SandboxCapabilityManifest when principal.role == SandboxCapabilityEnsemble
+    require human_approval for sandbox.capability.expand
+    audit all privileged_effects
+    redact secret.values
+    resolve conflicts explicit_deny_wins
+}
+assert policy.secret_leak == false
+emit mcrt "SandboxCapabilityManifestPolicy.decision.mcrt"

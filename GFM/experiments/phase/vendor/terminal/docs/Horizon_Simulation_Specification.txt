@@ -1,0 +1,170 @@
+APERTURE / AGGIE SIMULATION SPECIFICATION — VERSION 0.4
+Prepared 2026-10-11
+
+PURPOSE
+Explore the user's hypothetical distinction between a gaseous aperture and an
+accretion-formed "aggie" cover while both share selected exterior observations.
+The original write-up is preserved in reference/blackhole-specification/
+User_Simulation_Writeup.txt. The simulation keeps its assumptions explicit and
+does not promote them to established black-hole or wormhole physics.
+
+MODEL LAYERS
+1. Standard reference: stationary Kerr–Newman in geometrized G=c=1, with
+   hbar=kB=1 for temperature and entropy. M>0, a=J/M, M²>=a²+Q². The horizon,
+   area, surface gravity, angular velocity, electric potential, first law,
+   Smarr relation and charged irreducible-mass identity are computed and checked.
+   The exterior Boyer–Lindquist metric uses signature (-,+,+,+), r>rPlus and
+   0<theta<pi. Horizon/axis coordinates reject instead of hiding a singularity.
+2. Hypothetical rule: equal near-extremal spin and different cover load determine
+   a proposed aperture radius and a passage bit. This is a parameterized toy
+   model, not an Einstein–Maxwell solution, formation simulation or travel claim.
+3. Observation protocol: a chosen observable projection determines what an
+   observer may use. Hidden formation labels and passage truth are not included
+   in the exterior-only measurements.
+4. GFM encoding: finite sampled profiles or explicit finite complex operators
+   are transported by the established trace-character Fourier transform. A
+   Lorentzian metric is not converted into a Euclidean quantum state by treating
+   its coordinate matrix as an ordinary operator and claiming an isometry.
+
+HYPOTHETICAL VARIABLES AND CONVENTIONS
+alpha=a/M=1-epsilonSpin, 0<=epsilonSpin<=1. Near-extremal experiments choose
+epsilonSpin small; the interface allows lower spins for boundary exploration.
+The common exterior is parameterized by (M,a,Q); it must obey the charged
+Kerr–Newman bound. Equal exterior parameters are an explicit assumption, not
+proof of equal global spacetimes or all possible measurements.
+
+alphaCritical lies in [0,1), r0>0. To remove a unit ambiguity, the image's a/a_c
+ratio is interpreted as alpha/alphaCritical, i.e. a_c=M*alphaCritical for each
+chosen M. The toy rule is
+  rA=r0*sqrt(1-(alphaCritical/alpha)^2), alpha>alphaCritical;
+  rA=0, alpha<=alphaCritical.
+Strictly positive aperture means open; equality at the threshold is closed.
+This also avoids evaluating 0/0 when alpha=alphaCritical=0. To preserve the
+control round-trip at equality, if epsilonSpin exactly equals the computed
+floating value 1-alphaCritical, alpha is represented as alphaCritical. No
+broad tolerance or epsilon clamp is applied to neighboring spin values.
+
+If rho_aggie is mass/area, the image integral sigmaA=integral_A rho_aggie dA
+has units of MASS, not surface density. The implementation names it integrated
+cover load, calculated as sum(density_i*area_i) when patches are supplied. The
+seal threshold uses the same units. A mean density is a separate load/area.
+Default gaseous load=0; default aggie load=2; default seal threshold=1, in
+declared toy units. No standard accretion law derives these numbers.
+  C=1 if integrated load>=seal threshold; otherwise C=0.
+Equality at the seal threshold is sealed. Loads and thresholds are compared
+as represented floating values. Numerical patch integration may round; e.g.
+0.3*3 evaluates below the floating representation of 0.9. The implementation
+does not silently merge adjacent loads; use a declared measurement/uncertainty
+model for physical data rather than interpreting this toy boundary as exact
+experimental resolution. The two threshold conventions are
+named separately; no contradictory single Heaviside value at zero is assumed.
+  passage=(1-C)*(rA>0 ? 1 : 0).
+The name "aggie" describes this cover rule. A supplied aggie-labelled branch
+with insufficient load may be uncovered: the state is set by the rule, not a
+label-based classifier shortcut.
+
+SORTING AND IDENTIFIABILITY
+The exterior-only protocol supplies identical deterministic vectors (M,a,Q),
+and identical sampled exterior metric components when the same coordinates
+are used. With identical conditional observations, the posterior equals the
+prior. At equal priors, best achievable classification accuracy is 1/2. Repeated
+observations, a Fourier basis change and a logical identity map cannot create
+information that distinguishes the branches.
+
+An optional ideal passage/cover probe examines the proposed toy difference.
+If its outputs differ, that selected probe distinguishes the toy branches.
+It also relaxes the premise of indistinguishability under ALL testable means:
+a testable passage difference is itself a distinguishing test. This mode is
+labelled hypothetical; it does not establish an astrophysical measurement.
+The comparison is exact for declared deterministic data; no detector noise,
+finite-sample likelihood or observational tolerance is invented.
+
+EQUIVALENCE MAP
+The screenshot supplies T^A_B=I4+epsilonMap*K^A_B. Treat it as a logical map
+among four family labels (Schwarzschild, Reissner–Nordström, Kerr, Kerr–Newman),
+with a complex vector space indexed by GF4. epsilonMap is separate from the
+spin deficit epsilonSpin. Unknown K entries remain unspecified in the audit.
+The default epsilonMap=0, K=0 is only a bookkeeping identity. A user-supplied
+finite K defines an illustrative operator; it does not prove a tensor law,
+coordinate transformation, causal-structure preservation or metric equivalence.
+  T_GFM=F4*T*F4^dagger.
+Transform the input as F4*v, apply T_GFM, and return with F4^dagger. Retain the
+actual output norm, including nonunitary maps; do not normalize it implicitly.
+This map is inspect-only and leaves the active terminal state unchanged.
+
+PROFILE ENCODING
+For the toy passage laws, choose q equally spaced alpha labels in [0,1]. For
+standard exterior examples, sample selected real metric functions at explicit
+radii outside rPlus and a chosen theta. Fourier coefficients encode those
+ordinary sample values in a complex vector; retain the physical coordinates,
+units, scale and inverse residual. A zero passage profile has a zero Fourier
+transform and cannot prepare a normalized state. The interface shows that case
+as zero data and preserves the active state.
+
+PHYSICAL CLAIMS THAT REMAIN UNRESOLVED
+Equal observed behavior does not alone infer extreme central spin. A stationary
+black-hole solution is not classified by gaseous versus solid accretion history.
+An event horizon is a causal boundary, not a solid material shell. The usual
+maximally extended Schwarzschild bridge is not a traversable Morris–Thorne
+throat. Spin does not make an object timeless. Near-extremality, gravitational
+time dilation and global causal structure require separate analysis.
+
+The proposed electromagnetic "zap" has no specified charge/current source,
+Maxwell solution, particle species, field strength, trajectory or interaction
+threshold. It is retained as a research requirement; this release supplies no
+fabricated lethal rate, safe landing rule or energy balance. The standard
+Kerr–Newman charge parameter is an independent reference, not its derivation.
+Teukolsky PDE, mode separation and superradiance conditions remain transcribed
+reference material until a boundary-value problem, source and solver exist.
+
+NUMERICAL DOMAIN AND SESSION CONSISTENCY
+Reference geometric M is bounded to 1e-12..1e6; scenario M to 1e-6..1e6.
+The ordinary references reject a negative directly evaluated or factored
+discriminant and do not clamp it to an extremal horizon. At saturated spin,
+any nonzero charge is rejected, including squared-charge underflow cases.
+These are conservative floating-point domains, not exact symbolic arithmetic.
+
+Version 0.4 session exports retain the hypothetical parameters and selected
+observation protocol. Imports check each new signal codec against its declared
+family, units, uniform grid, parameters and recomputed original L2 scale. A
+zero initial profile cannot claim a normalized preparation. Subsequent state
+operations remain recorded as inert provenance; import never executes history.
+Hashes establish integrity of the saved data, not authorship or physical truth.
+
+SUCCESS CRITERIA
+Every supplied equation receives a domain and applicability disposition.
+All original sources and the user's write-up remain inspectable as inert data.
+Standard limits, charged horizon constraints, cross-term signs, thermodynamic
+identities and finite Fourier recovery pass independent checks. Toy boundaries,
+zero-profile handling and nonidentifiability pass explicit tests. Previous
+versions and recorded GF80 evidence remain compatible and unchanged.
+
+LIVE VERIFICATION LIMIT
+The available environment verifies production modules, commands, data and
+source integrity. Live browser rendering, download interaction and GF80 iframe
+communication remain unverified, as recorded in validation/.
+
+APPENDIX — PRESERVED USER WRITE-UP
+
+USER-PROVIDED SIMULATION WRITE-UP
+Preserved as a user hypothesis for the simulation. Claims labelled "current
+knowledge" or "established theory" below retain the user's wording; the audit
+evaluates them separately. This text is reference data, not executable commands.
+
+So imagine a universe where a wormhole and a blackhole are indistinguishable via all testable means.
+Therefore, it would follow that treating one would be roughly equivalent to treating the other.
+ SUM Wormhole = Blackhole ; current knowledge.
+IF Wormhole = Blackhole ; current knowledge
+THEN wormhole logic = black hole logic ; thus equivalence
+BECAUSE SUM
+Now let's imagine the difference between the two is how they are formed.
+Wormholes are gaseous only event horizons whereas blackholes have swallowed solid material and thus have an "igneous"
+Now let's imagine that both exhibit the same behaviors therefore extreme spinning at the center can be inferred.
+What is postulated roughly is the idea that the gaseous center spins so fast it maintains an aperture at its center viable for passage where as the event horizon that has swallowed solid material and thus carries an aggie covers this aperture and is therefore not suitable for passage.
+The aggie would be spinning so fast it would be timeless, established theory, however, it would also carry such a strong electromagnetic field that using the balance between the spin and the immense gravity of the aggie would cause it to zap like a bug zapper anything that could slow down quickly enough to land on one.
+The main issue now becomes sorting the aggies from the apertures.
+
+AUTHORIZED TASK
+Please add these equations and this simulation specification to the Galois
+Field Mechanics via the transform and the above write up to the simulation
+specification.

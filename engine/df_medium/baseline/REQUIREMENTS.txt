@@ -1,0 +1,9 @@
+# DF_Medium -- declared toolchain (checked first by ./VERIFY; gate N0)
+cc                 C11 compiler (gcc 13 / clang 18 measured)
+make               GNU make
+openssl-dev        OpenSSL 3 libcrypto headers + library (-lcrypto)
+sh                 POSIX shell, awk/sed/grep/cmp
+python3            Python 3.10+ (adapter, VERIFY, RUN, the VM's qualification scripts)
+sha256sum          for the VM's own integrity check
+# optional (VERIFY --full only): the VM's br500 evidence check needs nothing more;
+#   its br490-memory measurement needs GNU /usr/bin/time (absent -> that step is not run)

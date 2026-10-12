@@ -1,0 +1,112 @@
+{
+  "decision": "OPERATIONAL",
+  "dependency": "BR-410-07",
+  "package": "BR-410-08",
+  "requirements": [
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Prevent direct guest-to-host calls",
+      "requirement_id": "BR-410-08-R01",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Capability-gate all services",
+      "requirement_id": "BR-410-08-R02",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Use fixed host-call table",
+      "requirement_id": "BR-410-08-R03",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Bounds-check every buffer",
+      "requirement_id": "BR-410-08-R04",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Validate all lengths",
+      "requirement_id": "BR-410-08-R05",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Validate all pointers",
+      "requirement_id": "BR-410-08-R06",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Enforce quotas",
+      "requirement_id": "BR-410-08-R07",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.0.1 host-reference truth-measured baseline",
+      "blocker": null,
+      "command": "make qualify",
+      "evidence_path": "evidence/TEST.json",
+      "exit_code": 0,
+      "notes": "Verified in host-reference/source-contract scope.",
+      "requirement": "Enforce execution budget",
+      "requirement_id": "BR-410-08-R08",
+      "result": "PASS",
+      "sha256": "91e7244bdc6e2962a600c0f5c0942ded4aee06880b95b6ece3c488ebd0fe1624",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "title": "Sandbox boundary"
+}

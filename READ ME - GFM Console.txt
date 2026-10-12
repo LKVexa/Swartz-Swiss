@@ -1,0 +1,64 @@
+GFM BLACK HOLE POSTULATION CONSOLE / JA21 2.0.0
+
+OPEN
+Double-click GfmJa21.exe or Start GFM Console.cmd in this folder.
+Prefer D:\Codex\GFM-Blackhole-Console and keep the entire folder together.
+The native JA21 window contains the combined instruments through standard
+WPF WebView2. No port selection, localhost server, PowerShell script or
+separate browser window is required for normal use.
+
+Requires Windows x64, .NET Framework WPF, Microsoft Edge WebView2 Evergreen
+Runtime, and a writable installation folder. Startup verifies the native
+runtime and application bytes. If Windows blocks an application, its policy
+remains in effect; this package does not alter or bypass that policy.
+
+INSTRUMENTS
+01 Pulse / phase / cover: actual Maxwell-Drude and thermal fields. Initial
+   covered-plasma example computes two nanoseconds, then pauses. Use Run,
+   Step, individual layer controls, the Poynting-flow display and JSON export.
+02 Plasma / material texture: live periodic MHD, neutral complex order field,
+   GF(9) samples and a separate approximate iron enthalpy laboratory.
+03 Aperture / aggie: shared-spin, threshold-opening and cover postulates;
+   adjustable controls and the scripted two-branch example.
+04 Kerr / observations: actual adaptive null-geodesic calculations and the
+   published EHT M87 amplitude comparison with every prediction/residual.
+05 Equations / source audit: applied 38-finding audit and corrected GR
+   calculators, with references kept separate from pulse evolution.
+06 GFM transform terminal: original finite-field tools, historical equation
+   registries, image equations and full source dispositions. The inherited
+   narrow text-column formatting is corrected at console presentation time.
+
+One calculation family is mounted at a time. Switching to another family
+starts its repeatable initial condition. Switching among views of the same
+family retains its calculated state. Export a recording before leaving an
+experiment if its current history is needed. The instrument bar shows the
+scope of each model. Model registry & evidence opens their detailed records.
+
+REFRESH
+Rendering and numerical integration have separate clocks. Browser animation
+frames pace drawing to the available display. Calculation workers use bounded
+scheduling and frame delivery, so heavy solvers cannot pile up refresh work.
+GPU buffers are reused where possible. The pulse solver keeps its physical
+advance interval and CFL control; the phase solver keeps its numerical rules.
+Measured rates describe current hardware/load, not a guaranteed frame rate.
+Kerr rays are recalculated when their physical inputs change; rotating the
+camera does not rerun the geodesic solver. The EHT report is a frozen reference,
+not a time-dependent simulation. Detailed actual benchmarks accompany release
+verification, and per-instrument telemetry shows current throughput.
+
+SCOPE
+EM carrier phase and neutral complex order-parameter phase are different
+quantities. Local MHD, iron heating, stationary Kerr, and aperture rules are
+independent studies, not silently coupled equations. Cover heating does not
+establish wormhole traversability. The EHT thin-ring/Gaussian references failed
+the held-out comparison; that failure does not validate an alternative model.
+This research prototype has no NASA qualification or full GRMHD solver.
+
+PRESERVATION
+The exact original blank console and supplied phase repository ZIPs are under
+provenance/. Original deep reference paths use reversible aliases indexed in
+provenance/console-source.json. Full models, licenses, raw observations, audits,
+examples and historical reports remain included. Current combined verification
+is validation/combined-release.json; older reports describe their own releases.
+The native verification launchers record new runs under workspace/verification.
+

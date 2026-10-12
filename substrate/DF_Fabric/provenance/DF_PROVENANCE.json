@@ -1,0 +1,58 @@
+{
+  "assembled_at_utc": "2026-08-17T01:35:08.885762Z",
+  "assembly_host": {
+    "backend_policy": "none",
+    "cc": "/usr/bin/cc",
+    "cpu_count": 2,
+    "java": "/usr/bin/java",
+    "network_policy": "deny",
+    "platform": "Linux-6.18.5-fc-v20-x86_64-with-glibc2.39",
+    "python": "3.11.15"
+  },
+  "designation": {
+    "core_version": "1.6.0-rc1",
+    "language": "PA-LCTL",
+    "release_of_corpora": "PA21.2 (folders as updated through PA21.31)"
+  },
+  "df_release": "DF-PA21.2-1.0.0",
+  "ladders": {
+    "distributed_state": "DISTRIBUTED_CLASSICAL_EMULATION (ceiling)",
+    "parallel_state": "PARALLEL_EMULATION (process profiles) / SERIAL (single-process)",
+    "physical_distributed": false,
+    "physical_parallel": false,
+    "physical_qpu": false,
+    "quantum_boundary": "QUANTUM_BOUNDARY_NOT_CROSSED"
+  },
+  "lineage": [
+    {
+      "from": "the four sealed node containers",
+      "how": "SHA256SUMS.txt digests pinned",
+      "rule": "T11",
+      "step": 1,
+      "to": "fabric/NODES.json"
+    },
+    {
+      "from": "node/NODE_DESCRIPTOR.json x4 + PA_LCTL_FABRIC_SPEC.md",
+      "how": "pacore.fabric objects built and serialised; bundle verified by pacore.lang",
+      "rule": "T12",
+      "step": 2,
+      "to": "fabric/FEDERATION.json, TOPOLOGY.json, FABRIC.pal"
+    },
+    {
+      "from": "the four nodes built in place",
+      "how": "adapter/dfabric/gates.py::run_fabric_battery, pre-seal",
+      "rule": "T6",
+      "step": 3,
+      "to": "conformance/DF_GATE_RESULTS.json"
+    },
+    {
+      "from": "the sealed container",
+      "how": "the launcher itself",
+      "rule": "T6",
+      "step": 4,
+      "to": "post-seal ./VERIFY record (delivery _assembly/ folder)"
+    }
+  ],
+  "package": "DF_Fabric",
+  "schema": "DF/PROVENANCE/1"
+}

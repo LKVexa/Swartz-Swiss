@@ -1,0 +1,34 @@
+ja source 0.3
+module suite53.operations_plane.deployment_and_scaling
+use Operations
+policy explicit_network
+
+workspace OperationsPlaneDeploymentAndScaling {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 8 memory 16GB
+    network disabled
+    secret deployment_key reference "vault://suite53/deployment-scaling"
+
+    service SOPHIA_deployment_context replicas 1
+    health_check SOPHIA_deployment_context every 10s
+    service CHARLOTTE_deployment_gate replicas 1
+    health_check CHARLOTTE_deployment_gate every 10s
+    service LANDON_scaling_controller replicas 1
+    health_check LANDON_scaling_controller every 10s
+    service Professor_deployment_report replicas 1
+    health_check Professor_deployment_report every 10s
+    service Podium_deployment_receipt replicas 1
+    health_check Podium_deployment_receipt every 10s
+    service deployment_scaling_worker replicas 1
+    health_check deployment_scaling_worker every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "operations_plane_deployment_scaling.msslb"

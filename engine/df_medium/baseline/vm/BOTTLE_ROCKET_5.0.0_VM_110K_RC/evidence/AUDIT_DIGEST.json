@@ -1,0 +1,17 @@
+{
+  "accelerated_soak_cycles": 20000,
+  "brim51": "PASS",
+  "core61": "PASS",
+  "fuzz_cases": 44700,
+  "local_release_engineering": "PASS",
+  "memory": "PASS",
+  "performance": "PASS",
+  "record": "BOTTLE_ROCKET.AuditDigest/4.9.0",
+  "strict_external_blockers": [
+    "literal 72-hour soak",
+    "independent second-machine/operator replay"
+  ],
+  "strict_gate": "BLOCKED",
+  "unresolved_critical": 0,
+  "unresolved_high": 0
+}

@@ -1,0 +1,59 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "fca109c205fd76048614d5f6e885cb069651e10d1f0b654daeb8200a63b3ae63",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (CAUSAL_REPLAY, ECONOMY_CONSERVATION, MATERIALIZATION_READINESS, TRAVERSAL_PORTAL) plus Stage 15 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "CAUSAL_REPLAY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "ECONOMY_CONSERVATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "MATERIALIZATION_READINESS": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "TRAVERSAL_PORTAL": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-06",
+    "GW-11",
+    "GW-23",
+    "GW-24",
+    "GW-29",
+    "GW-42",
+    "GW-63"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T2_HIGH_FIDELITY",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Traversal prewarm treats portals, tunnels, bridges, stations, dense settlements, and scripted/event barriers as high-cost milestones.",
+  "requirement_id": "RCPW-15-R17",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 15,
+  "stage_title": "High-Speed Traversal Fold / Unfold",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "CAUSAL_REPLAY",
+    "ECONOMY_CONSERVATION",
+    "MATERIALIZATION_READINESS",
+    "TRAVERSAL_PORTAL"
+  ],
+  "workflow_file": "15_HIGH_SPEED_TRAVERSAL_FOLD_UNFOLD/228_RCPW_15_R17_TRAVERSAL_PREWARM_TREATS_PORTALS_TUNNELS_BRIDGES_STATIONS_DENSE_SETTLEMENTS_AND_SCRIP.md",
+  "workflow_tier": "T2_HIGH_FIDELITY"
+}

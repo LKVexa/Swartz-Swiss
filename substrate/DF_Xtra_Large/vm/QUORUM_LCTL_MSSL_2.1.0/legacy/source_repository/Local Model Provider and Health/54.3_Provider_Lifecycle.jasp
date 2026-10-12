@@ -1,0 +1,42 @@
+ja source 0.3
+module suite54.local_model_provider.provider_lifecycle
+use Service
+policy explicit_network
+
+service LocalProviderLifecycle {
+    message ProviderLifecycleRequest {
+        request_id: Text,
+        provider_id: Text,
+        model_id: Text,
+        expected_state: Text,
+        requested_transition: Text,
+        artifact_hash: Text,
+        configuration_hash: Text,
+        resource_lease_id: Text,
+        approval_receipt: Text
+    }
+    message ProviderLifecycleResponse {
+        transition_status: Text,
+        prior_state: Text,
+        resulting_state: Text,
+        lifecycle_event_hash: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_provider_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint transition(request: ProviderLifecycleRequest) -> Stream<ProviderLifecycleResponse>
+        auth capability local_model.provider.lifecycle
+        deadline 45s
+        retry max 0
+        idempotency request.request_id
+    protocol ProviderLifecycleSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json LocalProviderLifecycle.compatibility_report

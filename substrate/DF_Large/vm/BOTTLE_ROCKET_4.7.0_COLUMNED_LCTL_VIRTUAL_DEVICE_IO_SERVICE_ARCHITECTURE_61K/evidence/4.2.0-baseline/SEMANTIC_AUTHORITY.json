@@ -1,0 +1,13 @@
+{
+  "brim": "deploy/BOTTLE_ROCKET_SIM_CORE_4.2.0.brimg",
+  "brir": "deploy/BOTTLE_ROCKET_SIM_CORE_4.2.0.brir.json",
+  "compiler": "tools/lctl420.py",
+  "direct_opcode_columns": true,
+  "independent_verifier": "tools/brim_verify.py",
+  "invalid_source_creates_image": false,
+  "legacy_hidden_metadata_path_exposed": false,
+  "magic": "LCTLC/1.1",
+  "record": "BR.SemanticAuthority",
+  "result": "PASS",
+  "source": "src/BOOT.lctlc"
+}

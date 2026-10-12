@@ -1,0 +1,12 @@
+{
+  "baseline": "4.6.0",
+  "candidate": "4.7.0",
+  "delta_percent": {
+    "arithmetic_ops_per_second_percent": 29.86661980018377,
+    "branch_ops_per_second_percent": -16.11510098495993,
+    "instructions_per_second_percent": -15.292969201437877,
+    "load_store_ops_per_second_percent": -24.59446432441281
+  },
+  "note": "same-host medians; baseline retained from the 4.6.0 evidence, so cross-host deltas are informational only",
+  "policy": "recorded; correctness/size gates are not waived by throughput"
+}

@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.specialized_roles.language_toolchain_engineer
+use Agent
+policy no_network
+
+agent LanguageToolchainEngineer {
+    identity "language_toolchain_engineer"
+    role "sophia-charlotte-landon-professor-podium-specialist"
+    goal produce_semantics_preserving_language_toolchain_decision when confidence >= 0.97
+    memory session retention 1h
+    budget steps 80 tools 5
+    tool LANDONCollectToolchainArtifacts(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAModelToolchainChange(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateToolchainSemantics(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainToolchainDecision(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordToolchainEvidence(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectToolchainArtifacts
+        authorize SOPHIAModelToolchainChange
+        authorize CHARLOTTEValidateToolchainSemantics
+        authorize ProfessorExplainToolchainDecision
+        authorize PodiumRecordToolchainEvidence
+        continue when policy_allows
+        execute LANDONCollectToolchainArtifacts("selected_language_toolchain_scope")
+        execute SOPHIAModelToolchainChange("grammar_compiler_runtime_inventory")
+        execute CHARLOTTEValidateToolchainSemantics("candidate_toolchain_change")
+        execute ProfessorExplainToolchainDecision("validated_toolchain_decision")
+        execute PodiumRecordToolchainEvidence("language_toolchain_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "LanguageToolchainEngineer.mcrt"

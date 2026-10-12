@@ -1,0 +1,36 @@
+ja source 0.3
+module suite16.perceiver.short_term_memory
+use Agent
+policy no_network
+
+agent PerceiverShortTermMemory {
+    identity "perceiver_short_term_memory"
+    role "sophia-charlotte-landon-professor-podium-perceiver"
+    goal maintain_bounded_working_memory when confidence >= 0.90
+    memory session retention 1h
+    budget steps 40 tools 5
+    tool LANDONCaptureObservations(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAScoreSalience(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateShortScope(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainShortMemory(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordShortMemory(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCaptureObservations
+        authorize SOPHIAScoreSalience
+        authorize CHARLOTTEValidateShortScope
+        authorize ProfessorExplainShortMemory
+        authorize PodiumRecordShortMemory
+        continue when policy_allows
+        execute LANDONCaptureObservations("current_session_events")
+        execute SOPHIAScoreSalience("captured_observations")
+        execute CHARLOTTEValidateShortScope("scored_short_term_candidates")
+        execute ProfessorExplainShortMemory("validated_working_memory")
+        execute PodiumRecordShortMemory("short_term_memory_evidence")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "PerceiverShortTermMemory.mcrt"
+

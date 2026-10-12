@@ -1,0 +1,1376 @@
+{
+  "schema": "phase-numerical-verification/1",
+  "generatedAt": "2026-10-11T16:12:05.488Z",
+  "sourceSha256": "1a834a359572281279868c4dd29403b7a8dd13d2f386ccc9f214917048e30373",
+  "nature": "Independent numerical verification from exported conserved/staggered states and analytic test problems. No empirical validation is claimed.",
+  "conservation": [
+    {
+      "name": "default_32",
+      "time": 0.30000000000000004,
+      "parameters": {
+        "resolution": 32
+      },
+      "relativeMassResidual": 8.881784197001252e-16,
+      "relativeEnergyResidual": 1.5543122344752192e-15,
+      "momentumResidual": 7.005895507127875e-15,
+      "concentrationMassResidual": 3.552713678800501e-14,
+      "maxStaggeredDivergence": 5.512961447870095e-15,
+      "maxEOSReconstructionError": 4.440892098500626e-16,
+      "minDensity": 0.8514411039697577,
+      "minPressure": 0.9009607359798385,
+      "minMaterialK": 706.7251518588694,
+      "maxConcentrationViolation": 0,
+      "maxMaterialPartitionError": 0,
+      "allFinite": true,
+      "samples": [
+        {
+          "mass": 39.47841760435743,
+          "energy": 64.57130440031749,
+          "momentumX": 7.471726441830345e-16,
+          "momentumY": -5.125609689418884e-16,
+          "concentrationMass": 19.739208802178716,
+          "divergenceMax": 8.481479150569378e-16,
+          "eosEnergyMaxError": 4.440892098500626e-16,
+          "magneticEnergy": 3.577149201585226,
+          "kineticEnergy": 1.7765287921960824,
+          "thermalEnergy": 59.21762640653616,
+          "ironMeanEnthalpy": 542049.246724153,
+          "minDensity": 0.8514411039697577,
+          "minPressure": 0.9009607359798385,
+          "minMaterialK": 706.7251518588694,
+          "maxConcentrationViolation": 0,
+          "materialPartitionMaxError": 0,
+          "allFinite": true
+        },
+        {
+          "mass": 39.478417604357425,
+          "energy": 64.57130440031739,
+          "momentumX": 1.837836042082867e-16,
+          "momentumY": -3.7184746702986684e-16,
+          "concentrationMass": 19.73920880217875,
+          "divergenceMax": 2.8271597168564595e-15,
+          "eosEnergyMaxError": 4.440892098500626e-16,
+          "magneticEnergy": 3.450507000550357,
+          "kineticEnergy": 1.7307491117932712,
+          "thermalEnergy": 59.390048287973826,
+          "ironMeanEnthalpy": 542542.9432372857,
+          "minDensity": 0.8560314696515086,
+          "minPressure": 0.9114022926231571,
+          "minMaterialK": 720.0749147352926,
+          "maxConcentrationViolation": 0,
+          "materialPartitionMaxError": 0,
+          "allFinite": true
+        },
+        {
+          "mass": 39.47841760435742,
+          "energy": 64.57130440031753,
+          "momentumX": -6.253725350185034e-15,
+          "momentumY": -2.479874834076882e-16,
+          "concentrationMass": 19.73920880217873,
+          "divergenceMax": 4.240739575284689e-15,
+          "eosEnergyMaxError": 4.440892098500626e-16,
+          "magneticEnergy": 3.318176731572712,
+          "kineticEnergy": 1.6955186002597995,
+          "thermalEnergy": 59.55760906848495,
+          "ironMeanEnthalpy": 543036.8869640152,
+          "minDensity": 0.8602870771150242,
+          "minPressure": 0.9161046410992386,
+          "minMaterialK": 733.209321492825,
+          "maxConcentrationViolation": 0,
+          "materialPartitionMaxError": 0,
+          "allFinite": true
+        },
+        {
+          "mass": 39.47841760435747,
+          "energy": 64.57130440031746,
+          "momentumX": -3.4969712870607333e-15,
+          "momentumY": -5.649941369547329e-16,
+          "concentrationMass": 19.7392088021787,
+          "divergenceMax": 5.512961447870095e-15,
+          "eosEnergyMaxError": 4.440892098500626e-16,
+          "magneticEnergy": 3.185319286123873,
+          "kineticEnergy": 1.662360470152819,
+          "thermalEnergy": 59.72362464404081,
+          "ironMeanEnthalpy": 543531.0692060367,
+          "minDensity": 0.8631158856371243,
+          "minPressure": 0.9165871462894102,
+          "minMaterialK": 746.1317932044142,
+          "maxConcentrationViolation": 0,
+          "materialPartitionMaxError": 0,
+          "allFinite": true
+        }
+      ],
+      "reportedAcceptedSteps": 30,
+      "reportedRejectedSteps": 0
+    },
+    {
+      "name": "ideal_16",
+      "time": 0.2,
+      "parameters": {
+        "resolution": 16,
+        "resistivity": 0,
+        "viscosity": 0,
+        "thermalConductivity": 0,
+        "concentrationDiffusivity": 0,
+        "ironHeatingWkg": 0,
+        "ironBathCouplingWkgK": 0
+      },
+      "relativeMassResidual": 4.440892098500626e-16,
+      "relativeEnergyResidual": 8.881784197001252e-16,
+      "momentumResidual": 1.503524232104319e-15,
+      "concentrationMassResidual": 0,
+      "maxStaggeredDivergence": 1.2722218725854067e-15,
+      "maxEOSReconstructionError": 6.661338147750939e-16,
+      "minDensity": 0.8557090350616535,
+      "minPressure": 0.9038060233744356,
+      "minMaterialK": 726.6421636210496,
+      "maxConcentrationViolation": 0,
+      "maxMaterialPartitionError": 0,
+      "allFinite": true,
+      "samples": [
+        {
+          "mass": 39.478417604357425,
+          "energy": 64.496847851275,
+          "momentumX": 6.420387919940147e-16,
+          "momentumY": 2.48254999571019e-16,
+          "concentrationMass": 19.73920880217872,
+          "divergenceMax": 4.240739575284689e-16,
+          "eosEnergyMaxError": 2.220446049250313e-16,
+          "magneticEnergy": 3.502692652542748,
+          "kineticEnergy": 1.7765287921960882,
+          "thermalEnergy": 59.21762640653611,
+          "ironMeanEnthalpy": 534317.243813502,
+          "minDensity": 0.8557090350616535,
+          "minPressure": 0.9038060233744356,
+          "minMaterialK": 726.6421636210496,
+          "maxConcentrationViolation": 0,
+          "materialPartitionMaxError": 0,
+          "allFinite": true
+        },
+        {
+          "mass": 39.478417604357446,
+          "energy": 64.49684785127495,
+          "momentumX": 2.108027367047015e-15,
+          "momentumY": -8.560517226586863e-17,
+          "concentrationMass": 19.73920880217872,
+          "divergenceMax": 1.1308638867425838e-15,
+          "eosEnergyMaxError": 6.661338147750939e-16,
+          "magneticEnergy": 3.286640105422802,
+          "kineticEnergy": 1.6783487800324,
+          "thermalEnergy": 59.53185896581982,
+          "ironMeanEnthalpy": 534317.2438135023,
+          "minDensity": 0.8631921612279891,
+          "minPressure": 0.9186402903987065,
+          "minMaterialK": 738.3887704993617,
+          "maxConcentrationViolation": 0,
+          "materialPartitionMaxError": 0,
+          "allFinite": true
+        },
+        {
+          "mass": 39.478417604357446,
+          "energy": 64.49684785127498,
+          "momentumX": 1.9999508370613558e-15,
+          "momentumY": -1.498090514652701e-16,
+          "concentrationMass": 19.73920880217872,
+          "divergenceMax": 1.2722218725854067e-15,
+          "eosEnergyMaxError": 4.440892098500626e-16,
+          "magneticEnergy": 3.083057946476118,
+          "kineticEnergy": 1.5914687971460408,
+          "thermalEnergy": 59.8223211076528,
+          "ironMeanEnthalpy": 534317.2438135019,
+          "minDensity": 0.8692114331676546,
+          "minPressure": 0.9306711287485326,
+          "minMaterialK": 749.9304595835089,
+          "maxConcentrationViolation": 0,
+          "materialPartitionMaxError": 0,
+          "allFinite": true
+        }
+      ],
+      "reportedAcceptedSteps": 10,
+      "reportedRejectedSteps": 0
+    },
+    {
+      "name": "strong_fields_and_diffusion_16",
+      "time": 0.04,
+      "parameters": {
+        "resolution": 16,
+        "densityContrast": 0.5,
+        "temperatureContrast": 0.5,
+        "flowSpeed": 1,
+        "magneticStrength": 2,
+        "guideFieldX": -2,
+        "guideFieldY": 2,
+        "resistivity": 0.1,
+        "viscosity": 0.1,
+        "thermalConductivity": 0.1,
+        "concentrationDiffusivity": 0.1,
+        "cfl": 0.35
+      },
+      "relativeMassResidual": 3.3306690738754696e-16,
+      "relativeEnergyResidual": 2.220446049250313e-16,
+      "momentumResidual": 9.495099963563003e-15,
+      "concentrationMassResidual": 2.842170943040401e-14,
+      "maxStaggeredDivergence": 5.654319433712919e-15,
+      "maxEOSReconstructionError": 3.552713678800501e-15,
+      "minDensity": 0.5190301168721783,
+      "minPressure": 0.5190301168721779,
+      "minMaterialK": 726.6421636210496,
+      "maxConcentrationViolation": 0,
+      "maxMaterialPartitionError": 0,
+      "allFinite": true,
+      "samples": [
+        {
+          "mass": 39.47841760435744,
+          "energy": 313.3345169884876,
+          "momentumX": -1.6350587902780906e-15,
+          "momentumY": -1.2669565495348557e-15,
+          "concentrationMass": 19.739208802178705,
+          "divergenceMax": 2.2617277734851675e-15,
+          "eosEnergyMaxError": 3.552713678800501e-15,
+          "magneticEnergy": 234.37768177977276,
+          "kineticEnergy": 19.739208802178723,
+          "thermalEnergy": 59.21762640653616,
+          "ironMeanEnthalpy": 534317.243813502,
+          "minDensity": 0.5190301168721783,
+          "minPressure": 0.5190301168721779,
+          "minMaterialK": 726.6421636210496,
+          "maxConcentrationViolation": 0,
+          "materialPartitionMaxError": 0,
+          "allFinite": true
+        },
+        {
+          "mass": 39.478417604357425,
+          "energy": 313.33451698848756,
+          "momentumX": 7.85855481400674e-15,
+          "momentumY": -1.0989563989630884e-15,
+          "concentrationMass": 19.73920880217872,
+          "divergenceMax": 3.392591660227751e-15,
+          "eosEnergyMaxError": 1.7763568394002505e-15,
+          "magneticEnergy": 229.9758945415752,
+          "kineticEnergy": 19.604847807221486,
+          "thermalEnergy": 63.75377463969098,
+          "ironMeanEnthalpy": 534418.0702886872,
+          "minDensity": 0.5331011420048346,
+          "minPressure": 0.5897695505435402,
+          "minMaterialK": 729.2704166722392,
+          "maxConcentrationViolation": 0,
+          "materialPartitionMaxError": 0,
+          "allFinite": true
+        },
+        {
+          "mass": 39.47841760435743,
+          "energy": 313.3345169884876,
+          "momentumX": 1.5408931007856353e-16,
+          "momentumY": -2.910575857039533e-16,
+          "concentrationMass": 19.739208802178734,
+          "divergenceMax": 5.654319433712919e-15,
+          "eosEnergyMaxError": 1.7763568394002505e-15,
+          "magneticEnergy": 224.89604526783324,
+          "kineticEnergy": 20.318414231841682,
+          "thermalEnergy": 68.12005748881273,
+          "ironMeanEnthalpy": 534520.4288709918,
+          "minDensity": 0.5470700816663601,
+          "minPressure": 0.5833197397669637,
+          "minMaterialK": 731.9042158374714,
+          "maxConcentrationViolation": 0,
+          "materialPartitionMaxError": 0,
+          "allFinite": true
+        }
+      ],
+      "reportedAcceptedSteps": 6,
+      "reportedRejectedSteps": 0
+    }
+  ],
+  "scalarAdvection": {
+    "equation": "c_t + v c_x = D c_xx",
+    "exact": "0.5 + 0.2 exp(-D t) sin(x-v t)",
+    "velocity": 0.3,
+    "diffusivity": 0,
+    "time": 0.4,
+    "cases": [
+      {
+        "resolution": 16,
+        "rmsError": 0.01641775820191584,
+        "time": 0.4,
+        "massResidual": 0,
+        "energyResidual": 0
+      },
+      {
+        "resolution": 32,
+        "rmsError": 0.008539457133313002,
+        "time": 0.4000000000000001,
+        "massResidual": 0,
+        "energyResidual": 0,
+        "observedOrder": 0.9430408811822437
+      },
+      {
+        "resolution": 64,
+        "rmsError": 0.004346235686866482,
+        "time": 0.4000000000000001,
+        "massResidual": 0,
+        "energyResidual": 0,
+        "observedOrder": 0.9743779475328973
+      }
+    ],
+    "qualification": "The Rusanov scalar flux adds numerical diffusion from the MHD signal speed. Convergence is to the continuum solution; finite-grid diffusivity is not the input diffusivity alone."
+  },
+  "scalarDiffusion": {
+    "equation": "c_t + v c_x = D c_xx",
+    "exact": "0.5 + 0.2 exp(-D t) sin(x-v t)",
+    "velocity": 0,
+    "diffusivity": 0.05,
+    "time": 0.4,
+    "cases": [
+      {
+        "resolution": 16,
+        "rmsError": 0.013171560545649344,
+        "time": 0.39999999999999997,
+        "massResidual": 0,
+        "energyResidual": 0
+      },
+      {
+        "resolution": 32,
+        "rmsError": 0.006822627641472708,
+        "time": 0.4,
+        "massResidual": 0,
+        "energyResidual": 0,
+        "observedOrder": 0.949026898348909
+      },
+      {
+        "resolution": 64,
+        "rmsError": 0.003464767594854946,
+        "time": 0.4000000000000001,
+        "massResidual": 0,
+        "energyResidual": 0,
+        "observedOrder": 0.9775688960861539
+      }
+    ],
+    "qualification": "The Rusanov scalar flux adds numerical diffusion from the MHD signal speed. Convergence is to the continuum solution; finite-grid diffusivity is not the input diffusivity alone."
+  },
+  "resistiveDecay": {
+    "equation": "B_y,t = eta B_y,xx in the small-amplitude, zero-flow limit",
+    "amplitude": 0.001,
+    "resistivity": 0.05,
+    "time": 0.4,
+    "cases": [
+      {
+        "resolution": 16,
+        "measuredDecayRatio": 0.9325867964934506,
+        "expectedDecayRatio": 0.9801986733067553,
+        "ratioError": 0.0476118768133047,
+        "maxStaggeredDivergence": 0,
+        "magneticEnergyChange": -0.0000012693909275910891,
+        "energyResidual": 3.599650958512453e-15,
+        "maxFlowGenerated": 9.802992073695752e-8
+      },
+      {
+        "resolution": 32,
+        "measuredDecayRatio": 0.9558033321970207,
+        "expectedDecayRatio": 0.9801986733067553,
+        "ratioError": 0.024395341109734514,
+        "maxStaggeredDivergence": 0,
+        "magneticEnergyChange": -8.503911285210544e-7,
+        "energyResidual": 4.7995346036893866e-15,
+        "maxFlowGenerated": 1.2974602207687912e-7,
+        "observedOrder": 0.9647158436337562
+      },
+      {
+        "resolution": 64,
+        "measuredDecayRatio": 0.9678791065194015,
+        "expectedDecayRatio": 0.9801986733067553,
+        "ratioError": 0.012319566787353797,
+        "maxStaggeredDivergence": 0,
+        "magneticEnergyChange": -6.233571253674141e-7,
+        "energyResidual": 8.519173918132913e-15,
+        "maxFlowGenerated": 1.4545959015896725e-7,
+        "observedOrder": 0.9856541308696029
+      }
+    ],
+    "qualification": "Magnetic force and pressure response are O(amplitude^2); they are measured below. Rusanov/CT magnetic diffusion also vanishes only by grid refinement."
+  },
+  "complexReaction": {
+    "equation": "psi_t = (g-b|psi|^2)psi - i omega |psi|^2 psi",
+    "reference": "Exact logistic amplitude and integrated phase for uniform psi",
+    "time": 0.1,
+    "growth": 0.7,
+    "nonlinearity": 0.8,
+    "frequency": 0.5,
+    "exactRe": 0.42380817740493776,
+    "exactIm": 0.1019114546995818,
+    "cases": [
+      {
+        "requestedDt": 0.01,
+        "acceptedSteps": 10,
+        "error": 1.3045752540625017e-7,
+        "re": 0.42380805032815155,
+        "im": 0.10191148420646816
+      },
+      {
+        "requestedDt": 0.005,
+        "acceptedSteps": 20,
+        "error": 3.269074147036691e-8,
+        "re": 0.42380814556624113,
+        "im": 0.10191146211456495,
+        "observedOrder": 1.996626163150247
+      },
+      {
+        "requestedDt": 0.0025,
+        "acceptedSteps": 40,
+        "error": 8.182238606313008e-9,
+        "re": 0.42380816943657706,
+        "im": 0.1019114565581448,
+        "observedOrder": 1.9983145856603048
+      }
+    ]
+  },
+  "iron": {
+    "constants": {
+      "referenceK": 298.15,
+      "meltingK": 1811,
+      "boilingK": 3134,
+      "solidCp": 450,
+      "liquidCp": 820,
+      "vaporCp": 372.2,
+      "fusion": 247291.61070821024,
+      "vaporization": 6088280.060882801
+    },
+    "thresholdsJkg": {
+      "solidToMelt": 680782.5,
+      "fullLiquid": 928074.1107082103,
+      "liquidToBoil": 2012934.1107082102,
+      "fullVapor": 8101214.171591012
+    },
+    "transitionChecks": [
+      {
+        "enthalpy": 680782.5,
+        "expectedTemperature": 1811,
+        "expectedSolid": 1,
+        "expectedLiquid": 0,
+        "expectedTotalVapor": 0,
+        "actual": {
+          "temperatureK": 1811,
+          "solidFraction": 1,
+          "liquidFraction": 0,
+          "vaporFraction": 0,
+          "plasmaFraction": 0
+        }
+      },
+      {
+        "enthalpy": 742605.4026770525,
+        "expectedTemperature": 1811,
+        "expectedSolid": 0.75,
+        "expectedLiquid": 0.25,
+        "expectedTotalVapor": 0,
+        "actual": {
+          "temperatureK": 1811,
+          "solidFraction": 0.7500000000000001,
+          "liquidFraction": 0.24999999999999992,
+          "vaporFraction": 0,
+          "plasmaFraction": 0
+        }
+      },
+      {
+        "enthalpy": 928074.1107082103,
+        "expectedTemperature": 1811,
+        "expectedSolid": 0,
+        "expectedLiquid": 1,
+        "expectedTotalVapor": 0,
+        "actual": {
+          "temperatureK": 1811,
+          "solidFraction": 0,
+          "liquidFraction": 1,
+          "vaporFraction": 0,
+          "plasmaFraction": 0
+        }
+      },
+      {
+        "enthalpy": 2012934.1107082102,
+        "expectedTemperature": 3134,
+        "expectedSolid": 0,
+        "expectedLiquid": 1,
+        "expectedTotalVapor": 0,
+        "actual": {
+          "temperatureK": 3134,
+          "solidFraction": 0,
+          "liquidFraction": 1,
+          "vaporFraction": 0,
+          "plasmaFraction": 0
+        }
+      },
+      {
+        "enthalpy": 4448246.135061331,
+        "expectedTemperature": 3134,
+        "expectedSolid": 0,
+        "expectedLiquid": 0.6,
+        "expectedTotalVapor": 0.4,
+        "actual": {
+          "temperatureK": 3134,
+          "solidFraction": 0,
+          "liquidFraction": 0.5999999999999999,
+          "vaporFraction": 0.39948497400668387,
+          "plasmaFraction": 0.0005150259933162157
+        }
+      },
+      {
+        "enthalpy": 8101214.171591012,
+        "expectedTemperature": 3134,
+        "expectedSolid": 0,
+        "expectedLiquid": 0,
+        "expectedTotalVapor": 1,
+        "actual": {
+          "temperatureK": 3134,
+          "solidFraction": 0,
+          "liquidFraction": 0,
+          "vaporFraction": 0.9987124350167095,
+          "plasmaFraction": 0.0012875649832905392
+        }
+      }
+    ],
+    "heatingWkg": 100000,
+    "secondsPerUnit": 100,
+    "snapshots": [
+      {
+        "time": 0.01,
+        "meanEnthalpy": 730832.5,
+        "expectedMeanEnthalpy": 730832.5,
+        "temperatureK": 1811,
+        "solid": 0.7976073678493845,
+        "liquid": 0.20239263215061548,
+        "totalVapor": 0
+      },
+      {
+        "time": 0.02,
+        "meanEnthalpy": 830832.5,
+        "expectedMeanEnthalpy": 830832.5,
+        "temperatureK": 1811,
+        "solid": 0.3932264844315714,
+        "liquid": 0.6067735155684286,
+        "totalVapor": 0
+      },
+      {
+        "time": 0.03,
+        "meanEnthalpy": 930832.5,
+        "expectedMeanEnthalpy": 930832.5,
+        "temperatureK": 1814.3638893802313,
+        "solid": 0,
+        "liquid": 1,
+        "totalVapor": 0
+      },
+      {
+        "time": 0.04,
+        "meanEnthalpy": 1030832.5,
+        "expectedMeanEnthalpy": 1030832.5,
+        "temperatureK": 1936.3151088924265,
+        "solid": 0,
+        "liquid": 1,
+        "totalVapor": 0
+      },
+      {
+        "time": 0.05,
+        "meanEnthalpy": 1130832.5,
+        "expectedMeanEnthalpy": 1130832.5,
+        "temperatureK": 2058.2663284046216,
+        "solid": 0,
+        "liquid": 1,
+        "totalVapor": 0
+      },
+      {
+        "time": 0.060000000000000005,
+        "meanEnthalpy": 1230832.5,
+        "expectedMeanEnthalpy": 1230832.5,
+        "temperatureK": 2180.217547916817,
+        "solid": 0,
+        "liquid": 1,
+        "totalVapor": 0
+      },
+      {
+        "time": 0.07,
+        "meanEnthalpy": 1330832.5,
+        "expectedMeanEnthalpy": 1330832.5,
+        "temperatureK": 2302.168767429012,
+        "solid": 0,
+        "liquid": 1,
+        "totalVapor": 0
+      },
+      {
+        "time": 0.08,
+        "meanEnthalpy": 1430832.5,
+        "expectedMeanEnthalpy": 1430832.5,
+        "temperatureK": 2424.119986941207,
+        "solid": 0,
+        "liquid": 1,
+        "totalVapor": 0
+      },
+      {
+        "time": 0.09,
+        "meanEnthalpy": 1530832.5,
+        "expectedMeanEnthalpy": 1530832.5,
+        "temperatureK": 2546.071206453402,
+        "solid": 0,
+        "liquid": 1,
+        "totalVapor": 0
+      },
+      {
+        "time": 0.09999999999999999,
+        "meanEnthalpy": 1630832.5,
+        "expectedMeanEnthalpy": 1630832.5,
+        "temperatureK": 2668.022425965597,
+        "solid": 0,
+        "liquid": 1,
+        "totalVapor": 0
+      },
+      {
+        "time": 0.10999999999999999,
+        "meanEnthalpy": 1730832.5,
+        "expectedMeanEnthalpy": 1730832.4999999998,
+        "temperatureK": 2789.973645477792,
+        "solid": 0,
+        "liquid": 1,
+        "totalVapor": 0
+      },
+      {
+        "time": 0.11999999999999998,
+        "meanEnthalpy": 1830832.5,
+        "expectedMeanEnthalpy": 1830832.4999999998,
+        "temperatureK": 2911.9248649899873,
+        "solid": 0,
+        "liquid": 1,
+        "totalVapor": 0
+      },
+      {
+        "time": 0.12999999999999998,
+        "meanEnthalpy": 1930832.5,
+        "expectedMeanEnthalpy": 1930832.4999999998,
+        "temperatureK": 3033.8760845021825,
+        "solid": 0,
+        "liquid": 1,
+        "totalVapor": 0
+      },
+      {
+        "time": 0.13999999999999999,
+        "meanEnthalpy": 2030832.5,
+        "expectedMeanEnthalpy": 2030832.4999999998,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.9970601895588235,
+        "totalVapor": 0.0029398104411764822
+      },
+      {
+        "time": 0.15,
+        "meanEnthalpy": 2130832.5,
+        "expectedMeanEnthalpy": 2130832.5,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.9806351895588236,
+        "totalVapor": 0.01936481044117648
+      },
+      {
+        "time": 0.16,
+        "meanEnthalpy": 2230832.5,
+        "expectedMeanEnthalpy": 2230832.5,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.9642101895588235,
+        "totalVapor": 0.03578981044117648
+      },
+      {
+        "time": 0.17,
+        "meanEnthalpy": 2330832.5,
+        "expectedMeanEnthalpy": 2330832.5,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.9477851895588235,
+        "totalVapor": 0.05221481044117648
+      },
+      {
+        "time": 0.18000000000000002,
+        "meanEnthalpy": 2430832.5,
+        "expectedMeanEnthalpy": 2430832.5,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.9313601895588235,
+        "totalVapor": 0.06863981044117648
+      },
+      {
+        "time": 0.19000000000000003,
+        "meanEnthalpy": 2530832.5,
+        "expectedMeanEnthalpy": 2530832.5,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.9149351895588236,
+        "totalVapor": 0.08506481044117647
+      },
+      {
+        "time": 0.20000000000000004,
+        "meanEnthalpy": 2630832.5,
+        "expectedMeanEnthalpy": 2630832.5000000005,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.8985101895588236,
+        "totalVapor": 0.10148981044117647
+      },
+      {
+        "time": 0.21000000000000005,
+        "meanEnthalpy": 2730832.5,
+        "expectedMeanEnthalpy": 2730832.5000000005,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.8820851895588235,
+        "totalVapor": 0.11791481044117647
+      },
+      {
+        "time": 0.22000000000000006,
+        "meanEnthalpy": 2830832.5,
+        "expectedMeanEnthalpy": 2830832.5000000005,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.8656601895588235,
+        "totalVapor": 0.13433981044117646
+      },
+      {
+        "time": 0.23000000000000007,
+        "meanEnthalpy": 2930832.5,
+        "expectedMeanEnthalpy": 2930832.5000000005,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.8492351895588235,
+        "totalVapor": 0.15076481044117646
+      },
+      {
+        "time": 0.24000000000000007,
+        "meanEnthalpy": 3030832.5,
+        "expectedMeanEnthalpy": 3030832.500000001,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.8328101895588236,
+        "totalVapor": 0.16718981044117648
+      },
+      {
+        "time": 0.25000000000000006,
+        "meanEnthalpy": 3130832.5,
+        "expectedMeanEnthalpy": 3130832.5000000005,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.8163851895588236,
+        "totalVapor": 0.18361481044117647
+      },
+      {
+        "time": 0.26000000000000006,
+        "meanEnthalpy": 3230832.5,
+        "expectedMeanEnthalpy": 3230832.5000000005,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.7999601895588235,
+        "totalVapor": 0.20003981044117647
+      },
+      {
+        "time": 0.2700000000000001,
+        "meanEnthalpy": 3330832.5,
+        "expectedMeanEnthalpy": 3330832.500000001,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.7835351895588235,
+        "totalVapor": 0.21646481044117646
+      },
+      {
+        "time": 0.2800000000000001,
+        "meanEnthalpy": 3430832.5,
+        "expectedMeanEnthalpy": 3430832.500000001,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.7671101895588235,
+        "totalVapor": 0.23288981044117646
+      },
+      {
+        "time": 0.2900000000000001,
+        "meanEnthalpy": 3530832.5,
+        "expectedMeanEnthalpy": 3530832.500000001,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.7506851895588236,
+        "totalVapor": 0.24931481044117645
+      },
+      {
+        "time": 0.3000000000000001,
+        "meanEnthalpy": 3630832.5,
+        "expectedMeanEnthalpy": 3630832.500000001,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.7342601895588236,
+        "totalVapor": 0.26573981044117645
+      },
+      {
+        "time": 0.3100000000000001,
+        "meanEnthalpy": 3730832.5,
+        "expectedMeanEnthalpy": 3730832.500000001,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.7178351895588235,
+        "totalVapor": 0.2821648104411765
+      },
+      {
+        "time": 0.3200000000000001,
+        "meanEnthalpy": 3830832.5,
+        "expectedMeanEnthalpy": 3830832.5000000014,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.7014101895588236,
+        "totalVapor": 0.29858981044117644
+      },
+      {
+        "time": 0.3300000000000001,
+        "meanEnthalpy": 3930832.5,
+        "expectedMeanEnthalpy": 3930832.5000000014,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.6849851895588235,
+        "totalVapor": 0.31501481044117646
+      },
+      {
+        "time": 0.34000000000000014,
+        "meanEnthalpy": 4030832.5,
+        "expectedMeanEnthalpy": 4030832.5000000014,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.6685601895588236,
+        "totalVapor": 0.33143981044117643
+      },
+      {
+        "time": 0.35000000000000014,
+        "meanEnthalpy": 4130832.5,
+        "expectedMeanEnthalpy": 4130832.5000000014,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.6521351895588235,
+        "totalVapor": 0.3478648104411765
+      },
+      {
+        "time": 0.36000000000000015,
+        "meanEnthalpy": 4230832.5,
+        "expectedMeanEnthalpy": 4230832.500000002,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.6357101895588235,
+        "totalVapor": 0.3642898104411764
+      },
+      {
+        "time": 0.37000000000000016,
+        "meanEnthalpy": 4330832.5,
+        "expectedMeanEnthalpy": 4330832.500000002,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.6192851895588236,
+        "totalVapor": 0.38071481044117644
+      },
+      {
+        "time": 0.38000000000000017,
+        "meanEnthalpy": 4430832.5,
+        "expectedMeanEnthalpy": 4430832.500000002,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.6028601895588235,
+        "totalVapor": 0.39713981044117647
+      },
+      {
+        "time": 0.3900000000000002,
+        "meanEnthalpy": 4530832.5,
+        "expectedMeanEnthalpy": 4530832.500000002,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.5864351895588236,
+        "totalVapor": 0.41356481044117643
+      },
+      {
+        "time": 0.4000000000000002,
+        "meanEnthalpy": 4630832.5,
+        "expectedMeanEnthalpy": 4630832.500000002,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.5700101895588235,
+        "totalVapor": 0.42998981044117646
+      },
+      {
+        "time": 0.4100000000000002,
+        "meanEnthalpy": 4730832.5,
+        "expectedMeanEnthalpy": 4730832.500000002,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.5535851895588235,
+        "totalVapor": 0.4464148104411765
+      },
+      {
+        "time": 0.4200000000000002,
+        "meanEnthalpy": 4830832.5,
+        "expectedMeanEnthalpy": 4830832.500000002,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.5371601895588236,
+        "totalVapor": 0.46283981044117645
+      },
+      {
+        "time": 0.4300000000000002,
+        "meanEnthalpy": 4930832.5,
+        "expectedMeanEnthalpy": 4930832.500000002,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.5207351895588236,
+        "totalVapor": 0.4792648104411764
+      },
+      {
+        "time": 0.4400000000000002,
+        "meanEnthalpy": 5030832.5,
+        "expectedMeanEnthalpy": 5030832.500000002,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.5043101895588236,
+        "totalVapor": 0.49568981044117644
+      },
+      {
+        "time": 0.45000000000000023,
+        "meanEnthalpy": 5130832.5,
+        "expectedMeanEnthalpy": 5130832.500000003,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.48788518955882354,
+        "totalVapor": 0.5121148104411765
+      },
+      {
+        "time": 0.46000000000000024,
+        "meanEnthalpy": 5230832.5,
+        "expectedMeanEnthalpy": 5230832.500000003,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.4714601895588235,
+        "totalVapor": 0.5285398104411765
+      },
+      {
+        "time": 0.47000000000000025,
+        "meanEnthalpy": 5330832.5,
+        "expectedMeanEnthalpy": 5330832.500000003,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.4550351895588236,
+        "totalVapor": 0.5449648104411764
+      },
+      {
+        "time": 0.48000000000000026,
+        "meanEnthalpy": 5430832.5,
+        "expectedMeanEnthalpy": 5430832.500000003,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.4386101895588236,
+        "totalVapor": 0.5613898104411764
+      },
+      {
+        "time": 0.49000000000000027,
+        "meanEnthalpy": 5530832.5,
+        "expectedMeanEnthalpy": 5530832.500000003,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.42218518955882356,
+        "totalVapor": 0.5778148104411764
+      },
+      {
+        "time": 0.5000000000000002,
+        "meanEnthalpy": 5630832.5,
+        "expectedMeanEnthalpy": 5630832.500000002,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.40576018955882354,
+        "totalVapor": 0.5942398104411765
+      },
+      {
+        "time": 0.5100000000000002,
+        "meanEnthalpy": 5730832.5,
+        "expectedMeanEnthalpy": 5730832.500000002,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.3893351895588236,
+        "totalVapor": 0.6106648104411765
+      },
+      {
+        "time": 0.5200000000000002,
+        "meanEnthalpy": 5830832.5,
+        "expectedMeanEnthalpy": 5830832.500000003,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.3729101895588236,
+        "totalVapor": 0.6270898104411764
+      },
+      {
+        "time": 0.5300000000000002,
+        "meanEnthalpy": 5930832.5,
+        "expectedMeanEnthalpy": 5930832.500000003,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.3564851895588236,
+        "totalVapor": 0.6435148104411764
+      },
+      {
+        "time": 0.5400000000000003,
+        "meanEnthalpy": 6030832.5,
+        "expectedMeanEnthalpy": 6030832.500000003,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.34006018955882356,
+        "totalVapor": 0.6599398104411764
+      },
+      {
+        "time": 0.5500000000000003,
+        "meanEnthalpy": 6130832.5,
+        "expectedMeanEnthalpy": 6130832.500000003,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.32363518955882353,
+        "totalVapor": 0.6763648104411765
+      },
+      {
+        "time": 0.5600000000000003,
+        "meanEnthalpy": 6230832.5,
+        "expectedMeanEnthalpy": 6230832.500000003,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.3072101895588236,
+        "totalVapor": 0.6927898104411764
+      },
+      {
+        "time": 0.5700000000000003,
+        "meanEnthalpy": 6330832.5,
+        "expectedMeanEnthalpy": 6330832.500000003,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.2907851895588237,
+        "totalVapor": 0.7092148104411763
+      },
+      {
+        "time": 0.5800000000000003,
+        "meanEnthalpy": 6430832.5,
+        "expectedMeanEnthalpy": 6430832.500000003,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.2743601895588237,
+        "totalVapor": 0.7256398104411763
+      },
+      {
+        "time": 0.5900000000000003,
+        "meanEnthalpy": 6530832.5,
+        "expectedMeanEnthalpy": 6530832.500000003,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.25793518955882366,
+        "totalVapor": 0.7420648104411763
+      },
+      {
+        "time": 0.6000000000000003,
+        "meanEnthalpy": 6630832.5,
+        "expectedMeanEnthalpy": 6630832.500000003,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.24151018955882364,
+        "totalVapor": 0.7584898104411764
+      },
+      {
+        "time": 0.6100000000000003,
+        "meanEnthalpy": 6730832.5,
+        "expectedMeanEnthalpy": 6730832.500000003,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.22508518955882362,
+        "totalVapor": 0.7749148104411764
+      },
+      {
+        "time": 0.6200000000000003,
+        "meanEnthalpy": 6830832.5,
+        "expectedMeanEnthalpy": 6830832.500000004,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.2086601895588237,
+        "totalVapor": 0.7913398104411763
+      },
+      {
+        "time": 0.6300000000000003,
+        "meanEnthalpy": 6930832.5,
+        "expectedMeanEnthalpy": 6930832.500000004,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.19223518955882368,
+        "totalVapor": 0.8077648104411764
+      },
+      {
+        "time": 0.6400000000000003,
+        "meanEnthalpy": 7030832.5,
+        "expectedMeanEnthalpy": 7030832.500000004,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.17581018955882366,
+        "totalVapor": 0.8241898104411763
+      },
+      {
+        "time": 0.6500000000000004,
+        "meanEnthalpy": 7130832.5,
+        "expectedMeanEnthalpy": 7130832.500000004,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.15938518955882364,
+        "totalVapor": 0.8406148104411764
+      },
+      {
+        "time": 0.6600000000000004,
+        "meanEnthalpy": 7230832.5,
+        "expectedMeanEnthalpy": 7230832.500000004,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.14296018955882372,
+        "totalVapor": 0.8570398104411763
+      },
+      {
+        "time": 0.6700000000000004,
+        "meanEnthalpy": 7330832.5,
+        "expectedMeanEnthalpy": 7330832.500000004,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.1265351895588237,
+        "totalVapor": 0.8734648104411763
+      },
+      {
+        "time": 0.6800000000000004,
+        "meanEnthalpy": 7430832.5,
+        "expectedMeanEnthalpy": 7430832.500000004,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.11011018955882368,
+        "totalVapor": 0.8898898104411763
+      },
+      {
+        "time": 0.6900000000000004,
+        "meanEnthalpy": 7530832.5,
+        "expectedMeanEnthalpy": 7530832.500000004,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.09368518955882366,
+        "totalVapor": 0.9063148104411763
+      },
+      {
+        "time": 0.7000000000000004,
+        "meanEnthalpy": 7630832.5,
+        "expectedMeanEnthalpy": 7630832.500000004,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.07726018955882363,
+        "totalVapor": 0.9227398104411764
+      },
+      {
+        "time": 0.7100000000000004,
+        "meanEnthalpy": 7730832.5,
+        "expectedMeanEnthalpy": 7730832.500000004,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.06083518955882372,
+        "totalVapor": 0.9391648104411763
+      },
+      {
+        "time": 0.7200000000000004,
+        "meanEnthalpy": 7830832.5,
+        "expectedMeanEnthalpy": 7830832.500000004,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.0444101895588237,
+        "totalVapor": 0.9555898104411763
+      },
+      {
+        "time": 0.7300000000000004,
+        "meanEnthalpy": 7930832.5,
+        "expectedMeanEnthalpy": 7930832.500000005,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.027985189558823675,
+        "totalVapor": 0.9720148104411763
+      },
+      {
+        "time": 0.7400000000000004,
+        "meanEnthalpy": 8030832.5,
+        "expectedMeanEnthalpy": 8030832.500000005,
+        "temperatureK": 3134,
+        "solid": 0,
+        "liquid": 0.011560189558823653,
+        "totalVapor": 0.9884398104411763
+      },
+      {
+        "time": 0.7500000000000004,
+        "meanEnthalpy": 8130832.5,
+        "expectedMeanEnthalpy": 8130832.500000005,
+        "temperatureK": 3213.576379390081,
+        "solid": 0,
+        "liquid": 0,
+        "totalVapor": 1
+      },
+      {
+        "time": 0.7600000000000005,
+        "meanEnthalpy": 8230832.5,
+        "expectedMeanEnthalpy": 8230832.500000005,
+        "temperatureK": 3482.2491359725636,
+        "solid": 0,
+        "liquid": 0,
+        "totalVapor": 1
+      },
+      {
+        "time": 0.7700000000000005,
+        "meanEnthalpy": 8330832.5,
+        "expectedMeanEnthalpy": 8330832.500000005,
+        "temperatureK": 3750.9218925550463,
+        "solid": 0,
+        "liquid": 0,
+        "totalVapor": 1
+      },
+      {
+        "time": 0.7800000000000005,
+        "meanEnthalpy": 8430832.5,
+        "expectedMeanEnthalpy": 8430832.500000004,
+        "temperatureK": 4019.594649137529,
+        "solid": 0,
+        "liquid": 0,
+        "totalVapor": 1
+      },
+      {
+        "time": 0.7900000000000005,
+        "meanEnthalpy": 8530832.5,
+        "expectedMeanEnthalpy": 8530832.500000004,
+        "temperatureK": 4288.267405720011,
+        "solid": 0,
+        "liquid": 0,
+        "totalVapor": 1
+      },
+      {
+        "time": 0.8000000000000005,
+        "meanEnthalpy": 8630832.5,
+        "expectedMeanEnthalpy": 8630832.500000004,
+        "temperatureK": 4556.940162302494,
+        "solid": 0,
+        "liquid": 0,
+        "totalVapor": 1
+      }
+    ],
+    "maxHeatingBalanceErrorJkg": 4.6566128730773926e-9,
+    "conductionMeanEnthalpyResidualJkg": 5.820766091346741e-11,
+    "conductionMinimumTemperatureK": 907.1329158379493,
+    "qualification": "This verifies the declared constant-Cp piecewise enthalpy model; it does not establish agreement with a pressure-dependent iron EOS or temperature-dependent experimental heat capacities."
+  },
+  "winding": {
+    "reference": "psi=cos(x+0.37)+i cos(y+0.53); four simple zeros with Jacobian-sign charges",
+    "expected": [
+      {
+        "x": 1.2007963267948965,
+        "y": 1.0407963267948965,
+        "charge": 1
+      },
+      {
+        "x": 1.2007963267948965,
+        "y": 4.182388980384689,
+        "charge": -1
+      },
+      {
+        "x": 4.34238898038469,
+        "y": 1.0407963267948965,
+        "charge": -1
+      },
+      {
+        "x": 4.34238898038469,
+        "y": 4.182388980384689,
+        "charge": 1
+      }
+    ],
+    "actual": [
+      {
+        "ix": 5,
+        "iy": 4,
+        "x": 1.1780972450961724,
+        "y": 0.9817477042468103,
+        "charge": 1,
+        "minimumCornerAmplitude": 0.08494613133781838,
+        "resolved": true
+      },
+      {
+        "ix": 21,
+        "iy": 4,
+        "x": 4.319689898685965,
+        "y": 0.9817477042468103,
+        "charge": -1,
+        "minimumCornerAmplitude": 0.08494613133781827,
+        "resolved": true
+      },
+      {
+        "ix": 5,
+        "iy": 20,
+        "x": 1.1780972450961724,
+        "y": 4.123340357836604,
+        "charge": -1,
+        "minimumCornerAmplitude": 0.08494613133781842,
+        "resolved": true
+      },
+      {
+        "ix": 21,
+        "iy": 20,
+        "x": 4.319689898685965,
+        "y": 4.123340357836604,
+        "charge": 1,
+        "minimumCornerAmplitude": 0.08494613133781831,
+        "resolved": true
+      }
+    ],
+    "netCharge": 0,
+    "maximumZeroLocationError": 0.06326126883640353,
+    "gridSpacing": 0.19634954084936207,
+    "deliberatelyAmbiguousPiEdges": 512
+  },
+  "audit": {
+    "induction": "E_z=v_y B_x-v_x B_y+eta J_z; B_x,t=-d_y E_z and B_y,t=d_x E_z. The discrete divergence of a shared-corner curl cancels.",
+    "energy": "Conservative ideal flux (E+p+B^2/2)v-(v dot B)B; resistive Poynting flux eta J cross B has x=-eta J_z B_y and y=eta J_z B_x. Viscous flux is -tau dot v; conductive flux is -k grad(p/rho). Periodic sums telescope.",
+    "phase": "The implemented rotation is negative nonlinear frequency: -i omega |psi|^2 psi. Diffusion has coefficient D(1+i beta). Coupling is one-way from the MHD state.",
+    "iron": "Iron conduction is k/rho_Fe times the temperature Laplacian in an enthalpy equation. Its periodic mean vanishes; external heating/bath exchange is a separate energy ledger and is not removed from MHD."
+  },
+  "limits": [
+    "First-order spatial Rusanov fluxes and arithmetic corner EMF introduce substantial numerical diffusion at 16-64 cells. SSP RK2 temporal order does not imply second-order space accuracy.",
+    "Global total-energy conservation and divergence preservation do not guarantee accurate local shock structure or physical dissipative heating. The resolved Ohmic/viscous integrals are estimates, not an exact entropy/thermal-energy balance.",
+    "Only two in-plane magnetic/velocity components are evolved. This is a local, Cartesian, periodic nonrelativistic model; no Kerr gravity, curvature, horizon, accretion, ray transfer, cover mechanics or radiation are solved.",
+    "Fixed gamma=5/3 and mean molecular weight=0.5 define the MHD EOS. Saha fractions are diagnostic LTE references; ionization energy and particle-number changes do not feed back into the gas energy.",
+    "Complex phase is a declared neutral phenomenological field. Magnetic angle is a direction diagnostic; field zeros/windings do not establish superconductivity, a quantum condensate or flux quantization.",
+    "Iron has approximate constant heat capacities, fixed transition temperatures and fixed latent heats; no pressure-dependent phase diagram, expansion, mechanics or coupled material-plasma energy exchange is represented.",
+    "Tests cover smooth Fourier modes, representative parameter states, enthalpy thresholds and replay. They are not a calibrated turbulent-plasma benchmark, high-Mach shock suite, kinetic model or observational validation."
+  ],
+  "references": [
+    {
+      "title": "Stone et al. (2008), Athena: A New Code for Astrophysical MHD",
+      "url": "https://arxiv.org/abs/0804.0402",
+      "use": "Reference for finite-volume MHD and constrained-transport verification; this engine is not Athena."
+    },
+    {
+      "title": "Gardiner and Stone (2005), An Unsplit Godunov Method for Ideal MHD via Constrained Transport",
+      "url": "https://arxiv.org/abs/astro-ph/0501557",
+      "use": "Reference for the divergence-preserving CT requirement; this engine does not implement their high-order method."
+    },
+    {
+      "title": "NIST-JANAF Iron reference table",
+      "url": "https://janaf.nist.gov/tables/Fe-003.html",
+      "use": "External thermochemical context. The declared constant-Cp laboratory is approximate and is not fitted to this table."
+    }
+  ],
+  "criteria": {
+    "conservation": "Relative global mass/energy residual <2e-13; momentum/tracer residual <2e-12; staggered divergence <2e-12; positive finite physical states; material fractions sum to one within 2e-15.",
+    "spatialRefinement": "Each 16->32->64 refinement reduces analytic error; observed order >0.75. Fine-grid scalar RMS <0.012; resistive decay-ratio error <0.015.",
+    "complexTemporalRefinement": "Both timestep halvings give observed order >1.9; final complex absolute error <1e-7.",
+    "iron": "Heating-ledger error <1e-6 J/kg; periodic-conduction mean residual <1e-7 J/kg; independently declared transition temperatures and mixture fractions agree within 1e-10 K/1e-13 fraction.",
+    "winding": "Exactly four resolved simple zeros with two positive/two negative charges, net zero, and plaquette-location error <=dx/sqrt(2). Deliberately pi-edge samples are flagged ambiguous.",
+    "API": "The separate node:test suite checks invalid patches/time inputs, trusted-callback transactional rollback, failed-step physical-state rollback, deterministic replay/reset and browser/backend byte identity."
+  },
+  "numericChecks": {
+    "conservation": true,
+    "scalarAdvection": true,
+    "scalarDiffusion": true,
+    "resistiveDecay": true,
+    "complexReaction": true,
+    "ironBalance": true,
+    "ironTransitions": true,
+    "winding": true
+  },
+  "numericalVerificationPassed": true
+}

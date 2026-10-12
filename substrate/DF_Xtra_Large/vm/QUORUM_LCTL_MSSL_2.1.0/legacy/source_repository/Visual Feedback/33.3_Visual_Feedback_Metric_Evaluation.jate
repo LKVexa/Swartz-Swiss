@@ -1,0 +1,30 @@
+ja source 0.3
+module suite33.visual_feedback.metric_evaluation
+use Training
+policy no_network
+
+experiment VisualFeedbackMetricEvaluation {
+    model ref "models/sophia_charlotte_landon_professor_podium/metric_evaluation"
+    dataset ref "datasets/visual_feedback/metric_cases" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 24 accumulate 2
+    precision mixed
+    seed 3303
+    checkpoint every 12 steps
+    evaluate {
+        metric geometry_accuracy
+        metric color_accuracy
+        metric layer_accuracy
+        metric temporal_continuity
+        metric loss
+        require geometry_accuracy >= 0.95
+        require color_accuracy >= 0.95
+        require layer_accuracy >= 0.99
+        require temporal_continuity >= 0.99
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "VisualFeedbackMetricEvaluation.lineage.mcrt"

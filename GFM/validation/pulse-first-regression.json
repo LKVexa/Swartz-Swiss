@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-12",
+  "version": "2.1.0",
+  "exitCode": 1,
+  "tests": 148,
+  "passed": 146,
+  "failed": 2,
+  "skipped": 0,
+  "verificationMode": "offline; four local connection checks excluded; file provenance and Windows path checks executed separately",
+  "deferredNetworkTests": [
+    "audit provenance, all findings and corrected GR references reach the live API without changing physical state",
+    "research presets reset history and export causal plasma/material fields through the same backend",
+    "launcher recovers from an occupied port and starts the new computed backend",
+    "local API produces computed fields, controls state, and retains valid state after rejected input"
+  ],
+  "testRuns": [
+    {
+      "scope": "Math, browser worker and viewer",
+      "tests": 146,
+      "passed": 144,
+      "failed": 2
+    },
+    {
+      "scope": "File provenance and Windows path fixtures",
+      "tests": 2,
+      "passed": 2,
+      "failed": 0
+    }
+  ],
+  "engineSHA256": "93d1463b46a2bb6eaeb6c347f97c2a43101d811d0d6aa5d95d3a3b587f6a5b0a",
+  "phaseReferenceSHA256": "f85b8330766b12b67eb3872059b12a6620806d09399f43a5e4e33a44e50df0f9",
+  "scope": "Reduced Maxwell/Drude/material equations, analytic convergence, audited GR references, exact browser-worker/Node numerical parity, combined physical layer mapping and live UI/WebGL submission flows, preview transport, serial scheduling, HTTP controls, launcher and Windows integrity checks.",
+  "browserVisualVerification": "Live self-contained Codex preview supplied; HTTP browser opening blocked by cross-process loopback denial. Worker numerical and transport behavior verified independently of network.",
+  "observationValidation": false,
+  "fullAzimuthallyGeneral3D": false
+}

@@ -1,0 +1,53 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "32cbfaea2bcbf4ec087ce1644384cf2d222bd3069925c72dd00b23d0adf84fd5",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (TRANSACTION_CONCURRENCY, REFERENCE_PRECISION, PRESENTATION_REGRESSION) plus Stage 02 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "PRESENTATION_REGRESSION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "REFERENCE_PRECISION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "TRANSACTION_CONCURRENCY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-01",
+    "GW-06",
+    "GW-11",
+    "GW-22",
+    "GW-42",
+    "GW-63"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T2_HIGH_FIDELITY",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Reference-frame updates are atomic with respect to physics/render/navigation consumers for each simulation tick.",
+  "requirement_id": "RCPW-02-R07",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 2,
+  "stage_title": "Reference Frame Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "TRANSACTION_CONCURRENCY",
+    "REFERENCE_PRECISION",
+    "PRESENTATION_REGRESSION"
+  ],
+  "workflow_file": "02_REFERENCE_FRAME_AUTHORITY/016_RCPW_02_R07_REFERENCE_FRAME_UPDATES_ARE_ATOMIC_WITH_RESPECT_TO_PHYSICS_RENDER_NAVIGATION_CONSUMER.md",
+  "workflow_tier": "T2_HIGH_FIDELITY"
+}

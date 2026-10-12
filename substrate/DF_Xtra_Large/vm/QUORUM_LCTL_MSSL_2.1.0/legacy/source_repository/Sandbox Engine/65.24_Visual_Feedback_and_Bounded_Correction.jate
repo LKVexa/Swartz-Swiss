@@ -1,0 +1,30 @@
+ja source 0.3
+module suite65.sandbox_engine.visual_feedback_bounded_correction
+use Training
+policy no_network
+
+experiment SandboxVisualFeedbackBoundedCorrection {
+    model ref "models/sophia_charlotte_landon_professor_podium/visual_feedback_bounded_correction"
+    dataset ref "datasets/sandbox_engine/admitted_visual_correction_fixtures" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 16 accumulate 4
+    precision mixed
+    seed 6524
+    checkpoint every 6 steps
+    evaluate {
+        metric target_output_comparison_integrity
+        metric correction_scope_compliance
+        metric iteration_limit_compliance
+        metric correction_provenance
+        metric loss
+        require target_output_comparison_integrity >= 0.99
+        require correction_scope_compliance >= 1.00
+        require iteration_limit_compliance >= 1.00
+        require correction_provenance >= 1.00
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "SandboxVisualFeedbackBoundedCorrection.lineage.mcrt"

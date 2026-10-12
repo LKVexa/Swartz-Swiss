@@ -1,0 +1,670 @@
+{
+  "modules": [
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Observer",
+      "module_id": 1,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/01_observer/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Anthology",
+      "module_id": 2,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/02_anthology/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Atlas",
+      "module_id": 3,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/03_atlas/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Compass",
+      "module_id": 4,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/04_compass/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Pencil",
+      "module_id": 5,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/05_pencil/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Pencil Sharpener",
+      "module_id": 6,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/06_pencil_sharpener/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Grinder",
+      "module_id": 7,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/07_grinder/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Tables",
+      "module_id": 8,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/08_tables/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Funnel",
+      "module_id": 9,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/09_funnel/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Illuminator",
+      "module_id": 10,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/10_illuminator/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Cypher",
+      "module_id": 11,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/11_cypher/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Filing Cabinet",
+      "module_id": 12,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/12_filing_cabinet/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Chair",
+      "module_id": 13,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/13_chair/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Plug",
+      "module_id": 14,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/14_plug/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Orchestrator",
+      "module_id": 15,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/15_orchestrator/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Perceiver",
+      "module_id": 16,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/16_perceiver/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Asset Observer",
+      "module_id": 17,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/17_asset_observer/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Feature Graph",
+      "module_id": 18,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/18_feature_graph/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Mesh Geometry",
+      "module_id": 19,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/19_mesh_geometry/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Equation Operator Bank",
+      "module_id": 20,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/20_equation_operator_bank/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Scene Reconstruction",
+      "module_id": 21,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/21_scene_reconstruction/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Motion Planner",
+      "module_id": 22,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/22_motion_planner/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Temporal Animator",
+      "module_id": 23,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/23_temporal_animator/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "C# Renderer",
+      "module_id": 24,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "modules/24_csharp_renderer/evidence/native_runtime_qualification/native_runtime_qualification.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Media Export",
+      "module_id": 25,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Full Stack UI",
+      "module_id": 26,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "deepML Worker",
+      "module_id": 27,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Safety Gate",
+      "module_id": 28,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Archive Ledger",
+      "module_id": 29,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "JA Adapter",
+      "module_id": 30,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Vexxa",
+      "module_id": 31,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Orchestrator II",
+      "module_id": 32,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Visual Feedback",
+      "module_id": 33,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Animation VFX Workspace",
+      "module_id": 34,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "App Designer",
+      "module_id": 35,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Visual Correction System",
+      "module_id": 36,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Training and Evaluation",
+      "module_id": 37,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Preview Designer",
+      "module_id": 38,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Core Studio",
+      "module_id": 39,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Repository Context Engine",
+      "module_id": 40,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Knowledge Repository",
+      "module_id": 41,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Transition Plane",
+      "module_id": 42,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Release Plane",
+      "module_id": 43,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Capability and Security Plane",
+      "module_id": 44,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Localization and Large File Plane",
+      "module_id": 45,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Air Gap Certification and Installer Plane",
+      "module_id": 46,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Chatbot",
+      "module_id": 47,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Answer Modes and Specialized Roles",
+      "module_id": 48,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Action Cards",
+      "module_id": 49,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Diff Patch and Review",
+      "module_id": 50,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Repository Retrieval and Memory",
+      "module_id": 51,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Evaluation and Content Defense",
+      "module_id": 52,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Operations Plane",
+      "module_id": 53,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Local Model Provider and Health",
+      "module_id": 54,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Capability Manifests and Permissions",
+      "module_id": 55,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Job Queue Workers and Sandboxes",
+      "module_id": 56,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Translation Build Test and Evaluation Jobs",
+      "module_id": 57,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Indexing Storage Resources Logs and Recovery",
+      "module_id": 58,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Shell",
+      "module_id": 59,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Worker",
+      "module_id": 60,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Popup Runner",
+      "module_id": 61,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "LANDON Integration and Run All",
+      "module_id": 62,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Sandbox and Offline Runtime",
+      "module_id": 63,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Training Desktop and Android Workers",
+      "module_id": 64,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Sandbox Engine",
+      "module_id": 65,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    },
+    {
+      "all_core_pass": true,
+      "benchmark_equivalence_pass": true,
+      "distributed_pass": true,
+      "module": "Terminal",
+      "module_id": 66,
+      "protocol_pass": true,
+      "replay_pass": true,
+      "source": "qualification/NATIVE_RUNTIME_CORE_025_066.json"
+    }
+  ],
+  "schema": "QUORUM-NATIVE-RUNTIME-EVIDENCE-INDEX/2.1",
+  "summary": {
+    "all_core_pass_count": 66,
+    "all_pass": true,
+    "count": 66
+  }
+}

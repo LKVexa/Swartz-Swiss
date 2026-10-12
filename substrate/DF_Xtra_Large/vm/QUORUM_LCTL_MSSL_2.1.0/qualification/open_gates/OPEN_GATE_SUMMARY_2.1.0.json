@@ -1,0 +1,11 @@
+{
+  "L4_reference_pass": 66,
+  "L5_source_diff_pass": 66,
+  "L6_reference_replay_pass": 66,
+  "L7_reference_security_pass": 66,
+  "L8_reference_performance_pass": 66,
+  "L9_local_reference_operational_profile": "PASS",
+  "L9_scenarios_pass": 5,
+  "L9_scenarios_total": 5,
+  "module_count": 66
+}

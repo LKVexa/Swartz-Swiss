@@ -1,0 +1,12 @@
+{
+  "schema": "RUSSL-independent-audited-example/1",
+  "scope": "Independent closed-form GF9 amplitudes, explicit reflection expectations and scalar values; lexical canonical hashes",
+  "passed": true,
+  "sessionHashVerified": true,
+  "recordHashesVerified": true,
+  "maximumAmplitudeResidual": 3.1401849173675503e-16,
+  "maximumWignerResidual": 4.85722573273506e-17,
+  "l1Norm": 1.666666666666666,
+  "manaBase2": 0.7369655941662057,
+  "maximumCayleyResidual": 1.1102230246251565e-16
+}

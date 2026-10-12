@@ -1,0 +1,32 @@
+{
+  "schema": "QUORUM-BLOCKER-LEDGER/2.0",
+  "blockers": [
+    {
+      "id": "B001",
+      "scope": "all_modules",
+      "blocks": [
+        "L4",
+        "L8",
+        "L9"
+      ],
+      "issue": "Domain-specific operators are semantically modeled but not implemented as native runtime effects."
+    },
+    {
+      "id": "B002",
+      "scope": "all_modules",
+      "blocks": [
+        "L5"
+      ],
+      "issue": "No executable runtimes for preserved DeepML/JA/DMK legacy sources are bundled."
+    },
+    {
+      "id": "B003",
+      "scope": "repository",
+      "blocks": [
+        "1.9 operational integration",
+        "L9"
+      ],
+      "issue": "Cross-plane scenarios are typed topology contracts, not full domain execution."
+    }
+  ]
+}

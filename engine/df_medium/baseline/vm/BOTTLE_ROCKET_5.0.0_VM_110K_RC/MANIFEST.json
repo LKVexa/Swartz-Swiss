@@ -1,0 +1,321 @@
+{
+  "abi": {
+    "major": 1,
+    "minor": 0,
+    "required_traps": 14,
+    "services": 20
+  },
+  "authority": {
+    "device_io": "single capability-gated Device ABI mediation boundary",
+    "guest_persistence": "BRGD/1",
+    "native_columned_lctl": true,
+    "network_default": "absent/offline",
+    "production_execution_requires_secure_authorization": true,
+    "secure_manifest": "BRTM/1",
+    "transactional_persistence": "BRCR/1"
+  },
+  "brir": "BRIR/1.1",
+  "ceilings": {
+    "core61_ceiling_bytes": 61000,
+    "core61_stripped_bytes": 49072,
+    "production_runtime_and_authority_source_bytes": 107675,
+    "production_source_ceiling_bytes": 110000,
+    "raw_brim_bytes": 272,
+    "raw_brim_ceiling_bytes": 51200
+  },
+  "compatibility": {
+    "BRIM_4_1_0": true,
+    "BRIM_4_2_0": true,
+    "BRIM_4_6_0": true,
+    "BRTM_4_6_0": true
+  },
+  "core_abi": "0x00040700",
+  "deploy": {
+    "brir": "deploy/BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE.brir",
+    "brir_bytes": 547,
+    "brir_sha256": "fe12e09b6b120b06fc4e5576b3a5951650288870e050e2bdfbd7e58f4365bdbc",
+    "provenance": "deploy/BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE.provenance.json",
+    "provenance_bytes": 514,
+    "provenance_sha256": "09cf8db0fcb8015dccafb1a59c54eb953f11b36ef93919d9818649abe17840e9",
+    "raw_brim": "deploy/BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE.brimg",
+    "raw_brim_bytes": 272,
+    "raw_brim_sha256": "7cfd6d6c08c7114078477488814adb5365bc14731e2d6b65c15c66df67750bc9",
+    "secure_bundle": "deploy/BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE.brsb",
+    "secure_bundle_bytes": 688,
+    "secure_bundle_sha256": "4779581a53f38ab38c8f4c650bf19f360383f1ece50d75410ccf6ea3976f72a6"
+  },
+  "device_abi": "1.0",
+  "device_io": {
+    "apdu_signed_recovery": true,
+    "classes": 8,
+    "deterministic_replay": [
+      "entropy",
+      "monotonic_time",
+      "wall_time",
+      "mailbox"
+    ],
+    "ids": [
+      "0x4701",
+      "0x4702",
+      "0x4703",
+      "0x4704",
+      "0x4705",
+      "0x4706",
+      "0x4707",
+      "0x4708"
+    ],
+    "mailbox_depth": 4,
+    "network_packet_bytes": 512,
+    "packet_bytes": 256,
+    "per_run_quotas": {
+      "bytes": 8192,
+      "calls": 64,
+      "entropy_calls": 8,
+      "writes": 16
+    },
+    "raw_code_load_in_production": false
+  },
+  "external_gates": [
+    "AArch64 execution qualification",
+    "Windows adapter execution qualification",
+    "deployment authorization",
+    "hardware monotonic/state-auth qualification",
+    "independent build machine/operator replay",
+    "independent second-machine/operator replay",
+    "literal 72-hour RC soak evidence",
+    "literal 72-hour soak evidence",
+    "native target OS qualification",
+    "physical transport/network backend qualification",
+    "target-hardware device/backend qualification"
+  ],
+  "image_abi": 1,
+  "isa": {
+    "feature_flags": 63,
+    "major": 4,
+    "minor": 1,
+    "opcodes": 32
+  },
+  "language": "LCTLC/1.1",
+  "performance": {
+    "baseline_4_6_max_rss_median_kib": 7174.0,
+    "baseline_4_6_secure_median_ms": 2.5653354999999998,
+    "candidate_4_7_max_rss_median_kib": 7184.0,
+    "candidate_4_7_secure_median_ms": 2.621499,
+    "interpretation": "Reference-host cold secure-run process measurement, not target-hardware guest throughput.",
+    "latency_median_change_percent": 2.1893237746096084,
+    "method": "cold_host_process_secure_run",
+    "rss_median_change_percent": 0.13939224979091502,
+    "timed_runs_per_version": 20,
+    "warmups_per_version": 5
+  },
+  "performance_4_8": {
+    "baseline_4_7_median_ms": 2.9368714999999996,
+    "candidate_4_8_median_ms": 3.0925865,
+    "interpretation": "Reference-host process wall-clock only; 4.8 is a qualification overlay and no guest throughput claim is made.",
+    "latency_median_change_percent": 5.302070587698515,
+    "method": "cold_host_process_secure_run",
+    "timed_runs_per_version": 20,
+    "warmups_per_version": 5
+  },
+  "provenance": "BRPV/1",
+  "qualification": {
+    "accelerated_soak": "20,000 cycles PASS; not a 72-hour substitute",
+    "atomic_requirements": 113,
+    "attack_matrix": "33 explicit attacks PASS",
+    "available_reproducibility": "GCC/Clang O0/O2/O3 identical BRIM and conformance",
+    "blocked_requirements": 8,
+    "differential_arithmetic": "169 vectors PASS",
+    "fuzzing": "44,700 deterministic cases PASS threshold>=40,000",
+    "local_independent_parser": "PASS",
+    "memory_safety": "ASan/UBSan/bounds/LSan/MSan PASS; static analysis 3 reviewed dead stores; 0 critical/high",
+    "opcode_edges": "6/6 requirement groups PASS",
+    "operational_requirements": 105,
+    "property_tests": "6/6 PASS",
+    "strict_gate": "BLOCKED",
+    "work_packages": 17
+  },
+  "qualification_overlay": {
+    "accelerated_soak": {
+      "execution_load_reset_cycles": 20000,
+      "guest_persistence_roundtrips": 2000,
+      "literal_72_hours": "BLOCKED_NOT_ELAPSED",
+      "rollback_recovery_attempts": 200
+    },
+    "atomic_requirements": 113,
+    "attack_vectors": {
+      "control_capability_rollback_persistence": 24,
+      "image": 9
+    },
+    "available_platform_matrix": "x86-64 Linux; GCC 14.2 and Clang 17; O0/O2/O3 byte-identical BRIM",
+    "blocked": 8,
+    "deterministic_fuzz_cases": 44700,
+    "differential_arithmetic_vectors": 169,
+    "format_change": false,
+    "independent_parser_verifier": "pure-Python/no production VM or compiler imports",
+    "operational": 105,
+    "runtime_contract": "4.7.0-compatible",
+    "strict_gate": "BLOCKED",
+    "unresolved_critical": 0,
+    "unresolved_high": 0
+  },
+  "record": "BOTTLE_ROCKET.ReleaseManifest",
+  "release": "4.9.0",
+  "release_candidate_4_9": {
+    "atomic_requirements": 78,
+    "blocked_requirements": 2,
+    "brim51": {
+      "bytes": 272,
+      "ceiling_bytes": 51200,
+      "compiler_enforced": true,
+      "loader_enforced": true,
+      "oversize_rejection": "PASS"
+    },
+    "core61": {
+      "ceiling_bytes": 61000,
+      "counted_boundary": "stripped relocatable freestanding production execution core compiled solely from src/brvm.c; excludes trust/compiler/HAL/CLI, which remain covered by the separate 110000-byte production runtime-and-authority source boundary",
+      "result": "PASS",
+      "stripped_bytes": 49072
+    },
+    "documentation_documents": 12,
+    "feature_freeze": "PASS",
+    "independent_replay_package": "INCLUDED; local check PASS; independent execution not yet proven",
+    "operational_requirements": 76,
+    "performance": {
+      "method": "reference-host process/harness wall clock; not target-hardware certification",
+      "metrics": {
+        "device_host_call_suite": {
+          "max_ms": 1.652007,
+          "median_ms": 1.650415,
+          "min_ms": 1.480714,
+          "runs": 3
+        },
+        "execution_throughput_reference_ops_per_sec": 5006.650500748494,
+        "image_load_plus_reference_execution": {
+          "max_ms": 1.418162,
+          "median_ms": 1.198406,
+          "min_ms": 1.146519,
+          "runs": 7
+        },
+        "image_verification": {
+          "max_ms": 2.769333,
+          "median_ms": 2.641684,
+          "min_ms": 2.429179,
+          "runs": 7
+        },
+        "persistence_and_recovery_accelerated": {
+          "max_ms": 53.583319,
+          "median_ms": 50.511939,
+          "min_ms": 48.627917,
+          "runs": 3
+        },
+        "secure_execution_end_to_end": {
+          "max_ms": 4.337201,
+          "median_ms": 2.752543,
+          "min_ms": 2.599011,
+          "runs": 7
+        },
+        "startup_lctl_verify": {
+          "max_ms": 1.258635,
+          "median_ms": 1.075564,
+          "min_ms": 1.03931,
+          "runs": 7
+        },
+        "wide_arithmetic_add": {
+          "max_ms": 1.73458,
+          "median_ms": 1.533802,
+          "min_ms": 1.439653,
+          "runs": 5
+        }
+      },
+      "record": "BOTTLE_ROCKET.PerformanceQualification/4.9.0",
+      "requirements": {
+        "arithmetic": "PASS",
+        "execution": "PASS",
+        "host_call": "PASS",
+        "load": "PASS",
+        "persistence": "PASS",
+        "recovery": "PASS",
+        "startup": "PASS",
+        "verification": "PASS"
+      },
+      "result": "PASS"
+    },
+    "production_hardening": "PASS",
+    "release_hashes": {
+      "binary": {
+        "path": ".build/brctl.stripped",
+        "sha256": "356b91fd78ef30551935fae810d5de93636ba145acf48cf7eb82fe29f0a6ca2b"
+      },
+      "brim": {
+        "path": "deploy/BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE.brimg",
+        "sha256": "7cfd6d6c08c7114078477488814adb5365bc14731e2d6b65c15c66df67750bc9"
+      },
+      "compiler": {
+        "path": "src/brlctlc.c",
+        "sha256": "06250841f3827e03dab473f83a73442660afa45b99cc7f8ec88c332f7e1769db"
+      },
+      "evidence": {
+        "files": 8,
+        "sha256": "e59d25e74658fe0564de5636277de7158ad24b7563db7af9a79cbedc5f4221e4"
+      },
+      "record": "BOTTLE_ROCKET.ReleaseHashes/4.9.0",
+      "source": {
+        "files": 18,
+        "sha256": "7f2b6ad228eccfd55170ba13fe0745697ccef3405a4630dc357529435c628b91"
+      },
+      "specification": {
+        "files": 21,
+        "sha256": "3dfbe558e8f98a919c641da1e248b7f99d001dd31757ff62e978e5f64901a91e"
+      },
+      "test_suite": {
+        "files": 46,
+        "sha256": "779657761a07ad3d58cb9311f7ee1d21ee90f6a0baadfd4792505fe1d684b777"
+      },
+      "verifier": {
+        "files": 2,
+        "sha256": "0c7b0badd569ea9b18669ab0a786bdd39253c82fbce403064437f87aad3986d3"
+      }
+    },
+    "release_profiles": 6,
+    "runtime_memory": {
+      "idle_vm_bytes": 22304,
+      "maximum_configured_vm_bytes": 4216608,
+      "peak_rss_max_kib": 7188,
+      "quota_conformance": "PASS via make wide-conformance",
+      "record": "BOTTLE_ROCKET.RuntimeMemory/4.9.0",
+      "result": "PASS",
+      "rss_samples_kib": [
+        7188,
+        7168,
+        7184,
+        7184,
+        7168
+      ],
+      "typical_secure_run_peak_rss_median_kib": 7184,
+      "wide_quota_ceiling_bytes": 4194304,
+      "worst_case_maximum_width_accounted_bytes": 3434272
+    },
+    "strict_gate": "BLOCKED"
+  },
+  "sequence": "10_4_9_0_release_candidate_operational_qualification",
+  "source_compatibility": {
+    "internal_constant_names_compacted": true,
+    "numeric_guest_and_file_abi_values_unchanged": true,
+    "readable_alias_header": "include/brvm_compat_names.h"
+  },
+  "version": "4.7.0",
+  "wide_state": {
+    "copy_on_write": true,
+    "dense_word_bytes": 131072,
+    "logical_word_bits": 1048576,
+    "representations": [
+      "zero",
+      "small",
+      "sparse",
+      "dense",
+      "immutable-constant"
+    ],
+    "vm_wide_ceiling_bytes": 4194304,
+    "zero_init_wide_heap_bytes": 0
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "QUORUM-ERROR-REGISTRY/2.0",
+  "errors": [
+    {
+      "id": "INVALID_INPUT",
+      "fail_closed": true,
+      "evidence_required": true
+    },
+    {
+      "id": "UNAVAILABLE_DEPENDENCY",
+      "fail_closed": true,
+      "evidence_required": true
+    },
+    {
+      "id": "DENIED_CAPABILITY",
+      "fail_closed": true,
+      "evidence_required": true
+    },
+    {
+      "id": "MALFORMED_AUTHORITY",
+      "fail_closed": true,
+      "evidence_required": true
+    },
+    {
+      "id": "INVARIANT_VIOLATION",
+      "fail_closed": true,
+      "evidence_required": true
+    },
+    {
+      "id": "INVALID_STATE",
+      "fail_closed": true,
+      "evidence_required": true
+    },
+    {
+      "id": "LOWERING_FAILURE",
+      "fail_closed": true,
+      "evidence_required": true
+    },
+    {
+      "id": "EXECUTION_FAILURE",
+      "fail_closed": true,
+      "evidence_required": true
+    },
+    {
+      "id": "TIMEOUT",
+      "fail_closed": true,
+      "evidence_required": true
+    },
+    {
+      "id": "RESOURCE_EXHAUSTION",
+      "fail_closed": true,
+      "evidence_required": true
+    },
+    {
+      "id": "EVIDENCE_FAILURE",
+      "fail_closed": true,
+      "evidence_required": true
+    }
+  ]
+}

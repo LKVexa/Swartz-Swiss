@@ -1,0 +1,22 @@
+JA21 Blank Console 1.1.0 — presenter compatibility 9.8.7; native engine 8.1.0
+Copyright (C) 2026 RUSSELL PHILIP SMITHSON
+Validated 2026-10-11 on Windows x64 / Windows PowerShell 5.1.
+
+Unified tools/Verify-Release.ps1: PASS.
+Python discovery: 212 tests, 3 skipped, no failures (includes nested VEC1).
+Package and runtime integrity, source/IR and native provenance: PASS.
+WPF presenter compilation: PASS.
+Launcher/security regressions: 15 checks PASS.
+Technical bootstrap regressions: 6 checks PASS.
+Headless console: 12 checks PASS; 16 local-origin cases PASS.
+
+Focused validation: cached official SDK restore (18 launcher checks), live and
+fallback UTF-8 native interop, 300 malformed native documents and byte-identical
+independent native rebuild all passed.
+
+Two POSIX native tests and one unavailable symlink test skipped. A junction
+creation probe was environment-denied. Desktop/live page/media interaction and
+GFM integration were not exercised. DNS checks are not OS socket isolation.
+191 pre-existing absent legacy references remain recorded in provenance.
+See docs/AUDIT-1.1.0.md for changes, limits and remaining upgrades.
+Publication policy: 235 physical logs and 27 embedded archive log members omitted.

@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "fa20328ceb8bea58ac14b99c7eb042debd65f996d3b52a41d2a55588f6ffc0fb",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Pencil Sharpener",
+  "module_id": 6,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

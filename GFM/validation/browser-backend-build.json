@@ -1,0 +1,29 @@
+{
+  "schema": "GFM-browser-backend-build/1",
+  "transport": "browser-worker",
+  "release": {
+    "product": "GFM Cylindrical Pulse Laboratory",
+    "version": "2.1.0",
+    "date": "2026-10-12",
+    "auditSHA256": "20caf09a0158c75508df92a65c469423e4c0e76838e8eb999b94d30c260bf455",
+    "auditFile": "docs/GFM-Review-Editable.txt",
+    "observationValidated": false,
+    "scope": "Local axisymmetric Maxwell, causal unmagnetized plasma current and stationary material response; audited spacetime reference calculations remain separate."
+  },
+  "engineSHA256": "93d1463b46a2bb6eaeb6c347f97c2a43101d811d0d6aa5d95d3a3b587f6a5b0a",
+  "sourceModulesSHA256": {
+    "backend/cylinder-em.cjs": "93d1463b46a2bb6eaeb6c347f97c2a43101d811d0d6aa5d95d3a3b587f6a5b0a",
+    "backend/material-physics.cjs": "8eb018cd1e47ec39e445ecd4de83f375925fd7a41df287fb6d5f69dbf0ad80bf",
+    "backend/phase-history.cjs": "3ab831e499089ba147401da3ca9feffe25f2af1f2c6f6561663d6b1953ab9b42",
+    "backend/research-presets.cjs": "6f38b81f50b1c72cc559ddb2b695eeda352cb191de298b47786890a4a7b1f433",
+    "backend/gr-reference.cjs": "5132b958016456ee8ec007045fa204affc5337d051285a34394af2ba903cd8cd",
+    "data/audit-findings.json": "62ac706a06f900cea6534c2342626e30883278555d28804844291826d920dde7",
+    "data/phase-reference.json": "f85b8330766b12b67eb3872059b12a6620806d09399f43a5e4e33a44e50df0f9"
+  },
+  "phaseReferenceSHA256": "f85b8330766b12b67eb3872059b12a6620806d09399f43a5e4e33a44e50df0f9",
+  "equationSourceTransformation": "none",
+  "browserBundleBytes": 710007,
+  "workerSourceBytes": 689806,
+  "browserBundleSHA256": "31955c75f84f8651dd952bc525e92a9a936b964cba1d4093e2f0951fcbc1b32b",
+  "workerSourceSHA256": "2a67c119b539cb3f720f084b3f1dab839c6c27c15106d1857b8c97da2e1f2350"
+}

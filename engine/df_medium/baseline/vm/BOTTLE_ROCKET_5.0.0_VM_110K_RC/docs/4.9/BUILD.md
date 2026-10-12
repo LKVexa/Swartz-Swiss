@@ -1,0 +1,2 @@
+# Build Guide
+Prerequisites: C11 compiler, make, Python 3, OpenSSL/libcrypto development files, binutils (`strip`, `nm`), and POSIX shell tools on the reference Linux host. Run `make clean operational` for the production gate, `make br490-core61` for Core-61, `make br490-brim51` for BRIM-51, and `make br490-rc-local` for the repository-local 4.9 RC gate. Qualification-only/private-key tests are intentionally not part of the lean release.

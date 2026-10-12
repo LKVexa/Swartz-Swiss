@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.specialized_roles.auto_coordinator
+use Agent
+policy no_network
+
+agent AutoCoordinator {
+    identity "auto_coordinator"
+    role "sophia-charlotte-landon-professor-podium-coordinator"
+    goal route_request_to_best_mode_and_role when confidence >= 0.94
+    memory session retention 1h
+    budget steps 45 tools 5
+    tool LANDONCollectRoutingContext(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIARouteModeAndRole(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateAutoRouting(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainAutoRouting(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordAutoRouting(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectRoutingContext
+        authorize SOPHIARouteModeAndRole
+        authorize CHARLOTTEValidateAutoRouting
+        authorize ProfessorExplainAutoRouting
+        authorize PodiumRecordAutoRouting
+        continue when policy_allows
+        execute LANDONCollectRoutingContext("selected_request_scope")
+        execute SOPHIARouteModeAndRole("request_and_project_context")
+        execute CHARLOTTEValidateAutoRouting("candidate_route")
+        execute ProfessorExplainAutoRouting("validated_route")
+        execute PodiumRecordAutoRouting("routing_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "AutoCoordinator.mcrt"

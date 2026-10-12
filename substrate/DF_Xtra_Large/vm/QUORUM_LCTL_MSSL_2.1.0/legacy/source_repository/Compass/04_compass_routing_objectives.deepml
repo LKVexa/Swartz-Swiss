@@ -1,0 +1,57 @@
+deepml logic 0.3
+module repository.compass.routing_objectives
+policy pure_by_default
+policy no_network
+
+type ObjectiveStatus = Unscored | Qualified | Preferred | Rejected
+
+let minimum_objective_score: Int = 80
+
+predicate qualified_score(score:Int) = score >= minimum_objective_score
+
+knowledge_base CompassRoutingObjectives {
+  fact suite_assignment("SOPHIA", "semantic_judgment")
+  fact suite_assignment("CHARLOTTE", "structural_validation")
+  fact suite_assignment("LANDON", "repository_integration")
+  fact suite_assignment("PROFESSOR", "reviewable_explanation")
+  fact suite_assignment("PODIUM", "job_and_evidence_queue")
+  fact objective("policy_compliance", 100)
+  fact objective("evidence_preservation", 98)
+  fact objective("feasibility", 92)
+  fact objective("priority_alignment", 88)
+  fact objective("minimum_change", 82)
+  fact route("route_alpha", 94)
+  fact route("route_beta", 84)
+  fact route_satisfies("route_alpha", "policy_compliance")
+  fact route_satisfies("route_alpha", "evidence_preservation")
+  fact route_satisfies("route_alpha", "feasibility")
+  fact route_satisfies("route_alpha", "priority_alignment")
+  fact route_satisfies("route_alpha", "minimum_change")
+  fact route_satisfies("route_beta", "policy_compliance")
+  fact route_satisfies("route_beta", "evidence_preservation")
+  fact route_satisfies("route_beta", "feasibility")
+  fact route_satisfies("route_beta", "priority_alignment")
+
+  rule objective_complete(R) :-
+    route(R, Score),
+    qualified_score(Score),
+    route_satisfies(R, "policy_compliance"),
+    route_satisfies(R, "evidence_preservation"),
+    route_satisfies(R, "feasibility"),
+    route_satisfies(R, "priority_alignment"),
+    route_satisfies(R, "minimum_change")
+
+  rule preferred_route(R) :-
+    objective_complete(R),
+    sophia_approved(R),
+    charlotte_validated(R),
+    landon_integrated(R),
+    professor_explained(R),
+    podium_evidence_complete(R)
+}
+
+infer objective_complete(Route) strategy best_first memoize true
+plan CompassRoutingPlan goal preferred_route_selected actions [score, test_objectives, compare, explain, evidence, select]
+certify logic CompassRoutingObjectives using proof_carrying
+optimize module using [beta_reduction, rule_indexing, common_subexpression_elimination, tabling, proof_normalization]
+lower module to DEEPML_LOGIC_R12

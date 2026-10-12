@@ -1,0 +1,19 @@
+ja source 0.3
+module suite20.equation_operator_bank.sophia_charlotte_landon_professor_podium.msslb
+use DeepMLKernel
+policy no_network
+
+kernel EOB_MSSLB_Ensemble(input: Tensor<f32>[5,768]) -> Tensor<f32>[5,768]
+target npu
+precision strict
+determinism reproducible
+memory global
+{
+    parallel for i in 0..5 tile 16 {
+        vectorize 16
+        output[i] = input[i] * 1.0
+    }
+}
+verify bounds with checked
+assert kernel.race_free == true
+emit kernel "20.3_Equation_Operator_Bank_MSSLB_Operators.dmk"

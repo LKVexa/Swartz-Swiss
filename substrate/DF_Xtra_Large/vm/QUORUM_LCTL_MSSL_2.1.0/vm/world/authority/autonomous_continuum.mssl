@@ -1,0 +1,19 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.world.autonomous_continuum:7.0.0-applied-remediated-26",
+λ≡"quorum.rcpw.world.autonomous_continuum",
+ℛ≡{
+  "0001":"module(\"quorum.rcpw.world.autonomous_continuum\")",
+  "0002":"learn(\"frontier\",literal(\"new canonical regions are generated deterministically from seed + anchor and admitted explicitly\"))",
+  "0003":"learn(\"history\",literal(\"established canonical state outside declared mutation dependencies is preserved\"))",
+  "0004":"learn(\"archive_rehydrate\",literal(\"regions may enter archive representation and later return without entity deletion\"))",
+  "0005":"learn(\"knowledge_locality\",literal(\"agent knowledge is explicit and observer scoped\"))",
+  "0006":"learn(\"generations\",literal(\"role succession is implemented; full demographic generations are a future/partial profile\"))"
+},
+π≡[],δ≡6,τ≡0,
+μ≡{"learn.frontier":"new canonical regions are generated deterministically from seed + anchor and admitted explicitly","learn.history":"established canonical state outside declared mutation dependencies is preserved","learn.archive_rehydrate":"regions may enter archive representation and later return without entity deletion","learn.knowledge_locality":"agent knowledge is explicit and observer scoped","learn.generations":"role succession is implemented; full demographic generations are a future/partial profile"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"frontier":"new canonical regions are generated deterministically from seed + anchor and admitted explicitly","history":"established canonical state outside declared mutation dependencies is preserved","archive_rehydrate":"regions may enter archive representation and later return without entity deletion","knowledge_locality":"agent knowledge is explicit and observer scoped","generations":"role succession is implemented; full demographic generations are a future/partial profile"}},
+ν≡{}
+,κ≡"sha256:548a05a8837332d891c3923d965d38cb33a9683c6af32d796fb5b69afc0e2e1b"
+}⇒⊤

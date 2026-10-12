@@ -1,0 +1,35 @@
+ja source 0.3
+module suite65.sandbox_engine.runtime_events_logs_diagnostics
+use Agent
+policy no_network
+
+agent SandboxRuntimeObserver {
+    identity "sandbox_runtime_events_logs_diagnostics"
+    role "sophia-charlotte-landon-professor-podium-observer"
+    goal capture_complete_runtime_evidence when confidence >= 0.99
+    memory session retention 1h
+    budget steps 50 tools 5
+    tool SOPHIAInterpretRuntimeEvents(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateRuntimeEvidence(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONCaptureRuntimeStreams(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainDiagnostics(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordRuntimeEvidence(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIAInterpretRuntimeEvents
+        authorize CHARLOTTEValidateRuntimeEvidence
+        authorize LANDONCaptureRuntimeStreams
+        authorize ProfessorExplainDiagnostics
+        authorize PodiumRecordRuntimeEvidence
+        continue when policy_allows
+        execute SOPHIAInterpretRuntimeEvents("runtime_events")
+        execute CHARLOTTEValidateRuntimeEvidence("stdout_stderr_exit_artifacts")
+        execute LANDONCaptureRuntimeStreams("bounded_runtime_streams")
+        execute ProfessorExplainDiagnostics("validated_diagnostics")
+        execute PodiumRecordRuntimeEvidence("runtime_evidence_bundle")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "SandboxRuntimeObserver.mcrt"

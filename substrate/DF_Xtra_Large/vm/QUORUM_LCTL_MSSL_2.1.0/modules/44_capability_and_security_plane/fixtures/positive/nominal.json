@@ -1,0 +1,15 @@
+{
+  "schema": "QUORUM-FIXTURE/2.0",
+  "class": "positive",
+  "module_id": 44,
+  "plane": "security_authorization",
+  "input_type": "request/policy_context",
+  "payload": {
+    "example": "nominal"
+  },
+  "expected_contract": {
+    "admitted": true,
+    "stage_count": 8,
+    "final_state": "COMPLETED"
+  }
+}

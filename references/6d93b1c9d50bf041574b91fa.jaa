@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.specialized_roles.software_engineer
+use Agent
+policy no_network
+
+agent SoftwareEngineer {
+    identity "software_engineer"
+    role "sophia-charlotte-landon-professor-podium-specialist"
+    goal stage_and_validate_bounded_software_change when confidence >= 0.96
+    memory session retention 1h
+    budget steps 70 tools 5
+    tool SOPHIADesignSoftwareChange(input: Path) -> Report requires tool.invoke:approved
+    tool LANDONStageSoftwareChange(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateSoftwareChange(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainSoftwareChange(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordSoftwareChange(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize SOPHIADesignSoftwareChange
+        authorize LANDONStageSoftwareChange
+        authorize CHARLOTTEValidateSoftwareChange
+        authorize ProfessorExplainSoftwareChange
+        authorize PodiumRecordSoftwareChange
+        continue when policy_allows
+        execute SOPHIADesignSoftwareChange("selected_implementation_scope")
+        execute LANDONStageSoftwareChange("approved_implementation_plan")
+        execute CHARLOTTEValidateSoftwareChange("staged_software_change")
+        execute ProfessorExplainSoftwareChange("validated_software_change")
+        execute PodiumRecordSoftwareChange("software_change_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "SoftwareEngineer.mcrt"

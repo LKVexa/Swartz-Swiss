@@ -1,0 +1,1 @@
+{"v":2,"control":{"magic":"BRC2","slots":2,"states":["pending","committed"],"bytes":512},"images":2,"guest":{"magic":"BRO1","objects":4,"bytes":512,"payload_max":464,"hash":"SHA-256","namespace":"cw"},"storage":"read/write/erase/commit(sync+atomic-replace)/status","recovery":"highest authenticated committed generation"}

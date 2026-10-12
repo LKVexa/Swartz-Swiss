@@ -1,0 +1,6 @@
+{
+  "schema": "QUORUM-SECURITY-LEDGER/2.0",
+  "scope": "static contract policy + MSSL tamper detection",
+  "pass": 66,
+  "domain_sandbox_penetration": "BLOCKED_NOT_IMPLEMENTED"
+}

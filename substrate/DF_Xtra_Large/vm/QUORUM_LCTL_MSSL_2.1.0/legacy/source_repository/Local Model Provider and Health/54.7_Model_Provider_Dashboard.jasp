@@ -1,0 +1,44 @@
+ja source 0.3
+module suite54.local_model_provider.provider_dashboard
+use Service
+policy explicit_network
+
+service ModelProviderDashboard {
+    message ProviderDashboardRequest {
+        request_id: Text,
+        provider_scope: Text,
+        model_scope: Text,
+        snapshot_cursor: Text,
+        filter_policy_hash: Text,
+        viewer_capabilities: Text,
+        locale: Text,
+        accessibility_profile: Text
+    }
+    message ProviderDashboardResponse {
+        provider_rows: Text,
+        lifecycle_summary: Text,
+        readiness_summary: Text,
+        health_summary: Text,
+        resource_summary: Text,
+        active_alerts: Text,
+        dashboard_snapshot_hash: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_provider_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint snapshot(request: ProviderDashboardRequest) -> Stream<ProviderDashboardResponse>
+        auth capability local_model.provider.dashboard.read
+        deadline 10s
+        retry max 1
+        idempotency request.request_id
+    protocol ProviderDashboardSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json ModelProviderDashboard.compatibility_report

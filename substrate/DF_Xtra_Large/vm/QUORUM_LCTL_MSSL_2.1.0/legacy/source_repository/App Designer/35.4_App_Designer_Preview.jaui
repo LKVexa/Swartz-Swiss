@@ -1,0 +1,47 @@
+ja source 0.3
+module suite35.app_designer.preview
+use Interface
+policy no_network
+
+interface AppDesignerPreview {
+    state selected_preview: Text? = null
+    state previewing: Flag = false
+    derived can_select_preview = not previewing
+    derived can_open_preview = selected_preview != null and not previewing
+    component SOPHIA_PreviewModel {
+        label "Interpret preview profile"
+        enabled bind can_open_preview
+        accessibility role button name "Interpret selected preview profile"
+        action interpret_preview requires admin.action:approved
+    }
+    component CHARLOTTE_PreviewGate {
+        label "Validate preview readiness"
+        enabled bind can_open_preview
+        accessibility role button name "Validate selected preview readiness"
+        action validate_preview requires admin.action:approved
+    }
+    component LANDON_PreviewOpen {
+        label "Open validated preview"
+        enabled bind can_open_preview
+        accessibility role button name "Open validated application preview"
+        action open_preview requires admin.action:approved
+    }
+    component Professor_PreviewGuide {
+        label "Explain preview behavior"
+        enabled bind can_select_preview
+        accessibility role button name "Explain preview states and limitations"
+        action explain_preview requires admin.action:approved
+    }
+    component Podium_PreviewEvidence {
+        label "View preview evidence"
+        enabled bind can_open_preview
+        accessibility role button name "View preview validation evidence"
+        action show_preview_evidence requires admin.action:approved
+    }
+    component PreviewViewport {
+        embed portal.scene "app_designer_preview"
+        motion bind timeline.application_preview
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface AppDesignerPreview

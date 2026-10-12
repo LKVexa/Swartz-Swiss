@@ -1,0 +1,16 @@
+{
+  "schema": "GFM-Live-export-replay/1",
+  "passed": true,
+  "sourceSha256": "94facda381ccf78ed204114d7e02929c99e513c898e343a76712feb576607f77",
+  "comparison": "Full bundle after JSON serialization, exact equality",
+  "rayCount": 32,
+  "pointCount": 6079,
+  "parameters": {
+    "spin": 0.99,
+    "observerRadius": 20,
+    "inclination": 1.4835298641951802,
+    "rayCount": 32,
+    "tolerance": 1e-9
+  },
+  "scope": "Downloaded through the live UI and exactly reproduced with the archived solver. Live service lacks latest loaded-module identity fields; this comparison verifies output, not in-memory code fingerprints."
+}

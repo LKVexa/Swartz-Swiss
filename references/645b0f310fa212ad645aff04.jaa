@@ -1,0 +1,35 @@
+ja source 0.3
+module suite48.specialized_roles.code_reviewer
+use Agent
+policy no_network
+
+agent CodeReviewer {
+    identity "code_reviewer"
+    role "sophia-charlotte-landon-professor-podium-specialist"
+    goal produce_prioritized_actionable_code_review when confidence >= 0.96
+    memory session retention 1h
+    budget steps 65 tools 5
+    tool LANDONCollectCodeReviewScope(input: Path) -> Report requires tool.invoke:approved
+    tool SOPHIAInterpretChangeIntent(input: Path) -> Report requires tool.invoke:approved
+    tool CHARLOTTEValidateCodeReviewFindings(input: Path) -> Report requires tool.invoke:approved
+    tool ProfessorExplainCodeReview(input: Path) -> Report requires tool.invoke:approved
+    tool PodiumRecordCodeReview(input: Path) -> Report requires tool.invoke:approved
+    plan Main {
+        observe workspace
+        authorize LANDONCollectCodeReviewScope
+        authorize SOPHIAInterpretChangeIntent
+        authorize CHARLOTTEValidateCodeReviewFindings
+        authorize ProfessorExplainCodeReview
+        authorize PodiumRecordCodeReview
+        continue when policy_allows
+        execute LANDONCollectCodeReviewScope("selected_change_set")
+        execute SOPHIAInterpretChangeIntent("canonical_change_evidence")
+        execute CHARLOTTEValidateCodeReviewFindings("change_intent_and_evidence")
+        execute ProfessorExplainCodeReview("prioritized_code_findings")
+        execute PodiumRecordCodeReview("code_review_artifact")
+        record mcrt
+        terminate when goal.satisfied
+    }
+}
+assert agent.capability_boundary.valid == true
+emit mcrt "CodeReviewer.mcrt"

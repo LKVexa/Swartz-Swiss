@@ -1,0 +1,109 @@
+{
+  "authority_sha256": "3d85c71d87fbf80293b6bcf4593060825b90e4c8e2fbec4046b04c0951155d2c",
+  "domain_output": {
+    "input_type": "event/log/state",
+    "legacy_signals": [
+      "intent",
+      "action",
+      "PACKAGE",
+      "VALIDATE",
+      "AUTHORIZE",
+      "EVALUATE"
+    ],
+    "module": "Shell",
+    "operations_receipt": {
+      "detected": true,
+      "recovered": true,
+      "recovery_mode": "REFERENCE_LOCAL",
+      "state_sha256": "29541e4c92d14f7fa993fcc13f13bad8a4d9f327ee6ada6eea714afbd4a552fa"
+    },
+    "output_type": "recovered_state/operations_receipt",
+    "payload_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "plane": "operations_recovery",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1"
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "931f7d919daed5a151e8368c8416b836f31416dd0d2fb9b84a7d51a3cedd52b0",
+  "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "module": "Shell",
+  "module_id": 59,
+  "plane": "operations_recovery",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "a09c41cf2ee46a51370a1dc4476f94d8e75291198c85e65711bd54f1c897ac8a",
+  "stage_count": 8,
+  "stages": [
+    {
+      "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "node": "N01",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "9e52ce4fa6a0ce1a4f075b87d3dd50c288a1b77be946f40f136db705bda23a58",
+      "stage": "EVENT"
+    },
+    {
+      "input_sha256": "9e52ce4fa6a0ce1a4f075b87d3dd50c288a1b77be946f40f136db705bda23a58",
+      "node": "N02",
+      "observed": {
+        "bytes": 2,
+        "keys": [],
+        "kind": "dict"
+      },
+      "operator": "INSPECT",
+      "output_sha256": "098f1113ad8bf47df76a3ded00f5f36d0e00f711b1f56031455153c40ae60ea0",
+      "stage": "INSPECT"
+    },
+    {
+      "class": "C3",
+      "input_sha256": "098f1113ad8bf47df76a3ded00f5f36d0e00f711b1f56031455153c40ae60ea0",
+      "node": "N03",
+      "operator": "CLASSIFY",
+      "output_sha256": "5b7d639c8e503e6cd3e518905b3e377e31019cfb223366946744b9b91b3460aa",
+      "stage": "CLASSIFY"
+    },
+    {
+      "input_sha256": "5b7d639c8e503e6cd3e518905b3e377e31019cfb223366946744b9b91b3460aa",
+      "node": "N04",
+      "operator": "RECOVER",
+      "output_sha256": "1207d0cf216af937ae5c5584140a707eef77c2123c87a3983fad2a0e099eebfa",
+      "recovered": true,
+      "stage": "RECOVER"
+    },
+    {
+      "input_sha256": "1207d0cf216af937ae5c5584140a707eef77c2123c87a3983fad2a0e099eebfa",
+      "node": "N05",
+      "operator": "VALIDATE",
+      "output_sha256": "b0411a1431ea905acd42641ed259eb7a840c367bf1127992dda1ec3624d7bf0d",
+      "stage": "VERIFY",
+      "valid": true
+    },
+    {
+      "checkpoint_sha256": "94ed5855d5990cd175fb0af91bcde76f6bb40ae28ea24a515e3b6c1c9c596471",
+      "input_sha256": "b0411a1431ea905acd42641ed259eb7a840c367bf1127992dda1ec3624d7bf0d",
+      "node": "N06",
+      "operator": "CHECKPOINT",
+      "output_sha256": "2fc2aee3657001d3e4a69e51b1e00def04a62d87c88d704fea911587915ca269",
+      "stage": "CHECKPOINT"
+    },
+    {
+      "input_sha256": "2fc2aee3657001d3e4a69e51b1e00def04a62d87c88d704fea911587915ca269",
+      "node": "N07",
+      "operator": "RECORD",
+      "output_sha256": "8a33dceb7b38d7cb97baaa2e4eee847b91bde829b4323eaab59b27ef877641af",
+      "receipt_sha256": "125f2f56a2a4ac1af5963cacfe7c82af4981a090cfabe3b5380d188fada051af",
+      "stage": "RECORD"
+    },
+    {
+      "input_sha256": "8a33dceb7b38d7cb97baaa2e4eee847b91bde829b4323eaab59b27ef877641af",
+      "node": "N08",
+      "operator": "RECORD",
+      "output_sha256": "92cdd0b8ce60e69c550501cb1521c02b0e3eb017a9a4511ebdf3bed7496e1235",
+      "receipt_sha256": "077114db266c0c70cb40ca364c43d66e1e804a3e836d0910ed651989d8fd37be",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

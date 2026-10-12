@@ -1,0 +1,148 @@
+RUSSL GALOIS FIELD MECHANICS TERMINAL — IDENTITY AND DOMAINS 0.5.0
+Prepared 2026-10-11.
+
+The terminal is a workbench for Galois Field Mechanics: explicit field
+arithmetic, mechanics data, finite transforms, exact algebraic models and
+reproducible research records. Its primary workflows preserve the supplied
+values and their declared domain. A calculation does not require a normalized
+quantum state merely because it uses complex coefficients or a Fourier basis.
+
+WHAT CHANGED FUNCTIONALLY
+
+Earlier releases routed many mechanics samples through a normalized complex
+state: divide by the sample L2 norm, transform, and display squared magnitudes
+as probabilities. The scale was retained in metadata, but that state convention
+determined the main workspace and prevented a zero vector from being prepared.
+
+Release 0.5 introduces a primary data workspace. Ordinary real/complex sample
+values retain their magnitude, units and grid; the transform acts on the raw
+vector. Zero data remains valid zero data. The workspace displays sample and
+coefficient values with transform/recovery checks. Exact field-valued
+coefficients use a separate transform and exact comparisons. These are
+different operations and result types, not a change of titles alone.
+
+The normalized complex-state lab remains available in Reference math. Its
+probabilities, pure-state Wigner function, mana and state preparation retain
+their original mathematical assumptions and provenance. Its state is separate
+from the primary mechanics data workspace. An explicit reference calculation
+does not silently normalize or overwrite mechanics data.
+
+THE THREE MAIN NUMBER SYSTEMS
+
+1. Ordinary data indexed by a finite field.
+   Each label x belongs to a declared GF(q), with q=p^n. A value v_x is an
+   ordinary real or complex number. The finite label orders the data; its
+   associated physical coordinate and units are recorded separately.
+
+   The positive trace-character basis is
+     Tr(u)=u+u^p+...+u^(p^(n-1)), with Tr(u) in GF(p);
+     chi(u)=exp(2*pi*i*Tr(u)/p);
+     F[k,x]=chi(k*x)/sqrt(q).
+   Raw coefficients are y=F*v, and recovery is v_returned=F^dagger*y.
+   The kernel's 1/sqrt(q) makes F unitary; it does not normalize its input.
+   Thus ||y||2=||v||2 for arbitrary vectors, including v=0. Scaling the data
+   scales its coefficients. Squared magnitudes are signal quantities unless
+   a separate normalized-state interpretation is explicitly selected.
+
+   Mechanical source functions such as pendulum acceleration, real rotations,
+   Mellin kernels and exterior metric components are evaluated in their
+   ordinary domains. Their finite grids are chosen and recorded. A Fourier
+   round trip checks that representation; it does not turn the original
+   differential equation, continuous integral or coordinate geometry into
+   a finite-field physical law.
+
+2. Coefficients that are themselves finite-field values.
+   For a declared GF(q), choose a primitive element g and N=q-1. Input
+   coefficients a_j and transformed coefficients A_k both belong to GF(q):
+     A_k=sum_(j=0)^(N-1) a_j*g^(j*k);
+     a_j=N^(-1)*sum_(k=0)^(N-1) A_k*g^(-j*k).
+   All products, sums and inverses here are field operations. N is nonzero
+   modulo p because q-1 is congruent to -1. The primitive element, ordering
+   and field polynomial determine the calculation and are part of its return.
+
+   This multiplicative DFT has N entries and exact field coefficients.
+   It has neither complex exponentials nor an ordinary Euclidean norm.
+   It is distinct from the q-entry additive-character complex transform.
+   A displayed integer encodes polynomial coefficients in base p; extension
+   field multiplication is not ordinary integer multiplication modulo q.
+
+3. Exact field-coordinate mechanics.
+   Coordinates, parameters and matrices can be declared directly in a finite
+   field. Algebraic oscillator steps, rational-circle rotations, label maps,
+   Frobenius and field traces then use that field's operations. Every inverse
+   requires a nonzero denominator. Examples containing 1/2 require odd
+   characteristic. Field labels have no real ordering or implicit length,
+   velocity, time or angle units.
+
+   These are explicitly chosen exact algebraic mechanics models. Matching a
+   real formula's shape does not supply a universal coefficient conversion.
+   There is no identity-preserving ring map from the real numbers into GF(p):
+   characteristic p would send the nonzero real number p to zero. Real sine,
+   cosine, exponential, inequalities and integration require their own
+   domains or separately specified constructions.
+
+WORD MECHANICS AT GF(2^80)
+
+The supplied RUSSL five-word workbench is a primary workflow with its own
+existing cell dynamics, source words, research laboratories, bounded snapshot
+and exact replay contracts. Small-field transform arrays are separate from
+its word cells. The terminal captures bounded word evidence rather than
+attempting to enumerate 2^80 complex coefficients. Original word imports,
+exports and replay semantics retain their source attribution.
+
+SOURCES AND HISTORICAL EVIDENCE
+
+The candidate PDF is titled "The Galois Field Mechanic Transform: Discrete
+Phase Spaces, Quantum Kinematics, and Finite Field Cosmologies". Its complex
+Hilbert-space/QM sections are genuine source content. The original SpinDoctor
+terminal is also explicitly a quantum terminal. Those titles and source bytes
+remain unchanged. They inform specific reference mathematics and interface
+patterns; they do not set the identity or input requirements of every GFM
+workflow.
+
+docs/candidate-review.txt records the earlier bounded normalized-lab assessment.
+Its page references and algebraic findings remain historical evidence. In
+particular, the candidate's page-14 identification of a complex additive
+transform with a field-valued polynomial transform needs the domain distinction
+made above. Complex Fourier analysis has applications in mechanics data,
+signal processing and quantum mathematics; its presence alone does not choose
+one interpretation.
+
+The earlier equation, image and horizon audits retain their original scope,
+source transcriptions, qualifications and missing-adapter findings. The user's
+gaseous-aperture/aggie scenario remains a declared hypothesis alongside ordinary
+GR references. Exact byte hashes, transform recovery and numerical identities
+are evidence for the particular calculations they cover, rather than
+certification of a universal physical theory.
+
+EXPORT AND REVIEW EXPECTATIONS
+
+Each primary data record carries the current validated dataset: field ID,
+coefficient domain, representation, current values, codec metadata (including
+grid and units when provided), and bounded operation strings. Inert command
+provenance and scope accompany it. The field ID refers to the registered
+polynomial definition; the record does not duplicate that definition or every
+prior input, output and check.
+
+Transform calculation returns separately expose the kernel, ordering, result
+dataset and measured residuals or exact-equality checks. Reapplication reports
+retain their explicit source samples, transformed values, recovered values and
+model-specific checks. Raw zero datasets remain recordable and exportable.
+Normalized-state reference records retain their distinct model and preparation
+metadata.
+
+Session and record hashes check integrity of the covered data. Imported
+histories and candidate prose remain inert; they do not execute commands.
+An older release's import starts the primary workspace with default raw
+pendulum data and restores its saved normalized state under Reference math;
+its saved horizon context is retained when present.
+Earlier source titles, release examples, record digests and audit artifacts
+remain available under their historical conventions. The current README and
+the command catalogue identify the primary 0.5 workflows and secondary
+Reference math operations.
+
+The current saved mechanics report is mechanics-reapplication.json, and the
+reloadable raw-data example is examples/GFM-Mechanics-session.json. Their
+independent checks are recorded in validation/mechanics-independent-verification.json
+and reproduced by validation/verify-mechanics-data.py. Historical normalized
+examples keep their original names and bytes.

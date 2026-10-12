@@ -1,0 +1,17 @@
+JA21 9.1.1 portable merged-compilation repair
+
+Observed Windows failure:
+  Path is an ambiguous reference between System.IO.Path and System.Windows.Shapes.Path.
+
+Root cause:
+  Start-JA21Browser.ps1 merges/hoists using directives from multiple C# presenter units.
+  PortableDesktop.cs used bare Path.* while the merged WPF unit also imported System.Windows.Shapes.
+
+Applied repair:
+  - all PortableDesktop.cs filesystem references are System.IO.Path.*
+  - static package verifier rejects bare Path.* in joined C# sources
+  - portable regression test rejects recurrence
+  - Windows verifier rejects recurrence before Add-Type
+
+Claim boundary:
+  Actual Windows WPF/Add-Type execution must still pass on the target machine before runtime qualification is claimed.

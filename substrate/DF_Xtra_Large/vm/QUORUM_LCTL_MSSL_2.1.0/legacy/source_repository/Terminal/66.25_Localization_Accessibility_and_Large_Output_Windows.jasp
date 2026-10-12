@@ -1,0 +1,48 @@
+profile ja.interface
+source_level 0.3
+
+subsuite Terminal.T_25 LocalizationAccessibilityLargeOutput {
+    identity { suite = "66"; id = "T-25"; deterministic = true; autorun = false }
+
+    integrate { Suite_45_Localization_and_Large_File_Plane; Suite_46_Multilingual_Setup }
+
+    accept {
+        locale
+        accessibility_profile
+        OrderedTerminalEventStream
+        output_window_budget
+        user_presentation_preferences
+    }
+
+    emit { AccessibleTerminalViewModel; TerminalAccessibilityAudit }
+
+    procedure localize() {
+        localize_interface_labels_and_diagnostics(locale)
+        preserve_command_bytes_and_evidence_identifiers
+        mark_untranslated_tool_output
+        apply_locale_aware_date_number_display_without_changing_raw_values
+    }
+
+    procedure window_large_output() {
+        require output_window_budget.finite
+        virtualize_by_StreamIndex
+        preserve_sequence_numbers_and_search
+        announce_loaded_window_range
+        never_load_unbounded_output_into_ui
+    }
+
+    procedure audit() {
+        verify_keyboard_only_operation
+        verify_screen_reader_order
+        verify_contrast_and_noncolor_status
+        verify_focus_visibility
+        verify_motion_reduction
+        verify_zoom_and_reflow
+        return findings
+    }
+
+    deny { localized_command_execution; inaccessible_status_only_by_color; unbounded_render; lost_sequence_context }
+    evidence { locale_pack_hash; window_events; accessibility_findings; remediation_refs }
+    tests { locales; raw_value_preservation; screen_reader; keyboard; high_contrast; million_event_window }
+}
+

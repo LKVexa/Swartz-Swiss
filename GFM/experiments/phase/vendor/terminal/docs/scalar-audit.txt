@@ -1,0 +1,106 @@
+Scalar equation refinements / v0.2 / 2026-10-11
+
+The supplied Equation audit candidate.txt is evidence. Its proposed formulas
+are checked within explicitly bounded models; its broader physical claims are
+not computational conclusions. The following three implementations do not
+convert SU(2) coefficients or ordinary complex amplitudes into finite fields.
+
+API: globalThis.RusslRefinedScalar in the browser; CommonJS require of
+src/refined-scalar.js returns the same immutable API.
+
+Eq. 181: clebschGordan(j1,m1,j2,m2,J,M)
+Returns coefficient, sign, exact squared rational (decimal numerator and
+denominator strings), domain, phaseConvention, allowed, reason, kMin, kMax and
+terms. j1,j2,J are exact integer/half-integer numbers from 0 through 6.
+Magnetic numbers are exact integer/half-integer numbers. Out-of-multiplet,
+magnetic-sum, triangle, integer-sum or magnetic-parity selection violations
+return zero with allowed=false. Nonfinite, non-half-integer or excessive spin
+inputs reject. An allowed coupling may also vanish by cancellation.
+
+The completed Racah sum is the supplied Eq.181 with integer k ranging from
+max(0,j2-J-m1,j1-J+m2) to min(j1+j2-J,j1-m1,j2+m2). Factorials and alternating
+rational arithmetic use BigInt exactly. Only the final square root is binary
+floating point. The phase is Condon-Shortley. This agrees with NIST's relation
+between Clebsch-Gordan coefficients and Wigner 3j symbols and the finite
+factorial sum:
+https://dlmf.nist.gov/34.1.E1
+https://dlmf.nist.gov/34.2.E4
+https://dlmf.nist.gov/34.2.E5
+https://docs.sympy.org/latest/modules/physics/wigner.html#sympy.physics.wigner.clebsch_gordan
+
+The two phases in converting the DLMF 3j symbol to a CG coefficient cancel.
+The remaining alternating sign is the explicit (-1)^k in the sum. For example,
+the spin-half singlet has C(+1/2,-1/2)=+1/sqrt(2) and
+C(-1/2,+1/2)=-1/sqrt(2). Domain: ordinary SU(2) angular-momentum coupling,
+real coefficients used with complex amplitudes. No finite-field SU(2) or
+p-adic interpretation is implemented or implied.
+
+Eq. 318: arithmeticDelta(p,x)
+Returns delta, input as normalized decimal string, residueModP2,
+residueModP, unit, fermatQuotient (null for nonunits), exact and domain.
+p is a prime integer from 2 through 97. x may be a decimal integer string of
+at most 4096 digits, a safe integer number, or a bounded BigInt. Negative
+integers are reduced to their canonical nonnegative residue modulo p^2.
+Unsafe numeric inputs reject instead of silently rounding.
+
+The implementation computes x^p modulo p^2 using exact BigInt modular
+exponentiation, then divides the exactly p-divisible integer numerator and
+reduces modulo p. This is delta_p(x)=(x-x^p)/p mod p on Z/p^2 Z. Choosing a
+different representative of the same residue class leaves delta unchanged.
+For units, q_p(x)=(x^(p-1)-1)/p mod p and delta_p(x)=-x q_p(x) mod p.
+Nonunits have no Fermat quotient under that definition.
+
+Eq.319 follows from substituting x^p=x-p delta_p(x) and y^p=y-p delta_p(y):
+delta_p(xy)=x delta_p(y)+y delta_p(x) modulo p. Delta is not additive:
+at p=2, delta(1)=0 while delta(1+1)=delta(2)=1. It is an arithmetic map
+between residue rings, not an ordinary derivation on a finite field.
+
+Cayley evolution: cayleyStep(H,state,dt,hbar=1)
+H is a square Hermitian complex matrix with dimension 1 through 8 and state
+has the same dimension. Complex values accept a real number, [re,im], or a
+plain {re,im} object. All components are finite. The declared entries must
+satisfy exact floating-point conjugate equality (including real diagonals);
+the implementation does not silently symmetrize H. Entry magnitudes are at
+most 1e6, the state Euclidean norm is at most 1e6, |dt| is at most 100,
+hbar is finite and positive, and |dt H/(2 hbar)| per entry is at most 1e8.
+These explicit numerical bounds prevent unchecked overflow and extreme
+scaling. Scaled entries are computed directly, so zero or tiny H can remain
+valid even when dt/(2 hbar) alone would overflow. Arrays must be dense plain
+data arrays; accessors and extra properties reject without evaluation.
+Caller-owned data are copied. The zero vector is allowed as a
+linear-map input; it is not a normalized quantum state.
+
+The conventional equation i hbar dpsi/dt=H psi uses
+U=(I+i dt H/(2 hbar))^-1 (I-i dt H/(2 hbar)).
+The candidate's opposite sign is the inverse-time step for the same
+Hermitian H. It is not inherently nonunitary. The conventional step has
+first-order change -i dt H psi/hbar. Both sign choices are unitary
+mathematically when H is Hermitian and parameters are real as declared.
+
+The implementation solves the complex linear system using partial-pivot
+Gaussian elimination, not an explicit matrix inverse. It does not
+renormalize the state. Returns state, Euclidean normBefore and normAfter,
+normError, relativeNormError, absolute equation residual, relativeResidual,
+tolerance, toleranceMet, renormalized=false, dimension, dt, hbar, domain and
+the explicit convention. Relative residual is the backward-error ratio
+||A psi_next-b||/(||A||_F ||psi_next||+||b||). Tolerance is 1e-10. A false
+toleranceMet remains visible; it is not repaired by normalization or hidden
+as a claim of exact floating-point norm conservation.
+
+Verification scope
+node --test tests/refined-scalar.test.cjs
+Tests use the published SymPy examples, spin-half singlet/triplet values,
+highest weights and singlet phases throughout the spin range, orthonormality
+and completeness of integer and half-integer coupled bases, and a separate
+standard-library Python DLMF 3j reference with exact Fraction arithmetic.
+SymPy is absent from the available bundled and default Python installations;
+an installed SymPy oracle was not run. This limitation is distinct from
+comparison with values published in SymPy's official documentation.
+
+Arithmetic tests compare exact integer powers, signed residues, units and
+nonunits, representative independence, a nonadditivity counterexample and
+Eq.319 over complete residue rings for p=2,3,5,7,11. Cayley tests cover
+known diagonal phases, sigma-x, complex sigma-y, the first-order sign,
+eight-dimensional inverse-time recovery, unnormalized-state norm retention,
+finite bounds and non-Hermitian rejection. These tests verify algebra and
+numerical models only, not the candidate's empirical physical assertions.

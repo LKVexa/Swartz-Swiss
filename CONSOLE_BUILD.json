@@ -1,0 +1,42 @@
+{
+  "product": "GFM JA21 Console",
+  "console_version": "2.0.0",
+  "base_browser_version": "9.8.7",
+  "starts_blank": false,
+  "visible_tabs": false,
+  "search_bar": false,
+  "buttons": false,
+  "default_size": [
+    1280,
+    900
+  ],
+  "minimum_size": [
+    760,
+    600
+  ],
+  "original_backup_preserved": true,
+  "simulation_integration": "Combined pulse laboratory and full supplied phase/aperture/Kerr/observations repository, local workers in the native JA21 host; current verification under validation/combined-release.json",
+  "source_integrity": "Active runtime verified; 191 pre-existing absent legacy references recorded in provenance/source-audit.json",
+  "release_date": "2026-10-12",
+  "license": "GPL-3.0-only",
+  "copyright": "Copyright (C) 2026 RUSSELL PHILIP SMITHSON",
+  "publication_policy": "Complete source and historical documents; physical and embedded logs excluded",
+  "blank_console_baseline_validation": {
+    "date": "2026-10-11",
+    "platform": "Windows x64",
+    "unified_release_check": "passed",
+    "python_tests": 212,
+    "python_skipped": 3,
+    "launcher_checks": 15,
+    "bootstrap_checks": 6,
+    "headless_console_checks": 12,
+    "local_origin_cases": 16,
+    "desktop_live_integration": "not exercised",
+    "log_exclusion": "235 physical files and 27 embedded archive members omitted"
+  },
+  "validation": {
+    "report": "validation/integration-release.json",
+    "native_live_view": "passed",
+    "blank_console_baseline_is_not_integration_validation": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "suite_id": 56,
+  "suite_name": "Job Queue Workers and Sandboxes",
+  "plane": "orchestration",
+  "legacy_sha256": "cd4bd58900e42f3c63d73ba96f7d55e6380f51416f35a8d859f5072ed48f5adb",
+  "legacy_root": "legacy/source_repository/Job Queue Workers and Sandboxes",
+  "files": [
+    {
+      "path": "56.1_Deterministic_Queues.jaops",
+      "sha256": "368f967fc6fcfc1f936bc47c5e24f3175ee5fd8d3c0369f43f94dc6ae74ab795",
+      "bytes": 1112
+    },
+    {
+      "path": "56.2_Worker_Management.jaops",
+      "sha256": "655a77be1ebfbb3a7dc0ce501278fbc309120369347c123fd907d0f336ea04b0",
+      "bytes": 1113
+    },
+    {
+      "path": "56.3_Isolated_Sandboxes.jaops",
+      "sha256": "0d101574e635997534dbc560ac2d8e7be39ed7a118ba285446e87766b0914ea9",
+      "bytes": 1126
+    },
+    {
+      "path": "56.4_Status_Tracking.jaops",
+      "sha256": "9cd5ae8605529cd2ab4e6bd36d71df324f3e3f55486d5d69eb5756377f0c3120",
+      "bytes": 1096
+    },
+    {
+      "path": "56.5_Recovery.jaops",
+      "sha256": "56bf435555c71642c4ef1206f1ad1d88249193a31c0b67b18f8c344cfbab0f62",
+      "bytes": 1124
+    },
+    {
+      "path": "56.6_Job_Queue.jaops",
+      "sha256": "e6abd54430d3095e4c5aa8e5bad55a30ec992e7393474759a328b445dffa3649",
+      "bytes": 1028
+    },
+    {
+      "path": "56.7_Worker_Manager.jaops",
+      "sha256": "27486554f9054c32b664890f60bbfc5e1ad362199701df5ad656ad56d7f972e5",
+      "bytes": 1106
+    },
+    {
+      "path": "56.8_Sandboxes.jaops",
+      "sha256": "9e2f02b971997b3f8b51963bc6650e8a4c76a9de36ace2d0b8801fa3ba164f45",
+      "bytes": 1167
+    },
+    {
+      "path": "56.9_Failures_and_Retries.jaops",
+      "sha256": "b44181976c84b610b6f1cd02a036ac6eb9f450f248f8f6268fa332df8e93d437",
+      "bytes": 1105
+    },
+    {
+      "path": "README.md",
+      "sha256": "a55a7a1c32d419fab652493cd80a7266b7d28115de3115ca7236d0d17b1dcc34",
+      "bytes": 17748
+    }
+  ]
+}

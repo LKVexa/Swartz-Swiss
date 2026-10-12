@@ -1,0 +1,57 @@
+{
+  "package": "BR-470-05",
+  "record": "BR.PackageRequirements",
+  "requirements": [
+    {
+      "baseline": "4.6.0",
+      "blocker": null,
+      "command": ".build/t470 entropy deterministic/failure vectors",
+      "evidence_path": "evidence/BR-470-05_tests.log",
+      "exit_code": 0,
+      "notes": "Production entropy is explicitly nondeterministic; deterministic seeded replay and fail-closed error paths are tested.",
+      "requirement_id": "BR-470-05-R01",
+      "result": "PASS",
+      "sha256": "c13cdf6f09a0107f90fbf1e6b808e12bd39d9e9e31e1c8c1be40847eb667a483",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.6.0",
+      "blocker": null,
+      "command": ".build/t470 entropy deterministic/failure vectors",
+      "evidence_path": "evidence/BR-470-05_tests.log",
+      "exit_code": 0,
+      "notes": "Production entropy is explicitly nondeterministic; deterministic seeded replay and fail-closed error paths are tested.",
+      "requirement_id": "BR-470-05-R02",
+      "result": "PASS",
+      "sha256": "c13cdf6f09a0107f90fbf1e6b808e12bd39d9e9e31e1c8c1be40847eb667a483",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.6.0",
+      "blocker": null,
+      "command": ".build/t470 entropy deterministic/failure vectors",
+      "evidence_path": "evidence/BR-470-05_tests.log",
+      "exit_code": 0,
+      "notes": "Production entropy is explicitly nondeterministic; deterministic seeded replay and fail-closed error paths are tested.",
+      "requirement_id": "BR-470-05-R03",
+      "result": "PASS",
+      "sha256": "c13cdf6f09a0107f90fbf1e6b808e12bd39d9e9e31e1c8c1be40847eb667a483",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.6.0",
+      "blocker": null,
+      "command": ".build/t470 entropy deterministic/failure vectors",
+      "evidence_path": "evidence/BR-470-05_tests.log",
+      "exit_code": 0,
+      "notes": "Production entropy is explicitly nondeterministic; deterministic seeded replay and fail-closed error paths are tested.",
+      "requirement_id": "BR-470-05-R04",
+      "result": "PASS",
+      "sha256": "c13cdf6f09a0107f90fbf1e6b808e12bd39d9e9e31e1c8c1be40847eb667a483",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "status": "OPERATIONAL",
+  "title": "Entropy device",
+  "workflow": "docs/WORKFLOW_APPLIED_4.7.0/05_BR-470-05_entropy_device_PROMPT_AND_WORKFLOW.md"
+}

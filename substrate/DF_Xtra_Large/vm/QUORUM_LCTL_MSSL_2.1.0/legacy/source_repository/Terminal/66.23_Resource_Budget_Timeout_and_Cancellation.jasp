@@ -1,0 +1,51 @@
+profile ja.operations
+source_level 0.3
+
+subsuite Terminal.T_23 ResourceBudgetTimeoutCancellation {
+    identity { suite = "66"; id = "T-23"; deterministic = true; autorun = false }
+
+    integrate { Suite_58_Resource_Usage_Monitor; Suite_65_SE_10_Resource_Budget_and_Quota }
+
+    accept {
+        cpu_limit
+        memory_limit
+        storage_limit
+        process_limit
+        output_limit
+        log_limit
+        wall_time_limit
+        cancellation_policy
+    }
+
+    emit TerminalResourceLedger
+
+    procedure reserve() {
+        require all_limits_finite_and_nonnegative
+        reservation = reserve_exact_limits
+        seal(reservation)
+        return reservation
+    }
+
+    procedure enforce_and_record(actual_use) {
+        sample_monotonically(actual_use)
+        if approaching_limit { emit warning_event }
+        if limit_exceeded {
+            terminate_cell_process_tree
+            preserve_streams_and_checkpoint
+            mark RESOURCE_LIMIT_EXCEEDED
+        }
+        append_usage_ledger
+    }
+
+    procedure cancel(request) {
+        require request.authorized_principal
+        send_graceful_signal_then_bounded_force
+        preserve_evidence
+        mark CANCELLED
+    }
+
+    deny { unlimited_resource; unrecorded_kill; cancellation_evidence_loss; budget_expansion }
+    evidence { reservation; samples; warnings; termination_reason; cancellation_record }
+    tests { each_limit; timeout; graceful_cancel; forced_cancel; release_resources }
+}
+

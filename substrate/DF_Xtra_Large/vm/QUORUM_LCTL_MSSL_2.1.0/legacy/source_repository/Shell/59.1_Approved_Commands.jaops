@@ -1,0 +1,34 @@
+ja source 0.3
+module suite59.shell.approved_commands
+use Operations
+policy explicit_network
+
+workspace ShellApprovedCommands {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 4 memory 8GB
+    network disabled
+    secret command_key reference "vault://suite59/approved-commands"
+
+    service SOPHIA_command_context replicas 1
+    health_check SOPHIA_command_context every 10s
+    service CHARLOTTE_command_gate replicas 1
+    health_check CHARLOTTE_command_gate every 10s
+    service LANDON_command_registry replicas 1
+    health_check LANDON_command_registry every 10s
+    service Professor_command_report replicas 1
+    health_check Professor_command_report every 10s
+    service Podium_command_receipt replicas 1
+    health_check Podium_command_receipt every 10s
+    service approved_command_worker replicas 1
+    health_check approved_command_worker every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "shell_approved_commands.msslb"

@@ -1,0 +1,10 @@
+# DF_Xtra_Large -- declared toolchain (checked first by ./VERIFY; gate N0)
+python3            Python 3.10+ (the QVM is Python; the adapter, VERIFY, RUN)
+java               Java 21 runtime for the bundled LCTL 1.6.1-RC1 column verifier
+                   (toolchain/lctl_1_6_1_rc1/runtime/bin/lctl-hyperfederated.jar). Without it:
+                   compile runs with --skip-lctl-verify and every result says lctl_column_verify=SKIPPED_NO_JDK;
+                   the repository's own VERIFY_ALL.sh (133 JVM plan verifications) cannot run and gate N1 is SKIPPED.
+make, sh           for `make -C vm verify test`
+sha256sum          for the VM's own integrity check (5,512 entries)
+cryptography       optional Python package; the pure-Python RFC 8032 Ed25519 fallback ships in the VM
+# No C compiler is needed. No network.

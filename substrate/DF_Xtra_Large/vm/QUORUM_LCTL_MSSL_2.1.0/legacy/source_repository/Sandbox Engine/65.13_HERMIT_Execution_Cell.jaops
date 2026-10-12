@@ -1,0 +1,33 @@
+ja source 0.3
+module suite65.sandbox_engine.hermit_execution_cell
+use Operations
+policy explicit_network
+
+workspace SandboxHermitExecutionCell {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 8 memory 16GB
+    network disabled
+
+    service SOPHIA_cell_context replicas 1
+    health_check SOPHIA_cell_context every 10s
+    service CHARLOTTE_cell_gate replicas 1
+    health_check CHARLOTTE_cell_gate every 10s
+    service LANDON_cell_controller replicas 1
+    health_check LANDON_cell_controller every 5s
+    service Professor_cell_report replicas 1
+    health_check Professor_cell_report every 10s
+    service Podium_cell_receipt replicas 1
+    health_check Podium_cell_receipt every 10s
+    service HERMIT_disposable_execution_cell replicas 1
+    health_check HERMIT_disposable_execution_cell every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "sandbox_engine_hermit_execution_cell.msslb"

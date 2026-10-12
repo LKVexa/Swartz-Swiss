@@ -1,0 +1,72 @@
+{
+  "execution_scope": "deterministic local/offline reference semantics consuming module fixtures and emitting typed reference-domain outputs",
+  "input_type": "asset/scene/frame/timeline",
+  "module": "Motion Planner",
+  "module_id": 22,
+  "non_claims": [
+    "not production domain fidelity",
+    "not executable legacy-runtime equivalence",
+    "not physical distributed authority"
+  ],
+  "operators": [
+    {
+      "node": "N01",
+      "operator": "OBSERVE",
+      "stage": "SOURCE"
+    },
+    {
+      "node": "N02",
+      "operator": "INSPECT",
+      "stage": "INSPECT"
+    },
+    {
+      "node": "N03",
+      "operator": "MATERIALIZE",
+      "stage": "SCENE_BIND"
+    },
+    {
+      "node": "N04",
+      "operator": "TRANSFORM",
+      "stage": "TRANSFORM"
+    },
+    {
+      "node": "N05",
+      "operator": "RENDER",
+      "stage": "RENDER"
+    },
+    {
+      "node": "N06",
+      "operator": "TRANSFORM",
+      "stage": "COMPOSITE"
+    },
+    {
+      "node": "N07",
+      "operator": "VALIDATE",
+      "stage": "VALIDATE"
+    },
+    {
+      "node": "N08",
+      "operator": "MATERIALIZE",
+      "stage": "EXPORT"
+    },
+    {
+      "node": "N09",
+      "operator": "RECORD",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "output_type": "render_artifact/visual_evidence",
+  "plane": "media_visual",
+  "policy": {
+    "capabilities": [
+      "artifact.read",
+      "artifact.write",
+      "evidence.write"
+    ],
+    "default": "deny",
+    "network": "deny"
+  },
+  "runner": "qualification/open_gate_runtime.py",
+  "schema": "QUORUM-REFERENCE-DOMAIN-PROFILE/2.1",
+  "version": "2.1.0"
+}

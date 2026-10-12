@@ -1,0 +1,48 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "dcab02499bd8450f12220919999802f394039bb0dfee848affbf53cf3d5ea7d4",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (ECONOMY_CONSERVATION, AUTONOMOUS_HISTORY) plus Stage 11 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "AUTONOMOUS_HISTORY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "ECONOMY_CONSERVATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-16",
+    "GW-17",
+    "GW-31",
+    "GW-52",
+    "GW-63",
+    "GW-79"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T2_HIGH_FIDELITY",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Historical presentation layers such as weathering, vegetation succession, infrastructure decay, and settlement growth remain derived from authoritative state/provenance.",
+  "requirement_id": "RCPW-11-R28",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 11,
+  "stage_title": "Visibility / Rendering Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "ECONOMY_CONSERVATION",
+    "AUTONOMOUS_HISTORY"
+  ],
+  "workflow_file": "11_VISIBILITY_RENDERING_AUTHORITY/173_RCPW_11_R28_HISTORICAL_PRESENTATION_LAYERS_SUCH_AS_WEATHERING_VEGETATION_SUCCESSION_INFRASTRUCTUR.md",
+  "workflow_tier": "T2_HIGH_FIDELITY"
+}

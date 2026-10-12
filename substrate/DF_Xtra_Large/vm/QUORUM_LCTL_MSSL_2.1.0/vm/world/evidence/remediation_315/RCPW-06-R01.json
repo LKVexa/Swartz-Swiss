@@ -1,0 +1,42 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "516f3d2d7ba44d4f65d3193b5230201d65c04206cce2bfc4dda6b003aec25116",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (CAUSAL_REPLAY) plus Stage 06 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "CAUSAL_REPLAY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-08",
+    "GW-37",
+    "GW-39",
+    "GW-57",
+    "GW-70"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Durable world mutations emit causally linked events with deterministic IDs.",
+  "requirement_id": "RCPW-06-R01",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 6,
+  "stage_title": "Causal Ledger Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "CAUSAL_REPLAY"
+  ],
+  "workflow_file": "06_CAUSAL_LEDGER_AUTHORITY/069_RCPW_06_R01_DURABLE_WORLD_MUTATIONS_EMIT_CAUSALLY_LINKED_EVENTS_WITH_DETERMINISTIC_IDS.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

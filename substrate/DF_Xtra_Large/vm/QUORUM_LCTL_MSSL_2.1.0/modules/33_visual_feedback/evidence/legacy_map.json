@@ -1,0 +1,44 @@
+{
+  "suite_id": 33,
+  "suite_name": "Visual Feedback",
+  "plane": "media_visual",
+  "legacy_sha256": "718d31c32be39d09891e4e2e5d41c7bac0df0e4b995bbd53aef97aadc697eabf",
+  "legacy_root": "legacy/source_repository/Visual Feedback",
+  "files": [
+    {
+      "path": "33.1_Visual_Feedback_Target_Intake.jate",
+      "sha256": "c4465ac8c4e7027a6abb38353e15c8efe1b42af70a14c666e1bf11193efe9e9b",
+      "bytes": 901
+    },
+    {
+      "path": "33.2_Visual_Feedback_Visual_Comparison.jate",
+      "sha256": "63ae4018a51c8ee0a6188c3dd36990b461f7069a698b1dc207856c7d80693eb4",
+      "bytes": 919
+    },
+    {
+      "path": "33.3_Visual_Feedback_Metric_Evaluation.jate",
+      "sha256": "4688632d82b9948ecbbe0ceb9eea0ede361e9496f78777de937feed93e2526be",
+      "bytes": 975
+    },
+    {
+      "path": "33.4_Visual_Feedback_Error_Localization.jate",
+      "sha256": "9f06f0a0281ef4386304ec60652790fb47abc86eeaef826d820b5b9906e842ff",
+      "bytes": 932
+    },
+    {
+      "path": "33.5_Visual_Feedback_Correction_Proposals.jate",
+      "sha256": "d713ee219cf49bbf337fb0442c8198586b580db06658b2d1186f72c28b3f639b",
+      "bytes": 920
+    },
+    {
+      "path": "33.6_Visual_Feedback_Regression_Verification.jate",
+      "sha256": "964a37d290125ad768ad8f5737435ffc642e050bef3dd90205a1cb9a6e785c4f",
+      "bytes": 942
+    },
+    {
+      "path": "README.md",
+      "sha256": "0e515d315e46f8b0ec847eaac5f8ea791f1d75fb449ba88daf83e6d3cb9acefb",
+      "bytes": 14355
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+VB JA21 Mirror Browser 7.0.0
+Package regression suite: 29/29 PASS
+DF_Small native gate: 18/18 PASS, 0 failed, 0 skipped
+External browser engine payload: absent by static/package checks
+Windows live WPF/network/render qualification: pending on target host

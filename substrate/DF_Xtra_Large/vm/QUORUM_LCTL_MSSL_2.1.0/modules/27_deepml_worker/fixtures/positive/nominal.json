@@ -1,0 +1,15 @@
+{
+  "schema": "QUORUM-FIXTURE/2.0",
+  "class": "positive",
+  "module_id": 27,
+  "plane": "model_compute",
+  "input_type": "model_input/state",
+  "payload": {
+    "example": "nominal"
+  },
+  "expected_contract": {
+    "admitted": true,
+    "stage_count": 8,
+    "final_state": "COMPLETED"
+  }
+}

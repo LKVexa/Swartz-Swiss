@@ -1,0 +1,18 @@
+MSSL{
+α≡{"format":"0.3","profile":"basic_mssl.executable.3","record":"MSSL.Document","source_language":"MSSL","source_version":"0.3"},
+ι≡"mssl:quorum.rcpw.remediation.presentation_transition:7.0.0-remediated-26",
+λ≡"quorum.rcpw.remediation.presentation_transition",
+ℛ≡{
+  "0001":"learn(\"module\",literal(\"quorum.rcpw.remediation.presentation_transition\"))",
+  "0002":"learn(\"presentation_schema\",literal(\"RCPW-PRESENTATION-ASSET/1\"))",
+  "0003":"learn(\"transition_schema\",literal(\"RCPW-REPRESENTATION-TRANSITION/2\"))",
+  "0004":"learn(\"asset_rule\",literal(\"presentation assets version and roll back independently from canonical state\"))",
+  "0005":"learn(\"transition_rule\",literal(\"versioned migration preserves canonical conservation vector\"))"
+},
+π≡[],δ≡5,τ≡0,
+μ≡{"learn.module":"quorum.rcpw.remediation.presentation_transition","learn.presentation_schema":"RCPW-PRESENTATION-ASSET/1","learn.transition_schema":"RCPW-REPRESENTATION-TRANSITION/2","learn.asset_rule":"presentation assets version and roll back independently from canonical state","learn.transition_rule":"versioned migration preserves canonical conservation vector"},
+ρ≡{"assertions":[],"emissions":[],"prints":[]},χ≡[],
+η≡{"events":[],"state":{"learn.module":"quorum.rcpw.remediation.presentation_transition","learn.presentation_schema":"RCPW-PRESENTATION-ASSET/1","learn.transition_schema":"RCPW-REPRESENTATION-TRANSITION/2","learn.asset_rule":"presentation assets version and roll back independently from canonical state","learn.transition_rule":"versioned migration preserves canonical conservation vector"}},
+ν≡{}
+,κ≡"sha256:f14dcdd067e0fc0a8cd438e03f88bdf428ee93e7656311d1d7361703959ed7a4"
+}⇒⊤

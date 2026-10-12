@@ -1,0 +1,33 @@
+(* Corpus-derived shared envelope; language-specific productions are versioned extensions. *)
+identifier = letter, { letter | digit | "_" } ;
+qualifiedName = identifier, { ".", identifier } ;
+version = digit, { digit }, ".", digit, { digit } ;
+policyDecl = "policy", qualifiedName, [ "(", argumentList, ")" ] ;
+argumentList = expression, { ",", expression } ;
+expression = literal | identifier | qualifiedName | call | object | array ;
+call = qualifiedName, "(", [ argumentList ], ")" ;
+object = "{", [ identifier, ":", expression, { ",", identifier, ":", expression } ], "}" ;
+array = "[", [ expression, { ",", expression } ], "]" ;
+literal = string | number | boolean ;
+
+program = "deepml", "specialized", version, moduleDecl, { policyDecl | domainDecl } ;
+moduleDecl = "module", qualifiedName ;
+domainDecl = "domain", identifier, "{", { unitDecl | schemaDecl | tensorDecl | operatorDecl | graphDecl | constraintDecl | statement }, "}" ;
+unitDecl = "unit", identifier, "=", expression ;
+operatorDecl = "operator", identifier, "(", [ argumentList ], ")", "->", qualifiedName, { identifier } ;
+
+(* Smithson 8S Coupled Mechanics editorial extension. Confirm compiler adoption before treating these productions as normative. *)
+couplingMechanics8SRecord = "coupling8s", "{", identityField, geometry5Field, elucidationField, activationField, phaseField, couplingField, projectionField, relationField, efficacyField, certificationField, "}" ;
+identityField = "identity", ":", object ;
+geometry5Field = "geometry5", ":", object ;
+elucidationField = "elucidation", ":", object ;
+activationField = "activation", ":", object ;
+phaseField = "phase", ":", object ;
+couplingField = "coupling", ":", object ;
+projectionField = "projection", ":", object ;
+relationField = "relation", ":", object ;
+efficacyField = "efficacy", ":", object ;
+certificationField = "certification", ":", object ;
+(* Required mathematical fields include c5, t8_meaning, eta_ind, W, optional H, p, support, radius, g5, delta8, g3, gJ, Delta_8S, interaction_order, projection_version, uncertainty, provenance, and limitations. *)
+(* Example: g5>tol5 and g3<=tol3 is encoded as relation.class=PROJECTION_ONLY while delta8 and gJ remain independent. *)
+(* Claim boundary: local noncollapsed dimension is 5+3=8; no S^8 topology is claimed without separate proof. *)

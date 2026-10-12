@@ -1,0 +1,7 @@
+{
+  "schema": "QUORUM-REPLAY-RECEIPT/2.0",
+  "module_id": 61,
+  "original_output_hash": "b0e7de21033ec5e9bbf75a4379ed942e570a1ef141d48490d8624219e75a3f02",
+  "replay_output_hash": "b0e7de21033ec5e9bbf75a4379ed942e570a1ef141d48490d8624219e75a3f02",
+  "verdict": "EXACT_CONTRACT_REPLAY"
+}

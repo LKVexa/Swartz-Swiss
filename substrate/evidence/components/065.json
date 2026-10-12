@@ -1,0 +1,17 @@
+{
+  "schema": "VEC1-EVIDENCE/1.0",
+  "component": "065",
+  "title": "DF_Large Adapter",
+  "source_file": "065_DF_Large_Adapter.md",
+  "source_sha256": "8847cc0b6ca3d06eca4454112e6fd4596271b7e84f6c13c7e1a49bf68415b9ab",
+  "hardening_profile": "VEC1-HARDENING/1.3",
+  "runtime_owner": "N_LARGE",
+  "integration_mechanism": "DF_Large adapter",
+  "implementation_status": "REFERENCE_IMPLEMENTED",
+  "terminal_state": "BLOCKED",
+  "blockers": [
+    "Complete all mandatory parent+nested prompt/workflow items",
+    "Independent closure review"
+  ],
+  "claim_boundary": "Reference implementation/evidence mapping only; component PASS is not claimed."
+}

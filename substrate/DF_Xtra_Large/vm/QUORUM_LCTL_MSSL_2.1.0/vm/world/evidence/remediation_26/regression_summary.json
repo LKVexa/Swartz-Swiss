@@ -1,0 +1,22 @@
+{
+  "base_repo_regression": {
+    "exit_code": 0,
+    "log": "world/evidence/remediation_26/base_repo_regression.log",
+    "seconds": 5.515198
+  },
+  "base_vm_tests": {
+    "exit_code": 0,
+    "log": "world/evidence/remediation_26/base_vm_tests.log",
+    "seconds": 8.509933
+  },
+  "remediation_tests": {
+    "exit_code": 0,
+    "log": "world/evidence/remediation_26/remediation_tests.log",
+    "seconds": 5.419885
+  },
+  "world_tests": {
+    "exit_code": 0,
+    "log": "world/evidence/remediation_26/world_tests.log",
+    "seconds": 7.091877
+  }
+}

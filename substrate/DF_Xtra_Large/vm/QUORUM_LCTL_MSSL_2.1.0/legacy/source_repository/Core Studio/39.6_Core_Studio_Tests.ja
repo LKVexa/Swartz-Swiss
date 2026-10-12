@@ -1,0 +1,14 @@
+ja source 0.3
+module suite39.core_studio.tests
+use Core
+policy no_network
+
+record TestsPlan { id: Count, scope: Text, sophia: Text, charlotte: Text, landon: Text, professor: Text, podium: Text }
+function prepare_tests_plan(item: TestsPlan) -> Result<TestsPlan, Text> effects { pure } {
+    let normalized: Text = item.scope
+    return Ok(TestsPlan { id: item.id, scope: normalized, sophia: item.sophia, charlotte: item.charlotte, landon: item.landon, professor: item.professor, podium: item.podium })
+}
+let sample: TestsPlan = TestsPlan { id: 3906, scope: "deterministic_test_plan", sophia: "interpret_test_intent", charlotte: "validate_fixtures_and_oracles", landon: "stage_approved_test_run", professor: "explain_test_results", podium: "publish_test_receipt" }
+let result = prepare_tests_plan(sample)
+assert result.is_ok == true
+emit json result

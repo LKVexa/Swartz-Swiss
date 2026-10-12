@@ -1,0 +1,52 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "5f279913408f1fd424101b10032db73fc1e8c1e37edc8c7ccab0a83252248cad",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (LOD_TRANSITION, RESOURCE_STRESS, MULTI_WORKER_CONFORMANCE) plus Stage 13 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "LOD_TRANSITION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "MULTI_WORKER_CONFORMANCE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "RESOURCE_STRESS": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-17",
+    "GW-36",
+    "GW-42",
+    "GW-63",
+    "GW-79"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T3_FABRIC",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "World-shell scheduling can distribute shell/region workloads across workers while preserving one canonical shell/LOD decision trace.",
+  "requirement_id": "RCPW-13-R20",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 13,
+  "stage_title": "Reference-Centric World Shells",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "LOD_TRANSITION",
+    "RESOURCE_STRESS",
+    "MULTI_WORKER_CONFORMANCE"
+  ],
+  "workflow_file": "13_REFERENCE_CENTRIC_WORLD_SHELLS/194_RCPW_13_R20_WORLD_SHELL_SCHEDULING_CAN_DISTRIBUTE_SHELL_REGION_WORKLOADS_ACROSS_WORKERS_WHILE_PRE.md",
+  "workflow_tier": "T3_FABRIC"
+}

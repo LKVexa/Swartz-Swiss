@@ -1,0 +1,10 @@
+{
+  "authority_sha256": "e61751890cb96495a3176f34d02e50b98ba6d9531959f5eac2a62dc8de786434",
+  "error": "INVALID_INPUT",
+  "final_state": "FAILED_CLOSED",
+  "module": "Archive Ledger",
+  "module_id": 29,
+  "network_policy": "deny",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "status": "DENIED"
+}

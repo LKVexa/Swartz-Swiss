@@ -1,0 +1,30 @@
+{
+  "schema": "QUORUM-STATIC-LEGACY-SIGNAL-COMPARISON/2.0.1",
+  "module_id": 21,
+  "signals_declared": [
+    "stable_ids",
+    "topological_order",
+    "resource_deduplication",
+    "constant_transform",
+    "RENDER",
+    "OPTIMIZE",
+    "LOWER",
+    "PACKAGE",
+    "CERTIFY"
+  ],
+  "signals_matched": [
+    "stable_ids",
+    "topological_order",
+    "resource_deduplication",
+    "constant_transform",
+    "RENDER",
+    "OPTIMIZE",
+    "LOWER",
+    "PACKAGE",
+    "CERTIFY"
+  ],
+  "coverage": 1.0,
+  "executable_legacy_runtime_available": false,
+  "L5_certification": false,
+  "claim_boundary": "Static lexical/semantic signal evidence is not executable differential qualification."
+}

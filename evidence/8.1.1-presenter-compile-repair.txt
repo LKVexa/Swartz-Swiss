@@ -1,0 +1,24 @@
+VB JA21 DF_Medium Browser 8.1.1
+Presenter compile repair / audit evidence
+
+Root cause:
+- ContextDrawerWindow used unqualified Brush(...) outside BrowserWindow.
+- C# resolved Brush to System.Windows.Media.Brush, so Add-Type failed with a type-used-as-variable/invocation error.
+
+Repairs:
+- Qualified all ContextDrawerWindow color helper calls as BrowserWindow.Brush(...).
+- Added Python and Windows verifier regression gates for this exact source-range defect.
+- Added runtime integrity seal version binding to BrowserVersion.Full.
+- Reconciled package/profile/VEC1 host release metadata at 8.1.1.
+- Added top-level VERSION to prevent archive/content version skew.
+- Updated stale 8.0.3 regression assertions to current 8.1.x behavioral invariants.
+- Expanded the package verifier to run all browser-level regression modules.
+
+Validation completed in the audit environment:
+- Browser-level tests: 63 passed.
+- VEC1 substrate suite: 30 tests run, 29 passed, 1 skipped.
+- Package integrity/source-IR/native provenance/external-engine absence: PASS.
+- VEC1 strict four-node execution remains BLOCKED by design because N_LARGE and N_XLARGE are not vendored.
+
+Target-host qualification still required:
+- Windows WPF Add-Type live compile and GUI launch require Windows WPF assemblies and must be run with Verify JA21 Virtual Browser.cmd and Start JA21 Virtual Browser.cmd on Windows.

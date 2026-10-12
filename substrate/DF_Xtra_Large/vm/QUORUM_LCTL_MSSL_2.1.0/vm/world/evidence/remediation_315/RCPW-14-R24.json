@@ -1,0 +1,48 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "bcc76f4ccd80eedeb8ca654f7693615e6eee942cc2810ecf26cc74458c04ac24",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (SAVE_RECOVERY, MULTI_WORKER_CONFORMANCE) plus Stage 14 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "MULTI_WORKER_CONFORMANCE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "SAVE_RECOVERY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-18",
+    "GW-32",
+    "GW-44",
+    "GW-73",
+    "GW-74",
+    "GW-75"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T3_FABRIC",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Qualification includes duplicate/reordered completion messages, retries, cancellations, partition moves, and crash at each transition phase.",
+  "requirement_id": "RCPW-14-R24",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 14,
+  "stage_title": "No-Unload Representation Transitions",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "SAVE_RECOVERY",
+    "MULTI_WORKER_CONFORMANCE"
+  ],
+  "workflow_file": "14_NO_UNLOAD_REPRESENTATION_TRANSITIONS/217_RCPW_14_R24_QUALIFICATION_INCLUDES_DUPLICATE_REORDERED_COMPLETION_MESSAGES_RETRIES_CANCELLATIONS_.md",
+  "workflow_tier": "T3_FABRIC"
+}

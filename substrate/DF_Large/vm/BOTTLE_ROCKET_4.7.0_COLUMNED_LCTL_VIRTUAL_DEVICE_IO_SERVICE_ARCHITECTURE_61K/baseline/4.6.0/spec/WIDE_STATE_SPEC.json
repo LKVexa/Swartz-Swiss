@@ -1,0 +1,15 @@
+{
+  "record":"BOTTLE_ROCKET.WideStateSpecification","release":"4.6.0","word_bits":1048576,
+  "representations":["zero-singleton","small-inline","single-limb-sparse","dense-active-limbs"],
+  "copy_semantics":"dense backing is reference-counted copy-on-write; mutation/result construction never aliases mutable state",
+  "normalization":"results trim zero high limbs and collapse to zero, small, or sparse when representable",
+  "registers":{"count":16,"allocation":"descriptor-only until value storage is required"},
+  "stack":{"depth_words":256,"allocation":"descriptor slots; backing storage follows live values","logical_byte_ceiling":2097152},
+  "constant_pool":{"entries":8,"immutable":true,"includes":[0,1]},
+  "scratch":{"allocation":"lazy reusable arena","ceiling_bytes":262144},
+  "heap":{"per_vm_ceiling_bytes":4194304},
+  "device_buffer_ceiling_bytes":64,
+  "resource_traps":["BR_TRAP_OOM","BR_TRAP_STACK_OVERFLOW","BR_TRAP_STACK_UNDERFLOW","BR_TRAP_WORD_WIDTH","BR_TRAP_SCRATCH"],
+  "determinism":"representation choice is canonical for an identical mathematical value and does not alter ISA-visible results, traps, or instruction counts",
+  "compatibility":"BR/1.1, ABI/2, LCTLC/1.2 and BRIM format are unchanged from 4.5.0"
+}

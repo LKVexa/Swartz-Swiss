@@ -1,0 +1,35 @@
+{
+  "schema": "VB-JA21/VEC1_NODE_BINDING/1",
+  "comment": "Full four-node binding for JA21 Portable Desktop. Paths are package-relative; mutable presenter state lives under workspace/ and remains separate from fabric execution verdicts.",
+  "package_relative": true,
+  "nodes": {
+    "N_SMALL": {
+      "container": "helper/DF_Small",
+      "vm_dirname": "BOTTLE_ROCKET_3.0.0_MODEL_OPERATIONAL_110K",
+      "env": "DF_SMALL_ROOT",
+      "source": "browser package (byte-pinned DF_Small helper capsule)",
+      "vendored": true
+    },
+    "N_MEDIUM": {
+      "container": "engine/df_medium/baseline",
+      "vm_dirname": "BOTTLE_ROCKET_5.0.0_VM_110K_RC",
+      "env": "DF_MEDIUM_ROOT",
+      "source": "browser package (DF_Medium web-engine node baseline)",
+      "vendored": true
+    },
+    "N_LARGE": {
+      "container": "substrate/DF_Large",
+      "vm_dirname": "BOTTLE_ROCKET_4.7.0_COLUMNED_LCTL_VIRTUAL_DEVICE_IO_SERVICE_ARCHITECTURE_61K",
+      "env": "DF_LARGE_ROOT",
+      "source": "VEC1 Electron Substitute v0.1.1 candidate, vendored into browser 9.1.0",
+      "vendored": true
+    },
+    "N_XLARGE": {
+      "container": "substrate/DF_Xtra_Large",
+      "vm_dirname": "QUORUM_LCTL_MSSL_2.1.0",
+      "env": "DF_XLARGE_ROOT",
+      "source": "VEC1 Electron Substitute v0.1.1 candidate, vendored into browser 9.1.0",
+      "vendored": true
+    }
+  }
+}

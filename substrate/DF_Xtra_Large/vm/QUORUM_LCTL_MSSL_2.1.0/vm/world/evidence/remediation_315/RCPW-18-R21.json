@@ -1,0 +1,54 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "8de4fda399c735ac88e49e3b592a62824adece8f79ef58b789d842456c88fa04",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (LOD_TRANSITION, CAUSAL_REPLAY, MULTI_WORKER_CONFORMANCE) plus Stage 18 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "CAUSAL_REPLAY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "LOD_TRANSITION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "MULTI_WORKER_CONFORMANCE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-04",
+    "GW-07",
+    "GW-35",
+    "GW-36",
+    "GW-50",
+    "GW-60",
+    "GW-78"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T3_FABRIC",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Authority wells may move between workers without ending the underlying canonical event or resetting simulation fidelity debt.",
+  "requirement_id": "RCPW-18-R21",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 18,
+  "stage_title": "Multiple Reference Points / Authority Wells",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "LOD_TRANSITION",
+    "CAUSAL_REPLAY",
+    "MULTI_WORKER_CONFORMANCE"
+  ],
+  "workflow_file": "18_MULTIPLE_REFERENCE_POINTS_AUTHORITY_WELLS/283_RCPW_18_R21_AUTHORITY_WELLS_MAY_MOVE_BETWEEN_WORKERS_WITHOUT_ENDING_THE_UNDERLYING_CANONICAL_EVEN.md",
+  "workflow_tier": "T3_FABRIC"
+}

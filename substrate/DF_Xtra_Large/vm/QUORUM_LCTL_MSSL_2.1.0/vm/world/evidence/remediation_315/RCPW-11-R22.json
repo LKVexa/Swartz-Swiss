@@ -1,0 +1,63 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "c817b5d313560bbbd8b050542148c5c1d79a7fda369f950866b4a176c359e688",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (VERSION_MIGRATION, REFERENCE_PRECISION, FOLD_PROPERTY, LOD_TRANSITION, PRESENTATION_REGRESSION) plus Stage 11 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "FOLD_PROPERTY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "LOD_TRANSITION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "PRESENTATION_REGRESSION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "REFERENCE_PRECISION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "VERSION_MIGRATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-16",
+    "GW-17",
+    "GW-31",
+    "GW-52",
+    "GW-63",
+    "GW-79"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T2_HIGH_FIDELITY",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Fold/LOD/reference metadata carried into rendering is version stamped so mixed-frame state is detected.",
+  "requirement_id": "RCPW-11-R22",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 11,
+  "stage_title": "Visibility / Rendering Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "VERSION_MIGRATION",
+    "REFERENCE_PRECISION",
+    "FOLD_PROPERTY",
+    "LOD_TRANSITION",
+    "PRESENTATION_REGRESSION"
+  ],
+  "workflow_file": "11_VISIBILITY_RENDERING_AUTHORITY/167_RCPW_11_R22_FOLD_LOD_REFERENCE_METADATA_CARRIED_INTO_RENDERING_IS_VERSION_STAMPED_SO_MIXED_FRAME_.md",
+  "workflow_tier": "T2_HIGH_FIDELITY"
+}

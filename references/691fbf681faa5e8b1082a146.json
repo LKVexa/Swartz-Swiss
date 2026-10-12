@@ -1,0 +1,14 @@
+{
+  "brim_bytes": 176,
+  "brim_ceiling_bytes": 51200,
+  "brim_pass": true,
+  "core_archive_bytes": 33958,
+  "host_brctl_bytes": 62848,
+  "packed_source_zip_bytes": 86531,
+  "packed_source_zip_sha256": "908ec8ce58805d9f165f327546699d26f4578b1a9ea02c9aba05c25af67456a1",
+  "production_source_boundary": "Makefile + src/** + adapters/** + spec/**; host CLI, tests, tools, evidence and deploy artifacts excluded as development/qualification surfaces",
+  "production_source_bytes": 60820,
+  "production_source_ceiling_lt_bytes": 61000,
+  "production_source_pass": true,
+  "source_repository_bytes": 220555
+}

@@ -1,0 +1,47 @@
+ja source 0.3
+module suite45.localization_large_file_plane.bounded_large_file_windows
+use Interface
+policy no_network
+
+interface BoundedLargeFileWindows {
+    state selected_file: Text? = null
+    state loading_window: Flag = false
+    derived can_select_file = not loading_window
+    derived can_load_window = selected_file != null and not loading_window
+    component SOPHIA_WindowIntent {
+        label "Interpret requested large-file region"
+        enabled bind can_load_window
+        accessibility role button name "Interpret requested bounded file window"
+        action interpret_file_window requires admin.action:approved
+    }
+    component CHARLOTTE_WindowGate {
+        label "Validate file identity, byte range, bounds, and freshness"
+        enabled bind can_load_window
+        accessibility role button name "Validate selected bounded file window"
+        action validate_file_window requires admin.action:approved
+    }
+    component LANDON_WindowLoader {
+        label "Load only the validated bounded file window"
+        enabled bind can_load_window
+        accessibility role button name "Load selected bounded file window"
+        action load_file_window requires admin.action:approved
+    }
+    component Professor_WindowGuide {
+        label "Explain window boundaries and omitted content"
+        enabled bind can_select_file
+        accessibility role button name "Explain bounded file window behavior"
+        action explain_file_window requires admin.action:approved
+    }
+    component Podium_WindowEvidence {
+        label "View range, source, and freshness evidence"
+        enabled bind can_load_window
+        accessibility role button name "View bounded file window evidence"
+        action show_file_window_evidence requires admin.action:approved
+    }
+    component LargeFileWindowViewport {
+        embed portal.scene "bounded_large_file_window"
+        motion bind timeline.window_navigation
+    }
+}
+assert accessibility.keyboard_path.complete == true
+emit interface BoundedLargeFileWindows

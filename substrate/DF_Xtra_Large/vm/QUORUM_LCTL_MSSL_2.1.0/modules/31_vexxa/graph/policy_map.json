@@ -1,0 +1,17 @@
+{
+  "schema": "QUORUM-POLICY-MAP/2.0",
+  "module_id": 31,
+  "default": "deny",
+  "network": "deny",
+  "capabilities": [
+    "artifact.read",
+    "artifact.write",
+    "evidence.write"
+  ],
+  "gates": [
+    {
+      "before": "N07",
+      "gate": "authority+input+capability"
+    }
+  ]
+}

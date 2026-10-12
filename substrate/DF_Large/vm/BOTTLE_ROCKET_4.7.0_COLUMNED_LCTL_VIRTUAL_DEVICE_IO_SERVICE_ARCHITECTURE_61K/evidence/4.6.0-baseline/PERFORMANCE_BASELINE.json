@@ -1,0 +1,11 @@
+{
+  "median": {
+    "arithmetic_ops_per_second": 71067.915,
+    "branch_ops_per_second": 60772133.698,
+    "instructions_per_second": 126790053.089,
+    "load_store_ops_per_second": 731945.162
+  },
+  "record": "BR.PerformanceMedian",
+  "release": "4.5.0",
+  "samples": 7
+}

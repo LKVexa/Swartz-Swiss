@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "quorum://schemas/policy_contract.schema.json",
+  "title": "policy_contract.schema.json",
+  "type": "object",
+  "required": [
+    "determinism",
+    "network",
+    "filesystem",
+    "process_execution",
+    "sandbox",
+    "resources",
+    "provenance",
+    "rollback",
+    "capabilities"
+  ],
+  "additionalProperties": true
+}

@@ -1,0 +1,194 @@
+{
+  "abi_version": 1,
+  "apdu": {
+    "development_raw_load_class": 129,
+    "fragment_max_bytes": 4096,
+    "fuzz_corpus": "tests/fuzz/apdu",
+    "header_bytes": 12,
+    "privileged_update": "requires secure signed/trusted image path",
+    "production_class": 1,
+    "production_raw_load": "rejected",
+    "replay_txid": true,
+    "strict_lengths": true,
+    "update_max_bytes": 51200
+  },
+  "compatibility": {
+    "abi": "ABI/2",
+    "brim": "unchanged from 4.6.0",
+    "isa": "BR/1.1",
+    "lctl": "LCTLC/1.2"
+  },
+  "deterministic_order": "built-ins 1..7 first, then configured extension devices in strictly increasing configured-ID order; legacy pre-4.7 IDs remain accepted",
+  "device_call": {
+    "buffer": "guest memory at offset in rb, copied through a 64-byte temporary HAL buffer",
+    "device_selector": "configured extension index in ra",
+    "extension_ids_min": "8 for new 4.7 assignments; legacy 4.6 extension IDs below 8 remain accepted for compatibility and are selected by configured index",
+    "input_output_length": "high 8 bits of instruction flags",
+    "max_transfer_bytes": 64,
+    "operation": "low 8 bits of instruction flags",
+    "required_capability": "br_device.rc_",
+    "stable_device_id": "br_device.id",
+    "status": "BR_OK or deterministic BR_E* plus VM trap"
+  },
+  "devices": [
+    {
+      "capability": "BR_CAP_SERVICE",
+      "capacity_or_limit": 64,
+      "determinism": "non-deterministic production; deterministic adapter/replay substitute",
+      "id": 1,
+      "max_transfer_bytes": 64,
+      "name": "console",
+      "operations": [
+        "input",
+        "output",
+        "flush-by-zero-or-each-write"
+      ],
+      "surface": [
+        "BR_SVC_CONSOLE_READ",
+        "BR_SVC_CONSOLE_WRITE"
+      ]
+    },
+    {
+      "capability": "BR_CAP_STATE",
+      "capacity_or_limit": 1856,
+      "determinism": "deterministic for same persistent state",
+      "id": 2,
+      "name": "persistent_block",
+      "objects": 4,
+      "payload_bytes_per_object": 464,
+      "surface": [
+        "BR_SVC_STORAGE_READ",
+        "BR_SVC_STORAGE_WRITE"
+      ],
+      "sync": "write uses HAL staged write + commit; durable POSIX commit fsyncs file and parent directory"
+    },
+    {
+      "anti_rollback": "secure boot/persistence rejects stale generation and replay state",
+      "capability": "BR_CAP_STATE",
+      "capacity_or_limit": 8,
+      "determinism": "persistent monotonic state",
+      "id": 3,
+      "name": "monotonic",
+      "surface": [
+        "BR_SVC_MONOTONIC",
+        "BR_SVC_SAVE",
+        "secure update/recovery"
+      ]
+    },
+    {
+      "capability": "BR_CAP_SERVICE",
+      "capacity_or_limit": 64,
+      "determinism": "non-deterministic production",
+      "failure": "fail closed as BR_EIO/BR_TRAP_HOST",
+      "id": 4,
+      "name": "entropy",
+      "replay_substitute": "br_hal_deterministic seeded PRNG",
+      "surface": [
+        "BR_SVC_ENTROPY"
+      ]
+    },
+    {
+      "capability": "BR_CAP_SERVICE",
+      "capacity_or_limit": 8,
+      "determinism": "non-deterministic production monotonic clock",
+      "id": 5,
+      "name": "clock",
+      "replay_substitute": "br_hal_deterministic counter clock",
+      "surface": [
+        "BR_SVC_TIMER"
+      ],
+      "wall_time": "optional extension BR_DEVICE_WALL_CLOCK (id 9); absent by default"
+    },
+    {
+      "capability": "BR_CAP_SERVICE",
+      "depth": 1,
+      "determinism": "deterministic for same message sequence",
+      "id": 6,
+      "name": "mailbox",
+      "ownership": "am_=1 host-owned pending guest receive; am_=2 guest-owned pending host receive; copy semantics only",
+      "packet_bytes": 64,
+      "raw_pointer_exchange": false,
+      "surface": [
+        "BR_SVC_MAILBOX_PUT",
+        "BR_SVC_MAILBOX_GET",
+        "br_vm_mailbox_host_put",
+        "br_vm_mailbox_host_get"
+      ]
+    },
+    {
+      "build_identity": [
+        "4.7.0",
+        "ABI/2",
+        "ISA/1.1",
+        "feature mask"
+      ],
+      "capability": "BR_CAP_DIAG for guest diagnostic service; APDU management surface is host/controller boundary",
+      "determinism": "deterministic snapshot",
+      "id": 7,
+      "name": "diagnostic",
+      "resource_usage": [
+        "allocated heap bytes",
+        "stack bytes"
+      ],
+      "secret_policy": "does not expose guest memory, signing private keys, or trust policy secret material",
+      "state_summary": "status/lifecycle, trap, image version/generation/hash prefix",
+      "surface": [
+        "BR_APDU_STATUS",
+        "BR_APDU_STATE",
+        "BR_APDU_DIAG",
+        "BR_APDU_HELLO",
+        "BR_SVC_STATUS",
+        "BR_SVC_DIAG"
+      ]
+    },
+    {
+      "capability": "configured and mandatory",
+      "default_present": false,
+      "determinism": "non-deterministic",
+      "id": 8,
+      "max_packet_bytes": 64,
+      "name": "network",
+      "optional": true,
+      "protocol": "explicit HAL dc_ adapter; VM core contains no socket/connect/send/recv path",
+      "surface": [
+        "configured BR_SVC_DEVICE_CALL extension only"
+      ]
+    },
+    {
+      "capability": "configured and mandatory",
+      "default_present": false,
+      "determinism": "non-deterministic",
+      "id": 9,
+      "max_transfer_bytes": 64,
+      "name": "wall_clock",
+      "operations": {
+        "1": "wall-clock seconds from file adapter; deterministic monotonically increasing substitute from memory/deterministic adapters"
+      },
+      "optional": true,
+      "surface": [
+        "configured BR_SVC_DEVICE_CALL extension only"
+      ]
+    }
+  ],
+  "discovery_tuple": [
+    "count",
+    "device_id",
+    "required_capability",
+    "device_abi_version",
+    "max_transfer_bytes",
+    "determinism_flags",
+    "capacity_or_limit"
+  ],
+  "offline_default": true,
+  "quotas": {
+    "entropy_requests_per_execution": 8,
+    "host_calls_per_execution": "configured hb_",
+    "mailbox_depth": 1,
+    "service_calls_per_execution": "configured sb_ (low 16-bit counter)",
+    "storage_writes_per_execution": 4,
+    "transferred_bytes_per_execution": 1024
+  },
+  "record": "BR.DeviceABI",
+  "release": "4.7.0",
+  "trust_boundary": "Guests interact with host only through capability-gated BR_SVC services or explicitly configured DEVICE_CALL extensions; no raw host pointers cross the ABI."
+}

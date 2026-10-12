@@ -1,0 +1,21 @@
+{
+  "gifFrames": 51,
+  "gifSize": [
+    960,
+    640
+  ],
+  "frameDurationMs": 110,
+  "inspectedFrames": [
+    0,
+    10,
+    25,
+    46
+  ],
+  "pngSize": [
+    3000,
+    2000
+  ],
+  "pdfPages": 2,
+  "captionCheck": "COMPUTED ENERGY BALANCE on both PDF pages",
+  "geometryAnnotation": "top-left,no projected transverse ticks"
+}

@@ -1,0 +1,10 @@
+{
+  "version": "v24.19.0",
+  "platform": "win-x64",
+  "binarySha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+  "officialChecksumVerified": true,
+  "checksumSource": "https://nodejs.org/dist/v24.19.0/SHASUMS256.txt",
+  "licenseSource": "https://raw.githubusercontent.com/nodejs/node/v24.19.0/LICENSE",
+  "licenseSha256": "148eacf7863ef4329224a29398623077200a27194aa075569faf4a0a85566ca5",
+  "role": "Calculation backend only, separate from the native JA21 console tree."
+}

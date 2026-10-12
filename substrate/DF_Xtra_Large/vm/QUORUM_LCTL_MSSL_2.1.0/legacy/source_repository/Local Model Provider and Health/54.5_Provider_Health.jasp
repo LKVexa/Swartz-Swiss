@@ -1,0 +1,43 @@
+ja source 0.3
+module suite54.local_model_provider.provider_health
+use Service
+policy explicit_network
+
+service LocalProviderHealth {
+    message ProviderHealthRequest {
+        request_id: Text,
+        provider_id: Text,
+        model_id: Text,
+        deployment_id: Text,
+        previous_snapshot_hash: Text,
+        health_policy_hash: Text,
+        probe_set: Text,
+        observation_window: Text
+    }
+    message ProviderHealthResponse {
+        liveness_status: Text,
+        readiness_status: Text,
+        progress_status: Text,
+        resource_status: Text,
+        health_classification: Text,
+        health_snapshot_hash: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_provider_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint check(request: ProviderHealthRequest) -> Stream<ProviderHealthResponse>
+        auth capability local_model.provider.health.inspect
+        deadline 20s
+        retry max 1
+        idempotency request.request_id
+    protocol ProviderHealthSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json LocalProviderHealth.compatibility_report

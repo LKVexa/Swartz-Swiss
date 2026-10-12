@@ -1,0 +1,40 @@
+{
+  "schema": "QUORUM-LEGACY-FIXTURE-MAP/2.0",
+  "module_id": 32,
+  "legacy_root": "legacy/source_repository/Orchestrator II",
+  "legacy_sha256": "18cdbc00d921b621fba201abcc748edffa7afd79378073c04e878b8c2e12a4d0",
+  "files": [
+    {
+      "path": "32.1_Orchestrator_II_Reconstruction.jaa",
+      "sha256": "99e6324cf42035bafa11e0b3a6bd70006194e07eb89181de91891075b1c9362c",
+      "bytes": 1703
+    },
+    {
+      "path": "32.2_Orchestrator_II_Rendering.jaa",
+      "sha256": "2db13e442f9e6c885238cd4ec687e4b1debba1d60757bf02af876827656595fa",
+      "bytes": 1519
+    },
+    {
+      "path": "32.3_Orchestrator_II_Validation.jaa",
+      "sha256": "4b33847109a19b563a3569cd586f01da2f8402c8801fb5a1cd3268b37091bed6",
+      "bytes": 1620
+    },
+    {
+      "path": "32.4_Orchestrator_II_Learning_Records.jaa",
+      "sha256": "a204ff48caa971dc1a37eeabdd39442cca9514aa4883c20f934f53eb42583293",
+      "bytes": 1687
+    },
+    {
+      "path": "32.5_Orchestrator_II_Release_Packaging.jaa",
+      "sha256": "784f763039e060692983b019d1fa571ee5fa6be281add296586e9d695577102f",
+      "bytes": 1579
+    },
+    {
+      "path": "README.md",
+      "sha256": "e85edbbf6512c40a752ec31d2b88c5fbb690a17a4fd748cdf71dc97ba826360e",
+      "bytes": 13491
+    }
+  ],
+  "execution_runtime_available": false,
+  "qualification_note": "Preserved as reference evidence; no executable runtime for the legacy language family is bundled in this repository."
+}

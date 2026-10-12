@@ -1,0 +1,30 @@
+ja source 0.3
+module suite64.training_desktop_android_workers.training_worker
+use Training
+policy no_network
+
+experiment TrainingDesktopAndroidTrainingWorker {
+    model ref "models/sophia_charlotte_landon_professor_podium/training_worker"
+    dataset ref "datasets/training_desktop_android/admitted_worker_records" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 16 accumulate 4
+    precision mixed
+    seed 6401
+    checkpoint every 8 steps
+    evaluate {
+        metric training_admission_integrity
+        metric deterministic_worker_replay
+        metric held_out_evaluation_integrity
+        metric artifact_provenance_completeness
+        metric loss
+        require training_admission_integrity >= 0.99
+        require deterministic_worker_replay >= 0.99
+        require held_out_evaluation_integrity >= 1.00
+        require artifact_provenance_completeness >= 1.00
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "TrainingDesktopAndroidTrainingWorker.lineage.mcrt"

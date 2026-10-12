@@ -1,0 +1,64 @@
+{
+  "blocker": "",
+  "canonical_truth_protection": true,
+  "claimed_profile": "QP1/WQ3/AW3/WP4_HOSTED_REFERENCE_OPERATIONAL",
+  "content_sha256": "10e123ecfa3deb3ee95096fb1f1e635fc794a474f65f0621d2ec6f636d72a510",
+  "direct_assertion": "The exact requirement was evaluated through its mapped executable test families (VERSION_MIGRATION, CAUSAL_REPLAY, ECONOMY_CONSERVATION, NARRATIVE_KNOWLEDGE, MATERIALIZATION_READINESS) plus Stage 08 Golden World scenarios and global regression.",
+  "evidence_paths": [
+    "vm/world/evidence/remediation_315/test_family_evidence.json",
+    "vm/world/evidence/remediation_315/golden_world_80_execution.json",
+    "vm/world/evidence/remediation_315/command_results.json"
+  ],
+  "family_results": {
+    "CAUSAL_REPLAY": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "ECONOMY_CONSERVATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "MATERIALIZATION_READINESS": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "NARRATIVE_KNOWLEDGE": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    },
+    "VERSION_MIGRATION": {
+      "evidence": "remediation_315/test_family_evidence.json",
+      "pass": true
+    }
+  },
+  "golden_world_ids": [
+    "GW-03",
+    "GW-14",
+    "GW-27",
+    "GW-29",
+    "GW-48",
+    "GW-64",
+    "GW-65"
+  ],
+  "golden_world_pass": true,
+  "integrated_gate": true,
+  "new_status": "OPERATIONAL",
+  "normalized_tier": "T1_DIRECT_PROOF",
+  "old_status": "PARTIAL",
+  "regression_pass": true,
+  "requirement": "Aggregate history materializes into locally coherent inventories, prices, NPC schedules, prosperity/damage, law state, and migration.",
+  "requirement_id": "RCPW-08-R05",
+  "schema": "QUORUM-RCPW7-315-REQUIREMENT-EVIDENCE/1",
+  "stage": 8,
+  "stage_title": "Civilization / Economy Authority",
+  "status_predicate": "all mapped executable families PASS AND stage Golden Worlds PASS AND regressions PASS; Stage 20 additionally requires all 80 Golden Worlds, soak, multi-worker, save/recovery and autonomous-history evidence",
+  "test_families": [
+    "VERSION_MIGRATION",
+    "CAUSAL_REPLAY",
+    "ECONOMY_CONSERVATION",
+    "NARRATIVE_KNOWLEDGE",
+    "MATERIALIZATION_READINESS"
+  ],
+  "workflow_file": "08_CIVILIZATION_ECONOMY_AUTHORITY/100_RCPW_08_R05_AGGREGATE_HISTORY_MATERIALIZES_INTO_LOCALLY_COHERENT_INVENTORIES_PRICES_NPC_SCHEDULES.md",
+  "workflow_tier": "T1_DIRECT_PROOF"
+}

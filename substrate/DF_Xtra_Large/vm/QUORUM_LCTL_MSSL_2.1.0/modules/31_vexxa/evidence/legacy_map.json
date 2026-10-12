@@ -1,0 +1,44 @@
+{
+  "suite_id": 31,
+  "suite_name": "Vexxa",
+  "plane": "translation_interop",
+  "legacy_sha256": "9cef1589323f3bba59f95a912501d5ed8d5223ef3d53df4c0dddbcd25827a229",
+  "legacy_root": "legacy/source_repository/Vexxa",
+  "files": [
+    {
+      "path": "31.1_Vexxa_Service_Discovery.jasp",
+      "sha256": "db6560a19a973752dd29b03c67f6945d6f09d3daafd15f4f536f91f1dd2c27ea",
+      "bytes": 1045
+    },
+    {
+      "path": "31.2_Vexxa_Native_Service_Binding.jasp",
+      "sha256": "c691549611ff7c6c40bb5a228c7afc0886a73d846386eabf487ec5984919ae77",
+      "bytes": 1098
+    },
+    {
+      "path": "31.3_Vexxa_Reconstruction_Bridge.jasp",
+      "sha256": "65f339146b69130a07c04094efcb9e2920dccf98f489fb86a9547410e020eb41",
+      "bytes": 1081
+    },
+    {
+      "path": "31.4_Vexxa_Operator_Control.jasp",
+      "sha256": "47d37fb13aca41b0d3e253272bfa1ec62645cefb4288c3f417c187f785cd4122",
+      "bytes": 1143
+    },
+    {
+      "path": "31.5_Vexxa_Infrastructure_Events.jasp",
+      "sha256": "479033d7f47a5a06c0ea4b8b7827054496a90e29f8669dc75df797c45c027374",
+      "bytes": 1118
+    },
+    {
+      "path": "31.6_Vexxa_Health_and_Recovery.jasp",
+      "sha256": "e9df20f74d3fc59bee16999f27b15b3a213410241e157366fa0c005137589938",
+      "bytes": 1126
+    },
+    {
+      "path": "README.md",
+      "sha256": "08a614f4cc2bfbd77865a550ef58f167ad32191c13f0879fbeb535b5e9480a17",
+      "bytes": 14255
+    }
+  ]
+}

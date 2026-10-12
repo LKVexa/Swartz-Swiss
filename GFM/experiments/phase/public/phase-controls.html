@@ -1,0 +1,27 @@
+<!-- Integration fragment: backend actions belong to app.js. The view binds
+     data-phase-mode/vectors/defects only; all field colors encode real cells. -->
+<section class="phase-lab" id="phase-lab" aria-labelledby="phase-heading">
+  <header class="phase-heading">
+    <div><span class="eyebrow">LOCAL FIELD LAB · PERIODIC PLASMA BOX</span><h2 id="phase-heading">Structure in the fields</h2><p>Calculated cells, complex phase and magnetic structure. A separate iron enthalpy lab shows material fractions.</p></div>
+    <span id="phase-live-status" class="phase-live-status" role="status">Waiting for calculated fields</span>
+  </header>
+  <div class="phase-toolbar">
+    <label for="phase-mode">Field view<select id="phase-mode" data-phase-mode>
+      <option value="phase">Complex phase + amplitude</option><option value="amplitude">Order-parameter amplitude</option>
+      <option value="density">Plasma density</option><option value="temperature">Plasma temperature · K</option>
+      <option value="magnetic">Magnetic strength</option><option value="magneticPhase">Magnetic direction + strength</option>
+      <option value="ionization">Hydrogen ionization estimate</option><option value="material">Iron material fractions · separate lab</option>
+    </select></label>
+    <div class="phase-overlay-controls"><label><input id="phase-vectors" type="checkbox" checked data-phase-vectors><span>Magnetic vectors</span></label><label><input id="phase-defects" type="checkbox" checked data-phase-defects><span data-phase-defect-label>Complex phase defects</span></label></div>
+    <div class="phase-actions"><button id="phase-play" class="primary">Play fields</button><button id="phase-step">Step</button><button id="phase-reset">Reset fields</button><a id="phase-export" href="/api/phase/export.json" download>Export fields ↓</a></div>
+  </div>
+  <div class="phase-workspace">
+    <div class="phase-plot"><canvas id="phase-field" tabindex="0" aria-label="Calculated local field cells; select a view, point to inspect a cell, or use arrow keys"></canvas><p>Hover or tap a cell to inspect its values · arrow keys move the probe · colors use the displayed scale</p></div>
+    <aside class="phase-readouts" aria-label="Local field scientific readouts">
+      <div class="phase-summary"><article><span>LOCAL TIME</span><strong data-phase-info="time">—</strong></article><article><span>GRID / BOUNDARY</span><strong data-phase-info="grid">—</strong></article><article><span>DISPLAYED FIELD</span><strong data-phase-info="mode">—</strong></article><article><span>COLOR SCALE</span><strong data-phase-info="range">—</strong></article></div>
+      <div class="phase-diagnostics"><span class="eyebrow">NUMERICAL DIAGNOSTICS</span><p data-phase-info="diagnostics">Waiting for a field frame.</p></div>
+      <div class="phase-probe"><span class="eyebrow">CELL PROBE · ACTUAL VALUES</span><pre data-phase-info="probe">Point to a calculated cell.</pre></div>
+      <div class="phase-scope"><span class="eyebrow">MODEL / UNITS</span><p data-phase-info="scope">The complex order parameter is phenomenological. Material fractions belong to a separate iron reference lab. Neither view models black-hole formation.</p></div>
+    </aside>
+  </div>
+</section>

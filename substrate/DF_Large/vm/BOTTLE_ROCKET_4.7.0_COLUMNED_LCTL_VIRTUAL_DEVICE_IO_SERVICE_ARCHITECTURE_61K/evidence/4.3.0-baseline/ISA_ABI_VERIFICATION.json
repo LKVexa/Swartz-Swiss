@@ -1,0 +1,85 @@
+{
+  "abi": 2,
+  "canonical_traps": 14,
+  "core": {
+    "exec_rows": 0,
+    "rows": 7,
+    "sha256": "461f30d4d777a48c3795d0171dd41cb84299c888365b5b3d357ea3556e3c1a52",
+    "source": "src/CORE.lctlc",
+    "status": "PASS"
+  },
+  "current_independent_verifier": {
+    "checks": {
+      "capabilities": true,
+      "cfg": true,
+      "header": true,
+      "instruction_semantics": true,
+      "manifest": true,
+      "payload_sha256": true,
+      "versioned_isa_abi": true
+    },
+    "image": "/mnt/data/br43_work/BOTTLE_ROCKET_4.3.0_COLUMNED_LCTL_PRODUCTION_ISA_ABI_61K/deploy/BOTTLE_ROCKET_SIM_CORE_4.3.0.brimg",
+    "instructions": 6,
+    "profile": "4.3-current",
+    "requested_caps": 3,
+    "sha256": "cbdbe8479660c932df4d15e49fc28b99ad4f2e5012a905941aa9e28795d29ad6",
+    "signed": false,
+    "status": "PASS"
+  },
+  "inherited_tests": 18,
+  "inspect": {
+    "bytes": 176,
+    "data_bytes": 0,
+    "format": "BRIM/1",
+    "instructions": 6,
+    "requested_caps": 3,
+    "signed": false,
+    "version": 10
+  },
+  "isa": "BR/1.1",
+  "isa_opcodes": 41,
+  "legacy_4_2_independent_verifier": {
+    "checks": {
+      "capabilities": true,
+      "cfg": true,
+      "header": true,
+      "instruction_semantics": true,
+      "payload_sha256": true,
+      "versioned_isa_abi": true
+    },
+    "image": "tests/legacy_4_2.brimg",
+    "instructions": 6,
+    "profile": "4.2-legacy",
+    "requested_caps": 3,
+    "sha256": "5fb13ad12b8e3e8791b57969d6d27731cba8d15836bd1ad54f667ceca55b6507",
+    "signed": false,
+    "status": "PASS"
+  },
+  "opcode_negative": 41,
+  "opcode_positive": 41,
+  "provenance": {
+    "checks": {
+      "brim_sha256": true,
+      "brir_sha256": true,
+      "compiler_version": true,
+      "header_source_hash_prefix": true,
+      "isa_version": true,
+      "language_version": true,
+      "source_sha256": true,
+      "verifier_version": true
+    },
+    "status": "PASS"
+  },
+  "record": "BR.ISAABI",
+  "result": "PASS",
+  "runtime_conformance_tests": 8,
+  "semantic_tests": 19,
+  "services": 22,
+  "source": {
+    "exec_rows": 6,
+    "rows": 6,
+    "sha256": "30297b53348ac871ed3d81d0ac293c7ed13ba53c4e5524206183a0a3d059d418",
+    "source": "src/BOOT.lctlc",
+    "status": "PASS"
+  }
+}

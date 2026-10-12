@@ -1,0 +1,72 @@
+{
+  "decision": "OPERATIONAL",
+  "package": "BR-420-11",
+  "requirements": [
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-11_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: roundtrip_lctl_brir_brim_disassembly",
+      "requirement": "Implement LCTL to BRIR",
+      "requirement_id": "BR-420-11-R01",
+      "result": "PASS",
+      "sha256": "8564cf1cfec39ca95533e9c1936362147b31d38f1f9abc7f1904f2e0653406bb",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-11_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: brim_disassembly_semantic_compare",
+      "requirement": "Implement BRIR diagnostic representation",
+      "requirement_id": "BR-420-11-R02",
+      "result": "PASS",
+      "sha256": "8564cf1cfec39ca95533e9c1936362147b31d38f1f9abc7f1904f2e0653406bb",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-11_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: roundtrip_binary_provenance",
+      "requirement": "Implement BRIM disassembly",
+      "requirement_id": "BR-420-11-R03",
+      "result": "PASS",
+      "sha256": "8564cf1cfec39ca95533e9c1936362147b31d38f1f9abc7f1904f2e0653406bb",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-11_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: roundtrip_lctl_brir_brim_disassembly",
+      "requirement": "Compare disassembly against source semantics",
+      "requirement_id": "BR-420-11-R04",
+      "result": "PASS",
+      "sha256": "8564cf1cfec39ca95533e9c1936362147b31d38f1f9abc7f1904f2e0653406bb",
+      "status": "OPERATIONAL"
+    },
+    {
+      "baseline": "4.1.0 production-execution-boundary baseline",
+      "blocker": null,
+      "command": "python3 tests/test_420.py; make operational; make sanitize; make size",
+      "evidence_path": "evidence/BR-420-11_tests.log",
+      "exit_code": 0,
+      "notes": "Mapped fresh test: brim_disassembly_semantic_compare",
+      "requirement": "Verify binary provenance",
+      "requirement_id": "BR-420-11-R05",
+      "result": "PASS",
+      "sha256": "8564cf1cfec39ca95533e9c1936362147b31d38f1f9abc7f1904f2e0653406bb",
+      "status": "OPERATIONAL"
+    }
+  ],
+  "title": "Round-trip tools"
+}

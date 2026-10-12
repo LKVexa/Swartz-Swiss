@@ -1,0 +1,34 @@
+ja source 0.3
+module suite63.sandbox_offline_runtime.tools
+use Operations
+policy explicit_network
+
+workspace SandboxOfflineTools {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 6 memory 12GB
+    network disabled
+    secret tool_runtime_key reference "vault://suite63/tools-runtime"
+
+    service SOPHIA_tool_context replicas 1
+    health_check SOPHIA_tool_context every 10s
+    service CHARLOTTE_tool_gate replicas 1
+    health_check CHARLOTTE_tool_gate every 10s
+    service LANDON_tool_runtime replicas 1
+    health_check LANDON_tool_runtime every 10s
+    service Professor_tool_report replicas 1
+    health_check Professor_tool_report every 10s
+    service Podium_tool_receipt replicas 1
+    health_check Podium_tool_receipt every 10s
+    service offline_tool_runtime_worker replicas 1
+    health_check offline_tool_runtime_worker every 5s
+
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+
+assert deployment.reproducible == true
+emit package "sandbox_offline_runtime_tools.msslb"

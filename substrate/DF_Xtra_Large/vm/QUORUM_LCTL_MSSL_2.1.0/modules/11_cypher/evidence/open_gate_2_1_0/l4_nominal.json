@@ -1,0 +1,121 @@
+{
+  "authority_sha256": "44e3a175d8969202bab7e25ecdc9cdc4db197bc8a68f60912649f976ce4976ad",
+  "domain_output": {
+    "input_type": "records/artifacts",
+    "legacy_signals": [
+      "PACKAGE",
+      "AUTHORIZE"
+    ],
+    "module": "Cypher",
+    "output_type": "validated_records/evidence",
+    "payload_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+    "plane": "data_evidence",
+    "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+    "validated_records": {
+      "count": 1,
+      "evidence_sha256": "3b9c4346187f9f39086c59ec0962378fd97770bdb2aafa030cfa3776a1a597b8",
+      "validated": true
+    }
+  },
+  "final_state": "COMPLETED",
+  "graph_sha256": "8cf5556c811678002ee676d54da44d966265a388c39107cf6b59c998fb59efca",
+  "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+  "module": "Cypher",
+  "module_id": 11,
+  "plane": "data_evidence",
+  "profile": "QUORUM-REFERENCE-DOMAIN/2.1",
+  "result_sha256": "71036fc3de3a0a5fef90142f89605115ecd8e749303b499db2e0bf8d60d659f2",
+  "stage_count": 9,
+  "stages": [
+    {
+      "input_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "node": "N01",
+      "observed": {
+        "bytes": 21,
+        "keys": [
+          "example"
+        ],
+        "kind": "dict"
+      },
+      "operator": "OBSERVE",
+      "output_sha256": "01f113b5e9ab09320492655d2bb43cfec9fcaa832fd51a4cc57bd3aab9f7db34",
+      "stage": "SOURCE"
+    },
+    {
+      "input_sha256": "01f113b5e9ab09320492655d2bb43cfec9fcaa832fd51a4cc57bd3aab9f7db34",
+      "node": "N02",
+      "normalized_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "operator": "PARSE",
+      "output_sha256": "cd8247a6ee2d27c4eaffef5edef95aaf5736863a577dc6828e33a35ab2329d1d",
+      "stage": "PARSE"
+    },
+    {
+      "input_sha256": "cd8247a6ee2d27c4eaffef5edef95aaf5736863a577dc6828e33a35ab2329d1d",
+      "node": "N03",
+      "normalized_sha256": "adf74ee4260fa6df4e6d3a6f15181543fc970c0d2763aacdbb7d9f437d080eed",
+      "operator": "NORMALIZE",
+      "output_sha256": "ad2882752dfb98db0e1958f119115b67f0a0c5941f1ff18ac78067aaefcc331a",
+      "stage": "NORMALIZE"
+    },
+    {
+      "input_sha256": "ad2882752dfb98db0e1958f119115b67f0a0c5941f1ff18ac78067aaefcc331a",
+      "node": "N04",
+      "operator": "VALIDATE",
+      "output_sha256": "d7d490114457bdf7c8e9ae8314a933c89226270c374fae73387bdd4c0a3727eb",
+      "stage": "VALIDATE",
+      "valid": true
+    },
+    {
+      "features": [
+        124,
+        4,
+        106,
+        56,
+        180,
+        173,
+        114,
+        237
+      ],
+      "input_sha256": "d7d490114457bdf7c8e9ae8314a933c89226270c374fae73387bdd4c0a3727eb",
+      "node": "N05",
+      "operator": "TRANSFORM",
+      "output_sha256": "368a3941c482179812f899ff6760109d702bea90c7ac7dc2ece1d97183fe4a88",
+      "stage": "TRANSFORM"
+    },
+    {
+      "index_keys": [
+        "example"
+      ],
+      "input_sha256": "368a3941c482179812f899ff6760109d702bea90c7ac7dc2ece1d97183fe4a88",
+      "node": "N06",
+      "operator": "STORE",
+      "output_sha256": "1ad9f19da799780ab0929ef2024c0d1cd949d34c59f25420416e38ec395b5691",
+      "stage": "STORE"
+    },
+    {
+      "input_sha256": "1ad9f19da799780ab0929ef2024c0d1cd949d34c59f25420416e38ec395b5691",
+      "node": "N07",
+      "operator": "RECORD",
+      "output_sha256": "3022c951c8e0b6324d63602cde9e2a7dde227544cec726e32017eb3dc43193db",
+      "receipt_sha256": "2758fb8b5f890471a778868b3e2425136279ca445294bf362f211603534abdc6",
+      "stage": "HASH"
+    },
+    {
+      "input_sha256": "3022c951c8e0b6324d63602cde9e2a7dde227544cec726e32017eb3dc43193db",
+      "node": "N08",
+      "operator": "RECORD",
+      "output_sha256": "3f7df2e65484a5d23f2308253c05b2a339a8eb12ac774ecfa0e027b5e7a80193",
+      "receipt_sha256": "5cc1a92a97143ebfc2f9103b0bfebfe48c1584df75d1efbe7225717b68b29b84",
+      "stage": "RECORD"
+    },
+    {
+      "input_sha256": "3f7df2e65484a5d23f2308253c05b2a339a8eb12ac774ecfa0e027b5e7a80193",
+      "node": "N09",
+      "operator": "RECORD",
+      "output_sha256": "22536b0ef924f3c00432ce18e7222ac73b9553c8d5a574a11946ec79ec0013c0",
+      "receipt_sha256": "ebbc4b33e4fe9bc1e3475ee51e24151674aa73ca9fbebd5bf07fbbdf03da5337",
+      "stage": "EVIDENCE"
+    }
+  ],
+  "status": "PASS"
+}

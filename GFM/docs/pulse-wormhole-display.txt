@@ -1,0 +1,47 @@
+GFM PULSE TRANSPORT AND WORMHOLE-STYLE DISPLAY - v2.1.0
+
+The pulse is the live computed electromagnetic field. No independent
+particle animation or invented propagation speed is used.
+
+TRANSPORT
+Instantaneous net Poynting flux: Sr = Ephi Hz, Sz = -Ephi Hr, in W/m2.
+Forward (+z) arrows point toward the receiving cover. Returning (-z)
+arrows include reflected and reactive/interference contributions. Their
+length uses a fixed declared |S| reference; changing a display scale does
+not change the field. A backward arrow alone is not a reflection ratio.
+
+The optional upstream vacuum port decomposes collocated samples into
+E+ = (Ephi-Z0 Hr)/2 and E- = (Ephi+Z0 Hr)/2, I+/- = E+/- squared / Z0.
+I+ - I- = -Ephi Hr is an algebraic identity. These are local vacuum
+characteristic channels, not a unique global incident/reflected split.
+The sampled annuli avoid plasma, cover, sponge and the source neighborhood;
+the axial Gaussian source tail is suppressed beyond eight widths. If no
+qualifying row exists, the port is unavailable, with no fabricated power.
+
+ABSORPTION AND ENERGY
+Plasma collision power density: qnu = nu Jp squared / alpha, where alpha
+already includes the plasma fill fraction. Cover Ohmic power density:
+qc = sigma_full_cell Ephi squared; conductivity already includes cover fill.
+The display can switch between instantaneous absorbed power, accumulated
+collision/Ohmic deposition, and plasma temperature increase.
+
+The destination ledger uses the solver's raw staggered field energy:
+initial energy + signed source work = field + reversible plasma drift
++ plasma thermal change + cover thermal change + artificial sponge loss
+- numerical residual.
+The reported residual is accounted minus available energy.
+Accumulated deposition is shown separately from current thermal storage.
+It is not added to stored thermal energy again. Thermal contact transfers
+energy internally, subtracting from one medium and adding to the other.
+Artificial sponge loss is distinct from physical plasma/cover absorption.
+PEC domain boundaries have zero physical escaped energy in this model.
+
+WORMHOLE-STYLE SHAPE
+The display radially flares the solved cylinder's two mouths and narrows
+its visual waist. The cylindrical equations, material cells, source,
+propagation and energy ledger remain unchanged. All layers share this
+mapping; vector arrows use its Jacobian. Scalars remain in physical SI
+units. The solved cylindrical shape is available for comparison.
+This appearance is not a solved GR metric, causal throat, event horizon,
+or demonstration of traversability. The neutral CGLE reference and GR
+reference calculators remain separate studies.

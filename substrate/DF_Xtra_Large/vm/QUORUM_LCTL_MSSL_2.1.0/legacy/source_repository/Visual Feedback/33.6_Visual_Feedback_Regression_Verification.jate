@@ -1,0 +1,28 @@
+ja source 0.3
+module suite33.visual_feedback.regression_verification
+use Training
+policy no_network
+
+experiment VisualFeedbackRegressionVerification {
+    model ref "models/sophia_charlotte_landon_professor_podium/regression_verification"
+    dataset ref "datasets/visual_feedback/regression_cases" split train=0.8 validation=0.1 test=0.1
+    preprocess normalize
+    optimizer adamw learning_rate 0.0001
+    scheduler cosine
+    batch size 32 accumulate 2
+    precision mixed
+    seed 3306
+    checkpoint every 16 steps
+    evaluate {
+        metric target_similarity
+        metric regression_safety
+        metric deterministic_replay
+        metric loss
+        require target_similarity >= 0.95
+        require regression_safety >= 0.99
+        require deterministic_replay >= 1.00
+    }
+    registry promote when all_thresholds_pass
+}
+assert experiment.reproducible == true
+emit mcrt "VisualFeedbackRegressionVerification.lineage.mcrt"

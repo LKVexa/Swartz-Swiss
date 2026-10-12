@@ -1,0 +1,11 @@
+RELEASE 0.5.1 PREVIEW REPAIR VALIDATION SUMMARY
+
+271 project tests passed; 0 failed; 0 skipped.
+257 independent saved pendulum assertions passed; maximum scaled error 5.55112e-16.
+Static display maximum scaled error 2.51441e-09; tolerance 1e-08.
+Actual evidence: tests-v0.5.1.txt and pendulum-preview-independent-verification.json.
+Isolated assembled-HTML VM/DOM checks verify readiness/failure gating and controls.
+The static example contains completed equation, transform and inverse-recovery data without scripts.
+Mathematical modules, audits, saved sessions, sources and v0.5 archive remain unchanged.
+Retained mechanics evidence contains 3,112 assertions; data/session format remains 0.5.0.
+Live browser rendering, native downloads and live iframe communication remain unverified.

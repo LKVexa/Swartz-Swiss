@@ -1,0 +1,38 @@
+ja source 0.3
+module suite30.ja_adapter.storage_emitter
+use Service
+policy explicit_network
+
+service JAAdapterStorageEmitter {
+    message StorageEmitRequest {
+        request_id: Text,
+        canonical_record: Text,
+        canonical_hash: Text,
+        target_profile: Text,
+        archive_id: Text,
+        manifest_id: Text,
+        provenance_id: Text
+    }
+    message StorageEmitResponse {
+        storage_record: Text,
+        output_hash: Text,
+        sophia_judgment: Text,
+        charlotte_validation: Text,
+        landon_adapter_status: Text,
+        professor_explanation: Text,
+        podium_receipt: Text,
+        done: Flag
+    }
+    endpoint emit_storage(request: StorageEmitRequest) -> Stream<StorageEmitResponse>
+        auth capability ja_adapter.emit.storage
+        deadline 30s
+        retry max 0
+        idempotency request.request_id
+    protocol StorageEmitSession {
+        state Open
+        state Closed
+        transition finish: Open -> Closed
+    }
+}
+assert protocol.transition.valid == true
+emit json JAAdapterStorageEmitter.compatibility_report

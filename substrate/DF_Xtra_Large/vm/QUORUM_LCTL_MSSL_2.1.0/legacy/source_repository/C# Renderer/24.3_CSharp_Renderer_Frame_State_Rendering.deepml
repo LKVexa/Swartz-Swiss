@@ -1,0 +1,25 @@
+deepml vfx 0.3
+module suite24.csharp_renderer.frame_state_rendering
+policy deterministic
+policy no_network
+
+effect CSharpFrameStateRendering {
+  procedural operator SOPHIA(scene_state, frame_state) differentiable
+  procedural operator CHARLOTTE(scene_state, frame_state) differentiable
+  procedural operator LANDON(scene_state, frame_state) differentiable
+  procedural operator Professor(scene_state, frame_state) differentiable
+  procedural operator Podium(scene_state, frame_state) differentiable
+  cache CSharpFrameStateCache interval 0s..4s step 1/60s hash sha256("suite24:csharp-frame-state:v1")
+  bind scene AnimatedScene
+  bind timeline TemporalAnimatorSequence
+  shader function CSharpFrameStateShade(x: vec3) -> color
+  render_target CSharpFrameColor format rgba16f
+  render_graph { SOPHIA -> CHARLOTTE -> LANDON -> Professor -> Podium -> FrameComposite }
+  composite multipass [FrameStateColor, MotionVectors, SceneDepth, SceneColor]
+}
+render CSharpFrameStateRendering camera scene.MainCamera to CSharpFrameColor;
+cache CSharpFrameStateRendering to cache.CSharpFrameStateRendering;
+optimize CSharpFrameStateRendering using [node_fusion, dead_pass_removal, attribute_packing, shader_specialization, cache_scheduling, domain_tiling, render_graph_ordering]
+lower CSharpFrameStateRendering to DEEPML_VFX_R12
+package vfx CSharpFrameStateRendering as "csharp_renderer_frame_state_rendering.msslb"
+certify vfx CSharpFrameStateRendering profile strict

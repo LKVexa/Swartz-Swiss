@@ -1,0 +1,181 @@
+{
+  "scenarios": [
+    {
+      "chain": [
+        {
+          "module": "Orchestrator",
+          "plane": "orchestration",
+          "result_sha256": "f68ab410015021472df21af05eb7e2e18ab72f062c345b1016c510f8baa2bb97",
+          "status": "PASS"
+        },
+        {
+          "module": "Operations Plane",
+          "plane": "operations_recovery",
+          "result_sha256": "50395ced0922fe2b9be0899cce21df2373937c2a86f6ed9c442657d6bba38aa9",
+          "status": "PASS"
+        },
+        {
+          "module": "Diff Patch and Review",
+          "plane": "governance_control",
+          "result_sha256": "3bebd0303378f52e34958ca1e6f7c641d6719bba88f3d8c76fed85ac2c4b96f5",
+          "status": "PASS"
+        }
+      ],
+      "exact_replay": true,
+      "plane_chain": [
+        "orchestration",
+        "operations_recovery",
+        "governance_control"
+      ],
+      "scenario": "failure_recovery",
+      "scope": "local/offline reference operational profile",
+      "status": "PASS"
+    },
+    {
+      "chain": [
+        {
+          "module": "Observer",
+          "plane": "sense_context",
+          "result_sha256": "1ca87aeaa91d34b129e3094221bc325d398a552948ef8db798100195bb5619ce",
+          "status": "PASS"
+        },
+        {
+          "module": "Equation Operator Bank",
+          "plane": "model_compute",
+          "result_sha256": "b3249bdd10ca7ca8d3f8f0d491a64ec0a32ec3f0d3e71e2489d61bd8588553f6",
+          "status": "PASS"
+        },
+        {
+          "module": "Mesh Geometry",
+          "plane": "media_visual",
+          "result_sha256": "23f9a095158259d60740d55e9047a24a16ec2609d3bd456e451475613561e937",
+          "status": "PASS"
+        },
+        {
+          "module": "Release Plane",
+          "plane": "release_delivery",
+          "result_sha256": "99938fa22e328bc3131e4ae3feb16e43bbfedaf4f702757f5d59e4520af537ee",
+          "status": "PASS"
+        }
+      ],
+      "exact_replay": true,
+      "plane_chain": [
+        "sense_context",
+        "model_compute",
+        "media_visual",
+        "release_delivery"
+      ],
+      "scenario": "media",
+      "scope": "local/offline reference operational profile",
+      "status": "PASS"
+    },
+    {
+      "chain": [
+        {
+          "module": "Observer",
+          "plane": "sense_context",
+          "result_sha256": "e1866e805ec1e41ee7a362a09fcbbeb2fbaa4f1d61d6439a503d04f4993f697c",
+          "status": "PASS"
+        },
+        {
+          "module": "Compass",
+          "plane": "intent_reasoning",
+          "result_sha256": "523e40194d7d54ca1de249c77a3fe19cac4459be895345aa0032bab4082663ab",
+          "status": "PASS"
+        },
+        {
+          "module": "Orchestrator",
+          "plane": "orchestration",
+          "result_sha256": "7bdd9b19e3087b9f230dfa9cf6cb378e9199e9b6f7151608801f856a4f4250a3",
+          "status": "PASS"
+        },
+        {
+          "module": "Diff Patch and Review",
+          "plane": "governance_control",
+          "result_sha256": "7def1915bed4c2169e19814d30dfc55c1996ec761eaa0f7f8168b6a7c7d42e6c",
+          "status": "PASS"
+        }
+      ],
+      "exact_replay": true,
+      "plane_chain": [
+        "sense_context",
+        "intent_reasoning",
+        "orchestration",
+        "governance_control"
+      ],
+      "scenario": "repository_intelligence",
+      "scope": "local/offline reference operational profile",
+      "status": "PASS"
+    },
+    {
+      "chain": [
+        {
+          "module": "Plug",
+          "plane": "interfaces_services",
+          "result_sha256": "b1ab0dcf64957289981b828e243604b60b0453681a54add7b51946c4eff32aca",
+          "status": "PASS"
+        },
+        {
+          "module": "Chair",
+          "plane": "security_authorization",
+          "result_sha256": "50cd501def7962a29de84051d9687b84c4b1ed723afbaab79aaa476a3a393e73",
+          "status": "PASS"
+        },
+        {
+          "module": "Orchestrator",
+          "plane": "orchestration",
+          "result_sha256": "4fc0738d369a165fd64cb68e163884b52b11e9c00d3fba674f0534b5ef923602",
+          "status": "PASS"
+        },
+        {
+          "module": "Operations Plane",
+          "plane": "operations_recovery",
+          "result_sha256": "9f88e251c8bc3e69f144f20daf3bb2c9b4b9de1c5115cbec532b1abd3a4602b3",
+          "status": "PASS"
+        }
+      ],
+      "exact_replay": true,
+      "plane_chain": [
+        "interfaces_services",
+        "security_authorization",
+        "orchestration",
+        "operations_recovery"
+      ],
+      "scenario": "secure_execution",
+      "scope": "local/offline reference operational profile",
+      "status": "PASS"
+    },
+    {
+      "chain": [
+        {
+          "module": "JA Adapter",
+          "plane": "translation_interop",
+          "result_sha256": "0add33ed0b7b6a4750586367bc7543a2a86412b217692a0d8a3ac956c4293552",
+          "status": "PASS"
+        },
+        {
+          "module": "Orchestrator",
+          "plane": "orchestration",
+          "result_sha256": "60f166c2f4474b78bdbffe5cdc942bfb4a4a1cf7e2a28a458b063b17f82d082f",
+          "status": "PASS"
+        },
+        {
+          "module": "Release Plane",
+          "plane": "release_delivery",
+          "result_sha256": "c46f05361a501a5c41ede6f4ea3a24e6764ecf42aa671b750e52e5bb8cf47827",
+          "status": "PASS"
+        }
+      ],
+      "exact_replay": true,
+      "plane_chain": [
+        "translation_interop",
+        "orchestration",
+        "release_delivery"
+      ],
+      "scenario": "translation_build",
+      "scope": "local/offline reference operational profile",
+      "status": "PASS"
+    }
+  ],
+  "schema": "QUORUM-L9-REFERENCE-SCENARIOS/2.1"
+}

@@ -1,0 +1,30 @@
+deepml motion 0.3
+module suite22.motion_planner.timing
+policy deterministic
+policy no_network
+
+skeleton TimingPlanRig {
+  joint Root parent none bind transform(vec3(0,0,0), quat.identity)
+  joint Actor parent Root bind transform(vec3(0,0,0), quat.identity)
+}
+clip TimingPlanClip duration 8s interpolation cubic {
+  channel Actor.position key 0s vec3(0,0,0) key 2s vec3(1,0,0) key 4s vec3(2,0,1) key 6s vec3(3,0,0) key 8s vec3(4,0,0)
+}
+state_machine TimingPlanState {
+  Ready -> Moving when time > 0.0
+  Moving -> Hold when time >= 4.0
+  Hold -> Complete when time >= 8.0
+}
+synchronize TimingPlanClip with scene.Actor and timeline.MotionPlanSequence
+motion_graph TimingPlanEvidence {
+  pose SOPHIA = constant_pose(TimingPlanRig)
+  pose CHARLOTTE = constant_pose(TimingPlanRig)
+  pose LANDON = constant_pose(TimingPlanRig)
+  pose Professor = constant_pose(TimingPlanRig)
+  pose Podium = constant_pose(TimingPlanRig)
+  blend Ensemble weights [0.2,0.2,0.2,0.2,0.2]
+}
+optimize TimingPlanEvidence using [pose_constant_folding, curve_compression(0.001), dead_channel_removal, blend_normalization, retarget_cache, ik_scheduling, state_minimization]
+lower TimingPlanEvidence to DEEPML_MOTION_R12
+package motion TimingPlanRig as "motion_planner_timing.msslb"
+certify motion TimingPlanRig profile strict

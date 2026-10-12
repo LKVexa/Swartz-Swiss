@@ -1,0 +1,41 @@
+{
+  "schema": "QUORUM-PLANE-GRAPH/2.0",
+  "plane_id": 2,
+  "plane": "intent_reasoning",
+  "modules": [
+    {
+      "module_id": 4,
+      "name": "Compass"
+    },
+    {
+      "module_id": 5,
+      "name": "Pencil"
+    },
+    {
+      "module_id": 6,
+      "name": "Pencil Sharpener"
+    },
+    {
+      "module_id": 7,
+      "name": "Grinder"
+    },
+    {
+      "module_id": 9,
+      "name": "Funnel"
+    },
+    {
+      "module_id": 10,
+      "name": "Illuminator"
+    },
+    {
+      "module_id": 47,
+      "name": "Chatbot"
+    },
+    {
+      "module_id": 48,
+      "name": "Answer Modes and Specialized Roles"
+    }
+  ],
+  "integration": "independent module nodes with scenario-mediated orchestration",
+  "cycles": []
+}

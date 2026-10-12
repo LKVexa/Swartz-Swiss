@@ -1,0 +1,21 @@
+VB JA21 DF_Medium Browser 8.0.2 — Windows presenter interop repair
+
+Observed Windows Add-Type compiler error:
+  A property, indexer or dynamic member access may not be passed as an out or ref parameter
+
+Root cause:
+  DfMediumDocumentSurface.Build passed the auto-property NodeCount directly as an out argument:
+    dfweb_stats_get(out NodeCount, ...)
+  C# requires ref/out arguments to be variables, not properties.
+
+Repair:
+  - Receive native stats into local UInt32 nodeCount/rules/scripts/calls variables.
+  - Assign NodeCount=nodeCount, ScriptCount=scripts, VmCalls=calls after the native call.
+  - Add static regression coverage that discovers UInt32 auto-properties and rejects any ref/out use.
+  - Add an equivalent preflight invariant to the Windows verifier before Add-Type compilation.
+
+Native DF_Medium engine change: NONE.
+The exact native DLL, DF_Medium source archive, and JA21 web-engine source/profile binding remain unchanged.
+
+Package regression result:
+  22/22 tests PASS.

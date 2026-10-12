@@ -1,0 +1,194 @@
+{
+  "schema": "QUORUM-RCPW7-BLOCKED-REMEDIATION/1",
+  "source_application_profile": "QP1/WQ2/AW1/WP1_SINGLE",
+  "source_blocked_count": 26,
+  "root_cause_counts": {
+    "classifier_false_block_and_direct_proof_gap": 13,
+    "missing_executable_capability_or_measurement": 8,
+    "independent_reproduction_evidence": 5
+  },
+  "gates": [
+    {
+      "requirement_id": "RCPW-01-R01",
+      "stage": 1,
+      "stage_title": "Canonical World Authority",
+      "requirement": "Canonical coordinates and units are explicit, versioned, precision-bounded, and independent of render/reference coordinates.",
+      "root_cause": "CLASSIFIER_FALSE_BLOCK + EVIDENCE_GAP"
+    },
+    {
+      "requirement_id": "RCPW-09-R01",
+      "stage": 9,
+      "stage_title": "Narrative Gravity Authority",
+      "requirement": "Narrative gravity is independent from raw distance and has explicit inputs.",
+      "root_cause": "CLASSIFIER_FALSE_BLOCK + EVIDENCE_GAP"
+    },
+    {
+      "requirement_id": "RCPW-11-R06",
+      "stage": 11,
+      "stage_title": "Visibility / Rendering Authority",
+      "requirement": "Visual regression and frame-budget evidence are generated from repeatable traversal traces.",
+      "root_cause": "MISSING_EXECUTABLE_CAPABILITY_OR_MEASUREMENT"
+    },
+    {
+      "requirement_id": "RCPW-12-R06",
+      "stage": 12,
+      "stage_title": "Save / Replay Authority",
+      "requirement": "Independent replay verifies identity, coordinates, world state, and causal obligations after load.",
+      "root_cause": "INDEPENDENT_REPRODUCTION_EVIDENCE"
+    },
+    {
+      "requirement_id": "RCPW-19-R06",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "requirement": "Historical reconstruction is independently reproducible.",
+      "root_cause": "INDEPENDENT_REPRODUCTION_EVIDENCE"
+    },
+    {
+      "requirement_id": "RCPW-20-R07",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "requirement": "The integrated system has bounded CPU/GPU/memory/I/O/storage budgets and fail-safe degradation.",
+      "root_cause": "MISSING_EXECUTABLE_CAPABILITY_OR_MEASUREMENT"
+    },
+    {
+      "requirement_id": "RCPW-20-R08",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "requirement": "End-to-end save/replay, crash recovery, deterministic replay, failure injection, and independent qualification are complete.",
+      "root_cause": "INDEPENDENT_REPRODUCTION_EVIDENCE"
+    },
+    {
+      "requirement_id": "RCPW-04-R09",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "requirement": "Budget governor decisions are observable, replayable, and attributed to CPU/GPU/memory/I/O pressure.",
+      "root_cause": "MISSING_EXECUTABLE_CAPABILITY_OR_MEASUREMENT"
+    },
+    {
+      "requirement_id": "RCPW-07-R09",
+      "stage": 7,
+      "stage_title": "Ecology Authority",
+      "requirement": "Spatial folding cannot collapse independent habitats into one ecological interaction domain.",
+      "root_cause": "CLASSIFIER_FALSE_BLOCK + EVIDENCE_GAP"
+    },
+    {
+      "requirement_id": "RCPW-18-R08",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "requirement": "Overlapping wells use deterministic conflict arbitration independent of thread timing.",
+      "root_cause": "CLASSIFIER_FALSE_BLOCK + EVIDENCE_GAP"
+    },
+    {
+      "requirement_id": "RCPW-20-R11",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "requirement": "A compatibility matrix distinguishes reference-model, hosted operational, native VM, production-scale, and independently qualified profiles.",
+      "root_cause": "CLASSIFIER_FALSE_BLOCK + EVIDENCE_GAP"
+    },
+    {
+      "requirement_id": "RCPW-02-R13",
+      "stage": 2,
+      "stage_title": "Reference Frame Authority",
+      "requirement": "Vertical reference semantics, gravity direction, and large-world elevation precision are explicit and tested independently of horizontal folding.",
+      "root_cause": "CLASSIFIER_FALSE_BLOCK + EVIDENCE_GAP"
+    },
+    {
+      "requirement_id": "RCPW-16-R12",
+      "stage": 16,
+      "stage_title": "Penteract World Coordinate Model",
+      "requirement": "8S/Penteract mappings are versioned independently from runtime schemas so mathematical experimentation cannot silently alter canonical save semantics.",
+      "root_cause": "CLASSIFIER_FALSE_BLOCK + EVIDENCE_GAP"
+    },
+    {
+      "requirement_id": "RCPW-17-R18",
+      "stage": 17,
+      "stage_title": "QUORUM Fold Operator",
+      "requirement": "Operator performance is bounded with declared per-frame/per-tick cost independent from world canonical population size except through active representation sets.",
+      "root_cause": "CLASSIFIER_FALSE_BLOCK + EVIDENCE_GAP"
+    },
+    {
+      "requirement_id": "RCPW-18-R16",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "requirement": "Remote simulation wells may persist without any camera/renderer consumer when canonical events require continued fidelity.",
+      "root_cause": "MISSING_EXECUTABLE_CAPABILITY_OR_MEASUREMENT"
+    },
+    {
+      "requirement_id": "RCPW-19-R19",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "requirement": "Qualification includes multi-day/world-age history, compaction, migration, index rebuild, partial corruption, and independent replay.",
+      "root_cause": "INDEPENDENT_REPRODUCTION_EVIDENCE"
+    },
+    {
+      "requirement_id": "RCPW-20-R20",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "requirement": "The release includes a headless deterministic verifier capable of loading a world package/save, replaying Golden World traces, and emitting canonical checkpoint digests without full rendering.",
+      "root_cause": "MISSING_EXECUTABLE_CAPABILITY_OR_MEASUREMENT"
+    },
+    {
+      "requirement_id": "RCPW-03-R20",
+      "stage": 3,
+      "stage_title": "Fold Geometry Authority",
+      "requirement": "Fold geometry can be evaluated in parallel over independent representation sets while using one versioned fold-policy authority.",
+      "root_cause": "CLASSIFIER_FALSE_BLOCK + EVIDENCE_GAP"
+    },
+    {
+      "requirement_id": "RCPW-04-R24",
+      "stage": 4,
+      "stage_title": "Simulation LOD Authority",
+      "requirement": "LOD qualification compares single-worker and multi-worker canonical checkpoint digests for semantic equivalence.",
+      "root_cause": "MISSING_EXECUTABLE_CAPABILITY_OR_MEASUREMENT"
+    },
+    {
+      "requirement_id": "RCPW-10-R23",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "requirement": "Hot-reloaded presentation assets are versioned separately from canonical semantic state and can roll back independently.",
+      "root_cause": "CLASSIFIER_FALSE_BLOCK + EVIDENCE_GAP"
+    },
+    {
+      "requirement_id": "RCPW-10-R24",
+      "stage": 10,
+      "stage_title": "Materialization Authority",
+      "requirement": "Materialization qualification includes concurrent dense-region hydration across multiple workers/storage tiers with deterministic interaction readiness.",
+      "root_cause": "MISSING_EXECUTABLE_CAPABILITY_OR_MEASUREMENT"
+    },
+    {
+      "requirement_id": "RCPW-14-R23",
+      "stage": 14,
+      "stage_title": "No-Unload Representation Transitions",
+      "requirement": "Transition format versions are independently migratable and replay-compatible according to the compatibility matrix.",
+      "root_cause": "CLASSIFIER_FALSE_BLOCK + EVIDENCE_GAP"
+    },
+    {
+      "requirement_id": "RCPW-18-R20",
+      "stage": 18,
+      "stage_title": "Multiple Reference Points / Authority Wells",
+      "requirement": "Authority-well arbitration is a first-class runtime service with deterministic global ordering and partition-independent canonical ownership.",
+      "root_cause": "CLASSIFIER_FALSE_BLOCK + EVIDENCE_GAP"
+    },
+    {
+      "requirement_id": "RCPW-19-R20",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "requirement": "World-state ledger archives include partition/worker provenance for diagnostics while canonical event meaning remains execution-layout independent.",
+      "root_cause": "CLASSIFIER_FALSE_BLOCK + EVIDENCE_GAP"
+    },
+    {
+      "requirement_id": "RCPW-20-R25",
+      "stage": 20,
+      "stage_title": "Core Architecture + System Invariants",
+      "requirement": "The final release includes automated conformance suites that compare canonical outcomes across multiple worker counts/layouts and verify equivalent save/replay results.",
+      "root_cause": "MISSING_EXECUTABLE_CAPABILITY_OR_MEASUREMENT"
+    },
+    {
+      "requirement_id": "RCPW-19-R29",
+      "stage": 19,
+      "stage_title": "World-State Ledger",
+      "requirement": "Qualification includes multi-era query equivalence before/after compaction, archive migration, world expansion, and independent reconstruction.",
+      "root_cause": "INDEPENDENT_REPRODUCTION_EVIDENCE"
+    }
+  ]
+}
